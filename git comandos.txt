@@ -1,0 +1,49 @@
+esc + :wq + enter
+git status muestra si hay modificaciones
+git add agrega un cambio a la lista (add . agrega todo)
+git commit (--amend para agregar algo que me olvide al ultimo)
+git log muestra los cambio que hubo en el repositorio (--oneline para solo informacion mas util)(--decoratte para ver cual es head)
+git diff muestra los cambios que se han realizado en los archivos
+git checkout -- nombreDeArchvo deshace los cambios que no se fuern agregados al status del archivo
+git reset branch(HEAD en la normal) NombreDeArchivo para sacar algo que fue agregados al status (y luego hacer checkout para volver atras)
+git reset numerodecommitalquequieroir elemina un commit que no esta bien (los archivos siguen estando movidifcados pero no en status por lo que puedo hacer cheakout)
+git reset --hard numerodecommitalquequieroir elmina un commit y vuelve los archivos a estado anterior
+git reset --soft numerodecommitalquequieroir vuelve atras en el commit pero los archivos siguen modificados y siguen en el status
+git diff numerodecommit1 numerodecommi2 muestra las diferencias entre dos commits
+HEAD commit actual
+HEAD~numero commit numero atras del actual
+git revert HEAD(o cualquier otro) revierte totalmente los cambios de ese commit y los archivos haciendo un nueo commit
+git revert --noo-commit HEAD lo mimso pero no hace commit nuevo sino que lo deja en el status
+git log --oneline --graph muestra grafo de ramas
+git branch nos muestra la lista de ramas
+git branch nombrederama crea una nueva rama
+git cheakout nombrederama me lleva a la rama
+git checkout -b nombrederama la crea y me lleva a ella
+git branch -m nombreanterior nuevonombre cambia el nombre de una rama
+git branch -d nombrederama elimina una rama
+-h te dice todos los posibles parametros
+cuando trabajo en otra rama, los archivos de la principal se mantienen intactos
+git log --oneline --decorate --all muestra todas las ramas
+git merge ramadeorigen lo hago desde la rama en la que quiero que quede todo, agregando todos los cambios que se hayan hecho en la otra rama
+alias = atajos a comandos y se le pueden agregar mas subcomandos
+git config --global alias.nombre 'comandodegit'
+muy bueno: git config --global alias.sacar 'reset HEAD --' tal que hago git sacar hola.txt
+git config --global --get-regexp alias para obtener todos los alias
+git config --global --unset alias.nombre me saca ese alias
+etiquetas: identifican commits particculares
+git tag nombretag(version) numerodecommit(o nada si es al ultimo)
+git cheakout tag me lleva a ese commit
+git tag muestra todos los tags
+git tag -d tag elemina un tag
+stash memoria en donde se pueden guardar cambios sin que sean commiteados
+git stash "mensajequequierodejar" guarda todo lo del status en el stash
+git stash list muestra todo lo que se guardo en el stash
+git stash apply aplica los cambios que hallan quedado en el stash
+git stash drop vacia el stash
+---------remotos--------
+git remote
+git remote add nombre linkderepositorio
+git push nombre ramaquequeremossubir
+git clone link te descarga todo el repositorio a la maquina
+git push nombre actualiza el remoto a nuestro repositorio
+git pull nombre ramaaactualizar nos actualiza el repositorio

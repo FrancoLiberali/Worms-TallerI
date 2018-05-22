@@ -1,0 +1,3 @@
+/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/edit_cache.dir
+/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/rebuild_cache.dir
+/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir

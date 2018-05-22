@@ -1,0 +1,7 @@
+cxxtestgen --error-printer -o runner.cpp MyTestSuite1.h  genera el runner.cpp
+g++ -o runner runner.cpp -I"../lib/cxxtest-4.4"          compila el runner.cpp
+
+cxxtestgen --error-printer -o runner.cpp "MyTestSuite1.h"
+cmake .
+make
+./runner
