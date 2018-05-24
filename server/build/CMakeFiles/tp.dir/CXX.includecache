@@ -971,11 +971,11 @@ moving_finished.h
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
-rotation_finished.h
-/home/franco/Documentos/taller1/tpfinal/server/src/rotation_finished.h
 cmath
 -
 iostream
+-
+algorithm
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
@@ -1023,9 +1023,13 @@ gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
-rotation_finished.h
-/home/franco/Documentos/taller1/tpfinal/server/src/rotation_finished.h
+inactive_state.h
+/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.h
+moving_finished.h
+/home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 iostream
+-
+cmath
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
@@ -1033,8 +1037,6 @@ gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
-
-/home/franco/Documentos/taller1/tpfinal/server/src/rotation_finished.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp
 viga.h

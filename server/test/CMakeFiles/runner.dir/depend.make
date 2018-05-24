@@ -593,7 +593,6 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.c
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/moving_state.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
-CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotation_finished.h
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -758,9 +757,10 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.h
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
-CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotation_finished.h
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h

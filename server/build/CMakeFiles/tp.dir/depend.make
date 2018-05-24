@@ -637,7 +637,6 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/jumping_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/moving_finished.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/moving_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_state.h
-CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotation_finished.h
 
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -802,9 +801,10 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/gusano_state.h
+CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/inactive_state.h
+CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/moving_finished.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.cpp
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.h
-CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotation_finished.h
 
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h

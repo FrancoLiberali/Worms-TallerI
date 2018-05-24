@@ -9,10 +9,10 @@ class Gusano{
 	private:
 		b2World& world;
 		b2Body* body;
+		b2Body* wheel;
 		GusanoState* state;
 		int direccion;
-		//std::vector<b2Body*> contacts_list;
-		int cant_contacts;
+		std::vector<float> angles_list;
 		
 	public:
 		Gusano(b2World& world_entry, float x, float y, float angle);
@@ -37,7 +37,7 @@ class Gusano{
 		
 		void newContact(float ground_angle);
 		
-		void finishContact();
+		void finishContact(float ground_angle);
 		
 };
 

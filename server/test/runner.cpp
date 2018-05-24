@@ -83,15 +83,57 @@ public:
 
 static class TestDescription_suite_WormMovingTest_test_take_ground_angle : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_WormMovingTest_test_take_ground_angle() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 324, "test_take_ground_angle" ) {}
+ TestDescription_suite_WormMovingTest_test_take_ground_angle() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 323, "test_take_ground_angle" ) {}
  void runTest() { suite_WormMovingTest.test_take_ground_angle(); }
 } testDescription_suite_WormMovingTest_test_take_ground_angle;
 
 static class TestDescription_suite_WormMovingTest_test_fall_and_take_ground_angle_when_land : public CxxTest::RealTestDescription {
 public:
- TestDescription_suite_WormMovingTest_test_fall_and_take_ground_angle_when_land() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 349, "test_fall_and_take_ground_angle_when_land" ) {}
+ TestDescription_suite_WormMovingTest_test_fall_and_take_ground_angle_when_land() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 347, "test_fall_and_take_ground_angle_when_land" ) {}
  void runTest() { suite_WormMovingTest.test_fall_and_take_ground_angle_when_land(); }
 } testDescription_suite_WormMovingTest_test_fall_and_take_ground_angle_when_land;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 368, "test_change_beam" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam(); }
+} testDescription_suite_WormMovingTest_test_change_beam;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_0_to_inclined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_0_to_inclined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 409, "test_change_beam_0_to_inclined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_0_to_inclined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_0_to_inclined;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_0_to_declined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_0_to_declined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 453, "test_change_beam_0_to_declined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_0_to_declined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_0_to_declined;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_declined_to_inclined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_declined_to_inclined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 497, "test_change_beam_declined_to_inclined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_declined_to_inclined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_declined_to_inclined;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_declined_to_declined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_declined_to_declined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 542, "test_change_beam_declined_to_declined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_declined_to_declined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_declined_to_declined;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_inclined_to_inclined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_inclined_to_inclined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 587, "test_change_beam_inclined_to_inclined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_inclined_to_inclined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_inclined_to_inclined;
+
+static class TestDescription_suite_WormMovingTest_test_change_beam_inclined_to_declined : public CxxTest::RealTestDescription {
+public:
+ TestDescription_suite_WormMovingTest_test_change_beam_inclined_to_declined() : CxxTest::RealTestDescription( Tests_WormMovingTest, suiteDescription_WormMovingTest, 632, "test_change_beam_inclined_to_declined" ) {}
+ void runTest() { suite_WormMovingTest.test_change_beam_inclined_to_declined(); }
+} testDescription_suite_WormMovingTest_test_change_beam_inclined_to_declined;
 
 #include <cxxtest/Root.cpp>
 const char* CxxTest::RealWorldDescription::_worldName = "cxxtest";

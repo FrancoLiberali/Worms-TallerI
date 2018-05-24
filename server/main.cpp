@@ -19,9 +19,10 @@ int main(int argc, char** argv) {
 	ContactListener contact_listener;
 	world.SetContactListener(&contact_listener);
 	
-	Viga viga(world, 0.0f, 0.0f, 0.0f);
-	Viga viga2(world, 6.00f, 0.00f, -0.5f);
-	Gusano gusano1(world, 5.3f, 0.0f, 0.0f);
+	Viga viga(world, 0.0f, 0.0f, 0.2f);
+			Viga viga2(world, 5.88f, 1.19f, 0.6f);
+			
+			Gusano gusano1(world, 5.5f, 2.0f, 0.2f);
 	
 	float32 timeStep = 1.0f / 60.0f;
 	int32 velocityIterations = 8; 

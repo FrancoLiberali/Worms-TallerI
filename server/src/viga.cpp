@@ -19,7 +19,6 @@ Viga::Viga(b2World& world, float x, float y, float angle) {
 		y_center = y - 0.8 * cos(angle) + sin(angle + atan(0.8/6)) * sqrt(pow(0.8,2) + pow(6,2)) / 2; 
 	}
 	vigaBody->SetTransform(b2Vec2(x_center, y_center), angle);
-	std::cout << x_center << ", " << y_center << "\n";
 	
 	b2PolygonShape vigaBox;
 	vigaBox.SetAsBox(3.0f, 0.4f);

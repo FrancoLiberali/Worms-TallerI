@@ -4,22 +4,30 @@
 #include "jumping_state.h"
 #include "moving_finished.h"
 #include "rotating_state.h"
-#include "rotation_finished.h"
 #include <cmath>
 #include <iostream>
+#include <algorithm>
 
 Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(world_entry){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
+	//bodyDef.position.Set(x, y + 0.125);
 	bodyDef.position.Set(x, y);
 	bodyDef.fixedRotation = true;
 	this->body = this->world.CreateBody(&bodyDef);
 	this->body->SetUserData((void*)this);
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
+	b2Vec2 vertices[3];
+	vertices[0].Set(0.0f, -0.5f);
+	vertices[1].Set(0.25f, 0.5f);
+	vertices[2].Set(-0.25f, 0.5f);
 	
+	int32 count = 3;
+
 	b2PolygonShape dynamicBox;
-	dynamicBox.SetAsBox(0.25f, 0.5f);
+	dynamicBox.Set(vertices, count);
+	//dynamicBox.SetAsBox(0.25f, 0.375f);
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
@@ -29,17 +37,46 @@ Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(worl
 	this->body->CreateFixture(&fixtureDef);
 	
 	//add foot sensor fixture
-    dynamicBox.SetAsBox(0.25f, 0.1, b2Vec2(0,-0.42), 0);
+	//vertices[0].Set(0.0f, -0.51f);
+	//vertices[1].Set(0.01f, -0.47f);
+	//vertices[2].Set(-0.01f, -0.47f);
+	
+    dynamicBox.SetAsBox(0.00001, 0.1, b2Vec2(0,-0.45), 0);
+    //dynamicBox.Set(vertices, count);
     fixtureDef.density = 0.0f;
     fixtureDef.restitution = 0.0f;
     fixtureDef.isSensor = true;
     b2Fixture* footSensorFixture = this->body->CreateFixture(&fixtureDef);
     int* data = new int(1);
     footSensorFixture->SetUserData( (void*)data);
+	
+	/*//add wheel
+	bodyDef.position.Set(x, y - 0.25);
+	bodyDef.fixedRotation = false;
+	this->wheel = this->world.CreateBody(&bodyDef);
+	this->wheel->SetUserData((void*)this);
+	
+	b2CircleShape circleShape;
+	circleShape.m_radius = 0.25;
+	fixtureDef.shape = &circleShape;
+	fixtureDef.density = 1.0f;
+	fixtureDef.friction = 1.0f;
+	fixtureDef.restitution = 0.1f;
+
+	this->wheel->CreateFixture(&fixtureDef);
+	
+	b2RevoluteJointDef revoluteJointDef;
+	revoluteJointDef.bodyA = this->body;
+	revoluteJointDef.bodyB = this->wheel;
+	revoluteJointDef.collideConnected = false;
+	revoluteJointDef.localAnchorA.Set(0,-0.25);
+	revoluteJointDef.localAnchorB.Set(0,0);
+	this->world.CreateJoint(&revoluteJointDef);*/
+	
+	
     
 	this->state = new JumpingState(); //hasta que no haga contacto con el suelo esta saltando
 	this->direccion = 1;
-	this->cant_contacts = 0;
 }
 
 Gusano::~Gusano(){
@@ -75,20 +112,7 @@ void Gusano::sumOneStep(){
 		printf ("termina movimiento\n");
 		delete this->state;
 		this->state = new InactiveState();
-		b2Vec2 vel = this->body->GetLinearVelocity();
-		vel.x = 0.0f;
-		vel.y = 0.0f;
-		this->body->SetLinearVelocity(vel);
-	} catch (const RotationFinished& e){
-		printf ("termina rotacion\n");
-		b2Vec2 vel = this->body->GetLinearVelocity();
-		vel.x = 0.0f;
-		vel.y = 0.0f;
-		this->body->SetLinearVelocity(vel);
-		this->body->SetGravityScale(0);
-		this->body->SetFixedRotation(true);
-		delete this->state;
-		this->state = new InactiveState();
+		this->body->SetLinearVelocity(b2Vec2(0,0));
 	}
 }
 
@@ -127,8 +151,9 @@ float radDiff( float a, float b )
    }
 
 void Gusano::newContact(float ground_angle){
-	this->cant_contacts += 1;
-	if (this->cant_contacts == 1){
+	this->angles_list.push_back(ground_angle);
+	int cant_contacts = angles_list.size();
+	if (cant_contacts == 1){
 		this->body->SetGravityScale(0);
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		printf("state->inactivo\n");
@@ -136,23 +161,29 @@ void Gusano::newContact(float ground_angle){
 		this->state = new InactiveState();
 		if (this->GetAngle() != ground_angle){
 			printf ("arreglar angulo\n");
+			std::cout << ground_angle << "\n";
 			delete this->state;
+			this->state = new RotatingState(this->body, this->GetPosition(), ground_angle);
+			/*delete this->state;
 			this->state = new RotatingState(this->body, ground_angle);
 			this->body->SetGravityScale(1);
 			this->body->SetFixedRotation(false);
 			float ang_imp = this->body->GetInertia() * radDiff(ground_angle, this->body->GetAngle());
-			this->body->ApplyAngularImpulse(ang_imp, true);
+			std::cout << ang_imp << "\n";
+			this->body->ApplyAngularImpulse(ang_imp, true);*/
 		}
-	} else {
+	} else if (cant_contacts == 2){
 		std::cout << "TOCO al segundo \n";
-		//this->body->SetLinearVelocity(b2Vec2(0,0));
-		//this->body->SetTransform(this->body->GetPosition(), 0);
+		std::cout << ground_angle << "\n";
 	}
 }
 
-void Gusano::finishContact(){
-	this->cant_contacts -= 1;
-	if (this->cant_contacts == 0 && !(this->isFalling())){
+void Gusano::finishContact(float ground_angle){
+	std::vector<float>::iterator it;
+	it = std::find(this->angles_list.begin(), this->angles_list.end(), ground_angle);
+    this->angles_list.erase(it);
+	int cant_contacts = angles_list.size();
+	if (cant_contacts == 0 && !(this->isFalling())){
 		std::cout << "state->falling\n";
 		delete this->state;
 		this->state = new JumpingState();
@@ -160,6 +191,16 @@ void Gusano::finishContact(){
 		b2Vec2 vel = this->body->GetLinearVelocity();
 		vel.x = 0.0f;
 		this->body->SetLinearVelocity(vel);
+	}
+	if (cant_contacts == 1){
+		printf("solo toca a 1\n");
+		std::cout << "deja de tocar a :" << ground_angle << "\n";
+		if (this->GetAngle() != angles_list.back()){
+			delete this->state;
+			this->state = new RotatingState(this->body, this->GetPosition(), angles_list.back());
+			printf ("arreglar angulo\n");
+			std::cout << angles_list.back() << "\n";
+		}
 	}
 }
 		

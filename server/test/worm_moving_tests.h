@@ -190,7 +190,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 			
 			b2Vec2 position11 = gusano.GetPosition();
 			b2Vec2 position21 = gusano2.GetPosition();
-			for (int i = 0; i < 20; i++){
+			for (int i = 0; i < 30; i++){
 				//give some time to see if fall
 				world.Step(timeStep, velocityIterations, positionIterations);
 			}
@@ -294,7 +294,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 				
 			Viga viga(world, 0.0f, 0.0f, 0.0f);
 			Viga viga2(world, 6.00f, -2.0f, 0.0f);
-			Gusano gusano(world, 6.23f, 0.52f, 0.0f);
+			Gusano gusano(world, 5.95f, 0.52f, 0.0f);
 			
 			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
 			world.Step(timeStep, velocityIterations, positionIterations);
@@ -311,12 +311,11 @@ class WormMovingTest : public CxxTest::TestSuite {
 			
 			b2Vec2 position2 = gusano.GetPosition();
 			float32 angle2 = gusano.GetAngle();
-			std::cout << position2.y << "\n";
 			TS_ASSERT_EQUALS(angle1, angle2);
 			TS_ASSERT(position2.y < -1.48f);
 			TS_ASSERT(position2.y > -1.50f); //the position of box2D can be not exact
-			TS_ASSERT(position2.x < 6.28f);
-			TS_ASSERT(position2.x > 6.27f); //the position of box2D can be not exact
+			TS_ASSERT(position2.x < 6.485f);
+			TS_ASSERT(position2.x > 6.475f); //the position of box2D can be not exact
 		
 			std::cout << "Fall when finish beam test pass";
 		}
@@ -329,7 +328,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 			world.SetContactListener(&contact_listener);
 				
 			Viga viga(world, 0.0f, 0.0f, 0.50f);
-			Gusano gusano(world, 3.0f, 2.29f, 0.0f);
+			Gusano gusano(world, 3.0f, 2.19f, 0.0f);
 			
 			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
 			world.Step(timeStep, velocityIterations, positionIterations);
@@ -340,8 +339,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 			}
 			
 			float32 angle2 = gusano.GetAngle();
-			TS_ASSERT(angle2 < 0.51);
-			TS_ASSERT(angle2 > 0.49);
+			TS_ASSERT_EQUALS(angle2, 0.50);
 		
 			std::cout << "Take ground angle test pass";
 		}
@@ -362,10 +360,318 @@ class WormMovingTest : public CxxTest::TestSuite {
 			}
 			
 			float32 angle2 = gusano.GetAngle();
-			TS_ASSERT(angle2 < 0.511);
-			TS_ASSERT(angle2 > 0.489);
+			TS_ASSERT_EQUALS(angle2, 0.50);
 		
 			std::cout << "Fall and take ground angle when land test pass";
+		}
+		
+		void test_change_beam(void){
+			std::cout << "\nStarting change beam no inclination test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, 0.0f);
+			Viga viga2(world, 6.0f, 0.0f, 0.0f);
+			Viga viga3(world, -6.0f, 0.0f, 0.0f);
+			
+			Gusano gusano(world, 5.95f, 0.52f, 0.0f);
+			Gusano gusano2(world, 0.05f, 0.52f, 0.0f);
+			
+			b2Vec2 position11 = gusano.GetPosition();
+			b2Vec2 position21 = gusano2.GetPosition();
+			
+			gusano.move(RIGHT);
+			gusano2.move(LEFT);
+			gusano2.move(LEFT);
+			
+			while(!gusano.isInactive() && !gusano2.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+				gusano2.sumOneStep();
+			}
+			b2Vec2 position12 = gusano.GetPosition();
+			b2Vec2 position22 = gusano2.GetPosition();
+			
+			float delta1x = position12.x - position11.x;
+			float delta1y = position12.y - position11.y;
+			float delta2x = position22.x - position21.x;
+			float delta2y = position22.y - position21.y;
+			TS_ASSERT(delta1x < 0.12 || delta1x >  0.95);
+			TS_ASSERT_EQUALS(delta1y, 0);
+			TS_ASSERT(delta2x < 0.12 || delta1x >  0.95);
+			TS_ASSERT_EQUALS(delta2y, 0);
+		
+			std::cout << "Change beam no inclination test pass";
+		}
+		
+		void test_change_beam_0_to_inclined(void){
+			std::cout << "\nStarting change beam 0 to inclined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, 0.0f);
+			Viga viga2(world, 6.0f, 0.0f, 0.5f);
+			
+			Gusano gusano(world, 5.95f, 0.52f, 0.0f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, 0.5);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam 0 to inclined  test pass";
+		}
+		
+		void test_change_beam_0_to_declined(void){
+			std::cout << "\nStarting change beam 0 to declined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, 0.0f);
+			Viga viga2(world, 6.0f, -0.01f, -0.5f);
+			
+			Gusano gusano(world, 5.95f, 0.52f, 0.0f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, -0.5);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam 0 to declined  test pass";
+		}
+		
+		void test_change_beam_declined_to_inclined(void){
+			std::cout << "\nStarting change beam declined to inclined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, -0.2f);
+			Viga viga2(world, 5.88f, -1.19f, 0.4f);
+			
+			Gusano gusano(world, 5.96f, -0.66f, -0.2f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT(angle1 < 0.41);
+			TS_ASSERT(angle1 > 0.39);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam declined to inclined test pass";
+		}
+		
+		void test_change_beam_declined_to_declined(void){
+			std::cout << "\nStarting change beam declined to declined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, -0.2f);
+			Viga viga2(world, 5.88f, -1.19f, -0.4f);
+			
+			Gusano gusano(world, 5.96f, -0.66f, -0.2f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT(angle1 > -0.41);
+			TS_ASSERT(angle1 < -0.39);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam declined to inclined  test pass";
+		}
+		
+		void test_change_beam_inclined_to_inclined(void){
+			std::cout << "\nStarting change beam inclined to inclined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, 0.2f);
+			Viga viga2(world, 5.88f, 1.19f, 0.6f);
+			
+			Gusano gusano(world, 5.74f, 1.71f, 0.2f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT(angle1 < 0.61);
+			TS_ASSERT(angle1 > 0.59);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam inclined to inclined test pass";
+		}
+		
+		void test_change_beam_inclined_to_declined(void){
+			std::cout << "\nStarting change beam inclined to declined test\n";
+			b2Vec2 gravity(0.0f, -10.0f);
+			b2World world(gravity);
+			ContactListener contact_listener;
+			world.SetContactListener(&contact_listener);
+				
+			Viga viga(world, 0.0f, 0.0f, 0.2f);
+			Viga viga2(world, 5.88f, 1.19f, -0.6f);
+			
+			Gusano gusano(world, 5.74f, 1.71f, 0.2f);
+			
+			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
+			world.Step(timeStep, velocityIterations, positionIterations);
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			float angle1 = gusano.GetAngle();
+			TS_ASSERT(angle1 > -0.61);
+			TS_ASSERT(angle1 < -0.59);
+			b2Vec2 position1 = gusano.GetPosition();
+			
+			gusano.move(RIGHT);
+			
+			while(!gusano.isInactive()){
+				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+			}
+			
+			b2Vec2 position2 = gusano.GetPosition();
+			float32 angle2 = gusano.GetAngle();
+			TS_ASSERT_EQUALS(angle1, angle2);
+			float deltax =  position2.x - position1.x;
+			float deltay =  position2.y - position1.y;
+			float delta = sqrt(pow(deltax,2) + pow(deltay,2));
+			TS_ASSERT(delta < 0.101f);
+			TS_ASSERT(delta > 0.098f); //the position of box2D can be not exact
+		
+			std::cout << "Change beam inclined to declined test pass";
 		}
 		
 };
