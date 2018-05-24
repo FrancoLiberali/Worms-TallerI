@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+/server/build
+/server/test/runner
+/server/test/CMakeFiles
+/server/test/CMakeCache.txt
+/server/test/cmake_install.cmake
