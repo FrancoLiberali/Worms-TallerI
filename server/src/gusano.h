@@ -1,6 +1,7 @@
 #include "Box2D/Box2D.h"
 #include "gusano_state.h"
 #include <vector>
+#include "user_data.h"
 
 #ifndef __GUSANO_H__
 #define __GUSANO_H__
@@ -9,8 +10,8 @@ class Gusano{
 	private:
 		b2World& world;
 		b2Body* body;
-		b2Body* wheel;
 		GusanoState* state;
+		UserData* user_data;
 		int direccion;
 		std::vector<float> angles_list;
 		
@@ -38,6 +39,10 @@ class Gusano{
 		void newContact(float ground_angle);
 		
 		void finishContact(float ground_angle);
+		
+		//b2Vec2 GetWorldVector(b2Vec2 local); 
+		
+		void applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse);
 		
 };
 

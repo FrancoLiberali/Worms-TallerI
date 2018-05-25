@@ -20,15 +20,15 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, double desired
 		new_x -= 0.5 * cos(pi/2 - desired_angle);
 	}		
 	double new_y = position.y - 0.5 * sin(pi/2 - actual_angle) + 0.5 * sin(pi/2 - desired_angle); //-0.04;
-	this->new_position = new b2Vec2(new_x, new_y);
+	b2Vec2 vec(new_x, new_y);
+	this->new_position = vec;
 }
 
 RotatingState::~RotatingState(){
-	delete this->new_position;
 }
 
 void RotatingState::sumOneStep(){
-	this->body->SetTransform(*(this->new_position), this->desired_angle);
+	this->body->SetTransform(this->new_position, this->desired_angle);
 	throw MovingFinished();
 }
 

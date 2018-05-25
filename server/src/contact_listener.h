@@ -1,12 +1,12 @@
 #include "Box2D/Box2D.h"
 #include "gusano.h"
+#include "projectile.h"
+#include "user_data.h"
 
 #ifndef __CONTACT_LISTENER_H__
 #define __CONTACT_LISTENER_H__
 
 class ContactListener : public b2ContactListener{
-	private:
-		bool continue_simulation = false;
 	public:
 		
 		void BeginContact(b2Contact* contact){
@@ -17,7 +17,8 @@ class ContactListener : public b2ContactListener{
 			if (fixture_user_data){
 				float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
-					Gusano* gusano = static_cast<Gusano*>(fixture->GetBody()->GetUserData());
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
 					gusano->newContact(other_angle);
 				}
 			}
@@ -27,9 +28,22 @@ class ContactListener : public b2ContactListener{
             if (fixture_user_data){
 				float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
-					Gusano* gusano = static_cast<Gusano*>(fixture->GetBody()->GetUserData());
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
 					gusano->newContact(other_angle);
 				}
+			}
+			//check if fixture A was a projectile
+			UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+			if (data && data->indicator == 0){
+				Projectile* projectile = static_cast<Projectile*>(data->pointer);
+				projectile->exploit();
+			}
+			//check if fixture B was a projectile
+			data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
+			if (data && data->indicator == 0){
+				Projectile* projectile = static_cast<Projectile*>(data->pointer);
+				projectile->exploit();
 			}
 		}
 		
@@ -41,7 +55,8 @@ class ContactListener : public b2ContactListener{
 			if (fixture_user_data){
 				float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
-					Gusano* gusano = static_cast<Gusano*>(fixture->GetBody()->GetUserData());
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
 					gusano->finishContact(other_angle);
 				}
 			}
@@ -51,7 +66,8 @@ class ContactListener : public b2ContactListener{
             if (fixture_user_data){
 				float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
-					Gusano* gusano = static_cast<Gusano*>(fixture->GetBody()->GetUserData());
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
 					gusano->finishContact(other_angle);
 				}
 			}

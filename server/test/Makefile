@@ -1365,6 +1365,33 @@ home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s
 
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o: home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.i: home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.s: home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s
+
 home/franco/Documentos/taller1/tpfinal/server/src/file.o: home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o
 
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/file.o
@@ -1526,6 +1553,33 @@ home/franco/Documentos/taller1/tpfinal/server/src/moving_state.s: home/franco/Do
 home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.s
+
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.o: home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.i: home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.s: home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
 
 home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.o: home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o
 
@@ -1755,6 +1809,9 @@ help:
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file.s"
@@ -1773,6 +1830,9 @@ help:
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.s"

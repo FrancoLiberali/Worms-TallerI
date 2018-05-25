@@ -8,7 +8,7 @@ class RotatingState : public GusanoState{
 	private:
 		b2Body* body;
 		float desired_angle;
-		b2Vec2* new_position;
+		b2Vec2 new_position;
 	public:
 		RotatingState(b2Body* body_entry, b2Vec2 position, double desired_angle_entry);
 		

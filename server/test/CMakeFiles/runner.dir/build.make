@@ -153,9 +153,57 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o.provides.build: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o
 
 
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o: CMakeFiles/runner.dir/flags.make
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp > CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.i
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.requires:
+
+.PHONY : CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.requires
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.provides: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.requires
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.provides.build
+.PHONY : CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.provides
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.provides.build: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o
+
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o: CMakeFiles/runner.dir/flags.make
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp > CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.i
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.s
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.requires:
+
+.PHONY : CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.requires
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.provides: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.requires
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.provides.build
+.PHONY : CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.provides
+
+CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.provides.build: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
+
+
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.i: cmake_force
@@ -179,7 +227,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/file.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/file.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.i: cmake_force
@@ -203,7 +251,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.i: cmake_force
@@ -227,7 +275,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.i: cmake_force
@@ -251,7 +299,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/moving_s
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.i: cmake_force
@@ -275,7 +323,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.i: cmake_force
@@ -299,7 +347,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2BlockAllocator.cpp.i: cmake_force
@@ -323,7 +371,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Draw.cpp.i: cmake_force
@@ -347,7 +395,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Settings.cpp.i: cmake_force
@@ -371,7 +419,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Timer.cpp.i: cmake_force
@@ -395,7 +443,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2StackAllocator.cpp.i: cmake_force
@@ -419,7 +467,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common/b2Math.cpp.i: cmake_force
@@ -443,7 +491,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Common
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideCircle.cpp.i: cmake_force
@@ -467,7 +515,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2DynamicTree.cpp.i: cmake_force
@@ -491,7 +539,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Distance.cpp.i: cmake_force
@@ -515,7 +563,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2TimeOfImpact.cpp.i: cmake_force
@@ -539,7 +587,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollideEdge.cpp.i: cmake_force
@@ -563,7 +611,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2CircleShape.cpp.i: cmake_force
@@ -587,7 +635,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2PolygonShape.cpp.i: cmake_force
@@ -611,7 +659,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2EdgeShape.cpp.i: cmake_force
@@ -635,7 +683,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/Shapes/b2ChainShape.cpp.i: cmake_force
@@ -659,7 +707,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2CollidePolygon.cpp.i: cmake_force
@@ -683,7 +731,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2Collision.cpp.i: cmake_force
@@ -707,7 +755,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collision/b2BroadPhase.cpp.i: cmake_force
@@ -731,7 +779,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Collis
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MouseJoint.cpp.i: cmake_force
@@ -755,7 +803,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WheelJoint.cpp.i: cmake_force
@@ -779,7 +827,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RevoluteJoint.cpp.i: cmake_force
@@ -803,7 +851,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2WeldJoint.cpp.i: cmake_force
@@ -827,7 +875,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2RopeJoint.cpp.i: cmake_force
@@ -851,7 +899,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PrismaticJoint.cpp.i: cmake_force
@@ -875,7 +923,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2FrictionJoint.cpp.i: cmake_force
@@ -899,7 +947,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2PulleyJoint.cpp.i: cmake_force
@@ -923,7 +971,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2DistanceJoint.cpp.i: cmake_force
@@ -947,7 +995,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2Joint.cpp.i: cmake_force
@@ -971,7 +1019,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2MotorJoint.cpp.i: cmake_force
@@ -995,7 +1043,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Joints/b2GearJoint.cpp.i: cmake_force
@@ -1019,7 +1067,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Island.cpp.i: cmake_force
@@ -1043,7 +1091,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2WorldCallbacks.cpp.i: cmake_force
@@ -1067,7 +1115,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndCircleContact.cpp.i: cmake_force
@@ -1091,7 +1139,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonAndCircleContact.cpp.i: cmake_force
@@ -1115,7 +1163,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndCircleContact.cpp.i: cmake_force
@@ -1139,7 +1187,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2PolygonContact.cpp.i: cmake_force
@@ -1163,7 +1211,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2CircleContact.cpp.i: cmake_force
@@ -1187,7 +1235,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ChainAndPolygonContact.cpp.i: cmake_force
@@ -1211,7 +1259,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2ContactSolver.cpp.i: cmake_force
@@ -1235,7 +1283,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2EdgeAndPolygonContact.cpp.i: cmake_force
@@ -1259,7 +1307,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/Contacts/b2Contact.cpp.i: cmake_force
@@ -1283,7 +1331,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Fixture.cpp.i: cmake_force
@@ -1307,7 +1355,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2Body.cpp.i: cmake_force
@@ -1331,7 +1379,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2ContactManager.cpp.i: cmake_force
@@ -1355,7 +1403,7 @@ CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynami
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o: CMakeFiles/runner.dir/flags.make
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o: /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o -c /home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp
 
 CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.i: cmake_force
@@ -1383,6 +1431,8 @@ runner_OBJECTS = \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o" \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.o" \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o" \
+"CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o" \
+"CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o" \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o" \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o" \
 "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o" \
@@ -1442,6 +1492,8 @@ runner: CMakeFiles/runner.dir/runner.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o
+runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o
+runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o
@@ -1495,7 +1547,7 @@ runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2
 runner: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Dynamics/b2World.cpp.o
 runner: CMakeFiles/runner.dir/build.make
 runner: CMakeFiles/runner.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Linking CXX executable runner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Linking CXX executable runner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runner.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1507,6 +1559,8 @@ CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/runner.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o.requires
+CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o.requires
+CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o.requires
 CMakeFiles/runner.dir/requires: CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o.requires

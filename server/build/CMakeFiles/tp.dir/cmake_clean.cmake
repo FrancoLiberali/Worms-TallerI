@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/gusano.cpp.o"
   "CMakeFiles/tp.dir/src/file_error.cpp.o"
   "CMakeFiles/tp.dir/src/viga.cpp.o"
+  "CMakeFiles/tp.dir/src/projectile.cpp.o"
+  "CMakeFiles/tp.dir/src/exploted_state.cpp.o"
   "CMakeFiles/tp.dir/src/inactive_state.cpp.o"
   "CMakeFiles/tp.dir/src/file.cpp.o"
   "CMakeFiles/tp.dir/src/jumping_state.cpp.o"

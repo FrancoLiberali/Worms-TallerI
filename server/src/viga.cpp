@@ -6,9 +6,9 @@
 Viga::Viga(b2World& world, float x, float y, float angle) {
 	b2BodyDef vigaBodyDef;
 	//vigaBodyDef.position.Set(x, y);
-	int* data = new int(0);
+	//int* data = new int(0);
 	b2Body* vigaBody = world.CreateBody(&vigaBodyDef);
-	vigaBody->SetUserData((void*)data);
+	//vigaBody->SetUserData((void*)data);
 	float x_center; 
 	float y_center;
 	if (angle <= 0){
@@ -25,6 +25,7 @@ Viga::Viga(b2World& world, float x, float y, float angle) {
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &vigaBox;
 	fixtureDef.density = 0.0f;
+	fixtureDef.friction = 1.0f;
 	fixtureDef.filter.groupIndex = -1;
 
 	vigaBody->CreateFixture(&fixtureDef);

@@ -1392,6 +1392,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/exploted_state.o: src/exploted_state.cpp.o
+
+.PHONY : src/exploted_state.o
+
+# target to build an object file
+src/exploted_state.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/exploted_state.cpp.o
+.PHONY : src/exploted_state.cpp.o
+
+src/exploted_state.i: src/exploted_state.cpp.i
+
+.PHONY : src/exploted_state.i
+
+# target to preprocess a source file
+src/exploted_state.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/exploted_state.cpp.i
+.PHONY : src/exploted_state.cpp.i
+
+src/exploted_state.s: src/exploted_state.cpp.s
+
+.PHONY : src/exploted_state.s
+
+# target to generate assembly for a file
+src/exploted_state.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/exploted_state.cpp.s
+.PHONY : src/exploted_state.cpp.s
+
 src/file.o: src/file.cpp.o
 
 .PHONY : src/file.o
@@ -1553,6 +1580,33 @@ src/moving_state.s: src/moving_state.cpp.s
 src/moving_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/moving_state.cpp.s
 .PHONY : src/moving_state.cpp.s
+
+src/projectile.o: src/projectile.cpp.o
+
+.PHONY : src/projectile.o
+
+# target to build an object file
+src/projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/projectile.cpp.o
+.PHONY : src/projectile.cpp.o
+
+src/projectile.i: src/projectile.cpp.i
+
+.PHONY : src/projectile.i
+
+# target to preprocess a source file
+src/projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/projectile.cpp.i
+.PHONY : src/projectile.cpp.i
+
+src/projectile.s: src/projectile.cpp.s
+
+.PHONY : src/projectile.s
+
+# target to generate assembly for a file
+src/projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/projectile.cpp.s
+.PHONY : src/projectile.cpp.s
 
 src/rotating_state.o: src/rotating_state.cpp.o
 
@@ -1758,6 +1812,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/exploted_state.o"
+	@echo "... src/exploted_state.i"
+	@echo "... src/exploted_state.s"
 	@echo "... src/file.o"
 	@echo "... src/file.i"
 	@echo "... src/file.s"
@@ -1776,6 +1833,9 @@ help:
 	@echo "... src/moving_state.o"
 	@echo "... src/moving_state.i"
 	@echo "... src/moving_state.s"
+	@echo "... src/projectile.o"
+	@echo "... src/projectile.i"
+	@echo "... src/projectile.s"
 	@echo "... src/rotating_state.o"
 	@echo "... src/rotating_state.i"
 	@echo "... src/rotating_state.s"

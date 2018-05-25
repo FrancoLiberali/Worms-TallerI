@@ -190,9 +190,11 @@ class WormMovingTest : public CxxTest::TestSuite {
 			
 			b2Vec2 position11 = gusano.GetPosition();
 			b2Vec2 position21 = gusano2.GetPosition();
-			for (int i = 0; i < 30; i++){
+			for (int i = 0; i < 200; i++){
 				//give some time to see if fall
 				world.Step(timeStep, velocityIterations, positionIterations);
+				gusano.sumOneStep();
+				gusano2.sumOneStep();
 			}
 			
 			b2Vec2 position12 = gusano.GetPosition();
@@ -203,7 +205,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 			float delta2x = position22.x - position21.x;
 			float delta2y = position22.y - position21.y;
 			TS_ASSERT(delta1x > 0.2 || delta1x < -0.2);
-			TS_ASSERT(delta1y > 0.2 || delta1y < -0.2);
+			TS_ASSERT(delta1y > 0.1 || delta1y < -0.1);
 			TS_ASSERT(delta2x > 0.2 || delta2x < -0.2);
 			TS_ASSERT(delta2y > 0.2 || delta2y < -0.2);
 		
@@ -416,7 +418,7 @@ class WormMovingTest : public CxxTest::TestSuite {
 			Viga viga(world, 0.0f, 0.0f, 0.0f);
 			Viga viga2(world, 6.0f, 0.0f, 0.5f);
 			
-			Gusano gusano(world, 5.95f, 0.52f, 0.0f);
+			Gusano gusano(world, 5.97f, 0.52f, 0.0f);
 			
 			//esto es porque en el primer step van a entrar en contacto todos los bodys con el terreno
 			world.Step(timeStep, velocityIterations, positionIterations);

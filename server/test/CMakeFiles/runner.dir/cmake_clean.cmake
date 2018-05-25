@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o"
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.o"
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o"
+  "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.o"
+  "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o"
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp.o"
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file.cpp.o"
   "CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.o"

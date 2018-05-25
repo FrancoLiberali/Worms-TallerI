@@ -309,6 +309,10 @@ Box2D/Box2D.h
 ../src/Box2D/Box2D.h
 gusano.h
 ../src/gusano.h
+projectile.h
+../src/projectile.h
+user_data.h
+../src/user_data.h
 
 ../src/gusano.h
 Box2D/Box2D.h
@@ -317,10 +321,18 @@ gusano_state.h
 ../src/gusano_state.h
 vector
 -
+user_data.h
+../src/user_data.h
 
 ../src/gusano_state.h
 Box2D/Box2D.h
 ../src/Box2D/Box2D.h
+
+../src/projectile.h
+Box2D/Box2D.h
+../src/Box2D/Box2D.h
+
+../src/user_data.h
 
 ../src/viga.h
 Box2D/Box2D.h
@@ -844,6 +856,18 @@ Box2D/Rope/b2Rope.h
 Box2D/Common/b2Draw.h
 /home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/Box2D/Common/b2Draw.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
+exploted_state.h
+/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.h
+moving_finished.h
+/home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.h
+gusano_state.h
+/home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/file.cpp
 file.h
 /home/franco/Documentos/taller1/tpfinal/server/src/file.h
@@ -889,6 +913,8 @@ moving_finished.h
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
+exploted_state.h
+/home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.h
 cmath
 -
 iostream
@@ -903,6 +929,8 @@ gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 vector
 -
+user_data.h
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 Box2D/Box2D.h
@@ -938,6 +966,38 @@ moving_finished.h
 gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
+projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+cmath
+-
+ray_cast_all_callback.h
+/home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
+vector
+-
+utility
+-
+user_data.h
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+iostream
+-
+
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+vector
+-
+utility
+-
+gusano.h
+/home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
+user_data.h
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
@@ -955,6 +1015,8 @@ gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp
 viga.h

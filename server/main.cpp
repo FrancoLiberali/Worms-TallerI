@@ -5,6 +5,7 @@
 #include "viga.h"
 #include "contact_listener.h"
 #include "file.h"
+#include "projectile.h"
 
 #define RIGHT 1
 #define LEFT -1
@@ -19,10 +20,11 @@ int main(int argc, char** argv) {
 	ContactListener contact_listener;
 	world.SetContactListener(&contact_listener);
 	
-	Viga viga(world, 0.0f, 0.0f, 0.2f);
-			Viga viga2(world, 5.88f, 1.19f, 0.6f);
+	Viga viga(world, 0.0f, 0.0f, 0.0f);
+	Viga viga2(world, 6.0f, 0.0f, 0.5f);
 			
-			Gusano gusano1(world, 5.5f, 2.0f, 0.2f);
+	Gusano gusano1(world, 5.97f, 0.52f, 0.0f);
+	//Projectile projectile(world, 6.0f, 3.0f, -1.570796f, 3, 50, 4);
 	
 	float32 timeStep = 1.0f / 60.0f;
 	int32 velocityIterations = 8; 
@@ -57,13 +59,13 @@ int main(int argc, char** argv) {
 			gusano1.sumOneStep();
 			b2Vec2 position = gusano1.GetPosition();
 			float32 angle = gusano1.GetAngle();
-			//b2Vec2 position2 = gusano2.GetPosition();
-			//float32 angle2 = gusano2.GetAngle();
+		//	b2Vec2 position2 = projectile.GetPosition();
+			//float32 angle2 = projectile.GetAngle();
 			
 			printf("gusano1: %4.2f %4.2f %4.2f\n", position.x, 
 			position.y, angle);
 
-			//printf("gusano1: %4.2f %4.2f %4.2f ; gusano2: %4.2f %4.2f %4.2f \n", position.x, 
+			//printf("gusano1: %4.2f %4.2f %4.2f ; proyectil: %4.2f %4.2f %4.2f \n", position.x, 
 			//position.y, angle, position2.x, position2.y, angle2);
 		}
 	} catch (const std::exception& e){

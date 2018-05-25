@@ -4,6 +4,7 @@
 #include "jumping_state.h"
 #include "moving_finished.h"
 #include "rotating_state.h"
+#include "exploted_state.h"
 #include <cmath>
 #include <iostream>
 #include <algorithm>
@@ -11,11 +12,11 @@
 Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(world_entry){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
-	//bodyDef.position.Set(x, y + 0.125);
 	bodyDef.position.Set(x, y);
 	bodyDef.fixedRotation = true;
 	this->body = this->world.CreateBody(&bodyDef);
-	this->body->SetUserData((void*)this);
+	this->user_data = new UserData(1, this);
+	this->body->SetUserData((void*)this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
 	b2Vec2 vertices[3];
@@ -31,7 +32,8 @@ Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(worl
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.0f;
+	fixtureDef.friction = 1.0f;
+	//fixtureDef.friction = 0.0f;
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
@@ -47,8 +49,8 @@ Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(worl
     fixtureDef.restitution = 0.0f;
     fixtureDef.isSensor = true;
     b2Fixture* footSensorFixture = this->body->CreateFixture(&fixtureDef);
-    int* data = new int(1);
-    footSensorFixture->SetUserData( (void*)data);
+    int data = 1;
+    footSensorFixture->SetUserData((void*)&data);
 	
 	/*//add wheel
 	bodyDef.position.Set(x, y - 0.25);
@@ -81,6 +83,7 @@ Gusano::Gusano(b2World& world_entry, float x, float y, float angle) : world(worl
 
 Gusano::~Gusano(){
 	delete this->state;
+	delete this->user_data;
 }
 
 b2Vec2 Gusano::GetPosition(){
@@ -145,10 +148,10 @@ void Gusano::backJump(){
     this->body->SetLinearVelocity( vel );
 }
 
-float radDiff( float a, float b )
+/*float radDiff( float a, float b )
    {
       return atan2( sin(a-b), cos(a-b) );
-   }
+   }*/
 
 void Gusano::newContact(float ground_angle){
 	this->angles_list.push_back(ground_angle);
@@ -188,9 +191,9 @@ void Gusano::finishContact(float ground_angle){
 		delete this->state;
 		this->state = new JumpingState();
 		this->body->SetGravityScale(1);
-		b2Vec2 vel = this->body->GetLinearVelocity();
-		vel.x = 0.0f;
-		this->body->SetLinearVelocity(vel);
+		//b2Vec2 vel = this->body->GetLinearVelocity();
+		//vel.x = 0.0f;
+		//this->body->SetLinearVelocity(vel);
 	}
 	if (cant_contacts == 1){
 		printf("solo toca a 1\n");
@@ -203,7 +206,20 @@ void Gusano::finishContact(float ground_angle){
 		}
 	}
 }
-		
+
+//b2Vec2 Gusano::GetWorldVector(b2Vec2 local){
+	//return this->body->GetWorldVector(local);
+//} 
+
+void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
+	//this->applyDamage(damage);
+	std::cout << "volar por explosion \n";
+    this->body->ApplyLinearImpulse(impulse, apply_point, true);
+    delete this->state;
+	this->state = new ExplotedState(this->body);
+	this->body->SetGravityScale(1);
+	this->body->SetFixedRotation(false);
+}
 		
 		
 		
