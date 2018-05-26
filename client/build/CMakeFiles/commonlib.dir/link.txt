@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommonlib.a  CMakeFiles/commonlib.dir/src/common/Thread.cpp.o CMakeFiles/commonlib.dir/src/common/Queue.cpp.o
+/usr/bin/ranlib libcommonlib.a

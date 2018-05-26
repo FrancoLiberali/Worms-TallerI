@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcontrollerlib.a  CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o
+/usr/bin/ranlib libcontrollerlib.a

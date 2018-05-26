@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -pthread   CMakeFiles/client.dir/src/clientMain.cpp.o  -o client -rdynamic libviewlib.a libcommonlib.a libcontrollerlib.a -lSDL2 -lSDL2_image 
