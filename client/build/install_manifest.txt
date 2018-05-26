@@ -1,2 +1,3 @@
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/agua.png
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/vigah.png
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/socket.txt
