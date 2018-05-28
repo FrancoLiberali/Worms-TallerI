@@ -341,6 +341,33 @@ src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
 
+src/view/Animation.o: src/view/Animation.cpp.o
+
+.PHONY : src/view/Animation.o
+
+# target to build an object file
+src/view/Animation.cpp.o:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/Animation.cpp.o
+.PHONY : src/view/Animation.cpp.o
+
+src/view/Animation.i: src/view/Animation.cpp.i
+
+.PHONY : src/view/Animation.i
+
+# target to preprocess a source file
+src/view/Animation.cpp.i:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/Animation.cpp.i
+.PHONY : src/view/Animation.cpp.i
+
+src/view/Animation.s: src/view/Animation.cpp.s
+
+.PHONY : src/view/Animation.s
+
+# target to generate assembly for a file
+src/view/Animation.cpp.s:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/Animation.cpp.s
+.PHONY : src/view/Animation.cpp.s
+
 src/view/Escenario.o: src/view/Escenario.cpp.o
 
 .PHONY : src/view/Escenario.o
@@ -476,6 +503,33 @@ src/view/Window.cpp.s:
 	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/Window.cpp.s
 .PHONY : src/view/Window.cpp.s
 
+src/view/WormView.o: src/view/WormView.cpp.o
+
+.PHONY : src/view/WormView.o
+
+# target to build an object file
+src/view/WormView.cpp.o:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/WormView.cpp.o
+.PHONY : src/view/WormView.cpp.o
+
+src/view/WormView.i: src/view/WormView.cpp.i
+
+.PHONY : src/view/WormView.i
+
+# target to preprocess a source file
+src/view/WormView.cpp.i:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/WormView.cpp.i
+.PHONY : src/view/WormView.cpp.i
+
+src/view/WormView.s: src/view/WormView.cpp.s
+
+.PHONY : src/view/WormView.s
+
+# target to generate assembly for a file
+src/view/WormView.cpp.s:
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/WormView.cpp.s
+.PHONY : src/view/WormView.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -507,6 +561,9 @@ help:
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/view/Animation.o"
+	@echo "... src/view/Animation.i"
+	@echo "... src/view/Animation.s"
 	@echo "... src/view/Escenario.o"
 	@echo "... src/view/Escenario.i"
 	@echo "... src/view/Escenario.s"
@@ -522,6 +579,9 @@ help:
 	@echo "... src/view/Window.o"
 	@echo "... src/view/Window.i"
 	@echo "... src/view/Window.s"
+	@echo "... src/view/WormView.o"
+	@echo "... src/view/WormView.i"
+	@echo "... src/view/WormView.s"
 .PHONY : help
 
 

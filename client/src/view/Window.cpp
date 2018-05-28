@@ -11,7 +11,7 @@ Window::Window(int width, int height):width(width), height(height){
 	if (window == NULL)
 		throw SdlException("Error al crear la ventana\n", SDL_GetError());
 	
-	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC );
 	if (window == NULL)
 		throw SdlException("Error al crear el render\n", SDL_GetError());	
 

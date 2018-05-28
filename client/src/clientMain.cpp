@@ -5,6 +5,7 @@
 #include "controller/EventHandler.h"
 #include "common/Queue.h"
 
+
 #define W_WIDHT 800
 #define W_HEIGHT 600
 
@@ -20,14 +21,19 @@ int main(int argc, char const *argv[])
 	View clientView(ehandler,W_WIDHT, W_HEIGHT);
 
 	//Game loop
-
+	int step = 0;
 	while(clientView.isOpen()){
 		SDL_Event e;
-		SDL_WaitEvent(&e);
+		SDL_PollEvent(&e);
 		//std::cout<<"Se intrudujo un evento" << std::endl;
-		if (e.type == SDL_QUIT){
-			std::cout<<"cerrar" << std::endl;			
-			clientView.close();
+		switch (e.type){
+			case SDL_QUIT:
+				std::cout<<"cerrar" << std::endl;			
+				clientView.close();
+				break;
+			case SDL_MOUSEMOTION:
+				std::cout << e.motion.x << "," << e.motion.y << std::endl;
+                break;
 		}
 
 		//desencolo los eventos del server
@@ -36,8 +42,8 @@ int main(int argc, char const *argv[])
 			//std::cout<< msg << std::endl;
 			ehandler.add(msg);
 		}
-
 		clientView.update();
+		step++;
 	}
 
 	eventReceiver.join();

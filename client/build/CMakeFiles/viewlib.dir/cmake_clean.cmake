@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o"
   "CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o"
   "CMakeFiles/viewlib.dir/src/view/Texture.cpp.o"
+  "CMakeFiles/viewlib.dir/src/view/Animation.cpp.o"
+  "CMakeFiles/viewlib.dir/src/view/WormView.cpp.o"
   "libviewlib.pdb"
   "libviewlib.a"
 )

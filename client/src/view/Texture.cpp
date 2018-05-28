@@ -8,10 +8,23 @@ LTexture::LTexture(Window& window): gRenderer(window.getRender())
 	mHeight = 0;
 }
 
+LTexture::LTexture(){
+	//Initialize
+	mTexture = NULL;
+	mWidth = 0;
+	mHeight = 0;
+}
+
 LTexture::~LTexture()
 {
 	//Deallocate
 	free();
+}
+
+
+bool LTexture::loadFromFile( std::string path, Window& window){
+	gRenderer = window.getRender();
+	return this->loadFromFile(path);
 }
 
 bool LTexture::loadFromFile( std::string path )

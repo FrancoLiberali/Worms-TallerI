@@ -1,2 +1,2 @@
-/usr/bin/ar qc libviewlib.a  CMakeFiles/viewlib.dir/src/view/View.cpp.o CMakeFiles/viewlib.dir/src/view/Window.cpp.o CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o CMakeFiles/viewlib.dir/src/view/Texture.cpp.o
+/usr/bin/ar qc libviewlib.a  CMakeFiles/viewlib.dir/src/view/View.cpp.o CMakeFiles/viewlib.dir/src/view/Window.cpp.o CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o CMakeFiles/viewlib.dir/src/view/Texture.cpp.o CMakeFiles/viewlib.dir/src/view/Animation.cpp.o CMakeFiles/viewlib.dir/src/view/WormView.cpp.o
 /usr/bin/ranlib libviewlib.a

@@ -177,13 +177,63 @@ CMakeFiles/viewlib.dir/src/view/Texture.cpp.o.provides: CMakeFiles/viewlib.dir/s
 CMakeFiles/viewlib.dir/src/view/Texture.cpp.o.provides.build: CMakeFiles/viewlib.dir/src/view/Texture.cpp.o
 
 
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.o: CMakeFiles/viewlib.dir/flags.make
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.o: ../src/view/Animation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/viewlib.dir/src/view/Animation.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/viewlib.dir/src/view/Animation.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.cpp
+
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viewlib.dir/src/view/Animation.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.cpp > CMakeFiles/viewlib.dir/src/view/Animation.cpp.i
+
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viewlib.dir/src/view/Animation.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.cpp -o CMakeFiles/viewlib.dir/src/view/Animation.cpp.s
+
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.requires:
+
+.PHONY : CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.requires
+
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.provides: CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.provides.build
+.PHONY : CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.provides
+
+CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.provides.build: CMakeFiles/viewlib.dir/src/view/Animation.cpp.o
+
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: CMakeFiles/viewlib.dir/flags.make
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/WormView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/viewlib.dir/src/view/WormView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/viewlib.dir/src/view/WormView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.cpp
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/viewlib.dir/src/view/WormView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.cpp > CMakeFiles/viewlib.dir/src/view/WormView.cpp.i
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/viewlib.dir/src/view/WormView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.cpp -o CMakeFiles/viewlib.dir/src/view/WormView.cpp.s
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.requires:
+
+.PHONY : CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.requires
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.provides: CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.provides.build
+.PHONY : CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.provides
+
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.provides.build: CMakeFiles/viewlib.dir/src/view/WormView.cpp.o
+
+
 # Object files for target viewlib
 viewlib_OBJECTS = \
 "CMakeFiles/viewlib.dir/src/view/View.cpp.o" \
 "CMakeFiles/viewlib.dir/src/view/Window.cpp.o" \
 "CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o" \
 "CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o" \
-"CMakeFiles/viewlib.dir/src/view/Texture.cpp.o"
+"CMakeFiles/viewlib.dir/src/view/Texture.cpp.o" \
+"CMakeFiles/viewlib.dir/src/view/Animation.cpp.o" \
+"CMakeFiles/viewlib.dir/src/view/WormView.cpp.o"
 
 # External object files for target viewlib
 viewlib_EXTERNAL_OBJECTS =
@@ -193,9 +243,11 @@ libviewlib.a: CMakeFiles/viewlib.dir/src/view/Window.cpp.o
 libviewlib.a: CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o
 libviewlib.a: CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o
 libviewlib.a: CMakeFiles/viewlib.dir/src/view/Texture.cpp.o
+libviewlib.a: CMakeFiles/viewlib.dir/src/view/Animation.cpp.o
+libviewlib.a: CMakeFiles/viewlib.dir/src/view/WormView.cpp.o
 libviewlib.a: CMakeFiles/viewlib.dir/build.make
 libviewlib.a: CMakeFiles/viewlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libviewlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libviewlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/viewlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/viewlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -209,6 +261,8 @@ CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/Window.cpp.o.re
 CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/SdlException.cpp.o.requires
 CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/Escenario.cpp.o.requires
 CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/Texture.cpp.o.requires
+CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/Animation.cpp.o.requires
+CMakeFiles/viewlib.dir/requires: CMakeFiles/viewlib.dir/src/view/WormView.cpp.o.requires
 
 .PHONY : CMakeFiles/viewlib.dir/requires
 

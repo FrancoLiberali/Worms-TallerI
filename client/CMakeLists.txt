@@ -20,6 +20,8 @@ add_library(viewlib
 	src/view/SdlException.cpp
 	src/view/Escenario.cpp
 	src/view/Texture.cpp
+	src/view/Animation.cpp
+	src/view/WormView.cpp
 )
 
 message("Agregando '${PROJECT_BINARY_DIR}' como directorio de includes")
@@ -32,3 +34,5 @@ add_executable (client
 target_link_libraries(client viewlib commonlib controllerlib SDL2 SDL2_image)
 install(FILES assets/agua.png DESTINATION ${CMAKE_BINARY_DIR})
 install(FILES assets/vigah.png DESTINATION ${CMAKE_BINARY_DIR})
+install(FILES assets/wwalk.png DESTINATION ${CMAKE_BINARY_DIR})
+install(FILES test/socket.txt DESTINATION ${CMAKE_BINARY_DIR})
