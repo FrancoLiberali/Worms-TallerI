@@ -3,15 +3,16 @@
 
 #include "../common/Queue.h"
 #include "../common/Thread.h"
+#include "Event.h"
 
 class ClientEventReceiver : public Thread{
 private:
 	std::string socket_file;
 	//agrgar cola bloqueante;
-	Queue& q;
+	Queue<Event*>& q;
 	bool closed;
 public:
-	ClientEventReceiver(std::string socket, Queue& eventQueue);
+	ClientEventReceiver(std::string socket, Queue<Event*>& eventQueue);
 	~ClientEventReceiver();
 	virtual void run() override;
 	void stop();

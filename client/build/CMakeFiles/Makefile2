@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-Ta
 CMakeFiles/controllerlib.dir/all:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/depend
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=6,7,8 "Built target controllerlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=5,6,7,8,9,10 "Built target controllerlib"
 .PHONY : CMakeFiles/controllerlib.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/controllerlib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/controllerlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/controllerlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : CMakeFiles/controllerlib.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/controllerlib.dir/clean
 CMakeFiles/viewlib.dir/all:
 	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/depend
 	$(MAKE) -f CMakeFiles/viewlib.dir/build.make CMakeFiles/viewlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=9,10,11,12,13,14,15,16 "Built target viewlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=11,12,13,14,15,16,17,18 "Built target viewlib"
 .PHONY : CMakeFiles/viewlib.dir/all
 
 # Include target in all.
@@ -140,7 +140,7 @@ clean: CMakeFiles/viewlib.dir/clean
 CMakeFiles/commonlib.dir/all:
 	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/depend
 	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=3,4,5 "Built target commonlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=3,4 "Built target commonlib"
 .PHONY : CMakeFiles/commonlib.dir/all
 
 # Include target in all.
@@ -150,7 +150,7 @@ all: CMakeFiles/commonlib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/commonlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/commonlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : CMakeFiles/commonlib.dir/rule
@@ -189,7 +189,7 @@ all: CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : CMakeFiles/client.dir/rule

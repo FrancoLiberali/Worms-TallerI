@@ -1,16 +1,21 @@
 #ifndef _EVENT_HANDLER_H
 #define _EVENT_HANDLER_H
 
+class Event;
 #include <queue>
 #include <string>
+#include "Event.h"
+#include "../view/View.h"
 
 class EventHandler {
 private:
-	std::queue<std::string> eventQueue;
+	View* view;
+	std::queue<Event*> eventQueue;
 public:
-	void add(std::string event);
+	void add(Event* event);
+	void setView(View *view);
   	bool empty();
-  	std::string get();
+  	Event* get();
 };
 
 #endif

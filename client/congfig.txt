@@ -1,0 +1,7 @@
+//Lo que se recibe del server es: total 10 bytes, 
+completar si no es asi para que se lea siempre la misma cantidad de bytes
+
+[tipoEvento(1byte), descripcion] 
+tipoEvent: W_MOVE(0),W_JUMP,W_DEATH,G_ENDGAME
+descripcion:
+-> worm: [id_worm(1 bytes), posx(4bytes), posy(4 bytes)]

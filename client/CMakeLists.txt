@@ -7,11 +7,13 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
 add_library(controllerlib
 	src/controller/ClientEventReceiver.cpp
     src/controller/EventHandler.cpp
+    src/controller/Event.cpp
+    src/controller/EventFactory.cpp
+    src/controller/WormMoveEvent.cpp
 )
 
 add_library(commonlib
 	src/common/Thread.cpp
-	src/common/Queue.cpp
 )
 
 add_library(viewlib

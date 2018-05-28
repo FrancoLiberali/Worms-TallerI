@@ -1,2 +1,2 @@
-/usr/bin/ar qc libcontrollerlib.a  CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o
+/usr/bin/ar qc libcontrollerlib.a  CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
 /usr/bin/ranlib libcontrollerlib.a

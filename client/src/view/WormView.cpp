@@ -10,6 +10,11 @@ void WormView::load(int x, int y, Window* window){
 	anime.render();
 }
 
+void WormView::setPos(int x, int y){
+	this->x = x; this->y = y;
+	anime.setPos(x,y);
+}
+
 void WormView::update(){
 	anime.render();
 }

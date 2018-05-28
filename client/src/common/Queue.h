@@ -1,25 +1,49 @@
 #ifndef _QUEUE_H
 #define _QUEUE_H
 
-/*Cola protegida para strings*/
+/*Template Cola protegida*/
 #include <queue>
 #include <mutex>
 #include <condition_variable>
-#include <string>
 
+template<class T>
 class Queue {
-private:
-	std::queue<std::string> q;
-	std::mutex m;
-	std::condition_variable cv;
-	Queue(const Queue &) = delete;
-  	Queue &operator=(const Queue &) = delete;
-public:
-	Queue();
-	~Queue();
-	bool empty();
-	void push(std::string msg);
-	std::string pop();	
+ private:
+  std::queue<T> q;
+
+  std::mutex mtx;
+  std::condition_variable cv;
+
+ public:
+  Queue() {}
+  bool empty() {
+    std::unique_lock<std::mutex> lck(mtx);
+    return q.empty();
+  }
+  void push(const T &val) {
+    std::unique_lock<std::mutex> lck(mtx);
+    if (q.empty()) {
+      cv.notify_all();
+    }
+
+    q.push(val);
+  }
+
+  T pop() {
+    std::unique_lock<std::mutex> lck(mtx);
+    while (q.empty()) {
+      cv.wait(lck);
+    }
+
+    const T val = q.front();
+    q.pop();
+
+    return val;
+  }
+
+ private:
+  Queue(const Queue &) = delete;
+  Queue &operator=(const Queue &) = delete;
 };
 
 #endif

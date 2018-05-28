@@ -6,6 +6,57 @@ CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventType.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventType.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h

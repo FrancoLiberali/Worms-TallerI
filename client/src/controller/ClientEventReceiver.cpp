@@ -1,8 +1,12 @@
 #include "ClientEventReceiver.h"
+#include "EventFactory.h"
+#include "EventType.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
-ClientEventReceiver::ClientEventReceiver(std::string socket,Queue& q)
+
+ClientEventReceiver::ClientEventReceiver(std::string socket,Queue<Event*>& q)
 					: socket_file(socket), q(q), closed(false){
 
 	std::cout << "ClientEventReceiver construido" << std::endl;
@@ -15,6 +19,21 @@ ClientEventReceiver::~ClientEventReceiver() {
   std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
+/*Funcion auxiliar para ver el tipo del evento*/
+EventType getTypeEvent(std::stringstream& ss){
+	int type = 0;
+	ss >> type;
+
+	switch (type){
+		case 0: return W_MOVE;
+		case 1: return W_JUMP;
+		case 2: return W_ATTACK;
+		case 3: return W_DEATH;
+		case 4: return G_ENDGAME;
+	}
+	return W_MOVE;
+}
+
 void ClientEventReceiver::run(){
 	std::cout << "ClientEventReceiver corriendo" << std::endl;
   	std::ifstream ifs(socket_file);
@@ -23,11 +42,14 @@ void ClientEventReceiver::run(){
 		  return;
 	}
 
-	std::string event;
+	std::string str;
 	while(!closed){
 		//leemos del "socket"
-		std::getline(ifs, event);
-		//std::cout << event << std::endl;
+		std::getline(ifs, str);
+		std::cout << str << std::endl;
+		std::stringstream ss(str);
+		EventType type = getTypeEvent(ss);
+		Event* event = EventFactory::createEvent(type, ss);
 		q.push(event);
 		if (ifs.eof())
 			this->stop();

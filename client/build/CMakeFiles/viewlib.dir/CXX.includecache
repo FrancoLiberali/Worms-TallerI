@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+../view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
 queue
 -
 string
 -
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+../view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.cpp
 Animation.h
@@ -77,6 +85,8 @@ Escenario.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
 WormView.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+../controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h

@@ -37,8 +37,14 @@ void View::update(){
 	Escenario escenario(window);
 	escenario.draw();
 	while (!eventHandler.empty()){
-		std::string mensaje = eventHandler.get();
-		this->procesar(mensaje);
+		Event*  event = eventHandler.get();
+		//this->procesar(mensaje);
+		SDL_Delay(100);
+		window.fill();
+		escenario.draw();
+		event->process();
+		worm.update();
+		window.renderWindow();
 	}
 	worm.update();
 	window.renderWindow();
@@ -46,4 +52,8 @@ void View::update(){
 
 void View::procesar(std::string msg){
 	std::cout << "procesar " << msg << std::endl;
+}
+
+WormView* View::getWormView(int id){
+	return &worm;
 }

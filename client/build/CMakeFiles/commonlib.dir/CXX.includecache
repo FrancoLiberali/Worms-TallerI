@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.cpp
-Queue.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.h
-
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.h
-queue
--
-mutex
--
-condition_variable
--
-string
--
-
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.cpp
 Thread.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.h

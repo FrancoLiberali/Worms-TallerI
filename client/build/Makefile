@@ -233,33 +233,6 @@ src/clientMain.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/clientMain.cpp.s
 .PHONY : src/clientMain.cpp.s
 
-src/common/Queue.o: src/common/Queue.cpp.o
-
-.PHONY : src/common/Queue.o
-
-# target to build an object file
-src/common/Queue.cpp.o:
-	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/src/common/Queue.cpp.o
-.PHONY : src/common/Queue.cpp.o
-
-src/common/Queue.i: src/common/Queue.cpp.i
-
-.PHONY : src/common/Queue.i
-
-# target to preprocess a source file
-src/common/Queue.cpp.i:
-	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/src/common/Queue.cpp.i
-.PHONY : src/common/Queue.cpp.i
-
-src/common/Queue.s: src/common/Queue.cpp.s
-
-.PHONY : src/common/Queue.s
-
-# target to generate assembly for a file
-src/common/Queue.cpp.s:
-	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/src/common/Queue.cpp.s
-.PHONY : src/common/Queue.cpp.s
-
 src/common/Thread.o: src/common/Thread.cpp.o
 
 .PHONY : src/common/Thread.o
@@ -314,6 +287,60 @@ src/controller/ClientEventReceiver.cpp.s:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.s
 .PHONY : src/controller/ClientEventReceiver.cpp.s
 
+src/controller/Event.o: src/controller/Event.cpp.o
+
+.PHONY : src/controller/Event.o
+
+# target to build an object file
+src/controller/Event.cpp.o:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o
+.PHONY : src/controller/Event.cpp.o
+
+src/controller/Event.i: src/controller/Event.cpp.i
+
+.PHONY : src/controller/Event.i
+
+# target to preprocess a source file
+src/controller/Event.cpp.i:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/Event.cpp.i
+.PHONY : src/controller/Event.cpp.i
+
+src/controller/Event.s: src/controller/Event.cpp.s
+
+.PHONY : src/controller/Event.s
+
+# target to generate assembly for a file
+src/controller/Event.cpp.s:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/Event.cpp.s
+.PHONY : src/controller/Event.cpp.s
+
+src/controller/EventFactory.o: src/controller/EventFactory.cpp.o
+
+.PHONY : src/controller/EventFactory.o
+
+# target to build an object file
+src/controller/EventFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o
+.PHONY : src/controller/EventFactory.cpp.o
+
+src/controller/EventFactory.i: src/controller/EventFactory.cpp.i
+
+.PHONY : src/controller/EventFactory.i
+
+# target to preprocess a source file
+src/controller/EventFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.i
+.PHONY : src/controller/EventFactory.cpp.i
+
+src/controller/EventFactory.s: src/controller/EventFactory.cpp.s
+
+.PHONY : src/controller/EventFactory.s
+
+# target to generate assembly for a file
+src/controller/EventFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.s
+.PHONY : src/controller/EventFactory.cpp.s
+
 src/controller/EventHandler.o: src/controller/EventHandler.cpp.o
 
 .PHONY : src/controller/EventHandler.o
@@ -340,6 +367,33 @@ src/controller/EventHandler.s: src/controller/EventHandler.cpp.s
 src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
+
+src/controller/WormMoveEvent.o: src/controller/WormMoveEvent.cpp.o
+
+.PHONY : src/controller/WormMoveEvent.o
+
+# target to build an object file
+src/controller/WormMoveEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
+.PHONY : src/controller/WormMoveEvent.cpp.o
+
+src/controller/WormMoveEvent.i: src/controller/WormMoveEvent.cpp.i
+
+.PHONY : src/controller/WormMoveEvent.i
+
+# target to preprocess a source file
+src/controller/WormMoveEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.i
+.PHONY : src/controller/WormMoveEvent.cpp.i
+
+src/controller/WormMoveEvent.s: src/controller/WormMoveEvent.cpp.s
+
+.PHONY : src/controller/WormMoveEvent.s
+
+# target to generate assembly for a file
+src/controller/WormMoveEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s
+.PHONY : src/controller/WormMoveEvent.cpp.s
 
 src/view/Animation.o: src/view/Animation.cpp.o
 
@@ -549,18 +603,24 @@ help:
 	@echo "... src/clientMain.o"
 	@echo "... src/clientMain.i"
 	@echo "... src/clientMain.s"
-	@echo "... src/common/Queue.o"
-	@echo "... src/common/Queue.i"
-	@echo "... src/common/Queue.s"
 	@echo "... src/common/Thread.o"
 	@echo "... src/common/Thread.i"
 	@echo "... src/common/Thread.s"
 	@echo "... src/controller/ClientEventReceiver.o"
 	@echo "... src/controller/ClientEventReceiver.i"
 	@echo "... src/controller/ClientEventReceiver.s"
+	@echo "... src/controller/Event.o"
+	@echo "... src/controller/Event.i"
+	@echo "... src/controller/Event.s"
+	@echo "... src/controller/EventFactory.o"
+	@echo "... src/controller/EventFactory.i"
+	@echo "... src/controller/EventFactory.s"
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/controller/WormMoveEvent.o"
+	@echo "... src/controller/WormMoveEvent.i"
+	@echo "... src/controller/WormMoveEvent.s"
 	@echo "... src/view/Animation.o"
 	@echo "... src/view/Animation.i"
 	@echo "... src/view/Animation.s"

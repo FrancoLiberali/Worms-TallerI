@@ -81,43 +81,17 @@ CMakeFiles/commonlib.dir/src/common/Thread.cpp.o.provides: CMakeFiles/commonlib.
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.o.provides.build: CMakeFiles/commonlib.dir/src/common/Thread.cpp.o
 
 
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.o: CMakeFiles/commonlib.dir/flags.make
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.o: ../src/common/Queue.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/commonlib.dir/src/common/Queue.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/commonlib.dir/src/common/Queue.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.cpp
-
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/commonlib.dir/src/common/Queue.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.cpp > CMakeFiles/commonlib.dir/src/common/Queue.cpp.i
-
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/commonlib.dir/src/common/Queue.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.cpp -o CMakeFiles/commonlib.dir/src/common/Queue.cpp.s
-
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.requires:
-
-.PHONY : CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.requires
-
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.provides: CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.requires
-	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.provides.build
-.PHONY : CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.provides
-
-CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.provides.build: CMakeFiles/commonlib.dir/src/common/Queue.cpp.o
-
-
 # Object files for target commonlib
 commonlib_OBJECTS = \
-"CMakeFiles/commonlib.dir/src/common/Thread.cpp.o" \
-"CMakeFiles/commonlib.dir/src/common/Queue.cpp.o"
+"CMakeFiles/commonlib.dir/src/common/Thread.cpp.o"
 
 # External object files for target commonlib
 commonlib_EXTERNAL_OBJECTS =
 
 libcommonlib.a: CMakeFiles/commonlib.dir/src/common/Thread.cpp.o
-libcommonlib.a: CMakeFiles/commonlib.dir/src/common/Queue.cpp.o
 libcommonlib.a: CMakeFiles/commonlib.dir/build.make
 libcommonlib.a: CMakeFiles/commonlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcommonlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcommonlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/commonlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/commonlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -127,7 +101,6 @@ CMakeFiles/commonlib.dir/build: libcommonlib.a
 .PHONY : CMakeFiles/commonlib.dir/build
 
 CMakeFiles/commonlib.dir/requires: CMakeFiles/commonlib.dir/src/common/Thread.cpp.o.requires
-CMakeFiles/commonlib.dir/requires: CMakeFiles/commonlib.dir/src/common/Queue.cpp.o.requires
 
 .PHONY : CMakeFiles/commonlib.dir/requires
 

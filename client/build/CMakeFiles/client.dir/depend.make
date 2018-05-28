@@ -5,6 +5,7 @@ CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/clientMain.cpp
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/controller/ClientEventReceiver.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/controller/Event.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Animation.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Escenario.h

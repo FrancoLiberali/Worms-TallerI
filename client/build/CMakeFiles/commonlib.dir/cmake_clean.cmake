@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/commonlib.dir/src/common/Thread.cpp.o"
-  "CMakeFiles/commonlib.dir/src/common/Queue.cpp.o"
   "libcommonlib.pdb"
   "libcommonlib.a"
 )

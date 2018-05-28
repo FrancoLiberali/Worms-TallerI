@@ -16,6 +16,7 @@ private:
 public:
 	WormView();
 	void load(int x, int y, Window* window);
+	void setPos(int x, int y);
 	void update();
 	
 };
