@@ -68,26 +68,16 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+.PHONY : edit_cache/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -100,6 +90,17 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -111,16 +112,15 @@ install/strip/fast: install/strip
 
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
 
-.PHONY : edit_cache/fast
+.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -155,17 +155,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named controllerlib
+# Target rules for targets named commonlib
 
 # Build rule for target.
-controllerlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 controllerlib
-.PHONY : controllerlib
+commonlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 commonlib
+.PHONY : commonlib
 
 # fast build rule for target.
-controllerlib/fast:
-	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/build
-.PHONY : controllerlib/fast
+commonlib/fast:
+	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/build
+.PHONY : commonlib/fast
 
 #=============================================================================
 # Target rules for targets named viewlib
@@ -181,17 +181,30 @@ viewlib/fast:
 .PHONY : viewlib/fast
 
 #=============================================================================
-# Target rules for targets named commonlib
+# Target rules for targets named modellib
 
 # Build rule for target.
-commonlib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 commonlib
-.PHONY : commonlib
+modellib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 modellib
+.PHONY : modellib
 
 # fast build rule for target.
-commonlib/fast:
-	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/build
-.PHONY : commonlib/fast
+modellib/fast:
+	$(MAKE) -f CMakeFiles/modellib.dir/build.make CMakeFiles/modellib.dir/build
+.PHONY : modellib/fast
+
+#=============================================================================
+# Target rules for targets named controllerlib
+
+# Build rule for target.
+controllerlib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 controllerlib
+.PHONY : controllerlib
+
+# fast build rule for target.
+controllerlib/fast:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/build
+.PHONY : controllerlib/fast
 
 #=============================================================================
 # Target rules for targets named client
@@ -259,6 +272,33 @@ src/common/Thread.s: src/common/Thread.cpp.s
 src/common/Thread.cpp.s:
 	$(MAKE) -f CMakeFiles/commonlib.dir/build.make CMakeFiles/commonlib.dir/src/common/Thread.cpp.s
 .PHONY : src/common/Thread.cpp.s
+
+src/controller/ClientCommandSender.o: src/controller/ClientCommandSender.cpp.o
+
+.PHONY : src/controller/ClientCommandSender.o
+
+# target to build an object file
+src/controller/ClientCommandSender.cpp.o:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o
+.PHONY : src/controller/ClientCommandSender.cpp.o
+
+src/controller/ClientCommandSender.i: src/controller/ClientCommandSender.cpp.i
+
+.PHONY : src/controller/ClientCommandSender.i
+
+# target to preprocess a source file
+src/controller/ClientCommandSender.cpp.i:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.i
+.PHONY : src/controller/ClientCommandSender.cpp.i
+
+src/controller/ClientCommandSender.s: src/controller/ClientCommandSender.cpp.s
+
+.PHONY : src/controller/ClientCommandSender.s
+
+# target to generate assembly for a file
+src/controller/ClientCommandSender.cpp.s:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.s
+.PHONY : src/controller/ClientCommandSender.cpp.s
 
 src/controller/ClientEventReceiver.o: src/controller/ClientEventReceiver.cpp.o
 
@@ -394,6 +434,33 @@ src/controller/WormMoveEvent.s: src/controller/WormMoveEvent.cpp.s
 src/controller/WormMoveEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s
 .PHONY : src/controller/WormMoveEvent.cpp.s
+
+src/model/ClientCommand.o: src/model/ClientCommand.cpp.o
+
+.PHONY : src/model/ClientCommand.o
+
+# target to build an object file
+src/model/ClientCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/modellib.dir/build.make CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o
+.PHONY : src/model/ClientCommand.cpp.o
+
+src/model/ClientCommand.i: src/model/ClientCommand.cpp.i
+
+.PHONY : src/model/ClientCommand.i
+
+# target to preprocess a source file
+src/model/ClientCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/modellib.dir/build.make CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.i
+.PHONY : src/model/ClientCommand.cpp.i
+
+src/model/ClientCommand.s: src/model/ClientCommand.cpp.s
+
+.PHONY : src/model/ClientCommand.s
+
+# target to generate assembly for a file
+src/model/ClientCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/modellib.dir/build.make CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.s
+.PHONY : src/model/ClientCommand.cpp.s
 
 src/view/Animation.o: src/view/Animation.cpp.o
 
@@ -591,21 +658,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... controllerlib"
-	@echo "... viewlib"
-	@echo "... edit_cache"
 	@echo "... commonlib"
+	@echo "... edit_cache"
+	@echo "... viewlib"
+	@echo "... modellib"
+	@echo "... controllerlib"
+	@echo "... install/local"
 	@echo "... client"
+	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... src/clientMain.o"
 	@echo "... src/clientMain.i"
 	@echo "... src/clientMain.s"
 	@echo "... src/common/Thread.o"
 	@echo "... src/common/Thread.i"
 	@echo "... src/common/Thread.s"
+	@echo "... src/controller/ClientCommandSender.o"
+	@echo "... src/controller/ClientCommandSender.i"
+	@echo "... src/controller/ClientCommandSender.s"
 	@echo "... src/controller/ClientEventReceiver.o"
 	@echo "... src/controller/ClientEventReceiver.i"
 	@echo "... src/controller/ClientEventReceiver.s"
@@ -621,6 +692,9 @@ help:
 	@echo "... src/controller/WormMoveEvent.o"
 	@echo "... src/controller/WormMoveEvent.i"
 	@echo "... src/controller/WormMoveEvent.s"
+	@echo "... src/model/ClientCommand.o"
+	@echo "... src/model/ClientCommand.i"
+	@echo "... src/model/ClientCommand.s"
 	@echo "... src/view/Animation.o"
 	@echo "... src/view/Animation.i"
 	@echo "... src/view/Animation.s"

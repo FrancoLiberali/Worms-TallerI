@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.cpp
+ClientCommand.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.h
+

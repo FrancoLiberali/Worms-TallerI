@@ -172,6 +172,12 @@ commonlib_LIB_DEPENDS:STATIC=
 controllerlib_LIB_DEPENDS:STATIC=
 
 //Dependencies for target
+model.lib_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
+modellib_LIB_DEPENDS:STATIC=
+
+//Dependencies for target
 viewlib_LIB_DEPENDS:STATIC=
 
 //Value Computed by CMake

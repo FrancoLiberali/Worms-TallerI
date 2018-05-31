@@ -13,6 +13,8 @@ string
 -
 controller/ClientEventReceiver.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.h
+controller/ClientCommandSender.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientCommandSender.h
 view/View.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
 controller/EventHandler.h
@@ -33,6 +35,16 @@ condition_variable
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.h
 thread
 -
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientCommandSender.h
+string
+-
+../common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Queue.h
+../common/Thread.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.h
+../model/ClientCommand.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.h
 ../common/Queue.h
@@ -55,6 +67,8 @@ Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
 ../view/View.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
 Texture.h

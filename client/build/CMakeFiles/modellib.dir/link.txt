@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmodellib.a  CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o
+/usr/bin/ranlib libmodellib.a

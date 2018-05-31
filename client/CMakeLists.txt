@@ -10,6 +10,12 @@ add_library(controllerlib
     src/controller/Event.cpp
     src/controller/EventFactory.cpp
     src/controller/WormMoveEvent.cpp
+    src/controller/ClientCommandSender.cpp
+
+)
+
+add_library(modellib
+	src/model/ClientCommand.cpp
 )
 
 add_library(commonlib
@@ -33,7 +39,7 @@ add_executable (client
 	src/clientMain.cpp
 )
 
-target_link_libraries(client viewlib commonlib controllerlib SDL2 SDL2_image)
+target_link_libraries(client viewlib commonlib controllerlib modellib SDL2 SDL2_image)
 install(FILES assets/agua.png DESTINATION ${CMAKE_BINARY_DIR})
 install(FILES assets/vigah.png DESTINATION ${CMAKE_BINARY_DIR})
 install(FILES assets/wwalk.png DESTINATION ${CMAKE_BINARY_DIR})

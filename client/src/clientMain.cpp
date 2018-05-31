@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "controller/ClientEventReceiver.h"
+#include "controller/ClientCommandSender.h"
 #include "view/View.h"
 #include "controller/EventHandler.h"
 #include "common/Queue.h"
@@ -15,11 +16,16 @@ int main(int argc, char const *argv[])
 	//Le pasamos el archivo a leer, deberia ser el socket
 	std::string socket = "socket.txt";
 
+	//cola de eventos a recibir
 	Queue<Event*> eventQueue;
-
 	ClientEventReceiver eventReceiver(socket, eventQueue);
 	eventReceiver.start();
 	
+	//cola de comandos a enviar
+	Queue<ClientCommand*> commandsQueue;
+	ClientCommandSender commmandSender(socket, commandsQueue);
+	commmandSender.start();
+
 	EventHandler ehandler;
 
 	View clientView(ehandler,W_WIDHT, W_HEIGHT);
@@ -35,6 +41,8 @@ int main(int argc, char const *argv[])
 			case SDL_QUIT:
 				std::cout<<"cerrar" << std::endl;			
 				clientView.close();
+				commmandSender.stop();
+				eventReceiver.stop();
 				break;
 			case SDL_MOUSEMOTION:
 				std::cout << e.motion.x << "," << e.motion.y << std::endl;
@@ -50,7 +58,8 @@ int main(int argc, char const *argv[])
 		clientView.update();
 		step++;
 	}
-
+	commmandSender.join();
 	eventReceiver.join();
+
 	return 0;
 }
