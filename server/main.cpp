@@ -25,15 +25,21 @@ int main(int argc, char** argv) {
 	ContactListener contact_listener;
 	world.SetContactListener(&contact_listener);
 	
+	std::vector<Viga&> vigas;
+	std::vector<Gusano&> gusanos;
+	
 	Viga viga(world, 0.0f, 0.0f, 0.0f);
+	vigas.push_back(viga);
 			
 	Gusano gusano1(world, 3.5f, 0.52f, 0.0f);
+	gusanos.push_back(gusano1);
+	
 	std::vector<Projectile*> to_remove;
 	std::vector<LittleProjectile*> to_create;
 	std::vector<Projectile*> in_simulation;
 	GameConstants info;
-	Projectile* bazooka = new Morter(world, 5.0f, 3.0f, -1.570796f, info, to_remove, to_create);
-	in_simulation.push_back(bazooka);
+	//Projectile* bazooka = new Morter(world, 5.0f, 3.0f, -1.570796f, info, to_remove, to_create);
+	//in_simulation.push_back(bazooka);
 	
 	float32 timeStep = 1.0f / 60.0f;
 	int32 velocityIterations = 8; 
@@ -41,8 +47,17 @@ int main(int argc, char** argv) {
 	
 	//para activar los primeros empiezan contacto
 	world.Step(timeStep, velocityIterations, positionIterations);
-	world.Step(timeStep, velocityIterations, positionIterations);
-	//5 seconds
+	
+	Proxy proxy;
+	//primer paso: mandar al client las posiciones iniciales de las vigas y gusanos
+	std::vector<Viga&>::iterator vigas_it = vigas.begin();
+	for (; vigas_it != vigas.end(); ++vigas_it) {
+		proxy.send_viga(*it);
+	}
+	std::vector<Gusano&>::iterator gusanos_it = gusanos.begin();
+	for (; gusanos_it != gusanos.end(); ++gusanos_it) {
+		proxy.send_gusano(*it);
+	}
 	try{
 		File file(argv[1], std::fstream::in);
 		for (int32 i = 0; i < 300; ++i) {
