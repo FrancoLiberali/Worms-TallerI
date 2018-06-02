@@ -26,7 +26,9 @@ Viga::Viga(b2World& world, float x, float y, float angle) {
 	fixtureDef.shape = &vigaBox;
 	fixtureDef.density = 0.0f;
 	fixtureDef.friction = 1.0f;
-	fixtureDef.filter.groupIndex = -1;
+	//fixtureDef.filter.categoryBits = 0x0010;
+	//fixtureDef.filter.maskBits = 0x1001;
+	fixtureDef.filter.groupIndex = -2;
 
 	vigaBody->CreateFixture(&fixtureDef);
 	

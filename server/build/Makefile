@@ -1392,6 +1392,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/banana.o: src/banana.cpp.o
+
+.PHONY : src/banana.o
+
+# target to build an object file
+src/banana.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/banana.cpp.o
+.PHONY : src/banana.cpp.o
+
+src/banana.i: src/banana.cpp.i
+
+.PHONY : src/banana.i
+
+# target to preprocess a source file
+src/banana.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/banana.cpp.i
+.PHONY : src/banana.cpp.i
+
+src/banana.s: src/banana.cpp.s
+
+.PHONY : src/banana.s
+
+# target to generate assembly for a file
+src/banana.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/banana.cpp.s
+.PHONY : src/banana.cpp.s
+
+src/bazooka.o: src/bazooka.cpp.o
+
+.PHONY : src/bazooka.o
+
+# target to build an object file
+src/bazooka.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bazooka.cpp.o
+.PHONY : src/bazooka.cpp.o
+
+src/bazooka.i: src/bazooka.cpp.i
+
+.PHONY : src/bazooka.i
+
+# target to preprocess a source file
+src/bazooka.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bazooka.cpp.i
+.PHONY : src/bazooka.cpp.i
+
+src/bazooka.s: src/bazooka.cpp.s
+
+.PHONY : src/bazooka.s
+
+# target to generate assembly for a file
+src/bazooka.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bazooka.cpp.s
+.PHONY : src/bazooka.cpp.s
+
 src/exploted_state.o: src/exploted_state.cpp.o
 
 .PHONY : src/exploted_state.o
@@ -1472,6 +1526,60 @@ src/file_error.s: src/file_error.cpp.s
 src/file_error.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file_error.cpp.s
 .PHONY : src/file_error.cpp.s
+
+src/fragment_projectile.o: src/fragment_projectile.cpp.o
+
+.PHONY : src/fragment_projectile.o
+
+# target to build an object file
+src/fragment_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fragment_projectile.cpp.o
+.PHONY : src/fragment_projectile.cpp.o
+
+src/fragment_projectile.i: src/fragment_projectile.cpp.i
+
+.PHONY : src/fragment_projectile.i
+
+# target to preprocess a source file
+src/fragment_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fragment_projectile.cpp.i
+.PHONY : src/fragment_projectile.cpp.i
+
+src/fragment_projectile.s: src/fragment_projectile.cpp.s
+
+.PHONY : src/fragment_projectile.s
+
+# target to generate assembly for a file
+src/fragment_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fragment_projectile.cpp.s
+.PHONY : src/fragment_projectile.cpp.s
+
+src/green_granade.o: src/green_granade.cpp.o
+
+.PHONY : src/green_granade.o
+
+# target to build an object file
+src/green_granade.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/green_granade.cpp.o
+.PHONY : src/green_granade.cpp.o
+
+src/green_granade.i: src/green_granade.cpp.i
+
+.PHONY : src/green_granade.i
+
+# target to preprocess a source file
+src/green_granade.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/green_granade.cpp.i
+.PHONY : src/green_granade.cpp.i
+
+src/green_granade.s: src/green_granade.cpp.s
+
+.PHONY : src/green_granade.s
+
+# target to generate assembly for a file
+src/green_granade.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/green_granade.cpp.s
+.PHONY : src/green_granade.cpp.s
 
 src/gusano.o: src/gusano.cpp.o
 
@@ -1554,6 +1662,60 @@ src/jumping_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/jumping_state.cpp.s
 .PHONY : src/jumping_state.cpp.s
 
+src/little_projectile.o: src/little_projectile.cpp.o
+
+.PHONY : src/little_projectile.o
+
+# target to build an object file
+src/little_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/little_projectile.cpp.o
+.PHONY : src/little_projectile.cpp.o
+
+src/little_projectile.i: src/little_projectile.cpp.i
+
+.PHONY : src/little_projectile.i
+
+# target to preprocess a source file
+src/little_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/little_projectile.cpp.i
+.PHONY : src/little_projectile.cpp.i
+
+src/little_projectile.s: src/little_projectile.cpp.s
+
+.PHONY : src/little_projectile.s
+
+# target to generate assembly for a file
+src/little_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/little_projectile.cpp.s
+.PHONY : src/little_projectile.cpp.s
+
+src/morter.o: src/morter.cpp.o
+
+.PHONY : src/morter.o
+
+# target to build an object file
+src/morter.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/morter.cpp.o
+.PHONY : src/morter.cpp.o
+
+src/morter.i: src/morter.cpp.i
+
+.PHONY : src/morter.i
+
+# target to preprocess a source file
+src/morter.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/morter.cpp.i
+.PHONY : src/morter.cpp.i
+
+src/morter.s: src/morter.cpp.s
+
+.PHONY : src/morter.s
+
+# target to generate assembly for a file
+src/morter.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/morter.cpp.s
+.PHONY : src/morter.cpp.s
+
 src/moving_state.o: src/moving_state.cpp.o
 
 .PHONY : src/moving_state.o
@@ -1608,6 +1770,33 @@ src/projectile.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/projectile.cpp.s
 .PHONY : src/projectile.cpp.s
 
+src/regresive_projetile.o: src/regresive_projetile.cpp.o
+
+.PHONY : src/regresive_projetile.o
+
+# target to build an object file
+src/regresive_projetile.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/regresive_projetile.cpp.o
+.PHONY : src/regresive_projetile.cpp.o
+
+src/regresive_projetile.i: src/regresive_projetile.cpp.i
+
+.PHONY : src/regresive_projetile.i
+
+# target to preprocess a source file
+src/regresive_projetile.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/regresive_projetile.cpp.i
+.PHONY : src/regresive_projetile.cpp.i
+
+src/regresive_projetile.s: src/regresive_projetile.cpp.s
+
+.PHONY : src/regresive_projetile.s
+
+# target to generate assembly for a file
+src/regresive_projetile.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/regresive_projetile.cpp.s
+.PHONY : src/regresive_projetile.cpp.s
+
 src/rotating_state.o: src/rotating_state.cpp.o
 
 .PHONY : src/rotating_state.o
@@ -1634,6 +1823,33 @@ src/rotating_state.s: src/rotating_state.cpp.s
 src/rotating_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/rotating_state.cpp.s
 .PHONY : src/rotating_state.cpp.s
+
+src/simple_projectile.o: src/simple_projectile.cpp.o
+
+.PHONY : src/simple_projectile.o
+
+# target to build an object file
+src/simple_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/simple_projectile.cpp.o
+.PHONY : src/simple_projectile.cpp.o
+
+src/simple_projectile.i: src/simple_projectile.cpp.i
+
+.PHONY : src/simple_projectile.i
+
+# target to preprocess a source file
+src/simple_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/simple_projectile.cpp.i
+.PHONY : src/simple_projectile.cpp.i
+
+src/simple_projectile.s: src/simple_projectile.cpp.s
+
+.PHONY : src/simple_projectile.s
+
+# target to generate assembly for a file
+src/simple_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/simple_projectile.cpp.s
+.PHONY : src/simple_projectile.cpp.s
 
 src/viga.o: src/viga.cpp.o
 
@@ -1812,6 +2028,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/banana.o"
+	@echo "... src/banana.i"
+	@echo "... src/banana.s"
+	@echo "... src/bazooka.o"
+	@echo "... src/bazooka.i"
+	@echo "... src/bazooka.s"
 	@echo "... src/exploted_state.o"
 	@echo "... src/exploted_state.i"
 	@echo "... src/exploted_state.s"
@@ -1821,6 +2043,12 @@ help:
 	@echo "... src/file_error.o"
 	@echo "... src/file_error.i"
 	@echo "... src/file_error.s"
+	@echo "... src/fragment_projectile.o"
+	@echo "... src/fragment_projectile.i"
+	@echo "... src/fragment_projectile.s"
+	@echo "... src/green_granade.o"
+	@echo "... src/green_granade.i"
+	@echo "... src/green_granade.s"
 	@echo "... src/gusano.o"
 	@echo "... src/gusano.i"
 	@echo "... src/gusano.s"
@@ -1830,15 +2058,27 @@ help:
 	@echo "... src/jumping_state.o"
 	@echo "... src/jumping_state.i"
 	@echo "... src/jumping_state.s"
+	@echo "... src/little_projectile.o"
+	@echo "... src/little_projectile.i"
+	@echo "... src/little_projectile.s"
+	@echo "... src/morter.o"
+	@echo "... src/morter.i"
+	@echo "... src/morter.s"
 	@echo "... src/moving_state.o"
 	@echo "... src/moving_state.i"
 	@echo "... src/moving_state.s"
 	@echo "... src/projectile.o"
 	@echo "... src/projectile.i"
 	@echo "... src/projectile.s"
+	@echo "... src/regresive_projetile.o"
+	@echo "... src/regresive_projetile.i"
+	@echo "... src/regresive_projetile.s"
 	@echo "... src/rotating_state.o"
 	@echo "... src/rotating_state.i"
 	@echo "... src/rotating_state.s"
+	@echo "... src/simple_projectile.o"
+	@echo "... src/simple_projectile.i"
+	@echo "... src/simple_projectile.s"
 	@echo "... src/viga.o"
 	@echo "... src/viga.i"
 	@echo "... src/viga.s"

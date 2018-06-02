@@ -3,40 +3,29 @@
 #include "ray_cast_all_callback.h"
 #include <vector>
 #include <utility>
-#include "user_data.h"
 #include <iostream>
 
 #define NUM_RAYS 36
 
-Projectile::Projectile(b2World& world_entry, float x, float y, float angle, float vel, int damage_e, int radius_e) : 
-			world(world_entry), damage(damage_e), radius(radius_e){
+Projectile::Projectile(b2World& world_entry, float x, float y, float angle, float vel, 
+					   int damage_e, int radius_e, int type, std::vector<Projectile*>& to_remove_e) : 
+			world(world_entry), damage(damage_e), radius(radius_e), to_remove(to_remove_e){
+	this->create(x ,y, angle, vel, type);
+}
+
+Projectile::Projectile(b2World& world_entry, int damage_e, int radius_e, std::vector<Projectile*>& to_remove_e) : 
+			world(world_entry), damage(damage_e), radius(radius_e), to_remove(to_remove_e){
+}
+
+void Projectile::create(float x, float y, float angle, float vel, int type){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
+	bodyDef.bullet = true;
 	bodyDef.position.Set(x, y);
 	this->body = this->world.CreateBody(&bodyDef);
-	UserData* user_data = new UserData(0, this);
-	this->body->SetUserData((void*)user_data);
+	this->user_data = new UserData(type, this);
+	this->body->SetUserData((void*)this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
-	
-	b2Vec2 vertices[6];
-	vertices[0].Set(-0.2f, 0.1f);
-	vertices[1].Set(-0.2f, -0.1f);
-	vertices[2].Set(0.0f, -0.1f);
-	vertices[3].Set(0.05f, -0.05f);
-	vertices[4].Set(0.05f, 0.05f);
-	vertices[5].Set(0.0f, 0.1f);
-	
-	int32 count = 6;
-
-	b2PolygonShape dynamicBox;
-	dynamicBox.Set(vertices, count);
-	b2FixtureDef fixtureDef;
-	fixtureDef.shape = &dynamicBox;
-	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.0f;
-	fixtureDef.restitution = 0.0f;
-
-	this->body->CreateFixture(&fixtureDef);
 	
 	b2Vec2 vel_vec;
 	vel_vec.x = vel * cos(angle);
@@ -45,6 +34,8 @@ Projectile::Projectile(b2World& world_entry, float x, float y, float angle, floa
 }
 
 Projectile::~Projectile(){
+	delete this->user_data;
+	this->world.DestroyBody(this->body);
 }
 
 void Projectile::exploit(){
@@ -67,7 +58,7 @@ void Projectile::exploit(){
 			float distance = distance_vec.Normalize();
 			float damage_by_distance = this->damage * (1- (distance / this->radius));
 			distance_vec.Normalize();
-			b2Vec2 impulse_by_distance = (damage_by_distance / 100) * distance_vec; //* (1/(float)NUM_RAYS);
+			b2Vec2 impulse_by_distance = (damage_by_distance / 10) * distance_vec; //* (1/(float)NUM_RAYS);
 			std::cout << center.x << "; " << center.y << "\n";
 			std::cout << it->second.x << "; " << it->second.y << "\n";
 			std::cout << angle << "\n";
@@ -77,6 +68,6 @@ void Projectile::exploit(){
 			it->first->applyExplotion(it->second, damage_by_distance, impulse_by_distance);
 		}
 	}
+	this->to_remove.push_back(this);
 }
-
 

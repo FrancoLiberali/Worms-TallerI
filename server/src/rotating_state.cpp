@@ -11,12 +11,12 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, double desired
 	double pi = M_PI;
 	if (actual_angle < 0){
 		new_x -= 0.5 * cos(pi/2 + actual_angle);
-	} else {
+	} else if (actual_angle > 0){
 		new_x += 0.5 * cos(pi/2 - actual_angle);
 	}
 	if (desired_angle < 0){
 		new_x += 0.5 * cos(pi/2 + desired_angle);
-	} else {
+	} else if (desired_angle > 0){
 		new_x -= 0.5 * cos(pi/2 - desired_angle);
 	}		
 	double new_y = position.y - 0.5 * sin(pi/2 - actual_angle) + 0.5 * sin(pi/2 - desired_angle); //-0.04;

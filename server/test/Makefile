@@ -1365,6 +1365,60 @@ home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp.s
 
+home/franco/Documentos/taller1/tpfinal/server/src/banana.o: home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/banana.i: home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/banana.s: home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp.s
+
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.o: home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.i: home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.s: home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp.s
+
 home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o: home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp.o
 
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o
@@ -1445,6 +1499,60 @@ home/franco/Documentos/taller1/tpfinal/server/src/file_error.s: home/franco/Docu
 home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/file_error.cpp.s
+
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.o: home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.i: home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.s: home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp.s
+
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.o: home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.i: home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.s: home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp.s
 
 home/franco/Documentos/taller1/tpfinal/server/src/gusano.o: home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp.o
 
@@ -1527,6 +1635,33 @@ home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp.s
 
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.o: home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.i: home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.s: home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp.s
+
 home/franco/Documentos/taller1/tpfinal/server/src/moving_state.o: home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp.o
 
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/moving_state.o
@@ -1581,6 +1716,33 @@ home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp.s
 
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.o: home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.i: home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.s: home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp.s
+
 home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.o: home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.o
 
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.o
@@ -1607,6 +1769,33 @@ home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.s: home/franco/
 home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.s:
 	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.s
 .PHONY : home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp.s
+
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.o: home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.o
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.o
+
+# target to build an object file
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.o
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.o
+
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.i: home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.i
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.i
+
+# target to preprocess a source file
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.i
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.i
+
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.s: home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.s
+
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.s
+
+# target to generate assembly for a file
+home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/runner.dir/build.make CMakeFiles/runner.dir/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.s
+.PHONY : home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp.s
 
 home/franco/Documentos/taller1/tpfinal/server/src/viga.o: home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp.o
 
@@ -1809,6 +1998,12 @@ help:
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/banana.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/banana.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/banana.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/bazooka.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/bazooka.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/bazooka.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.s"
@@ -1818,6 +2013,12 @@ help:
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file_error.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file_error.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/file_error.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/green_granade.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/green_granade.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/green_granade.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/gusano.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/gusano.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/gusano.s"
@@ -1827,15 +2028,24 @@ help:
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/moving_state.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/projectile.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.s"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.o"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.i"
+	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.s"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/viga.o"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/viga.i"
 	@echo "... home/franco/Documentos/taller1/tpfinal/server/src/viga.s"

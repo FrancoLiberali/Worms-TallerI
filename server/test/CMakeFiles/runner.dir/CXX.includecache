@@ -331,6 +331,10 @@ Box2D/Box2D.h
 ../src/projectile.h
 Box2D/Box2D.h
 ../src/Box2D/Box2D.h
+vector
+-
+user_data.h
+../src/user_data.h
 
 ../src/user_data.h
 
@@ -856,6 +860,30 @@ Box2D/Rope/b2Rope.h
 Box2D/Common/b2Draw.h
 /home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/Box2D/Common/b2Draw.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp
+banana.h
+/home/franco/Documentos/taller1/tpfinal/server/src/banana.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/banana.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+regresive_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp
+bazooka.h
+/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+simple_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
+projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+game_constants.h
+/home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
 exploted_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.h
@@ -899,6 +927,30 @@ cstdarg
 /home/franco/Documentos/taller1/tpfinal/server/src/file_error.h
 typeinfo
 -
+
+/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.cpp
+fragment_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.h
+little_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp
+green_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+simple_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp
 gusano.h
@@ -954,6 +1006,16 @@ moving_finished.h
 gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp
+little_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+simple_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp
@@ -977,14 +1039,16 @@ vector
 -
 utility
 -
-user_data.h
-/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 iostream
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+vector
+-
+user_data.h
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
 Box2D/Box2D.h
@@ -997,6 +1061,16 @@ gusano.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
 user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp
+regresive_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 rotating_state.h
@@ -1015,6 +1089,16 @@ gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp
+simple_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 

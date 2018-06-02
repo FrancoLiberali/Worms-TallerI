@@ -116,6 +116,17 @@ void Gusano::sumOneStep(){
 		delete this->state;
 		this->state = new InactiveState();
 		this->body->SetLinearVelocity(b2Vec2(0,0));
+		this->rotateTo(angles_list.back());
+		this->body->SetFixedRotation(true);		
+	}
+}
+
+void Gusano::rotateTo(float angle){
+	if (this->GetAngle() != angle){
+		printf ("arreglar angulo\n");
+		std::cout << angle << "\n";
+		delete this->state;
+		this->state = new RotatingState(this->body, this->GetPosition(), angles_list.back());
 	}
 }
 
@@ -162,19 +173,7 @@ void Gusano::newContact(float ground_angle){
 		printf("state->inactivo\n");
 		delete this->state;
 		this->state = new InactiveState();
-		if (this->GetAngle() != ground_angle){
-			printf ("arreglar angulo\n");
-			std::cout << ground_angle << "\n";
-			delete this->state;
-			this->state = new RotatingState(this->body, this->GetPosition(), ground_angle);
-			/*delete this->state;
-			this->state = new RotatingState(this->body, ground_angle);
-			this->body->SetGravityScale(1);
-			this->body->SetFixedRotation(false);
-			float ang_imp = this->body->GetInertia() * radDiff(ground_angle, this->body->GetAngle());
-			std::cout << ang_imp << "\n";
-			this->body->ApplyAngularImpulse(ang_imp, true);*/
-		}
+		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
 		std::cout << "TOCO al segundo \n";
 		std::cout << ground_angle << "\n";
@@ -198,12 +197,7 @@ void Gusano::finishContact(float ground_angle){
 	if (cant_contacts == 1){
 		printf("solo toca a 1\n");
 		std::cout << "deja de tocar a :" << ground_angle << "\n";
-		if (this->GetAngle() != angles_list.back()){
-			delete this->state;
-			this->state = new RotatingState(this->body, this->GetPosition(), angles_list.back());
-			printf ("arreglar angulo\n");
-			std::cout << angles_list.back() << "\n";
-		}
+		this->rotateTo(angles_list.back());
 	}
 }
 

@@ -15,6 +15,8 @@ class Gusano{
 		int direccion;
 		std::vector<float> angles_list;
 		
+		void rotateTo(float angle);
+		
 	public:
 		Gusano(b2World& world_entry, float x, float y, float angle);
 		
