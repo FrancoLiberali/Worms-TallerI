@@ -1,4 +1,5 @@
 #include "Texture.h"
+#include <iostream>
 
 LTexture::LTexture(Window& window): gRenderer(window.getRender())
 {
@@ -72,7 +73,8 @@ void LTexture::free()
 {
 	//Free texture if it exists
 	if( mTexture != NULL )
-	{
+	{	
+		//std::cout << "Se destruyo la textura" << std::endl;
 		SDL_DestroyTexture( mTexture );
 		mTexture = NULL;
 		mWidth = 0;

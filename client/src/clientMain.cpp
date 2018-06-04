@@ -6,6 +6,10 @@
 #include "controller/EventHandler.h"
 #include "common/Queue.h"
 #include "controller/Event.h"
+#include "ProxyClient.h"
+#include "model/GameControllerProxy.h"
+#include "model/Model.h"
+#include "controller/Controller.h"
 
 
 #define W_WIDHT 800
@@ -16,6 +20,8 @@ int main(int argc, char const *argv[])
 	//Le pasamos el archivo a leer, deberia ser el socket
 	std::string socket = "socket.txt";
 
+	ProxyClient proxy(socket);
+
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue;
 	ClientEventReceiver eventReceiver(socket, eventQueue);
@@ -23,41 +29,35 @@ int main(int argc, char const *argv[])
 	
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
-	ClientCommandSender commmandSender(socket, commandsQueue);
+	ClientCommandSender commmandSender(proxy, commandsQueue);
 	commmandSender.start();
 
 	EventHandler ehandler;
 
 	View clientView(ehandler,W_WIDHT, W_HEIGHT);
 	ehandler.setView(&clientView);
-	//return 0;
+
+	GameControllerProxy gcp(commandsQueue);
+	Model model(gcp);
+
+	Controller controller(model, clientView);
 	//Game loop
 	int step = 0;
 	while(clientView.isOpen()){
 		SDL_Event e;
-		SDL_PollEvent(&e);
+		SDL_WaitEvent(&e);
 		//std::cout<<"Se intrudujo un evento" << std::endl;
-		switch (e.type){
-			case SDL_QUIT:
-				std::cout<<"cerrar" << std::endl;			
-				clientView.close();
-				commmandSender.stop();
-				eventReceiver.stop();
-				break;
-			case SDL_MOUSEMOTION:
-				std::cout << e.motion.x << "," << e.motion.y << std::endl;
-                break;
-		}
+		controller.handle(e);
 
 		//desencolo los eventos del server
 		while (!eventQueue.empty()){
-			//std::string msg = eventQueue.pop();
-			//std::cout<< msg << std::endl;
 			ehandler.add(eventQueue.pop());
 		}
 		clientView.update();
 		step++;
 	}
+	commandsQueue.push(nullptr);
+	eventReceiver.stop();
 	commmandSender.join();
 	eventReceiver.join();
 

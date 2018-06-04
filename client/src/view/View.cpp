@@ -20,9 +20,22 @@ void View::init(){
 	//Cargamos al worm pasamos la posicion inicial
 	worm.load(100,200, &window);
 
+	/*WormView worm1;
+	worm.load(100, 200, &window);
+	this->worms.emplace(1, std::move(worm1));
+
+	WormView worm2;
+	worm.load(500, 100, &window);
+	this->worms.emplace(2, std::move(worm2));*/
+
+
 }
 
-View::~View(){}
+View::~View(){
+	for (auto& it: worms){
+		//delete it.second;
+	}
+}
 
 bool View::isOpen(){
 	return open;
@@ -43,10 +56,17 @@ void View::update(){
 		window.fill();
 		escenario.draw();
 		event->process();
+		delete event;
 		worm.update();
+		/*for (auto& w: worms){
+			w.second.update();
+		}*/
 		window.renderWindow();
 	}
 	worm.update();
+	/*for (auto& w: worms){
+			w.second.update();
+	}*/
 	window.renderWindow();
 }
 
@@ -55,5 +75,7 @@ void View::procesar(std::string msg){
 }
 
 WormView* View::getWormView(int id){
+	std::cout << "ID-WORM" << id << std::endl;
+	//return &this->worms[id];
 	return &worm;
 }

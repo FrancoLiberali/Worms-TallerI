@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o"
   "CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o"
   "CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o"
+  "CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o"
   "libcontrollerlib.pdb"
   "libcontrollerlib.a"
 )

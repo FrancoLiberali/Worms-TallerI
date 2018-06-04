@@ -11,6 +11,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <string>
+#include <map>
 
 class EventHandler;
 
@@ -20,6 +21,7 @@ private:
 	Window window;
 	EventHandler& eventHandler;
 	WormView worm;
+	std::map<int,WormView> worms;
 	bool open;
 	void procesar(std::string mensaje);
 	void init();

@@ -41,9 +41,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/commonlib.dir/DependInfo.cmake"
-  "CMakeFiles/viewlib.dir/DependInfo.cmake"
-  "CMakeFiles/modellib.dir/DependInfo.cmake"
-  "CMakeFiles/controllerlib.dir/DependInfo.cmake"
   "CMakeFiles/client.dir/DependInfo.cmake"
+  "CMakeFiles/alllib.dir/DependInfo.cmake"
   )

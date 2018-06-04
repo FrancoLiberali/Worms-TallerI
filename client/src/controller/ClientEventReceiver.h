@@ -8,7 +8,6 @@
 class ClientEventReceiver : public Thread{
 private:
 	std::string socket_file;
-	//agrgar cola bloqueante;
 	Queue<Event*>& q;
 	bool closed;
 public:

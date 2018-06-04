@@ -225,6 +225,30 @@ CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o.provides: 
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o.provides.build: CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o
 
 
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o: CMakeFiles/controllerlib.dir/flags.make
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o: ../src/ProxyClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp
+
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp > CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.i
+
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp -o CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.s
+
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.requires:
+
+.PHONY : CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.requires
+
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.provides: CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.requires
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.provides.build
+.PHONY : CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.provides
+
+CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.provides.build: CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o
+
+
 # Object files for target controllerlib
 controllerlib_OBJECTS = \
 "CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o" \
@@ -233,7 +257,8 @@ controllerlib_OBJECTS = \
 "CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o" \
 "CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o" \
 "CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o" \
-"CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o"
+"CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o" \
+"CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o"
 
 # External object files for target controllerlib
 controllerlib_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o
+libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/build.make
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libcontrollerlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libcontrollerlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/controllerlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controllerlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -263,6 +289,7 @@ CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controll
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o.requires
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.requires
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o.requires
+CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/ProxyClient.cpp.o.requires
 
 .PHONY : CMakeFiles/controllerlib.dir/requires
 

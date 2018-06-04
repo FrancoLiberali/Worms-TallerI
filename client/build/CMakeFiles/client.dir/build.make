@@ -90,10 +90,7 @@ client_EXTERNAL_OBJECTS =
 
 client: CMakeFiles/client.dir/src/clientMain.cpp.o
 client: CMakeFiles/client.dir/build.make
-client: libviewlib.a
-client: libcommonlib.a
-client: libcontrollerlib.a
-client: libmodellib.a
+client: liballlib.a
 client: CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)

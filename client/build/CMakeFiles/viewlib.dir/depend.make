@@ -18,8 +18,13 @@ CMakeFiles/viewlib.dir/src/view/Texture.cpp.o: ../src/view/Texture.cpp
 CMakeFiles/viewlib.dir/src/view/Texture.cpp.o: ../src/view/Texture.h
 CMakeFiles/viewlib.dir/src/view/Texture.cpp.o: ../src/view/Window.h
 
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/ProxyClient.h
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/common/Queue.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/controller/Event.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/controller/EventHandler.h
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/model/ClientCommand.h
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/model/GameControllerProxy.h
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/model/Model.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/Animation.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/Escenario.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/Texture.h

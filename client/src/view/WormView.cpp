@@ -38,7 +38,7 @@ void WormView::setPos(int x, int y){
 }
 
 void WormView::update(){
-	//std::cout << "Worm update";
+	std::cout << "Worm update" << std::endl;
 	this->animations[state]->setPos(x,y);
 	bool flip = (dir == 1)? true : false;
 	this->animations[state]->render(flip, angle);
