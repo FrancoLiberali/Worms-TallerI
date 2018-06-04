@@ -1473,59 +1473,32 @@ src/exploted_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/exploted_state.cpp.s
 .PHONY : src/exploted_state.cpp.s
 
-src/file.o: src/file.cpp.o
+src/fake_proxy/mok_proxy.o: src/fake_proxy/mok_proxy.cpp.o
 
-.PHONY : src/file.o
-
-# target to build an object file
-src/file.cpp.o:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file.cpp.o
-.PHONY : src/file.cpp.o
-
-src/file.i: src/file.cpp.i
-
-.PHONY : src/file.i
-
-# target to preprocess a source file
-src/file.cpp.i:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file.cpp.i
-.PHONY : src/file.cpp.i
-
-src/file.s: src/file.cpp.s
-
-.PHONY : src/file.s
-
-# target to generate assembly for a file
-src/file.cpp.s:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file.cpp.s
-.PHONY : src/file.cpp.s
-
-src/file_error.o: src/file_error.cpp.o
-
-.PHONY : src/file_error.o
+.PHONY : src/fake_proxy/mok_proxy.o
 
 # target to build an object file
-src/file_error.cpp.o:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file_error.cpp.o
-.PHONY : src/file_error.cpp.o
+src/fake_proxy/mok_proxy.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o
+.PHONY : src/fake_proxy/mok_proxy.cpp.o
 
-src/file_error.i: src/file_error.cpp.i
+src/fake_proxy/mok_proxy.i: src/fake_proxy/mok_proxy.cpp.i
 
-.PHONY : src/file_error.i
+.PHONY : src/fake_proxy/mok_proxy.i
 
 # target to preprocess a source file
-src/file_error.cpp.i:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file_error.cpp.i
-.PHONY : src/file_error.cpp.i
+src/fake_proxy/mok_proxy.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.i
+.PHONY : src/fake_proxy/mok_proxy.cpp.i
 
-src/file_error.s: src/file_error.cpp.s
+src/fake_proxy/mok_proxy.s: src/fake_proxy/mok_proxy.cpp.s
 
-.PHONY : src/file_error.s
+.PHONY : src/fake_proxy/mok_proxy.s
 
 # target to generate assembly for a file
-src/file_error.cpp.s:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/file_error.cpp.s
-.PHONY : src/file_error.cpp.s
+src/fake_proxy/mok_proxy.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.s
+.PHONY : src/fake_proxy/mok_proxy.cpp.s
 
 src/fragment_projectile.o: src/fragment_projectile.cpp.o
 
@@ -1553,6 +1526,33 @@ src/fragment_projectile.s: src/fragment_projectile.cpp.s
 src/fragment_projectile.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/fragment_projectile.cpp.s
 .PHONY : src/fragment_projectile.cpp.s
+
+src/game.o: src/game.cpp.o
+
+.PHONY : src/game.o
+
+# target to build an object file
+src/game.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/game.cpp.o
+.PHONY : src/game.cpp.o
+
+src/game.i: src/game.cpp.i
+
+.PHONY : src/game.i
+
+# target to preprocess a source file
+src/game.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/game.cpp.i
+.PHONY : src/game.cpp.i
+
+src/game.s: src/game.cpp.s
+
+.PHONY : src/game.s
+
+# target to generate assembly for a file
+src/game.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/game.cpp.s
+.PHONY : src/game.cpp.s
 
 src/green_granade.o: src/green_granade.cpp.o
 
@@ -1770,6 +1770,87 @@ src/projectile.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/projectile.cpp.s
 .PHONY : src/projectile.cpp.s
 
+src/protected_queue.o: src/protected_queue.cpp.o
+
+.PHONY : src/protected_queue.o
+
+# target to build an object file
+src/protected_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/protected_queue.cpp.o
+.PHONY : src/protected_queue.cpp.o
+
+src/protected_queue.i: src/protected_queue.cpp.i
+
+.PHONY : src/protected_queue.i
+
+# target to preprocess a source file
+src/protected_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/protected_queue.cpp.i
+.PHONY : src/protected_queue.cpp.i
+
+src/protected_queue.s: src/protected_queue.cpp.s
+
+.PHONY : src/protected_queue.s
+
+# target to generate assembly for a file
+src/protected_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/protected_queue.cpp.s
+.PHONY : src/protected_queue.cpp.s
+
+src/proxy.o: src/proxy.cpp.o
+
+.PHONY : src/proxy.o
+
+# target to build an object file
+src/proxy.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/proxy.cpp.o
+.PHONY : src/proxy.cpp.o
+
+src/proxy.i: src/proxy.cpp.i
+
+.PHONY : src/proxy.i
+
+# target to preprocess a source file
+src/proxy.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/proxy.cpp.i
+.PHONY : src/proxy.cpp.i
+
+src/proxy.s: src/proxy.cpp.s
+
+.PHONY : src/proxy.s
+
+# target to generate assembly for a file
+src/proxy.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/proxy.cpp.s
+.PHONY : src/proxy.cpp.s
+
+src/receiver.o: src/receiver.cpp.o
+
+.PHONY : src/receiver.o
+
+# target to build an object file
+src/receiver.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/receiver.cpp.o
+.PHONY : src/receiver.cpp.o
+
+src/receiver.i: src/receiver.cpp.i
+
+.PHONY : src/receiver.i
+
+# target to preprocess a source file
+src/receiver.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/receiver.cpp.i
+.PHONY : src/receiver.cpp.i
+
+src/receiver.s: src/receiver.cpp.s
+
+.PHONY : src/receiver.s
+
+# target to generate assembly for a file
+src/receiver.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/receiver.cpp.s
+.PHONY : src/receiver.cpp.s
+
 src/regresive_projetile.o: src/regresive_projetile.cpp.o
 
 .PHONY : src/regresive_projetile.o
@@ -1851,6 +1932,114 @@ src/simple_projectile.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/simple_projectile.cpp.s
 .PHONY : src/simple_projectile.cpp.s
 
+src/socket.o: src/socket.cpp.o
+
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket.cpp.o
+.PHONY : src/socket.cpp.o
+
+src/socket.i: src/socket.cpp.i
+
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket.cpp.i
+.PHONY : src/socket.cpp.i
+
+src/socket.s: src/socket.cpp.s
+
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket.cpp.s
+.PHONY : src/socket.cpp.s
+
+src/socket_error.o: src/socket_error.cpp.o
+
+.PHONY : src/socket_error.o
+
+# target to build an object file
+src/socket_error.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket_error.cpp.o
+.PHONY : src/socket_error.cpp.o
+
+src/socket_error.i: src/socket_error.cpp.i
+
+.PHONY : src/socket_error.i
+
+# target to preprocess a source file
+src/socket_error.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket_error.cpp.i
+.PHONY : src/socket_error.cpp.i
+
+src/socket_error.s: src/socket_error.cpp.s
+
+.PHONY : src/socket_error.s
+
+# target to generate assembly for a file
+src/socket_error.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/socket_error.cpp.s
+.PHONY : src/socket_error.cpp.s
+
+src/thread.o: src/thread.cpp.o
+
+.PHONY : src/thread.o
+
+# target to build an object file
+src/thread.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/thread.cpp.o
+.PHONY : src/thread.cpp.o
+
+src/thread.i: src/thread.cpp.i
+
+.PHONY : src/thread.i
+
+# target to preprocess a source file
+src/thread.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/thread.cpp.i
+.PHONY : src/thread.cpp.i
+
+src/thread.s: src/thread.cpp.s
+
+.PHONY : src/thread.s
+
+# target to generate assembly for a file
+src/thread.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/thread.cpp.s
+.PHONY : src/thread.cpp.s
+
+src/turn.o: src/turn.cpp.o
+
+.PHONY : src/turn.o
+
+# target to build an object file
+src/turn.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/turn.cpp.o
+.PHONY : src/turn.cpp.o
+
+src/turn.i: src/turn.cpp.i
+
+.PHONY : src/turn.i
+
+# target to preprocess a source file
+src/turn.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/turn.cpp.i
+.PHONY : src/turn.cpp.i
+
+src/turn.s: src/turn.cpp.s
+
+.PHONY : src/turn.s
+
+# target to generate assembly for a file
+src/turn.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/turn.cpp.s
+.PHONY : src/turn.cpp.s
+
 src/viga.o: src/viga.cpp.o
 
 .PHONY : src/viga.o
@@ -1877,6 +2066,33 @@ src/viga.s: src/viga.cpp.s
 src/viga.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/viga.cpp.s
 .PHONY : src/viga.cpp.s
+
+src/water.o: src/water.cpp.o
+
+.PHONY : src/water.o
+
+# target to build an object file
+src/water.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/water.cpp.o
+.PHONY : src/water.cpp.o
+
+src/water.i: src/water.cpp.i
+
+.PHONY : src/water.i
+
+# target to preprocess a source file
+src/water.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/water.cpp.i
+.PHONY : src/water.cpp.i
+
+src/water.s: src/water.cpp.s
+
+.PHONY : src/water.s
+
+# target to generate assembly for a file
+src/water.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/water.cpp.s
+.PHONY : src/water.cpp.s
 
 # Help Target
 help:
@@ -2037,15 +2253,15 @@ help:
 	@echo "... src/exploted_state.o"
 	@echo "... src/exploted_state.i"
 	@echo "... src/exploted_state.s"
-	@echo "... src/file.o"
-	@echo "... src/file.i"
-	@echo "... src/file.s"
-	@echo "... src/file_error.o"
-	@echo "... src/file_error.i"
-	@echo "... src/file_error.s"
+	@echo "... src/fake_proxy/mok_proxy.o"
+	@echo "... src/fake_proxy/mok_proxy.i"
+	@echo "... src/fake_proxy/mok_proxy.s"
 	@echo "... src/fragment_projectile.o"
 	@echo "... src/fragment_projectile.i"
 	@echo "... src/fragment_projectile.s"
+	@echo "... src/game.o"
+	@echo "... src/game.i"
+	@echo "... src/game.s"
 	@echo "... src/green_granade.o"
 	@echo "... src/green_granade.i"
 	@echo "... src/green_granade.s"
@@ -2070,6 +2286,15 @@ help:
 	@echo "... src/projectile.o"
 	@echo "... src/projectile.i"
 	@echo "... src/projectile.s"
+	@echo "... src/protected_queue.o"
+	@echo "... src/protected_queue.i"
+	@echo "... src/protected_queue.s"
+	@echo "... src/proxy.o"
+	@echo "... src/proxy.i"
+	@echo "... src/proxy.s"
+	@echo "... src/receiver.o"
+	@echo "... src/receiver.i"
+	@echo "... src/receiver.s"
 	@echo "... src/regresive_projetile.o"
 	@echo "... src/regresive_projetile.i"
 	@echo "... src/regresive_projetile.s"
@@ -2079,9 +2304,24 @@ help:
 	@echo "... src/simple_projectile.o"
 	@echo "... src/simple_projectile.i"
 	@echo "... src/simple_projectile.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
+	@echo "... src/socket_error.o"
+	@echo "... src/socket_error.i"
+	@echo "... src/socket_error.s"
+	@echo "... src/thread.o"
+	@echo "... src/thread.i"
+	@echo "... src/thread.s"
+	@echo "... src/turn.o"
+	@echo "... src/turn.i"
+	@echo "... src/turn.s"
 	@echo "... src/viga.o"
 	@echo "... src/viga.i"
 	@echo "... src/viga.s"
+	@echo "... src/water.o"
+	@echo "... src/water.i"
+	@echo "... src/water.s"
 .PHONY : help
 
 

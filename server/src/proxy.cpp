@@ -1,18 +1,27 @@
 #include "proxy.h"
+#include <arpa/inet.h>
 
-typedef unsigned char uc;
+/*typedef unsigned char uc;
 #define LAST8 0xFF
 #define MOSTSIGNIFICANT 24
 #define SECONDBYTE 16
-#define THIRDBYTE 8
+#define THIRDBYTE 8*/
 
-Proxy::Proxy(){
+#define MOVE_TAM 9
+#define JUMP_TAM 5
+#define ONEBYTE 1
+
+Proxy::Proxy(Socket& socket_e) : socket(socket_e){
 }
 		
 Proxy::~Proxy() noexcept{
 }
 
-//estos no estarian en el proxy del client
+void Proxy::close_communication(){
+	this->socket.shutdown_();
+}
+
+/*//estos no estarian en el proxy del client
 //pero tener en cuenta a la hora de recibir
 // (boseto en receive event)
 void Proxy::send_viga(Socket& socket, const Viga& viga){
@@ -85,41 +94,65 @@ void Proxy::send_float(Socket& socket, float num){
 
 void Proxy::send_char(Socket& socket, const char to_send){
 	 socket.send_(&to_send, ONEBYTE);
-}
+}*/
 
-//la firma de la funcion probablemente sea distinta en el client porque van a hacer cosas distintas
-void Proxy::receive_event(Socket& socket, Turn& turn){
-	char event = this->receive_char(socket);
-	switch (event){
-		//en cliente va a estar:
-		//case 0: //llamar a codigo client para cuando se recibe viga o gusano
-					//aca no porque no existe este caso
-					//char what = this->receive_char(socket);
-					//float x = this->receive_float(socket);
-					//float y = this->receive_float(socket);
-					//float angle = this->receive_float(socket);
-					//if (what == 0){
-						//model.mostrar_viga(x, y, angle) o algo asi vos fijate
-					//else if (what == 1){
-						//model.mostrar_gusano(x, y, angle) o algo asi vos fijate
-					//break
-		
+void Proxy::receive_event(ProtectedQueue& queue){
+	char event = this->receive_char();
+	switch (event){		
 		case 1: //se recibe que se quiere mover un gusano
-				//esto en el proxy del client no estaria
-				unsigned int gusano_number = this->receive_unsigned_int(socket);
-				int direction = this->receive_int(socket);
-				turn.move_gusano(gusano_number, direction);
+				this->receive_event_info(queue, event, MOVE_TAM);
+				break;
+		case 2: //se recibe que se quiere hacer saltar a un gusano 
+				this->receive_event_info(queue, event, JUMP_TAM);
 				break;
 		}
 }
 
-const unsigned char Proxy::receive_char(Socket& socket){
+void Proxy::receive_event_info(ProtectedQueue& queue, char event, int tam){
+	char* msj = new char[tam];
+	msj[0] = event;
+	this->socket.receive_(msj+1, tam-1);
+	queue.push(msj);
+}
+
+const unsigned char Proxy::receive_char(){
 	char received;
-	socket.receive_(&received, ONEBYTE);
+	this->socket.receive_(&received, ONEBYTE);
 	return received;
 }
 
-const float Proxy::receive_float(Socket& socket){
+void Proxy::send_state_change(int gusano_number, char new_state){
+	char event = 0;
+	this->socket.send_(&event, ONEBYTE);
+	char espacio = 32;
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(gusano_number);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->socket.send_(&new_state, ONEBYTE);
+}
+
+void Proxy::send_position(int gusano_number, int x, int y, int direction, int angle){
+	this->send_int(gusano_number);
+	char espacio = 32;
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(x);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(y);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(direction);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(angle);
+}
+	
+void Proxy::send_int(int to_send){
+	int net_to_send = htonl(to_send);
+	char* number = (char*)&net_to_send;
+	this->socket.send_(number, 4);
+}
+	
+	
+
+/*const float Proxy::receive_float(Socket& socket){
 	char c1 = this->receive_char(socket);
 	char c2 = this->receive_char(socket);
 	char c3 = this->receive_char(socket);
@@ -153,8 +186,7 @@ const int Proxy::receive_int(Socket& socket){
 					| ((uc)c3 << THIRDBYTE) 
 					| ((uc)c4));
 	return received;
-}
-
+}*/
 
 
 

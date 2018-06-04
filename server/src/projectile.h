@@ -31,6 +31,8 @@ class Projectile {
 		b2Vec2 GetPosition(){ return this->body->GetPosition();}
 		
 		float32 GetAngle(){ return this->body->GetAngle();}
+		
+		void sink();
 };
 
 #endif

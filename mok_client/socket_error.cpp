@@ -1,11 +1,11 @@
-#include "file_error.h"
+#include "socket_error.h"
 #include <cerrno>
 #include <cstring>
 #include <clocale>
 #include <cstdio>
 #include <cstdarg>
 
-FileError::FileError(const char* format, ...) noexcept{
+SocketError::SocketError(const char* format, ...) noexcept{
 	int _errno = errno;
 	
 	va_list args;
@@ -17,9 +17,9 @@ FileError::FileError(const char* format, ...) noexcept{
 	msg_error[BUF_LEN - 1] = 0;
 }
 
-FileError::~FileError() noexcept{
+SocketError::~SocketError() noexcept{
 }
 
-const char* FileError::what() const noexcept{
+const char* SocketError::what() const noexcept{
 	return msg_error;
 }

@@ -71,3 +71,7 @@ void Projectile::exploit(){
 	this->to_remove.push_back(this);
 }
 
+void Projectile::sink(){
+	this->to_remove.push_back(this);
+}
+

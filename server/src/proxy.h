@@ -1,18 +1,23 @@
 #include "socket.h"
-#include "gusano.h"
 #include "viga.h"
-#include "turn.h"
+#include "protected_queue.h"
 
 #ifndef __PROXY_H__
 #define __PROXY_H__
 
 class Proxy{
+	private:
+		Socket& socket;
+		
+		void receive_event_info(ProtectedQueue& queue, char event, int tam);
 	public:
-		Proxy();
+		Proxy(Socket& socket_e);
 		
 		~Proxy() noexcept;
 		
-		void send_viga(Socket& socket, const Viga& viga);
+		void close_communication();
+		
+		/*void send_viga(Socket& socket, const Viga& viga);
 		
 		void send_gusano(Socket& socket, const Gusano& gusano, unsigned int number);
 		
@@ -26,17 +31,23 @@ class Proxy{
 		
 		void send_float(Socket& socket, float num);
 		
-		void send_char(Socket& socket, const char to_send);
+		void send_char(Socket& socket, const char to_send);*/
 		
-		void receive_event(Socket& socket, Turn& turn);
+		void receive_event(ProtectedQueue& queue);
 		
-		const unsigned char receive_char(Socket& socket);
+		const unsigned char receive_char();
 		
-		const float receive_float(Socket& socket);
+		void send_state_change(int gusano_number, char new_state);
+		
+		void send_position(int gusano_number, int x, int y, int direction, int angle);
+		
+		void send_int(int to_send);
+		
+		/*const float receive_float(Socket& socket);
 		
 		const unsigned int receive_unsigned_int(Socket& socket);
 		
-		const int receive_int(Socket& socket);
+		const int receive_int(Socket& socket);*/
 		
 };
 

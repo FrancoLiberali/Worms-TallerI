@@ -3,11 +3,12 @@
 W_CHANGE_STATE(int) WORM_ID(int) W_STATE(int)
 
 Ejem: 0 12 2
-tipo_evento(int)
+tipo_evento(int) //actualmente lo puse como char porque era mas facil 
 espacio(char)
 id(int)
 espacio(char)
-nuevo_estado(int)
+nuevo_estado(int) //actualmente lo puse como char porque era mas facil 
+fijarse si pueden ser chars en lugar de ints, sino lo cambio
 
 total 11 bytes completar para que sean 29 bytes.
 
