@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

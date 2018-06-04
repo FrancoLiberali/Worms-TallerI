@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client
+CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build
+CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -407,6 +407,33 @@ src/controller/EventHandler.s: src/controller/EventHandler.cpp.s
 src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
+
+src/controller/WormChangeStateEvent.o: src/controller/WormChangeStateEvent.cpp.o
+
+.PHONY : src/controller/WormChangeStateEvent.o
+
+# target to build an object file
+src/controller/WormChangeStateEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o
+.PHONY : src/controller/WormChangeStateEvent.cpp.o
+
+src/controller/WormChangeStateEvent.i: src/controller/WormChangeStateEvent.cpp.i
+
+.PHONY : src/controller/WormChangeStateEvent.i
+
+# target to preprocess a source file
+src/controller/WormChangeStateEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.i
+.PHONY : src/controller/WormChangeStateEvent.cpp.i
+
+src/controller/WormChangeStateEvent.s: src/controller/WormChangeStateEvent.cpp.s
+
+.PHONY : src/controller/WormChangeStateEvent.s
+
+# target to generate assembly for a file
+src/controller/WormChangeStateEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.s
+.PHONY : src/controller/WormChangeStateEvent.cpp.s
 
 src/controller/WormMoveEvent.o: src/controller/WormMoveEvent.cpp.o
 
@@ -689,6 +716,9 @@ help:
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/controller/WormChangeStateEvent.o"
+	@echo "... src/controller/WormChangeStateEvent.i"
+	@echo "... src/controller/WormChangeStateEvent.s"
 	@echo "... src/controller/WormMoveEvent.o"
 	@echo "... src/controller/WormMoveEvent.i"
 	@echo "... src/controller/WormMoveEvent.s"

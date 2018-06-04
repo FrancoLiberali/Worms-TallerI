@@ -25,11 +25,12 @@ EventType getTypeEvent(std::stringstream& ss){
 	ss >> type;
 
 	switch (type){
-		case 0: return W_MOVE;
-		case 1: return W_JUMP;
-		case 2: return W_ATTACK;
-		case 3: return W_DEATH;
-		case 4: return G_ENDGAME;
+		case 0: return W_CHANGE_STATE;
+		case 1: return W_MOVE;
+		case 2: return W_JUMP;
+		case 3: return W_ATTACK;
+		case 4: return W_DEATH;
+		case 5: return G_ENDGAME;
 	}
 	return W_MOVE;
 }

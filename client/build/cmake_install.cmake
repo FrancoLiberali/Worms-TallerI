@@ -1,4 +1,4 @@
-# Install script for directory: /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client
+# Install script for directory: /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,50 +34,50 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/agua.png")
+   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/agua.png")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/assets/agua.png")
+file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/assets/agua.png")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/vigah.png")
+   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/vigah.png")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/assets/vigah.png")
+file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/assets/vigah.png")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/wwalk.png")
+   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/wwalk.png")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/assets/wwalk.png")
+file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/assets/wwalk.png")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/socket.txt")
+   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/socket.txt")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/test/socket.txt")
+file(INSTALL DESTINATION "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build" TYPE FILE FILES "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/test/socket.txt")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -88,5 +88,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

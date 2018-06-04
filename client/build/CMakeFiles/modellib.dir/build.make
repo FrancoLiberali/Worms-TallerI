@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client
+CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build
+CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/modellib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/modellib.dir/flags.make
 
 CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o: CMakeFiles/modellib.dir/flags.make
 CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o: ../src/model/ClientCommand.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.cpp
 
 CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.cpp > CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.cpp > CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.i
 
 CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/model/ClientCommand.cpp -o CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.cpp -o CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.s
 
 CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o.requires:
 
@@ -91,7 +91,7 @@ modellib_EXTERNAL_OBJECTS =
 libmodellib.a: CMakeFiles/modellib.dir/src/model/ClientCommand.cpp.o
 libmodellib.a: CMakeFiles/modellib.dir/build.make
 libmodellib.a: CMakeFiles/modellib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmodellib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmodellib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/modellib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/modellib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/modellib.dir/clean:
 .PHONY : CMakeFiles/modellib.dir/clean
 
 CMakeFiles/modellib.dir/depend:
-	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles/modellib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/modellib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/modellib.dir/depend
 

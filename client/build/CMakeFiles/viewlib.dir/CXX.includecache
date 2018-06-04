@@ -6,59 +6,59 @@
 
 #IncludeRegexTransform: 
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ../view/View.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/View.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
 queue
 -
 string
 -
 Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ../view/View.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/View.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Animation.cpp
 Animation.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Animation.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Animation.h
 Texture.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.h
 vector
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp
 Escenario.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 Window.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 Texture.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/SdlException.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.cpp
 SdlException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.h
 string
 -
 SDL2/SDL_image.h
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.h
 string
 -
 exception
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.cpp
 Texture.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -66,27 +66,27 @@ SDL2/SDL_image.h
 string
 -
 Window.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/View.cpp
 View.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/View.h
 iostream
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/View.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/View.h
 ../controller/EventHandler.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
 Window.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 Texture.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Texture.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Texture.h
 Escenario.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Escenario.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 WormView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
 ../controller/Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -94,25 +94,33 @@ SDL2/SDL_image.h
 string
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.cpp
 Window.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 SDL2/SDL_image.h
 -
 SdlException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 SDL2/SDL.h
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.cpp
-WormView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.cpp
+WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
+iostream
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
 Window.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Window.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Window.h
 Animation.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/view/Animation.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Animation.h
+WormState.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
+map
+-
 

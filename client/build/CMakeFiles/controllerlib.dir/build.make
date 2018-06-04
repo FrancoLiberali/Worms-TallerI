@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client
+CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build
+CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/controllerlib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/controllerlib.dir/flags.make
 
 CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/ClientEventReceiver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp > CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp > CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp -o CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp -o CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/controllerlib.dir/src/controller/ClientEventReceiver.cpp.o.provides.b
 
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o: ../src/controller/EventHandler.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.cpp > CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp > CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventHandler.cpp -o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp -o CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp.o.provides.build: C
 
 CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o: ../src/controller/Event.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/Event.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/Event.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.cpp > CMakeFiles/controllerlib.dir/src/controller/Event.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp > CMakeFiles/controllerlib.dir/src/controller/Event.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/Event.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/Event.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/Event.cpp -o CMakeFiles/controllerlib.dir/src/controller/Event.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp -o CMakeFiles/controllerlib.dir/src/controller/Event.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o: ../src/controller/EventFactory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.cpp > CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp > CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/EventFactory.cpp -o CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp -o CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o.provides.build: C
 
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/WormMoveEvent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.cpp > CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp > CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/WormMoveEvent.cpp -o CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp -o CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o.requires:
 
@@ -177,18 +177,42 @@ CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o.provides: CMakeF
 CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o.provides.build: CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
 
 
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o: CMakeFiles/controllerlib.dir/flags.make
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/WormChangeStateEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp
+
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp > CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.i
+
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp -o CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.s
+
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.requires
+
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.provides: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/controllerlib.dir/build.make CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.provides
+
+CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.provides.build: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o
+
+
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o: CMakeFiles/controllerlib.dir/flags.make
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o: ../src/controller/ClientCommandSender.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientCommandSender.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp
 
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientCommandSender.cpp > CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp > CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.i
 
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/controller/ClientCommandSender.cpp -o CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp -o CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.s
 
 CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o.requires:
 
@@ -208,6 +232,7 @@ controllerlib_OBJECTS = \
 "CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o" \
 "CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o" \
 "CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o" \
+"CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o" \
 "CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o"
 
 # External object files for target controllerlib
@@ -218,10 +243,11 @@ libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/EventHandler.cpp
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o
+libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/build.make
 libcontrollerlib.a: CMakeFiles/controllerlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libcontrollerlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libcontrollerlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/controllerlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/controllerlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -235,6 +261,7 @@ CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controll
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/Event.cpp.o.requires
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/EventFactory.cpp.o.requires
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/WormMoveEvent.cpp.o.requires
+CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/WormChangeStateEvent.cpp.o.requires
 CMakeFiles/controllerlib.dir/requires: CMakeFiles/controllerlib.dir/src/controller/ClientCommandSender.cpp.o.requires
 
 .PHONY : CMakeFiles/controllerlib.dir/requires
@@ -244,6 +271,6 @@ CMakeFiles/controllerlib.dir/clean:
 .PHONY : CMakeFiles/controllerlib.dir/clean
 
 CMakeFiles/controllerlib.dir/depend:
-	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles/controllerlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/controllerlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/controllerlib.dir/depend
 

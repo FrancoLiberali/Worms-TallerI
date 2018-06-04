@@ -14,5 +14,6 @@ CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Escenario.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Texture.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/View.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Window.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/WormState.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/WormView.h
 

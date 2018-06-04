@@ -10,6 +10,7 @@ add_library(controllerlib
     src/controller/Event.cpp
     src/controller/EventFactory.cpp
     src/controller/WormMoveEvent.cpp
+    src/controller/WormChangeStateEvent.cpp
     src/controller/ClientCommandSender.cpp
 
 )

@@ -2,6 +2,7 @@
 #define _EVENT_TYPE 
 
 enum EventType {
+	W_CHANGE_STATE,
 	W_MOVE,
 	W_JUMP,
 	W_ATTACK,

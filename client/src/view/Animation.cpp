@@ -1,7 +1,6 @@
 #include "Animation.h"
 
-Animation::Animation(){
-}
+Animation::Animation(){}
 
 void Animation::load(const std::string& path, Window& window){
 		spriteTexture.loadFromFile(path, window);

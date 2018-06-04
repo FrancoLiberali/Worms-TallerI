@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client
+CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build
+CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/commonlib.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/commonlib.dir/flags.make
 
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.o: CMakeFiles/commonlib.dir/flags.make
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.o: ../src/common/Thread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/commonlib.dir/src/common/Thread.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/commonlib.dir/src/common/Thread.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/commonlib.dir/src/common/Thread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/commonlib.dir/src/common/Thread.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp
 
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/commonlib.dir/src/common/Thread.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.cpp > CMakeFiles/commonlib.dir/src/common/Thread.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp > CMakeFiles/commonlib.dir/src/common/Thread.cpp.i
 
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/commonlib.dir/src/common/Thread.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/src/common/Thread.cpp -o CMakeFiles/commonlib.dir/src/common/Thread.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp -o CMakeFiles/commonlib.dir/src/common/Thread.cpp.s
 
 CMakeFiles/commonlib.dir/src/common/Thread.cpp.o.requires:
 
@@ -91,7 +91,7 @@ commonlib_EXTERNAL_OBJECTS =
 libcommonlib.a: CMakeFiles/commonlib.dir/src/common/Thread.cpp.o
 libcommonlib.a: CMakeFiles/commonlib.dir/build.make
 libcommonlib.a: CMakeFiles/commonlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcommonlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libcommonlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/commonlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/commonlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/commonlib.dir/clean:
 .PHONY : CMakeFiles/commonlib.dir/clean
 
 CMakeFiles/commonlib.dir/depend:
-	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build/CMakeFiles/commonlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/commonlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/commonlib.dir/depend
 

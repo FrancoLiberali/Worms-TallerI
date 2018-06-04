@@ -9,5 +9,5 @@ WormMoveEvent::WormMoveEvent(int id, int x, int y)
 void WormMoveEvent::process(){
 	WormView* wormView = view->getWormView(wormID);
 	wormView->setPos(x, y);
-	std::cout<<"id "<<wormID<<"posx "<<x<<"posy "<<y<<std::endl;
+	//std::cout<<"id "<<wormID<<"posx "<<x<<"posy "<<y<<std::endl;
 }

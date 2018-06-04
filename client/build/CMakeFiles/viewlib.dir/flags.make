@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -pthread
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/edlinux/Escritorio/taller/TPs/TP_final/Cliente/Worms-TallerI/client/build 
+CXX_INCLUDES = -I/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build 
 

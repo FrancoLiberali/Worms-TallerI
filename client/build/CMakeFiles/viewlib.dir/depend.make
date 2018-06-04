@@ -26,6 +26,7 @@ CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/Texture.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/View.cpp
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/View.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/Window.h
+CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/WormState.h
 CMakeFiles/viewlib.dir/src/view/View.cpp.o: ../src/view/WormView.h
 
 CMakeFiles/viewlib.dir/src/view/Window.cpp.o: ../src/view/SdlException.h
@@ -35,6 +36,7 @@ CMakeFiles/viewlib.dir/src/view/Window.cpp.o: ../src/view/Window.h
 CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/Animation.h
 CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/Texture.h
 CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/Window.h
+CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/WormState.h
 CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/WormView.cpp
 CMakeFiles/viewlib.dir/src/view/WormView.cpp.o: ../src/view/WormView.h
 
