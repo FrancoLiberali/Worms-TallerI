@@ -17,7 +17,7 @@ public:
 	void load(const std::string& path, Window& window);
 	//~Animation();
 	void setPos(int x, int y);
-	void render();
+	void render(bool flip, int angle);
 	void setFrames(int frames);
 };
 #endif

@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
 	int step = 0;
 	while(clientView.isOpen()){
 		SDL_Event e;
-		SDL_WaitEvent(&e);
+		SDL_PollEvent(&e);
 		//std::cout<<"Se intrudujo un evento" << std::endl;
 		switch (e.type){
 			case SDL_QUIT:

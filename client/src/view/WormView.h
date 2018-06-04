@@ -12,8 +12,7 @@
 class WormView {
 private:
 	Window* window;
-	int id;
-	int x, y;
+	int id, x, y, dir, angle;
 	WormState state;
 	Animation anime;
 	std::map<WormState, Animation*> animations; 
@@ -24,6 +23,8 @@ public:
 	void setPos(int x, int y);
 	void update();
 	void changeState(WormState newState);
+	void setDirection(int dir);
+	void setAngle(int angle);
 	
 };
 

@@ -6,9 +6,9 @@
 class WormMoveEvent : public Event {
 private:
 	int wormID;
-	int x, y;
+	int x, y, dir, angle;
 public:
-	WormMoveEvent(int id, int x, int y);
+	WormMoveEvent(int id, int x, int y, int dir, int angle);
 	void process();
 };
 

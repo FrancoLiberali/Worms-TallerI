@@ -18,9 +18,9 @@ void Animation::configSprite(){
 	}
 }
 
-void Animation::render(){
+void Animation::render(bool flip, int angle){
 	SDL_Rect* currentClip = &spriteClips[this->currFrame];
-	this->spriteTexture.render(x-currentClip->w/2, y-currentClip->h/2, 0, currentClip);
+	this->spriteTexture.render(x-currentClip->w/2, y-currentClip->h/2, 0, currentClip, flip);
 	this->currFrame++;
 	if(currFrame >= frames)
 		this->currFrame = 0;
