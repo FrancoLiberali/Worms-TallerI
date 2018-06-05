@@ -9,6 +9,7 @@ ClientCommandSender::~ClientCommandSender(){
 	while(!queue.empty()){
 		delete (queue.pop());
 	}
+	proxy.close();
 	std::cout << "Sender cerrado" << std::endl;
 
 }

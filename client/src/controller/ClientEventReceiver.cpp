@@ -5,17 +5,18 @@
 #include <iostream>
 #include <sstream>
 
-
-ClientEventReceiver::ClientEventReceiver(std::string socket,Queue<Event*>& q)
-					: socket_file(socket), q(q), closed(false){
-
+ClientEventReceiver::ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& q,
+	std::string socket):socket_file(socket), proxy(proxy), q(q), closed(false){
+	
 	std::cout << "ClientEventReceiver construido" << std::endl;
 }
 
+
 ClientEventReceiver::~ClientEventReceiver() {
   while (!q.empty()) {
-    q.pop();
+    delete q.pop();
   }
+  //proxy.close();
   std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
@@ -24,6 +25,18 @@ EventType getTypeEvent(std::stringstream& ss){
 	int type = 0;
 	ss >> type;
 
+	switch (type){
+		case 0: return W_CHANGE_STATE;
+		case 1: return W_MOVE;
+		case 2: return W_JUMP;
+		case 3: return W_ATTACK;
+		case 4: return W_DEATH;
+		case 5: return G_ENDGAME;
+	}
+	return W_MOVE;
+}
+
+EventType getTypeEvent(int& type){
 	switch (type){
 		case 0: return W_CHANGE_STATE;
 		case 1: return W_MOVE;
@@ -55,10 +68,23 @@ void ClientEventReceiver::run(){
 		if (ifs.eof())
 			this->stop();
 	}
+	/*try{
+		while (!closed){
+			int t = proxy.receiveInt();
+			EventType type = getTypeEvent(t);
+			Event* event = EventFactory::createEvent(type, proxy);
+			std::cout << i <<std::endl;
+			q.push(event);
+		}
+	} catch (const SocketException& e){
+		this->stop();
+	}*/
+
 }
 
 void ClientEventReceiver::stop(){
 	closed = true;
+	//cerramos el socket
 }
 
 bool ClientEventReceiver::isClosed() const{

@@ -4,7 +4,9 @@
  ProxyClient::ProxyClient(std::string socket):socket(socket){ 
  }
    
-ProxyClient::~ProxyClient(){}
+ProxyClient::~ProxyClient(){
+    std::cout << "cerrar socket" << std::endl;
+}
 
 void  ProxyClient::sendInt(int num){
     std::cout<<num; 
@@ -17,4 +19,8 @@ int ProxyClient::receiveInt(){
 }
 char ProxyClient::receiveByte(){
     return 0;
+}
+
+void ProxyClient::close(){
+
 }

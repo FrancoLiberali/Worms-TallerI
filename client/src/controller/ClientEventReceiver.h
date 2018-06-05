@@ -3,15 +3,18 @@
 
 #include "../common/Queue.h"
 #include "../common/Thread.h"
+#include "../ProxyClient.h"
 #include "Event.h"
 
 class ClientEventReceiver : public Thread{
 private:
 	std::string socket_file;
 	Queue<Event*>& q;
+	ProxyClient& proxy;
 	bool closed;
 public:
-	ClientEventReceiver(std::string socket, Queue<Event*>& eventQueue);
+	ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& eventQueue, 
+						std::string socket);
 	~ClientEventReceiver();
 	virtual void run() override;
 	void stop();

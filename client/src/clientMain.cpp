@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue;
-	ClientEventReceiver eventReceiver(socket, eventQueue);
+	ClientEventReceiver eventReceiver(proxy, eventQueue, socket);
 	eventReceiver.start();
 	
 	//cola de comandos a enviar

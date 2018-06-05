@@ -69,6 +69,8 @@ sstream
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 ../common/Thread.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
+../ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
@@ -109,6 +111,8 @@ EventType.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventType.h
 Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+../ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 sstream
 -
 

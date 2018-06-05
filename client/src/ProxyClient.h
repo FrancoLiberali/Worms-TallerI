@@ -13,6 +13,7 @@ public:
     void sendByte(char bye);
     int receiveInt();
     char receiveByte();
+    void close();
 };
 
 #endif
