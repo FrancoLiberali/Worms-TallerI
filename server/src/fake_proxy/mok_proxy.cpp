@@ -4,6 +4,7 @@
 #define EXIT 'q'
 #define MOVE_TAM 9
 #define JUMP_TAM 5
+#define FIRE_SIGHT_POWER_TAM 17
 
 MokProxy::MokProxy(){
 }
@@ -62,6 +63,33 @@ void MokProxy::receive_event(ProtectedQueue& queue){
 				msj[3] = 0;
 				msj[4] = 0;
 			}
+		case 'b': {//bazookaaaaaaa
+				std::cout << "bazooka\n";
+				char* msj = new char[FIRE_SIGHT_POWER_TAM];
+				msj[0] = 3;
+				//gusano 0
+				msj[1] = 0;
+				msj[2] = 0;
+				msj[3] = 0;
+				msj[4] = 0;
+				// weapon 0
+				msj[5] = 0;
+				msj[6] = 0;
+				msj[7] = 0;
+				msj[8] = 0;
+				//angle 0
+				msj[9] = 0;
+				msj[10] = 0;
+				msj[11] = 0;
+				msj[12] = 0;
+				//power 1
+				msj[13] = 0;
+				msj[14] = 0;
+				msj[15] = 0;
+				msj[16] = 1;
+				queue.push(msj);
+				break;
+			}
 	}
 }
 
@@ -84,6 +112,21 @@ void MokProxy::send_position(int gusano_number, int x, int y, int direction, int
 	std::cout << y;
 	std::cout << ' ';
 	std::cout << direction;
+	std::cout << ' ';
+	std::cout << angle;
+	std::cout << "\n";
+}
+
+void MokProxy::send_projectile_creation(int projectile_number, int weapon, int x, int y, int angle){
+	std::cout << 2;
+	std::cout << ' ';
+	std::cout << projectile_number;
+	std::cout << ' ';
+	std::cout << weapon;
+	std::cout << ' ';
+	std::cout << x;
+	std::cout << ' ';
+	std::cout << y;
 	std::cout << ' ';
 	std::cout << angle;
 	std::cout << "\n";

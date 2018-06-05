@@ -7,17 +7,10 @@
 
 #define NUM_RAYS 36
 
-Projectile::Projectile(b2World& world_entry, float x, float y, float angle, float vel, 
-					   int damage_e, int radius_e, int type, std::vector<Projectile*>& to_remove_e) : 
-			world(world_entry), damage(damage_e), radius(radius_e), to_remove(to_remove_e){
-	this->create(x ,y, angle, vel, type);
-}
-
-Projectile::Projectile(b2World& world_entry, int damage_e, int radius_e, std::vector<Projectile*>& to_remove_e) : 
-			world(world_entry), damage(damage_e), radius(radius_e), to_remove(to_remove_e){
-}
-
-void Projectile::create(float x, float y, float angle, float vel, int type){
+Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, float angle, float vel, 
+	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MokProxy& proxy_e) : 
+			world(world_entry), number(number_e), damage(damage_e), 
+			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.bullet = true;
@@ -68,10 +61,10 @@ void Projectile::exploit(){
 			it->first->applyExplotion(it->second, damage_by_distance, impulse_by_distance);
 		}
 	}
-	this->to_remove.push_back(this);
+	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 
 void Projectile::sink(){
-	this->to_remove.push_back(this);
+	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 

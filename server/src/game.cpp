@@ -36,7 +36,7 @@ Game::~Game(){
 }
 
 void Game::play(){
-	Turn turn(this->world, this->queue, this->gusanos, this->to_remove_gusanos, this->info);
+	Turn turn(this->world, this->queue, this->gusanos, this->to_remove_gusanos, this->info, this->proxy);
 	std::map<unsigned int, Gusano*>::iterator it = this->gusanos.begin();
 	while (it != this->gusanos.end()){
 		unsigned int gusano_number = it->first;

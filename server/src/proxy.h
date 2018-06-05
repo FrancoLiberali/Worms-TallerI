@@ -41,6 +41,8 @@ class Proxy{
 		
 		void send_position(int gusano_number, int x, int y, int direction, int angle);
 		
+		void send_projectile_creation(int projectile_number, int weapon, float x, float y, int angle);
+		
 		void send_int(int to_send);
 		
 		/*const float receive_float(Socket& socket);

@@ -9,6 +9,7 @@
 
 #define MOVE_TAM 9
 #define JUMP_TAM 5
+#define FIRE_SIGHT_POWER_TAM 17
 #define ONEBYTE 1
 
 Proxy::Proxy(Socket& socket_e) : socket(socket_e){
@@ -105,6 +106,9 @@ void Proxy::receive_event(ProtectedQueue& queue){
 		case 2: //se recibe que se quiere hacer saltar a un gusano 
 				this->receive_event_info(queue, event, JUMP_TAM);
 				break;
+		case 3: //se recibe que se quiere hacer disparar a un gusano
+				this->receive_event_info(queue, event, FIRE_SIGHT_POWER_TAM);
+				break;
 		}
 }
 
@@ -140,6 +144,19 @@ void Proxy::send_position(int gusano_number, int x, int y, int direction, int an
 	this->send_int(y);
 	this->socket.send_(&espacio, ONEBYTE);
 	this->send_int(direction);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(angle);
+}
+
+void Proxy::send_projectile_creation(int projectile_number, int weapon, float x, float y, int angle){
+	this->send_int(projectile_number);
+	char espacio = 32;
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(weapon);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(x * 100);
+	this->socket.send_(&espacio, ONEBYTE);
+	this->send_int(y * 100);
 	this->socket.send_(&espacio, ONEBYTE);
 	this->send_int(angle);
 }

@@ -5,6 +5,7 @@
 #include "proxy.h"
 #include "fake_proxy/mok_proxy.h"
 #include <map>
+#include "projectile.h"
 
 #ifndef __GUSANO_H__
 #define __GUSANO_H__

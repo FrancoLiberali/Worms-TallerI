@@ -11,11 +11,10 @@ class LittleProjectile : public SimpleProjectile {
 		float angle;
 		float vel;
 	public:
-		LittleProjectile(b2World& world_entry, float x, float y, float angle, float vel, int damage_e, int radius_e, std::vector<Projectile*>& to_remove_e);
+		LittleProjectile(b2World& world_entry, int number, float x, float y, float angle, float vel, 
+		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove_e, MokProxy& proxy);
 		
 		~LittleProjectile();
-		
-		void create();
 };
 
 #endif

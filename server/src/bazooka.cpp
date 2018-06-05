@@ -1,14 +1,18 @@
 #include "bazooka.h"
+#include <cmath>
 
-Bazooka::Bazooka(b2World& world_entry, float x, float y, float angle, GameConstants& info, std::vector<Projectile*>& to_remove) : 
-			SimpleProjectile(world_entry, x ,y, angle, info.bazooka_vel, info.bazooka_damage, info.bazooka_radius, to_remove){
+Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, float angle, int power,
+		GameConstants& info, std::map<int, Projectile*>& to_remove, MokProxy& proxy) : 
+				SimpleProjectile(world_entry, number, x + (sqrt(0.3125) + 0.125) * cos(angle), 
+				y + (sqrt(0.3125) + 0.125) * sin(angle), angle, info.bazooka_vel * power, 
+				info.bazooka_damage, info.bazooka_radius, to_remove, proxy){
 	b2Vec2 vertices[6];
-	vertices[0].Set(-0.2f, 0.1f);
-	vertices[1].Set(-0.2f, -0.1f);
-	vertices[2].Set(0.0f, -0.1f);
-	vertices[3].Set(0.05f, -0.05f);
-	vertices[4].Set(0.05f, 0.05f);
-	vertices[5].Set(0.0f, 0.1f);
+	vertices[0].Set(-0.125f, 0.1f);
+	vertices[1].Set(-0.125f, -0.1f);
+	vertices[2].Set(0.12f, -0.1f);
+	vertices[3].Set(0.125f, -0.05f);
+	vertices[4].Set(0.125f, 0.05f);
+	vertices[5].Set(0.12f, 0.1f);
 	
 	int32 count = 6;
 
@@ -21,6 +25,8 @@ Bazooka::Bazooka(b2World& world_entry, float x, float y, float angle, GameConsta
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
+	proxy.send_projectile_creation(this->number, 0, int((x + (sqrt(0.3125) + 0.125) * cos(angle))*100), 
+		int((y + (sqrt(0.3125) + 0.125) * sin(angle))*100), (int)angle);
 }
 
 Bazooka::~Bazooka(){

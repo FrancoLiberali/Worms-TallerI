@@ -1,6 +1,8 @@
 #include "Box2D/Box2D.h"
 #include <vector>
 #include "user_data.h"
+#include "fake_proxy/mok_proxy.h"
+#include <map>
 
 #ifndef __PROJECTILE_H__
 #define __PROJECTILE_H__
@@ -8,19 +10,17 @@
 class Projectile {
 	protected:
 		b2World& world;
+		int number;
 		b2Body* body;
 		const int damage;
 		const int radius;
-		std::vector<Projectile*>& to_remove;
+		std::map<int, Projectile*>& to_remove;
+		MokProxy& proxy;
 		UserData* user_data;
 		
-		void create(float x, float y, float angle, float vel, int type);
-		
-	public:
-		Projectile(b2World& world_entry, int damage_e, int radius_e, std::vector<Projectile*>& to_remove_e);
-		
-		Projectile(b2World& world_entry, float x, float y, float angle, float vel,
-				   int damage_e, int radius_e, int type, std::vector<Projectile*>& to_remove_e);
+	public:		
+		Projectile(b2World& world_entry, int number, float x, float y, float angle, float vel,
+				   int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MokProxy& proxy_e);
 		
 		~Projectile();
 		

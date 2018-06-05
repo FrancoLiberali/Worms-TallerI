@@ -1,14 +1,9 @@
 #include "little_projectile.h"
 
-LittleProjectile::LittleProjectile(b2World& world_entry, float x_e, float y_e, float angle_e, float vel_e, int damage, int radius, std::vector<Projectile*>& to_remove) : 
-			SimpleProjectile(world_entry, damage, radius, to_remove), x(x_e), y(y_e), angle(angle_e), vel(vel_e){
-}
-
-LittleProjectile::~LittleProjectile(){
-}
-
-void LittleProjectile::create(){
-	SimpleProjectile::create(this->x , this->y, this->angle, this->vel);
+LittleProjectile::LittleProjectile(b2World& world_entry, int number, float x, float y, float angle, float vel, 
+int damage, int radius, std::map<int, Projectile*>& to_remove, MokProxy& proxy) : 
+			SimpleProjectile(world_entry, number, x, y, angle, vel, damage, radius, to_remove, proxy){
+				
 	b2CircleShape circleShape;
     circleShape.m_radius = 0.05; // very small
     
@@ -25,4 +20,7 @@ void LittleProjectile::create(){
 	this->body->CreateFixture(&fixtureDef);
 	this->body->SetFixedRotation(true);
 	this->body->SetBullet(true);
+}
+
+LittleProjectile::~LittleProjectile(){
 }

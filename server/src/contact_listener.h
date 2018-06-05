@@ -84,7 +84,6 @@ class ContactListener : public b2ContactListener{
 				b2Fixture* fixture = contact->GetFixtureA();
 				void* fixture_user_data = fixture->GetUserData();
 				if (fixture_user_data){
-					printf("hay data\n");
 					float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
 					if (other_angle >= -0.78f && other_angle <= 0.78f){
 						UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
@@ -96,7 +95,6 @@ class ContactListener : public b2ContactListener{
 				fixture = contact->GetFixtureB();
 				fixture_user_data = fixture->GetUserData();
 				if (fixture_user_data){
-					printf("hay data\n");
 					float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
 					if (other_angle >= -0.78f && other_angle <= 0.78f){
 						UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
