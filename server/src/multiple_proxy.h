@@ -19,11 +19,11 @@ class MultipleProxy{
 		
 		void send_state_change(int player_id, int gusano_id, int new_state);
 		
-		void send_gusano_position(int player_id, int gusano_id, int x, int y, int direction, int angle);
+		void sendGusanoPosition(int player_id, int gusano_id, float x, float y, int direction, float angle);
 		
 		void send_viga_position(int x, int y, int angle);
 		
-		void send_projectile_creation(int projectile_number, int weapon, int x, int y, int angle);
+		void sendProjectilePosition(int projectile_number, int weapon, float x, float y, float angle);
 		
 		void sendProjecileExplosion(int projectile_number, float x, float y);
 		

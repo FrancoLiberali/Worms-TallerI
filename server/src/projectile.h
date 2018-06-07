@@ -26,7 +26,7 @@ class Projectile {
 		
 		virtual void exploit();
 		
-		virtual void update() = 0;
+		virtual void update(int weapon);
 		
 		b2Vec2 GetPosition(){ return this->body->GetPosition();}
 		

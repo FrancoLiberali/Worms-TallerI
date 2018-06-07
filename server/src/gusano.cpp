@@ -118,8 +118,7 @@ int Gusano::getDirection(){
 void Gusano::sendPosition(){
 	b2Vec2 position = this->GetPosition();
 	float32 angle = this->GetAngle();
-	this->proxy.send_gusano_position(this->id.first, this->id.second, (int)position.x * 1000, 
-										(int)position.y * 1000, this->direction, (int)angle);
+	this->proxy.sendGusanoPosition(this->id.first, this->id.second, position.x, position.y, this->direction, angle);
 }
 
 void Gusano::move(int dir){
@@ -146,6 +145,7 @@ void Gusano::update(){
 		delete this->state;
 		this->state = new InactiveState();
 		this->body->SetLinearVelocity(b2Vec2(0,0));
+		this->sendPosition();
 		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
 		this->rotateTo(angles_list.back());
 		this->body->SetFixedRotation(true);		
@@ -232,6 +232,7 @@ void Gusano::finishContact(float ground_angle){
 		std::cout << "state->falling\n";
 		delete this->state;
 		this->state = new JumpingState();
+		this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
 		this->body->SetGravityScale(1);
 		//b2Vec2 vel = this->body->GetLinearVelocity();
 		//vel.x = 0.0f;

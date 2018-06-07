@@ -13,25 +13,35 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	
 	//lectura de archivo yalm "map_id" y creacion de vigas y gusanos
 	Viga viga(this->world, 0.0f, 0.0f, 0.0f, this->proxy);
+	Viga viga2(this->world, 6.0f, 0.0f, 0.0f, this->proxy);
 	
-	this->water = new Water(this->world, -5, -2, 10, -2);
+	this->water = new Water(this->world, -5, -2, 20, -2);
 	
 	std::vector<Gusano*> gusanos;
-	
 	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 0.5f, 0.52f, 0.0f);
 	gusanos.push_back(gusano0);
+	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 3.0f, 0.52f, 0.0f);
+	gusanos.push_back(gusano1);
+	Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
+	gusanos.push_back(gusano2);
 	
 	std::random_shuffle(gusanos.begin(), gusanos.end());
 	
 	//lectura de archivo yalm y modificacion de constantes de juego
 	//this->info.algo = leido
 	
+	std::cout << cant_players << "\n";
+	for (int i = 0; i <= cant_players; i++){
+		this->next.push_back(1);
+	}
+	
 	std::vector<Gusano*>::iterator it = gusanos.begin();
 	int player, gusano_id;
 	for (player = 1, gusano_id = 1; it != gusanos.end(); player++, ++it){
+		std::cout << player << "\n";
+		std::cout << gusano_id << "\n";
 		(*it)->setId(player, gusano_id);
 		this->players[player][gusano_id] = (*it);
-		this->next[player] = 1;
 		if (player == cant_players){
 			player = 0;
 			gusano_id++;
@@ -106,9 +116,10 @@ void Game::play(){
 						gusanos.at(this->next[i]);
 						turn.play(i, this->next[i]);
 						this->next[i]++;
+						break;
 					} catch (std::out_of_range& e){
 						this->next[i]++;
-						if (this->next[i] == this->gusanos_per_player){
+						if (this->next[i] > this->gusanos_per_player){
 							this->next[i] = 1;
 						}
 					}

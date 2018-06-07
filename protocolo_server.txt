@@ -1,6 +1,6 @@
 LO QUE MANDA EL SERVER:
 todos los int son mandados en 4 bytes big endian
-todas las coordenadas se encuentran en MILIMETROS y los angulos en RADIANES, ya que segun barba la conversion la debe realizar el client.
+todas las coordenadas se encuentran en MILIMETROS y los angulos en GRADOS, ya que segun barba la conversion la debe realizar el client.
 Las coordenadas refieren al CENTRO del objeto
 
 ASIGNACION DE ID DE JUGADOR:

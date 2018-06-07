@@ -12,7 +12,7 @@ class SimpleProjectile : public Projectile{
 		
 		~SimpleProjectile();
 		
-		virtual void update();
+		virtual void update(int weapon);
 };
 
 #endif

@@ -1,4 +1,5 @@
 #include "multiple_proxy.h"
+#include <cmath>
 
 MultipleProxy::MultipleProxy(){
 }
@@ -24,10 +25,10 @@ void MultipleProxy::send_state_change(int player_id, int gusano_id, int new_stat
 	}
 }
 		
-void MultipleProxy::send_gusano_position(int player_id, int gusano_id, int x, int y, int direction, int angle){
+void MultipleProxy::sendGusanoPosition(int player_id, int gusano_id, float x, float y, int direction, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->send_gusano_position(player_id, gusano_id, x, y, direction, angle);
+		(*it)->send_gusano_position(player_id, gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
 	}
 }
 
@@ -38,17 +39,17 @@ void MultipleProxy::send_viga_position(int x, int y, int angle){
 	}
 }
 
-void MultipleProxy::send_projectile_creation(int projectile_number, int weapon, int x, int y, int angle){
+void MultipleProxy::sendProjectilePosition(int projectile_number, int weapon, float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->send_projectile_creation(projectile_number, weapon, x, y, angle);
+		(*it)->send_projectile_creation(projectile_number, weapon, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 
 void MultipleProxy::sendProjecileExplosion(int projectile_number, float x, float y){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectileExplosion(projectile_number, (int)x * 1000, (int) y * 1000);
+		(*it)->sendProjectileExplosion(projectile_number, (int)(x * 1000), (int)(y * 1000));
 	}
 }
 

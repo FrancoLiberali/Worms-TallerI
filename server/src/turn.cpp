@@ -66,7 +66,7 @@ void Turn::changeSightAngle(char* msj, int active_player, int active_gusano){
 	Gusano* gusano = this->players[active_player][active_gusano];
 	if (gusano->isInactive()){
 		int change = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-		if (this->weapon != 0){
+		if (this->weapon != 0 && this->weapon != 7 && this->weapon != 9 && this->weapon != 10){
 			this->sight_angle += change * MIN_ANGLE_CHANGE;
 			this->proxy.sendChangeSightAngle(change);
 		}
@@ -205,11 +205,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		
 		std::map<int, Projectile*>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
-			projectiles_it->second->update();
-			//en lugar de printearlo se deberia mandar al client
-			//ver si el client va a mostrar solo los que yo le mande o tambien le tendria que avisar cuando explotan
-			std::cout << "projectile " << projectiles_it->first << ": " << projectiles_it->second->GetPosition().x << 
-			"; " << projectiles_it->second->GetPosition().y << " " << projectiles_it->second->GetAngle() << "\n";
+			projectiles_it->second->update(0);
 		}
 		
 		std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();

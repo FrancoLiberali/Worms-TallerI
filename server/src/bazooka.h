@@ -14,6 +14,8 @@ class Bazooka : public SimpleProjectile {
 		GameConstants& info, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
 		
 		~Bazooka();
+		
+		virtual void update(int to_respect);
 };
 
 #endif

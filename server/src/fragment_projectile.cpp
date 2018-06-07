@@ -13,7 +13,8 @@ int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments_e, std
 FragmentProjectile::~FragmentProjectile(){
 }
 
-void FragmentProjectile::update(){
+void FragmentProjectile::update(int weapon){
+	Projectile::update(weapon);
 }
 
 void FragmentProjectile::exploit(){

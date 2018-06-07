@@ -28,3 +28,7 @@ Morter::Morter(b2World& world_entry, int number, float x, float y, float angle, 
 
 Morter::~Morter(){
 }
+
+void Morter::update(int to_respect){
+	FragmentProjectile::update(2);
+}

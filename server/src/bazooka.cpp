@@ -25,9 +25,13 @@ Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, float angle
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
-	proxy.send_projectile_creation(this->number, 0, int((x + (sqrt(0.3125) + 0.125) * cos(angle))*100), 
-		int((y + (sqrt(0.3125) + 0.125) * sin(angle))*100), (int)angle);
+	proxy.sendProjectilePosition(this->number, 1, x + (sqrt(0.3125) + 0.125) * cos(angle), 
+		y + (sqrt(0.3125) + 0.125) * sin(angle), angle);
 }
 
 Bazooka::~Bazooka(){
+}
+
+void Bazooka::update(int to_respect){
+	SimpleProjectile::update(1);
 }

@@ -8,5 +8,6 @@ SimpleProjectile::SimpleProjectile(b2World& world_entry, int number, float x, fl
 SimpleProjectile::~SimpleProjectile(){
 }
 
-void SimpleProjectile::update(){
+void SimpleProjectile::update(int weapon){
+	Projectile::update(weapon);
 }

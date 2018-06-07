@@ -69,3 +69,9 @@ void Projectile::sink(){
 	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 
+void Projectile::update(int weapon){
+	b2Vec2 position = this->GetPosition();
+	float angle = this->GetAngle();
+	this->proxy.sendProjectilePosition(this->number, weapon, position.x, position.y, angle);
+}
+
