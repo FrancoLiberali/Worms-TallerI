@@ -31,7 +31,9 @@
 *.out
 *.app
 
-server/build
+server/build/*
+server/build/CMakeFiles/*
+server/build/CMakeFiles/tp.dir/*
 server/test/runner
 server/test/CMakeFiles
 server/test/CMakeCache.txt
