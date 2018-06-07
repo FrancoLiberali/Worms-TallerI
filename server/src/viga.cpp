@@ -3,7 +3,7 @@
 #include <cmath>
 
 #define PI 3.1415927
-Viga::Viga(b2World& world, float x, float y, float angle) {
+Viga::Viga(b2World& world, float x, float y, float angle, MultipleProxy& proxy) {
 	b2BodyDef vigaBodyDef;
 	//vigaBodyDef.position.Set(x, y);
 	//int* data = new int(0);
@@ -31,6 +31,7 @@ Viga::Viga(b2World& world, float x, float y, float angle) {
 	fixtureDef.filter.groupIndex = -2;
 
 	vigaBody->CreateFixture(&fixtureDef);
+	proxy.send_viga_position((int)x * 1000, (int)y * 1000, (int)angle);
 	
 	/*b2BodyDef groundBodyDef;
 	int* data = new int(0);

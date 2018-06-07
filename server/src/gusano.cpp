@@ -14,10 +14,9 @@
 #define JUMPING_STATE 2
 #define SINKING_STATE 3
 
-//Gusano::Gusano(b2World& world_entry, Proxy& proxy_e, unsigned int number_e,
-Gusano::Gusano(b2World& world_entry, MokProxy& proxy_e, unsigned int number_e, 
-	std::map<unsigned int, Gusano*>& to_remove_gusanos_e, float x, float y, float angle) 
-		: world(world_entry), proxy(proxy_e), number(number_e), to_remove_gusanos(to_remove_gusanos_e){
+Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
+	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
+		: world(world_entry), proxy(proxy_e), to_remove_gusanos(to_remove_gusanos_e){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.position.Set(x, y);
@@ -98,6 +97,12 @@ Gusano::~Gusano(){
 	this->world.DestroyBody(this->body);
 }
 
+void Gusano::setId(int player, int number){
+	this->id.first = player;
+	this->id.second = number;
+	this->sendPosition();
+}
+
 b2Vec2 Gusano::GetPosition(){
 	return this->body->GetPosition();
 }
@@ -110,26 +115,21 @@ int Gusano::getDirection(){
 	return this->direction;
 }
 
-unsigned int Gusano::getNumber(){
-	return this->number;
-}
-
 void Gusano::sendPosition(){
 	b2Vec2 position = this->GetPosition();
 	float32 angle = this->GetAngle();
-	this->proxy.send_position(this->number, int(position.x * 100), int(position.y * 100), this->direction, (int)angle); 
+	this->proxy.send_gusano_position(this->id.first, this->id.second, (int)position.x * 1000, 
+										(int)position.y * 1000, this->direction, (int)angle);
 }
 
 void Gusano::move(int dir){
 	if (this->direction != dir){
 		this->direction = -this->direction;
-		b2Vec2 position = this->GetPosition();
-		float32 angle = this->GetAngle();
-		this->proxy.send_position(this->number, int(position.x * 100), int(position.y * 100), this->direction, (int)angle); 
+		this->sendPosition();
 	} else {
 		delete this->state;
 		this->state = new MovingState();
-		this->proxy.send_state_change(this->number, MOVING_STATE);
+		this->proxy.send_state_change(this->id.first, this->id.second, MOVING_STATE);
 		b2Vec2 vel;
 		float angle = this->GetAngle();
 		vel.x = 0.2f * this->direction * cos(angle);
@@ -146,7 +146,7 @@ void Gusano::update(){
 		delete this->state;
 		this->state = new InactiveState();
 		this->body->SetLinearVelocity(b2Vec2(0,0));
-		this->proxy.send_state_change(this->number, INACTIVE_STATE);
+		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
 		this->rotateTo(angles_list.back());
 		this->body->SetFixedRotation(true);		
 	}
@@ -172,7 +172,7 @@ bool Gusano::isFalling(){
 void Gusano::jump(){
 	delete this->state;
 	this->state = new JumpingState();
-	this->proxy.send_state_change(this->number, JUMPING_STATE);
+	this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
 	this->body->SetGravityScale(1);
 	printf("state->cayendo\n");
 	b2Vec2 vel = this->body->GetLinearVelocity();
@@ -192,9 +192,13 @@ void Gusano::backJump(){
 }
 
 void Gusano::sink(){
-	this->proxy.send_state_change(this->number, SINKING_STATE);
+	this->proxy.send_state_change(this->id.first, this->id.second, SINKING_STATE);
 	this->sendPosition();
-	this->to_remove_gusanos.insert(std::pair<unsigned int, Gusano*>(this->number, this));
+	this->to_remove_gusanos.push_back(this->id);
+}
+
+void Gusano::addLife(unsigned int life){
+	//this->life += life;
 }
 
 /*float radDiff( float a, float b )
@@ -211,6 +215,7 @@ void Gusano::newContact(float ground_angle){
 		printf("state->inactivo\n");
 		delete this->state;
 		this->state = new InactiveState();
+		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
 		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
 		std::cout << "TOCO al segundo \n";

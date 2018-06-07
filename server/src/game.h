@@ -8,26 +8,27 @@
 #include "water.h"
 #include "contact_listener.h"
 #include <mutex>
-#include "proxy.h"
-#include "fake_proxy/mok_proxy.h"
+#include "multiple_proxy.h"
 
 #ifndef __GAME_H__
 #define __GAME_H__
 
 class Game {
 	private:
-		//Proxy proxy;
+		MultipleProxy proxy;
 		ProtectedQueue& queue;
 		b2World world;
-		MokProxy proxy;
+		int cant_players;
 		ContactListener contact_listener;
 		Water* water;
-		std::map<unsigned int, Gusano*> gusanos;
-		std::map<unsigned int, Gusano*> to_remove_gusanos;
+		std::vector<std::pair<int, int>> to_remove_gusanos;
+		std::map<int, std::map<int, Gusano*>> players;
+		std::vector<int> next;
+		int gusanos_per_player;
 		GameConstants info;
 		
 	public:
-		Game(Socket& socket_e, ProtectedQueue& queue_e);
+		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id, int cant_players);
 		
 		~Game();
 		

@@ -339,10 +339,8 @@ contact_listener.h
 ../src/contact_listener.h
 mutex
 -
-proxy.h
-../src/proxy.h
-fake_proxy/mok_proxy.h
-../src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+../src/multiple_proxy.h
 
 ../src/game_constants.h
 
@@ -355,11 +353,13 @@ vector
 -
 user_data.h
 ../src/user_data.h
-proxy.h
-../src/proxy.h
+multiple_proxy.h
+../src/multiple_proxy.h
 fake_proxy/mok_proxy.h
 ../src/fake_proxy/mok_proxy.h
 map
+-
+utility
 -
 projectile.h
 ../src/projectile.h
@@ -368,6 +368,12 @@ projectile.h
 Box2D/Box2D.h
 ../src/Box2D/Box2D.h
 
+../src/multiple_proxy.h
+vector
+-
+proxy.h
+../src/proxy.h
+
 ../src/projectile.h
 Box2D/Box2D.h
 ../src/Box2D/Box2D.h
@@ -375,8 +381,8 @@ vector
 -
 user_data.h
 ../src/user_data.h
-fake_proxy/mok_proxy.h
-../src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+../src/multiple_proxy.h
 map
 -
 
@@ -389,8 +395,6 @@ mutex
 ../src/proxy.h
 socket.h
 ../src/socket.h
-viga.h
-../src/viga.h
 protected_queue.h
 ../src/protected_queue.h
 
@@ -415,10 +419,6 @@ thread
 -
 
 ../src/user_data.h
-
-../src/viga.h
-Box2D/Box2D.h
-../src/Box2D/Box2D.h
 
 ../src/water.h
 Box2D/Box2D.h
@@ -953,12 +953,18 @@ protected_queue.h
 /home/franco/Documentos/taller1/tpfinal/server/protected_queue.h
 proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/multiple_proxy.h
 fake_proxy/mok_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/fake_proxy/mok_proxy.h
 iostream
 -
 receiver.h
 /home/franco/Documentos/taller1/tpfinal/server/receiver.h
+vector
+-
+arpa/inet.h
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp
 banana.h
@@ -971,8 +977,8 @@ regresive_projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
 game_constants.h
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
-fake_proxy/mok_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/bazooka.cpp
 bazooka.h
@@ -989,8 +995,8 @@ projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
 game_constants.h
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
-fake_proxy/mok_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 map
 -
 
@@ -1059,6 +1065,10 @@ iostream
 -
 utility
 -
+algorithm
+-
+stdexcept
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/game.h
 Box2D/Box2D.h
@@ -1081,10 +1091,8 @@ contact_listener.h
 /home/franco/Documentos/taller1/tpfinal/server/src/contact_listener.h
 mutex
 -
-proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
-fake_proxy/mok_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
 
@@ -1131,11 +1139,13 @@ vector
 -
 user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
-proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 fake_proxy/mok_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
 map
+-
+utility
 -
 projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
@@ -1191,6 +1201,8 @@ map
 -
 fragment_info.h
 /home/franco/Documentos/taller1/tpfinal/server/src/fragment_info.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
 
@@ -1203,6 +1215,16 @@ moving_finished.h
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_state.h
 gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.cpp
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+vector
+-
+proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
 projectile.h
@@ -1225,8 +1247,8 @@ vector
 -
 user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
-fake_proxy/mok_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 map
 -
 
@@ -1249,8 +1271,6 @@ arpa/inet.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
 socket.h
 /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
-viga.h
-/home/franco/Documentos/taller1/tpfinal/server/src/viga.h
 protected_queue.h
 /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
 
@@ -1411,8 +1431,8 @@ game_constants.h
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
 gusano.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
-proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 fake_proxy/mok_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
 fragment_info.h
@@ -1433,6 +1453,8 @@ cmath
 /home/franco/Documentos/taller1/tpfinal/server/src/viga.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+multiple_proxy.h
+/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/water.cpp
 water.h

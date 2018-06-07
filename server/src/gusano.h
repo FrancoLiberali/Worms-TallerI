@@ -2,9 +2,10 @@
 #include "gusano_state.h"
 #include <vector>
 #include "user_data.h"
-#include "proxy.h"
+#include "multiple_proxy.h"
 #include "fake_proxy/mok_proxy.h"
 #include <map>
+#include <utility>
 #include "projectile.h"
 
 #ifndef __GUSANO_H__
@@ -13,33 +14,31 @@
 class Gusano{
 	private:
 		b2World& world;
-		//Proxy& proxy;
-		MokProxy& proxy;
-		const unsigned int number;
-		std::map<unsigned int, Gusano*>& to_remove_gusanos;
+		MultipleProxy& proxy;
+		std::vector<std::pair<int, int>>& to_remove_gusanos;
 		b2Body* body;
 		GusanoState* state;
 		UserData* user_data;
 		int* foot_sensor_data;
 		int direction;
 		std::vector<float> angles_list;
+		std::pair<int, int> id;
 		
 		void rotateTo(float angle);
 		
 	public:
-		//Gusano(b2World& world_entry, Proxy& proxy_e, unsigned int number_e, 
-		Gusano(b2World& world_entry, MokProxy& proxy_e, unsigned int number_e, 
-		std::map<unsigned int, Gusano*>& to_remove_gusanos_e, float x, float y, float angle);
+		Gusano(b2World& world_entry, MultipleProxy& proxy_e,
+		std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle);
 		
 		~Gusano();
+		
+		void setId(int player, int number);
 		
 		b2Vec2 GetPosition();
 		
 		float32 GetAngle();
 		
 		int getDirection();
-		
-		unsigned int getNumber();
 		
 		void sendPosition();
 		
@@ -56,6 +55,10 @@ class Gusano{
 		void backJump();
 		
 		void sink();
+		
+		void addLife(unsigned int life);
+		
+		void sufferDamage(unsigned int damage);
 		
 		void newContact(float ground_angle);
 		

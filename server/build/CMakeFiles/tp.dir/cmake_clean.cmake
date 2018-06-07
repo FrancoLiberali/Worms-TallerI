@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/viga.cpp.o"
   "CMakeFiles/tp.dir/src/protected_queue.cpp.o"
   "CMakeFiles/tp.dir/src/projectile.cpp.o"
+  "CMakeFiles/tp.dir/src/multiple_proxy.cpp.o"
   "CMakeFiles/tp.dir/src/exploted_state.cpp.o"
   "CMakeFiles/tp.dir/src/socket.cpp.o"
   "CMakeFiles/tp.dir/src/inactive_state.cpp.o"

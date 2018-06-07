@@ -19,6 +19,8 @@ class MokProxy{
 		
 		void send_projectile_creation(int projectile_number, int weapon, int x, int y, int angle);
 		
+		void sendPlayerId(int id);
+		
 };
 
 #endif

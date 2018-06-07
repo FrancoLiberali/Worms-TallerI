@@ -584,6 +584,7 @@ CMakeFiles/tp.dir/main.cpp.o: ../src/game.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/game_constants.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/gusano.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/gusano_state.h
+CMakeFiles/tp.dir/main.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/proxy.h
@@ -591,7 +592,6 @@ CMakeFiles/tp.dir/main.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/thread.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/user_data.h
-CMakeFiles/tp.dir/main.cpp.o: ../src/viga.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/water.h
 CMakeFiles/tp.dir/main.cpp.o: ../main.cpp
 
@@ -632,13 +632,15 @@ CMakeFiles/tp.dir/src/banana.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
-CMakeFiles/tp.dir/src/banana.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/banana.cpp
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/banana.h
-CMakeFiles/tp.dir/src/banana.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/game_constants.h
+CMakeFiles/tp.dir/src/banana.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/banana.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/banana.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/regresive_projectile.h
+CMakeFiles/tp.dir/src/banana.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../Box2D/Box2D.h
@@ -683,8 +685,11 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/bazooka.cpp
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/bazooka.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/game_constants.h
+CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/simple_projectile.h
+CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/exploted_state.cpp.o: ../Box2D/Box2D.h
@@ -776,8 +781,11 @@ CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/fragment_info.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/fragment_projectile.cpp
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/fragment_projectile.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/little_projectile.h
+CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/simple_projectile.h
+CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/game.cpp.o: ../Box2D/Box2D.h
@@ -826,6 +834,7 @@ CMakeFiles/tp.dir/src/game.cpp.o: ../src/game_constants.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/gusano.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/gusano_state.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/little_projectile.h
+CMakeFiles/tp.dir/src/game.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/proxy.h
@@ -874,13 +883,15 @@ CMakeFiles/tp.dir/src/green_granade.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
-CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/protected_queue.h
-CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/game_constants.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/green_granade.cpp
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/green_granade.h
+CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/regresive_projectile.h
+CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../Box2D/Box2D.h
@@ -920,6 +931,7 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
+CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/exploted_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/gusano.cpp
@@ -929,13 +941,12 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/inactive_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/jumping_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/moving_finished.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/moving_state.h
+CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/projectile.h
-CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/user_data.h
-CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/viga.h
 
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -1061,8 +1072,11 @@ CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/little_projectile.cpp
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/little_projectile.h
+CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/simple_projectile.h
+CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/morter.cpp.o: ../Box2D/Box2D.h
@@ -1102,7 +1116,6 @@ CMakeFiles/tp.dir/src/morter.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
-CMakeFiles/tp.dir/src/morter.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/fragment_info.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/fragment_projectile.h
@@ -1110,8 +1123,12 @@ CMakeFiles/tp.dir/src/morter.cpp.o: ../src/game_constants.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/little_projectile.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/morter.cpp
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/morter.h
+CMakeFiles/tp.dir/src/morter.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/morter.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/morter.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/simple_projectile.h
+CMakeFiles/tp.dir/src/morter.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/moving_state.cpp.o: ../Box2D/Box2D.h
@@ -1156,6 +1173,12 @@ CMakeFiles/tp.dir/src/moving_state.cpp.o: ../src/moving_finished.h
 CMakeFiles/tp.dir/src/moving_state.cpp.o: ../src/moving_state.cpp
 CMakeFiles/tp.dir/src/moving_state.cpp.o: ../src/moving_state.h
 
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/multiple_proxy.cpp
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/socket.h
+
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Collision/Shapes/b2CircleShape.h
@@ -1193,101 +1216,26 @@ CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
-CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/gusano.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/gusano_state.h
+CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/projectile.cpp
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/ray_cast_all_callback.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/user_data.h
-CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/viga.h
 
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.cpp
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.h
 
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Box2D.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/Shapes/b2CircleShape.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/Shapes/b2EdgeShape.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/Shapes/b2PolygonShape.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/Shapes/b2Shape.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/b2BroadPhase.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/b2Collision.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/b2Distance.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/b2DynamicTree.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Collision/b2TimeOfImpact.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2BlockAllocator.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2Draw.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2GrowableStack.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2Math.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2Settings.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2StackAllocator.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Common/b2Timer.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Contacts/b2Contact.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2DistanceJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2FrictionJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2GearJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2Joint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2MotorJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2MouseJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2PulleyJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2RopeJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2WeldJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/Joints/b2WheelJoint.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2Body.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2ContactManager.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2Fixture.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2World.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.cpp
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket.h
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/viga.h
 
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Box2D.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/Shapes/b2CircleShape.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/Shapes/b2EdgeShape.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/Shapes/b2PolygonShape.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/Shapes/b2Shape.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/b2BroadPhase.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/b2Collision.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/b2Distance.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/b2DynamicTree.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Collision/b2TimeOfImpact.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2BlockAllocator.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2Draw.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2GrowableStack.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2Math.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2Settings.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2StackAllocator.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Common/b2Timer.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Contacts/b2Contact.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2DistanceJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2FrictionJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2GearJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2Joint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2MotorJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2MouseJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2PrismaticJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2PulleyJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2RevoluteJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2RopeJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2WeldJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/Joints/b2WheelJoint.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2Body.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2ContactManager.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2Fixture.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2World.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/proxy.h
@@ -1295,7 +1243,6 @@ CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.cpp
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/thread.h
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/viga.h
 
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -1334,11 +1281,13 @@ CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
-CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/protected_queue.h
-CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/fake_proxy/mok_proxy.h
+CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/regresive_projectile.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/regresive_projetile.cpp
+CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Box2D.h
@@ -1423,9 +1372,12 @@ CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/fake_proxy/mok_proxy.h
+CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/simple_projectile.cpp
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/simple_projectile.h
+CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/socket.cpp.o: ../src/socket.cpp
@@ -1484,6 +1436,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o: ../src/gusano.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/gusano_state.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/little_projectile.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/morter.h
+CMakeFiles/tp.dir/src/turn.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/proxy.h
@@ -1492,7 +1445,6 @@ CMakeFiles/tp.dir/src/turn.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/turn.cpp
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/turn.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/user_data.h
-CMakeFiles/tp.dir/src/turn.cpp.o: ../src/viga.h
 
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -1531,6 +1483,10 @@ CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
+CMakeFiles/tp.dir/src/viga.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/src/viga.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/viga.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/viga.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/viga.cpp
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/viga.h
 

@@ -8,7 +8,7 @@
 class GreenGranade : public RegresiveProjectile {
 	public:
 		GreenGranade(b2World& world_entry, int number, float x, float y, float angle, GameConstants& info, 
-std::map<int, Projectile*>& to_remove_e, MokProxy& proxy, unsigned int time);
+std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy, unsigned int time);
 		
 		~GreenGranade();
 };

@@ -1,0 +1,15 @@
+Para iniciar una partida un cliente se debe conectar al servidor.
+Al ver que se conecto un client, el servidor siempre responde con el numero de jugador que le corresponde,
+con el mensaje:
+	char en 0 que es codigo del mensaje numero de jugador
+	int de 4 bytes big endian con el numero de jugador correspondiente
+
+Cuando se conecta el primer jugador, el servidor se queda esperando que el mismo le mande el siguiente mensaje:
+	char en 0 que es codigo del mensaje de configuracion de partida
+	int de 4 bytes big endian con el numero de mapa que desea jugar
+	int de 4 bytes big endian con el numero de jugadores que van a jugar (entre 2 y 10)
+
+Es decir, que el client debe chequear si la respuesta a la conexion fue que es el jugador 1 para darle al servidor esta informacion.
+Una vez que el client le de al server la info de mapa y cantidad de jugadores, el server esperará a que se conecten el resto
+de jugadores para completar el numero indicado (aun no esta implimentada una solucion a que uno de los clientes se desconecte en 
+la sala de espera). Cuando esto suceda, se cargará el mapa y el juego empezará.

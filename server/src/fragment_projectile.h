@@ -16,7 +16,7 @@ class FragmentProjectile : public Projectile{
 		
 	public:
 		FragmentProjectile(b2World& world_entry, int number, float x, float y, float angle, float vel, 
-		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove_e, MokProxy& proxy,
+		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy,
 		int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments, std::vector<FragmentInfo*>& to_create_e);
 		
 		~FragmentProjectile();

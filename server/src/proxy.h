@@ -1,5 +1,4 @@
 #include "socket.h"
-#include "viga.h"
 #include "protected_queue.h"
 
 #ifndef __PROXY_H__
@@ -7,11 +6,11 @@
 
 class Proxy{
 	private:
-		Socket& socket;
+		Socket socket;
 		
 		void receive_event_info(ProtectedQueue& queue, char event, int tam);
 	public:
-		Proxy(Socket& socket_e);
+		Proxy(Socket socket_e);
 		
 		~Proxy() noexcept;
 		
@@ -37,11 +36,23 @@ class Proxy{
 		
 		const unsigned char receive_char();
 		
-		void send_state_change(int gusano_number, char new_state);
+		void sendPlayerId(int id);
 		
-		void send_position(int gusano_number, int x, int y, int direction, int angle);
+		void sendTurnBegining(int player_id, int gusano_id);
 		
-		void send_projectile_creation(int projectile_number, int weapon, float x, float y, int angle);
+		void send_viga_position(int x, int y, int angle);
+		
+		void send_gusano_position(int player_id, int gusano_id, int x, int y, int direction, int angle);
+		
+		void send_state_change(int player_id, int gusano_id, int new_state);
+		
+		void send_projectile_creation(int projectile_number, int weapon, int x, int y, int angle);
+		
+		void sendProjectileExplosion(int projectile_number, int x, int y);
+		
+		void sendTakeWeapon(int weapon);
+		
+		void sendChangeSightAngle(int change);
 		
 		void send_int(int to_send);
 		

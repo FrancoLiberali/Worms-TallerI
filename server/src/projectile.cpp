@@ -8,7 +8,7 @@
 #define NUM_RAYS 36
 
 Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, float angle, float vel, 
-	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MokProxy& proxy_e) : 
+	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy_e) : 
 			world(world_entry), number(number_e), damage(damage_e), 
 			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e){
 	b2BodyDef bodyDef;
@@ -34,6 +34,7 @@ Projectile::~Projectile(){
 void Projectile::exploit(){
 	std::cout << "explosion\n";
 	b2Vec2 center = this->body->GetPosition();
+	this->proxy.sendProjecileExplosion(this->number, center.x, center.y);
     for (int i = 0; i < NUM_RAYS; i++) {
 		float pi = M_PI;
 		float angle = (i / (float)NUM_RAYS) * 2 * pi;

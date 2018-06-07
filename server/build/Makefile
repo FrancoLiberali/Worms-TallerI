@@ -1743,6 +1743,33 @@ src/moving_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/moving_state.cpp.s
 .PHONY : src/moving_state.cpp.s
 
+src/multiple_proxy.o: src/multiple_proxy.cpp.o
+
+.PHONY : src/multiple_proxy.o
+
+# target to build an object file
+src/multiple_proxy.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/multiple_proxy.cpp.o
+.PHONY : src/multiple_proxy.cpp.o
+
+src/multiple_proxy.i: src/multiple_proxy.cpp.i
+
+.PHONY : src/multiple_proxy.i
+
+# target to preprocess a source file
+src/multiple_proxy.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/multiple_proxy.cpp.i
+.PHONY : src/multiple_proxy.cpp.i
+
+src/multiple_proxy.s: src/multiple_proxy.cpp.s
+
+.PHONY : src/multiple_proxy.s
+
+# target to generate assembly for a file
+src/multiple_proxy.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/multiple_proxy.cpp.s
+.PHONY : src/multiple_proxy.cpp.s
+
 src/projectile.o: src/projectile.cpp.o
 
 .PHONY : src/projectile.o
@@ -2283,6 +2310,9 @@ help:
 	@echo "... src/moving_state.o"
 	@echo "... src/moving_state.i"
 	@echo "... src/moving_state.s"
+	@echo "... src/multiple_proxy.o"
+	@echo "... src/multiple_proxy.i"
+	@echo "... src/multiple_proxy.s"
 	@echo "... src/projectile.o"
 	@echo "... src/projectile.i"
 	@echo "... src/projectile.s"

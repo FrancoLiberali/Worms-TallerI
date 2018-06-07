@@ -12,7 +12,7 @@ class RegresiveProjectile : public Projectile{
 	public:
 		RegresiveProjectile(b2World& world_entry, int number, float x, float y, float angle, 
 		float vel, int damage_e, int radius_e, std::map<int, Projectile*>& to_remove_e, 
-		MokProxy& proxy, unsigned int time);
+		MultipleProxy& proxy, unsigned int time);
 		
 		~RegresiveProjectile();
 		

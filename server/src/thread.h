@@ -19,9 +19,8 @@ class Thread {
 		// Accion a ejecutar en el hilo
         virtual void run() = 0;
         
-        //apriori no serian necesarios
         // Frenar el hilo
-        //virtual void stop() = 0;
+        virtual void stop() = 0;
         
         // Saber si el hilo ha finalizado su procesamiento o no.
         //virtual bool is_dead() const = 0 ;

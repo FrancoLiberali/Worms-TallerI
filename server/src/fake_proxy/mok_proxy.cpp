@@ -62,6 +62,8 @@ void MokProxy::receive_event(ProtectedQueue& queue){
 				msj[2] = 0;
 				msj[3] = 0;
 				msj[4] = 0;
+				queue.push(msj);
+				break;
 			}
 		case 'b': {//bazookaaaaaaa
 				std::cout << "bazooka\n";

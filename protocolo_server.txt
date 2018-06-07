@@ -1,0 +1,72 @@
+LO QUE MANDA EL SERVER:
+todos los int son mandados en 4 bytes big endian
+todas las coordenadas se encuentran en MILIMETROS y los angulos en RADIANES, ya que segun barba la conversion la debe realizar el client.
+Las coordenadas refieren al CENTRO del objeto
+
+ASIGNACION DE ID DE JUGADOR:
+	char en 0
+	int con numero de jugador
+
+CREACION DE UNA VIGA EN EL MAPA:
+	char en 1
+	int x
+	int y
+	int angle
+
+CREACION DEL AGUA EN EL MAPA:
+	char en 2
+	a definir segun editor como se va a guardar en el yalm
+
+POSICION DE UN GUSANO EN EL MAPA
+	char en 3
+	int con el numero de jugador que es el dueño
+	int con el numero de gusano de ese dueño
+	int x
+	int y
+	int direccion (-1: izquierda, 1: derecha)
+	int angle
+	
+	Es decir, el id de cada gusano esta conformado por un tupla (jugador_dueño, numero) con el que se va a identificar a ese gusano en 		cada uno de los proximos mensajes
+	La idea es que los gusanos de cada jugador se muestren de un color distinto.
+
+INICIO DE TURNO
+	char en 4
+	int id de jugador actual
+	int numero de gusano de ese jugador
+
+CAMBIO DE ESTADO DE UN GUSANO
+	char en 5
+	int con el numero de jugador que es el dueño
+	int con el numero de gusano de ese dueño
+	int con numero de nuevo estado
+	estados: 0=inactivo, 1=moviendose, 2=en el aire, 3=en el agua, 4=muerto. Actualmente en el agua y muerto deberian tener el mismo significado pero mas adelante no si se agrega un tiempo en el que el gusano se vea abajo del agua.
+
+POSICION DE UN PROYECTIL EN EL MAPA
+	char en 6
+	int id de proyectil
+	int numero de arma: 1=bazooka, 2=mortero, ... continua segun orden en consigna del tp
+	int x
+	int y
+	int angulo
+
+EXPLOCION DE UN PROYECTIL EN EL MAPA
+	char en 7
+	int id de proyectil
+	int x
+	int y
+
+EL GUSANO ACTUAL SACO UN ARMA
+	char en 8
+	int numero de arma: 1=bazooka, 2=mortero, ... continua segun orden en consigna del tp
+
+EL GUSANO ACTUAL CAMBIA DE ANGULO DE APUNTADO
+	char en 9
+	int cambio de angulo: 1=arriba, -1 = abajo
+
+
+	
+
+
+
+
+

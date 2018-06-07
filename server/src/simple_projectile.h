@@ -8,7 +8,7 @@
 class SimpleProjectile : public Projectile{
 	public:		
 		SimpleProjectile(b2World& world_entry, int number, float x, float y, float angle, float vel, 
-		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove, MokProxy& proxy);
+		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
 		
 		~SimpleProjectile();
 		

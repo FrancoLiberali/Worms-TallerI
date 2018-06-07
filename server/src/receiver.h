@@ -9,16 +9,18 @@
 
 class Receiver : public Thread{
 	private:
-		//Proxy& proxy;
-		MokProxy& proxy;
 		ProtectedQueue& queue;
+		Proxy* proxy;
+		//MokProxy* proxy;
 		std::mutex keep_mutex;
 		bool keep_receiving = true;
 	public:
-		//Receiver(Proxy& proxy_e, ProtectedQueue& queue_e);
-		Receiver(MokProxy& proxy_e, ProtectedQueue& queue_e);
+	
+		Receiver(Socket& socket, ProtectedQueue& queue_e);
 		
 		~Receiver();
+		
+		Proxy* getProxy();
 		
 		virtual void run();
 		

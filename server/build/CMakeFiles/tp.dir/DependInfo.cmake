@@ -64,6 +64,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/little_projectile.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/morter.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/morter.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/moving_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/moving_state.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/multiple_proxy.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/projectile.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/protected_queue.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/proxy.cpp.o"

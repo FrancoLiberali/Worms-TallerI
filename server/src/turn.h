@@ -5,7 +5,7 @@
 #include "little_projectile.h"
 #include "game_constants.h"
 #include "gusano.h"
-#include "proxy.h"
+#include "multiple_proxy.h"
 #include "fake_proxy/mok_proxy.h"
 #include "fragment_info.h"
 #include <utility>
@@ -17,11 +17,10 @@ class Turn{
 	private:
 		b2World& world;
 		ProtectedQueue& queue;
-		std::map<unsigned int, Gusano*>& gusanos;
-		std::map<unsigned int, Gusano*>& to_remove_gusanos;
+		std::map<int, std::map<int, Gusano*>>& players;
+		std::vector<std::pair<int, int>>& to_remove_gusanos;
 		GameConstants& info;
-		//Proxy& proxy;
-		MokProxy& proxy;
+		MultipleProxy& proxy;
 		const float time_step;
 		const int velocity_iterations; 
 		const int position_iterations;
@@ -29,20 +28,30 @@ class Turn{
 		std::map<int, Projectile*> projectiles;
 		int actual_max_projectile = 0;
 		std::vector<FragmentInfo*> to_create;
+		int weapon = 0;
+		int sight_angle = 0;
+		int regresive_time = 5;
+		int power = 0;
 		
-		void gusano_move(char* msj, int active_number);
-		void gusano_jump(char* msj, int active_number);
-		void fire_weapon_sight_power(char* msj, int active_number);
-		void fire_bazooka(char* msj, Gusano* gusano, int sight_angle, int power);
-		void fire_morter(char* msj, Gusano* gusano, int sight_angle, int power);
+		void gusano_move(char* msj, int active_player, int active_gusano);
+		void gusano_jump(char* msj, int active_player, int active_gusano);
+		void gusano_back_jump(char* msj, int active_player, int active_gusano);
+		void take_weapon(char* msj, int active_player, int active_gusano);
+		void changeSightAngle(char* msj, int active_player, int active_gusano);
+		void changeRegresiveTime(char* msj, int active_player, int active_gusano);
+		void loadPower(int active_player, int active_gusano);
+		void fire(int active_player, int active_gusano);
+		void fire_bazooka(Gusano* gusano);
+		void fire_morter(Gusano* gusano);
+		
 		
 	public:
-		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<unsigned int, Gusano*>& gusanos_e, 
-			std::map<unsigned int, Gusano*>& to_remove_gusanos_e, GameConstants& info_e, MokProxy& proxy_e);
+		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 
+			std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e);
 		
 		~Turn();
 		
-		void play(unsigned int gusano_number);
+		void play(int player_id, unsigned int gusano_id);
 };
 
 #endif
