@@ -1,5 +1,7 @@
 #include <iostream>
 #include "socket.h"
+#include "mok_proxy.h"
+#include "mok_receiver.h"
 
 #define EXIT 'q'
 
@@ -10,11 +12,17 @@ int main(int argc, char** argv){
 	try {
 		Socket socket;
 		socket.connect_(argv[1], argv[2]);
+		MokProxy proxy(socket);
+		MokReceiver receiver(proxy);
+		receiver.start();
 	
 		char entry;
 		while (entry != EXIT){
 			entry = std::cin.get();
+			proxy.send(entry);
 		}
+		receiver.stop();
+		receiver.join();
 	} catch(std::exception& e){
 		std::cout << e.what() << '\n';
 	}
