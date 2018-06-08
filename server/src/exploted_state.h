@@ -18,6 +18,8 @@ class ExplotedState : public GusanoState{
 		
 		virtual bool isFalling();
 		
+		virtual bool isExploted();
+		
 };
 
 #endif

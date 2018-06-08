@@ -1,5 +1,7 @@
 #include "proxy.h"
 #include <arpa/inet.h>
+#include "socket_error.h"
+#include <iostream>
 
 /*typedef unsigned char uc;
 #define LAST8 0xFF
@@ -103,36 +105,40 @@ void Proxy::send_char(Socket& socket, const char to_send){
 }*/
 
 void Proxy::receive_event(ProtectedQueue& queue){
-	char event = this->receive_char();
-	switch (event){
-		case 0: //se recibe el map_id y el numero de jugadores
-				this->receive_event_info(queue, event, GAME_INFO_TAM);
-				break;
-		case 1: //se recibe que se quiere mover un gusano
-				this->receive_event_info(queue, event, MOVE_TAM);
-				break;
-		case 2: //se recibe que se quiere hacer saltar a un gusano 
-				this->receive_event_info(queue, event, JUMP_TAM);
-				break;
-		case 3: //se recibe que se quiere hacer saltar hacia atras a un gusano 
-				this->receive_event_info(queue, event, JUMP_TAM);
-				break;
-		case 4: //se recibe que un gusano saco un arma
-				this->receive_event_info(queue, event, WEAPON_TAM);
-				break;
-		case 5: //se recibe que un gusano cambio angulo de apuntado
-				this->receive_event_info(queue, event, ANGLE_TAM);
-				break;
-		case 6:	//se recibe que se quiere cambiar el tiempo de la cuenta regresiva
-				this->receive_event_info(queue, event, TIME_TAM);
-				break;
-		case 7: //se recibe que se carga la barra de poder
-				this->receive_event_info(queue, event, POWER_TAM);
-				break;
-		case 8: //se recibe que se quiere disparar
-				this->receive_event_info(queue, event, SHOT_TAM);
-				break;
-		}
+	try{
+		char event = this->receive_char();
+		switch (event){
+			case 0: //se recibe el map_id y el numero de jugadores
+					this->receive_event_info(queue, event, GAME_INFO_TAM);
+					break;
+			case 1: //se recibe que se quiere mover un gusano
+					this->receive_event_info(queue, event, MOVE_TAM);
+					break;
+			case 2: //se recibe que se quiere hacer saltar a un gusano 
+					this->receive_event_info(queue, event, JUMP_TAM);
+					break;
+			case 3: //se recibe que se quiere hacer saltar hacia atras a un gusano 
+					this->receive_event_info(queue, event, JUMP_TAM);
+					break;
+			case 4: //se recibe que un gusano saco un arma
+					this->receive_event_info(queue, event, WEAPON_TAM);
+					break;
+			case 5: //se recibe que un gusano cambio angulo de apuntado
+					this->receive_event_info(queue, event, ANGLE_TAM);
+					break;
+			case 6:	//se recibe que se quiere cambiar el tiempo de la cuenta regresiva
+					this->receive_event_info(queue, event, TIME_TAM);
+					break;
+			case 7: //se recibe que se carga la barra de poder
+					this->receive_event_info(queue, event, POWER_TAM);
+					break;
+			case 8: //se recibe que se quiere disparar
+					this->receive_event_info(queue, event, SHOT_TAM);
+					break;
+			}
+	}catch (SocketError& e){
+		std::cout << "se corto conexion\n";
+	}
 }
 
 void Proxy::receive_event_info(ProtectedQueue& queue, char event, int tam){
@@ -216,6 +222,14 @@ void Proxy::sendChangeSightAngle(int change){
 	char event = 9;
 	this->socket.send_(&event, ONEBYTE);
 	this->send_int(change);
+}
+
+void Proxy::sendLifeChange(int player_id, int gusano_id, int new_life){
+	char event = 10;
+	this->socket.send_(&event, ONEBYTE);
+	this->send_int(player_id);
+	this->send_int(gusano_id);
+	this->send_int(new_life);
 }
 
 void Proxy::send_int(int to_send){

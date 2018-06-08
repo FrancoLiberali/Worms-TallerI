@@ -1236,6 +1236,7 @@ CMakeFiles/tp.dir/src/proxy.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
 CMakeFiles/tp.dir/src/receiver.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h

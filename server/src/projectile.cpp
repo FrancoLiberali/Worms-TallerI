@@ -5,7 +5,7 @@
 #include <utility>
 #include <iostream>
 
-#define NUM_RAYS 36
+#define NUM_RAYS 360
 
 Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, float angle, float vel, 
 	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy_e) : 
@@ -52,7 +52,7 @@ void Projectile::exploit(){
 			float distance = distance_vec.Normalize();
 			float damage_by_distance = this->damage * (1- (distance / this->radius));
 			distance_vec.Normalize();
-			b2Vec2 impulse_by_distance = (damage_by_distance / 10) * distance_vec; //* (1/(float)NUM_RAYS);
+			b2Vec2 impulse_by_distance = (damage_by_distance / (10 * NUM_RAYS)) * distance_vec; //* (1/(float)NUM_RAYS);
 			std::cout << center.x << "; " << center.y << "\n";
 			std::cout << it->second.x << "; " << it->second.y << "\n";
 			std::cout << angle << "\n";

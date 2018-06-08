@@ -40,6 +40,7 @@ int main(int argc, char** argv) {
 				case 0: map_id = ntohl(*(reinterpret_cast<unsigned int*>(msj + 1)));
 						max_players = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 						waiting_message = false;
+						delete[] msj;
 						break;
 			}
 		}
@@ -51,13 +52,14 @@ int main(int argc, char** argv) {
 		Proxy* new_proxy = new_receiver->getProxy();
 		to_send.add(new_proxy);
 		new_proxy->sendPlayerId(cant_players);
-		receivers.push_back(receiver);
+		receivers.push_back(new_receiver);
 		new_receiver->start();
 	}
 	Game game(to_send, queue, map_id, cant_players);
 	game.play();
 	std::vector<Thread*>::iterator it = receivers.begin();
 	for (; it != receivers.end(); ++it){
+		std::cout << "entro\n";
 		(*it)->stop();
 		(*it)->join();
 		delete (*it);

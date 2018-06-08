@@ -83,6 +83,14 @@ void MokProxy::receive_event(){
 		case 9:{//gusano cambio angulo de aputado
 				int cambio = this->receive_int();
 				std::cout << "9 " << cambio << "\n";
+				break;
+			}
+		case 10: {//gusano cambio de vida
+				int duenio = this->receive_int();
+				int id = this->receive_int();
+				int new_life = this->receive_int();
+				std::cout << "10 " << duenio << " " << id << " " << new_life << "\n";
+				break;
 			}
 	}
 }

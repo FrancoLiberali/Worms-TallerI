@@ -66,4 +66,11 @@ void MultipleProxy::sendChangeSightAngle(int change){
 		(*it)->sendChangeSightAngle(change);
 	}
 }
+
+void MultipleProxy::sendLifeChange(int player_id, int gusano_id, int new_life){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendLifeChange(player_id, gusano_id, new_life);
+	}
+}
 		

@@ -21,3 +21,7 @@ bool ExplotedState::isInactive(){
 bool ExplotedState::isFalling(){
 	return false;
 }
+
+bool ExplotedState::isExploted(){
+	return true;
+}

@@ -15,7 +15,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	Viga viga(this->world, 0.0f, 0.0f, 0.0f, this->proxy);
 	Viga viga2(this->world, 6.0f, 0.0f, 0.0f, this->proxy);
 	
-	this->water = new Water(this->world, -5, -2, 20, -2);
+	this->water = new Water(this->world, -5, -10, 20, -10);
 	
 	std::vector<Gusano*> gusanos;
 	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 0.5f, 0.52f, 0.0f);
@@ -101,6 +101,14 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 
 Game::~Game(){
 	delete this->water;
+	std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();
+	for (; players_it != this->players.end(); ++players_it) {
+		std::map<int, Gusano*>::iterator gusanos_it = players_it->second.begin();
+		for (; gusanos_it != players_it->second.end(); ++gusanos_it) {
+			Gusano* gusano = gusanos_it->second;
+			delete gusano;
+		}
+	}
 }
 
 void Game::play(){

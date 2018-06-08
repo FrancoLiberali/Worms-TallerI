@@ -2,6 +2,7 @@
 #include "gusano.h"
 #include "projectile.h"
 #include "user_data.h"
+#include <iostream>
 
 #ifndef __CONTACT_LISTENER_H__
 #define __CONTACT_LISTENER_H__
@@ -103,7 +104,28 @@ class ContactListener : public b2ContactListener{
 					}
 				}
 			}
-		}		
+		}
+		
+		void PostSolve(b2Contact* contact, const b2ContactImpulse* impulse){
+			//check if body A was gusano
+			UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+			if (data && data->indicator == 1){
+				//check if body B was gusano
+				UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
+				if (other_data && other_data->indicator == 1){
+					Gusano* gusanoA = static_cast<Gusano*>(data->pointer);
+					Gusano* gusanoB = static_cast<Gusano*>(other_data->pointer);
+					if (gusanoA->isInactive()){
+						std::cout << "canceled\n";
+						gusanoA->cancelMovement();
+					}
+					if (gusanoB->isInactive()){
+						std::cout << "canceled\n";
+						gusanoB->cancelMovement();
+					}
+				}
+			}
+		}
 };
 
 #endif

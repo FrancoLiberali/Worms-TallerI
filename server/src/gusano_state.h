@@ -17,6 +17,8 @@ class GusanoState{
 		virtual bool isInactive() = 0;
 		
 		virtual bool isFalling() = 0;
+		
+		virtual bool isExploted(){return false;}
 };
 
 #endif

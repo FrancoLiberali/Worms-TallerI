@@ -1,4 +1,5 @@
 #include "mok_receiver.h"
+#include "socket_error.h"
 
 MokReceiver::MokReceiver(MokProxy& proxy_e) : proxy(proxy_e){
 }
@@ -19,8 +20,15 @@ void MokReceiver::stop(){
 void MokReceiver::run(){
 	bool keep = this->keep_receiving;
 	while(keep){
-		this->proxy.receive_event();
-		std::lock_guard<std::mutex> lock(this->keep_mutex);
-		keep = this->keep_receiving;
+		try{
+			this->proxy.receive_event();
+			std::lock_guard<std::mutex> lock(this->keep_mutex);
+			keep = this->keep_receiving;
+		} catch (SocketError& e){
+			this->stop();
+			std::lock_guard<std::mutex> lock(this->keep_mutex);
+			keep = this->keep_receiving;
+		}
+			
 	}
 }

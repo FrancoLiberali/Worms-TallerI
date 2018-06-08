@@ -14,6 +14,7 @@
 #define MOVE_TAM 9
 #define TURN_LEN 3600
 #define MIN_ANGLE_CHANGE 0.09817477
+#define THREE_SECONDS 181;
 
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
@@ -53,7 +54,7 @@ void Turn::gusano_back_jump(char* msj, int active_player, int active_gusano){
 
 void Turn::take_weapon(char* msj, int active_player, int active_gusano){
 	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
+	if (gusano->isInactive() && !this->fired){
 		this->weapon = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 		this->sight_angle = 0;
 		this->regresive_time = 5;
@@ -89,15 +90,19 @@ void Turn::loadPower(int active_player, int active_gusano){
 	}
 }
 
-void Turn::fire(int active_player, int active_gusano){
+void Turn::fire(int active_player, int active_gusano, int& turn_actual_len){
 	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
+	if (gusano->isInactive() && !this->fired){
 		std::cout << "fire\n";
 		switch(this->weapon){
 			case 0: break;
 			case 1: this->fire_bazooka(gusano);
+					this->fired = true;
+					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
 			case 2: this->fire_morter(gusano);
+					this->fired = true;
+					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
 		}
 	}
@@ -124,17 +129,22 @@ void Turn::fire_morter(Gusano* gusano){
 void Turn::play(int active_player, unsigned int active_gusano){
 	this->proxy.sendTurnBegining(active_player, active_gusano);
 	this->weapon = 0;
+	this->fired = false;
 	double extra = 0;
-	for (int32 i = 0; i < TURN_LEN; ++i) { //3600 = 60 segundos = largo del turno
+	bool keep_simulation = false;
+	bool continue_turn = true;
+	for (int32 i = 0; i < TURN_LEN || keep_simulation; ++i) { //3600 = 60 segundos = largo del turno
 		auto t_start = std::chrono::high_resolution_clock::now();
 		
+		keep_simulation = false;
+		continue_turn = (i < TURN_LEN);
 		while(!this->queue.isEmpty()){
 			std::cout << "hay evento\n";
 			//no es posible generar raise condition porque del otro lado solo meten asi que si no estaba vacia tampoco lo estara ahora
 			char* msj = this->queue.front();
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
-			if (player_id == active_player){
+			if (player_id == active_player && continue_turn){
 				switch (msj[0]){
 					case 1: this->gusano_move(msj, active_player, active_gusano);
 							delete[] msj;
@@ -157,7 +167,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 					case 7: this->loadPower(active_player, active_gusano);
 							delete[] msj;
 							break;
-					case 8: this->fire(active_player, active_gusano);
+					case 8: this->fire(active_player, active_gusano, i);
 							delete[] msj;
 							break;
 				}
@@ -206,6 +216,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		std::map<int, Projectile*>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
 			projectiles_it->second->update(0);
+			keep_simulation = true;
 		}
 		
 		std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();
@@ -217,6 +228,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 				//solo se manda informacion sobre los que estan sufriendo algun cambio
 				if (!(gusano->isInactive())){
 					gusano->sendPosition();
+					keep_simulation = true;
 				}
 			}
 		}

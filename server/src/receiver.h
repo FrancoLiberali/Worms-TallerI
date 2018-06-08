@@ -11,7 +11,6 @@ class Receiver : public Thread{
 	private:
 		ProtectedQueue& queue;
 		Proxy* proxy;
-		//MokProxy* proxy;
 		std::mutex keep_mutex;
 		bool keep_receiving = true;
 	public:

@@ -31,6 +31,8 @@ class MultipleProxy{
 		
 		void sendChangeSightAngle(int change);
 		
+		void sendLifeChange(int player_id, int gusano_id, int new_life);
+		
 		//void delete(int id);
 		
 };

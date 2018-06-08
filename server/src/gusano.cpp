@@ -13,6 +13,7 @@
 #define MOVING_STATE 1
 #define JUMPING_STATE 2
 #define SINKING_STATE 3
+#define DEAD_STATE 4
 
 Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
@@ -137,6 +138,10 @@ void Gusano::move(int dir){
 	}
 }
 
+void Gusano::cancelMovement(){
+	this->body->SetLinearVelocity(b2Vec2(0,0));
+}
+
 void Gusano::update(){
 	try{
 		this->state->sumOneStep();
@@ -148,7 +153,7 @@ void Gusano::update(){
 		this->sendPosition();
 		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
 		this->rotateTo(angles_list.back());
-		this->body->SetFixedRotation(true);		
+		this->body->SetFixedRotation(true);
 	}
 }
 
@@ -192,13 +197,25 @@ void Gusano::backJump(){
 }
 
 void Gusano::sink(){
-	this->proxy.send_state_change(this->id.first, this->id.second, SINKING_STATE);
 	this->sendPosition();
+	this->proxy.send_state_change(this->id.first, this->id.second, SINKING_STATE);
 	this->to_remove_gusanos.push_back(this->id);
 }
 
 void Gusano::addLife(unsigned int life){
-	//this->life += life;
+	this->life += life;
+}
+
+void Gusano::sufferDamage(unsigned int damage){
+	if (!this->state->isExploted()){
+		this->life -= damage;
+		this->proxy.sendLifeChange(this->id.first, this->id.second, this->life);
+		if (this->life <= 0){
+			this->sendPosition();
+			this->proxy.send_state_change(this->id.first, this->id.second, DEAD_STATE);
+			this->to_remove_gusanos.push_back(this->id);
+		}
+	}
 }
 
 /*float radDiff( float a, float b )
@@ -250,7 +267,7 @@ void Gusano::finishContact(float ground_angle){
 //} 
 
 void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
-	//this->applyDamage(damage);
+	this->sufferDamage(damage);
 	std::cout << "volar por explosion \n";
     this->body->ApplyLinearImpulse(impulse, apply_point, true);
     delete this->state;

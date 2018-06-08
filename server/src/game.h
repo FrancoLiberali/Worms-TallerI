@@ -15,7 +15,7 @@
 
 class Game {
 	private:
-		MultipleProxy proxy;
+		MultipleProxy& proxy;
 		ProtectedQueue& queue;
 		b2World world;
 		int cant_players;

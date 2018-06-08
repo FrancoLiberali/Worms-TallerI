@@ -23,6 +23,7 @@ class Gusano{
 		int direction;
 		std::vector<float> angles_list;
 		std::pair<int, int> id;
+		int life = 100;
 		
 		void rotateTo(float angle);
 		
@@ -43,6 +44,8 @@ class Gusano{
 		void sendPosition();
 		
 		void move(int dir);
+		
+		void cancelMovement();
 		
 		void update();
 		

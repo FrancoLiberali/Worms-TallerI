@@ -29,9 +29,10 @@ class Turn{
 		int actual_max_projectile = 0;
 		std::vector<FragmentInfo*> to_create;
 		int weapon = 0;
-		int sight_angle = 0;
+		float sight_angle = 0;
 		int regresive_time = 5;
 		int power = 0;
+		bool fired;
 		
 		void gusano_move(char* msj, int active_player, int active_gusano);
 		void gusano_jump(char* msj, int active_player, int active_gusano);
@@ -40,7 +41,7 @@ class Turn{
 		void changeSightAngle(char* msj, int active_player, int active_gusano);
 		void changeRegresiveTime(char* msj, int active_player, int active_gusano);
 		void loadPower(int active_player, int active_gusano);
-		void fire(int active_player, int active_gusano);
+		void fire(int active_player, int active_gusano, int& turn_actual_len);
 		void fire_bazooka(Gusano* gusano);
 		void fire_morter(Gusano* gusano);
 		

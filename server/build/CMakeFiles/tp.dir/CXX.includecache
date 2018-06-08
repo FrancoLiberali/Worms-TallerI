@@ -313,6 +313,8 @@ projectile.h
 ../src/projectile.h
 user_data.h
 ../src/user_data.h
+iostream
+-
 
 ../src/fake_proxy/mok_proxy.h
 protected_queue.h
@@ -1009,6 +1011,8 @@ projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
 user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+iostream
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
 exploted_state.h
@@ -1268,6 +1272,10 @@ mutex
 proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
 arpa/inet.h
+-
+socket_error.h
+/home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
+iostream
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h

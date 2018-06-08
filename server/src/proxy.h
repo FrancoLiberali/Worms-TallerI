@@ -54,6 +54,8 @@ class Proxy{
 		
 		void sendChangeSightAngle(int change);
 		
+		void sendLifeChange(int player_id, int gusano_id, int new_life);
+		
 		void send_int(int to_send);
 		
 		/*const float receive_float(Socket& socket);
