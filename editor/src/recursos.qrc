@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/img">
+        <file>recursos/viga.png</file>
+        <file>recursos/gusano1.png</file>
+        <file>recursos/gusano2.png</file>
+        <file>recursos/gusano3.png</file>
+        <file>recursos/gusano4.png</file>
+        <file>recursos/vigac.png</file>
+    </qresource>
+</RCC>
