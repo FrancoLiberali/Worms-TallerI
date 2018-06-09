@@ -43,12 +43,10 @@ void TextView::draw(SDL_Renderer * gRenderer, int x, int y, SDL_Rect* clip, doub
 	TextManager::Instance().write(this->font,x, y,this->text,this->textColor);
 }
 
-int TextView::getWidth()
-{
+int TextView::getWidth(){
 	return mWidth;
 }
 
-int TextView::getHeight()
-{
+int TextView::getHeight(){
 	return mHeight;
 }

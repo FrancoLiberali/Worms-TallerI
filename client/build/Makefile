@@ -261,6 +261,60 @@ src/common/Thread.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/Thread.cpp.s
 .PHONY : src/common/Thread.cpp.s
 
+src/common/socket.o: src/common/socket.cpp.o
+
+.PHONY : src/common/socket.o
+
+# target to build an object file
+src/common/socket.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.o
+.PHONY : src/common/socket.cpp.o
+
+src/common/socket.i: src/common/socket.cpp.i
+
+.PHONY : src/common/socket.i
+
+# target to preprocess a source file
+src/common/socket.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.i
+.PHONY : src/common/socket.cpp.i
+
+src/common/socket.s: src/common/socket.cpp.s
+
+.PHONY : src/common/socket.s
+
+# target to generate assembly for a file
+src/common/socket.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.s
+.PHONY : src/common/socket.cpp.s
+
+src/common/socket_error.o: src/common/socket_error.cpp.o
+
+.PHONY : src/common/socket_error.o
+
+# target to build an object file
+src/common/socket_error.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.o
+.PHONY : src/common/socket_error.cpp.o
+
+src/common/socket_error.i: src/common/socket_error.cpp.i
+
+.PHONY : src/common/socket_error.i
+
+# target to preprocess a source file
+src/common/socket_error.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.i
+.PHONY : src/common/socket_error.cpp.i
+
+src/common/socket_error.s: src/common/socket_error.cpp.s
+
+.PHONY : src/common/socket_error.s
+
+# target to generate assembly for a file
+src/common/socket_error.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.s
+.PHONY : src/common/socket_error.cpp.s
+
 src/controller/ClientCommandSender.o: src/controller/ClientCommandSender.cpp.o
 
 .PHONY : src/controller/ClientCommandSender.o
@@ -747,6 +801,33 @@ src/view/Shape.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.s
 .PHONY : src/view/Shape.cpp.s
 
+src/view/VigaView.o: src/view/VigaView.cpp.o
+
+.PHONY : src/view/VigaView.o
+
+# target to build an object file
+src/view/VigaView.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.o
+.PHONY : src/view/VigaView.cpp.o
+
+src/view/VigaView.i: src/view/VigaView.cpp.i
+
+.PHONY : src/view/VigaView.i
+
+# target to preprocess a source file
+src/view/VigaView.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.i
+.PHONY : src/view/VigaView.cpp.i
+
+src/view/VigaView.s: src/view/VigaView.cpp.s
+
+.PHONY : src/view/VigaView.s
+
+# target to generate assembly for a file
+src/view/VigaView.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.s
+.PHONY : src/view/VigaView.cpp.s
+
 src/view/Weapon.o: src/view/Weapon.cpp.o
 
 .PHONY : src/view/Weapon.o
@@ -1067,6 +1148,12 @@ help:
 	@echo "... src/common/Thread.o"
 	@echo "... src/common/Thread.i"
 	@echo "... src/common/Thread.s"
+	@echo "... src/common/socket.o"
+	@echo "... src/common/socket.i"
+	@echo "... src/common/socket.s"
+	@echo "... src/common/socket_error.o"
+	@echo "... src/common/socket_error.i"
+	@echo "... src/common/socket_error.s"
 	@echo "... src/controller/ClientCommandSender.o"
 	@echo "... src/controller/ClientCommandSender.i"
 	@echo "... src/controller/ClientCommandSender.s"
@@ -1121,6 +1208,9 @@ help:
 	@echo "... src/view/Shape.o"
 	@echo "... src/view/Shape.i"
 	@echo "... src/view/Shape.s"
+	@echo "... src/view/VigaView.o"
+	@echo "... src/view/VigaView.i"
+	@echo "... src/view/VigaView.s"
 	@echo "... src/view/Weapon.o"
 	@echo "... src/view/Weapon.i"
 	@echo "... src/view/Weapon.s"

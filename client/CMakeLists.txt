@@ -16,6 +16,8 @@ add_library(alllib
 	src/controller/Controller.cpp
 
 	src/common/Thread.cpp
+	src/common/socket.cpp
+	src/common/socket_error.cpp
 	src/ProxyClient.cpp
 
 	src/model/Model.cpp
@@ -39,6 +41,7 @@ add_library(alllib
 	src/view/MenuWeaponView.cpp
 	src/view/Weapon.cpp
 	src/view/Shape.cpp
+	src/view/VigaView.cpp
 )
 
 

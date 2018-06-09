@@ -2,10 +2,8 @@
 #define _TEXT_MANAGER_H
 
 #include <SDL2/SDL_mixer.h>
-//#include "../../utils/Constantes/Constantes.h"
 #include <map>
 #include <SDL2/SDL.h>
-//#include "../../utils/Log.h"
 #include "TextureManager.h"
 
 #define ARIAL16 "res/images/arial16.png"

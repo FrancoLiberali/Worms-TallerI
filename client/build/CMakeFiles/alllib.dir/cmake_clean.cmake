@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/Controller.cpp.o"
   "CMakeFiles/alllib.dir/src/common/Thread.cpp.o"
+  "CMakeFiles/alllib.dir/src/common/socket.cpp.o"
+  "CMakeFiles/alllib.dir/src/common/socket_error.cpp.o"
   "CMakeFiles/alllib.dir/src/ProxyClient.cpp.o"
   "CMakeFiles/alllib.dir/src/model/Model.cpp.o"
   "CMakeFiles/alllib.dir/src/model/GameControllerProxy.cpp.o"
@@ -30,6 +32,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o"
   "CMakeFiles/alllib.dir/src/view/Weapon.cpp.o"
   "CMakeFiles/alllib.dir/src/view/Shape.cpp.o"
+  "CMakeFiles/alllib.dir/src/view/VigaView.cpp.o"
   "liballlib.pdb"
   "liballlib.a"
 )

@@ -7,10 +7,13 @@
 #include "common/Queue.h"
 #include "controller/Event.h"
 #include "ProxyClient.h"
+#include "GameBuilder.h"
 #include "model/GameControllerProxy.h"
 #include "model/Model.h"
 #include "controller/Controller.h"
 #include "view/newView/Boot.h"
+#include "common/socket.h"
+#include "common/socket_error.h"
 
 
 #define W_WIDHT 800
@@ -18,20 +21,42 @@
 
 #include <iostream>
 
-
+//argv[1]=ip argv[2]=port
 int main(int argc, char *argv[])
 {
 	//Validamos que se conecte correctamente
-	std::string socket = "socket.txt";
 
-	ProxyClient proxy(socket);
+	Socket socket;
+	try{
+		socket.connect_(argv[1],argv[2]);
+	} catch(SocketError& e){
+		std::cout<<e.what()<<std::endl;
+		return 0;
+	}
 
+	ProxyClient proxy(std::move(socket));
 
 	//agregar protoclo para empezar el juego, id mapa , etc
 
-	/*****INICIO GAME ****/
+	//Recibo el numero de jugador
+	char cod = proxy.receiveChar();
+	std::cout <<"Cod " << (int)cod <<std::endl;
+	int idJugador = proxy.receiveInt();
+	std::cout << "idJugador" << idJugador <<std::endl;
+	if (idJugador == 1){
+		//envio id mapa y numero de jugadores
+		int idMapa = 1;
+		int numPlayers = 1;
+		proxy.sendChar(0);
+		proxy.sendInt(idMapa);
+		proxy.sendInt(numPlayers);
+	}
+
+
 	Boot boot;
 	boot.init();
+
+	//GameBuilder builder(proxy);
 	
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
@@ -48,8 +73,8 @@ int main(int argc, char *argv[])
 
 
 	//cola de eventos a recibir
-	Queue<Event*> eventQueue;
-	ClientEventReceiver eventReceiver(proxy, eventQueue, socket, model);
+	Queue<Event*> eventQueue; 
+	ClientEventReceiver eventReceiver(proxy, eventQueue, model);
 	eventReceiver.start();
 
 	Controller controller(model, clientView);
@@ -68,6 +93,7 @@ int main(int argc, char *argv[])
 		clientView.update();
 		step++;
 	}
+	proxy.close();
 	commandsQueue.push(nullptr);
 	eventReceiver.stop();
 	commmandSender.join();

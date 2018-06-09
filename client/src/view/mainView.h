@@ -26,7 +26,7 @@ private:
 	WormView* worm2;
 	MenuWeaponView* menuWeapon;
 
-	std::map<int,WormView> worms;
+	std::map<int,WormView*> worms;
 	bool open;
 	void procesar(std::string mensaje);
 	void init();
@@ -44,7 +44,8 @@ public:
 	bool isMenuOn();
 	bool hasClickedMenu(SDL_Point clickPoint);
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
-
+	void addWorm(int id, std::string player, int x, int y);
+	void addViga(int x, int y, int angle);
 };
 
 #endif

@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.h
+list
+-
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 string
 -
+common/socket.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/clientMain.cpp
 iostream
@@ -29,6 +35,8 @@ controller/Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ProxyClient.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+GameBuilder.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.h
 model/GameControllerProxy.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
 model/Model.h
@@ -37,6 +45,10 @@ controller/Controller.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.h
 view/newView/Boot.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Boot.h
+common/socket.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
+common/socket_error.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.h
 iostream
 -
 
@@ -50,6 +62,14 @@ condition_variable
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
 thread
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
+string
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.h
+typeinfo
 -
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.h
@@ -69,6 +89,8 @@ string
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 ../common/Thread.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
+../common/socket_error.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.h
 ../ProxyClient.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 ../model/Model.h
@@ -119,6 +141,8 @@ newView/SdlScreen.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 list
 -
+VigaView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
 newView/TextureManager.h
@@ -137,6 +161,12 @@ list
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
 map
 -
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
+newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
+newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
 list

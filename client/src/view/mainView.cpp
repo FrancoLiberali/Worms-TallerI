@@ -109,8 +109,17 @@ bool mainView::hasClickedMenu(SDL_Point clickPoint){
 	return this->menuWeapon->hasClickedMenu(clickPoint);
 }
 
-
 Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
+void mainView::addWorm(int id, std::string player, int x, int y){
+	WormView* worm = new WormView(id);
+	worm->setPlayerName(player);
+	worm->load(x,y, &screen);
+	this->worms.emplace(id, worm);
+}
+
+void mainView::addViga(int x, int y, int angle){
+	stage.addViga(x, y, angle);
+}

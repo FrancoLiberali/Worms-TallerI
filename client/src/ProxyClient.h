@@ -2,18 +2,22 @@
 #define _PROXY_CLIENT_H
 
 #include <string>
+#include "common/socket.h"
 
 class ProxyClient {
 private:
-    std::string& socket;
+    Socket sktClient;
+    std::string socket;
 public:
     ProxyClient(std::string socket);
-    ~ProxyClient();
+    ProxyClient(Socket socket);
+    ~ProxyClient() noexcept;
+    void close();
     void sendInt(int num);
     void sendChar(char bye);
     int receiveInt();
     char receiveChar();
-    void close();
+
 };
 
 #endif
