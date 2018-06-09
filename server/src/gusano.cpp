@@ -3,6 +3,7 @@
 #include "moving_state.h"
 #include "jumping_state.h"
 #include "moving_finished.h"
+#include "rotating_finished.h"
 #include "rotating_state.h"
 #include "exploted_state.h"
 #include <cmath>
@@ -117,6 +118,10 @@ void Gusano::setId(int player, int number_e, int id_e){
 	this->proxy.sendGusanoCreation(this->id, player, position.x, position.y, this->direction, angle);
 }
 
+int Gusano::getId(){
+	return this->id;
+}
+
 b2Vec2 Gusano::GetPosition(){
 	return this->body->GetPosition();
 }
@@ -175,6 +180,13 @@ void Gusano::update(){
 			this->rotateTo(angles_list.back());
 		}
 		this->body->SetFixedRotation(true);
+	} catch (const RotatingFinished& e){
+		printf ("termina rotacion\n");
+		delete this->state;
+		this->state = new InactiveState();
+		this->body->SetLinearVelocity(b2Vec2(0,0));
+		this->sendPosition();
+		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 	}
 }
 

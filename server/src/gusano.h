@@ -39,6 +39,8 @@ class Gusano{
 		
 		void setId(int player, int number, int id);
 		
+		int getId();
+		
 		b2Vec2 GetPosition();
 		
 		float32 GetAngle();

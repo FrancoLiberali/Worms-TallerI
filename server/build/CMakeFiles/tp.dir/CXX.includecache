@@ -1133,6 +1133,8 @@ jumping_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.h
 moving_finished.h
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
+rotating_finished.h
+/home/franco/Documentos/taller1/tpfinal/server/src/rotating_finished.h
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
 exploted_state.h
@@ -1348,13 +1350,15 @@ map
 regresive_projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/rotating_finished.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
 rotating_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
 inactive_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.h
-moving_finished.h
-/home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
+rotating_finished.h
+/home/franco/Documentos/taller1/tpfinal/server/src/rotating_finished.h
 iostream
 -
 cmath

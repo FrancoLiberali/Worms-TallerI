@@ -26,6 +26,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
 	gusanos.push_back(gusano2);
 	
+	srand(time(0));
 	std::random_shuffle(gusanos.begin(), gusanos.end());
 	
 	//lectura de archivo yalm y modificacion de constantes de juego

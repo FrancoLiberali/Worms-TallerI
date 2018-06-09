@@ -944,6 +944,7 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/moving_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_finished.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/user_data.h
@@ -1339,7 +1340,7 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/gusano_state.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/inactive_state.h
-CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/moving_finished.h
+CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_finished.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.cpp
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.h
 

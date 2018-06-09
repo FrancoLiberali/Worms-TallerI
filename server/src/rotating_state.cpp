@@ -1,6 +1,6 @@
 #include "rotating_state.h"
 #include "inactive_state.h"
-#include "moving_finished.h"
+#include "rotating_finished.h"
 #include <iostream>
 #include <cmath>
 
@@ -46,7 +46,7 @@ RotatingState::~RotatingState(){
 
 void RotatingState::sumOneStep(){
 	this->body->SetTransform(this->new_position, this->desired_angle);
-	throw MovingFinished();
+	throw RotatingFinished();
 }
 
 bool RotatingState::isInactive(){

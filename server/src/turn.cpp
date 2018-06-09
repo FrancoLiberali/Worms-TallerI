@@ -135,7 +135,7 @@ void Turn::fire_morter(Gusano* gusano, b2Vec2 position){
 }
 
 void Turn::play(int active_player, unsigned int active_gusano){
-	this->proxy.sendTurnBegining(active_player, active_gusano);
+	this->proxy.sendTurnBegining(active_player, this->players[active_player][active_gusano]->getId());
 	this->weapon = 0;
 	this->fired = false;
 	double extra = 0;
