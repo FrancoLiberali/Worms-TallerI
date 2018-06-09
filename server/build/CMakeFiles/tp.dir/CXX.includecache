@@ -377,6 +377,8 @@ vector
 -
 proxy.h
 ../src/proxy.h
+string
+-
 
 ../src/projectile.h
 Box2D/Box2D.h
@@ -401,6 +403,8 @@ socket.h
 ../src/socket.h
 protected_queue.h
 ../src/protected_queue.h
+string
+-
 
 ../src/receiver.h
 thread.h
@@ -969,6 +973,8 @@ vector
 -
 arpa/inet.h
 -
+string
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp
 banana.h
@@ -1243,6 +1249,8 @@ vector
 -
 proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+string
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
 projectile.h
@@ -1295,6 +1303,8 @@ socket.h
 /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
 protected_queue.h
 /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+string
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
 Box2D/Box2D.h

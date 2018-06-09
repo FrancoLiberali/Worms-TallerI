@@ -9,6 +9,7 @@ Las string se mandan:
 
 AVISO DE NOMBRE DEL JUGADOR:
 	char en 0
+	int numero de jugador
 	string con nombre del jugador
 
 AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:

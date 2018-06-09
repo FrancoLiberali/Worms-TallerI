@@ -8,6 +8,7 @@
 #include "receiver.h"
 #include <vector>
 #include <arpa/inet.h>
+#include <string>
 
 int main(int argc, char** argv) {
 	if (argc < 2){
@@ -36,13 +37,12 @@ int main(int argc, char** argv) {
 			//no es posible generar raise condition porque del otro lado solo meten asi que si no estaba vacia tampoco lo estara ahora
 			char* msj = queue.front();
 			queue.pop();
-			switch (msj[0]){
-				case 0: map_id = ntohl(*(reinterpret_cast<unsigned int*>(msj + 1)));
-						max_players = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-						waiting_message = false;
-						delete[] msj;
-						break;
+			if (msj[0] == 1){
+				map_id = ntohl(*(reinterpret_cast<unsigned int*>(msj + 1)));
+				max_players = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+				waiting_message = false;
 			}
+			delete[] msj;
 		}
 	}
 					
@@ -55,14 +55,34 @@ int main(int argc, char** argv) {
 		receivers.push_back(new_receiver);
 		new_receiver->start();
 	}
+	std::map<int, std::string> names;
+	while (names.size() != cant_players){
+		while (!queue.isEmpty()){
+			std::cout << "hay evento\n";
+			char* msj = queue.front();
+			queue.pop();
+			if (msj[0] == 0){
+				int player_id = ntohl(*(reinterpret_cast<unsigned int*>(msj + 1)));
+				int name_len = ntohl(*(reinterpret_cast<unsigned int*>(msj + 5)));
+				std::string name(msj + 9, name_len);
+				names[player_id] = name;
+				std::cout << name << "\n";
+			}
+			delete[] msj;
+		}
+	}
+	std::map<int, std::string>::iterator it = names.begin();
+	for (; it != names.end(); ++it){
+		to_send.sendPlayerName(it->first, it->second);
+	}
 	Game game(to_send, queue, map_id, cant_players);
 	game.play();
-	std::vector<Thread*>::iterator it = receivers.begin();
-	for (; it != receivers.end(); ++it){
+	std::vector<Thread*>::iterator it2 = receivers.begin();
+	for (; it2 != receivers.end(); ++it2){
 		std::cout << "entro\n";
-		(*it)->stop();
-		(*it)->join();
-		delete (*it);
+		(*it2)->stop();
+		(*it2)->join();
+		delete (*it2);
 	}
 	return 0;
 }

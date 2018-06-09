@@ -108,10 +108,13 @@ Gusano::~Gusano(){
 	this->world.DestroyBody(this->body);
 }
 
-void Gusano::setId(int player, int number){
-	this->id.first = player;
-	this->id.second = number;
-	this->sendPosition();
+void Gusano::setId(int player, int number_e, int id_e){
+	this->number.first = player;
+	this->number.second = number_e;
+	this->id = id_e;
+	b2Vec2 position = this->GetPosition();
+	float32 angle = this->GetAngle();
+	this->proxy.sendGusanoCreation(this->id, player, position.x, position.y, this->direction, angle);
 }
 
 b2Vec2 Gusano::GetPosition(){
@@ -129,7 +132,7 @@ int Gusano::getDirection(){
 void Gusano::sendPosition(){
 	b2Vec2 position = this->GetPosition();
 	float32 angle = this->GetAngle();
-	this->proxy.sendGusanoPosition(this->id.first, this->id.second, position.x, position.y, this->direction, angle);
+	this->proxy.sendGusanoPosition(this->id, position.x, position.y, this->direction, angle);
 }
 
 void Gusano::move(int dir){
@@ -139,7 +142,7 @@ void Gusano::move(int dir){
 	} else {
 		delete this->state;
 		this->state = new MovingState();
-		this->proxy.send_state_change(this->id.first, this->id.second, MOVING_STATE);
+		this->proxy.sendStateChange(this->id, MOVING_STATE);
 		b2Vec2 vel;
 		float angle = this->GetAngle();
 		vel.x = 0.2f * this->direction * cos(angle);
@@ -163,7 +166,7 @@ void Gusano::update(){
 		this->state = new InactiveState();
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		this->sendPosition();
-		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
+		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 		if (this->head_in_contact && angles_list.size() == 0){
 			std::cout << "de cabeza\n";
 			this->rotateTo(this->GetAngle() - M_PI);
@@ -195,7 +198,7 @@ bool Gusano::isInactive(){
 void Gusano::jump(){
 	delete this->state;
 	this->state = new JumpingState(this->body, this);
-	this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
+	this->proxy.sendStateChange(this->id, JUMPING_STATE);
 	this->body->SetGravityScale(1);
 	printf("state->cayendo\n");
 	b2Vec2 vel = this->body->GetLinearVelocity();
@@ -207,6 +210,7 @@ void Gusano::jump(){
 void Gusano::backJump(){
 	delete this->state;
 	this->state = new JumpingState(this->body, this);
+	this->proxy.sendStateChange(this->id, JUMPING_STATE);
 	this->body->SetGravityScale(1);
 	b2Vec2 vel = this->body->GetLinearVelocity();
 	vel.x = (1.0f/b2Sqrt(24.0f)) * (-(this->direction));
@@ -216,24 +220,24 @@ void Gusano::backJump(){
 
 void Gusano::sink(){
 	this->sendPosition();
-	this->proxy.send_state_change(this->id.first, this->id.second, SINKING_STATE);
-	this->to_remove_gusanos.push_back(this->id);
+	this->proxy.sendStateChange(this->id, SINKING_STATE);
+	this->to_remove_gusanos.push_back(this->number);
 }
 
 void Gusano::addLife(unsigned int to_add){
 	this->life += to_add;
-	this->proxy.sendLifeChange(this->id.first, this->id.second, this->life);
+	this->proxy.sendLifeChange(this->id, this->life);
 }
 
 void Gusano::sufferDamage(unsigned int damage){
 	if (!this->state->isExploted()){
 		this->life -= damage;
 		this->damaged = true;
-		this->proxy.sendLifeChange(this->id.first, this->id.second, this->life);
+		this->proxy.sendLifeChange(this->id, this->life);
 		if (this->life <= 0){
 			this->sendPosition();
-			this->proxy.send_state_change(this->id.first, this->id.second, DEAD_STATE);
-			this->to_remove_gusanos.push_back(this->id);
+			this->proxy.sendStateChange(this->id, DEAD_STATE);
+			this->to_remove_gusanos.push_back(this->number);
 		}
 	}
 }
@@ -257,7 +261,7 @@ void Gusano::newContact(float ground_angle){
 		this->state = new InactiveState();
 		this->body->SetGravityScale(0);
 		this->body->SetLinearVelocity(b2Vec2(0,0));
-		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
+		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
 		std::cout << "TOCO al segundo \n";
@@ -278,7 +282,7 @@ void Gusano::finishContact(float ground_angle){
 		std::cout << "state->falling\n";
 		delete this->state;
 		this->state = new JumpingState(this->body, this);
-		this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
+		this->proxy.sendStateChange(this->id, JUMPING_STATE);
 		this->body->SetGravityScale(1);
 		//b2Vec2 vel = this->body->GetLinearVelocity();
 		//vel.x = 0.0f;

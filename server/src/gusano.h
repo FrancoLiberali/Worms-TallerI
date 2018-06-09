@@ -23,7 +23,8 @@ class Gusano{
 		int* head_sensor_data;
 		int direction;
 		std::vector<float> angles_list;
-		std::pair<int, int> id;
+		std::pair<int, int> number;
+		int id;
 		int life = 100;
 		bool damaged = false;
 		bool head_in_contact = false;
@@ -36,7 +37,7 @@ class Gusano{
 		
 		~Gusano();
 		
-		void setId(int player, int number);
+		void setId(int player, int number, int id);
 		
 		b2Vec2 GetPosition();
 		

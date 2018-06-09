@@ -34,7 +34,7 @@ Projectile::~Projectile(){
 void Projectile::exploit(){
 	std::cout << "explosion\n";
 	b2Vec2 center = this->body->GetPosition();
-	this->proxy.sendProjecileExplosion(this->number, center.x, center.y);
+	this->proxy.sendProjectileExplosion(this->number, center.x, center.y);
     for (int i = 0; i < NUM_RAYS; i++) {
 		float pi = M_PI;
 		float angle = (i / (float)NUM_RAYS) * 2 * pi;

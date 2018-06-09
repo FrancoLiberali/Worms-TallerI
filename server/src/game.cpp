@@ -37,17 +37,18 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	}
 	
 	std::vector<Gusano*>::iterator it = gusanos.begin();
-	int player, gusano_id;
-	for (player = 1, gusano_id = 1; it != gusanos.end(); player++, gusano_id++, ++it){
+	int player, gusano_number, gusano_id;
+	for (player = 1, gusano_number = 1, gusano_id = 1; it != gusanos.end(); player++, gusano_id++, ++it){
 		std::cout << player << "\n";
-		std::cout << gusano_id << "\n";
-		(*it)->setId(player, gusano_id);
-		this->players[player][gusano_id] = (*it);
+		std::cout << gusano_number << "\n";
+		(*it)->setId(player, gusano_number, gusano_id);
+		this->players[player][gusano_number] = (*it);
 		if (player == cant_players){
 			player = 0;
+			gusano_number++;
 		}
 	}
-	this->gusanos_per_player = gusano_id;
+	this->gusanos_per_player = gusano_number;
 	for (; player <= cant_players; player++){
 		std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
 		for (; it2 != this->players[player].end(); ++it2){
@@ -131,7 +132,7 @@ void Game::play(){
 					break;
 				} catch (std::out_of_range& e){
 					this->next[i]++;
-					if (this->next[i] > this->gusanos_per_player){ //OJO ACA QUE YA NO ES ASI
+					if (this->next[i] > this->gusanos_per_player){
 						this->next[i] = 1;
 					}
 				}

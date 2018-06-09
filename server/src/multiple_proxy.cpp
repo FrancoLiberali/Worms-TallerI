@@ -17,6 +17,27 @@ void MultipleProxy::erase(int id){
 	std::cout << this->proxys.size() << "\n";
 }
 
+void MultipleProxy::sendPlayerName(int player_id, std::string& name){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendPlayerName(player_id, name);
+	}
+}
+
+void MultipleProxy::sendVigaCreation(int x, int y, int angle){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendVigaCreation(x, y, angle);
+	}
+}
+
+void MultipleProxy::sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendGusanoCreation(gusano_id, player_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+	}
+}
+
 void MultipleProxy::sendTurnBegining(int player_id, int gusano_id){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
@@ -24,35 +45,28 @@ void MultipleProxy::sendTurnBegining(int player_id, int gusano_id){
 	}
 }
 
-void MultipleProxy::send_state_change(int player_id, int gusano_id, int new_state){
+void MultipleProxy::sendGusanoPosition(int gusano_id, float x, float y, int direction, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->send_state_change(player_id, gusano_id, new_state);
-	}
-}
-		
-void MultipleProxy::sendGusanoPosition(int player_id, int gusano_id, float x, float y, int direction, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
-	for (; it != this->proxys.end(); ++it){
-		(*it)->send_gusano_position(player_id, gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+		(*it)->sendGusanoPosition(gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
 	}
 }
 
-void MultipleProxy::send_viga_position(int x, int y, int angle){
+void MultipleProxy::sendStateChange(int gusano_id, int new_state){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->send_viga_position(x, y, angle);
+		(*it)->sendStateChange(gusano_id, new_state);
 	}
 }
 
 void MultipleProxy::sendProjectilePosition(int projectile_number, int weapon, float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->send_projectile_creation(projectile_number, weapon, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		(*it)->sendProjectilePosition(projectile_number, weapon, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 
-void MultipleProxy::sendProjecileExplosion(int projectile_number, float x, float y){
+void MultipleProxy::sendProjectileExplosion(int projectile_number, float x, float y){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
 		(*it)->sendProjectileExplosion(projectile_number, (int)(x * 1000), (int)(y * 1000));
@@ -73,17 +87,16 @@ void MultipleProxy::sendChangeSightAngle(int change){
 	}
 }
 
-void MultipleProxy::sendLifeChange(int player_id, int gusano_id, int new_life){
+void MultipleProxy::sendLifeChange(int gusano_id, int new_life){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendLifeChange(player_id, gusano_id, new_life);
+		(*it)->sendLifeChange(gusano_id, new_life);
 	}
 }
 
 void MultipleProxy::sendPlayerDisconnection(int player_id){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		std::cout << "hay algo\n";
 		(*it)->sendPlayerDisconnection(player_id);
 	}
 }

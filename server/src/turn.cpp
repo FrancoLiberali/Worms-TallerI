@@ -153,26 +153,26 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
 			Gusano* gusano = this->players[active_player][active_gusano];
-			if (msj[0] == 0){
+			if (msj[0] == 1){
 				this->disconnect(player_id, active_player, i);
 			}
 			else if (player_id == active_player && continue_turn && gusano->isInactive()){
 				switch (msj[0]){
-					case 1: this->gusano_move(msj, gusano);
+					case 2: this->gusano_move(msj, gusano);
 							break;
-					case 2: this->gusano_jump(msj, gusano);
+					case 3: this->gusano_jump(msj, gusano);
 							break;
-					case 3: this->gusano_back_jump(msj, gusano);
+					case 4: this->gusano_back_jump(msj, gusano);
 							break;
-					case 4: this->take_weapon(msj);
+					case 5: this->take_weapon(msj);
 							break;
-					case 5: this->changeSightAngle(msj);
+					case 6: this->changeSightAngle(msj);
 							break;
-					case 6: this->changeRegresiveTime(msj);
+					case 7: this->changeRegresiveTime(msj);
 							break;
-					case 7: this->loadPower(gusano, i);
+					case 8: this->loadPower(gusano, i);
 							break;
-					case 8: this->fire(gusano, i);
+					case 9: this->fire(gusano, i);
 							break;
 				}
 			}

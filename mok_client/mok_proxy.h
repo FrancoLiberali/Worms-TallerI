@@ -10,6 +10,7 @@ class MokProxy{
 		
 		void send_int(int to_send);
 		int receive_int();
+		void sendMapAndPlayers(int map, int players);
 	public:
 		MokProxy(Socket& socket);
 		

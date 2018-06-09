@@ -28,7 +28,7 @@ CREACION DEL AGUA EN EL MAPA:
 
 CREACION DE UN GUSANO EN EL MAPA
 	char en 4
-	int id gusano
+	int id gusano	
 	int con el numero de jugador que es el dueño
 	int x
 	int y
