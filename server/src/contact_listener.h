@@ -22,7 +22,7 @@ class ContactListener : public b2ContactListener{
 					gusano->sink();
 				//check if body B was projectile
 				} else if (other_data && other_data->indicator == 0){
-					Projectile* projectile = static_cast<Projectile*>(data->pointer);
+					Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
 					projectile->sink();
 				}
 			}
@@ -37,7 +37,7 @@ class ContactListener : public b2ContactListener{
 					gusano->sink();
 				//check if body A was projectile
 				} else if (other_data && other_data->indicator == 0){
-					Projectile* projectile = static_cast<Projectile*>(data->pointer);
+					Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
 					projectile->sink();
 				}
 			}
@@ -67,14 +67,20 @@ class ContactListener : public b2ContactListener{
 			//check if body A was a projectile
 			data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 			if (data && data->indicator == 0){
-				Projectile* projectile = static_cast<Projectile*>(data->pointer);
-				projectile->exploit();
+				UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
+				if (other_data && other_data->indicator != 2){
+					Projectile* projectile = static_cast<Projectile*>(data->pointer);
+					projectile->exploit();
+				}
 			}
 			//check if body B was a projectile
 			data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 			if (data && data->indicator == 0){
-				Projectile* projectile = static_cast<Projectile*>(data->pointer);
-				projectile->exploit();
+				UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+				if (other_data && other_data->indicator != 2){
+					Projectile* projectile = static_cast<Projectile*>(data->pointer);
+					projectile->exploit();
+				}
 			}
 		}
 		

@@ -14,8 +14,9 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	//lectura de archivo yalm "map_id" y creacion de vigas y gusanos
 	Viga viga(this->world, 0.0f, 0.0f, 0.0f, this->proxy);
 	Viga viga2(this->world, 6.0f, 0.0f, 0.0f, this->proxy);
+	Viga viga3(this->world, -2.0f, -4.0f, 0.0f, this->proxy);
 	
-	this->water = new Water(this->world, -5, -10, 20, -10);
+	this->water = new Water(this->world, -10, -10, 20, -10);
 	
 	std::vector<Gusano*> gusanos;
 	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 0.5f, 0.52f, 0.0f);

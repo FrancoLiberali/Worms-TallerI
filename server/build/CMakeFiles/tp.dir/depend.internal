@@ -1027,10 +1027,18 @@ CMakeFiles/tp.dir/src/jumping_state.cpp.o
  ..//Box2D/Dynamics/b2TimeStep.h
  ..//Box2D/Dynamics/b2World.h
  ..//Box2D/Dynamics/b2WorldCallbacks.h
+ ../src/protected_queue.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
  /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
  /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.h
  /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o
  ..//Box2D/Box2D.h
  ..//Box2D/Collision/Shapes/b2ChainShape.h

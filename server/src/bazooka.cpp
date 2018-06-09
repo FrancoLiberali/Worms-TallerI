@@ -1,7 +1,7 @@
 #include "bazooka.h"
 #include <cmath>
 
-Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, float angle, int power,
+Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, float angle, float power,
 		GameConstants& info, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy) : 
 				SimpleProjectile(world_entry, number, x + (sqrt(0.3125) + 0.125) * cos(angle), 
 				y + (sqrt(0.3125) + 0.125) * sin(angle), angle, info.bazooka_vel * power, 
@@ -25,8 +25,8 @@ Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, float angle
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
-	proxy.sendProjectilePosition(this->number, 1, x + (sqrt(0.3125) + 0.125) * cos(angle), 
-		y + (sqrt(0.3125) + 0.125) * sin(angle), angle);
+	b2Vec2 position = this->body->GetPosition();
+	proxy.sendProjectilePosition(this->number, 1, position.x, position.y, angle);
 }
 
 Bazooka::~Bazooka(){

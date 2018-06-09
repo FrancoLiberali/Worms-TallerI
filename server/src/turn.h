@@ -31,7 +31,7 @@ class Turn{
 		int weapon = 0;
 		float sight_angle = 0;
 		int regresive_time = 5;
-		int power = 0;
+		float power = 1;
 		bool fired;
 		
 		void gusano_move(char* msj, int active_player, int active_gusano);
@@ -42,8 +42,8 @@ class Turn{
 		void changeRegresiveTime(char* msj, int active_player, int active_gusano);
 		void loadPower(int active_player, int active_gusano);
 		void fire(int active_player, int active_gusano, int& turn_actual_len);
-		void fire_bazooka(Gusano* gusano);
-		void fire_morter(Gusano* gusano);
+		void fire_bazooka(Gusano* gusano, b2Vec2 position);
+		void fire_morter(Gusano* gusano, b2Vec2 position);
 		
 		
 	public:

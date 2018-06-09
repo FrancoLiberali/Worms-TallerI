@@ -1,13 +1,20 @@
 #include "gusano_state.h"
+#include "Box2D/Box2D.h"
+#include "gusano.h"
 
 #ifndef __JUMPING_STATE_H__
 #define __JUMPING_STATE_H__
 
 class JumpingState : public GusanoState{
+	private:
+		float y_max;
+		float y_last;
+		b2Body* body;
+		Gusano* gusano;
 	public:
-		JumpingState();
+		JumpingState(b2Body* body, Gusano* gusano);
 		
-		~JumpingState();
+		virtual ~JumpingState();
 		
 		virtual void sumOneStep();
 		

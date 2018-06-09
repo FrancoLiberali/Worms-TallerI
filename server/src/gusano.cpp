@@ -85,7 +85,7 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	
 	
     
-	this->state = new JumpingState(); //hasta que no haga contacto con el suelo esta saltando
+	this->state = new JumpingState(this->body, this); //hasta que no haga contacto con el suelo esta saltando
 	this->direction = 1;
 }
 
@@ -140,9 +140,11 @@ void Gusano::move(int dir){
 
 void Gusano::cancelMovement(){
 	this->body->SetLinearVelocity(b2Vec2(0,0));
+	this->body->SetAngularVelocity(0);
 }
 
 void Gusano::update(){
+	this->damaged = false;
 	try{
 		this->state->sumOneStep();
 	} catch (const MovingFinished& e){
@@ -170,13 +172,13 @@ bool Gusano::isInactive(){
 	return (this->state->isInactive());
 }
 
-bool Gusano::isFalling(){
-	return (this->state->isFalling());
-}
+//bool Gusano::isFalling(){
+	//return (this->state->isFalling());
+//}
 
 void Gusano::jump(){
 	delete this->state;
-	this->state = new JumpingState();
+	this->state = new JumpingState(this->body, this);
 	this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
 	this->body->SetGravityScale(1);
 	printf("state->cayendo\n");
@@ -188,7 +190,7 @@ void Gusano::jump(){
 
 void Gusano::backJump(){
 	delete this->state;
-	this->state = new JumpingState();
+	this->state = new JumpingState(this->body, this);
 	this->body->SetGravityScale(1);
 	b2Vec2 vel = this->body->GetLinearVelocity();
 	vel.x = (1.0f/b2Sqrt(24.0f)) * (-(this->direction));
@@ -202,13 +204,15 @@ void Gusano::sink(){
 	this->to_remove_gusanos.push_back(this->id);
 }
 
-void Gusano::addLife(unsigned int life){
-	this->life += life;
+void Gusano::addLife(unsigned int to_add){
+	this->life += to_add;
+	this->proxy.sendLifeChange(this->id.first, this->id.second, this->life);
 }
 
 void Gusano::sufferDamage(unsigned int damage){
 	if (!this->state->isExploted()){
 		this->life -= damage;
+		this->damaged = true;
 		this->proxy.sendLifeChange(this->id.first, this->id.second, this->life);
 		if (this->life <= 0){
 			this->sendPosition();
@@ -216,6 +220,10 @@ void Gusano::sufferDamage(unsigned int damage){
 			this->to_remove_gusanos.push_back(this->id);
 		}
 	}
+}
+
+bool Gusano::gotDamaged(){
+	return this->damaged;
 }
 
 /*float radDiff( float a, float b )
@@ -230,6 +238,7 @@ void Gusano::newContact(float ground_angle){
 		this->body->SetGravityScale(0);
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		printf("state->inactivo\n");
+		this->state->sumOneStep();
 		delete this->state;
 		this->state = new InactiveState();
 		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
@@ -245,10 +254,10 @@ void Gusano::finishContact(float ground_angle){
 	it = std::find(this->angles_list.begin(), this->angles_list.end(), ground_angle);
     this->angles_list.erase(it);
 	int cant_contacts = angles_list.size();
-	if (cant_contacts == 0 && !(this->isFalling())){
+	if (cant_contacts == 0 && !(this->state->isFalling())){
 		std::cout << "state->falling\n";
 		delete this->state;
-		this->state = new JumpingState();
+		this->state = new JumpingState(this->body, this);
 		this->proxy.send_state_change(this->id.first, this->id.second, JUMPING_STATE);
 		this->body->SetGravityScale(1);
 		//b2Vec2 vel = this->body->GetLinearVelocity();

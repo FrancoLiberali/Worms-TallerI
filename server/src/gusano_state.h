@@ -10,7 +10,7 @@ class GusanoState{
 	public:
 		GusanoState(){}
 		
-		~GusanoState(){}
+		virtual ~GusanoState(){}
 		
 		virtual void sumOneStep() = 0;
 		

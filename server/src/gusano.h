@@ -24,6 +24,7 @@ class Gusano{
 		std::vector<float> angles_list;
 		std::pair<int, int> id;
 		int life = 100;
+		bool damaged = false;
 		
 		void rotateTo(float angle);
 		
@@ -51,7 +52,7 @@ class Gusano{
 		
 		bool isInactive();
 		
-		bool isFalling();
+		//bool isFalling();
 		
 		void jump();
 		
@@ -62,6 +63,8 @@ class Gusano{
 		void addLife(unsigned int life);
 		
 		void sufferDamage(unsigned int damage);
+		
+		bool gotDamaged();
 		
 		void newContact(float ground_angle);
 		

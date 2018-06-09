@@ -1026,10 +1026,18 @@ CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/fake_proxy/mok_proxy.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/gusano.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/gusano_state.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/jumping_state.cpp
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/jumping_state.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/moving_finished.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/projectile.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/socket.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
