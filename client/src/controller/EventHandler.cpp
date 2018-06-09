@@ -1,6 +1,6 @@
 #include "EventHandler.h"
 
-void EventHandler::setView(View* view){
+void EventHandler::setView(mainView* view){
 	this->view = view;
 }
 

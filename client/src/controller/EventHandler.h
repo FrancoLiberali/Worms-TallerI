@@ -5,15 +5,15 @@ class Event;
 #include <queue>
 #include <string>
 #include "Event.h"
-#include "../view/View.h"
+#include "../view/mainView.h"
 
 class EventHandler {
 private:
-	View* view;
+	mainView* view;
 	std::queue<Event*> eventQueue;
 public:
 	void add(Event* event);
-	void setView(View *view);
+	void setView(mainView *view);
   	bool empty();
   	Event* get();
 };

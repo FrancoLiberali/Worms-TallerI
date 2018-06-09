@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client
+CMAKE_SOURCE_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build
+CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/client/b
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -124,9 +124,9 @@ install/local/fast: install/local
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/client/b/CMakeFiles /home/edlinux/Escritorio/taller/TPs/TP_final/client/b/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/client/b/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -477,6 +477,33 @@ src/controller/WormMoveEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.s
 .PHONY : src/controller/WormMoveEvent.cpp.s
 
+src/controller/WormWeaponEvent.o: src/controller/WormWeaponEvent.cpp.o
+
+.PHONY : src/controller/WormWeaponEvent.o
+
+# target to build an object file
+src/controller/WormWeaponEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o
+.PHONY : src/controller/WormWeaponEvent.cpp.o
+
+src/controller/WormWeaponEvent.i: src/controller/WormWeaponEvent.cpp.i
+
+.PHONY : src/controller/WormWeaponEvent.i
+
+# target to preprocess a source file
+src/controller/WormWeaponEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.i
+.PHONY : src/controller/WormWeaponEvent.cpp.i
+
+src/controller/WormWeaponEvent.s: src/controller/WormWeaponEvent.cpp.s
+
+.PHONY : src/controller/WormWeaponEvent.s
+
+# target to generate assembly for a file
+src/controller/WormWeaponEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.s
+.PHONY : src/controller/WormWeaponEvent.cpp.s
+
 src/model/GameControllerProxy.o: src/model/GameControllerProxy.cpp.o
 
 .PHONY : src/model/GameControllerProxy.o
@@ -531,6 +558,33 @@ src/model/Model.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/Model.cpp.s
 .PHONY : src/model/Model.cpp.s
 
+src/model/WormJumpCommand.o: src/model/WormJumpCommand.cpp.o
+
+.PHONY : src/model/WormJumpCommand.o
+
+# target to build an object file
+src/model/WormJumpCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.o
+.PHONY : src/model/WormJumpCommand.cpp.o
+
+src/model/WormJumpCommand.i: src/model/WormJumpCommand.cpp.i
+
+.PHONY : src/model/WormJumpCommand.i
+
+# target to preprocess a source file
+src/model/WormJumpCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.i
+.PHONY : src/model/WormJumpCommand.cpp.i
+
+src/model/WormJumpCommand.s: src/model/WormJumpCommand.cpp.s
+
+.PHONY : src/model/WormJumpCommand.s
+
+# target to generate assembly for a file
+src/model/WormJumpCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.s
+.PHONY : src/model/WormJumpCommand.cpp.s
+
 src/model/WormMoveCommand.o: src/model/WormMoveCommand.cpp.o
 
 .PHONY : src/model/WormMoveCommand.o
@@ -558,32 +612,32 @@ src/model/WormMoveCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.s
 .PHONY : src/model/WormMoveCommand.cpp.s
 
-src/view/Animation.o: src/view/Animation.cpp.o
+src/model/WormWeaponCommand.o: src/model/WormWeaponCommand.cpp.o
 
-.PHONY : src/view/Animation.o
+.PHONY : src/model/WormWeaponCommand.o
 
 # target to build an object file
-src/view/Animation.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Animation.cpp.o
-.PHONY : src/view/Animation.cpp.o
+src/model/WormWeaponCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o
+.PHONY : src/model/WormWeaponCommand.cpp.o
 
-src/view/Animation.i: src/view/Animation.cpp.i
+src/model/WormWeaponCommand.i: src/model/WormWeaponCommand.cpp.i
 
-.PHONY : src/view/Animation.i
+.PHONY : src/model/WormWeaponCommand.i
 
 # target to preprocess a source file
-src/view/Animation.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Animation.cpp.i
-.PHONY : src/view/Animation.cpp.i
+src/model/WormWeaponCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.i
+.PHONY : src/model/WormWeaponCommand.cpp.i
 
-src/view/Animation.s: src/view/Animation.cpp.s
+src/model/WormWeaponCommand.s: src/model/WormWeaponCommand.cpp.s
 
-.PHONY : src/view/Animation.s
+.PHONY : src/model/WormWeaponCommand.s
 
 # target to generate assembly for a file
-src/view/Animation.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Animation.cpp.s
-.PHONY : src/view/Animation.cpp.s
+src/model/WormWeaponCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.s
+.PHONY : src/model/WormWeaponCommand.cpp.s
 
 src/view/Escenario.o: src/view/Escenario.cpp.o
 
@@ -612,6 +666,33 @@ src/view/Escenario.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Escenario.cpp.s
 .PHONY : src/view/Escenario.cpp.s
 
+src/view/MenuWeaponView.o: src/view/MenuWeaponView.cpp.o
+
+.PHONY : src/view/MenuWeaponView.o
+
+# target to build an object file
+src/view/MenuWeaponView.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o
+.PHONY : src/view/MenuWeaponView.cpp.o
+
+src/view/MenuWeaponView.i: src/view/MenuWeaponView.cpp.i
+
+.PHONY : src/view/MenuWeaponView.i
+
+# target to preprocess a source file
+src/view/MenuWeaponView.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.i
+.PHONY : src/view/MenuWeaponView.cpp.i
+
+src/view/MenuWeaponView.s: src/view/MenuWeaponView.cpp.s
+
+.PHONY : src/view/MenuWeaponView.s
+
+# target to generate assembly for a file
+src/view/MenuWeaponView.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.s
+.PHONY : src/view/MenuWeaponView.cpp.s
+
 src/view/SdlException.o: src/view/SdlException.cpp.o
 
 .PHONY : src/view/SdlException.o
@@ -639,86 +720,59 @@ src/view/SdlException.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/SdlException.cpp.s
 .PHONY : src/view/SdlException.cpp.s
 
-src/view/Texture.o: src/view/Texture.cpp.o
+src/view/Shape.o: src/view/Shape.cpp.o
 
-.PHONY : src/view/Texture.o
-
-# target to build an object file
-src/view/Texture.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Texture.cpp.o
-.PHONY : src/view/Texture.cpp.o
-
-src/view/Texture.i: src/view/Texture.cpp.i
-
-.PHONY : src/view/Texture.i
-
-# target to preprocess a source file
-src/view/Texture.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Texture.cpp.i
-.PHONY : src/view/Texture.cpp.i
-
-src/view/Texture.s: src/view/Texture.cpp.s
-
-.PHONY : src/view/Texture.s
-
-# target to generate assembly for a file
-src/view/Texture.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Texture.cpp.s
-.PHONY : src/view/Texture.cpp.s
-
-src/view/View.o: src/view/View.cpp.o
-
-.PHONY : src/view/View.o
+.PHONY : src/view/Shape.o
 
 # target to build an object file
-src/view/View.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/View.cpp.o
-.PHONY : src/view/View.cpp.o
+src/view/Shape.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.o
+.PHONY : src/view/Shape.cpp.o
 
-src/view/View.i: src/view/View.cpp.i
+src/view/Shape.i: src/view/Shape.cpp.i
 
-.PHONY : src/view/View.i
+.PHONY : src/view/Shape.i
 
 # target to preprocess a source file
-src/view/View.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/View.cpp.i
-.PHONY : src/view/View.cpp.i
+src/view/Shape.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.i
+.PHONY : src/view/Shape.cpp.i
 
-src/view/View.s: src/view/View.cpp.s
+src/view/Shape.s: src/view/Shape.cpp.s
 
-.PHONY : src/view/View.s
+.PHONY : src/view/Shape.s
 
 # target to generate assembly for a file
-src/view/View.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/View.cpp.s
-.PHONY : src/view/View.cpp.s
+src/view/Shape.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.s
+.PHONY : src/view/Shape.cpp.s
 
-src/view/Window.o: src/view/Window.cpp.o
+src/view/Weapon.o: src/view/Weapon.cpp.o
 
-.PHONY : src/view/Window.o
+.PHONY : src/view/Weapon.o
 
 # target to build an object file
-src/view/Window.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Window.cpp.o
-.PHONY : src/view/Window.cpp.o
+src/view/Weapon.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.o
+.PHONY : src/view/Weapon.cpp.o
 
-src/view/Window.i: src/view/Window.cpp.i
+src/view/Weapon.i: src/view/Weapon.cpp.i
 
-.PHONY : src/view/Window.i
+.PHONY : src/view/Weapon.i
 
 # target to preprocess a source file
-src/view/Window.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Window.cpp.i
-.PHONY : src/view/Window.cpp.i
+src/view/Weapon.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.i
+.PHONY : src/view/Weapon.cpp.i
 
-src/view/Window.s: src/view/Window.cpp.s
+src/view/Weapon.s: src/view/Weapon.cpp.s
 
-.PHONY : src/view/Window.s
+.PHONY : src/view/Weapon.s
 
 # target to generate assembly for a file
-src/view/Window.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Window.cpp.s
-.PHONY : src/view/Window.cpp.s
+src/view/Weapon.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.s
+.PHONY : src/view/Weapon.cpp.s
 
 src/view/WormView.o: src/view/WormView.cpp.o
 
@@ -746,6 +800,249 @@ src/view/WormView.s: src/view/WormView.cpp.s
 src/view/WormView.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/WormView.cpp.s
 .PHONY : src/view/WormView.cpp.s
+
+src/view/mainView.o: src/view/mainView.cpp.o
+
+.PHONY : src/view/mainView.o
+
+# target to build an object file
+src/view/mainView.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.o
+.PHONY : src/view/mainView.cpp.o
+
+src/view/mainView.i: src/view/mainView.cpp.i
+
+.PHONY : src/view/mainView.i
+
+# target to preprocess a source file
+src/view/mainView.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.i
+.PHONY : src/view/mainView.cpp.i
+
+src/view/mainView.s: src/view/mainView.cpp.s
+
+.PHONY : src/view/mainView.s
+
+# target to generate assembly for a file
+src/view/mainView.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.s
+.PHONY : src/view/mainView.cpp.s
+
+src/view/newView/Boot.o: src/view/newView/Boot.cpp.o
+
+.PHONY : src/view/newView/Boot.o
+
+# target to build an object file
+src/view/newView/Boot.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o
+.PHONY : src/view/newView/Boot.cpp.o
+
+src/view/newView/Boot.i: src/view/newView/Boot.cpp.i
+
+.PHONY : src/view/newView/Boot.i
+
+# target to preprocess a source file
+src/view/newView/Boot.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.i
+.PHONY : src/view/newView/Boot.cpp.i
+
+src/view/newView/Boot.s: src/view/newView/Boot.cpp.s
+
+.PHONY : src/view/newView/Boot.s
+
+# target to generate assembly for a file
+src/view/newView/Boot.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.s
+.PHONY : src/view/newView/Boot.cpp.s
+
+src/view/newView/SdlException.o: src/view/newView/SdlException.cpp.o
+
+.PHONY : src/view/newView/SdlException.o
+
+# target to build an object file
+src/view/newView/SdlException.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.o
+.PHONY : src/view/newView/SdlException.cpp.o
+
+src/view/newView/SdlException.i: src/view/newView/SdlException.cpp.i
+
+.PHONY : src/view/newView/SdlException.i
+
+# target to preprocess a source file
+src/view/newView/SdlException.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.i
+.PHONY : src/view/newView/SdlException.cpp.i
+
+src/view/newView/SdlException.s: src/view/newView/SdlException.cpp.s
+
+.PHONY : src/view/newView/SdlException.s
+
+# target to generate assembly for a file
+src/view/newView/SdlException.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.s
+.PHONY : src/view/newView/SdlException.cpp.s
+
+src/view/newView/SdlScreen.o: src/view/newView/SdlScreen.cpp.o
+
+.PHONY : src/view/newView/SdlScreen.o
+
+# target to build an object file
+src/view/newView/SdlScreen.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.o
+.PHONY : src/view/newView/SdlScreen.cpp.o
+
+src/view/newView/SdlScreen.i: src/view/newView/SdlScreen.cpp.i
+
+.PHONY : src/view/newView/SdlScreen.i
+
+# target to preprocess a source file
+src/view/newView/SdlScreen.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.i
+.PHONY : src/view/newView/SdlScreen.cpp.i
+
+src/view/newView/SdlScreen.s: src/view/newView/SdlScreen.cpp.s
+
+.PHONY : src/view/newView/SdlScreen.s
+
+# target to generate assembly for a file
+src/view/newView/SdlScreen.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.s
+.PHONY : src/view/newView/SdlScreen.cpp.s
+
+src/view/newView/Sprite.o: src/view/newView/Sprite.cpp.o
+
+.PHONY : src/view/newView/Sprite.o
+
+# target to build an object file
+src/view/newView/Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.o
+.PHONY : src/view/newView/Sprite.cpp.o
+
+src/view/newView/Sprite.i: src/view/newView/Sprite.cpp.i
+
+.PHONY : src/view/newView/Sprite.i
+
+# target to preprocess a source file
+src/view/newView/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.i
+.PHONY : src/view/newView/Sprite.cpp.i
+
+src/view/newView/Sprite.s: src/view/newView/Sprite.cpp.s
+
+.PHONY : src/view/newView/Sprite.s
+
+# target to generate assembly for a file
+src/view/newView/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.s
+.PHONY : src/view/newView/Sprite.cpp.s
+
+src/view/newView/SpriteConfigurator.o: src/view/newView/SpriteConfigurator.cpp.o
+
+.PHONY : src/view/newView/SpriteConfigurator.o
+
+# target to build an object file
+src/view/newView/SpriteConfigurator.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o
+.PHONY : src/view/newView/SpriteConfigurator.cpp.o
+
+src/view/newView/SpriteConfigurator.i: src/view/newView/SpriteConfigurator.cpp.i
+
+.PHONY : src/view/newView/SpriteConfigurator.i
+
+# target to preprocess a source file
+src/view/newView/SpriteConfigurator.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.i
+.PHONY : src/view/newView/SpriteConfigurator.cpp.i
+
+src/view/newView/SpriteConfigurator.s: src/view/newView/SpriteConfigurator.cpp.s
+
+.PHONY : src/view/newView/SpriteConfigurator.s
+
+# target to generate assembly for a file
+src/view/newView/SpriteConfigurator.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.s
+.PHONY : src/view/newView/SpriteConfigurator.cpp.s
+
+src/view/newView/TextManager.o: src/view/newView/TextManager.cpp.o
+
+.PHONY : src/view/newView/TextManager.o
+
+# target to build an object file
+src/view/newView/TextManager.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o
+.PHONY : src/view/newView/TextManager.cpp.o
+
+src/view/newView/TextManager.i: src/view/newView/TextManager.cpp.i
+
+.PHONY : src/view/newView/TextManager.i
+
+# target to preprocess a source file
+src/view/newView/TextManager.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.i
+.PHONY : src/view/newView/TextManager.cpp.i
+
+src/view/newView/TextManager.s: src/view/newView/TextManager.cpp.s
+
+.PHONY : src/view/newView/TextManager.s
+
+# target to generate assembly for a file
+src/view/newView/TextManager.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.s
+.PHONY : src/view/newView/TextManager.cpp.s
+
+src/view/newView/TextView.o: src/view/newView/TextView.cpp.o
+
+.PHONY : src/view/newView/TextView.o
+
+# target to build an object file
+src/view/newView/TextView.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o
+.PHONY : src/view/newView/TextView.cpp.o
+
+src/view/newView/TextView.i: src/view/newView/TextView.cpp.i
+
+.PHONY : src/view/newView/TextView.i
+
+# target to preprocess a source file
+src/view/newView/TextView.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.i
+.PHONY : src/view/newView/TextView.cpp.i
+
+src/view/newView/TextView.s: src/view/newView/TextView.cpp.s
+
+.PHONY : src/view/newView/TextView.s
+
+# target to generate assembly for a file
+src/view/newView/TextView.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.s
+.PHONY : src/view/newView/TextView.cpp.s
+
+src/view/newView/TextureManager.o: src/view/newView/TextureManager.cpp.o
+
+.PHONY : src/view/newView/TextureManager.o
+
+# target to build an object file
+src/view/newView/TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o
+.PHONY : src/view/newView/TextureManager.cpp.o
+
+src/view/newView/TextureManager.i: src/view/newView/TextureManager.cpp.i
+
+.PHONY : src/view/newView/TextureManager.i
+
+# target to preprocess a source file
+src/view/newView/TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.i
+.PHONY : src/view/newView/TextureManager.cpp.i
+
+src/view/newView/TextureManager.s: src/view/newView/TextureManager.cpp.s
+
+.PHONY : src/view/newView/TextureManager.s
+
+# target to generate assembly for a file
+src/view/newView/TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.s
+.PHONY : src/view/newView/TextureManager.cpp.s
 
 # Help Target
 help:
@@ -794,36 +1091,69 @@ help:
 	@echo "... src/controller/WormMoveEvent.o"
 	@echo "... src/controller/WormMoveEvent.i"
 	@echo "... src/controller/WormMoveEvent.s"
+	@echo "... src/controller/WormWeaponEvent.o"
+	@echo "... src/controller/WormWeaponEvent.i"
+	@echo "... src/controller/WormWeaponEvent.s"
 	@echo "... src/model/GameControllerProxy.o"
 	@echo "... src/model/GameControllerProxy.i"
 	@echo "... src/model/GameControllerProxy.s"
 	@echo "... src/model/Model.o"
 	@echo "... src/model/Model.i"
 	@echo "... src/model/Model.s"
+	@echo "... src/model/WormJumpCommand.o"
+	@echo "... src/model/WormJumpCommand.i"
+	@echo "... src/model/WormJumpCommand.s"
 	@echo "... src/model/WormMoveCommand.o"
 	@echo "... src/model/WormMoveCommand.i"
 	@echo "... src/model/WormMoveCommand.s"
-	@echo "... src/view/Animation.o"
-	@echo "... src/view/Animation.i"
-	@echo "... src/view/Animation.s"
+	@echo "... src/model/WormWeaponCommand.o"
+	@echo "... src/model/WormWeaponCommand.i"
+	@echo "... src/model/WormWeaponCommand.s"
 	@echo "... src/view/Escenario.o"
 	@echo "... src/view/Escenario.i"
 	@echo "... src/view/Escenario.s"
+	@echo "... src/view/MenuWeaponView.o"
+	@echo "... src/view/MenuWeaponView.i"
+	@echo "... src/view/MenuWeaponView.s"
 	@echo "... src/view/SdlException.o"
 	@echo "... src/view/SdlException.i"
 	@echo "... src/view/SdlException.s"
-	@echo "... src/view/Texture.o"
-	@echo "... src/view/Texture.i"
-	@echo "... src/view/Texture.s"
-	@echo "... src/view/View.o"
-	@echo "... src/view/View.i"
-	@echo "... src/view/View.s"
-	@echo "... src/view/Window.o"
-	@echo "... src/view/Window.i"
-	@echo "... src/view/Window.s"
+	@echo "... src/view/Shape.o"
+	@echo "... src/view/Shape.i"
+	@echo "... src/view/Shape.s"
+	@echo "... src/view/Weapon.o"
+	@echo "... src/view/Weapon.i"
+	@echo "... src/view/Weapon.s"
 	@echo "... src/view/WormView.o"
 	@echo "... src/view/WormView.i"
 	@echo "... src/view/WormView.s"
+	@echo "... src/view/mainView.o"
+	@echo "... src/view/mainView.i"
+	@echo "... src/view/mainView.s"
+	@echo "... src/view/newView/Boot.o"
+	@echo "... src/view/newView/Boot.i"
+	@echo "... src/view/newView/Boot.s"
+	@echo "... src/view/newView/SdlException.o"
+	@echo "... src/view/newView/SdlException.i"
+	@echo "... src/view/newView/SdlException.s"
+	@echo "... src/view/newView/SdlScreen.o"
+	@echo "... src/view/newView/SdlScreen.i"
+	@echo "... src/view/newView/SdlScreen.s"
+	@echo "... src/view/newView/Sprite.o"
+	@echo "... src/view/newView/Sprite.i"
+	@echo "... src/view/newView/Sprite.s"
+	@echo "... src/view/newView/SpriteConfigurator.o"
+	@echo "... src/view/newView/SpriteConfigurator.i"
+	@echo "... src/view/newView/SpriteConfigurator.s"
+	@echo "... src/view/newView/TextManager.o"
+	@echo "... src/view/newView/TextManager.i"
+	@echo "... src/view/newView/TextManager.s"
+	@echo "... src/view/newView/TextView.o"
+	@echo "... src/view/newView/TextView.i"
+	@echo "... src/view/newView/TextView.s"
+	@echo "... src/view/newView/TextureManager.o"
+	@echo "... src/view/newView/TextureManager.i"
+	@echo "... src/view/newView/TextureManager.s"
 .PHONY : help
 
 

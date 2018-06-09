@@ -10,9 +10,9 @@ public:
     ProxyClient(std::string socket);
     ~ProxyClient();
     void sendInt(int num);
-    void sendByte(char bye);
+    void sendChar(char bye);
     int receiveInt();
-    char receiveByte();
+    char receiveChar();
     void close();
 };
 

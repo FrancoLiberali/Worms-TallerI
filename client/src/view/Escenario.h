@@ -1,14 +1,14 @@
 #ifndef _ESCENARIO_H
 #define _ESCENARIO_H 
 
-#include "Window.h"
-#include "Texture.h"
+#include "newView/SdlScreen.h"
+#include <list>
 
 class Escenario{
-	Window& window;
+	SdlScreen& screen;
 public:
-	Escenario(Window& window);
+	Escenario(SdlScreen& screen);
 	void draw();
-	
+	void build();
 };
 #endif

@@ -13,11 +13,21 @@ CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/Model.h
-CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Animation.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Escenario.h
-CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Texture.h
-CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/View.h
-CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Window.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/MenuWeaponView.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Shape.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Weapon.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/WormState.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/WormView.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/mainView.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/Boot.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/FontManager.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/GameException.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/SdlException.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/SdlScreen.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/Sprite.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/SpriteConfigurator.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/TextManager.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/TextView.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/newView/TextureManager.h
 

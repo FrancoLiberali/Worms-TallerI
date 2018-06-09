@@ -1,5 +1,5 @@
 #include "Event.h"
 
-void Event::setView(View *view) {
+void Event::setView(mainView *view) {
   this->view = view;
 }
