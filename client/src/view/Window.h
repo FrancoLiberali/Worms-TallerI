@@ -4,6 +4,7 @@
 
 #include <SDL2/SDL.h>
 
+/*Clase en desuso*/
 class Window {
 protected:
 	SDL_Window* window;

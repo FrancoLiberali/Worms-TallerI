@@ -10,11 +10,14 @@
 #include "fake_proxy/mok_proxy.h"
 #include "bazooka.h"
 #include "morter.h"
+#include <cmath>
+#include <stdexcept>
 
 #define MOVE_TAM 9
 #define TURN_LEN 3600
 #define MIN_ANGLE_CHANGE 0.09817477
-#define THREE_SECONDS 181;
+#define THREE_SECONDS 181
+#define MAX_POWER 5
 
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
@@ -25,6 +28,20 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 }
 
 Turn::~Turn(){
+}
+
+void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
+	std::map<int, Gusano*>::iterator gusanos_it = players[player_id].begin();
+	for (; gusanos_it != players[player_id].end(); ++gusanos_it) {
+		Gusano* gusano = gusanos_it->second;
+		delete gusano;
+	}
+	this->players.erase(player_id);
+	this->proxy.erase(player_id);
+	this->proxy.sendPlayerDisconnection(player_id);
+	if (player_id == active_player){
+		turn_actual_len = TURN_LEN;
+	}
 }
 
 void Turn::gusano_move(char* msj, int active_player, int active_gusano){
@@ -58,7 +75,7 @@ void Turn::take_weapon(char* msj, int active_player, int active_gusano){
 		this->weapon = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 		this->sight_angle = 0;
 		this->regresive_time = 5;
-		this->power = 0;
+		this->power = 1;
 		this->proxy.sendTakeWeapon(this->weapon);
 	}
 }
@@ -68,8 +85,11 @@ void Turn::changeSightAngle(char* msj, int active_player, int active_gusano){
 	if (gusano->isInactive()){
 		int change = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 		if (this->weapon != 0 && this->weapon != 7 && this->weapon != 9 && this->weapon != 10){
-			this->sight_angle += change * MIN_ANGLE_CHANGE;
-			this->proxy.sendChangeSightAngle(change);
+			float new_angle = this->sight_angle + change * MIN_ANGLE_CHANGE;
+			if (new_angle < (M_PI / 2) && new_angle > -(M_PI / 2)){
+				this->sight_angle = new_angle;
+				this->proxy.sendChangeSightAngle(change);
+			}
 		}
 	}
 }	
@@ -85,22 +105,27 @@ void Turn::changeRegresiveTime(char* msj, int active_player, int active_gusano){
 
 void Turn::loadPower(int active_player, int active_gusano){
 	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		this->power += 1;
+	if (gusano->isInactive() && this->power < MAX_POWER){
+		this->power += 0.1;
 	}
 }
 
 void Turn::fire(int active_player, int active_gusano, int& turn_actual_len){
 	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive() && !this->fired){
+	if (gusano->isInactive() && !this->fired && this->weapon){
 		std::cout << "fire\n";
+		b2Vec2 position = gusano->GetPosition();
+		int direction = gusano->getDirection();
+		this->actual_max_projectile++;
+		if (direction < 0){
+			this->sight_angle = M_PI - this->sight_angle;
+		}
 		switch(this->weapon){
-			case 0: break;
-			case 1: this->fire_bazooka(gusano);
+			case 1: this->fire_bazooka(gusano, position);
 					this->fired = true;
 					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
-			case 2: this->fire_morter(gusano);
+			case 2: this->fire_morter(gusano, position);
 					this->fired = true;
 					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
@@ -108,18 +133,14 @@ void Turn::fire(int active_player, int active_gusano, int& turn_actual_len){
 	}
 }
 
-void Turn::fire_bazooka(Gusano* gusano){
-	b2Vec2 position = gusano->GetPosition();
-	this->actual_max_projectile++;
+void Turn::fire_bazooka(Gusano* gusano, b2Vec2 position){
 	Bazooka* bazooka = new Bazooka(this->world, this->actual_max_projectile, position.x, 
 						position.y, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->proxy);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, bazooka));
 }
 
-void Turn::fire_morter(Gusano* gusano){
-	b2Vec2 position = gusano->GetPosition();
-	this->actual_max_projectile++;
+void Turn::fire_morter(Gusano* gusano, b2Vec2 position){
 	Morter* morter = new Morter(this->world, this->actual_max_projectile, position.x, 
 						position.y, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->to_create, this->proxy);
@@ -144,7 +165,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			char* msj = this->queue.front();
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
-			if (player_id == active_player && continue_turn){
+			if (msj[0] == 0){
+				this->disconnect(player_id, active_player, i);
+				delete[] msj;
+			}
+			else if (player_id == active_player && continue_turn){
 				switch (msj[0]){
 					case 1: this->gusano_move(msj, active_player, active_gusano);
 							delete[] msj;
@@ -176,6 +201,13 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		
 		this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
 		
+		try{
+			if (this->players.at(active_player).at(active_gusano)->gotDamaged()){
+				i = TURN_LEN;
+			}
+		} catch (std::out_of_range& e){
+		}
+
 		//process map for projectiles deletion
 		std::map<int, Projectile*>::iterator projectiles_remover_it = this->to_remove_projectiles.begin();
 		for (; projectiles_remover_it != this->to_remove_projectiles.end(); ++projectiles_remover_it) {

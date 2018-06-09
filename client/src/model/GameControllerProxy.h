@@ -10,7 +10,9 @@ private:
 public:
     GameControllerProxy(Queue<ClientCommand *> &queue);
     ~GameControllerProxy();
-    void move(const int idWorm, const int direccion);
+    void move(const int idJugador, const int direccion);
+    void jump(const int idJugador, const int direccion);
+    void weapon(const int idJugador, const int idWeapon);
 };
 
 #endif

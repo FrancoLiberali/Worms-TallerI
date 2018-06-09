@@ -1,10 +1,10 @@
 #include "WormMoveCommand.h"
 
-WormMoveCommand::WormMoveCommand(int idWorm, const int dir)
-    :idWorm(idWorm), dir(dir){}
+WormMoveCommand::WormMoveCommand(int idJugador, const int dir)
+    :idJugador(idJugador), dir(dir){}
     
 void WormMoveCommand::send(ProxyClient& proxy){
-    proxy.sendByte(1);
-    proxy.sendInt(idWorm);
+    proxy.sendChar(1);
+    proxy.sendInt(idJugador);
     proxy.sendInt(dir);
 }

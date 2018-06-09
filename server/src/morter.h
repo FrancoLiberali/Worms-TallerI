@@ -12,7 +12,7 @@
 
 class Morter : public FragmentProjectile {
 	public:
-		Morter(b2World& world_entry, int number, float x, float y, float angle, int power, 
+		Morter(b2World& world_entry, int number, float x, float y, float angle, float power, 
 		GameConstants& info, std::map<int, Projectile*>& to_remove, std::vector<FragmentInfo*>& to_create_e,
 		MultipleProxy& proxy);
 		

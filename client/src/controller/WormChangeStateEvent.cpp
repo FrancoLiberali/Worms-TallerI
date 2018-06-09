@@ -7,7 +7,7 @@ WormChangeStateEvent::WormChangeStateEvent(int id, int state)
             case 0: newState = STATIC; break;
             case 1: newState = MOVE; break;
             case 2: newState = JUMP; break;
-            case 3: newState = DEATH; break;
+            case 3: newState = DEAD; break;
         }
     }
 	

@@ -6,7 +6,8 @@
 #include <sstream>
 
 ClientEventReceiver::ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& q,
-	std::string socket):socket_file(socket), proxy(proxy), q(q), closed(false){
+	std::string socket, Model& model):socket_file(socket), proxy(proxy), q(q),
+	model(model), closed(false){
 	
 	std::cout << "ClientEventReceiver construido" << std::endl;
 }
@@ -26,24 +27,28 @@ EventType getTypeEvent(std::stringstream& ss){
 	ss >> type;
 
 	switch (type){
-		case 0: return W_CHANGE_STATE;
-		case 1: return W_MOVE;
-		case 2: return W_JUMP;
-		case 3: return W_ATTACK;
-		case 4: return W_DEATH;
-		case 5: return G_ENDGAME;
+		case 3: return W_MOVE;
+		case 4: return START_TURN;
+		case 5: return W_CHANGE_STATE;
+		case 6: return B_POS;
+		case 7: return B_EXPLOTE;
+		case 8: return W_CUR_WEAPON;
+		case 9: return W_CUR_AIM;
+		case 10: return G_ENDGAME;
 	}
 	return W_MOVE;
 }
 
 EventType getTypeEvent(int& type){
 	switch (type){
-		case 0: return W_CHANGE_STATE;
-		case 1: return W_MOVE;
-		case 2: return W_JUMP;
-		case 3: return W_ATTACK;
-		case 4: return W_DEATH;
-		case 5: return G_ENDGAME;
+		case 3: return W_MOVE;
+		case 4: return START_TURN;
+		case 5: return W_CHANGE_STATE;
+		case 6: return B_POS;
+		case 7: return B_EXPLOTE;
+		case 8: return W_CUR_WEAPON;
+		case 9: return W_CUR_AIM;
+		case 10: return G_ENDGAME;
 	}
 	return W_MOVE;
 }
@@ -63,7 +68,7 @@ void ClientEventReceiver::run(){
 		std::cout << str << std::endl;
 		std::stringstream ss(str);
 		EventType type = getTypeEvent(ss);
-		Event* event = EventFactory::createEvent(type, ss);
+		Event* event = EventFactory::createEvent(type, ss, model);
 		q.push(event);
 		if (ifs.eof())
 			this->stop();

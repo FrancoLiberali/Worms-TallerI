@@ -20,6 +20,8 @@ class ProtectedQueue{
 		char* front();
 		
 		bool isEmpty();
+		
+		void empty();
 };
 
 #endif

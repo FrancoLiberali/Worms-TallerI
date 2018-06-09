@@ -3,7 +3,7 @@
 #include "SdlException.h"
 
 Window::Window(int width, int height):width(width), height(height){
-	SDL_Init(SDL_INIT_VIDEO);
+	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	IMG_Init(IMG_INIT_PNG);
 
 	window = SDL_CreateWindow("WORMS",SDL_WINDOWPOS_CENTERED,SDL_WINDOWPOS_CENTERED,
@@ -15,7 +15,7 @@ Window::Window(int width, int height):width(width), height(height){
 	if (window == NULL)
 		throw SdlException("Error al crear el render\n", SDL_GetError());	
 
-	//SDL_SetRenderDrawColor(render, 0x33, 0x33, 0x33, 0xFF);
+	SDL_SetRenderDrawColor(render, 0x33, 0x33, 0x64, 0xFF);
 	this->fill();
 }
 

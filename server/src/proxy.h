@@ -7,6 +7,7 @@
 class Proxy{
 	private:
 		Socket socket;
+		int id = 0;
 		
 		void receive_event_info(ProtectedQueue& queue, char event, int tam);
 	public:
@@ -55,6 +56,10 @@ class Proxy{
 		void sendChangeSightAngle(int change);
 		
 		void sendLifeChange(int player_id, int gusano_id, int new_life);
+		
+		void sendPlayerDisconnection(int player_id);
+		
+		void sendGameWon(int player_id);
 		
 		void send_int(int to_send);
 		

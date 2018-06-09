@@ -69,6 +69,14 @@ UN GUSANO CAMBIO SU VIDA
 	int con el numero de gusano de ese dueño
 	int nueva vida
 
+UN JUGADOR SE HA DESCONECTADO
+	char en 11
+	int numero de jugador que se desconecto
+
+Un JUGADOR HA GANADO LA PARTIDA
+	char en 12
+	int numero de jugador ganador
+
 
 	
 

@@ -8,13 +8,15 @@
 class Model {
 private:
 	int idWormSelected;
+	int idJugador;
 	GameControllerProxy& gcp;
 public:
 	Model(GameControllerProxy& gcp);
 	~Model();
-	void KeyWormMove(int dir);
-	void KeyWormJump();
-	void leftClick();
+	void WormMove(const int dir);
+	void WormJump(const int dir);
+	void WormWeapon(const int idWeapon);
+	int getIdWormSelected();
 };
 
 #endif

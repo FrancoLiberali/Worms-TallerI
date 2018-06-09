@@ -1,53 +1,158 @@
 #include "WormView.h"
 #include <iostream>
 
-WormView::WormView(){
+WormView::WormView(int id):flip(SDL_FLIP_NONE){
 	this->state = STATIC;
-	this->dir = 1;
+	currentSprite = NULL;
+	this->selected = true;
+	white.a = 0xFF;
+	white.r = 0xFF;
+	white.g = 0xFF;
+	white.b = 0xFF;
+	this->weaponId = NO_WEAPON;
+	this->widhtLife100 = 25;
+	this->widhtLifeCurrent = 25;
+	this->currentLife = 100;
+	this->alive = true;
 }
 
-void WormView::load(int x, int y, Window* window){
+void WormView::load(int x, int y, SdlScreen* screen){
 	this->setPos(x, y);
-	this->window = window;
-	//Cargamos todas las animaciones
+	this->screen = screen;
 
-	//animacion estática
-	Animation* w_static = new Animation();
-	w_static->load("wlazy.png", *window);
-	//w_static->setPos(x,y);
-	w_static->setFrames(33);
-	this->animations.emplace(STATIC, w_static);
+	//Cargamos los sprites
+	try {
+		sprites["caminar"] = SpriteConfigurator::Instance().get("caminar");
+		sprites["saltar"] = SpriteConfigurator::Instance().get("saltar");
+		sprites["morir"] = SpriteConfigurator::Instance().get("morir");
+		sprites["cripta"] = SpriteConfigurator::Instance().get("cripta");
+		sprites["explosion"] = SpriteConfigurator::Instance().get("circle25");
 
-	//animacion de caminar
-	Animation* w_walk = new Animation();
-	w_walk->load("wwalk.png", *window);
-	//w_walk->setPos(x,y);
-	w_walk->setFrames(15);
-	this->animations.emplace(MOVE, w_walk);
-
-	//this->animations[state]->render();
+		sprites["bazooka"] = SpriteConfigurator::Instance().get("bazooka");
+		sprites["dinamita"] = SpriteConfigurator::Instance().get("dinamita");
+		sprites["ggranada"] = SpriteConfigurator::Instance().get("ggranada");
+		sprites["rgranada"] = SpriteConfigurator::Instance().get("rgranada");
+		sprites["holy"] = SpriteConfigurator::Instance().get("holy");
+		sprites["radio"] = SpriteConfigurator::Instance().get("radio");
+		sprites["bate"] = SpriteConfigurator::Instance().get("bate");
+		sprites["banana"] = SpriteConfigurator::Instance().get("banana");
+		sprites["bate"] = SpriteConfigurator::Instance().get("bate");
+		sprites["mortero"] = SpriteConfigurator::Instance().get("mortero");
+		sprites["teleport"] = SpriteConfigurator::Instance().get("teleport");
+	
+	} catch (std::exception & e) {
+		std::cout<<e.what()<<std::endl;
+		return;
+	}
 	this->update();
 }
 
 void WormView::setPos(int x, int y){
 		std::cout << "x: " << x << "y: " << y <<std::endl;
 	this->x = x; this->y = y;
-	/*for (auto& it : this->animations){
-		it.second->setPos(x,y);
-	}*/
+
 }
+
+void WormView::setPlayerName(std::string player){
+	labelUsuario.setText(player, white);
+}
+
 
 void WormView::update(){
-	std::cout << "Worm update" << std::endl;
-	this->animations[state]->setPos(x,y);
-	bool flip = (dir == 1)? true : false;
-	this->animations[state]->render(flip, angle);
+	if (currentSprite == NULL) {
+		currentSprite = &this->sprites["caminar"];
+	}
+	if (this->state == JUMP){
+		// Camino sin arma
+		if (currentSprite != &this->sprites["saltar"])
+			currentSprite = &this->sprites["saltar"];
+		currentSprite->update();
+	} else if (this->state == MOVE){
+		// Camino sin arma
+		if (currentSprite != &this->sprites["caminar"])
+			currentSprite = &this->sprites["caminar"];
+		currentSprite->update();
+	} 
+	else if (this->state == STATIC){
+		if (this->weaponId == G_GRENADE && currentSprite != &this->sprites["ggranada"]) 
+			currentSprite = &this->sprites["ggranada"];
+		
+		if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"])
+			currentSprite = &this->sprites["rgranada"];
+		
+		if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]) 
+			currentSprite = &this->sprites["dinamita"];
+		
+		if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]) 
+			currentSprite = &this->sprites["bazooka"];
+		
+		if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]) 
+			currentSprite = &this->sprites["banana"];
+		
+		if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]) 
+			currentSprite = &this->sprites["mortero"];
+		
+		if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]) 
+			currentSprite = &this->sprites["holy"];
+		
+		if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"])
+			currentSprite = &this->sprites["radio"];
+		
+		if (this->weaponId == BATE && currentSprite != &this->sprites["bate"])
+			currentSprite = &this->sprites["bate"];
+		
+		if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]) 
+			currentSprite = &this->sprites["teleport"];
+		
+		if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["caminar"]) 
+			currentSprite = &this->sprites["caminar"];
+		currentSprite->clean();
+
+	} else if (this->state == DEAD) {
+	
+		std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
+		if (alive)
+			currentSprite = &this->sprites["morir"];
+
+		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame())
+			currentSprite = &this->sprites["explosion"];
+
+		alive = false;
+		currentSprite->update();
+	}
+	draw();
 }
 
+
+void WormView::draw(){
+	
+	TextureManager::Instance().drawFrame(currentSprite->getImageId(),
+									getXCenter(),getYCenter(), angle, 
+									currentSprite->getWidth(),
+									currentSprite->getHeight(),
+									currentSprite->getCurrentRow(),
+									currentSprite->getCurrentFrame(),
+									screen->getRenderer(),false,flip);
+	 
+	if (this->selected)
+		labelUsuario.draw(screen->getRenderer(),this->getXCenter(),  this->getYCenter() - 15);
+	
+
+	SDL_Rect rect;
+	rect.x = this->getX() -10;
+	rect.y = this->getY()-22;
+	rect.w = this->widhtLifeCurrent;
+	rect.h = 5;
+	SDL_Color color = {255, 255, 153};
+	TextureManager::Instance().drawFillRect(screen->getRenderer(),rect, color);
+}
+
+void WormView::selectWeapon(WeaponId idWapon){
+	this->weaponId = idWapon;
+}
+
+
 WormView::~WormView(){
-	for (auto& it : this->animations){
-		delete it.second;
-	}
 }
 
 void WormView::changeState(WormState newState){
@@ -57,8 +162,26 @@ void WormView::changeState(WormState newState){
 }
 
 void WormView::setDirection(int dir){
-	this->dir = dir;
+	flip = (dir == 1)? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
 }
 void WormView::setAngle(int angle){
 	this->angle = angle;
+}
+
+int WormView::getXCenter()
+{
+	return this->getX()-(currentSprite->getWidth()/2);
+}
+
+int WormView::getX(){
+	return this->x;
+}
+
+int WormView::getY(){
+	return this->y;
+}
+
+int WormView::getYCenter()
+{
+	return this->getY()-(currentSprite->getHeight()/2);
 }

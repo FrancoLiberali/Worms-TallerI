@@ -5,10 +5,10 @@
 
 class WormMoveCommand : public ClientCommand{
 private:
-    int  idWorm;
+    int  idJugador;
     int dir;
 public:
-    WormMoveCommand(int idWorm, const int dir);
+    WormMoveCommand(int idJugador, const int dir);
     void send(ProxyClient& proxy);
 };
 

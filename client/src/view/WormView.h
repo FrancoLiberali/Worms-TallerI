@@ -1,30 +1,56 @@
 #ifndef _WORM_VIEW_
 #define _WORM_VIEW_ 
 
-#include "Window.h"
-#include "Animation.h"
+#include "newView/SdlScreen.h"
 #include "WormState.h"
-#include <map>
+#include "newView/Sprite.h"
+#include "newView/SpriteConfigurator.h"
+#include "newView/TextureManager.h"
+#include "newView/TextView.h"
 
-#define ALIVE = 0;
-#define DEAD = 1;
+#include <map>
 
 class WormView {
 private:
-	Window* window;
-	int id, x, y, dir, angle;
+	SdlScreen* screen;
+	int id, x, y, angle;
+	SDL_RendererFlip flip;
+
 	WormState state;
-	Animation anime;
-	std::map<WormState, Animation*> animations; 
+
+	Sprite* currentSprite;
+	std::map<std::string, Sprite> sprites;
+
+	int currentLife;
+	int widhtLife100;
+	int widhtLifeCurrent;
+
+	WeaponId weaponId;
+
+	bool selected;
+
+	SDL_Color white;
+
+	bool alive;
+	TextView labelUsuario;
+
+	void draw();
+	int getXCenter();
+	int getYCenter();
 public:
-	WormView();
+	WormView(int id);
+	void setPlayerName(std::string player);
 	~WormView();
-	void load(int x, int y, Window* window);
+	void selectWeapon(WeaponId idWapon);
+	void unselectWeapon() {this->weaponId = NO_WEAPON;}
+	void load(int x, int y, SdlScreen* window);
 	void setPos(int x, int y);
+	int getX();
+	int getY();
 	void update();
 	void changeState(WormState newState);
 	void setDirection(int dir);
-	void setAngle(int angle);	
+	void setAngle(int angle);
 };
 
 #endif

@@ -5,7 +5,22 @@ enum WormState {
 	STATIC,
 	MOVE,
 	JUMP,
-	DEATH,
+	WATER,
+	DEAD,
+};
+
+enum WeaponId {
+	NO_WEAPON,
+	BAZOOKA,
+	MORTERO,
+	G_GRENADE,
+	R_GRENADE,
+	BANANA,
+	HOLY,
+	DYNAMITE,
+	BATE,
+	AIRATTACK,
+	TELEPORT,
 };
 
 #endif

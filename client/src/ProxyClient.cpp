@@ -9,15 +9,16 @@ ProxyClient::~ProxyClient(){
 }
 
 void  ProxyClient::sendInt(int num){
-    std::cout<<num; 
+    std::cout<<num <<std::endl;
 }
-void ProxyClient::sendByte(char byte){
-    std::cout<<byte; 
+
+void ProxyClient::sendChar(char byte){
+    std::cout<<(int)byte<<std::endl; 
 }
 int ProxyClient::receiveInt(){
     return 0;
 }
-char ProxyClient::receiveByte(){
+char ProxyClient::receiveChar(){
     return 0;
 }
 

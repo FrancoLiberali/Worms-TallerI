@@ -1,17 +1,21 @@
 #include "Model.h"
 
-Model::Model(GameControllerProxy& gcp): gcp(gcp), idWormSelected(1){}
+Model::Model(GameControllerProxy& gcp): gcp(gcp), idWormSelected(2){}
 
 Model::~Model(){}
 
-void Model::KeyWormMove(int dir){
-    gcp.move(idWormSelected, dir);
+void Model::WormMove(const int dir){
+    gcp.move(idJugador, dir);
 }
 
-void Model::KeyWormJump(){
-
+void Model::WormJump(const int dir){
+    gcp.jump(idJugador, dir);
 }
 
-void Model::leftClick(){
+void Model::WormWeapon(const int idWeapon){
+    gcp.weapon(idJugador, idWeapon);
+}
 
+int Model::getIdWormSelected(){
+    return this->idWormSelected;
 }

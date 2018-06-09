@@ -1,16 +1,16 @@
 #ifndef _EVENT_H
 #define _EVENT_H
 
-class View;
-#include "../view/View.h"
+class mainView;
+#include "../view/mainView.h"
 #include "../model/Model.h"
 
 class Event {
 protected:
-	View* view;
+	mainView* view;
 	Model* model;
 public:
-	void setView(View *view);
+	void setView(mainView *view);
 	virtual void process() = 0;
 	virtual ~Event(){};	
 };

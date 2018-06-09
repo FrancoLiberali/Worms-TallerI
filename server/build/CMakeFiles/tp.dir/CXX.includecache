@@ -1171,10 +1171,16 @@ jumping_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.h
 moving_finished.h
 /home/franco/Documentos/taller1/tpfinal/server/src/moving_finished.h
+iostream
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.h
 gusano_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/gusano_state.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+gusano.h
+/home/franco/Documentos/taller1/tpfinal/server/src/gusano.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp
 little_projectile.h
@@ -1224,6 +1230,8 @@ gusano_state.h
 multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 cmath
+-
+iostream
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
@@ -1299,6 +1307,8 @@ user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.cpp
 receiver.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
+socket_error.h
+/home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
 thread.h
@@ -1425,6 +1435,10 @@ bazooka.h
 /home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
 morter.h
 /home/franco/Documentos/taller1/tpfinal/server/src/morter.h
+cmath
+-
+stdexcept
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/turn.h
 Box2D/Box2D.h
