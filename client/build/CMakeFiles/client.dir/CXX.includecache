@@ -6,41 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 string
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/clientMain.cpp
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/clientMain.cpp
 iostream
 -
 string
 -
 controller/ClientEventReceiver.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/ClientEventReceiver.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.h
 controller/ClientCommandSender.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/ClientCommandSender.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.h
 view/mainView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 controller/EventHandler.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/EventHandler.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
 common/Queue.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 controller/Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ProxyClient.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 model/GameControllerProxy.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/GameControllerProxy.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
 model/Model.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/Model.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 controller/Controller.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Controller.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.h
 view/newView/Boot.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/Boot.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Boot.h
 iostream
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 queue
 -
 mutex
@@ -48,137 +48,137 @@ mutex
 condition_variable
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Thread.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
 thread
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/ClientCommandSender.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.h
 string
 -
 ../common/Queue.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 ../common/Thread.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Thread.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
 ../model/ClientCommand.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/ClientCommand.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.h
 ../ProxyClient.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/ClientEventReceiver.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.h
 ../common/Queue.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 ../common/Thread.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Thread.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
 ../ProxyClient.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 ../model/Model.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/Model.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Controller.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.h
 ../model/Model.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/Model.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 ../view/mainView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ../view/mainView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 ../model/Model.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/Model.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/EventHandler.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
 queue
 -
 string
 -
 Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 ../view/mainView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/ClientCommand.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.h
 ../ProxyClient.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/GameControllerProxy.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
 ../common/Queue.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/common/Queue.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 ClientCommand.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/ClientCommand.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/Model.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 GameControllerProxy.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/model/GameControllerProxy.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
 map
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Escenario.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 newView/SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 list
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/MenuWeaponView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
 newView/TextureManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 newView/SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 WormState.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormState.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
 Weapon.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Weapon.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
 map
 -
 list
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Shape.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
 map
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Weapon.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
 list
 -
 WormState.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormState.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
 newView/SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 Shape.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Shape.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
 SDL2/SDL.h
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormState.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
 newView/SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 WormState.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormState.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
 newView/Sprite.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/Sprite.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Sprite.h
 newView/SpriteConfigurator.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SpriteConfigurator.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SpriteConfigurator.h
 newView/TextureManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 newView/TextView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextView.h
 map
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 ../controller/EventHandler.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/EventHandler.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
 newView/SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 Escenario.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/Escenario.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 WormView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/WormView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
 ../controller/Event.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/controller/Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -188,15 +188,15 @@ string
 map
 -
 MenuWeaponView.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/MenuWeaponView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/Boot.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Boot.h
 map
 -
 SdlScreen.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/FontManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/FontManager.h
 SDL2/SDL.h
 -
 SDL2/SDL_ttf.h
@@ -208,17 +208,17 @@ map
 string
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/GameException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
 string
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
 string
 -
 exception
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlScreen.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
 string
 -
 SDL2/SDL.h
@@ -228,13 +228,13 @@ SDL2/SDL_image.h
 SDL2/SDL_ttf.h
 -
 SdlException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/Sprite.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Sprite.h
 string
 -
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SpriteConfigurator.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SpriteConfigurator.h
 string
 -
 sstream
@@ -242,11 +242,11 @@ sstream
 map
 -
 Sprite.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/Sprite.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Sprite.h
 GameException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/GameException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextManager.h
 SDL2/SDL_mixer.h
 -
 map
@@ -254,9 +254,9 @@ map
 SDL2/SDL.h
 -
 TextureManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextView.h
 SDL2/SDL.h
 -
 SDL2/SDL_ttf.h
@@ -268,13 +268,13 @@ iostream
 string.h
 -
 TextureManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 FontManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/FontManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/FontManager.h
 TextManager.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextManager.h
 
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/TextureManager.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 SDL2/SDL.h
 -
 SDL2/SDL_image.h
@@ -284,7 +284,7 @@ map
 string
 -
 SdlException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/SdlException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
 GameException.h
-/home/edlinux/Escritorio/taller/TPs/TP_final/client/src/view/newView/GameException.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
 
