@@ -11,6 +11,7 @@ add_library(alllib
     src/controller/EventFactory.cpp
     src/controller/WormMoveEvent.cpp
     src/controller/WormChangeStateEvent.cpp
+	src/controller/WormChangeLifeEvent.cpp
     src/controller/WormWeaponEvent.cpp
     src/controller/ClientCommandSender.cpp
 	src/controller/Controller.cpp

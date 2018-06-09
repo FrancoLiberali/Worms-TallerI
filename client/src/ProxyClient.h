@@ -7,10 +7,10 @@
 class ProxyClient {
 private:
     Socket sktClient;
-    std::string socket;
 public:
-    ProxyClient(std::string socket);
     ProxyClient(Socket socket);
+    ProxyClient();
+
     ~ProxyClient() noexcept;
     void close();
     void sendInt(int num);

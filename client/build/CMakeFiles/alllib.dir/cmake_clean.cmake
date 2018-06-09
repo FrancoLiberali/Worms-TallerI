@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o"
+  "CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/Controller.cpp.o"

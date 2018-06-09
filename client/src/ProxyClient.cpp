@@ -3,13 +3,11 @@
 #include "common/socket_error.h"
 #include <iostream>
 
- ProxyClient::ProxyClient(std::string socket):socket(socket){ 
+ProxyClient::ProxyClient(Socket socket): sktClient(std::move(socket)){
  }
+ 
+ProxyClient::ProxyClient(){}
 
-
- ProxyClient::ProxyClient(Socket socket): sktClient(std::move(socket)){
- }
-   
 ProxyClient::~ProxyClient() noexcept{
     std::cout << "cerrar socket" << std::endl;
 }
