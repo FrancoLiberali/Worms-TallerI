@@ -185,3 +185,8 @@ int WormView::getYCenter()
 {
 	return this->getY()-(currentSprite->getHeight()/2);
 }
+
+void WormView::changeLife(int newLife){
+	int widhtLifeCurrent = newLife * widhtLife100 /100;
+	currentLife = newLife;
+}

@@ -2,14 +2,16 @@
 #define _EVENT_TYPE 
 
 enum EventType {
-	W_MOVE = 3,
-	START_TURN = 4,
-	W_CHANGE_STATE = 5,
-	B_POS = 6,
-	B_EXPLOTE = 7,
-	W_CUR_WEAPON = 8,
-	W_CUR_AIM = 9,
-	G_ENDGAME = 10,
+	START_TURN = 5,
+	W_MOVE = 6,
+	W_CHANGE_STATE = 7,
+	B_POS = 8,
+	B_EXPLOTE = 9,
+	W_CUR_WEAPON = 10,
+	W_CUR_AIM = 11,
+	W_CHANGE_LIFE = 12,
+	G_PLAYER_OFF = 13,
+	G_PLAYER_WIN = 14,
 };
 
 #endif

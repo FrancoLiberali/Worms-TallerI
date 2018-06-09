@@ -477,6 +477,33 @@ src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
 
+src/controller/WormChangeLifeEvent.o: src/controller/WormChangeLifeEvent.cpp.o
+
+.PHONY : src/controller/WormChangeLifeEvent.o
+
+# target to build an object file
+src/controller/WormChangeLifeEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o
+.PHONY : src/controller/WormChangeLifeEvent.cpp.o
+
+src/controller/WormChangeLifeEvent.i: src/controller/WormChangeLifeEvent.cpp.i
+
+.PHONY : src/controller/WormChangeLifeEvent.i
+
+# target to preprocess a source file
+src/controller/WormChangeLifeEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.i
+.PHONY : src/controller/WormChangeLifeEvent.cpp.i
+
+src/controller/WormChangeLifeEvent.s: src/controller/WormChangeLifeEvent.cpp.s
+
+.PHONY : src/controller/WormChangeLifeEvent.s
+
+# target to generate assembly for a file
+src/controller/WormChangeLifeEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.s
+.PHONY : src/controller/WormChangeLifeEvent.cpp.s
+
 src/controller/WormChangeStateEvent.o: src/controller/WormChangeStateEvent.cpp.o
 
 .PHONY : src/controller/WormChangeStateEvent.o
@@ -1172,6 +1199,9 @@ help:
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/controller/WormChangeLifeEvent.o"
+	@echo "... src/controller/WormChangeLifeEvent.i"
+	@echo "... src/controller/WormChangeLifeEvent.s"
 	@echo "... src/controller/WormChangeStateEvent.o"
 	@echo "... src/controller/WormChangeStateEvent.i"
 	@echo "... src/controller/WormChangeStateEvent.s"

@@ -155,6 +155,8 @@ WormChangeStateEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.h
 WormWeaponEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormWeaponEvent.h
+WormChangeLifeEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.h
 EventType.h
@@ -183,6 +185,16 @@ Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventType.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp
+WormChangeLifeEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.h
+iostream
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp
 WormChangeStateEvent.h

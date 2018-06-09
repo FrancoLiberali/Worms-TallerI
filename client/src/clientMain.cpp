@@ -52,12 +52,10 @@ int main(int argc, char *argv[])
 		proxy.sendInt(numPlayers);
 	}
 
-
 	Boot boot;
 	boot.init();
 
 	//GameBuilder builder(proxy);
-	
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
 	ClientCommandSender commmandSender(proxy, commandsQueue);

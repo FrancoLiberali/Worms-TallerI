@@ -51,6 +51,7 @@ public:
 	void changeState(WormState newState);
 	void setDirection(int dir);
 	void setAngle(int angle);
+	void changeLife(int newLife);
 };
 
 #endif
