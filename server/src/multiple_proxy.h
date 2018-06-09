@@ -15,6 +15,8 @@ class MultipleProxy{
 		
 		void add(Proxy* proxy);
 		
+		void erase(int id);
+		
 		void sendTurnBegining(int player_id, int gusano_id);
 		
 		void send_state_change(int player_id, int gusano_id, int new_state);
@@ -33,7 +35,9 @@ class MultipleProxy{
 		
 		void sendLifeChange(int player_id, int gusano_id, int new_life);
 		
-		//void delete(int id);
+		void sendPlayerDisconnection(int player_id);
+		
+		void sendGameWon(int player_id);
 		
 };
 

@@ -3,12 +3,13 @@
 #include "socket_error.h"
 #include <iostream>
 
-/*typedef unsigned char uc;
+
 #define LAST8 0xFF
 #define MOSTSIGNIFICANT 24
 #define SECONDBYTE 16
-#define THIRDBYTE 8*/
+#define THIRDBYTE 8
 
+#define DISCONNECT_TAM 5
 #define GAME_INFO_TAM 9
 #define MOVE_TAM 9
 #define JUMP_TAM 5
@@ -137,7 +138,17 @@ void Proxy::receive_event(ProtectedQueue& queue){
 					break;
 			}
 	}catch (SocketError& e){
-		std::cout << "se corto conexion\n";
+		std::cout << "se desconecto\n";
+		std::cout << this->id << "\n";
+		char* msj = new char[DISCONNECT_TAM];
+		//player get desconected message
+		msj[0] = 0;
+		msj[1] = (this->id >> MOSTSIGNIFICANT) & LAST8;
+		msj[2] = (this->id >> SECONDBYTE) & LAST8;
+		msj[3] = (this->id >> THIRDBYTE) & LAST8;
+		msj[4] = this->id & LAST8;
+		queue.push(msj);
+		throw e;
 	}
 }
 
@@ -157,6 +168,7 @@ const unsigned char Proxy::receive_char(){
 void Proxy::sendPlayerId(int id){
 	char event = 0;
 	this->socket.send_(&event, ONEBYTE);
+	this->id = id;
 	this->send_int(id);
 }
 
@@ -230,6 +242,18 @@ void Proxy::sendLifeChange(int player_id, int gusano_id, int new_life){
 	this->send_int(player_id);
 	this->send_int(gusano_id);
 	this->send_int(new_life);
+}
+
+void Proxy::sendPlayerDisconnection(int player_id){
+	char event = 11;
+	this->socket.send_(&event, ONEBYTE);
+	this->send_int(player_id);
+}
+
+void Proxy::sendGameWon(int player_id){
+	char event = 12;
+	this->socket.send_(&event, ONEBYTE);
+	this->send_int(player_id);
 }
 
 void Proxy::send_int(int to_send){

@@ -1251,6 +1251,7 @@ CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.cpp
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/socket.h
+CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/socket_error.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/thread.h
 
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../Box2D/Box2D.h

@@ -11,6 +11,7 @@
 #include "bazooka.h"
 #include "morter.h"
 #include <cmath>
+#include <stdexcept>
 
 #define MOVE_TAM 9
 #define TURN_LEN 3600
@@ -27,6 +28,20 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 }
 
 Turn::~Turn(){
+}
+
+void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
+	std::map<int, Gusano*>::iterator gusanos_it = players[player_id].begin();
+	for (; gusanos_it != players[player_id].end(); ++gusanos_it) {
+		Gusano* gusano = gusanos_it->second;
+		delete gusano;
+	}
+	this->players.erase(player_id);
+	this->proxy.erase(player_id);
+	this->proxy.sendPlayerDisconnection(player_id);
+	if (player_id == active_player){
+		turn_actual_len = TURN_LEN;
+	}
 }
 
 void Turn::gusano_move(char* msj, int active_player, int active_gusano){
@@ -150,7 +165,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			char* msj = this->queue.front();
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
-			if (player_id == active_player && continue_turn){
+			if (msj[0] == 0){
+				this->disconnect(player_id, active_player, i);
+				delete[] msj;
+			}
+			else if (player_id == active_player && continue_turn){
 				switch (msj[0]){
 					case 1: this->gusano_move(msj, active_player, active_gusano);
 							delete[] msj;
@@ -182,8 +201,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		
 		this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
 		
-		if (this->players[active_player][active_gusano]->gotDamaged()){
-			i = TURN_LEN;
+		try{
+			if (this->players.at(active_player).at(active_gusano)->gotDamaged()){
+				i = TURN_LEN;
+			}
+		} catch (std::out_of_range& e){
 		}
 
 		//process map for projectiles deletion

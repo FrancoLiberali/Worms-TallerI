@@ -1,5 +1,6 @@
 #include "multiple_proxy.h"
 #include <cmath>
+#include <iostream>
 
 MultipleProxy::MultipleProxy(){
 }
@@ -9,6 +10,11 @@ MultipleProxy::~MultipleProxy(){
 
 void MultipleProxy::add(Proxy* proxy){
 	this->proxys.push_back(proxy);
+}
+
+void MultipleProxy::erase(int id){
+	this->proxys.erase(this->proxys.begin() + (id - 1));
+	std::cout << this->proxys.size() << "\n";
 }
 
 void MultipleProxy::sendTurnBegining(int player_id, int gusano_id){
@@ -71,6 +77,21 @@ void MultipleProxy::sendLifeChange(int player_id, int gusano_id, int new_life){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
 		(*it)->sendLifeChange(player_id, gusano_id, new_life);
+	}
+}
+
+void MultipleProxy::sendPlayerDisconnection(int player_id){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		std::cout << "hay algo\n";
+		(*it)->sendPlayerDisconnection(player_id);
+	}
+}
+
+void MultipleProxy::sendGameWon(int player_id){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendGameWon(player_id);
 	}
 }
 		
