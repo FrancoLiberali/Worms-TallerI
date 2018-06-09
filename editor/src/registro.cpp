@@ -81,6 +81,7 @@ YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)
        out << YAML::BeginMap;
        out << YAML::Key << "vida_gusanos";
        out << YAML::Value << obj.vida_gusanos;
+       out << YAML::EndMap;
 
         // Vigas.
         for (unsigned int i = 0; i < obj.vigas.size(); ++i){

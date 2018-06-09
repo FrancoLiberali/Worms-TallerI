@@ -92,6 +92,16 @@ void MokProxy::receive_event(){
 				std::cout << "10 " << duenio << " " << id << " " << new_life << "\n";
 				break;
 			}
+		case 11: {//jugador desconectado
+			int id = this->receive_int();
+			std::cout << "11 " << id << "\n";
+			break;
+		}
+		case 12: {//jugador gano la partida
+			int id = this->receive_int();
+			std::cout << "12 " << id << "\n";
+			break;
+		}
 	}
 }
 

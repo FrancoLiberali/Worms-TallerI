@@ -34,6 +34,7 @@ class Turn{
 		float power = 1;
 		bool fired;
 		
+		void disconnect(int player_id, int active_player, int& turn_actual_len);
 		void gusano_move(char* msj, int active_player, int active_gusano);
 		void gusano_jump(char* msj, int active_player, int active_gusano);
 		void gusano_back_jump(char* msj, int active_player, int active_gusano);

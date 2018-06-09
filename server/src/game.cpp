@@ -110,35 +110,39 @@ Game::~Game(){
 			delete gusano;
 		}
 	}
+	this->queue.empty();
 }
 
 void Game::play(){
+	this->queue.empty();
 	Turn turn(this->world, this->queue, this->players, this->to_remove_gusanos, this->info, this->proxy);
 	
-	while (this->players.size() != 1){
-		for (int i = 1; i <= this->cant_players; i++){
-			try{
-				std::map<int, Gusano*> gusanos = this->players.at(i);
-				std::cout << "new turn: " << i << "\n";
-				while (true){
-					try{
-						gusanos.at(this->next[i]);
-						turn.play(i, this->next[i]);
-						this->next[i]++;
-						break;
-					} catch (std::out_of_range& e){
-						this->next[i]++;
-						if (this->next[i] > this->gusanos_per_player){
-							this->next[i] = 1;
-						}
+	for (int i = 1; i <= this->cant_players; i++){
+		if (this->players.size() == 1){
+			break;
+		}
+		try{
+			std::map<int, Gusano*> gusanos = this->players.at(i);
+			std::cout << "new turn: " << i << "\n";
+			while (true){
+				try{
+					gusanos.at(this->next[i]);
+					turn.play(i, this->next[i]);
+					this->next[i]++;
+					break;
+				} catch (std::out_of_range& e){
+					this->next[i]++;
+					if (this->next[i] > this->gusanos_per_player){
+						this->next[i] = 1;
 					}
 				}
-			} catch (std::out_of_range& e){
-				continue;
 			}
+		} catch (std::out_of_range& e){
+			continue;
 		}
 	}
 	std::cout << "salio\n";
+	this->proxy.sendGameWon(this->players.begin()->first);
 	//fin de juego
 			
 	

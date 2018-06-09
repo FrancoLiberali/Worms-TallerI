@@ -1231,6 +1231,8 @@ multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 cmath
 -
+iostream
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 vector
@@ -1305,6 +1307,8 @@ user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.cpp
 receiver.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
+socket_error.h
+/home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
 thread.h
@@ -1432,6 +1436,8 @@ bazooka.h
 morter.h
 /home/franco/Documentos/taller1/tpfinal/server/src/morter.h
 cmath
+-
+stdexcept
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/turn.h

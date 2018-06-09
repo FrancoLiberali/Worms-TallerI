@@ -4,6 +4,7 @@ ProtectedQueue::ProtectedQueue(){
 }
 
 ProtectedQueue::~ProtectedQueue(){
+	this->empty();
 }
 
 void ProtectedQueue::push(char* entry){
@@ -25,3 +26,13 @@ bool ProtectedQueue::isEmpty(){
 	std::lock_guard<std::mutex> lock(this->mutex);
 	return this->queue.empty();
 }
+
+void ProtectedQueue::empty(){
+	std::lock_guard<std::mutex> lock(this->mutex);
+	while (!this->queue.empty()){
+		char* msj = this->queue.front();
+		delete[] msj;
+		this->queue.pop();
+	}
+}
+		
