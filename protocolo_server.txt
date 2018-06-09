@@ -53,8 +53,7 @@ POSICION DE UN GUSANO CAMBIA:
 
 CAMBIO DE ESTADO DE UN GUSANO
 	char en 7
-	int con el numero de jugador que es el dueño
-	int con el numero de gusano de ese dueño
+	int id gusano
 	int con numero de nuevo estado
 	estados: 0=inactivo, 1=moviendose, 2=en el aire, 3=en el agua, 4=muerto. Actualmente en el agua y muerto deberian tener el mismo significado pero mas adelante no si se agrega un tiempo en el que el gusano se vea abajo del agua.
 
