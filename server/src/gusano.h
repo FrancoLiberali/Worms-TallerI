@@ -20,11 +20,13 @@ class Gusano{
 		GusanoState* state;
 		UserData* user_data;
 		int* foot_sensor_data;
+		int* head_sensor_data;
 		int direction;
 		std::vector<float> angles_list;
 		std::pair<int, int> id;
 		int life = 100;
 		bool damaged = false;
+		bool head_in_contact = false;
 		
 		void rotateTo(float angle);
 		
@@ -68,7 +70,11 @@ class Gusano{
 		
 		void newContact(float ground_angle);
 		
+		void headContact();
+		
 		void finishContact(float ground_angle);
+		
+		void headFinishContact();
 		
 		//b2Vec2 GetWorldVector(b2Vec2 local); 
 		

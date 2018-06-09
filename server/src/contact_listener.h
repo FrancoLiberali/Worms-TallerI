@@ -45,7 +45,7 @@ class ContactListener : public b2ContactListener{
 			//check if fixture A was the foot sensor
 			b2Fixture* fixture = contact->GetFixtureA();
 			void* fixture_user_data = fixture->GetUserData();
-			if (fixture_user_data){
+			if (fixture_user_data && *((int*)fixture_user_data) == 1){
 				float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
 					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
@@ -53,10 +53,16 @@ class ContactListener : public b2ContactListener{
 					gusano->newContact(other_angle);
 				}
 			}
+			//check if fixture A was the head sensor
+			if (fixture_user_data && *((int*)fixture_user_data) == 2){
+				UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+				Gusano* gusano = static_cast<Gusano*>(data->pointer);
+				gusano->headContact();
+			}
             //check if fixture B was the foot sensor
             fixture = contact->GetFixtureB();
             fixture_user_data = fixture->GetUserData();
-            if (fixture_user_data){
+            if (fixture_user_data && *((int*)fixture_user_data) == 1){
 				float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
 				if (other_angle >= -0.78f && other_angle <= 0.78f){
 					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
@@ -64,6 +70,13 @@ class ContactListener : public b2ContactListener{
 					gusano->newContact(other_angle);
 				}
 			}
+			//check if fixture B was the head sensor
+			if (fixture_user_data && *((int*)fixture_user_data) == 2){
+				UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+				Gusano* gusano = static_cast<Gusano*>(data->pointer);
+				gusano->headContact();
+			}
+			
 			//check if body A was a projectile
 			data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 			if (data && data->indicator == 0){
@@ -90,7 +103,7 @@ class ContactListener : public b2ContactListener{
 				printf("termina contacto\n");
 				b2Fixture* fixture = contact->GetFixtureA();
 				void* fixture_user_data = fixture->GetUserData();
-				if (fixture_user_data){
+				if (fixture_user_data && *((int*)fixture_user_data) == 1){
 					float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
 					if (other_angle >= -0.78f && other_angle <= 0.78f){
 						UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
@@ -98,16 +111,28 @@ class ContactListener : public b2ContactListener{
 						gusano->finishContact(other_angle);
 					}
 				}
+				//check if fixture A was the head sensor
+				if (fixture_user_data && *((int*)fixture_user_data) == 2){
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
+					gusano->headFinishContact();
+				}
 				//check if fixture B was the foot sensor
 				fixture = contact->GetFixtureB();
 				fixture_user_data = fixture->GetUserData();
-				if (fixture_user_data){
+				if (fixture_user_data && *((int*)fixture_user_data) == 1){
 					float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
 					if (other_angle >= -0.78f && other_angle <= 0.78f){
 						UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
 						Gusano* gusano = static_cast<Gusano*>(data->pointer);
 						gusano->finishContact(other_angle);
 					}
+				}
+				//check if fixture B was the head sensor
+				if (fixture_user_data && *((int*)fixture_user_data) == 2){
+					UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+					Gusano* gusano = static_cast<Gusano*>(data->pointer);
+					gusano->headFinishContact();
 				}
 			}
 		}

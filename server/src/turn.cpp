@@ -23,6 +23,7 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
 		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e), info(info_e), 
 		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
+	
 	//para activar los primeros empiezan contacto
 	this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
 }
@@ -44,35 +45,26 @@ void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
 	}
 }
 
-void Turn::gusano_move(char* msj, int active_player, int active_gusano){
+void Turn::gusano_move(char* msj, Gusano* gusano){
 	int direction = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		std::cout << "mover gusano\n";
-		gusano->move(direction);
-	}
+	std::cout << "mover gusano\n";
+	gusano->move(direction);
 }
 
-void Turn::gusano_jump(char* msj, int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		std::cout << "salto\n";
-		gusano->jump();
-	}
+void Turn::gusano_jump(char* msj, Gusano* gusano){
+	std::cout << "salto\n";
+	gusano->jump();
 }
 
-void Turn::gusano_back_jump(char* msj, int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		std::cout << "salto\n";
-		gusano->backJump();
-	}
+void Turn::gusano_back_jump(char* msj, Gusano* gusano){
+	std::cout << "salto\n";
+	gusano->backJump();
 }
 
-void Turn::take_weapon(char* msj, int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive() && !this->fired){
-		this->weapon = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+void Turn::take_weapon(char* msj){
+	int to_take = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+	if (!this->fired && *(this->info.ammunition[to_take]) != 0){
+		this->weapon = to_take; 
 		this->sight_angle = 0;
 		this->regresive_time = 5;
 		this->power = 1;
@@ -80,39 +72,34 @@ void Turn::take_weapon(char* msj, int active_player, int active_gusano){
 	}
 }
 
-void Turn::changeSightAngle(char* msj, int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		int change = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-		if (this->weapon != 0 && this->weapon != 7 && this->weapon != 9 && this->weapon != 10){
-			float new_angle = this->sight_angle + change * MIN_ANGLE_CHANGE;
-			if (new_angle < (M_PI / 2) && new_angle > -(M_PI / 2)){
-				this->sight_angle = new_angle;
-				this->proxy.sendChangeSightAngle(change);
-			}
+void Turn::changeSightAngle(char* msj){
+	int change = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+	if (this->weapon != 0 && this->weapon != 7 && this->weapon != 9 && this->weapon != 10){
+		float new_angle = this->sight_angle + change * MIN_ANGLE_CHANGE;
+		if (new_angle < (M_PI / 2) && new_angle > -(M_PI / 2)){
+			this->sight_angle = new_angle;
+			this->proxy.sendChangeSightAngle(change);
 		}
 	}
 }	
 
-void Turn::changeRegresiveTime(char* msj, int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive()){
-		if (this->weapon != 0){
-			this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-		}
+void Turn::changeRegresiveTime(char* msj){
+	if (this->weapon != 0){
+		this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 	}
 }
 
-void Turn::loadPower(int active_player, int active_gusano){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive() && this->power < MAX_POWER){
+void Turn::loadPower(Gusano* gusano, int& turn_actual_len){
+	if (this->power < MAX_POWER){
 		this->power += 0.1;
 	}
+	if (this->power == MAX_POWER){
+		this->fire(gusano, turn_actual_len);
+	}
 }
 
-void Turn::fire(int active_player, int active_gusano, int& turn_actual_len){
-	Gusano* gusano = this->players[active_player][active_gusano];
-	if (gusano->isInactive() && !this->fired && this->weapon){
+void Turn::fire(Gusano* gusano, int& turn_actual_len){
+	if (!this->fired && this->weapon){
 		std::cout << "fire\n";
 		b2Vec2 position = gusano->GetPosition();
 		int direction = gusano->getDirection();
@@ -122,14 +109,14 @@ void Turn::fire(int active_player, int active_gusano, int& turn_actual_len){
 		}
 		switch(this->weapon){
 			case 1: this->fire_bazooka(gusano, position);
-					this->fired = true;
-					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
 			case 2: this->fire_morter(gusano, position);
-					this->fired = true;
-					turn_actual_len = TURN_LEN - THREE_SECONDS;
 					break;
 		}
+		*(this->info.ammunition[this->weapon]) -= 1;
+		std::cout << "quedan " << *(this->info.ammunition[this->weapon]) << "\n";
+		this->fired = true;
+		turn_actual_len = TURN_LEN - THREE_SECONDS;
 	}
 }
 
@@ -165,38 +152,31 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			char* msj = this->queue.front();
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
+			Gusano* gusano = this->players[active_player][active_gusano];
 			if (msj[0] == 0){
 				this->disconnect(player_id, active_player, i);
-				delete[] msj;
 			}
-			else if (player_id == active_player && continue_turn){
+			else if (player_id == active_player && continue_turn && gusano->isInactive()){
 				switch (msj[0]){
-					case 1: this->gusano_move(msj, active_player, active_gusano);
-							delete[] msj;
+					case 1: this->gusano_move(msj, gusano);
 							break;
-					case 2: this->gusano_jump(msj, active_player, active_gusano);
-							delete[] msj;
+					case 2: this->gusano_jump(msj, gusano);
 							break;
-					case 3: this->gusano_back_jump(msj, active_player, active_gusano);
-							delete[] msj;
+					case 3: this->gusano_back_jump(msj, gusano);
 							break;
-					case 4: this->take_weapon(msj, active_player, active_gusano);
-							delete[] msj;
+					case 4: this->take_weapon(msj);
 							break;
-					case 5: this->changeSightAngle(msj, active_player, active_gusano);
-							delete[] msj;
+					case 5: this->changeSightAngle(msj);
 							break;
-					case 6: this->changeRegresiveTime(msj, active_player, active_gusano);
-							delete[] msj;
+					case 6: this->changeRegresiveTime(msj);
 							break;
-					case 7: this->loadPower(active_player, active_gusano);
-							delete[] msj;
+					case 7: this->loadPower(gusano, i);
 							break;
-					case 8: this->fire(active_player, active_gusano, i);
-							delete[] msj;
+					case 8: this->fire(gusano, i);
 							break;
 				}
 			}
+			delete[] msj;
 		}
 		
 		this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);

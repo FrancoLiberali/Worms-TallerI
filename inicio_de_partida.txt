@@ -12,4 +12,4 @@ Cuando se conecta el primer jugador, el servidor se queda esperando que el mismo
 Es decir, que el client debe chequear si la respuesta a la conexion fue que es el jugador 1 para darle al servidor esta informacion.
 Una vez que el client le de al server la info de mapa y cantidad de jugadores, el server esperará a que se conecten el resto
 de jugadores para completar el numero indicado (aun no esta implimentada una solucion a que uno de los clientes se desconecte en 
-la sala de espera). Cuando esto suceda, se cargará el mapa y el juego empezará.
+la sala de espera). Cada jugador ademas debe mandar un mensaje con su nombre apenas se conecte(mensaje 0 de protocolo client). Cuando esto suceda, se cargará el mapa y el juego empezará.

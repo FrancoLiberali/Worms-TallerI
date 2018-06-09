@@ -10,7 +10,6 @@ JumpingState::JumpingState(b2Body* body_e, Gusano* gusano_e) : body(body_e), gus
 }
 
 JumpingState::~JumpingState(){
-	std::cout << "aca\n";
 	int diference = this->y_max - this->y_last - MAX_HEIGHT_NO_DAMAGE;
 	if (diference > 0){
 		if (diference > MAX_DAMAGE){
@@ -21,7 +20,6 @@ JumpingState::~JumpingState(){
 }
 
 void JumpingState::sumOneStep(){
-	std::cout << "aca primero\n";
 	this->y_last = this->body->GetPosition().y;
 	if (y_last > this->y_max){
 		y_max = y_last;

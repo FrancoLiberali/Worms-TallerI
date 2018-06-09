@@ -35,14 +35,14 @@ class Turn{
 		bool fired;
 		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
-		void gusano_move(char* msj, int active_player, int active_gusano);
-		void gusano_jump(char* msj, int active_player, int active_gusano);
-		void gusano_back_jump(char* msj, int active_player, int active_gusano);
-		void take_weapon(char* msj, int active_player, int active_gusano);
-		void changeSightAngle(char* msj, int active_player, int active_gusano);
-		void changeRegresiveTime(char* msj, int active_player, int active_gusano);
-		void loadPower(int active_player, int active_gusano);
-		void fire(int active_player, int active_gusano, int& turn_actual_len);
+		void gusano_move(char* msj, Gusano* gusano);
+		void gusano_jump(char* msj, Gusano* gusano);
+		void gusano_back_jump(char* msj, Gusano* gusano);
+		void take_weapon(char* msj);
+		void changeSightAngle(char* msj);
+		void changeRegresiveTime(char* msj);
+		void loadPower(Gusano* gusano, int& turn_actual_len);
+		void fire(Gusano* gusano, int& turn_actual_len);
 		void fire_bazooka(Gusano* gusano, b2Vec2 position);
 		void fire_morter(Gusano* gusano, b2Vec2 position);
 		

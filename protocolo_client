@@ -3,47 +3,55 @@ todos los int son mandados en 4 bytes big endian
 todas las coordenadas se encuentran en METROS y los angulos en GRADOS, ya que segun barba la conversion la debe realizar el client.
 Las coordenadas refieren al CENTRO del objeto.
 
-AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:
+Las string se mandan:
+	int largo del string
+	el string en si sin el '\0' del final
+
+AVISO DE NOMBRE DEL JUGADOR:
 	char en 0
+	string con nombre del jugador
+
+AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:
+	char en 1
 	int con map_id
 	int con cantidad maxima de jugadores
 	este mensaje debe ser mandado solo por el jugador que reciba el numero de jugador 1, como se explica en "inicio_de_partida.txt"
 
 El sistema de movimiento del gusano es el siguiente: al inicio de cada turno todos los jugadores reciben el mensaje "INICIO DE TURNO"(mirar protocolo_server.txt) en donde son informados del jugador y gusano actual. Los mensajes que afectan a los gusanos envian siempre el numero de jugador que lo envia, y sera el server quien chequee si el jugador que envia el mensaje tiene derecho o no a mover el gusano del turno actual.
 MOVER UN GUSANO:
-	char en 1
+	char en 2
 	int numero de jugador que envia el mensaje
 	int con direccion: -1= izquierda, 1 = derecha
 
 SALTO DE UN GUSANO
-	char en 2
-	int numero de jugador que envia el mensaje
-
-SALTO ATRAS DE UN GUSANO
 	char en 3
 	int numero de jugador que envia el mensaje
 
-GUSANO SACA ARMA
+SALTO ATRAS DE UN GUSANO
 	char en 4
+	int numero de jugador que envia el mensaje
+
+GUSANO SACA ARMA
+	char en 5
 	int numero de jugador
 	int numero de arma: 1=bazooka, 2=mortero, etc. segun consigna del tp
 
 GUSANO CAMBIO ANGULO DE APUNTADO
-	char en 5
+	char en 6
 	int numero de jugador
 	int cambio de angulo: 1= arriba, -1=abajo
 
 GUSANO CAMBIA TIEMPO DE CUENTA REGRESIVA DE ARMA:
-	char en 6
+	char en 7
 	int numero de jugador
 	int nueva cuenta regresiva: 1,2,3,4,5
 
 GUSANO CARGA BARRA DE PODER:
-	char en 7
+	char en 8
 	int numero de jugador
 	
 PARAR DE CARGA BARRA DE PODER Y DISPARAR:
-	char en 8
+	char en 9
 	int numero de jugador
 
 

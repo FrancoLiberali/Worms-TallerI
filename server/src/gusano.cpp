@@ -59,6 +59,15 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
     b2Fixture* footSensorFixture = this->body->CreateFixture(&fixtureDef);
     this->foot_sensor_data = new int(1);
     footSensorFixture->SetUserData((void*)this->foot_sensor_data);
+    
+    //add head sensor fixture	
+    dynamicBox.SetAsBox(0.00001, 0.1, b2Vec2(0, 0.45), 0);
+    fixtureDef.density = 0.0f;
+    fixtureDef.restitution = 0.0f;
+    fixtureDef.isSensor = true;
+    b2Fixture* headSensorFixture = this->body->CreateFixture(&fixtureDef);
+    this->head_sensor_data = new int(2);
+    headSensorFixture->SetUserData((void*)this->head_sensor_data);
 	
 	/*//add wheel
 	bodyDef.position.Set(x, y - 0.25);
@@ -93,6 +102,7 @@ Gusano::~Gusano(){
 	delete this->state;
 	delete this->user_data;
 	delete this->foot_sensor_data;
+	delete this->head_sensor_data;
 	this->user_data = nullptr;
 	this->foot_sensor_data = nullptr;
 	this->world.DestroyBody(this->body);
@@ -154,7 +164,13 @@ void Gusano::update(){
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		this->sendPosition();
 		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
-		this->rotateTo(angles_list.back());
+		if (this->head_in_contact && angles_list.size() == 0){
+			std::cout << "de cabeza\n";
+			this->rotateTo(this->GetAngle() - M_PI);
+			this->head_in_contact = false;
+		} else {
+			this->rotateTo(angles_list.back());
+		}
 		this->body->SetFixedRotation(true);
 	}
 }
@@ -164,7 +180,7 @@ void Gusano::rotateTo(float angle){
 		printf ("arreglar angulo\n");
 		std::cout << angle << "\n";
 		delete this->state;
-		this->state = new RotatingState(this->body, this->GetPosition(), angles_list.back());
+		this->state = new RotatingState(this->body, this->GetPosition(), angle);
 	}
 }
 
@@ -235,18 +251,22 @@ void Gusano::newContact(float ground_angle){
 	this->angles_list.push_back(ground_angle);
 	int cant_contacts = angles_list.size();
 	if (cant_contacts == 1){
-		this->body->SetGravityScale(0);
-		this->body->SetLinearVelocity(b2Vec2(0,0));
 		printf("state->inactivo\n");
 		this->state->sumOneStep();
 		delete this->state;
 		this->state = new InactiveState();
+		this->body->SetGravityScale(0);
+		this->body->SetLinearVelocity(b2Vec2(0,0));
 		this->proxy.send_state_change(this->id.first, this->id.second, INACTIVE_STATE);
 		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
 		std::cout << "TOCO al segundo \n";
 		std::cout << ground_angle << "\n";
 	}
+}
+
+void Gusano::headContact(){
+	this->head_in_contact = true;
 }
 
 void Gusano::finishContact(float ground_angle){
@@ -269,6 +289,10 @@ void Gusano::finishContact(float ground_angle){
 		std::cout << "deja de tocar a :" << ground_angle << "\n";
 		this->rotateTo(angles_list.back());
 	}
+}
+
+void Gusano::headFinishContact(){
+	this->head_in_contact = false;
 }
 
 //b2Vec2 Gusano::GetWorldVector(b2Vec2 local){

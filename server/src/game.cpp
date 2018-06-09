@@ -38,14 +38,13 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	
 	std::vector<Gusano*>::iterator it = gusanos.begin();
 	int player, gusano_id;
-	for (player = 1, gusano_id = 1; it != gusanos.end(); player++, ++it){
+	for (player = 1, gusano_id = 1; it != gusanos.end(); player++, gusano_id++, ++it){
 		std::cout << player << "\n";
 		std::cout << gusano_id << "\n";
 		(*it)->setId(player, gusano_id);
 		this->players[player][gusano_id] = (*it);
 		if (player == cant_players){
 			player = 0;
-			gusano_id++;
 		}
 	}
 	this->gusanos_per_player = gusano_id;
@@ -132,13 +131,16 @@ void Game::play(){
 					break;
 				} catch (std::out_of_range& e){
 					this->next[i]++;
-					if (this->next[i] > this->gusanos_per_player){
+					if (this->next[i] > this->gusanos_per_player){ //OJO ACA QUE YA NO ES ASI
 						this->next[i] = 1;
 					}
 				}
 			}
 		} catch (std::out_of_range& e){
 			continue;
+		}
+		if (i == this->cant_players){
+			i = 0;
 		}
 	}
 	std::cout << "salio\n";

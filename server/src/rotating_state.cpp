@@ -10,6 +10,20 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, double desired
 	double new_x = position.x;
 	double new_y = position.y;
 	double pi = M_PI;
+	//actual_angle = actual_angle % (2 * pi); ESTABA CON ESTOOOO
+	//desired_angle = desired_angle % (2 * pi);
+	if ((actual_angle < -pi/2 && actual_angle > -3*pi/2) || (actual_angle > pi/2 && actual_angle < 3*pi/2)){
+		new_y += 0.5 * cos(actual_angle);
+	} else {
+		new_y -= 0.5 * cos(actual_angle);
+	}
+	new_x += 0.5 * sin (actual_angle);
+	if ((desired_angle < -pi/2 && desired_angle > -3*pi/2) || (desired_angle > pi/2 && desired_angle < 3*pi/2)){
+		new_y -= 0.5 * cos(desired_angle);
+	} else {
+		new_y += 0.5 * cos(desired_angle);
+	}
+	new_x -= 0.5 * sin (desired_angle);
 	/*if (actual_angle < 0){
 		new_x -= 0.5 * cos(pi/2 + actual_angle);
 	} else if (actual_angle > 0){
@@ -21,8 +35,8 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, double desired
 		new_x -= 0.5 * cos(pi/2 - desired_angle);
 	}		
 	double new_y = position.y - 0.5 * sin(pi/2 - actual_angle) + 0.5 * sin(pi/2 - desired_angle); //-0.04;*/
-	new_x += 0.5 * (sin(actual_angle) - sin(desired_angle));
-	new_y += 0.5 * (cos(desired_angle) - cos(actual_angle));
+	//new_x += 0.5 * (sin(actual_angle) - sin(desired_angle));
+	//new_y += 0.5 * (cos(desired_angle) - cos(actual_angle));
 	b2Vec2 vec(new_x, new_y);
 	this->new_position = vec;
 }
