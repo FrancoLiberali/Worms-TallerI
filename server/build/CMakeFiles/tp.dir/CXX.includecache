@@ -345,6 +345,8 @@ multiple_proxy.h
 ../src/multiple_proxy.h
 
 ../src/game_constants.h
+vector
+-
 
 ../src/gusano.h
 Box2D/Box2D.h
@@ -1099,6 +1101,8 @@ multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+vector
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp
 green_granade.h
