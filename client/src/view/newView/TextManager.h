@@ -6,9 +6,9 @@
 #include <SDL2/SDL.h>
 #include "TextureManager.h"
 
-#define ARIAL16 "res/images/arial16.png"
+#define ARIAL16 "../resource/images/arial16.png"
 
-#define ARIAL12 "res/images/arial12.png"
+#define ARIAL12 "../resource/images/arial12.png"
 
 enum Tfont{
 	Arial16,

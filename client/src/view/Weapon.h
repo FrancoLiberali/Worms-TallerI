@@ -19,7 +19,7 @@ public:
 	void setWeapon(string key);
 	void setRender();
 	void removeWeapon(string key);
-	void draw(SdlScreen & screen);
+	void draw(SdlScreen& screen);
 	void allow();
 	bool hasClickedMenu(SDL_Point clickPoint);
 	void selected();

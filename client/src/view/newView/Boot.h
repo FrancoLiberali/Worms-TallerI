@@ -8,7 +8,6 @@ class Boot {
 private:
     SdlScreen screen;
     void loadConfigGame();
-
     void loadSprites();
     void loadImages();
     void loadWaterImage();
@@ -17,7 +16,7 @@ private:
     void initCamera(int w, int h);
     void realoadEart();
 public:
-    void init();
+    void init(std::string player);
     void reinit();
     SdlScreen& getScreen();    
 };

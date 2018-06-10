@@ -23,7 +23,7 @@ void MenuWeaponView::actionMenu(){
 	}
 }
 
-void MenuWeaponView::draw(SdlScreen & screen){
+void MenuWeaponView::draw(SdlScreen& screen){
 	
 	if(menu->findWeapon("MenuWeapon")){
 		menu->draw(screen);

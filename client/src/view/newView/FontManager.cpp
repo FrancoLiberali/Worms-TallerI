@@ -11,7 +11,7 @@ void FontManager::init(SDL_Renderer * renderer)
 
 void FontManager::openFonts()
 {
-	TTF_Font * aFont = TTF_OpenFont( "res/font/arial.ttf", 11 );
+	TTF_Font * aFont = TTF_OpenFont( "../resource/font/arial.ttf", 11 );
 	if (!aFont)
 		throw SdlException("No hay fuente SDL_ttf Error", TTF_GetError());
 	map["arial"] = aFont;

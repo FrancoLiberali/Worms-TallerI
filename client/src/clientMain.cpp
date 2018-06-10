@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 	//cargamos todas las texturas y el screen principal
 	Boot boot;
-	boot.init();
+	boot.init(argv[3]);
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
 	ClientCommandSender commmandSender(proxy, commandsQueue);
