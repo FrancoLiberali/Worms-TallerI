@@ -6,18 +6,21 @@
 
 class ProxyClient {
 private:
-    Socket sktClient;
-public:
-    ProxyClient(Socket socket);
-    ProxyClient();
-
-    ~ProxyClient() noexcept;
-    void close();
+    Socket socket;
     void sendInt(int num);
     void sendChar(char bye);
+public:
+    ProxyClient(Socket socket);
+    ~ProxyClient() noexcept;
+    void close();
     int receiveInt();
     char receiveChar();
-
+    std::string receiveString();
+    void sendName(std::string& msg);
+    void sendMapAndPlayers(int idMap, int num);
+    void sendMoveWorm(int idPlayer, int dir);
+    void sendJump(int dir, int id);
+    void sendWeaponSelect(int idPlayer, int idWeapon);
 };
 
 #endif

@@ -180,6 +180,33 @@ alllib/fast:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/build
 .PHONY : alllib/fast
 
+src/GameBuilder.o: src/GameBuilder.cpp.o
+
+.PHONY : src/GameBuilder.o
+
+# target to build an object file
+src/GameBuilder.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.o
+.PHONY : src/GameBuilder.cpp.o
+
+src/GameBuilder.i: src/GameBuilder.cpp.i
+
+.PHONY : src/GameBuilder.i
+
+# target to preprocess a source file
+src/GameBuilder.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.i
+.PHONY : src/GameBuilder.cpp.i
+
+src/GameBuilder.s: src/GameBuilder.cpp.s
+
+.PHONY : src/GameBuilder.s
+
+# target to generate assembly for a file
+src/GameBuilder.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.s
+.PHONY : src/GameBuilder.cpp.s
+
 src/ProxyClient.o: src/ProxyClient.cpp.o
 
 .PHONY : src/ProxyClient.o
@@ -396,6 +423,60 @@ src/controller/Controller.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Controller.cpp.s
 .PHONY : src/controller/Controller.cpp.s
 
+src/controller/CreateVigaEvent.o: src/controller/CreateVigaEvent.cpp.o
+
+.PHONY : src/controller/CreateVigaEvent.o
+
+# target to build an object file
+src/controller/CreateVigaEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o
+.PHONY : src/controller/CreateVigaEvent.cpp.o
+
+src/controller/CreateVigaEvent.i: src/controller/CreateVigaEvent.cpp.i
+
+.PHONY : src/controller/CreateVigaEvent.i
+
+# target to preprocess a source file
+src/controller/CreateVigaEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.i
+.PHONY : src/controller/CreateVigaEvent.cpp.i
+
+src/controller/CreateVigaEvent.s: src/controller/CreateVigaEvent.cpp.s
+
+.PHONY : src/controller/CreateVigaEvent.s
+
+# target to generate assembly for a file
+src/controller/CreateVigaEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.s
+.PHONY : src/controller/CreateVigaEvent.cpp.s
+
+src/controller/CreateWormEvent.o: src/controller/CreateWormEvent.cpp.o
+
+.PHONY : src/controller/CreateWormEvent.o
+
+# target to build an object file
+src/controller/CreateWormEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o
+.PHONY : src/controller/CreateWormEvent.cpp.o
+
+src/controller/CreateWormEvent.i: src/controller/CreateWormEvent.cpp.i
+
+.PHONY : src/controller/CreateWormEvent.i
+
+# target to preprocess a source file
+src/controller/CreateWormEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.i
+.PHONY : src/controller/CreateWormEvent.cpp.i
+
+src/controller/CreateWormEvent.s: src/controller/CreateWormEvent.cpp.s
+
+.PHONY : src/controller/CreateWormEvent.s
+
+# target to generate assembly for a file
+src/controller/CreateWormEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.s
+.PHONY : src/controller/CreateWormEvent.cpp.s
+
 src/controller/Event.o: src/controller/Event.cpp.o
 
 .PHONY : src/controller/Event.o
@@ -476,6 +557,114 @@ src/controller/EventHandler.s: src/controller/EventHandler.cpp.s
 src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
+
+src/controller/PlayerConnectEvent.o: src/controller/PlayerConnectEvent.cpp.o
+
+.PHONY : src/controller/PlayerConnectEvent.o
+
+# target to build an object file
+src/controller/PlayerConnectEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o
+.PHONY : src/controller/PlayerConnectEvent.cpp.o
+
+src/controller/PlayerConnectEvent.i: src/controller/PlayerConnectEvent.cpp.i
+
+.PHONY : src/controller/PlayerConnectEvent.i
+
+# target to preprocess a source file
+src/controller/PlayerConnectEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.i
+.PHONY : src/controller/PlayerConnectEvent.cpp.i
+
+src/controller/PlayerConnectEvent.s: src/controller/PlayerConnectEvent.cpp.s
+
+.PHONY : src/controller/PlayerConnectEvent.s
+
+# target to generate assembly for a file
+src/controller/PlayerConnectEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.s
+.PHONY : src/controller/PlayerConnectEvent.cpp.s
+
+src/controller/PlayerIdEvent.o: src/controller/PlayerIdEvent.cpp.o
+
+.PHONY : src/controller/PlayerIdEvent.o
+
+# target to build an object file
+src/controller/PlayerIdEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o
+.PHONY : src/controller/PlayerIdEvent.cpp.o
+
+src/controller/PlayerIdEvent.i: src/controller/PlayerIdEvent.cpp.i
+
+.PHONY : src/controller/PlayerIdEvent.i
+
+# target to preprocess a source file
+src/controller/PlayerIdEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.i
+.PHONY : src/controller/PlayerIdEvent.cpp.i
+
+src/controller/PlayerIdEvent.s: src/controller/PlayerIdEvent.cpp.s
+
+.PHONY : src/controller/PlayerIdEvent.s
+
+# target to generate assembly for a file
+src/controller/PlayerIdEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.s
+.PHONY : src/controller/PlayerIdEvent.cpp.s
+
+src/controller/PlayerOffEvent.o: src/controller/PlayerOffEvent.cpp.o
+
+.PHONY : src/controller/PlayerOffEvent.o
+
+# target to build an object file
+src/controller/PlayerOffEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o
+.PHONY : src/controller/PlayerOffEvent.cpp.o
+
+src/controller/PlayerOffEvent.i: src/controller/PlayerOffEvent.cpp.i
+
+.PHONY : src/controller/PlayerOffEvent.i
+
+# target to preprocess a source file
+src/controller/PlayerOffEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.i
+.PHONY : src/controller/PlayerOffEvent.cpp.i
+
+src/controller/PlayerOffEvent.s: src/controller/PlayerOffEvent.cpp.s
+
+.PHONY : src/controller/PlayerOffEvent.s
+
+# target to generate assembly for a file
+src/controller/PlayerOffEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.s
+.PHONY : src/controller/PlayerOffEvent.cpp.s
+
+src/controller/StartTurnEvent.o: src/controller/StartTurnEvent.cpp.o
+
+.PHONY : src/controller/StartTurnEvent.o
+
+# target to build an object file
+src/controller/StartTurnEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o
+.PHONY : src/controller/StartTurnEvent.cpp.o
+
+src/controller/StartTurnEvent.i: src/controller/StartTurnEvent.cpp.i
+
+.PHONY : src/controller/StartTurnEvent.i
+
+# target to preprocess a source file
+src/controller/StartTurnEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.i
+.PHONY : src/controller/StartTurnEvent.cpp.i
+
+src/controller/StartTurnEvent.s: src/controller/StartTurnEvent.cpp.s
+
+.PHONY : src/controller/StartTurnEvent.s
+
+# target to generate assembly for a file
+src/controller/StartTurnEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.s
+.PHONY : src/controller/StartTurnEvent.cpp.s
 
 src/controller/WormChangeLifeEvent.o: src/controller/WormChangeLifeEvent.cpp.o
 
@@ -1166,6 +1355,9 @@ help:
 	@echo "... alllib"
 	@echo "... install/strip"
 	@echo "... install/local"
+	@echo "... src/GameBuilder.o"
+	@echo "... src/GameBuilder.i"
+	@echo "... src/GameBuilder.s"
 	@echo "... src/ProxyClient.o"
 	@echo "... src/ProxyClient.i"
 	@echo "... src/ProxyClient.s"
@@ -1190,6 +1382,12 @@ help:
 	@echo "... src/controller/Controller.o"
 	@echo "... src/controller/Controller.i"
 	@echo "... src/controller/Controller.s"
+	@echo "... src/controller/CreateVigaEvent.o"
+	@echo "... src/controller/CreateVigaEvent.i"
+	@echo "... src/controller/CreateVigaEvent.s"
+	@echo "... src/controller/CreateWormEvent.o"
+	@echo "... src/controller/CreateWormEvent.i"
+	@echo "... src/controller/CreateWormEvent.s"
 	@echo "... src/controller/Event.o"
 	@echo "... src/controller/Event.i"
 	@echo "... src/controller/Event.s"
@@ -1199,6 +1397,18 @@ help:
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/controller/PlayerConnectEvent.o"
+	@echo "... src/controller/PlayerConnectEvent.i"
+	@echo "... src/controller/PlayerConnectEvent.s"
+	@echo "... src/controller/PlayerIdEvent.o"
+	@echo "... src/controller/PlayerIdEvent.i"
+	@echo "... src/controller/PlayerIdEvent.s"
+	@echo "... src/controller/PlayerOffEvent.o"
+	@echo "... src/controller/PlayerOffEvent.i"
+	@echo "... src/controller/PlayerOffEvent.s"
+	@echo "... src/controller/StartTurnEvent.o"
+	@echo "... src/controller/StartTurnEvent.i"
+	@echo "... src/controller/StartTurnEvent.s"
 	@echo "... src/controller/WormChangeLifeEvent.o"
 	@echo "... src/controller/WormChangeLifeEvent.i"
 	@echo "... src/controller/WormChangeLifeEvent.s"

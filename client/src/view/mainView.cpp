@@ -10,10 +10,6 @@ mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen)
 }
 
 void mainView::init(){
-	/*No deberia estar acá. Aqui se construye todos los sprites iniciales:
-	  escenario, worms, armas, etc.*/
-
-	//creamos un Worm
 	worm = new WormView(1);
 	worm->setPlayerName("Pepito");
 	worm->load(200, 400, &screen);
@@ -113,13 +109,20 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
-void mainView::addWorm(int id, std::string player, int x, int y){
+void mainView::addWorm(int id, std::string player, int x, int y, int dir, int angle){
 	WormView* worm = new WormView(id);
 	worm->setPlayerName(player);
+	worm->setDirection(dir);
+	worm->setAngle(angle);
 	worm->load(x,y, &screen);
 	this->worms.emplace(id, worm);
 }
 
 void mainView::addViga(int x, int y, int angle){
 	stage.addViga(x, y, angle);
+}
+
+std::string mainView::changeTurn(std::string namePlayer){
+	//mostrar algo para saber que es el turno del jugador
+	std::cout<<namePlayer<<std::endl;
 }

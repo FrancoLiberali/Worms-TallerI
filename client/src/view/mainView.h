@@ -20,6 +20,7 @@ class EventHandler;
 class mainView {
 private:
 	Escenario stage;
+
 	SdlScreen& screen;
 	EventHandler& eventHandler;
 	WormView* worm;
@@ -44,8 +45,9 @@ public:
 	bool isMenuOn();
 	bool hasClickedMenu(SDL_Point clickPoint);
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
-	void addWorm(int id, std::string player, int x, int y);
+	void addWorm(int id, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);
+	std::string changeTurn(std::string namePlayer);
 };
 
 #endif

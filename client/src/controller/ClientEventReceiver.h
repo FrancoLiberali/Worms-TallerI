@@ -13,9 +13,11 @@ private:
 	Queue<Event*>& q;
 	ProxyClient& proxy;
 	Model& model;
+	mainView& view;
 	bool closed;
 public:
-	ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& eventQueue, Model& model);
+	ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& eventQueue, 
+	Model& model, mainView& view);
 	~ClientEventReceiver();
 	virtual void run() override;
 	void stop();

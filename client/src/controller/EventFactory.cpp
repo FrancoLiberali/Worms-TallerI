@@ -5,14 +5,46 @@
 #include "WormChangeStateEvent.h"
 #include "WormWeaponEvent.h"
 #include "WormChangeLifeEvent.h"
+#include "PlayerIdEvent.h"
+#include "PlayerConnectEvent.h"
+#include "CreateVigaEvent.h"
+#include "CreateWormEvent.h"
+#include "StartTurnEvent.h"
+#include "PlayerOffEvent.h"
 
-
-Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model){
+Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
   switch (type) {
+    case ID_PLAYER:{
+      int id = proxy.receiveInt();
+      return new PlayerIdEvent(id, model, proxy);
+    }
+    case PLAYER_CONECT:{
+      int id = proxy.receiveInt();
+      std::string name = proxy.receiveString();
+      return new PlayerConnectEvent(id, name, model);
+    }
+    case CREATE_VIGA:{
+      int posx = proxy.receiveInt();
+      int posy = proxy.receiveInt();
+      int angle = proxy.receiveInt();
+      return new CreateVigaEvent(posx, posy, angle, view);
+    }
+    case CREATE_WATER:{
+      return nullptr;
+    }
+    case CREATE_WORM:{
+      int idWorm = proxy.receiveInt();
+      int idOwner = proxy.receiveInt();
+      int posx = proxy.receiveInt();
+      int posy = proxy.receiveInt();
+      int dir = proxy.receiveInt();
+      int angle = proxy.receiveInt();
+      return new CreateWormEvent(idWorm, idOwner, posx, posy, dir, angle, model, view);
+    }
     case START_TURN:{
       int currPlayer = proxy.receiveInt();
       int idWorm = proxy.receiveInt();
-      return nullptr;
+      return new StartTurnEvent(currPlayer, idWorm, model, view);
     }
      case W_MOVE: {
       int idWorm = proxy.receiveInt();
@@ -58,7 +90,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case G_PLAYER_OFF: {
       int idPlayer = proxy.receiveInt();
-      return nullptr;
+      return new PlayerOffEvent(idPlayer, model, view);
     }
     case G_PLAYER_WIN:
       int idPlayer = proxy.receiveInt();

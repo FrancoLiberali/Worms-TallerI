@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.cpp
+GameBuilder.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.h
+list
+-
+ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp
 ProxyClient.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
@@ -134,6 +146,22 @@ iostream
 ../view/mainView.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.cpp
+CreateVigaEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.cpp
+CreateWormEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp
 Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
@@ -157,6 +185,18 @@ WormWeaponEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormWeaponEvent.h
 WormChangeLifeEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.h
+PlayerIdEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.h
+PlayerConnectEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.h
+CreateVigaEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.h
+CreateWormEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.h
+StartTurnEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
+PlayerOffEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.h
 EventType.h
@@ -167,7 +207,7 @@ Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 ../model/Model.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
-sstream
+string
 -
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp
@@ -185,6 +225,44 @@ Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventType.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.cpp
+PlayerConnectEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.h
+iostream
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.cpp
+PlayerIdEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.h
+iostream
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp
+PlayerOffEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.cpp
+StartTurnEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
+string
+-
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp
 WormChangeLifeEvent.h
@@ -253,6 +331,8 @@ ClientCommand.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.cpp
 Model.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
+iostream
+-
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
 GameControllerProxy.h

@@ -6,7 +6,8 @@
 #include <sstream>
 
 ClientEventReceiver::ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& q,
-	Model& model): proxy(proxy), q(q), model(model), closed(false){
+	Model& model, mainView& view): proxy(proxy), q(q), model(model), 
+									closed(false), view(view){
 	
 	std::cout << "ClientEventReceiver construido" << std::endl;
 }
@@ -19,20 +20,10 @@ ClientEventReceiver::~ClientEventReceiver() {
   std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
+
+
 EventType getTypeEvent(char& type){
-	switch (type){
-		case 5: return START_TURN;
-		case 6: return W_MOVE;
-		case 7: return W_CHANGE_STATE;
-		case 8: return B_POS;
-		case 9: return B_EXPLOTE;
-		case 10: return W_CUR_WEAPON;
-		case 11: return W_CUR_AIM;
-		case 12: return W_CHANGE_LIFE;
-		case 13: return G_PLAYER_OFF;
-		case 14: return G_PLAYER_WIN;
-	}
-	return W_MOVE;
+	//return static_cast<EventType>(type);
 }
 
 void ClientEventReceiver::run(){
@@ -41,9 +32,9 @@ void ClientEventReceiver::run(){
 		while (!closed){
 			std::cout<<"se llama al socket"<<std::endl;
 			char t = proxy.receiveChar();
-			EventType type = getTypeEvent(t);
+			EventType type = static_cast<EventType>(t);
 			std::cout<<"se recibe un mensaje del socket"<<std::endl;
-			Event* event = EventFactory::createEvent(type, proxy, model);
+			Event* event = EventFactory::createEvent(type, proxy, model, view);
 			q.push(event);
 		}
 	} catch (SocketError& e){

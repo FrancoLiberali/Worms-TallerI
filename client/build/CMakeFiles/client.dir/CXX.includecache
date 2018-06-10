@@ -9,6 +9,10 @@
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.h
 list
 -
+ProxyClient.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+view/mainView.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 string

@@ -27,6 +27,7 @@ public:
 	int getWidth();
 	int getHeight();
 	void setState(std::string string_state);
+	SDL_Window* getWindow();
 	SDL_Renderer* getRenderer();
 };
 

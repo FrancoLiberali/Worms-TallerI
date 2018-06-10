@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameBuilder.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/GameBuilder.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/ProxyClient.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/common/Thread.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/common/socket.cpp.o"
@@ -11,9 +12,15 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/Controller.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/Event.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o"

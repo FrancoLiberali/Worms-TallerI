@@ -21,10 +21,9 @@
 
 #include <iostream>
 
-//argv[1]=ip argv[2]=port
+//argv[1]=ip argv[2]=port argv[3] name
 int main(int argc, char *argv[])
 {
-	//Validamos que se conecte correctamente
 
 	Socket socket;
 	try{
@@ -36,26 +35,9 @@ int main(int argc, char *argv[])
 
 	ProxyClient proxy(std::move(socket));
 
-	//agregar protoclo para empezar el juego, id mapa , etc
-
-	//Recibo el numero de jugador
-	char cod = proxy.receiveChar();
-	std::cout <<"Cod " << (int)cod <<std::endl;
-	int idJugador = proxy.receiveInt();
-	std::cout << "idJugador" << idJugador <<std::endl;
-	if (idJugador == 1){
-		//envio id mapa y numero de jugadores
-		int idMapa = 1;
-		int numPlayers = 1;
-		proxy.sendChar(0);
-		proxy.sendInt(idMapa);
-		proxy.sendInt(numPlayers);
-	}
-
+	//cargamos todas las texturas y el screen principal
 	Boot boot;
 	boot.init();
-
-	//GameBuilder builder(proxy);
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
 	ClientCommandSender commmandSender(proxy, commandsQueue);
@@ -67,12 +49,19 @@ int main(int argc, char *argv[])
 	ehandler.setView(&clientView);
 
 	GameControllerProxy gcp(commandsQueue);
-	Model model(gcp);
+
+	Model model;
+	model.setGameControllerProxy(&gcp);
+	model.setNamePlayer(argv[3]);
+
+	//Construimos la vista de acuerdo a lo que nos mande el server
+	//GameBuilder builder(proxy, clientView);
+
 
 
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue; 
-	ClientEventReceiver eventReceiver(proxy, eventQueue, model);
+	ClientEventReceiver eventReceiver(proxy, eventQueue, model, clientView);
 	eventReceiver.start();
 
 	Controller controller(model, clientView);
@@ -96,6 +85,5 @@ int main(int argc, char *argv[])
 	eventReceiver.stop();
 	commmandSender.join();
 	eventReceiver.join();
-	//std::cout<<"AQUI"<<std::endl;
 	return 0;
 }

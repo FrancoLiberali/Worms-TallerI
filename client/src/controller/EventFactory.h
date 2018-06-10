@@ -5,13 +5,10 @@
 #include "Event.h"
 #include "../ProxyClient.h"
 #include "../model/Model.h"
-#include <sstream>
+#include <string>
 
 class EventFactory{
-private:
-	//static WeaponId getWeaponId(int id);
 public:
-	static Event* createEvent(const EventType& type, std::stringstream& ss, Model& model);
-	static Event* createEvent(const EventType& type, ProxyClient& proxy, Model& model);
+	static Event* createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view);
 };
 #endif

@@ -13,6 +13,13 @@ add_library(alllib
     src/controller/WormChangeStateEvent.cpp
 	src/controller/WormChangeLifeEvent.cpp
     src/controller/WormWeaponEvent.cpp
+	src/controller/CreateVigaEvent.cpp
+	src/controller/CreateWormEvent.cpp
+	src/controller/PlayerIdEvent.cpp
+	src/controller/PlayerConnectEvent.cpp
+	src/controller/StartTurnEvent.cpp
+	src/controller/PlayerOffEvent
+
     src/controller/ClientCommandSender.cpp
 	src/controller/Controller.cpp
 
@@ -20,6 +27,7 @@ add_library(alllib
 	src/common/socket.cpp
 	src/common/socket_error.cpp
 	src/ProxyClient.cpp
+	src/GameBuilder.cpp
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp
