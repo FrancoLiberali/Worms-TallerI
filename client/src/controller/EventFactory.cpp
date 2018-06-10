@@ -13,6 +13,7 @@
 #include "PlayerOffEvent.h"
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
+  std::cout << "hay evento" <<std::endl;
   switch (type) {
     case ID_PLAYER:{
       int id = proxy.receiveInt();
@@ -21,6 +22,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case PLAYER_CONECT:{
       int id = proxy.receiveInt();
       std::string name = proxy.receiveString();
+      std::cout<<"Player connect Event"<<std::endl;
       return new PlayerConnectEvent(id, name, model);
     }
     case CREATE_VIGA:{

@@ -24,6 +24,8 @@
 //argv[1]=ip argv[2]=port argv[3] name
 int main(int argc, char *argv[])
 {
+	if (argc < 3)
+		return 0;
 
 	Socket socket;
 	try{

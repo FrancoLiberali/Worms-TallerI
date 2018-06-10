@@ -22,10 +22,6 @@ ClientEventReceiver::~ClientEventReceiver() {
 
 
 
-EventType getTypeEvent(char& type){
-	//return static_cast<EventType>(type);
-}
-
 void ClientEventReceiver::run(){
 	std::cout << "ClientEventReceiver corriendo" << std::endl;
 	try{
@@ -33,7 +29,6 @@ void ClientEventReceiver::run(){
 			std::cout<<"se llama al socket"<<std::endl;
 			char t = proxy.receiveChar();
 			EventType type = static_cast<EventType>(t);
-			std::cout<<"se recibe un mensaje del socket"<<std::endl;
 			Event* event = EventFactory::createEvent(type, proxy, model, view);
 			q.push(event);
 		}
