@@ -12,19 +12,21 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	this->world.SetContactListener(&(this->contact_listener));
 	
 	//lectura de archivo yalm "map_id" y creacion de vigas y gusanos
-	Viga viga(this->world, 0.0f, 0.0f, 0.0f, this->proxy);
-	Viga viga2(this->world, 6.0f, 0.0f, 0.0f, this->proxy);
-	Viga viga3(this->world, -2.0f, -4.0f, 0.0f, this->proxy);
+	Viga viga(this->world, 3.0f, 8.0f, 0.0f, this->proxy);
+	Viga viga2(this->world, 9.0f, 8.0f, 0.0f, this->proxy);
+	Viga viga3(this->world, 3.0f, 18.0f, 0.0f, this->proxy);
+	Viga viga4(this->world, 9.0f, 18.0f, 0.0f, this->proxy);
+
 	
 	this->water = new Water(this->world, -10, -10, 20, -10);
 	
 	std::vector<Gusano*> gusanos;
-	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 0.5f, 0.52f, 0.0f);
+	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 6.5f, 10.48f, 0.0f);
 	gusanos.push_back(gusano0);
-	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 3.0f, 0.52f, 0.0f);
+	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 4.0f, 10.48f, 0.0f);
 	gusanos.push_back(gusano1);
-	Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
-	gusanos.push_back(gusano2);
+	//Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
+	//gusanos.push_back(gusano2);
 	
 	srand(time(0));
 	std::random_shuffle(gusanos.begin(), gusanos.end());
