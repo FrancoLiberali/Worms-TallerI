@@ -2,13 +2,13 @@
 #define _ESCENARIO_H 
 
 #include "newView/SdlScreen.h"
-#include <list>
+#include <vector>
 #include "VigaView.h"
 
 class Escenario{
 	SdlScreen& screen;
 	VigaView* viga;
-	std::list<VigaView*> vigas;
+	std::vector<VigaView*> vigas;
 public:
 	Escenario(SdlScreen& screen);
 	void draw();

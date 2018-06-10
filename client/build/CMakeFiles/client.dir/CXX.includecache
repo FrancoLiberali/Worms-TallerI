@@ -143,7 +143,7 @@ map
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
 newView/SdlScreen.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
-list
+vector
 -
 VigaView.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h

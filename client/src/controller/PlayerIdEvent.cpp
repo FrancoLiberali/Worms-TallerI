@@ -14,5 +14,5 @@ void PlayerIdEvent::process(){
         proxy.sendMapAndPlayers(1, 2);
     }
     std::string name = model.getNamePlayer();
-    proxy.sendName(name);
+    proxy.sendName(playerId, name);
 }

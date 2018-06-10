@@ -14,10 +14,6 @@ void mainView::init(){
 	worm->setPlayerName("Pepito");
 	worm->load(200, 400, &screen);
 
-	worm2 = new WormView(2);
-	worm2->setPlayerName("Ana");
-	worm2->load(500, 300, &screen);
-
 	//creamos el menu de armas
 	menuWeapon = new MenuWeaponView;
 	menuWeapon->buildWeapon();
@@ -42,8 +38,6 @@ mainView::~mainView(){
 		//delete it.second;
 	}
 	delete worm;
-	delete worm2;
-
 }
 
 bool mainView::isOpen(){
@@ -69,19 +63,10 @@ void mainView::update(){
 		event->process();
 		delete event;
 		worm->update();
-		worm2->update();
-		/*for (auto& w: worms){
-			w.second.update();
-		}*/
 		screen.render();
 	}
 	worm->update();
-	worm2->update();
 	menuWeapon->draw(screen);
-
-	/*for (auto& w: worms){
-			w.second.update();
-	}*/
 	screen.render();
 }
 
@@ -91,10 +76,7 @@ void mainView::procesar(std::string msg){
 
 WormView* mainView::getWormView(int id){
 	std::cout << "ID-WORM" << id << std::endl;
-	if (id == 1)
-		return worm;
-	else
-		return worm2;
+	return worms[id];
 }
 
 void mainView::actionMenu(){
@@ -124,5 +106,5 @@ void mainView::addViga(int x, int y, int angle){
 
 std::string mainView::changeTurn(std::string namePlayer){
 	//mostrar algo para saber que es el turno del jugador
-	std::cout<<namePlayer<<std::endl;
+	std::cout<<"TURNO: "<<namePlayer<<std::endl;
 }

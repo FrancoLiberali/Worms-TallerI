@@ -15,8 +15,8 @@ public:
     void close();
     int receiveInt();
     char receiveChar();
-    std::string receiveString();
-    void sendName(std::string& msg);
+    std::string receiveName();
+    void sendName(int id, std::string& msg);
     void sendMapAndPlayers(int idMap, int num);
     void sendMoveWorm(int idPlayer, int dir);
     void sendJump(int dir, int id);

@@ -9,7 +9,6 @@ void Model::setGameControllerProxy(GameControllerProxy* gcp){
     this->gcp = gcp;
 }
 
-
 void Model::WormMove(const int dir){
     gcp->move(idJugador, dir);
 }

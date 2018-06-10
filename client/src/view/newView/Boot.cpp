@@ -9,8 +9,6 @@
 #define W_HEIGHT 700
 
 void Boot::init(){
-	    std::cerr<<"init"<<std::endl;
-
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	IMG_Init(IMG_INIT_PNG);
 

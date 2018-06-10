@@ -24,7 +24,6 @@ private:
 	SdlScreen& screen;
 	EventHandler& eventHandler;
 	WormView* worm;
-	WormView* worm2;
 	MenuWeaponView* menuWeapon;
 
 	std::map<int,WormView*> worms;

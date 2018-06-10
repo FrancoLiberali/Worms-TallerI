@@ -2,10 +2,10 @@
 
 #include <iostream>
 
-PlayerConnectEvent::PlayerConnectEvent(int id, std::string& name, Model& model)
+PlayerConnectEvent::PlayerConnectEvent(int id, std::string name, Model& model)
     :playerId(id), name(name), model(model){};
 
 void PlayerConnectEvent::process(){
-    std::cout<<"jugador conectado :"<< name << std::endl;
+    std::cout<<"Player connect "<<std::endl;
     model.addPlayers(playerId, name);
 }

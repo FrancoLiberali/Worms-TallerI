@@ -2,7 +2,10 @@
 #include <arpa/inet.h>
 #include "common/socket_error.h"
 #include <iostream>
+#include <cstring>
+
 #define BYTE 1
+#define MAX_NAME_LEN 20
 
 ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)){
 }
@@ -34,19 +37,19 @@ char ProxyClient::receiveChar(){
     return received;
 }
 
-std::string ProxyClient::receiveString(){
-    int size = this->receiveInt();
-    char* buff = new char[size];
-    socket.receive_(buff, size);
-    std::string msg(buff);
-    delete[] buff;
-    return msg;
+std::string ProxyClient::receiveName(){
+    char buffer[MAX_NAME_LEN];
+    memset(buffer, 0, MAX_NAME_LEN);
+    int size = receiveInt();
+    std::cout << "SIZE NAME " << size <<std::endl;
+    socket.receive_(buffer, size);
+    return std::string((char*)buffer);
 }
 
-void ProxyClient::sendName(std::string& name){
-    std::cout<<"Send name"<< name<<std::endl;
-    char cmd = 0;
-    socket.send_(&cmd, BYTE);
+void ProxyClient::sendName(int id, std::string& name){
+    std::cout<<"Send name "<< name<<std::endl;
+    sendChar(0);
+    sendInt(id);
     sendInt(name.length());
     socket.send_(name.data(), name.length());
 }

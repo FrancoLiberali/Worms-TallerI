@@ -6,10 +6,10 @@
 class PlayerConnectEvent : public Event {
 private:
 	int playerId;
-    std::string& name;
+    std::string name;
     Model& model;
 public:
-	PlayerConnectEvent(int id, std::string& name, Model& model);
+	PlayerConnectEvent(int id, std::string name, Model& model);
 	void process();
 };
 

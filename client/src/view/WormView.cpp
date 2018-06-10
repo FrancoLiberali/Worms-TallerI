@@ -48,7 +48,6 @@ void WormView::load(int x, int y, SdlScreen* screen){
 }
 
 void WormView::setPos(int x, int y){
-		std::cout << "x: " << x << "y: " << y <<std::endl;
 	this->x = x; this->y = y;
 
 }
