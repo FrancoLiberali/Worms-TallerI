@@ -7,6 +7,9 @@
 #define BYTE 1
 #define MAX_NAME_LEN 20
 
+#define ESCALA (140/6)
+#define MILES
+
 ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)){
 }
  
@@ -26,11 +29,23 @@ void  ProxyClient::sendInt(int num){
 void ProxyClient::sendChar(char byte){
     socket.send_(&byte, BYTE);
 }
+
 int ProxyClient::receiveInt(){
     int num = 0;
     socket.receive_((char*)&num, 4);
     return ntohl(num);
 }
+
+int ProxyClient::receivePos(){
+    int pos_mm = receiveInt();
+    return (pos_mm*ESCALA/1000);
+}
+
+int ProxyClient::receiveAngle(){
+    int angle = receiveInt();
+    return (-angle);
+}
+
 char ProxyClient::receiveChar(){
     char received = 0;
     socket.receive_(&received, 1);

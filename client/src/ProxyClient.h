@@ -14,6 +14,8 @@ public:
     ~ProxyClient() noexcept;
     void close();
     int receiveInt();
+    int receivePos();
+    int receiveAngle();
     char receiveChar();
     std::string receiveName();
     void sendName(int id, std::string& msg);

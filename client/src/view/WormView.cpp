@@ -1,7 +1,8 @@
 #include "WormView.h"
 #include <iostream>
 
-WormView::WormView(int id):flip(SDL_FLIP_NONE){
+WormView::WormView(int idWorm, int idOwner):flip(SDL_FLIP_NONE){
+	this->idOwner = idOwner;
 	this->state = STATIC;
 	currentSprite = NULL;
 	this->selected = true;
@@ -122,6 +123,27 @@ void WormView::update(){
 	draw();
 }
 
+/*optinizar esto*/
+SDL_Color getColor(int id){
+	switch (id){
+		case 1:{
+			SDL_Color color = {255,0,0};
+			return color;
+		}
+		case 2:{
+			SDL_Color color = {51,153,255};
+			return color;
+		}
+		case 3:{
+			SDL_Color color = {0,255,0};
+			return color;
+		}
+		case 4:{
+			SDL_Color color = {153,102,0};
+			return color;
+		}
+	}
+}
 
 void WormView::draw(){
 	
@@ -142,7 +164,7 @@ void WormView::draw(){
 	rect.y = this->getY()-22;
 	rect.w = this->widhtLifeCurrent;
 	rect.h = 5;
-	SDL_Color color = {255, 255, 153};
+	SDL_Color color = getColor(idOwner);
 	TextureManager::Instance().drawFillRect(screen->getRenderer(),rect, color);
 }
 

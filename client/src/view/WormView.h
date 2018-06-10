@@ -33,12 +33,13 @@ private:
 
 	bool alive;
 	TextView labelUsuario;
+	int idOwner;
 
 	void draw();
 	int getXCenter();
 	int getYCenter();
 public:
-	WormView(int id);
+	WormView(int idWorm, int idOwner);
 	void setPlayerName(std::string player);
 	~WormView();
 	void selectWeapon(WeaponId idWapon);

@@ -28,8 +28,8 @@ private:
 
 	std::map<int,WormView*> worms;
 	bool open;
-	void procesar(std::string mensaje);
 	void init();
+	void updateWorms();
 public:
 	mainView(EventHandler& eventHandler, SdlScreen& screen);
 	~mainView();
@@ -44,7 +44,7 @@ public:
 	bool isMenuOn();
 	bool hasClickedMenu(SDL_Point clickPoint);
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
-	void addWorm(int id, std::string player, int x, int y, int dir, int angle);
+	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);
 	std::string changeTurn(std::string namePlayer);
 };

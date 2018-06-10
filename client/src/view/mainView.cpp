@@ -10,7 +10,7 @@ mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen)
 }
 
 void mainView::init(){
-	worm = new WormView(1);
+	worm = new WormView(1,1);
 	worm->setPlayerName("Pepito");
 	worm->load(200, 400, &screen);
 
@@ -54,7 +54,6 @@ void mainView::update(){
 	stage.draw();
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
-		//this->procesar(mensaje);
 		SDL_Delay(100);
 		screen.fill();
 		stage.draw();
@@ -63,21 +62,24 @@ void mainView::update(){
 		event->process();
 		delete event;
 		worm->update();
+		updateWorms();
 		screen.render();
 	}
 	worm->update();
+	updateWorms();
 	menuWeapon->draw(screen);
 	screen.render();
 }
 
-void mainView::procesar(std::string msg){
-	std::cout << "procesar " << msg << std::endl;
+WormView* mainView::getWormView(int id){
+		return worms[id];
 }
 
-WormView* mainView::getWormView(int id){
-	std::cout << "ID-WORM" << id << std::endl;
-	return worms[id];
+void mainView::updateWorms(){
+	for(auto& it: this->worms)
+		it.second->update();
 }
+
 
 void mainView::actionMenu(){
 	menuWeapon->actionMenu();
@@ -91,8 +93,8 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
-void mainView::addWorm(int id, std::string player, int x, int y, int dir, int angle){
-	WormView* worm = new WormView(id);
+void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle){
+	WormView* worm = new WormView(id, idOwner);
 	worm->setPlayerName(player);
 	worm->setDirection(dir);
 	worm->setAngle(angle);

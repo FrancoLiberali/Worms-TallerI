@@ -25,9 +25,9 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       return new PlayerConnectEvent(id, name, model);
     }
     case CREATE_VIGA:{
-      int posx = proxy.receiveInt();
-      int posy = proxy.receiveInt();
-      int angle = proxy.receiveInt();
+      int posx = proxy.receivePos();
+      int posy = proxy.receivePos();
+      int angle = proxy.receiveAngle();
       return new CreateVigaEvent(posx, posy, angle, view);
     }
     case CREATE_WATER:{
@@ -36,23 +36,23 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case CREATE_WORM:{
       int idWorm = proxy.receiveInt();
       int idOwner = proxy.receiveInt();
-      int posx = proxy.receiveInt();
-      int posy = proxy.receiveInt();
+      int posx = proxy.receivePos();
+      int posy = proxy.receivePos();
       int dir = proxy.receiveInt();
-      int angle = proxy.receiveInt();
+      int angle = proxy.receiveAngle();
       return new CreateWormEvent(idWorm, idOwner, posx, posy, dir, angle, model, view);
     }
     case START_TURN:{
-      int currPlayer = proxy.receiveInt();
+      int currPlayer = proxy.receiveAngle();
       int idWorm = proxy.receiveInt();
       return new StartTurnEvent(currPlayer, idWorm, model, view);
     }
      case W_MOVE: {
       int idWorm = proxy.receiveInt();
-      int posx = proxy.receiveInt();
-      int posy = proxy.receiveInt();
+      int posx = proxy.receivePos();
+      int posy = proxy.receivePos();
       int dir = proxy.receiveInt();
-      int angle = proxy.receiveInt();
+      int angle = proxy.receiveAngle();
       return new WormMoveEvent(idWorm, posx, posy, dir, angle);
     }
     case W_CHANGE_STATE:{
@@ -63,16 +63,16 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case B_POS: {
       int idBullet = proxy.receiveInt();
       int idWeapon = proxy.receiveInt();
-      int posx = proxy.receiveInt();
-      int posy = proxy.receiveInt();
+      int posx = proxy.receivePos();
+      int posy = proxy.receivePos();
       int dir = proxy.receiveInt();
-      int angle = proxy.receiveInt();
+      int angle = proxy.receiveAngle();
       return nullptr;
     }
     case B_EXPLOTE: {
       int idBullet = proxy.receiveInt();
-      int posx = proxy.receiveInt();
-      int posy = proxy.receiveInt();
+      int posx = proxy.receivePos();
+      int posy = proxy.receivePos();
       return nullptr;
     }
     case W_CUR_WEAPON: {

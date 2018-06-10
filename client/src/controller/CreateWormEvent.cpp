@@ -7,5 +7,5 @@ CreateWormEvent::CreateWormEvent(int idWorm, int idOwner, int x, int y, int dir 
 
 void CreateWormEvent::process(){
     std::string name = model.getPlayerById(idOwner);
-    view.addWorm(idWorm, name, posx, posy, dir, angle);
+    view.addWorm(idWorm, idOwner, name, posx, posy, dir, angle);
 }
