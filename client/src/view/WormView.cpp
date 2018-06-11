@@ -20,7 +20,7 @@ WormView::WormView(int idWorm, int idOwner):flip(SDL_FLIP_NONE){
 void WormView::load(int x, int y, SdlScreen* screen){
 	this->setPos(x, y);
 	this->screen = screen;
-
+	this->aim.setScreen(screen);
 	//Cargamos los sprites
 	try {
 		sprites["caminar"] = SpriteConfigurator::Instance().get("caminar");
@@ -50,7 +50,7 @@ void WormView::load(int x, int y, SdlScreen* screen){
 
 void WormView::setPos(int x, int y){
 	this->x = x; this->y = y;
-
+	aim.setCenter(x,y);
 }
 
 void WormView::setPlayerName(std::string player){
@@ -61,51 +61,66 @@ void WormView::setPlayerName(std::string player){
 void WormView::update(){
 	if (currentSprite == NULL) {
 		currentSprite = &this->sprites["caminar"];
+		aim.disable();
 	}
 	if (this->state == JUMP){
 		// Camino sin arma
 		if (currentSprite != &this->sprites["saltar"])
 			currentSprite = &this->sprites["saltar"];
 		currentSprite->update();
+		aim.disable();
 	} else if (this->state == MOVE){
 		// Camino sin arma
 		if (currentSprite != &this->sprites["caminar"])
 			currentSprite = &this->sprites["caminar"];
 		currentSprite->update();
+		aim.disable();
 	} 
 	else if (this->state == STATIC){
-		if (this->weaponId == G_GRENADE && currentSprite != &this->sprites["ggranada"]) 
+		if (this->weaponId == G_GRENADE && currentSprite != &this->sprites["ggranada"]){
 			currentSprite = &this->sprites["ggranada"];
-		
-		if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"])
+			aim.enable();
+		}
+		if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"]){
 			currentSprite = &this->sprites["rgranada"];
-		
-		if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]) 
+			aim.enable();
+		}
+		if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]){
 			currentSprite = &this->sprites["dinamita"];
-		
-		if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]) 
+			aim.enable();
+		}
+		if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]){
 			currentSprite = &this->sprites["bazooka"];
-		
-		if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]) 
+			aim.enable();
+		}
+		if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]){
 			currentSprite = &this->sprites["banana"];
-		
-		if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]) 
+			aim.enable();
+		}
+		if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]){
 			currentSprite = &this->sprites["mortero"];
-		
-		if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]) 
+			aim.enable();
+		}
+		if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]){
 			currentSprite = &this->sprites["holy"];
-		
-		if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"])
+			aim.enable();
+		}
+		if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"]){
 			currentSprite = &this->sprites["radio"];
-		
-		if (this->weaponId == BATE && currentSprite != &this->sprites["bate"])
+			aim.disable();
+		}
+		if (this->weaponId == BATE && currentSprite != &this->sprites["bate"]){
 			currentSprite = &this->sprites["bate"];
-		
-		if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]) 
+			aim.enable();
+		}
+		if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]){
 			currentSprite = &this->sprites["teleport"];
-		
-		if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["caminar"]) 
+			aim.disable();
+		}
+		if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["caminar"]){
 			currentSprite = &this->sprites["caminar"];
+			aim.disable();
+		}
 		currentSprite->clean();
 
 	} else if (this->state == DEAD) {
@@ -157,7 +172,8 @@ void WormView::draw(){
 	 
 	if (this->selected)
 		labelUsuario.draw(screen->getRenderer(),this->getXCenter(),  this->getYCenter() - 15);
-	
+
+	aim.draw();
 
 	SDL_Rect rect;
 	rect.x = this->getX() -10;
@@ -183,7 +199,12 @@ void WormView::changeState(WormState newState){
 }
 
 void WormView::setDirection(int dir){
-	flip = (dir == 1)? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
+	SDL_RendererFlip currFlip = (dir == 1)? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
+	
+	if (flip != currFlip)
+		aim.changeDir();
+	
+	flip = currFlip;
 }
 void WormView::setAngle(int angle){
 	this->angle = angle;
@@ -210,4 +231,8 @@ int WormView::getYCenter()
 void WormView::changeLife(int newLife){
 	int widhtLifeCurrent = newLife * widhtLife100 /100;
 	currentLife = newLife;
+}
+
+void WormView::changeAimAngle(int delta){
+	aim.changeAngle(delta);
 }

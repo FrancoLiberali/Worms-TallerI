@@ -2,6 +2,7 @@
 #include "WormMoveCommand.h"
 #include "WormJumpCommand.h"
 #include "WormWeaponCommand.h"
+#include "ChangeAimCommand.h"
 
 
 GameControllerProxy::GameControllerProxy(Queue<ClientCommand *> &queue)
@@ -18,5 +19,10 @@ void GameControllerProxy::jump(const int idJugador, const int direccion) {
 void GameControllerProxy::weapon(const int idJugador, const int idWeapon){
   queue.push(new WormWeaponCommand(idJugador, idWeapon));
 }
+
+void GameControllerProxy::aimAngle(const int idJugador, const int delta){
+  queue.push(new ChangeAimCommand(idJugador, delta));
+}
+
 
 GameControllerProxy::~GameControllerProxy(){}

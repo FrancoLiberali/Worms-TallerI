@@ -96,3 +96,10 @@ void ProxyClient::sendWeaponSelect(int idPlayer, int idWeapon){
     sendInt(idPlayer);
     sendInt(idWeapon);
 }
+
+void ProxyClient::sendChangeAim(int idPlayer, int delta){
+    std::cout<<"change aim "<< idPlayer <<" "<< delta <<std::endl;
+    sendChar(6);
+    sendInt(idPlayer);
+    sendInt(delta);
+}

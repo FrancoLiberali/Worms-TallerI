@@ -30,21 +30,21 @@ void Boot::loadConfigGame(){
 void Boot::loadSprites(){
 	try {
 		// worm
-		TextureManager::Instance().load("../resource/images/wwalk.png", "caminar", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wdie.png", "morir", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wflyup.png", "saltar", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/wwalk.png", "caminar", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wdie.png", "morir", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wflyup.png", "saltar", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/grave2.png", "cripta", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wbazbak.png", "bazooka", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wbazbak.png", "mortero", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wdynbak.png", "dinamita", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wgrnbak.png", "ggranada", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wclsbak.png", "rgranada", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/whgrbak.png", "holy", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wairbak.png", "radio", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wbsbbak.png", "bate", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wtelbak.png", "teleport", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/wbanbak.png", "banana", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/grave2.png", "cripta", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbazbak.png", "bazooka", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbazbak.png", "mortero", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wdynbak.png", "dinamita", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wgrnbak.png", "ggranada", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wclsbak.png", "rgranada", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/whgrbak.png", "holy", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wairbak.png", "radio", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbsbbak.png", "bate", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wtelbak.png", "teleport", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbanbak.png", "banana", screen.getRenderer());
 
 
 		SpriteConfigurator::Instance().add("caminar", 60, 60, 15, true);
@@ -66,15 +66,15 @@ void Boot::loadSprites(){
 		// projectiles
 		
 		//Vigas
-		TextureManager::Instance().load("../resource/images/vigah.png", "viga", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
 
 		// explosiones
-		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", this->getScreen().getRenderer());			
-		TextureManager::Instance().load("../resource/images/circle75.png", "circle75", this->getScreen().getRenderer());			
-		TextureManager::Instance().load("../resource/images/circle100.png", "circle100", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", screen.getRenderer());			
+		TextureManager::Instance().load("../resource/images/circle75.png", "circle75", screen.getRenderer());			
+		TextureManager::Instance().load("../resource/images/circle100.png", "circle100", screen.getRenderer());
 
 		SpriteConfigurator::Instance().add("circle25", 50, 50, 8, false);
 		SpriteConfigurator::Instance().add("circle50", 100, 100, 8, false);
@@ -93,44 +93,44 @@ void Boot::loadEart(){}
 void Boot::loadMenuWeapon(){
 	try {
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/MenuWeapon.png", "MenuWeapon", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/MenuWeapon.png", "MenuWeapon", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/aim.png", "aim", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/aim.png", "aim", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/ok.png", "ok", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/ok.png", "ok", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.1.png", "bazooka.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.2.png", "bazooka.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.1.png", "bazooka.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.2.png", "bazooka.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.1.png", "mortar.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.2.png", "mortar.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.1.png", "mortar.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.2.png", "mortar.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.1.png", "g_grenade.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.2.png", "g_grenade.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.1.png", "g_grenade.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.2.png", "g_grenade.2", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.1.png", "r_grenade.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.2.png", "r_grenade.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.1.png", "r_grenade.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.2.png", "r_grenade.2", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/menuWeapon/banana.1.png", "banana.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/banana.2.png", "banana.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/banana.1.png", "banana.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/banana.2.png", "banana.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.1.png", "hgrenade.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.2.png", "hgrenade.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.1.png", "hgrenade.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.2.png", "hgrenade.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.1.png", "dynamite.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.2.png", "dynamite.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.1.png", "dynamite.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.2.png", "dynamite.2", screen.getRenderer());
 	
-		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.1.png", "baseball.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.2.png", "baseball.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.1.png", "baseball.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.2.png", "baseball.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.1.png", "airstrke.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.2.png", "airstrke.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.1.png", "airstrke.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.2.png", "airstrke.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.1.png", "teleport.1", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.2.png", "teleport.2", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.1.png", "teleport.1", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.2.png", "teleport.2", screen.getRenderer());
 
 		/*inicia el manejo del texto*/
-		TextManager::Instance().init(this->getScreen().getRenderer());
+		TextManager::Instance().init(screen.getRenderer());
 		TextManager::Instance().loadFont(Arial16);
 		TextManager::Instance().loadFont(Arial12);
 
@@ -144,6 +144,7 @@ void Boot::loadMenuWeapon(){
 
 void Boot::initCamera(int w, int h){}
 void Boot::realoadEart(){}
+
 SdlScreen& Boot::getScreen(){
     return screen;
 }

@@ -17,8 +17,9 @@ add_library(alllib
 	src/controller/CreateWormEvent.cpp
 	src/controller/PlayerIdEvent.cpp
 	src/controller/PlayerConnectEvent.cpp
+	src/controller/WormChangeAimEvent.cpp
 	src/controller/StartTurnEvent.cpp
-	src/controller/PlayerOffEvent
+	src/controller/PlayerOffEvent.cpp
 
     src/controller/ClientCommandSender.cpp
 	src/controller/Controller.cpp
@@ -34,6 +35,7 @@ add_library(alllib
 	src/model/WormMoveCommand.cpp
 	src/model/WormJumpCommand.cpp
 	src/model/WormWeaponCommand.cpp
+	src/model/ChangeAimCommand.cpp
 
 	src/view/mainView.cpp
 	src/view/SdlException.cpp
@@ -51,6 +53,7 @@ add_library(alllib
 	src/view/Weapon.cpp
 	src/view/Shape.cpp
 	src/view/VigaView.cpp
+	src/view/AimView.cpp
 )
 
 

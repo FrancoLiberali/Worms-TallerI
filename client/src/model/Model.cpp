@@ -21,6 +21,10 @@ void Model::WormWeapon(const int idWeapon){
     gcp->weapon(idJugador, idWeapon);
 }
 
+void Model::AimChangeAngle(const int delta){
+    gcp->aimAngle(idJugador, delta);
+}
+
 int Model::getIdWormSelected(){
     return this->idWormSelected;
 }

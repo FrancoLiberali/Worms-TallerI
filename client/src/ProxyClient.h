@@ -23,6 +23,7 @@ public:
     void sendMoveWorm(int idPlayer, int dir);
     void sendJump(int dir, int id);
     void sendWeaponSelect(int idPlayer, int idWeapon);
+    void sendChangeAim(int idPlayer, int delta);
 };
 
 #endif

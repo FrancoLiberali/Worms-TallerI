@@ -622,6 +622,33 @@ src/controller/StartTurnEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.s
 .PHONY : src/controller/StartTurnEvent.cpp.s
 
+src/controller/WormChangeAimEvent.o: src/controller/WormChangeAimEvent.cpp.o
+
+.PHONY : src/controller/WormChangeAimEvent.o
+
+# target to build an object file
+src/controller/WormChangeAimEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o
+.PHONY : src/controller/WormChangeAimEvent.cpp.o
+
+src/controller/WormChangeAimEvent.i: src/controller/WormChangeAimEvent.cpp.i
+
+.PHONY : src/controller/WormChangeAimEvent.i
+
+# target to preprocess a source file
+src/controller/WormChangeAimEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.i
+.PHONY : src/controller/WormChangeAimEvent.cpp.i
+
+src/controller/WormChangeAimEvent.s: src/controller/WormChangeAimEvent.cpp.s
+
+.PHONY : src/controller/WormChangeAimEvent.s
+
+# target to generate assembly for a file
+src/controller/WormChangeAimEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.s
+.PHONY : src/controller/WormChangeAimEvent.cpp.s
+
 src/controller/WormChangeLifeEvent.o: src/controller/WormChangeLifeEvent.cpp.o
 
 .PHONY : src/controller/WormChangeLifeEvent.o
@@ -729,6 +756,33 @@ src/controller/WormWeaponEvent.s: src/controller/WormWeaponEvent.cpp.s
 src/controller/WormWeaponEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.s
 .PHONY : src/controller/WormWeaponEvent.cpp.s
+
+src/model/ChangeAimCommand.o: src/model/ChangeAimCommand.cpp.o
+
+.PHONY : src/model/ChangeAimCommand.o
+
+# target to build an object file
+src/model/ChangeAimCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.o
+.PHONY : src/model/ChangeAimCommand.cpp.o
+
+src/model/ChangeAimCommand.i: src/model/ChangeAimCommand.cpp.i
+
+.PHONY : src/model/ChangeAimCommand.i
+
+# target to preprocess a source file
+src/model/ChangeAimCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.i
+.PHONY : src/model/ChangeAimCommand.cpp.i
+
+src/model/ChangeAimCommand.s: src/model/ChangeAimCommand.cpp.s
+
+.PHONY : src/model/ChangeAimCommand.s
+
+# target to generate assembly for a file
+src/model/ChangeAimCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.s
+.PHONY : src/model/ChangeAimCommand.cpp.s
 
 src/model/GameControllerProxy.o: src/model/GameControllerProxy.cpp.o
 
@@ -864,6 +918,33 @@ src/model/WormWeaponCommand.s: src/model/WormWeaponCommand.cpp.s
 src/model/WormWeaponCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.s
 .PHONY : src/model/WormWeaponCommand.cpp.s
+
+src/view/AimView.o: src/view/AimView.cpp.o
+
+.PHONY : src/view/AimView.o
+
+# target to build an object file
+src/view/AimView.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.o
+.PHONY : src/view/AimView.cpp.o
+
+src/view/AimView.i: src/view/AimView.cpp.i
+
+.PHONY : src/view/AimView.i
+
+# target to preprocess a source file
+src/view/AimView.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.i
+.PHONY : src/view/AimView.cpp.i
+
+src/view/AimView.s: src/view/AimView.cpp.s
+
+.PHONY : src/view/AimView.s
+
+# target to generate assembly for a file
+src/view/AimView.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.s
+.PHONY : src/view/AimView.cpp.s
 
 src/view/Escenario.o: src/view/Escenario.cpp.o
 
@@ -1361,6 +1442,9 @@ help:
 	@echo "... src/controller/StartTurnEvent.o"
 	@echo "... src/controller/StartTurnEvent.i"
 	@echo "... src/controller/StartTurnEvent.s"
+	@echo "... src/controller/WormChangeAimEvent.o"
+	@echo "... src/controller/WormChangeAimEvent.i"
+	@echo "... src/controller/WormChangeAimEvent.s"
 	@echo "... src/controller/WormChangeLifeEvent.o"
 	@echo "... src/controller/WormChangeLifeEvent.i"
 	@echo "... src/controller/WormChangeLifeEvent.s"
@@ -1373,6 +1457,9 @@ help:
 	@echo "... src/controller/WormWeaponEvent.o"
 	@echo "... src/controller/WormWeaponEvent.i"
 	@echo "... src/controller/WormWeaponEvent.s"
+	@echo "... src/model/ChangeAimCommand.o"
+	@echo "... src/model/ChangeAimCommand.i"
+	@echo "... src/model/ChangeAimCommand.s"
 	@echo "... src/model/GameControllerProxy.o"
 	@echo "... src/model/GameControllerProxy.i"
 	@echo "... src/model/GameControllerProxy.s"
@@ -1388,6 +1475,9 @@ help:
 	@echo "... src/model/WormWeaponCommand.o"
 	@echo "... src/model/WormWeaponCommand.i"
 	@echo "... src/model/WormWeaponCommand.s"
+	@echo "... src/view/AimView.o"
+	@echo "... src/view/AimView.i"
+	@echo "... src/view/AimView.s"
 	@echo "... src/view/Escenario.o"
 	@echo "... src/view/Escenario.i"
 	@echo "... src/view/Escenario.s"

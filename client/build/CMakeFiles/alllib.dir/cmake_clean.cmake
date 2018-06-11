@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o"
+  "CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o"
@@ -25,6 +26,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.o"
   "CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.o"
   "CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o"
+  "CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.o"
   "CMakeFiles/alllib.dir/src/view/mainView.cpp.o"
   "CMakeFiles/alllib.dir/src/view/SdlException.cpp.o"
   "CMakeFiles/alllib.dir/src/view/Escenario.cpp.o"
@@ -41,6 +43,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/view/Weapon.cpp.o"
   "CMakeFiles/alllib.dir/src/view/Shape.cpp.o"
   "CMakeFiles/alllib.dir/src/view/VigaView.cpp.o"
+  "CMakeFiles/alllib.dir/src/view/AimView.cpp.o"
   "liballlib.pdb"
   "liballlib.a"
 )

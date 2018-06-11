@@ -18,6 +18,7 @@ public:
 	void WormMove(const int dir);
 	void WormJump(const int dir);
 	void WormWeapon(const int idWeapon);
+	void AimChangeAngle(const int delta);
 	int getIdWormSelected();
 	void setGameControllerProxy(GameControllerProxy* gcp);
 	void setIdPlayer(int idJugador);

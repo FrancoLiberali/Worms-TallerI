@@ -11,6 +11,7 @@
 #include "CreateWormEvent.h"
 #include "StartTurnEvent.h"
 #include "PlayerOffEvent.h"
+#include "WormChangeAimEvent.h"
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
   std::cout << "hay evento " << (EventType)type << std::endl;
@@ -82,7 +83,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case W_CUR_AIM: {
       int curAimAngle = proxy.receiveInt(); //+1 -1
-      return nullptr;
+      return new WormChangeAimEvent(model.getIdWormSelected(), curAimAngle);
     }
     case W_CHANGE_LIFE: {
       int idWorm = proxy.receiveInt();

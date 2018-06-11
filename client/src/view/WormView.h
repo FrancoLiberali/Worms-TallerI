@@ -7,6 +7,7 @@
 #include "newView/SpriteConfigurator.h"
 #include "newView/TextureManager.h"
 #include "newView/TextView.h"
+#include "AimView.h"
 
 #include <map>
 
@@ -26,6 +27,7 @@ private:
 	int widhtLifeCurrent;
 
 	WeaponId weaponId;
+	AimView aim;
 
 	bool selected;
 
@@ -53,6 +55,7 @@ public:
 	void setDirection(int dir);
 	void setAngle(int angle);
 	void changeLife(int newLife);
+	void changeAimAngle(int delta);
 };
 
 #endif

@@ -50,15 +50,13 @@ void mainView::close(){
 
 void mainView::update(){
 	screen.fill();
-	//Escenario escenario(screen);
 	stage.draw();
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
-		SDL_Delay(100);
+		//SDL_Delay(20);
 		screen.fill();
 		stage.draw();
 		menuWeapon->draw(screen);
-
 		event->process();
 		delete event;
 		worm->update();
