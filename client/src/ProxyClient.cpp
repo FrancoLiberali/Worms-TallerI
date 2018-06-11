@@ -84,7 +84,7 @@ void ProxyClient::sendMoveWorm(int idPlayer, int dir){
 }
 
 void ProxyClient::sendJump(int dir, int idPlayer){
-    char cmd = (dir == 1)? 2 : 3;
+    char cmd = (dir == 1)? 3 : 4;
     std::cout<<"salto "<<(int)cmd << " " <<idPlayer<<std::endl;
     sendChar(cmd);
     sendInt(idPlayer);
@@ -92,7 +92,7 @@ void ProxyClient::sendJump(int dir, int idPlayer){
 
 void ProxyClient::sendWeaponSelect(int idPlayer, int idWeapon){
     std::cout<<"wepon "<< idPlayer <<" "<< idWeapon <<std::endl;
-    sendChar(4);
+    sendChar(5);
     sendInt(idPlayer);
     sendInt(idWeapon);
 }

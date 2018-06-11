@@ -6,6 +6,9 @@ Controller::Controller(Model& model, mainView& view)
 
 void Controller::handle(SDL_Event& e) {
     switch (e.type){
+
+        std::cout<<SDL_GetKeyName(e.key.keysym.sym);
+
         case SDL_QUIT:
 				std::cout<<"cerrar" << std::endl;			
 				view.close();
@@ -13,15 +16,16 @@ void Controller::handle(SDL_Event& e) {
         case SDL_KEYDOWN:{
             SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
             switch (keyEvent.keysym.sym) {
-                case SDLK_a:
+                case SDLK_LEFT:
                     model.WormMove(-1); break;
-                case SDLK_d:
+                case SDLK_RIGHT:
                     model.WormMove(1); break;
-                case SDLK_c:
+                case SDLK_m:
                     view.actionMenu(); break;
-                case SDLK_SPACE: //Salto adelante
+                case SDLK_RETURN: //Salto adelante
+                    std::cout<< "ENTER" <<std::endl;
                     model.WormJump(1); break;
-                case SDLK_f: //salto atras
+                case SDLK_BACKSPACE: //salto atras
                     model.WormJump(-1); break;
                 }
         }

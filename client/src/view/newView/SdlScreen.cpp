@@ -23,7 +23,7 @@ void SdlScreen::init(const char* title, int xpos, int ypos, int width,
     if(m_pWindow == NULL)
 		throw SdlException("Error al crear la ventana\n", SDL_GetError());
 
-    renderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);	
+    renderer = SDL_CreateRenderer(m_pWindow, -1, SDL_RENDERER_ACCELERATED);	
 
     if (renderer == NULL)
 		throw SdlException("Error al crear el render\n", SDL_GetError());
