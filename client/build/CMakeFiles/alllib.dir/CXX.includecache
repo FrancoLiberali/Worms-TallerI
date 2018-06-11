@@ -345,6 +345,8 @@ WormWeaponCommand.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormWeaponCommand.h
 ChangeAimCommand.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeAimCommand.h
+iostream
+-
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
 ../common/Queue.h
@@ -367,6 +369,8 @@ map
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.cpp
 WormJumpCommand.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.h
+iostream
+-
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.h
 ClientCommand.h

@@ -14,14 +14,16 @@ public:
     ~ProxyClient() noexcept;
     void close();
     int receiveInt();
-    int receivePos();
+    int receivePosY();
+    int receivePosX();
     int receiveAngle();
     char receiveChar();
     std::string receiveName();
     void sendName(int id, std::string& msg);
     void sendMapAndPlayers(int idMap, int num);
     void sendMoveWorm(int idPlayer, int dir);
-    void sendJump(int dir, int id);
+    void sendJump(int id);
+    void sendBackJump(int id);
     void sendWeaponSelect(int idPlayer, int idWeapon);
     void sendChangeAim(int idPlayer, int delta);
 };

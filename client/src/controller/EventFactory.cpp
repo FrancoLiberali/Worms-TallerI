@@ -26,8 +26,8 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       return new PlayerConnectEvent(id, name, model);
     }
     case CREATE_VIGA:{
-      int posx = proxy.receivePos();
-      int posy = proxy.receivePos();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       int angle = proxy.receiveAngle();
       return new CreateVigaEvent(posx, posy, angle, view);
     }
@@ -37,8 +37,8 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case CREATE_WORM:{
       int idWorm = proxy.receiveInt();
       int idOwner = proxy.receiveInt();
-      int posx = proxy.receivePos();
-      int posy = proxy.receivePos();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       int dir = proxy.receiveInt();
       int angle = proxy.receiveAngle();
       return new CreateWormEvent(idWorm, idOwner, posx, posy, dir, angle, model, view);
@@ -50,8 +50,8 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
      case W_MOVE: {
       int idWorm = proxy.receiveInt();
-      int posx = proxy.receivePos();
-      int posy = proxy.receivePos();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       int dir = proxy.receiveInt();
       int angle = proxy.receiveAngle();
       return new WormMoveEvent(idWorm, posx, posy, dir, angle);
@@ -64,16 +64,16 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case B_POS: {
       int idBullet = proxy.receiveInt();
       int idWeapon = proxy.receiveInt();
-      int posx = proxy.receivePos();
-      int posy = proxy.receivePos();
+      int posx = proxy.receivePosY();
+      int posy = proxy.receivePosX();
       int dir = proxy.receiveInt();
       int angle = proxy.receiveAngle();
       return nullptr;
     }
     case B_EXPLOTE: {
       int idBullet = proxy.receiveInt();
-      int posx = proxy.receivePos();
-      int posy = proxy.receivePos();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       return nullptr;
     }
     case W_CUR_WEAPON: {

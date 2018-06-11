@@ -36,7 +36,12 @@ int ProxyClient::receiveInt(){
     return ntohl(num);
 }
 
-int ProxyClient::receivePos(){
+int ProxyClient::receivePosY(){
+    int pos_mm = receiveInt();
+    return (-pos_mm*ESCALA/1000);
+}
+
+int ProxyClient::receivePosX(){
     int pos_mm = receiveInt();
     return (pos_mm*ESCALA/1000);
 }
@@ -83,10 +88,16 @@ void ProxyClient::sendMoveWorm(int idPlayer, int dir){
     sendInt(dir);
 }
 
-void ProxyClient::sendJump(int dir, int idPlayer){
-    char cmd = (dir == 1)? 3 : 4;
-    std::cout<<"salto "<<(int)cmd << " " <<idPlayer<<std::endl;
-    sendChar(cmd);
+void ProxyClient::sendJump(int idPlayer){
+    std::cout<<"jump "<<std::endl;
+
+    sendChar(3);
+    sendInt(idPlayer);
+}
+void ProxyClient::sendBackJump(int idPlayer){
+    std::cout<<"back jump "<<std::endl;
+
+    sendChar(4);
     sendInt(idPlayer);
 }
 
