@@ -1,0 +1,115 @@
+armas:
+  - tipo: Bazooka
+    habilitada: si
+    mira: si
+    combate cuerpo a cuerpo: no 
+    potencia variable: si
+    cuenta regresiva: no
+    teledirigido: no
+    trayectoria afectada por el viento: si
+    municiones: infinitas
+    daño: 50
+    radio: 2
+  - tipo: Mortero
+    habilitada: si
+    mira: si
+    combate cuerpo a cuerpo: no
+    potencia variable: si
+    cuenta regresiva: no
+    teledirigido: no
+    trayectoria afectada por el viento: si
+    municiones: 10
+    daño: 50
+    radio: 2
+    daño fragmento: 10
+    radio fragmento: 2
+    cantidad fragmentos: 6
+  - tipo: Granada Verde
+    habilitada: si
+    mira: si
+    combate cuerpo a cuerpo: no
+    potencia variable: si
+    cuenta regresiva: si
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: infinitas
+    daño: 30
+    radio: 2
+  - tipo: Granada Roja
+    habilitada: si
+    mira: sí
+    combate cuerpo a cuerpo: no
+    potencia variable: si
+    cuenta regresiva: si
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: 10
+    daño: 30
+    radio: 2
+    daño fragmento: 10
+    radio: 2
+    cantidad fragmentos: 6
+  - tipo: Banana
+    habilitada: si
+    mira: si
+    combate cuerpo a cuerpo: no
+    potencia variable: sí
+    cuenta regresiva: sí
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: 5
+    daño: 70
+    radio: 4
+  - tipo: Granada Santa
+    habilitada: si
+    mira: sí
+    combate cuerpo a cuerpo: no
+    disparo con potencia variable: sí
+    cuenta regresiva: sí
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: 2
+    daño: 110
+    radio: 8
+  - tipo: Dinamita
+    habilitada: si
+    mira: no
+    combate cuerpo a cuerpo: sí
+    potencia variable: no
+    cuenta regresiva: sí
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: 5
+    daño: 50
+    radio: 4
+  - tipo: Bate de Baseball
+    habilitada: si
+    mira: sí
+    combate cuerpo a cuerpo: sí
+    potencia variable: no
+    cuenta regresiva: no
+    teledirigido: no
+    trayectoria afectada por el viento: no
+    municiones: infinitas
+    daño: 10
+  - tipo: Ataque Aereo
+    habilitada: si
+    mira: no
+    combate cuerpo a cuerpo: no
+    potencia variable: no
+    cuenta regresiva: no
+    teledirigido: sí
+    trayectoria afectada por el viento: sí
+    municiones: 2
+    daño: 40
+    radio: 2
+  - tipo: Teletransportacion
+    habilitada: si
+    mira: no
+    combate cuerpo a cuerpo: no
+    disparo con potencia variable: no
+    cuenta regresiva: no
+    teledirigido: sí
+    trayectoria afectada por el viento: no
+    municiones: infinitas
+    daño: 0
