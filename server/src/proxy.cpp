@@ -3,7 +3,6 @@
 #include "socket_error.h"
 #include <iostream>
 
-
 #define LAST8 0xFF
 #define MOSTSIGNIFICANT 24
 #define SECONDBYTE 16
@@ -28,83 +27,8 @@ Proxy::~Proxy() noexcept{
 }
 
 void Proxy::close_communication(){
-	this->socket.shutdown_();
+	this->socket.shutdown();
 }
-
-/*//estos no estarian en el proxy del client
-//pero tener en cuenta a la hora de recibir
-// (boseto en receive event)
-void Proxy::send_viga(Socket& socket, const Viga& viga){
-	this->send_char(socket, 0); //0 = recibir una posicion
-	this->send_char(socket, 0); //0 = la posicion corresponde a una viga
-	// a continuacion se recibe la posicion segun formato en send_position
-	b2Vec2 position = viga.GetPosition();
-	this->send_position(socket, position);
-	float angle = viga.GetAngle();
-	this->send_float(socket, angle);
-}
-		
-void Proxy::send_gusano(Socket& socket, const Gusano& gusano, unsigned int number){
-	this->send_char(socket, 0); //0 = recibir una posicion
-	this->send_char(socket, 1); //1 = la posicion corresponde a un gusano
-	// se envia el numero de gusano(se deberia meter en un vector en este orden a que el numero va a ser quien
-	// represente a ese gusano de aqui en adelante
-	this->send_unsigned_int(socket, number);
-	// a continuacion se recibe la posicion segun formato en send_position
-	b2Vec2 position = gusano.GetPosition();
-	this->send_position(socket, position);
-	//y el angulo como un float
-	float angle = gusano.GetAngle();
-	this->send_float(socket, angle);
-}
-
-void Proxy::send_movement(Socket& socket, unsigned int gusano_number, int direction){
-	this->send_char(socket, 1); //1 = movimiento
-	this->send_unsigned_int(gusano_number);
-	this->send_int(direction);
-}
-		
-void Proxy::send_position(Socket& socket, const b2Vec2& pos){
-	this->send_float(socket, pos.x);
-	this->send_float(socket, pos.y);
-}
-
-void Proxy::send_unsigned_int(Socket& socket, unsigned int num){
-	char c1 = (num >> MOSTSIGNIFICANT) & LAST8;
-	char c2 = (num >> SECONDBYTE) & LAST8;
-	char c3 = (num >> THIRDBYTE) & LAST8;
-	char c4 = num & LAST8;
-	this->send_char(socket, c1);
-	this->send_char(socket, c2);
-	this->send_char(socket, c3);
-	this->send_char(socket, c4);
-}
-
-void Proxy::send_int(Socket& socket, int num){
-	char c1 = (num >> MOSTSIGNIFICANT) & LAST8;
-	char c2 = (num >> SECONDBYTE) & LAST8;
-	char c3 = (num >> THIRDBYTE) & LAST8;
-	char c4 = num & LAST8;
-	this->send_char(socket, c1);
-	this->send_char(socket, c2);
-	this->send_char(socket, c3);
-	this->send_char(socket, c4);
-}
-
-void Proxy::send_float(Socket& socket, float num){
-	char c1 = (num >> MOSTSIGNIFICANT) & LAST8;
-	char c2 = (num >> SECONDBYTE) & LAST8;
-	char c3 = (num >> THIRDBYTE) & LAST8;
-	char c4 = num & LAST8;
-	this->send_char(socket, c1);
-	this->send_char(socket, c2);
-	this->send_char(socket, c3);
-	this->send_char(socket, c4);
-}
-
-void Proxy::send_char(Socket& socket, const char to_send){
-	 socket.send_(&to_send, ONEBYTE);
-}*/
 
 void Proxy::receive_event(ProtectedQueue& queue){
 	try{
@@ -112,7 +36,7 @@ void Proxy::receive_event(ProtectedQueue& queue){
 		switch (event){
 			case 0: {//se recibe el nombre de un jugador
 					char* buff = new char[TWO_INTS];
-					this->socket.receive_(buff, TWO_INTS);
+					this->socket.receive(buff, TWO_INTS);
 					int name_len = ntohl(*(reinterpret_cast<int*>(buff + 4)));
 					char* msj = new char[TWO_INTS + 1 + name_len];
 					msj[0] = 0;
@@ -124,7 +48,7 @@ void Proxy::receive_event(ProtectedQueue& queue){
 					msj[6] = buff[5];
 					msj[7] = buff[6];
 					msj[8] = buff[7];
-					this->socket.receive_(msj + 9, name_len);
+					this->socket.receive(msj + 9, name_len);
 					queue.push(msj);
 					delete[] buff;
 					break;	
@@ -175,34 +99,34 @@ void Proxy::receive_event(ProtectedQueue& queue){
 void Proxy::receive_event_info(ProtectedQueue& queue, char event, int tam){
 	char* msj = new char[tam];
 	msj[0] = event;
-	this->socket.receive_(msj+1, tam-1);
+	this->socket.receive(msj+1, tam-1);
 	queue.push(msj);
 }
 
 const unsigned char Proxy::receive_char(){
 	char received;
-	this->socket.receive_(&received, ONEBYTE);
+	this->socket.receive(&received, ONEBYTE);
 	return received;
 }
 
 void Proxy::sendPlayerId(int id){
 	char event = 0;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->id = id;
 	this->send_int(id);
 }
 
 void Proxy::sendPlayerName(int player_id, std::string& name){
 	char event = 1;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 	this->send_int(name.length());
-	this->socket.send_(name.data(), name.length());
+	this->socket.send(name.data(), name.length());
 }
 
 void Proxy::sendVigaCreation(int x, int y, int angle){
 	char event = 2;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(x);
 	this->send_int(y);
 	this->send_int(angle);
@@ -210,7 +134,7 @@ void Proxy::sendVigaCreation(int x, int y, int angle){
 
 void Proxy::sendGusanoCreation(int gusano_id, int player_id, int x, int y, int direction, int angle){
 	char event = 4;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(gusano_id);
 	this->send_int(player_id);
 	this->send_int(x);
@@ -221,14 +145,14 @@ void Proxy::sendGusanoCreation(int gusano_id, int player_id, int x, int y, int d
 
 void Proxy::sendTurnBegining(int player_id, int gusano_id){
 	char event = 5;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 	this->send_int(gusano_id);
 }
 
 void Proxy::sendGusanoPosition(int gusano_id, int x, int y, int direction, int angle){
 	char event = 6;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(gusano_id);
 	this->send_int(x);
 	this->send_int(y);
@@ -238,14 +162,14 @@ void Proxy::sendGusanoPosition(int gusano_id, int x, int y, int direction, int a
 
 void Proxy::sendStateChange(int gusano_id, int new_state){
 	char event = 7;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(gusano_id);
 	this->send_int(new_state);
 }
 
 void Proxy::sendProjectilePosition(int projectile_number, int weapon, int x, int y, int angle){
 	char event = 8;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(projectile_number);
 	this->send_int(weapon);
 	this->send_int(x);
@@ -255,7 +179,7 @@ void Proxy::sendProjectilePosition(int projectile_number, int weapon, int x, int
 
 void Proxy::sendProjectileExplosion(int projectile_number, int x, int y){
 	char event = 9;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(projectile_number);
 	this->send_int(x);
 	this->send_int(y);
@@ -263,82 +187,37 @@ void Proxy::sendProjectileExplosion(int projectile_number, int x, int y){
 
 void Proxy::sendTakeWeapon(int weapon){
 	char event = 10;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(weapon);
 }
 
 void Proxy::sendChangeSightAngle(int change){
 	char event = 11;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(change);
 }
 
 void Proxy::sendLifeChange(int gusano_id, int new_life){
 	char event = 12;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(gusano_id);
 	this->send_int(new_life);
 }
 
 void Proxy::sendPlayerDisconnection(int player_id){
 	char event = 13;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 }
 
 void Proxy::sendGameWon(int player_id){
 	char event = 14;
-	this->socket.send_(&event, ONEBYTE);
+	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 }
 
 void Proxy::send_int(int to_send){
 	int net_to_send = htonl(to_send);
 	char* number = (char*)&net_to_send;
-	this->socket.send_(number, 4);
+	this->socket.send(number, 4);
 }
-
-
-	
-	
-
-/*const float Proxy::receive_float(Socket& socket){
-	char c1 = this->receive_char(socket);
-	char c2 = this->receive_char(socket);
-	char c3 = this->receive_char(socket);
-	char c4 = this->receive_char(socket);
-	float received = (((uc)c1 << MOSTSIGNIFICANT) 
-					 | ((uc)c2 << SECONDBYTE) 
-					 | ((uc)c3 << THIRDBYTE) 
-					 | ((uc)c4));
-	return received;
-}
-
-const unsigned int Proxy::receive_unsigned_int(Socket& socket){
-	char c1 = this->receive_char(socket);
-	char c2 = this->receive_char(socket);
-	char c3 = this->receive_char(socket);
-	char c4 = this->receive_char(socket);
-	unsigned int received = (((uc)c1 << MOSTSIGNIFICANT) 
-							| ((uc)c2 << SECONDBYTE) 
-							| ((uc)c3 << THIRDBYTE) 
-							| ((uc)c4));
-	return received;
-}
-
-const int Proxy::receive_int(Socket& socket){
-	char c1 = this->receive_char(socket);
-	char c2 = this->receive_char(socket);
-	char c3 = this->receive_char(socket);
-	char c4 = this->receive_char(socket);
-	int received = (((uc)c1 << MOSTSIGNIFICANT) 
-					| ((uc)c2 << SECONDBYTE) 
-					| ((uc)c3 << THIRDBYTE) 
-					| ((uc)c4));
-	return received;
-}*/
-
-
-
-
-

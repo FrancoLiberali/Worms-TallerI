@@ -1,6 +1,5 @@
 #include "thread.h"
 #include "proxy.h"
-#include "fake_proxy/mok_proxy.h"
 #include "protected_queue.h"
 #include <mutex>
 
@@ -14,15 +13,22 @@ class Receiver : public Thread{
 		std::mutex keep_mutex;
 		bool keep_receiving = true;
 	public:
-	
+		// Crea un objeto receiver. La creacion de este objeto es bloqueante
+		// hasta que un jugador se conecte al socket recibido.
+		// Una vez conectado, se crea el proxy de comunciacion con el mismo.
 		Receiver(Socket& socket, ProtectedQueue& queue_e);
 		
 		~Receiver();
 		
+		// Devuelve el proxy de comunicacion con el jugador que se conecto
+		// al crear el objeto.
 		Proxy* getProxy();
 		
+		// Bucle de recepcion de eventos por parte del proxy, los cuales 
+		// se van encolando en la cola protegida recibida al crearse el objeto.
 		virtual void run();
 		
+		// Se finaliza la recepcion de mensajes
 		virtual void stop();
 		
 };

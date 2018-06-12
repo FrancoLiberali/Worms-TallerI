@@ -24,8 +24,6 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e), info(info_e), 
 		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
 	
-	//para activar los primeros empiezan contacto
-	this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
 }
 
 Turn::~Turn(){
@@ -146,9 +144,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		
 		keep_simulation = false;
 		continue_turn = (i < TURN_LEN);
+		//interpretacion de todos los mensajes enviados por todos los jugadores
 		while(!this->queue.isEmpty()){
 			std::cout << "hay evento\n";
-			//no es posible generar raise condition porque del otro lado solo meten asi que si no estaba vacia tampoco lo estara ahora
+			//no es posible generar raise condition porque del otro lado 
+			// solo meten asi que si no estaba vacia tampoco lo estara ahora
 			char* msj = this->queue.front();
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
@@ -179,8 +179,10 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			delete[] msj;
 		}
 		
+		//simulacion
 		this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
 		
+		//si el gusano actual sufrio danio duerante la simulacion debe terminar el turno
 		try{
 			if (this->players.at(active_player).at(active_gusano)->gotDamaged()){
 				i = TURN_LEN;
@@ -189,6 +191,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 
 		//process map for projectiles deletion
+		// explotaron o se unieron
 		std::map<int, Projectile*>::iterator projectiles_remover_it = this->to_remove_projectiles.begin();
 		for (; projectiles_remover_it != this->to_remove_projectiles.end(); ++projectiles_remover_it) {
 			std::cout << "hay projectile para destruir\n";
@@ -201,6 +204,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		this->to_remove_projectiles.clear();
 		
 		//process map for gusanos deletion
+		// murieron o se hundieron
 		std::vector<std::pair<int, int>>::iterator gusanos_remover_it = this->to_remove_gusanos.begin();
 		for (; gusanos_remover_it != this->to_remove_gusanos.end(); ++gusanos_remover_it) {
 			std::cout << "hay gusano para destruir\n";
@@ -214,6 +218,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 		this->to_remove_gusanos.clear();
 		
+		//lista de creacion de proyectiles luego de la explosion de un proyectil fragmentario
 		std::vector<FragmentInfo*>::iterator c_it = this->to_create.begin();
 		for (; c_it != this->to_create.end(); ++c_it) {
 			std::cout << "hay projectile para crear\n";
@@ -225,6 +230,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 		this->to_create.clear();
 		
+		// Proyectiles en vuelo actual
 		std::map<int, Projectile*>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
 			projectiles_it->second->update(0);

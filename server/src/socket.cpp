@@ -29,18 +29,18 @@ Socket::Socket(Socket&& other) : file_descrip(other.file_descrip){
 
 Socket::~Socket(){
 	if (this->file_descrip){ //por si fue movido o cerrado anteriormente
-		shutdown(this->file_descrip, SHUT_RDWR);
-		close(this->file_descrip);
+		::shutdown(this->file_descrip, SHUT_RDWR);
+		::close(this->file_descrip);
 	}
 }
 
-void Socket::shutdown_(){
+void Socket::shutdown(){
 	if (this->file_descrip){ //por si fue movido
-		shutdown(this->file_descrip, SHUT_RDWR);
+		::shutdown(this->file_descrip, SHUT_RDWR);
 	}
 }
 
-void Socket::bind_(const char* port){
+void Socket::bind(const char* port){
 	struct addrinfo hints;
 	struct addrinfo *result, *addr;
 	memset(&hints, 0, sizeof(struct addrinfo));
@@ -67,7 +67,7 @@ void Socket::bind_(const char* port){
 	
 	bool linked = false;
 	for (addr = result; addr != NULL && linked == false; addr = addr->ai_next){
-		error = bind(this->file_descrip, addr->ai_addr, addr->ai_addrlen);
+		error = ::bind(this->file_descrip, addr->ai_addr, addr->ai_addrlen);
 		if (error != -1) {
 			linked = true;
 		}
@@ -86,13 +86,13 @@ void Socket::bind_(const char* port){
 	}
 }
 
-Socket Socket::accept_(){
-	int new_file_descrip = accept(this->file_descrip, NULL, NULL);
+Socket Socket::accept(){
+	int new_file_descrip = ::accept(this->file_descrip, NULL, NULL);
 	Socket new_socket(new_file_descrip);
 	return (std::move(new_socket));
 }
 
-void Socket::connect_(const char* hostip, const char* port){
+void Socket::connect(const char* hostip, const char* port){
 	struct addrinfo hints;
 	struct addrinfo *result, *addr;
 	memset(&hints, 0, sizeof(struct addrinfo));
@@ -109,7 +109,7 @@ void Socket::connect_(const char* hostip, const char* port){
 	
 	bool connected = false;
 	for (addr = result; addr != NULL && connected == false; addr = addr->ai_next) {
-		error = connect(this->file_descrip, addr->ai_addr, addr->ai_addrlen);
+		error = ::connect(this->file_descrip, addr->ai_addr, addr->ai_addrlen);
 		if (error != -1) {
 			connected = true;
 		}
@@ -122,12 +122,12 @@ void Socket::connect_(const char* hostip, const char* port){
 	}
 }
 
-void Socket::send_(const char* msg, size_t len){
+void Socket::send(const char* msg, size_t len){
 	size_t bytes_sent = 0, rem_len;
 	int send_this_iteration = 0;
 	while (bytes_sent < (len * sizeof(char))) {
 		rem_len = (len * sizeof(char)) - bytes_sent;
-		send_this_iteration = send(this->file_descrip, 
+		send_this_iteration = ::send(this->file_descrip, 
 					&msg[bytes_sent], rem_len, MSG_NOSIGNAL);
 		if (send_this_iteration <= 0) {		  // socket error or closed
 			throw SocketError(
@@ -139,13 +139,13 @@ void Socket::send_(const char* msg, size_t len){
 	}
 }
 
-void Socket::receive_(char* buff, size_t len){
+void Socket::receive(char* buff, size_t len){
 	size_t bytes_received = 0;
 	size_t rem_len;
 	int received_this_it = 0;
 	while (bytes_received < (len * sizeof(char))) {
 		rem_len = (len * sizeof(char)) - bytes_received;
-		received_this_it = recv(this->file_descrip, 
+		received_this_it = ::recv(this->file_descrip, 
 					&buff[bytes_received], rem_len, 0);
 
 		if (received_this_it <= 0) {

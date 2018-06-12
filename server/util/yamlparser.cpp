@@ -1,4 +1,4 @@
-#include "yamlparser.h"
+#include "util/yamlparser.h"
 #include "game_constants.h"
 
 #define INF_VALUE -1
@@ -18,7 +18,7 @@ YAMLParser::YAMLParser() {}
 
 void YAMLParser::cargarConfig(unsigned int id, std::vector<elemento_t>& v, GameConstants& info)
 {
-    std::stirng nombre = std::to_string(id).append(".yaml");
+    std::string nombre = std::to_string(id).append(".yaml");
     YAML::Node config = YAML::LoadFile(nombre);
     for (YAML::const_iterator it = config.begin(); it != config.end(); ++it){
         std::string key(it->first.as<std::string>());

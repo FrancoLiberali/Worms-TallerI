@@ -10,12 +10,19 @@ class MultipleProxy{
 		std::vector<Proxy*> proxys;
 		
 	public:
+		// Crea el objeto, el cual tiene la finalidad de contener
+		// distintos proxys que se van a comunicar con distintos juagores
+		// para enviarle a todos los jugadores el mismo mensaje.
 		MultipleProxy();
 		
 		~MultipleProxy();
 		
+		// Agrega un proxy a la lista de proxys a la cual se le enviaran 
+		// todos los mensajes
 		void add(Proxy* proxy);
 		
+		// Saca un jugador de la lista de proxys segun su id, para que
+		// deje de recibir los mensajes del juego
 		void erase(int id);
 		
 		void sendPlayerName(int player_id, std::string& name);

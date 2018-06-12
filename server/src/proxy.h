@@ -12,27 +12,15 @@ class Proxy{
 		
 		void receive_event_info(ProtectedQueue& queue, char event, int tam);
 	public:
+		// Objeto que envia todos los mensajes a un juagador via 
+		// el socket recibido.
+		// La estructura de los mensajes respeta el protocolo
+		// de comunicacion definido para este programa
 		Proxy(Socket socket_e);
 		
 		~Proxy() noexcept;
 		
 		void close_communication();
-		
-		/*void send_viga(Socket& socket, const Viga& viga);
-		
-		void send_gusano(Socket& socket, const Gusano& gusano, unsigned int number);
-		
-		void send_position(Socket& socket, const b2Vec2& pos);
-		
-		void send_movement(Socket& socket, unsigned int gusano_number, int direction);
-		
-		void send_unsigned_int(Socket& socket, unsigned int num);
-		
-		void send_int(Socket& socket, int num);
-		
-		void send_float(Socket& socket, float num);
-		
-		void send_char(Socket& socket, const char to_send);*/
 		
 		void receive_event(ProtectedQueue& queue);
 		
@@ -67,12 +55,6 @@ class Proxy{
 		void sendGameWon(int player_id);
 		
 		void send_int(int to_send);
-		
-		/*const float receive_float(Socket& socket);
-		
-		const unsigned int receive_unsigned_int(Socket& socket);
-		
-		const int receive_int(Socket& socket);*/
 		
 };
 

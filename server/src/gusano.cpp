@@ -37,23 +37,15 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 
 	b2PolygonShape dynamicBox;
 	dynamicBox.Set(vertices, count);
-	//dynamicBox.SetAsBox(0.25f, 0.375f);
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
 	fixtureDef.friction = 1.0f;
-	//fixtureDef.friction = 0.0f;
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
 	
-	//add foot sensor fixture
-	//vertices[0].Set(0.0f, -0.51f);
-	//vertices[1].Set(0.01f, -0.47f);
-	//vertices[2].Set(-0.01f, -0.47f);
-	
     dynamicBox.SetAsBox(0.00001, 0.1, b2Vec2(0,-0.45), 0);
-    //dynamicBox.Set(vertices, count);
     fixtureDef.density = 0.0f;
     fixtureDef.restitution = 0.0f;
     fixtureDef.isSensor = true;
@@ -70,31 +62,6 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
     this->head_sensor_data = new int(2);
     headSensorFixture->SetUserData((void*)this->head_sensor_data);
 	
-	/*//add wheel
-	bodyDef.position.Set(x, y - 0.25);
-	bodyDef.fixedRotation = false;
-	this->wheel = this->world.CreateBody(&bodyDef);
-	this->wheel->SetUserData((void*)this);
-	
-	b2CircleShape circleShape;
-	circleShape.m_radius = 0.25;
-	fixtureDef.shape = &circleShape;
-	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 1.0f;
-	fixtureDef.restitution = 0.1f;
-
-	this->wheel->CreateFixture(&fixtureDef);
-	
-	b2RevoluteJointDef revoluteJointDef;
-	revoluteJointDef.bodyA = this->body;
-	revoluteJointDef.bodyB = this->wheel;
-	revoluteJointDef.collideConnected = false;
-	revoluteJointDef.localAnchorA.Set(0,-0.25);
-	revoluteJointDef.localAnchorB.Set(0,0);
-	this->world.CreateJoint(&revoluteJointDef);*/
-	
-	
-    
 	this->state = new JumpingState(this->body, this); //hasta que no haga contacto con el suelo esta saltando
 	this->direction = 1;
 }
@@ -115,6 +82,7 @@ void Gusano::setId(int player, int number_e, int id_e){
 	this->id = id_e;
 	b2Vec2 position = this->GetPosition();
 	float32 angle = this->GetAngle();
+	// para el cliente el gusano se crea recien cuando existe una forma de identificarlo
 	this->proxy.sendGusanoCreation(this->id, player, position.x, position.y, this->direction, angle);
 }
 
@@ -142,6 +110,7 @@ void Gusano::sendPosition(){
 
 void Gusano::move(int dir){
 	if (this->direction != dir){
+		// si no estaba mirando hacia esa direccion solo se gira
 		this->direction = -this->direction;
 		this->sendPosition();
 	} else {
@@ -172,8 +141,10 @@ void Gusano::update(){
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		this->sendPosition();
 		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
+		// si quedo de cabeza
 		if (this->head_in_contact && angles_list.size() == 0){
 			std::cout << "de cabeza\n";
+			// hay que girarlo
 			this->rotateTo(this->GetAngle() - M_PI);
 			this->head_in_contact = false;
 		} else {
@@ -203,14 +174,11 @@ bool Gusano::isInactive(){
 	return (this->state->isInactive());
 }
 
-//bool Gusano::isFalling(){
-	//return (this->state->isFalling());
-//}
-
 void Gusano::jump(){
 	delete this->state;
 	this->state = new JumpingState(this->body, this);
 	this->proxy.sendStateChange(this->id, JUMPING_STATE);
+	// el gusano solo sufre la accion de la gravedad cuando no este inactivo
 	this->body->SetGravityScale(1);
 	printf("state->cayendo\n");
 	b2Vec2 vel = this->body->GetLinearVelocity();
@@ -223,6 +191,7 @@ void Gusano::backJump(){
 	delete this->state;
 	this->state = new JumpingState(this->body, this);
 	this->proxy.sendStateChange(this->id, JUMPING_STATE);
+	// el gusano solo sufre la accion de la gravedad cuando no este inactivo
 	this->body->SetGravityScale(1);
 	b2Vec2 vel = this->body->GetLinearVelocity();
 	vel.x = (1.0f/b2Sqrt(24.0f)) * (-(this->direction));
@@ -258,15 +227,12 @@ bool Gusano::gotDamaged(){
 	return this->damaged;
 }
 
-/*float radDiff( float a, float b )
-   {
-      return atan2( sin(a-b), cos(a-b) );
-   }*/
-
 void Gusano::newContact(float ground_angle){
+	// se guarda en el lista los angulos de las cosas sobre las que el gusano esta parado
 	this->angles_list.push_back(ground_angle);
 	int cant_contacts = angles_list.size();
 	if (cant_contacts == 1){
+		//significa que antes estaba en el aire y toco el suelo
 		printf("state->inactivo\n");
 		this->state->sumOneStep();
 		delete this->state;
@@ -276,6 +242,8 @@ void Gusano::newContact(float ground_angle){
 		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
+		// toco un segundo suelo, no se debe hacer nada, 
+		// solo para pruebas
 		std::cout << "TOCO al segundo \n";
 		std::cout << ground_angle << "\n";
 	}
@@ -296,9 +264,6 @@ void Gusano::finishContact(float ground_angle){
 		this->state = new JumpingState(this->body, this);
 		this->proxy.sendStateChange(this->id, JUMPING_STATE);
 		this->body->SetGravityScale(1);
-		//b2Vec2 vel = this->body->GetLinearVelocity();
-		//vel.x = 0.0f;
-		//this->body->SetLinearVelocity(vel);
 	}
 	if (cant_contacts == 1){
 		printf("solo toca a 1\n");
@@ -310,10 +275,6 @@ void Gusano::finishContact(float ground_angle){
 void Gusano::headFinishContact(){
 	this->head_in_contact = false;
 }
-
-//b2Vec2 Gusano::GetWorldVector(b2Vec2 local){
-	//return this->body->GetWorldVector(local);
-//} 
 
 void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
 	this->sufferDamage(damage);
