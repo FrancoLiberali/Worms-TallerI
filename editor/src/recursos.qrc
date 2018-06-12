@@ -6,5 +6,6 @@
         <file>recursos/gusano3.png</file>
         <file>recursos/gusano4.png</file>
         <file>recursos/vigac.png</file>
+        <file>default_armo.yaml</file>
     </qresource>
 </RCC>
