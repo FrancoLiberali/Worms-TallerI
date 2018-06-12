@@ -13,6 +13,7 @@ CMakeFiles/alllib.dir/src/GameBuilder.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -69,6 +70,7 @@ CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -98,6 +100,7 @@ CMakeFiles/alllib.dir/src/controller/Controller.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -127,6 +130,7 @@ CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -156,6 +160,7 @@ CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -184,6 +189,7 @@ CMakeFiles/alllib.dir/src/controller/Event.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -225,6 +231,7 @@ CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -253,6 +260,7 @@ CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -282,6 +290,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -311,6 +320,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -340,6 +350,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -369,6 +380,7 @@ CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -398,6 +410,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -427,6 +440,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -456,6 +470,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -485,6 +500,7 @@ CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -514,6 +530,7 @@ CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -577,11 +594,16 @@ CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
@@ -590,6 +612,7 @@ CMakeFiles/alllib.dir/src/view/Escenario.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -606,6 +629,7 @@ CMakeFiles/alllib.dir/src/view/Shape.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
@@ -613,6 +637,7 @@ CMakeFiles/alllib.dir/src/view/VigaView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlScreen.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/Weapon.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
@@ -623,6 +648,7 @@ CMakeFiles/alllib.dir/src/view/Weapon.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/WormView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
@@ -645,6 +671,7 @@ CMakeFiles/alllib.dir/src/view/mainView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
@@ -664,6 +691,7 @@ CMakeFiles/alllib.dir/src/view/mainView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Boot.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/Boot.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
@@ -689,12 +717,14 @@ CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SpriteConfigurator.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SpriteConfigurator.h
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextManager.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/FontManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
@@ -703,6 +733,7 @@ CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextView.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.h
 CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextureManager.cpp

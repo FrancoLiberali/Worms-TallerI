@@ -7,10 +7,10 @@ Controller::Controller(Model& model, mainView& view)
 void Controller::handle(SDL_Event& e) {
     switch (e.type){
 
-        //std::cout<<SDL_GetKeyName(e.key.keysym.sym);
+        std::cout<<SDL_GetKeyName(e.key.keysym.sym);
 
         case SDL_QUIT:
-				//std::cout<<"cerrar" << std::endl;			
+				std::cout<<"cerrar" << std::endl;			
 				view.close();
 				break;
         case SDL_KEYDOWN:{
@@ -33,10 +33,10 @@ void Controller::handle(SDL_Event& e) {
                 }
         }
         case SDL_MOUSEMOTION:
-            ////std::cout << e.motion.x << "," << e.motion.y << std::endl;
+            //std::cout << e.motion.x << "," << e.motion.y << std::endl;
             break;
         case SDL_MOUSEBUTTONDOWN:
-            //std::cout << e.motion.x << "," << e.motion.y << std::endl;
+            std::cout << e.motion.x << "," << e.motion.y << std::endl;
             SDL_Point mousePointer = {e.motion.x, e.motion.y};
             if (view.hasClickedMenu(mousePointer)){
                 Weapon* weapon = view.retrieveWeaponClicked(mousePointer);

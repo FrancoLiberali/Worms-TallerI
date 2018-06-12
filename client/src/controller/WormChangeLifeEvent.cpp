@@ -8,5 +8,5 @@ WormChangeLifeEvent::WormChangeLifeEvent(int id, int life)
 void WormChangeLifeEvent::process(){
 	WormView* wormView = view->getWormView(idWorm);
 	wormView->changeLife(newLife);
-	//std::cout<<"Change Life "<<std::endl;
+	std::cout<<"Change Life "<<std::endl;
 }

@@ -408,6 +408,12 @@ newView/TextureManager.h
 math.h
 -
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp
+Camera.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp
 Escenario.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
@@ -521,6 +527,8 @@ newView/TextView.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/TextView.h
 AimView.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+Camera.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
 map
 -
 
@@ -703,4 +711,6 @@ SdlException.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/SdlException.h
 GameException.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/newView/GameException.h
+../Camera.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
 

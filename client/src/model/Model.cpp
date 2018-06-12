@@ -30,7 +30,7 @@ int Model::getIdWormSelected(){
 }
 
 void Model::setIdPlayer(int idJugador){
-    //std::cout<<"se agrega player id"<< std::endl;
+    std::cout<<"se agrega player id"<< std::endl;
     this->idJugador = idJugador;
 }
 

@@ -54,6 +54,7 @@ add_library(alllib
 	src/view/Shape.cpp
 	src/view/VigaView.cpp
 	src/view/AimView.cpp
+	src/view/Camera.cpp
 )
 
 

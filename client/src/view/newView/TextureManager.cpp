@@ -6,14 +6,14 @@
 TextureManager::TextureManager():screenHeight(0),screenWidth(0){}
 
 TextureManager::~TextureManager(){
-	//std::cout << "destructor del texture manager" << std::endl;
+	std::cout << "destructor del texture manager" << std::endl;
 
 	std::map<std::string, SDL_Texture*>::iterator iter;
 	for (iter = texture_map.begin(); iter!=texture_map.end(); ++iter)
 		SDL_DestroyTexture(iter->second);
 	texture_map.clear();
 	
-	//std::cout << "Se destuyeron las texturas" << std::endl;
+	std::cout << "Se destuyeron las texturas" << std::endl;
 }
 
 void TextureManager::init(int w, int h){
@@ -56,13 +56,17 @@ void TextureManager::draw(std::string id, int x, int y, double angle,
 	
 		destRect.w = srcRect.w;
 		destRect.h = srcRect.h;
-		destRect.x = x;
-		destRect.y = y;
+		destRect.x = x - camera.getX();
+		destRect.y = y - camera.getY();
+		if (id == "sky"){
+			destRect.x = x;
+			destRect.y = y;
+		}
 
 		SDL_RenderCopyEx(pRenderer, aTexture, &srcRect,&destRect, angle, 0, flip);
 	
 	} catch (GameException & e) {
-        //std::cout << e.what() <<std::endl;
+        std::cout << e.what() <<std::endl;
 	}
 }
 
@@ -78,8 +82,8 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 	
 	srcRect.w = destRect.w = width;
 	srcRect.h = destRect.h = height;
-	destRect.x = x;
-	destRect.y = y;
+	destRect.x = x - camera.getX();
+	destRect.y = y - camera.getY();
 		
 	viewPort.x = 0;
 	viewPort.y = 0;
@@ -92,7 +96,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 		}
 		if (grey) SDL_SetTextureColorMod(getTexture(id),255,255,255);
 	} catch (GameException & e) {
-        //std::cout << e.what() <<std::endl;
+        std::cout << e.what() <<std::endl;
 	}
 }
 
@@ -118,11 +122,15 @@ void TextureManager::drawFillRect(SDL_Renderer*	pRenderer, SDL_Rect & rect, SDL_
 
 	SDL_Rect rectDest;
 
-	rectDest.x = rect.x;
-	rectDest.y = rect.y;
+	rectDest.x = rect.x - camera.getX()/screenWidth;
+	rectDest.y = rect.y - camera.getY()/screenHeight;
 	rectDest.w = rect.w;
 	rectDest.h = rect.h;
 
 	SDL_SetRenderDrawColor(pRenderer, color.r, color.g, color.b, color.a); 
 	SDL_RenderFillRect(pRenderer, &rectDest);
+}
+
+Camera& TextureManager::getCamera(){
+	return camera;
 }

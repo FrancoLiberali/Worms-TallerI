@@ -86,7 +86,7 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 }
 
 void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle){
-	WormView* worm = new WormView(id, idOwner);
+	WormView* worm = new WormView(id, idOwner, TextureManager().Instance().getCamera());
 	worm->setPlayerName(player);
 	worm->setDirection(dir);
 	worm->setAngle(angle);
@@ -98,8 +98,12 @@ void mainView::addViga(int x, int y, int angle){
 	stage.addViga(x, y, angle);
 }
 
-std::string mainView::changeTurn(std::string namePlayer){
+std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	turnView.setColor(255,10,255);
 	SDL_Color red = {0,0,0};
 	turnView.setText("Turno " + namePlayer,red);
+	
+	for(auto& it: this->worms)
+		it.second->offFocus();
+	worms[idWorm]->onFocus();
 }

@@ -49,7 +49,7 @@ public:
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
 	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);
-	std::string changeTurn(std::string namePlayer);
+	std::string changeTurn(std::string namePlayer, int idWorm);
 };
 
 #endif

@@ -19,6 +19,7 @@ void Boot::init(){
     TextureManager::Instance().init(W_WIDHT, W_HEIGHT);
     loadSprites();
 	loadMenuWeapon();
+	initCamera(0,0);
 }
 
 void Boot::reinit(){}
@@ -69,7 +70,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
-		TextureManager::Instance().load("../resource/images/sky.png", "sky",screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/sky3.png", "sky",screen.getRenderer());
 		// explosiones
 		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", screen.getRenderer());			
@@ -84,7 +85,7 @@ void Boot::loadSprites(){
 		} catch (GameException & e) {
             std::cerr << e.what() << std::endl;
 		}
-	//std::cout << "Se cargaron todas las texturas" << std::endl;
+	std::cout << "Se cargaron todas las texturas" << std::endl;
 }
 void Boot::loadImages(){}
 void Boot::loadWaterImage(){}
@@ -135,14 +136,18 @@ void Boot::loadMenuWeapon(){
 		TextManager::Instance().loadFont(Arial12);
 
 	} catch (GameException & e) {
-		//std::cout << e.what() << std::endl;	
+		std::cout << e.what() << std::endl;	
 	}
 
-	//std::cout << "Se cargo el menu" << std::endl;
+	std::cout << "Se cargo el menu" << std::endl;
 
 }
 
-void Boot::initCamera(int w, int h){}
+void Boot::initCamera(int x, int y){
+	int widht = screen.getWidth();
+	int height = screen.getHeight();
+	TextureManager::Instance().getCamera().setDimension(widht, height);
+}
 void Boot::realoadEart(){}
 
 SdlScreen& Boot::getScreen(){

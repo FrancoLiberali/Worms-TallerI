@@ -64,3 +64,10 @@ int SdlScreen::getWidth(){
 int SdlScreen::getHeight(){
     return height;
 }
+
+int SdlScreen::getXCenter(){
+	return width/2;
+}
+int SdlScreen::getYCenter(){
+	return height/2;
+}

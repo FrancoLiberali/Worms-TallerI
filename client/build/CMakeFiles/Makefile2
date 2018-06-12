@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/cl
 CMakeFiles/client.dir/all: CMakeFiles/alllib.dir/all
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/depend
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=47,48 "Built target client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=48,49 "Built target client"
 .PHONY : CMakeFiles/client.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/client.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 48
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 49
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : CMakeFiles/client.dir/rule
@@ -103,7 +103,7 @@ clean: CMakeFiles/client.dir/clean
 CMakeFiles/alllib.dir/all:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/depend
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target alllib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47 "Built target alllib"
 .PHONY : CMakeFiles/alllib.dir/all
 
 # Include target in all.
@@ -113,7 +113,7 @@ all: CMakeFiles/alllib.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/alllib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 47
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/alllib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles 0
 .PHONY : CMakeFiles/alllib.dir/rule

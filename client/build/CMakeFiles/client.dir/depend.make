@@ -17,6 +17,7 @@ CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/model/Model.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/AimView.h
+CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Camera.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Escenario.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/view/Shape.h

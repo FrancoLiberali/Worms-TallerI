@@ -14,7 +14,7 @@
 #include "WormChangeAimEvent.h"
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
-  //std::cout << "hay evento " << (EventType)type << std::endl;
+  std::cout << "hay evento " << (EventType)type << std::endl;
   switch (type) {
     case ID_PLAYER:{
       int id = proxy.receiveInt();
@@ -78,7 +78,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case W_CUR_WEAPON: {
       int idWeapon = proxy.receiveInt();
-      //std::cout<<"Change Weapon " << idWeapon << std::endl; 
+      std::cout<<"Change Weapon " << idWeapon << std::endl; 
       return new WormWeaponEvent(model.getIdWormSelected(), idWeapon);
     }
     case W_CUR_AIM: {

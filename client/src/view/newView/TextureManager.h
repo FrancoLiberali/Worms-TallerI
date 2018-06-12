@@ -7,9 +7,11 @@
 #include <string>
 #include "SdlException.h"
 #include "GameException.h"
+#include "../Camera.h"
 
 class TextureManager {
 private:
+    Camera camera;
     std::map<std::string, SDL_Texture*> texture_map;
     int screenWidth;
 	int screenHeight;
@@ -43,6 +45,7 @@ public:
 
 	void drawFillRect(SDL_Renderer*	pRenderer, SDL_Rect & rect, SDL_Color color);
 
+    Camera& getCamera();
 };
 
 #endif

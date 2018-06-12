@@ -1,7 +1,8 @@
 #include "WormView.h"
 #include <iostream>
 
-WormView::WormView(int idWorm, int idOwner):flip(SDL_FLIP_NONE){
+WormView::WormView(int idWorm, int idOwner, Camera& camera)
+	:flip(SDL_FLIP_NONE), camera(camera){
 	this->idOwner = idOwner;
 	this->state = STATIC;
 	currentSprite = NULL;
@@ -15,6 +16,7 @@ WormView::WormView(int idWorm, int idOwner):flip(SDL_FLIP_NONE){
 	this->widhtLifeCurrent = 25;
 	this->currentLife = 100;
 	this->alive = true;
+	this->focus = false;
 }
 
 void WormView::load(int x, int y, SdlScreen* screen){
@@ -42,7 +44,7 @@ void WormView::load(int x, int y, SdlScreen* screen){
 		sprites["teleport"] = SpriteConfigurator::Instance().get("teleport");
 	
 	} catch (std::exception & e) {
-		//std::cout<<e.what()<<std::endl;
+		std::cout<<e.what()<<std::endl;
 		return;
 	}
 	this->update();
@@ -51,6 +53,8 @@ void WormView::load(int x, int y, SdlScreen* screen){
 void WormView::setPos(int x, int y){
 	this->x = x; this->y = y;
 	aim.setCenter(x,y);
+	if (focus)
+		camera.updateCenter(this->getXCenter(), this->getYCenter());
 }
 
 void WormView::setPlayerName(std::string player){
@@ -125,7 +129,7 @@ void WormView::update(){
 
 	} else if (this->state == DEAD) {
 	
-		//std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
+		std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
 		if (alive)
 			currentSprite = &this->sprites["morir"];
 
@@ -146,7 +150,7 @@ SDL_Color getColor(int id){
 			return color;
 		}
 		case 2:{
-			SDL_Color color = {51,153,255};
+			SDL_Color color = {0,0,255};
 			return color;
 		}
 		case 3:{
@@ -171,13 +175,13 @@ void WormView::draw(){
 									screen->getRenderer(),false,flip);
 	 
 	if (this->selected)
-		labelUsuario.draw(screen->getRenderer(),this->getXCenter(),  this->getYCenter() - 15);
-
+		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
+ 
 	aim.draw();
 
 	SDL_Rect rect;
-	rect.x = this->getX() -10;
-	rect.y = this->getY()-22;
+	rect.x = this->getX()-camera.getX() - 10;
+	rect.y = this->getY()-camera.getY() - 22;
 	rect.w = this->widhtLifeCurrent;
 	rect.h = 5;
 	SDL_Color color = getColor(idOwner);
@@ -235,4 +239,12 @@ void WormView::changeLife(int newLife){
 
 void WormView::changeAimAngle(int delta){
 	aim.changeAngle(delta);
+}
+
+void WormView::onFocus(){
+	focus = true;
+}
+
+void WormView::offFocus(){
+	focus = false;
 }

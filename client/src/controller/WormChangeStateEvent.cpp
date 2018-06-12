@@ -14,5 +14,5 @@ WormChangeStateEvent::WormChangeStateEvent(int id, int state)
 void WormChangeStateEvent::process(){
 	WormView* wormView = view->getWormView(wormID);
 	wormView->changeState(newState);
-	//std::cout<<"Change state "<<std::endl;
+	std::cout<<"Change state "<<std::endl;
 }

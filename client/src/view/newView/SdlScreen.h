@@ -29,6 +29,8 @@ public:
 	void setState(std::string string_state);
 	SDL_Window* getWindow();
 	SDL_Renderer* getRenderer();
+	int getXCenter();
+	int getYCenter();
 };
 
 #endif 

@@ -33,6 +33,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormMoveCommand.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormWeaponCommand.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/view/AimView.cpp.o"
+  "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/view/Camera.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/view/Escenario.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o"
   "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.cpp" "/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/alllib.dir/src/view/SdlException.cpp.o"

@@ -12,6 +12,7 @@ CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/view/Shape.h
@@ -68,6 +69,7 @@ CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/model/Cli
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/Shape.h
@@ -97,6 +99,7 @@ CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/model/ClientComman
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/Shape.h
@@ -126,6 +129,7 @@ CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/model/ClientC
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/Shape.h
@@ -155,6 +159,7 @@ CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/model/ClientC
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/Shape.h
@@ -183,6 +188,7 @@ CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/Shape.h
@@ -224,6 +230,7 @@ CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/model/ClientComm
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/Shape.h
@@ -252,6 +259,7 @@ CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/model/ClientComm
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/Shape.h
@@ -281,6 +289,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/model/Clie
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/Shape.h
@@ -310,6 +319,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/model/ClientCom
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/Shape.h
@@ -339,6 +349,7 @@ CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/model/ClientCo
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/Shape.h
@@ -368,6 +379,7 @@ CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/model/ClientCo
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/Shape.h
@@ -397,6 +409,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/model/Clie
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/Shape.h
@@ -426,6 +439,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/model/Cli
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/Shape.h
@@ -455,6 +469,7 @@ CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/model/Cl
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/Shape.h
@@ -484,6 +499,7 @@ CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/model/ClientCom
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/Shape.h
@@ -513,6 +529,7 @@ CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/model/ClientC
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/view/Shape.h
@@ -576,11 +593,16 @@ CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o: ../src/model/WormWeapon
 
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/AimView.cpp
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/newView/GameException.h
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/newView/SdlException.h
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/newView/SdlScreen.h
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o: ../src/view/Camera.cpp
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o: ../src/view/Camera.h
+
+CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/Escenario.cpp
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/VigaView.h
@@ -589,6 +611,7 @@ CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/newView/SdlException
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/newView/SdlScreen.h
 CMakeFiles/alllib.dir/src/view/Escenario.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o: ../src/view/MenuWeaponView.cpp
 CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o: ../src/view/Shape.h
@@ -605,6 +628,7 @@ CMakeFiles/alllib.dir/src/view/SdlException.cpp.o: ../src/view/SdlException.h
 CMakeFiles/alllib.dir/src/view/Shape.cpp.o: ../src/view/Shape.cpp
 CMakeFiles/alllib.dir/src/view/Shape.cpp.o: ../src/view/Shape.h
 
+CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/VigaView.cpp
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/VigaView.h
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/newView/GameException.h
@@ -612,6 +636,7 @@ CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/newView/SdlException.
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/newView/SdlScreen.h
 CMakeFiles/alllib.dir/src/view/VigaView.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/Shape.h
 CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/Weapon.cpp
 CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/Weapon.h
@@ -622,6 +647,7 @@ CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/newView/SdlScreen.h
 CMakeFiles/alllib.dir/src/view/Weapon.cpp.o: ../src/view/newView/TextureManager.h
 
 CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/WormState.h
 CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/WormView.cpp
 CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/WormView.h
@@ -644,6 +670,7 @@ CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/model/Model.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/Escenario.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/MenuWeaponView.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/Shape.h
@@ -663,6 +690,7 @@ CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/newView/TextManager.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/newView/TextView.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o: ../src/view/newView/Boot.cpp
 CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o: ../src/view/newView/Boot.h
 CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o: ../src/view/newView/GameException.h
@@ -688,12 +716,14 @@ CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o: ../src/view/new
 CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o: ../src/view/newView/SpriteConfigurator.cpp
 CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o: ../src/view/newView/SpriteConfigurator.h
 
+CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/newView/GameException.h
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/newView/SdlException.h
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/newView/TextManager.cpp
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/newView/TextManager.h
 CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/FontManager.h
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/GameException.h
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/SdlException.h
@@ -702,6 +732,7 @@ CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/TextV
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/TextView.h
 CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o: ../src/view/Camera.h
 CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o: ../src/view/newView/GameException.h
 CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o: ../src/view/newView/SdlException.h
 CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o: ../src/view/newView/TextureManager.cpp

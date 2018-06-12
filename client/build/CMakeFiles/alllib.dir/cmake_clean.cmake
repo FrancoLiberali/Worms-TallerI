@@ -44,6 +44,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/view/Shape.cpp.o"
   "CMakeFiles/alllib.dir/src/view/VigaView.cpp.o"
   "CMakeFiles/alllib.dir/src/view/AimView.cpp.o"
+  "CMakeFiles/alllib.dir/src/view/Camera.cpp.o"
   "liballlib.pdb"
   "liballlib.a"
 )

@@ -8,6 +8,7 @@
 #include "newView/TextureManager.h"
 #include "newView/TextView.h"
 #include "AimView.h"
+#include "Camera.h"
 
 #include <map>
 
@@ -28,10 +29,11 @@ private:
 
 	WeaponId weaponId;
 	AimView aim;
+	Camera& camera;
 
 	bool selected;
-
 	SDL_Color white;
+	bool focus;
 
 	bool alive;
 	TextView labelUsuario;
@@ -41,7 +43,7 @@ private:
 	int getXCenter();
 	int getYCenter();
 public:
-	WormView(int idWorm, int idOwner);
+	WormView(int idWorm, int idOwner, Camera& camera);
 	void setPlayerName(std::string player);
 	~WormView();
 	void selectWeapon(WeaponId idWapon);
@@ -56,6 +58,8 @@ public:
 	void setAngle(int angle);
 	void changeLife(int newLife);
 	void changeAimAngle(int delta);
+	void onFocus();
+	void offFocus();
 };
 
 #endif

@@ -946,6 +946,33 @@ src/view/AimView.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.s
 .PHONY : src/view/AimView.cpp.s
 
+src/view/Camera.o: src/view/Camera.cpp.o
+
+.PHONY : src/view/Camera.o
+
+# target to build an object file
+src/view/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.o
+.PHONY : src/view/Camera.cpp.o
+
+src/view/Camera.i: src/view/Camera.cpp.i
+
+.PHONY : src/view/Camera.i
+
+# target to preprocess a source file
+src/view/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.i
+.PHONY : src/view/Camera.cpp.i
+
+src/view/Camera.s: src/view/Camera.cpp.s
+
+.PHONY : src/view/Camera.s
+
+# target to generate assembly for a file
+src/view/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.s
+.PHONY : src/view/Camera.cpp.s
+
 src/view/Escenario.o: src/view/Escenario.cpp.o
 
 .PHONY : src/view/Escenario.o
@@ -1478,6 +1505,9 @@ help:
 	@echo "... src/view/AimView.o"
 	@echo "... src/view/AimView.i"
 	@echo "... src/view/AimView.s"
+	@echo "... src/view/Camera.o"
+	@echo "... src/view/Camera.i"
+	@echo "... src/view/Camera.s"
 	@echo "... src/view/Escenario.o"
 	@echo "... src/view/Escenario.i"
 	@echo "... src/view/Escenario.s"

@@ -1137,6 +1137,30 @@ CMakeFiles/alllib.dir/src/view/AimView.cpp.o.provides: CMakeFiles/alllib.dir/src
 CMakeFiles/alllib.dir/src/view/AimView.cpp.o.provides.build: CMakeFiles/alllib.dir/src/view/AimView.cpp.o
 
 
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o: CMakeFiles/alllib.dir/flags.make
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o: ../src/view/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/alllib.dir/src/view/Camera.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/alllib.dir/src/view/Camera.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp
+
+CMakeFiles/alllib.dir/src/view/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/alllib.dir/src/view/Camera.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp > CMakeFiles/alllib.dir/src/view/Camera.cpp.i
+
+CMakeFiles/alllib.dir/src/view/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/alllib.dir/src/view/Camera.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp -o CMakeFiles/alllib.dir/src/view/Camera.cpp.s
+
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o.requires:
+
+.PHONY : CMakeFiles/alllib.dir/src/view/Camera.cpp.o.requires
+
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o.provides: CMakeFiles/alllib.dir/src/view/Camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.o.provides.build
+.PHONY : CMakeFiles/alllib.dir/src/view/Camera.cpp.o.provides
+
+CMakeFiles/alllib.dir/src/view/Camera.cpp.o.provides.build: CMakeFiles/alllib.dir/src/view/Camera.cpp.o
+
+
 # Object files for target alllib
 alllib_OBJECTS = \
 "CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o" \
@@ -1183,7 +1207,8 @@ alllib_OBJECTS = \
 "CMakeFiles/alllib.dir/src/view/Weapon.cpp.o" \
 "CMakeFiles/alllib.dir/src/view/Shape.cpp.o" \
 "CMakeFiles/alllib.dir/src/view/VigaView.cpp.o" \
-"CMakeFiles/alllib.dir/src/view/AimView.cpp.o"
+"CMakeFiles/alllib.dir/src/view/AimView.cpp.o" \
+"CMakeFiles/alllib.dir/src/view/Camera.cpp.o"
 
 # External object files for target alllib
 alllib_EXTERNAL_OBJECTS =
@@ -1233,9 +1258,10 @@ liballlib.a: CMakeFiles/alllib.dir/src/view/Weapon.cpp.o
 liballlib.a: CMakeFiles/alllib.dir/src/view/Shape.cpp.o
 liballlib.a: CMakeFiles/alllib.dir/src/view/VigaView.cpp.o
 liballlib.a: CMakeFiles/alllib.dir/src/view/AimView.cpp.o
+liballlib.a: CMakeFiles/alllib.dir/src/view/Camera.cpp.o
 liballlib.a: CMakeFiles/alllib.dir/build.make
 liballlib.a: CMakeFiles/alllib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX static library liballlib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Linking CXX static library liballlib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/alllib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/alllib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -1289,6 +1315,7 @@ CMakeFiles/alllib.dir/requires: CMakeFiles/alllib.dir/src/view/Weapon.cpp.o.requ
 CMakeFiles/alllib.dir/requires: CMakeFiles/alllib.dir/src/view/Shape.cpp.o.requires
 CMakeFiles/alllib.dir/requires: CMakeFiles/alllib.dir/src/view/VigaView.cpp.o.requires
 CMakeFiles/alllib.dir/requires: CMakeFiles/alllib.dir/src/view/AimView.cpp.o.requires
+CMakeFiles/alllib.dir/requires: CMakeFiles/alllib.dir/src/view/Camera.cpp.o.requires
 
 .PHONY : CMakeFiles/alllib.dir/requires
 
