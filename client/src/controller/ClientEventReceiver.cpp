@@ -9,7 +9,7 @@ ClientEventReceiver::ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& q,
 	Model& model, mainView& view): proxy(proxy), q(q), model(model), 
 									closed(false), view(view){
 	
-	std::cout << "ClientEventReceiver construido" << std::endl;
+	//std::cout << "ClientEventReceiver construido" << std::endl;
 }
 
 
@@ -17,16 +17,16 @@ ClientEventReceiver::~ClientEventReceiver() {
   while (!q.empty()) {
     delete q.pop();
   }
-  std::cout << "ClientEventReceiver destruido" << std::endl;
+  //std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
 
 
 void ClientEventReceiver::run(){
-	std::cout << "ClientEventReceiver corriendo" << std::endl;
+	//std::cout << "ClientEventReceiver corriendo" << std::endl;
 	try{
 		while (!closed){
-			std::cout<<"se llama al socket"<<std::endl;
+			//std::cout<<"se llama al socket"<<std::endl;
 			char t = proxy.receiveChar();
 			EventType type = static_cast<EventType>(t);
 			Event* event = EventFactory::createEvent(type, proxy, model, view);

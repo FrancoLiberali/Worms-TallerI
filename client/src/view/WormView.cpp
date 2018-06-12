@@ -44,7 +44,7 @@ void WormView::load(int x, int y, SdlScreen* screen){
 		sprites["teleport"] = SpriteConfigurator::Instance().get("teleport");
 	
 	} catch (std::exception & e) {
-		std::cout<<e.what()<<std::endl;
+		//std::cout<<e.what()<<std::endl;
 		return;
 	}
 	this->update();
@@ -129,7 +129,7 @@ void WormView::update(){
 
 	} else if (this->state == DEAD) {
 	
-		std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
+		//std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
 		if (alive)
 			currentSprite = &this->sprites["morir"];
 

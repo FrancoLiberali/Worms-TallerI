@@ -14,7 +14,7 @@ ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)){
 }
  
 ProxyClient::~ProxyClient() noexcept{
-    std::cout << "cerrar socket" << std::endl;
+    //std::cout << "cerrar socket" << std::endl;
 }
 
 void ProxyClient::close(){
@@ -61,13 +61,13 @@ std::string ProxyClient::receiveName(){
     char buffer[MAX_NAME_LEN];
     memset(buffer, 0, MAX_NAME_LEN);
     int size = receiveInt();
-    std::cout << "SIZE NAME " << size <<std::endl;
+    //std::cout << "SIZE NAME " << size <<std::endl;
     socket.receive_(buffer, size);
     return std::string((char*)buffer);
 }
 
 void ProxyClient::sendName(int id, std::string& name){
-    std::cout<<"Send name "<< name<<std::endl;
+    //std::cout<<"Send name "<< name<<std::endl;
     sendChar(0);
     sendInt(id);
     sendInt(name.length());
@@ -75,41 +75,41 @@ void ProxyClient::sendName(int id, std::string& name){
 }
 
 void ProxyClient::sendMapAndPlayers(int idMap, int num){
-    std::cout<<"Envio mapa "<<idMap << " jugadores "<<num<<std::endl;
+    //std::cout<<"Envio mapa "<<idMap << " jugadores "<<num<<std::endl;
     sendChar(1);
     sendInt(idMap);
     sendInt(num);
 }
 
 void ProxyClient::sendMoveWorm(int idPlayer, int dir){
-    std::cout<<"move "<<idPlayer << " " <<dir<<std::endl;
+    //std::cout<<"move "<<idPlayer << " " <<dir<<std::endl;
     sendChar(2);
     sendInt(idPlayer);
     sendInt(dir);
 }
 
 void ProxyClient::sendJump(int idPlayer){
-    std::cout<<"jump "<<std::endl;
+    //std::cout<<"jump "<<std::endl;
 
     sendChar(3);
     sendInt(idPlayer);
 }
 void ProxyClient::sendBackJump(int idPlayer){
-    std::cout<<"back jump "<<std::endl;
+    //std::cout<<"back jump "<<std::endl;
 
     sendChar(4);
     sendInt(idPlayer);
 }
 
 void ProxyClient::sendWeaponSelect(int idPlayer, int idWeapon){
-    std::cout<<"wepon "<< idPlayer <<" "<< idWeapon <<std::endl;
+    //std::cout<<"wepon "<< idPlayer <<" "<< idWeapon <<std::endl;
     sendChar(5);
     sendInt(idPlayer);
     sendInt(idWeapon);
 }
 
 void ProxyClient::sendChangeAim(int idPlayer, int delta){
-    std::cout<<"change aim "<< idPlayer <<" "<< delta <<std::endl;
+    //std::cout<<"change aim "<< idPlayer <<" "<< delta <<std::endl;
     sendChar(6);
     sendInt(idPlayer);
     sendInt(delta);

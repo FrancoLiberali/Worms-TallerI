@@ -39,7 +39,7 @@ int main(int argc, char *argv[]){
 	try{
 		socket.connect_(host.c_str(),port.c_str());
 	} catch(SocketError& e){
-		std::cout<<e.what()<<std::endl;
+		//std::cout<<e.what()<<std::endl;
 		return 0;
 	}
 
