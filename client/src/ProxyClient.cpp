@@ -10,15 +10,17 @@
 #define ESCALA (140/6)
 #define MILES
 
-ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)){
+ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)), open(true){
 }
  
 ProxyClient::~ProxyClient() noexcept{
-    //std::cout << "cerrar socket" << std::endl;
 }
 
 void ProxyClient::close(){
+    if (!open)
+        return;
     this->socket.shutdown_();
+    open = false;
 }
 
 void  ProxyClient::sendInt(int num){

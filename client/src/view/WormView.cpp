@@ -7,16 +7,35 @@ WormView::WormView(int idWorm, int idOwner, Camera& camera)
 	this->state = STATIC;
 	currentSprite = NULL;
 	this->selected = true;
-	white.a = 0xFF;
-	white.r = 0xFF;
-	white.g = 0xFF;
-	white.b = 0xFF;
 	this->weaponId = NO_WEAPON;
 	this->widhtLife100 = 25;
 	this->widhtLifeCurrent = 25;
 	this->currentLife = 100;
 	this->alive = true;
 	this->focus = false;
+}
+
+
+/*optinizar esto*/
+SDL_Color getColor(int id){
+	switch (id){
+		case 1:{
+			SDL_Color color = {255,0,0};
+			return color;
+		}
+		case 2:{
+			SDL_Color color = {0,0,255};
+			return color;
+		}
+		case 3:{
+			SDL_Color color = {0,255,0};
+			return color;
+		}
+		case 4:{
+			SDL_Color color = {153,102,0};
+			return color;
+		}
+	}
 }
 
 void WormView::load(int x, int y, SdlScreen* screen){
@@ -58,7 +77,8 @@ void WormView::setPos(int x, int y){
 }
 
 void WormView::setPlayerName(std::string player){
-	labelUsuario.setText(player, white);
+	SDL_Color black = {255,255,255};
+	labelUsuario.setText(player, black);
 }
 
 
@@ -142,27 +162,6 @@ void WormView::update(){
 	draw();
 }
 
-/*optinizar esto*/
-SDL_Color getColor(int id){
-	switch (id){
-		case 1:{
-			SDL_Color color = {255,0,0};
-			return color;
-		}
-		case 2:{
-			SDL_Color color = {0,0,255};
-			return color;
-		}
-		case 3:{
-			SDL_Color color = {0,255,0};
-			return color;
-		}
-		case 4:{
-			SDL_Color color = {153,102,0};
-			return color;
-		}
-	}
-}
 
 void WormView::draw(){
 	

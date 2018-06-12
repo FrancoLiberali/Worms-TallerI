@@ -20,3 +20,7 @@ void Camera::updateCenter(int x, int y){
     centerX = x;
     centerY = y;
 }
+
+void Camera::focusCenterWindow(){
+    updateCenter(w/2, h/2);
+}

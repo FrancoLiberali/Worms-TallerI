@@ -20,6 +20,7 @@ add_library(alllib
 	src/controller/WormChangeAimEvent.cpp
 	src/controller/StartTurnEvent.cpp
 	src/controller/PlayerOffEvent.cpp
+	src/controller/GameWinnerEvent.cpp
 
     src/controller/ClientCommandSender.cpp
 	src/controller/Controller.cpp

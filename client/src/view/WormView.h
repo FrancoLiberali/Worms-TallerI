@@ -32,7 +32,6 @@ private:
 	Camera& camera;
 
 	bool selected;
-	SDL_Color white;
 	bool focus;
 
 	bool alive;

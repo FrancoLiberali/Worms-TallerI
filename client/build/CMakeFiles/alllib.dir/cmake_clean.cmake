@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o"
+  "CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o"
   "CMakeFiles/alllib.dir/src/controller/Controller.cpp.o"
   "CMakeFiles/alllib.dir/src/common/Thread.cpp.o"

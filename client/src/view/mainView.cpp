@@ -4,7 +4,7 @@
 
 
 mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen)
-		: screen(screen), eventHandler(eventHandler), open(true), stage(screen){
+		: screen(screen), eventHandler(eventHandler), open(true), stage(screen), endGame(false){
 	this->init();
 }
 
@@ -14,7 +14,7 @@ void mainView::init(){
 	menuWeapon->buildWeapon();
 
 	list<WeaponId> allowW;
-
+	//Armas permitidas
 	allowW.push_back(BAZOOKA);
 	allowW.push_back(R_GRENADE);
 	allowW.push_back(HOLY);
@@ -43,12 +43,13 @@ void mainView::close(){
 }
 
 void mainView::update(){
+	if (endGame)
+		return;
 	screen.fill();
 	stage.draw();
 	turnView.draw(screen.getRenderer(), 10 , 10);
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
-		//SDL_Delay(20);
 		screen.fill();
 		stage.draw();
 		turnView.draw(screen.getRenderer(), 10 , 10);
@@ -106,4 +107,22 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	for(auto& it: this->worms)
 		it.second->offFocus();
 	worms[idWorm]->onFocus();
+}
+
+void mainView::showWinner(){
+	//screen.clear();
+	screen.fill();
+	TextureManager::Instance().draw("win", 0 , 0, 0, screen.getRenderer());
+	TextureManager::Instance().getCamera().focusCenterWindow();
+	endGame = true;
+	screen.render();
+}
+
+void mainView::showLosser(){
+	//screen.clear();
+	screen.fill();
+	TextureManager::Instance().draw("lose", 0, 0, 0, screen.getRenderer());
+	TextureManager::Instance().getCamera().focusCenterWindow();
+	endGame = true;
+	screen.render();
 }

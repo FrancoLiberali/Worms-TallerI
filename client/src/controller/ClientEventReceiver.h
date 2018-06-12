@@ -8,6 +8,8 @@
 #include "../model/Model.h"
 #include "Event.h"
 
+class Model;
+
 class ClientEventReceiver : public Thread{
 private:
 	Queue<Event*>& q;

@@ -12,6 +12,7 @@
 #include "StartTurnEvent.h"
 #include "PlayerOffEvent.h"
 #include "WormChangeAimEvent.h"
+#include "GameWinnerEvent.h"
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
   //std::cout << "hay evento " << (EventType)type << std::endl;
@@ -94,9 +95,11 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int idPlayer = proxy.receiveInt();
       return new PlayerOffEvent(idPlayer, model, view);
     }
-    case G_PLAYER_WIN:
+    case G_PLAYER_WIN:{
       int idPlayer = proxy.receiveInt();
-      return nullptr;
+      printf("Game winner");
+      return new GameWinnerEvent(idPlayer, model, view);
+    }
   }
   return nullptr; //nunca deberia llegar todos los casos cubiertos
 }

@@ -54,7 +54,9 @@ void Weapon::drawItems(SdlScreen & screen){
 		it != lWeaponView.end();
 		it++){
 		TextureManager::Instance().drawFrame(
-					(*it), x, y,0, width, height, 
+					(*it), x+TextureManager::Instance().getCamera().getX(),
+					y + TextureManager::Instance().getCamera().getY() ,
+					0, width, height, 
 					0, 0, screen.getRenderer(),
 					false, SDL_FLIP_NONE);
 	}

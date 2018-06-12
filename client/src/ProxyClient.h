@@ -9,6 +9,7 @@ private:
     Socket socket;
     void sendInt(int num);
     void sendChar(char bye);
+    bool open;
 public:
     ProxyClient(Socket socket);
     ~ProxyClient() noexcept;

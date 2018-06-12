@@ -2,6 +2,11 @@
 #define _CLIENT_MODEL
 
 #include "GameControllerProxy.h"
+#include "../controller/ClientEventReceiver.h"
+#include "../controller/ClientCommandSender.h"
+
+class ClientCommandSender;
+class ClientEventReceiver;
 
 #include <map>
 /*Modelo del cliente*/
@@ -11,6 +16,8 @@ private:
 	int idJugador;
 	std::string namePlayer;
 	GameControllerProxy* gcp;
+	ClientCommandSender * sender;
+	ClientEventReceiver * receiver;
 	std::map<int, std::string> players;
 public:
 	Model();
@@ -27,6 +34,9 @@ public:
 	void selectWorm(int id);
 	void setNamePlayer(std::string name);
 	std::string getNamePlayer();
+	bool isPlayer(int id);
+	void setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver);
+	void closeComunnication();
 };
 
 #endif

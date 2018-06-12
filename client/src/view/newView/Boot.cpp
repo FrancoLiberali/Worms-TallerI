@@ -70,7 +70,10 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
-		TextureManager::Instance().load("../resource/images/sky3.png", "sky",screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/sky.png", "sky",screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/win.png", "win", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/lose.png", "lose", screen.getRenderer());
+
 		// explosiones
 		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", screen.getRenderer());			

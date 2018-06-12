@@ -69,6 +69,8 @@ int main(int argc, char *argv[]){
 	ClientEventReceiver eventReceiver(proxy, eventQueue, model, clientView);
 	eventReceiver.start();
 
+	model.setComunnication(&commmandSender, &eventReceiver);
+
 	Controller controller(model, clientView);
 	//Game loop
 	int step = 0;

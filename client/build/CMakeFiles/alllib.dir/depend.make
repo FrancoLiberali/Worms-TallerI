@@ -5,7 +5,11 @@ CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/GameBuilder.cpp
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/GameBuilder.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/GameBuilder.cpp.o: ../src/model/ClientCommand.h
@@ -59,6 +63,7 @@ CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/Qu
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/socket.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/ClientCommandSender.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/ClientEventReceiver.cpp
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/Event.h
@@ -90,7 +95,11 @@ CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o: ../src/view/newV
 
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/controller/Controller.cpp
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/controller/Controller.h
 CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/controller/Event.h
@@ -120,7 +129,11 @@ CMakeFiles/alllib.dir/src/controller/Controller.cpp.o: ../src/view/newView/Textu
 
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/CreateVigaEvent.cpp
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/CreateVigaEvent.h
 CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/Event.h
@@ -150,7 +163,11 @@ CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o: ../src/view/newView/
 
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/CreateWormEvent.cpp
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/CreateWormEvent.h
 CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/Event.h
@@ -180,7 +197,11 @@ CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o: ../src/view/newView/
 
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/controller/Event.cpp
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/controller/EventHandler.h
@@ -209,7 +230,11 @@ CMakeFiles/alllib.dir/src/controller/Event.cpp.o: ../src/view/newView/TextureMan
 
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/CreateVigaEvent.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/CreateWormEvent.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/Event.h
@@ -217,6 +242,7 @@ CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/Event
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/EventFactory.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/EventType.h
+CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/GameWinnerEvent.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerConnectEvent.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerIdEvent.h
 CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerOffEvent.h
@@ -251,7 +277,11 @@ CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o: ../src/view/newView/Tex
 
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/controller/EventHandler.cpp
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/controller/EventHandler.h
@@ -278,9 +308,47 @@ CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/newView/Tex
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/newView/TextView.h
 CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o: ../src/view/newView/TextureManager.h
 
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/Thread.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/ClientEventReceiver.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/Event.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/EventHandler.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/GameWinnerEvent.cpp
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/GameWinnerEvent.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/model/ClientCommand.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/model/GameControllerProxy.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/model/Model.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/Camera.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/Escenario.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/MenuWeaponView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/Shape.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/VigaView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/Weapon.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/WormState.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/WormView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/mainView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/FontManager.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/GameException.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/SdlException.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/SdlScreen.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/Sprite.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/SpriteConfigurator.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/TextManager.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/TextView.h
+CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o: ../src/view/newView/TextureManager.h
+
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/PlayerConnectEvent.cpp
@@ -310,7 +378,11 @@ CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/view/newVi
 
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/PlayerIdEvent.cpp
@@ -340,7 +412,11 @@ CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o: ../src/view/newView/Te
 
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/PlayerOffEvent.cpp
@@ -370,7 +446,11 @@ CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o: ../src/view/newView/T
 
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/StartTurnEvent.cpp
@@ -400,7 +480,11 @@ CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o: ../src/view/newView/T
 
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/WormChangeAimEvent.cpp
@@ -430,7 +514,11 @@ CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/view/newVi
 
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/WormChangeLifeEvent.cpp
@@ -460,7 +548,11 @@ CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/view/newV
 
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/WormChangeStateEvent.cpp
@@ -490,7 +582,11 @@ CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/view/new
 
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/WormMoveEvent.cpp
@@ -520,7 +616,11 @@ CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o: ../src/view/newView/Te
 
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/WormWeaponEvent.cpp
@@ -567,11 +667,36 @@ CMakeFiles/alllib.dir/src/model/GameControllerProxy.cpp.o: ../src/model/WormWeap
 
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/controller/ClientEventReceiver.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/controller/Event.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/model/ClientCommand.h
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/model/GameControllerProxy.h
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/model/Model.cpp
 CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/model/Model.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/AimView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/Camera.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/Escenario.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/MenuWeaponView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/Shape.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/VigaView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/Weapon.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/WormState.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/WormView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/mainView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/FontManager.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/GameException.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/SdlException.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/SdlScreen.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/Sprite.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/SpriteConfigurator.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/TextManager.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/TextView.h
+CMakeFiles/alllib.dir/src/model/Model.cpp.o: ../src/view/newView/TextureManager.h
 
 CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.o: ../src/common/socket.h
@@ -663,7 +788,11 @@ CMakeFiles/alllib.dir/src/view/WormView.cpp.o: ../src/view/newView/TextureManage
 
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/ProxyClient.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/common/Queue.h
+CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/common/Thread.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/common/socket.h
+CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/common/socket_error.h
+CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/controller/ClientEventReceiver.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/controller/Event.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/controller/EventHandler.h
 CMakeFiles/alllib.dir/src/view/mainView.cpp.o: ../src/model/ClientCommand.h

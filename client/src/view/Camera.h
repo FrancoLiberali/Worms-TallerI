@@ -11,6 +11,7 @@ public:
     int getX();
     int getY();
     void updateCenter(int x, int y);
+    void focusCenterWindow();
 };
 
 #endif

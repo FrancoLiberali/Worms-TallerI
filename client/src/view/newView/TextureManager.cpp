@@ -66,7 +66,7 @@ void TextureManager::draw(std::string id, int x, int y, double angle,
 		SDL_RenderCopyEx(pRenderer, aTexture, &srcRect,&destRect, angle, 0, flip);
 	
 	} catch (GameException & e) {
-        //std::cout << e.what() <<std::endl;
+        std::cout << e.what() <<std::endl;
 	}
 }
 
@@ -96,7 +96,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 		}
 		if (grey) SDL_SetTextureColorMod(getTexture(id),255,255,255);
 	} catch (GameException & e) {
-        //std::cout << e.what() <<std::endl;
+        std::cout << e.what() <<std::endl;
 	}
 }
 

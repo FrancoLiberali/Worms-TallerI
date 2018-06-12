@@ -14,8 +14,8 @@ private:
     int dir;
     bool show;
     int centerX, centerY;
-    float  angles[32] = {-90, -84, -78,-72,-66,-60,-54,-48,-42,-36,-30,-24,-18,-12,-6,0,
-                    5.8,11.6,17.4,23.2,29,34.8,40.6,46.4,52.2,58,63.8,69.6,75.4,81.2,90};
+    float  anglesRight[5] = {270,345,0,45,90};
+    float anglesLeft[5] = { 270,225,180,135,90};
 
 public:
 	AimView();

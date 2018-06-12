@@ -53,3 +53,17 @@ void Model::setNamePlayer(std::string name){
 std::string Model::getNamePlayer(){
     return namePlayer;
 }
+
+bool Model::isPlayer(int id){
+    return idJugador == id;
+}
+
+
+void Model::setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver){
+    this->sender = sender;
+    this->receiver = receiver;
+}
+void Model::closeComunnication(){
+    sender->stop();
+    receiver->stop();
+}

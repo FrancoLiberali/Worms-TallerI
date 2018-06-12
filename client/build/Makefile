@@ -514,6 +514,33 @@ src/controller/EventHandler.cpp.s:
 	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
 
+src/controller/GameWinnerEvent.o: src/controller/GameWinnerEvent.cpp.o
+
+.PHONY : src/controller/GameWinnerEvent.o
+
+# target to build an object file
+src/controller/GameWinnerEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o
+.PHONY : src/controller/GameWinnerEvent.cpp.o
+
+src/controller/GameWinnerEvent.i: src/controller/GameWinnerEvent.cpp.i
+
+.PHONY : src/controller/GameWinnerEvent.i
+
+# target to preprocess a source file
+src/controller/GameWinnerEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.i
+.PHONY : src/controller/GameWinnerEvent.cpp.i
+
+src/controller/GameWinnerEvent.s: src/controller/GameWinnerEvent.cpp.s
+
+.PHONY : src/controller/GameWinnerEvent.s
+
+# target to generate assembly for a file
+src/controller/GameWinnerEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.s
+.PHONY : src/controller/GameWinnerEvent.cpp.s
+
 src/controller/PlayerConnectEvent.o: src/controller/PlayerConnectEvent.cpp.o
 
 .PHONY : src/controller/PlayerConnectEvent.o
@@ -1457,6 +1484,9 @@ help:
 	@echo "... src/controller/EventHandler.o"
 	@echo "... src/controller/EventHandler.i"
 	@echo "... src/controller/EventHandler.s"
+	@echo "... src/controller/GameWinnerEvent.o"
+	@echo "... src/controller/GameWinnerEvent.i"
+	@echo "... src/controller/GameWinnerEvent.s"
 	@echo "... src/controller/PlayerConnectEvent.o"
 	@echo "... src/controller/PlayerConnectEvent.i"
 	@echo "... src/controller/PlayerConnectEvent.s"

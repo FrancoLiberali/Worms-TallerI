@@ -5,6 +5,8 @@ class mainView;
 #include "../view/mainView.h"
 #include "../model/Model.h"
 
+class Model;
+
 class Event {
 protected:
 	mainView* view;
