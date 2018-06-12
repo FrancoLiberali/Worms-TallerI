@@ -6,14 +6,14 @@
 TextureManager::TextureManager():screenHeight(0),screenWidth(0){}
 
 TextureManager::~TextureManager(){
-	std::cout << "destructor del texture manager" << std::endl;
+	//std::cout << "destructor del texture manager" << std::endl;
 
 	std::map<std::string, SDL_Texture*>::iterator iter;
 	for (iter = texture_map.begin(); iter!=texture_map.end(); ++iter)
 		SDL_DestroyTexture(iter->second);
 	texture_map.clear();
 	
-	std::cout << "Se destuyeron las texturas" << std::endl;
+	//std::cout << "Se destuyeron las texturas" << std::endl;
 }
 
 void TextureManager::init(int w, int h){
@@ -62,7 +62,7 @@ void TextureManager::draw(std::string id, int x, int y, double angle,
 		SDL_RenderCopyEx(pRenderer, aTexture, &srcRect,&destRect, angle, 0, flip);
 	
 	} catch (GameException & e) {
-        std::cout << e.what() <<std::endl;
+        //std::cout << e.what() <<std::endl;
 	}
 }
 
@@ -92,7 +92,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 		}
 		if (grey) SDL_SetTextureColorMod(getTexture(id),255,255,255);
 	} catch (GameException & e) {
-        std::cout << e.what() <<std::endl;
+        //std::cout << e.what() <<std::endl;
 	}
 }
 

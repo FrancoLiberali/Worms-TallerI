@@ -6,14 +6,9 @@
 mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen)
 		: screen(screen), eventHandler(eventHandler), open(true), stage(screen){
 	this->init();
-
 }
 
 void mainView::init(){
-	worm = new WormView(1,1);
-	worm->setPlayerName("Pepito");
-	worm->load(200, 400, &screen);
-
 	//creamos el menu de armas
 	menuWeapon = new MenuWeaponView;
 	menuWeapon->buildWeapon();
@@ -35,9 +30,8 @@ void mainView::init(){
 
 mainView::~mainView(){
 	for (auto& it: worms){
-		//delete it.second;
+		delete it.second;
 	}
-	delete worm;
 }
 
 bool mainView::isOpen(){
@@ -51,19 +45,19 @@ void mainView::close(){
 void mainView::update(){
 	screen.fill();
 	stage.draw();
+	turnView.draw(screen.getRenderer(), 10 , 10);
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
 		//SDL_Delay(20);
 		screen.fill();
 		stage.draw();
+		turnView.draw(screen.getRenderer(), 10 , 10);
 		menuWeapon->draw(screen);
 		event->process();
 		delete event;
-		worm->update();
 		updateWorms();
 		screen.render();
 	}
-	worm->update();
 	updateWorms();
 	menuWeapon->draw(screen);
 	screen.render();
@@ -105,6 +99,7 @@ void mainView::addViga(int x, int y, int angle){
 }
 
 std::string mainView::changeTurn(std::string namePlayer){
-	//mostrar algo para saber que es el turno del jugador
-	std::cout<<"TURNO: "<<namePlayer<<std::endl;
+	turnView.setColor(255,10,255);
+	SDL_Color red = {0,0,0};
+	turnView.setText("Turno " + namePlayer,red);
 }

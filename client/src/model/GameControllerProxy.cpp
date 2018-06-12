@@ -14,8 +14,6 @@ void GameControllerProxy::move(const int idJugador, const int direccion) {
 }
 
 void GameControllerProxy::jump(const int idJugador, const int direccion) {
-      std::cout<<"salta hacia "<< direccion<< std::endl;
-
   queue.push(new WormJumpCommand(idJugador, direccion));
 }
 

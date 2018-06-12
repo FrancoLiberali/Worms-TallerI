@@ -21,17 +21,25 @@
 
 #include <iostream>
 
-//argv[1]=ip argv[2]=port argv[3] name
-int main(int argc, char *argv[])
-{
-	if (argc < 3)
-		return 0;
+int main(int argc, char *argv[]){
+	std::string name;
+	std::string host;
+	std::string port;
+
+	printf("Ingrese su nombre: ");
+	getline(std::cin,name);
+	
+	printf("Ingrese la IP del server: ");
+	getline(std::cin,host);
+
+	printf("Ingrese el puerto de conexion : ");
+	getline(std::cin,port);
 
 	Socket socket;
 	try{
-		socket.connect_(argv[1],argv[2]);
+		socket.connect_(host.c_str(),port.c_str());
 	} catch(SocketError& e){
-		std::cout<<e.what()<<std::endl;
+		//std::cout<<e.what()<<std::endl;
 		return 0;
 	}
 
@@ -39,7 +47,7 @@ int main(int argc, char *argv[])
 
 	//cargamos todas las texturas y el screen principal
 	Boot boot;
-	boot.init(argv[3]);
+	boot.init();
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
 	ClientCommandSender commmandSender(proxy, commandsQueue);
@@ -54,12 +62,7 @@ int main(int argc, char *argv[])
 
 	Model model;
 	model.setGameControllerProxy(&gcp);
-	model.setNamePlayer(argv[3]);
-
-	//Construimos la vista de acuerdo a lo que nos mande el server
-	//GameBuilder builder(proxy, clientView);
-
-
+	model.setNamePlayer(name);
 
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue; 
@@ -71,10 +74,8 @@ int main(int argc, char *argv[])
 	int step = 0;
 	while(clientView.isOpen()){
 		SDL_Event e;
-		SDL_WaitEvent(&e);
-		//std::cout<<"Se intrudujo un evento" << std::endl;
+		SDL_PollEvent(&e);
 		controller.handle(e);
-
 		//desencolo los eventos del server
 		while (!eventQueue.empty()){
 			ehandler.add(eventQueue.pop());

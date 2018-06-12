@@ -1,10 +1,11 @@
 #include "AimView.h"
 #include <iostream>
 
-#define RADIUS 80
+#define RADIUS 50
 #define PI 3.14159265
+#define VAR
 
-AimView::AimView():show(false), angle(0){
+AimView::AimView():show(false), posAngle(16), dir(-1){
 }
 
 
@@ -18,19 +19,13 @@ void AimView::setScreen(SdlScreen* screen){
 }
 
 void AimView::changeAngle(int delta){
-    angle += ((delta == 1) ? 5,6 : -5.6);
+    if (posAngle == 31 || posAngle == 0)
+        return;
+    posAngle += delta;
 }
 
 void AimView::changeDir(){
-    std::cout<<"Aim change dir"<<std::endl;
-    if (angle > 0.0 && angle < 90.0)
-        angle = 180.0 - angle;
-    else if (angle > 90 && angle <180)
-        angle = 180 - angle;
-    else if (angle > 180 && angle < 270)
-        angle = 540 - angle;
-    else if (angle > 270)
-        angle = 540 - angle;
+    dir = -dir;
     draw();
 }
 

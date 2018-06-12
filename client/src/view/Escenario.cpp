@@ -6,6 +6,7 @@ Escenario::Escenario(SdlScreen& screen):screen(screen){
 }
 
 void Escenario::draw(){
+	TextureManager::Instance().draw("sky", 0, 0, 0, screen.getRenderer());
 	viga->draw();
 	for (auto vi = vigas.begin(); vi != vigas.end(); vi++)
 		(*vi)->draw();

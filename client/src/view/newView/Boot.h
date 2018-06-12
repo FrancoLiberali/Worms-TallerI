@@ -16,7 +16,7 @@ private:
     void initCamera(int w, int h);
     void realoadEart();
 public:
-    void init(std::string player);
+    void init();
     void reinit();
     SdlScreen& getScreen();    
 };

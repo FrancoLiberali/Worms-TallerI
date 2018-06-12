@@ -5,15 +5,15 @@
 #include "SpriteConfigurator.h"
 #include <iostream>
 
-#define W_WIDHT 900
-#define W_HEIGHT 700
+#define W_WIDHT 800
+#define W_HEIGHT 600
 
-void Boot::init(std::string player){
+void Boot::init(){
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	IMG_Init(IMG_INIT_PNG);
     screen.init("WORMS ", SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED, W_WIDHT, W_HEIGHT, 
-        SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE);
+        SDL_WINDOW_HIDDEN);
 
 	TextManager::Instance().init(screen.getRenderer());
     TextureManager::Instance().init(W_WIDHT, W_HEIGHT);
@@ -69,7 +69,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
-
+		TextureManager::Instance().load("../resource/images/sky.png", "sky",screen.getRenderer());
 		// explosiones
 		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", screen.getRenderer());			
@@ -84,7 +84,7 @@ void Boot::loadSprites(){
 		} catch (GameException & e) {
             std::cerr << e.what() << std::endl;
 		}
-	std::cout << "Se cargaron todas las texturas" << std::endl;
+	//std::cout << "Se cargaron todas las texturas" << std::endl;
 }
 void Boot::loadImages(){}
 void Boot::loadWaterImage(){}
@@ -135,10 +135,10 @@ void Boot::loadMenuWeapon(){
 		TextManager::Instance().loadFont(Arial12);
 
 	} catch (GameException & e) {
-		std::cout << e.what() << std::endl;	
+		//std::cout << e.what() << std::endl;	
 	}
 
-	std::cout << "Se cargo el menu" << std::endl;
+	//std::cout << "Se cargo el menu" << std::endl;
 
 }
 

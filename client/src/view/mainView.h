@@ -13,6 +13,7 @@
 #include <map>
 
 #include "MenuWeaponView.h"
+#include "newView/TextView.h"
 
 class EventHandler;
 
@@ -23,8 +24,10 @@ private:
 
 	SdlScreen& screen;
 	EventHandler& eventHandler;
-	WormView* worm;
 	MenuWeaponView* menuWeapon;
+
+	TextView turnView;
+
 
 	std::map<int,WormView*> worms;
 	bool open;
