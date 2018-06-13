@@ -1,11 +1,9 @@
 <RCC>
     <qresource prefix="/img">
         <file>recursos/viga.png</file>
-        <file>recursos/gusano1.png</file>
-        <file>recursos/gusano2.png</file>
-        <file>recursos/gusano3.png</file>
-        <file>recursos/gusano4.png</file>
         <file>recursos/vigac.png</file>
-        <file>default_armo.yaml</file>
+        <file>recursos/gusano.png</file>
+        <file>recursos/sky3.png</file>
+        <file>recursos/default_armo.yaml</file>
     </qresource>
 </RCC>

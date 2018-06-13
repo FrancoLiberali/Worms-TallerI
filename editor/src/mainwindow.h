@@ -45,6 +45,8 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_actionSalir_triggered();
+
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
@@ -54,7 +56,7 @@ private:
     ConfigGusanos *gusanos;
     // Registro de cambios en el mapa.
     Registro registro;
-    // Registra si el mapa esta guardado o no.
+    
     bool guardado;
 };
 

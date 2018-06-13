@@ -27,6 +27,9 @@ public:
     // Devuelve un par, donde se encuentra la posicion x e y de la esquina
     // superior izquierda.
     //QPointF a_pixeles(QPair<float,float> pos) const;
+
+    // Convierte un pixel a metros segun la escala;
+    float pixel_a_metros(float pixel) const; 
 };
 
 #endif // CONVERSOR_H
