@@ -73,17 +73,15 @@ int main(int argc, char *argv[]){
 
 	Controller controller(model, clientView);
 	//Game loop
-	int step = 0;
-	while(clientView.isOpen()){
-		SDL_Event e;
-		SDL_PollEvent(&e);
-		controller.handle(e);
+	SDL_Event e;
+	while(clientView.isOpen() ){
+		while(SDL_PollEvent(&e) != 0)
+			controller.handle(e);
 		//desencolo los eventos del server
 		while (!eventQueue.empty()){
 			ehandler.add(eventQueue.pop());
 		}
 		clientView.update();
-		step++;
 	}
 	proxy.close();
 	commandsQueue.push(nullptr);

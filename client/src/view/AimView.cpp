@@ -47,7 +47,7 @@ void AimView::draw(){
 
     int posx = ((int)(cos(currAngle*PI/180)*1000*RADIUS))/1000;
     int posy = ((int)(sin(currAngle*PI/180)*1000*RADIUS)/1000);
-    //TextureManager::Instance().draw("aim", posx, posy, 0, screen->getRenderer());
+    TextureManager::Instance().draw("aim", posx, posy, 0, screen->getRenderer());
 }
 
 void AimView::enable(){

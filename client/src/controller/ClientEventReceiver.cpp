@@ -15,7 +15,7 @@ ClientEventReceiver::~ClientEventReceiver() {
   while (!q.empty()) {
     delete q.pop();
   }
-  std::cout << "ClientEventReceiver destruido" << std::endl;
+  //std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
 

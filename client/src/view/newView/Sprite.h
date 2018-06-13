@@ -17,6 +17,8 @@ class Sprite
 	int fromFrame;
 	int toFrame;
 
+	int countFrame;
+
 public:
 	Sprite();
 	Sprite(std::string imageId, int width, int height, int rows, bool repeat);

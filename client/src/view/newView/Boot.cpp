@@ -88,7 +88,7 @@ void Boot::loadSprites(){
 		} catch (GameException & e) {
             std::cerr << e.what() << std::endl;
 		}
-	//std::cout << "Se cargaron todas las texturas" << std::endl;
+	////std::cout << "Se cargaron todas las texturas" << std::endl;
 }
 void Boot::loadImages(){}
 void Boot::loadWaterImage(){}
@@ -139,10 +139,10 @@ void Boot::loadMenuWeapon(){
 		TextManager::Instance().loadFont(Arial12);
 
 	} catch (GameException & e) {
-		//std::cout << e.what() << std::endl;	
+		////std::cout << e.what() << std::endl;	
 	}
 
-	//std::cout << "Se cargo el menu" << std::endl;
+	////std::cout << "Se cargo el menu" << std::endl;
 
 }
 
