@@ -20,7 +20,7 @@ public:
 			return theInstance;
 	}
 
-	void add(std::string imageId, int width, int height, int rows, int countSleepFrame);
+	void add(std::string imageId, int width, int height, int rows, int countSleepFrame, int initFrame = 0);
 	
 	Sprite get(std::string imageId);
 

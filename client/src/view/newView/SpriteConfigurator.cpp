@@ -7,7 +7,7 @@ SpriteConfigurator::SpriteConfigurator(){
 SpriteConfigurator::~SpriteConfigurator(){
 }
 
-void SpriteConfigurator::add(std::string imageId, int width, int height, int rows, int countSleepFrame){
+void SpriteConfigurator::add(std::string imageId, int width, int height, int rows, int countSleepFrame, int initFrame){
 	
 	if (sprite_map.find(imageId) != sprite_map.end()){
 		std::stringstream msg;
@@ -15,7 +15,7 @@ void SpriteConfigurator::add(std::string imageId, int width, int height, int row
 		throw GameException(msg.str());
 	} 
 	
-	Sprite aSprite(imageId, width, height, rows, countSleepFrame);
+	Sprite aSprite(imageId, width, height, rows, countSleepFrame, initFrame);
 	sprite_map[imageId] = aSprite;
 }
 

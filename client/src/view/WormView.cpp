@@ -49,6 +49,7 @@ void WormView::load(int x, int y, SdlScreen* screen){
 		sprites["morir"] = SpriteConfigurator::Instance().get("morir");
 		sprites["cripta"] = SpriteConfigurator::Instance().get("cripta");
 		sprites["explosion"] = SpriteConfigurator::Instance().get("circle25");
+		sprites["static"] = SpriteConfigurator::Instance().get("static");
 
 		sprites["bazooka"] = SpriteConfigurator::Instance().get("bazooka");
 		sprites["dinamita"] = SpriteConfigurator::Instance().get("dinamita");
@@ -84,7 +85,7 @@ void WormView::setPlayerName(std::string player){
 
 void WormView::update(){
 	if (currentSprite == NULL) {
-		currentSprite = &this->sprites["caminar"];
+		currentSprite = &this->sprites["static"];
 		aim.disable();
 	}
 	if (this->state == JUMP){
@@ -99,58 +100,54 @@ void WormView::update(){
 			currentSprite = &this->sprites["caminar"];
 		currentSprite->update();
 		aim.disable();
-	} 
-	else if (this->state == STATIC){
+	} else if (this->state == STATIC){
 		if (this->weaponId == G_GRENADE && currentSprite != &this->sprites["ggranada"]){
 			currentSprite = &this->sprites["ggranada"];
 			aim.enable();
 		}
-		if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"]){
+		else if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"]){
 			currentSprite = &this->sprites["rgranada"];
 			aim.enable();
 		}
-		if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]){
+		else if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]){
 			currentSprite = &this->sprites["dinamita"];
 			aim.enable();
 		}
-		if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]){
+		else if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]){
 			currentSprite = &this->sprites["bazooka"];
 			aim.enable();
 		}
-		if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]){
+		else if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]){
 			currentSprite = &this->sprites["banana"];
 			aim.enable();
 		}
-		if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]){
+		else if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]){
 			currentSprite = &this->sprites["mortero"];
 			aim.enable();
 		}
-		if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]){
+		else if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]){
 			currentSprite = &this->sprites["holy"];
 			aim.enable();
 		}
-		if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"]){
+		else if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"]){
 			currentSprite = &this->sprites["radio"];
 			aim.disable();
 		}
-		if (this->weaponId == BATE && currentSprite != &this->sprites["bate"]){
+		else if (this->weaponId == BATE && currentSprite != &this->sprites["bate"]){
 			currentSprite = &this->sprites["bate"];
 			aim.enable();
 		}
-		if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]){
+		else if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]){
 			currentSprite = &this->sprites["teleport"];
 			aim.disable();
 		}
-		if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["caminar"]){
-			currentSprite = &this->sprites["caminar"];
+		else if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["static"]){
+			currentSprite = &this->sprites["static"];
 			aim.disable();
 		}
-		currentSprite->clean();
 
 	} else if (this->state == DEAD) {
-	
-		////std::cout<<"WormView::update >> sprite worm morir"<<std::endl;
-		if (alive)
+			if (alive)
 			currentSprite = &this->sprites["morir"];
 
 		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame())
@@ -159,6 +156,7 @@ void WormView::update(){
 		alive = false;
 		currentSprite->update();
 	}
+	
 	draw();
 }
 
@@ -170,7 +168,7 @@ void WormView::draw(){
 									currentSprite->getWidth(),
 									currentSprite->getHeight(),
 									currentSprite->getCurrentRow(),
-									currentSprite->getCurrentFrame(),
+									0,
 									screen->getRenderer(),false,flip);
 	 
 	if (this->selected)
@@ -189,6 +187,7 @@ void WormView::draw(){
 
 void WormView::selectWeapon(WeaponId idWapon){
 	this->weaponId = idWapon;
+	aim.reset();
 }
 
 
@@ -238,6 +237,7 @@ void WormView::changeLife(int newLife){
 
 void WormView::changeAimAngle(int delta){
 	aim.changeAngle(delta);
+	currentSprite->update(delta);
 }
 
 void WormView::onFocus(){

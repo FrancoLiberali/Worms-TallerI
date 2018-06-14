@@ -36,33 +36,35 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/wflyup.png", "saltar", screen.getRenderer());
 		
 		TextureManager::Instance().load("../resource/images/grave2.png", "cripta", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbazbak.png", "bazooka", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbazbak.png", "mortero", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wstatic.png", "static", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbaz.png", "bazooka", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbaz.png", "mortero", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/wdynbak.png", "dinamita", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wgrnbak.png", "ggranada", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wclsbak.png", "rgranada", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/whgrbak.png", "holy", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wthrgrn.png", "ggranada", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wthrcls.png", "rgranada", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wthrhgr.png", "holy", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/wairbak.png", "radio", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbsbbak.png", "bate", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wbsbaim.png", "bate", screen.getRenderer());
 		TextureManager::Instance().load("../resource/images/wtelbak.png", "teleport", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbanbak.png", "banana", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/wthrban.png", "banana", screen.getRenderer());
 
 
 		SpriteConfigurator::Instance().add("caminar", 60, 60, 15, true);
 		SpriteConfigurator::Instance().add("saltar", 60, 60, 2, true);
 		SpriteConfigurator::Instance().add("morir", 60, 60, 60, false);
 		SpriteConfigurator::Instance().add("cripta", 60, 60, 20, false);
+		SpriteConfigurator::Instance().add("static", 60 ,60, 98, true);
 
-		SpriteConfigurator::Instance().add("bazooka", 60, 60, 32, true);
-		SpriteConfigurator::Instance().add("mortero", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bazooka", 60, 60, 32, false, 16);
+		SpriteConfigurator::Instance().add("mortero", 60, 60, 32, false, 16);
 		SpriteConfigurator::Instance().add("dinamita", 60, 60, 10, true);
-		SpriteConfigurator::Instance().add("ggranada", 60, 60, 10, true);
-		SpriteConfigurator::Instance().add("rgranada", 60, 60, 10, true);
-		SpriteConfigurator::Instance().add("holy", 60, 60, 10, true);
+		SpriteConfigurator::Instance().add("ggranada", 60, 60, 32, false, 16);
+		SpriteConfigurator::Instance().add("rgranada", 60, 60, 32, false, 16);
+		SpriteConfigurator::Instance().add("holy", 60, 60, 32, false, 16);
 		SpriteConfigurator::Instance().add("radio", 60, 60, 10, true);
-		SpriteConfigurator::Instance().add("bate", 60, 60, 10, false);
+		SpriteConfigurator::Instance().add("bate", 60, 60, 32, false, 16);
 		SpriteConfigurator::Instance().add("teleport", 60, 60, 10, false);
-		SpriteConfigurator::Instance().add("banana", 60, 60, 10, false);
+		SpriteConfigurator::Instance().add("banana", 60, 60, 32, false, 16);
 
 		// projectiles
 		

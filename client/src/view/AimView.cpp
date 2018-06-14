@@ -1,11 +1,11 @@
 #include "AimView.h"
 #include <iostream>
 
-#define RADIUS 50
+#define RADIUS 50.0
 #define PI 3.14159265
-#define VAR 5.6
+#define INIT 16
 
-AimView::AimView():show(false), posAngle(16), dir(-1){
+AimView::AimView():show(false), posAngle(INIT), dir(-1){
 }
 
 
@@ -45,8 +45,9 @@ void AimView::draw(){
     int w, h;
     SDL_QueryTexture(aim,NULL,NULL, &w, &h);
 
-    int posx = ((int)(cos(currAngle*PI/180)*1000*RADIUS))/1000;
-    int posy = ((int)(sin(currAngle*PI/180)*1000*RADIUS)/1000);
+    int posx = centerX + (int)(cos(currAngle*PI/180.0)*RADIUS) - w/2;
+    int posy = centerY + (int)(sin(currAngle*PI/180.0)*RADIUS) - h/2;
+
     TextureManager::Instance().draw("aim", posx, posy, 0, screen->getRenderer());
 }
 
@@ -56,4 +57,8 @@ void AimView::enable(){
 
 void AimView::disable(){
     show = false;
+}
+
+void AimView::reset(){
+    posAngle = INIT;
 }
