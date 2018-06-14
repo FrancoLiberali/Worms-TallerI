@@ -18,16 +18,9 @@ void Registro::agregar_arma(std::string& id, Arma* arma)
     this->armas[id] = arma;
 }
 
-void Registro::agregar_gusano(int equipo, Gusano* gusano)
+void Registro::agregar_gusano(Gusano* gusano)
 {
-   try{
-        this->gusanos.at(equipo).push_back(gusano);
-    }
-    catch (const std::out_of_range& e) {
-        std::vector<Gusano *> gusanos;
-        gusanos.push_back(gusano);
-        this->gusanos[equipo] = gusanos;
-  }
+   this->gusanos.push_back(gusano);
 }
 
 void Registro::actualizar_vigas()
@@ -37,11 +30,11 @@ void Registro::actualizar_vigas()
                  end(vigas));
 }
 
-void Registro::actualizar_gusano(int equipo)
+void Registro::actualizar_gusano()
 {
-    gusanos.at(equipo).erase(std::remove_if(begin(gusanos.at(equipo)), end( gusanos.at(equipo)),
+    gusanos.erase(std::remove_if(begin(gusanos), end(gusanos),
                                [](Gusano* x) { return x->esta_eliminado(); }),
-                 end(gusanos.at(equipo)));
+                 end(gusanos));
 }
 
 unsigned int Registro::get_cant_gusanos() const
@@ -56,6 +49,12 @@ unsigned int Registro::get_cant_vigas() const
 Arma* Registro::get_arma(const std::string& nombre) const
 {
     return this->armas.at(nombre);
+}
+
+void Registro::set_tam_mapa(float ancho, float alto)
+{
+    this->tam_mapa.first = ancho;
+    this->tam_mapa.second = alto;
 }
 
 std::vector<std::string> Registro::get_armas() const
@@ -75,6 +74,16 @@ void Registro::set_vida_gusanos(int vida)
 YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)
 {
     out << YAML::BeginMap;
+    out << YAML::Key << "metadata";
+
+       out << YAML::BeginMap;
+       out << YAML::Key << "ancho";
+       out << YAML::Value << obj.conversor.pixel_a_metros(obj.tam_mapa.first);
+       out << YAML::Key << "alto";
+       out << YAML::Value << obj.conversor.pixel_a_metros(obj.tam_mapa.second);
+       out << YAML::EndMap;
+
+    //out << YAML::BeginMap;
     out << YAML::Key << "objetos";
     out << YAML::Value << YAML::BeginSeq;
 
@@ -89,11 +98,10 @@ YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)
         }
 
         // Gusanos.
-        for (map_gusanos::const_iterator it = obj.gusanos.begin(); it!=obj.gusanos.end(); ++it) {
-            for (unsigned int i = 0; i < it->second.size(); ++i){
-                out << *it->second[i];
-            }
+        for (unsigned int i = 0; i < obj.gusanos.size(); ++i){
+            out << *obj.gusanos[i];
         }
+        
         out << YAML::EndSeq;
 
         // Armas.

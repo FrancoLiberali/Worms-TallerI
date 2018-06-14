@@ -11,7 +11,6 @@
 
 class YAMLParser
 {
-
 public:
     // Construye YAMLParser.
     YAMLParser();

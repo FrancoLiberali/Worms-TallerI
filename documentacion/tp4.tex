@@ -1,0 +1,336 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Definición del tipo de documento.                                           %
+% Posibles tipos de papel: a4paper, letterpaper, legalpapper                  %
+% Posibles tamaños de letra: 10pt, 11pt, 12pt                                 %
+% Posibles clases de documentos: article, report, book, slides                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,10pt]{article}
+\usepackage{listings}
+\usepackage[left=3cm,right=3cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Los paquetes permiten ampliar las capacidades de LaTeX.                     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Paquete para inclusión de gráficos.
+\usepackage{graphicx}
+\usepackage{float}
+
+% Paquete para definir la codificación del conjunto de caracteres usado
+% (latin1 es ISO 8859-1).
+\usepackage[latin1]{inputenc}
+
+% Paquete para definir el idioma usado.
+\usepackage[spanish]{babel}
+
+
+
+% Título principal del documento.
+\title{		\textbf{Trabajo Práctico Final - Worms}}
+
+% Información sobre los autores.
+\author{	Edson Justo Narcizo, \textit{Padrón Nro. 97775}                     \\
+            \texttt{justo.edson@gmail.com}                                              \\
+            Franco Liberali , \textit{Padrón Nro. 99491}                     \\
+            \texttt{ franco.liberali@gmail.com }                                              \\
+            Bautista Canavese, \textit{Padrón Nro. 99714}                     \\
+            \texttt{ bauti-canavese@hotmail.com }                                              
+ \\[2.5ex]
+            \normalsize{Taller de Programación I - Cuatrimestre I, 2018}                             \\
+            \normalsize{Facultad de Ingeniería, Universidad de Buenos Aires}            \\ }
+
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\setcounter{page}{1}
+
+\tableofcontents % indice de contenidos
+\newpage
+
+\section{Manual de Proyecto}
+
+\subsection{División de tareas}
+La division de tareas fue seguida como indica la sugerencia en el enunciado del tp.
+
+Franco: Servidor.
+Edson: Cliente.
+Bautista: Editor y varias implementaciones graficas.
+
+
+\subsection{Herramientas}
+En general se utilizaron las herramientas de compilación de gcc y gdb como debugger, además de cmake para la fabricación de makefile para luego,  lo que permitió ser mas flexible en cuanto a el linkeo de librerias, etc.
+
+\subsubsection{Cliente}
+El cliente, que desarrolla sobre una GUI (interfaz de usuario gráfica), se utilizo la librería \texttt{sdl} y \texttt{gtk} para la implementación de menus y selección de mapas.
+
+\subsubsection{Servidor}
+El servidor, debe realizar todas las operaciones en cuanto al movimiento de los objetos y la física del mismo; por lo tanto se utilizo \texttt{Box2D} para todas las físicas.
+
+\subsubsection{Editor}
+En cuanto al editor, al ser estático en cuanto a las animaciones de las imágenes se decidió implementar con \texttt{qt}, además de la utilización de el editor grafico \texttt{qt editor}.
+
+\section{Documentación Técnica}
+
+\subsection{Requerimientos de software}
+SO: Linux.
+
+Libs: yaml, sdl, sdl mixer, Box2D, qt5.
+
+Compile: cmake, makefile.
+
+\subsection{Descripción general}
+El proyecto se compone de tres módulos:
+
+\begin{enumerate}
+\item Servidor.
+\item Cliente.
+\item Editor.
+\end{enumerate}
+
+\subsection{Modulo Editor}
+
+Permite la edición de un escenario para el juego
+
+\begin{itemize}
+\item Elegir el fondo de pantalla.
+\item Colocar las vigas y gusanos.
+\item Definir qué armas y herramientas pueden usarse y la cantidad de municiones de ellas.
+\item Configurar la vida inicial de los gusanos.
+\end{itemize} 
+
+\subsubsection{Objetos}
+Implementados como un item de la escena padre (donde se encuentran dibujados), asignándole una imagen dependiendo si es una viga (chica o grande) o un gusano (del equipo: 1,2,3,4).
+
+\subsubsection{Ventanas}
+
+\begin{itemize}
+\item Ventana principal: con los botones de acceso a la creación de objetos y guardado de mapa.
+\item Ventana armas: permite configurar las armas, cambiando su munición y seleccionando si pueden usarse o no.
+\item Ventana de gusanos: permite la configuración de la vida de los gusanos.
+\end{itemize} 
+
+\subsubsection{Guardado de mapa}
+Dentro de la clase \texttt{Registro} se irán almacenando los cambios en tiempo real sobre el editor, finalmente cuando el usuario seleccione \texttt{archivo/guardar como}, se dispondrá el lugar y el nombre en el donde se quiere guardar. Esto genera un archivo \textit{yaml} con las siguientes características:
+
+Luego de esta sentencia se indicaran todos los objetos que formaran el mapa, tanto los gusanos como las vigas.
+
+\begin{verbatim}
+-objetos:
+\end{verbatim}
+
+Los objetos dispondrán del siguiente formato:
+
+\begin{verbatim}
+-objetos:
+ -tipo: string<nombre>
+ -angulo: float<radianes>
+ -x: float<metros>
+ -y: float<metros>
+ -equipo: int<equipo>
+\end{verbatim}
+
+Luego de esta sentencia se indicaran todas las armas que forman el mapa.
+
+\begin{verbatim}
+-armas:
+\end{verbatim}
+
+Las armas dispondrán del siguiente formato:
+
+\begin{verbatim}
+-armas:
+ -tipo: string<nombre>
+ -disponible: string<si,no>
+ -municion: int<municion>
+\end{verbatim}
+
+
+\subsection{Protocolo Servidor}
+
+\begin{verbatim}
+todos los int son mandados en 4 bytes big endian
+todas las coordenadas se encuentran en MILIMETROS y los 
+angulos en GRADOS de 0 a 360.
+
+Strings:
+	int largo del string
+	el string en si sin el '\0' del final
+
+ASIGNACIÓN DE ID DE JUGADOR(se manda solo al jugador que corresponde):
+	char en 0.
+	int con numero de jugador.
+
+CONECCION DE UN JUGADOR (se manda a todos los jugadores. En caso de que 
+un jugador se desconecte y se conecte otro la idea seria volver a mandar
+ este mensaje con el mismo numero de jugador y otro nombre, para 
+ sobreescribir el anterior):
+	char en 1.
+	int numero de jugador.
+	string nombre del jugador.
+
+CREACIÓN DE UNA VIGA EN EL MAPA:
+	char en 2.
+	int x.
+	int y.
+	int angle.
+
+CREACION DEL AGUA EN EL MAPA:
+	char en 3,
+	a definir segun editor como se va a guardar en el yalm.
+
+CREACION DE UN GUSANO EN EL MAPA
+	char en 4
+	int id gusano
+	int con el numero de jugador que es el dueño
+	int x
+	int y
+	int direccion (-1: izquierda, 1: derecha)
+	int angle
+	
+	Es decir, el id de cada gusano esta conformado por un tupla 
+	(jugador_dueño, numero) con el que se va a identificar a ese 
+	gusano en cada uno de los próximos mensajes
+	La idea es que los gusanos de cada jugador se muestren de un 
+	color distinto.
+
+INICIO DE TURNO
+	char en 5
+	int id de jugador actual
+	int id gusano
+
+POSICIÓN DE UN GUSANO CAMBIA:
+	char en 6
+	int id gusano
+	int x
+	int y
+	int direccion (-1: izquierda, 1: derecha)
+	int angle
+
+CAMBIO DE ESTADO DE UN GUSANO
+	char en 7
+	int id gusano
+	int con numero de nuevo estado
+	estados: 0 = inactivo, 1 = moviendose, 2 = en el aire, 3 = en el agua,
+	 4 = muerto.
+
+POSICION DE UN PROYECTIL EN EL MAPA
+	char en 8
+	int id de proyectil
+	int numero de arma: 1=bazooka, 2=mortero, ... continua segun orden en
+	consigna del tp, 11 = fragmento de proyectil
+	int x
+	int y
+	int angulo
+
+EXPLOCION DE UN PROYECTIL EN EL MAPA
+	char en 9
+	int id de proyectil
+	int x
+	int y
+
+EL GUSANO ACTUAL SACO UN ARMA
+	char en 10
+	int numero de arma: 1=bazooka, 2=mortero, ... continua segun orden en consigna del tp
+
+EL GUSANO ACTUAL CAMBIA DE ÁNGULO DE APUNTADO
+	char en 11
+	int cambio de angulo: 1 = arriba, -1 = abajo
+
+UN GUSANO CAMBIO SU VIDA
+	char en 12
+	int id gusano
+	int nueva vida
+
+UN JUGADOR SE HA DESCONECTADO
+	char en 13
+	int numero de jugador que se desconecto
+
+Un JUGADOR HA GANADO LA PARTIDA
+	char en 14
+	int numero de jugador ganador
+\end{verbatim}
+
+\subsection{Protocolo Cliente}
+
+\begin{verbatim}
+LO QUE MANDA EL CLIENT:
+todos los int son mandados en 4 bytes big endian
+todas las coordenadas se encuentran en METROS y los angulos en GRADOS.
+
+Las coordenadas refieren al CENTRO del objeto.
+
+Las string se mandan:
+	int largo del string
+	el string en si sin el '\0' del final
+
+AVISO DE NOMBRE DEL JUGADOR:
+	char en 0
+	int numero de jugador
+	string con nombre del jugador
+
+AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:
+	char en 1
+	int con map_id
+	int con cantidad maxima de jugadores
+	este mensaje debe ser mandado solo por el jugador que reciba el numero 
+	de jugador 1, como se explica en "inicio_de_partida.txt"
+
+El sistema de movimiento del gusano es el siguiente: al inicio de cada 
+turno todos los jugadores reciben el mensaje "INICIO DE TURNO"(mirar
+protocolo_server.txt) en donde son informados del jugador y gusano actual.
+ Los mensajes que afectan a los gusanos envian siempre el numero de jugador
+  que lo envia, y sera el server quien chequee si el jugador que envia el
+  mensaje tiene derecho o no a mover el gusano del turno actual.
+MOVER UN GUSANO:
+	char en 2
+	int numero de jugador que envia el mensaje
+	int con direccion: -1= izquierda, 1 = derecha
+
+SALTO DE UN GUSANO
+	char en 3
+	int numero de jugador que envia el mensaje
+
+SALTO ATRAS DE UN GUSANO
+	char en 4
+	int numero de jugador que envia el mensaje
+
+GUSANO SACA ARMA
+	char en 5
+	int numero de jugador
+	int numero de arma: 1=bazooka, 2=mortero, etc. segun consigna del tp
+
+GUSANO CAMBIO ANGULO DE APUNTADO
+	char en 6
+	int numero de jugador
+	int cambio de angulo: 1= arriba, -1=abajo
+
+GUSANO CAMBIA TIEMPO DE CUENTA REGRESIVA DE ARMA:
+	char en 7
+	int numero de jugador
+	int nueva cuenta regresiva: 1,2,3,4,5
+
+GUSANO CARGA BARRA DE PODER:
+	char en 8
+	int numero de jugador
+	
+PARAR DE CARGA BARRA DE PODER Y DISPARAR:
+	char en 9
+	int numero de jugador
+
+\end{verbatim}
+
+
+%\section{Diagramas de clase}
+
+% Inclusión de una imagen en formato EPS (Encapsulated Postscript).
+%\begin{figure}[H]
+%	\begin{center}
+	%	\includegraphics[width=1\textwidth]{Diagrama6.png}
+%	\end{center}
+%\caption{Diagrama de clases en general.} \label{fig001}
+%\end{figure}
+
+\end{document}
