@@ -14,11 +14,6 @@
 #include "view/newView/Boot.h"
 #include "common/socket.h"
 #include "common/socket_error.h"
-
-
-#define W_WIDHT 800
-#define W_HEIGHT 600
-
 #include <iostream>
 
 int main(int argc, char *argv[]){
@@ -77,6 +72,8 @@ int main(int argc, char *argv[]){
 	while(clientView.isOpen() ){
 		while(SDL_PollEvent(&e) != 0)
 			controller.handle(e);
+		//Chequeo del mouse para saber si se debe mover la camara
+		controller.checkMouseState(e, ehandler);
 		//desencolo los eventos del server
 		while (!eventQueue.empty()){
 			ehandler.add(eventQueue.pop());

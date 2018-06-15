@@ -1,4 +1,8 @@
 #include "Camera.h"
+#include <stdio.h>
+
+#define M_W 1200
+#define M_H 1500
 
 Camera::Camera(){
 }
@@ -6,6 +10,10 @@ Camera::Camera(){
 void Camera::setDimension(int w, int h){
     this->w = w;
     this->h = h;
+    this->map_h = M_H;
+    this->map_w = M_W;
+    this->vel = 2;
+    this->gap = 10; 
 }
 
 int Camera::getX(){
@@ -23,4 +31,34 @@ void Camera::updateCenter(int x, int y){
 
 void Camera::focusCenterWindow(){
     updateCenter(w/2, h/2);
+}
+
+void Camera::move(int x, int y){
+    if (x < gap) {
+        this->centerX -= vel;
+    } else if (x > w - gap) {
+        this->centerX += vel;
+    } else if (y < gap) {
+        this->centerY -= vel;
+    } else if (y > h - gap) {;
+        this->centerY += vel;
+    }
+}
+
+bool Camera::inLimits(int x, int y){
+    int x_aux = 0;
+    int y_aux = 0;
+
+    if (x < gap) {
+        x_aux = this->centerX - vel;
+    } else if (x > w - gap) {
+        x_aux = this->centerX + vel;
+    } else if (y < gap) {
+        y_aux = this->centerY - vel;
+    } else if (y > h - gap) {
+        y_aux = this->centerY + vel;
+    }
+
+    bool limits = x_aux + w/2 < map_w && y_aux + h/2 < map_h;
+    return limits;
 }

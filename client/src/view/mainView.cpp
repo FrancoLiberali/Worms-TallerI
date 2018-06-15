@@ -126,3 +126,7 @@ void mainView::showLosser(){
 	endGame = true;
 	screen.render();
 }
+
+Camera& mainView::getCamera(){
+	return TextureManager::Instance().getCamera();
+}

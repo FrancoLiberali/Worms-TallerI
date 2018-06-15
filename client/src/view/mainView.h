@@ -52,6 +52,7 @@ public:
 	std::string changeTurn(std::string namePlayer, int idWorm);
 	void showWinner();
 	void showLosser();
+	Camera& getCamera();
 
 };
 
