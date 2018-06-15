@@ -81,46 +81,53 @@ void MokProxy::receive_event(){
 				std::cout << "7 " << id << " " << new_state << "\n";
 				break;
 			}
-		case 8:{//posicion proyectil en el mapa
+		case 8:{//creacion proyectil en el mapa
 				int id = this->receive_int();
 				int arma = this->receive_int();
+				int direccion = this->receive_int();
 				int x = this->receive_int();
 				int y= this->receive_int();
 				int angle = this->receive_int();
-				std::cout << "8 " << id << " " << arma << " " << x << " " << y << " " << angle << "\n";
+				std::cout << "8 " << id << " " << arma << " " << direccion << " " << x << " " << y << " " << angle << "\n";
 				break;
 			}
-		case 9:{//explocion de un proyectil
+		case 9:{//posicion de un proyectil en el mapa
 				int id = this->receive_int();
 				int x = this->receive_int();
 				int y= this->receive_int();
-				std::cout << "9 " << id << " " << x << " " << y << "\n";
+				int angle = this->receive_int();
+				std::cout << "9 " << id << " " << x << " " << y << " " << angle << "\n";
 				break;
 			}
-		case 10:{//gusano actual saco arma
+		case 10:{//explocion de un proyectil
+				int id = this->receive_int();
+				std::cout << "10 " << id << "\n";
+				break;
+			}
+		case 11:{//gusano actual saco arma
 				int arma = this->receive_int();
-				std::cout << "10 " << arma << "\n";
+				std::cout << "11 " << arma << "\n";
 				break;
 			}
-		case 11:{//gusano cambio angulo de aputado
+		case 12:{//gusano cambio angulo de aputado
 				int cambio = this->receive_int();
-				std::cout << "11 " << cambio << "\n";
+				std::cout << "12 " << cambio << "\n";
 				break;
 			}
-		case 12: {//gusano cambio de vida
+		case 13: {//gusano cambio de vida
 				int id = this->receive_int();
 				int new_life = this->receive_int();
-				std::cout << "12 " << id << " " << new_life << "\n";
+				std::cout << "13 " << id << " " << new_life << "\n";
 				break;
 			}
-		case 13: {//jugador desconectado
-			int id = this->receive_int();
-			std::cout << "13 " << id << "\n";
-			break;
-		}
-		case 14: {//jugador gano la partida
+		case 14: {//jugador desconectado
 			int id = this->receive_int();
 			std::cout << "14 " << id << "\n";
+			break;
+		}
+		case 15: {//jugador gano la partida
+			int id = this->receive_int();
+			std::cout << "15 " << id << "\n";
 			break;
 		}
 	}

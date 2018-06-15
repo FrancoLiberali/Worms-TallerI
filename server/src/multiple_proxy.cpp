@@ -59,17 +59,24 @@ void MultipleProxy::sendStateChange(int gusano_id, int new_state){
 	}
 }
 
-void MultipleProxy::sendProjectilePosition(int projectile_number, int weapon, float x, float y, float angle){
+void MultipleProxy::sendProjectileCreation(int projectile_number, int weapon, int direction, float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectilePosition(projectile_number, weapon, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		(*it)->sendProjectileCreation(projectile_number, weapon, direction, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 
-void MultipleProxy::sendProjectileExplosion(int projectile_number, float x, float y){
+void MultipleProxy::sendProjectilePosition(int projectile_number, float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectileExplosion(projectile_number, (int)(x * 1000), (int)(y * 1000));
+		(*it)->sendProjectilePosition(projectile_number, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+	}
+}
+
+void MultipleProxy::sendProjectileExplosion(int projectile_number){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendProjectileExplosion(projectile_number);
 	}
 }
 

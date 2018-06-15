@@ -172,7 +172,7 @@ box2d-example_BINARY_DIR:STATIC=/home/franco/Documentos/taller1/tpfinal/server/b
 box2d-example_SOURCE_DIR:STATIC=/home/franco/Documentos/taller1/tpfinal/server
 
 //The directory containing a CMake configuration file for yaml-cpp.
-yaml-cpp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/yaml-cpp
+yaml-cpp_DIR:PATH=/usr/local/lib/cmake/yaml-cpp
 
 
 ########################

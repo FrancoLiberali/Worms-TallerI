@@ -1,9 +1,9 @@
 #include "morter.h"
 
-Morter::Morter(b2World& world_entry, int number, float x, float y, float angle, float power, 
+Morter::Morter(b2World& world_entry, int number, float x, float y, int direction, float angle, float power, 
 	GameConstants& info, std::map<int, Projectile*>& to_remove, std::vector<FragmentInfo*>& to_create_e, MultipleProxy& proxy) : 
-			FragmentProjectile(world_entry, number, x + (sqrt(0.3125) + 0.2) * cos(angle), 
-			y + (sqrt(0.3125) + 0.2) * sin(angle), angle, 
+			FragmentProjectile(world_entry, number, x + (sqrt(0.3125) + 0.2) * cos(angle) * direction, 
+			y + (sqrt(0.3125) + 0.2) * sin(angle), direction, angle, 
 			info.morter_vel * power, info.morter_damage, info.morter_radius, 
 			to_remove, proxy, info.morter_fragment_damage,  info.morter_fragment_radius,  
 			info.morter_cant_fragments, to_create_e){
@@ -27,12 +27,12 @@ Morter::Morter(b2World& world_entry, int number, float x, float y, float angle, 
 
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();
-	proxy.sendProjectilePosition(this->number, 2, position.x, position.y, angle);
+	proxy.sendProjectileCreation(this->number, 2, direction, position.x, position.y, angle);
 }
 
 Morter::~Morter(){
 }
 
-void Morter::update(int to_respect){
-	FragmentProjectile::update(2);
+void Morter::update(){
+	FragmentProjectile::update();
 }

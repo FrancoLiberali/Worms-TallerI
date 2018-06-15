@@ -10,12 +10,12 @@
 
 class Bazooka : public SimpleProjectile {
 	public:
-		Bazooka(b2World& world_entry, int number, float x, float y, float angle, float power, 
+		Bazooka(b2World& world_entry, int number, float x, float y, int direction, float angle, float power, 
 		GameConstants& info, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
 		
 		~Bazooka();
 		
-		virtual void update(int to_respect);
+		virtual void update();
 };
 
 #endif

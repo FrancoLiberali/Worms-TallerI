@@ -167,51 +167,59 @@ void Proxy::sendStateChange(int gusano_id, int new_state){
 	this->send_int(new_state);
 }
 
-void Proxy::sendProjectilePosition(int projectile_number, int weapon, int x, int y, int angle){
+void Proxy::sendProjectileCreation(int projectile_number, int weapon, int direction, int x, int y, int angle){
 	char event = 8;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(projectile_number);
 	this->send_int(weapon);
+	this->send_int(direction);
 	this->send_int(x);
 	this->send_int(y);
 	this->send_int(angle);
 }
 
-void Proxy::sendProjectileExplosion(int projectile_number, int x, int y){
+void Proxy::sendProjectilePosition(int projectile_number, int x, int y, int angle){
 	char event = 9;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(projectile_number);
 	this->send_int(x);
 	this->send_int(y);
+	this->send_int(angle);
+}
+
+void Proxy::sendProjectileExplosion(int projectile_number){
+	char event = 10;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(projectile_number);
 }
 
 void Proxy::sendTakeWeapon(int weapon){
-	char event = 10;
+	char event = 11;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(weapon);
 }
 
 void Proxy::sendChangeSightAngle(int change){
-	char event = 11;
+	char event = 12;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(change);
 }
 
 void Proxy::sendLifeChange(int gusano_id, int new_life){
-	char event = 12;
+	char event = 13;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(gusano_id);
 	this->send_int(new_life);
 }
 
 void Proxy::sendPlayerDisconnection(int player_id){
-	char event = 13;
+	char event = 14;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 }
 
 void Proxy::sendGameWon(int player_id){
-	char event = 14;
+	char event = 15;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
 }

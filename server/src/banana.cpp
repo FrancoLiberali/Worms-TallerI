@@ -1,8 +1,8 @@
 #include "banana.h"
 
-Banana::Banana(b2World& world_entry, int number, float x, float y, float angle, GameConstants& info, 
+Banana::Banana(b2World& world_entry, int number, float x, float y, int direction, float angle, GameConstants& info, 
 std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
-			RegresiveProjectile(world_entry, number, x ,y, angle, info.banana_vel, info.banana_damage, 
+			RegresiveProjectile(world_entry, number, x ,y, direction, angle, info.banana_vel, info.banana_damage, 
 			info.banana_radius, to_remove_e, proxy, time){
 	b2Vec2 vertices[7];
 	vertices[0].Set(0.05f, -0.15f);

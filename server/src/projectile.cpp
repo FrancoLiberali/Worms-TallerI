@@ -7,7 +7,7 @@
 
 #define NUM_RAYS 360
 
-Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, float angle, float vel, 
+Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction, float angle, float vel, 
 	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy_e) : 
 			world(world_entry), number(number_e), damage(damage_e), 
 			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e){
@@ -21,7 +21,7 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, flo
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
 	b2Vec2 vel_vec;
-	vel_vec.x = vel * cos(angle);
+	vel_vec.x = vel * cos(angle) * direction;
 	vel_vec.y = vel * sin(angle);
 	this->body->SetLinearVelocity(vel_vec);
 }
@@ -34,7 +34,9 @@ Projectile::~Projectile(){
 void Projectile::exploit(){
 	std::cout << "explosion\n";
 	b2Vec2 center = this->body->GetPosition();
-	this->proxy.sendProjectileExplosion(this->number, center.x, center.y);
+	float angle = this->GetAngle();
+	this->proxy.sendProjectilePosition(this->number, center.x, center.y, angle);
+	this->proxy.sendProjectileExplosion(this->number);
     for (int i = 0; i < NUM_RAYS; i++) {
 		float pi = M_PI;
 		float angle = (i / (float)NUM_RAYS) * 2 * pi;
@@ -69,9 +71,9 @@ void Projectile::sink(){
 	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 
-void Projectile::update(int weapon){
+void Projectile::update(){
 	b2Vec2 position = this->GetPosition();
 	float angle = this->GetAngle();
-	this->proxy.sendProjectilePosition(this->number, weapon, position.x, position.y, angle);
+	this->proxy.sendProjectilePosition(this->number, position.x, position.y, angle);
 }
 
