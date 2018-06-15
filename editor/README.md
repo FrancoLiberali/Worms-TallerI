@@ -28,6 +28,3 @@ cmake ..
 
 5. To clean up, just remove the `build` directory.
 
-# How to excute #
-
-./editor
