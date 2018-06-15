@@ -6,7 +6,7 @@
 VigaGrande::VigaGrande(int angulo) : Viga(angulo)
 {
     // Setear las imagenes.
-    QPixmap viga(":/img/recursos/viga.png");
+    QPixmap viga("/usr/local/recursos/viga.png");
     setPixmap(viga);
     // Inicializar.
     setPos(POS_INICIAL);

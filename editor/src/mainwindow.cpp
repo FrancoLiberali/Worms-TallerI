@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->show();
     // Imagen de fondo default.
     ui->graphicsView->setBackgroundBrush(QBrush(
-        QPixmap(":/img/recursos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
+        QPixmap("/usr/local/recursos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
     this->setWindowTitle("Editor");
 
     // Cargar configuracion default de armas.

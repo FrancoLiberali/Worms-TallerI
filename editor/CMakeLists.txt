@@ -3,6 +3,7 @@ PROJECT(editor CXX)
 
 set (CMAKE_CXX_STANDARD 11)
 set(CMAKE_AUTOMOC ON)
+set(INSTALL_PATH "/usr/local")
 
 # Find the QtWidgets library
 find_package(Qt5Widgets)
@@ -47,11 +48,14 @@ add_executable(editor
   src/yamlparser.cpp
   src/registro.cpp
   src/main.cpp
-  src/recursos.qrc
-  ${RESOURCES}
   ${UIS_HEADERS})
 
 # Use the Widgets module from Qt 5.
 target_link_libraries(editor Qt5::Widgets)
 # Use the Widgets module from YAML.
 target_link_libraries(editor yaml-cpp)
+
+# Copio la carpeta de recursos al directorio de instalación.
+install(FILES default_armo.yaml DESTINATION ${INSTALL_PATH})
+install(DIRECTORY recursos DESTINATION ${INSTALL_PATH})
+

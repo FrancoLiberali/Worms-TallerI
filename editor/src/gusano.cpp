@@ -8,7 +8,7 @@
 Gusano::Gusano() : eliminado(false)
 {
     // Seteando la imagen.
-    setPixmap(QPixmap(":/img/recursos/gusano.png").scaled(32,\
+    setPixmap(QPixmap("/usr/local/recursos/gusano.png").scaled(32,\
         32, Qt::IgnoreAspectRatio, Qt::FastTransformation));
 
     // Posicion inicial dentro del editor.

@@ -6,7 +6,7 @@
 VigaChica::VigaChica(int angulo) : Viga(angulo)
 {
     // Setear las imagenes.
-    QPixmap viga(":/img/recursos/vigac.png");
+    QPixmap viga("/usr/local/recursos/vigac.png");
     setPixmap(viga);
     // Inicializar.
     setRotation((-1)*angulo);

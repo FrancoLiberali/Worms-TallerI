@@ -5,7 +5,7 @@ YAMLParser::YAMLParser() {}
 
 void YAMLParser::cargarConfig(Registro& registro)
 {
-    YAML::Node config = YAML::LoadFile("/home/bauticanavese/Demo/recursos/default_armo.yaml");
+    YAML::Node config = YAML::LoadFile("/usr/local/recursos/default_armo.yaml");
     for (YAML::const_iterator it = config.begin(); it != config.end(); ++it){
         std::string key(it->first.as<std::string>());
         if (key.compare("armas") == 0){
