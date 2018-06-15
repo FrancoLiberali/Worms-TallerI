@@ -34,7 +34,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	//lectura de archivo yalm y modificacion de constantes de juego
 	//this->info.algo = leido
 	
-	// el siguiente gusano para todos los jugadores es el numero
+	// el siguiente gusano para todos los jugadores es el numero 1
 	std::cout << cant_players << "\n";
 	for (int i = 0; i <= cant_players; i++){
 		this->next.push_back(1);
@@ -57,10 +57,12 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	}
 	//aumento de vida a gusanos de jugadores que no completaron
 	this->gusanos_per_player = gusano_number;
-	for (; player <= cant_players; player++){
-		std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
-		for (; it2 != this->players[player].end(); ++it2){
-			it2->second->addLife(25);
+	if (player != 1){
+		for (; player <= cant_players; player++){
+			std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
+			for (; it2 != this->players[player].end(); ++it2){
+				it2->second->addLife(25);
+			}
 		}
 	}
 }
