@@ -545,6 +545,7 @@ CMakeFiles/tp.dir/main.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/main.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/room.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/server.h
@@ -596,6 +597,7 @@ CMakeFiles/tp.dir/src/banana.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/banana.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/regresive_projectile.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/banana.cpp.o: ../src/user_data.h
@@ -645,6 +647,7 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/user_data.h
@@ -693,6 +696,7 @@ CMakeFiles/tp.dir/src/exploted_state.cpp.o: ../src/moving_finished.h
 
 CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o: ../src/fake_proxy/mok_proxy.cpp
 
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../Box2D/Box2D.h
@@ -741,6 +745,7 @@ CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o: ../src/user_data.h
@@ -796,6 +801,7 @@ CMakeFiles/tp.dir/src/game.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/game.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/game.cpp.o: ../src/thread.h
@@ -881,6 +887,7 @@ CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/regresive_projectile.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/green_granade.cpp.o: ../src/user_data.h
@@ -935,6 +942,7 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_finished.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/socket.h
@@ -945,6 +953,7 @@ CMakeFiles/tp.dir/src/hall.cpp.o: ../src/hall.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/hall.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/room.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/hall.cpp.o: ../src/thread.h
@@ -990,11 +999,13 @@ CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../src/gusano_state.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../src/inactive_state.cpp
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../src/inactive_state.h
 
+CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/initiador.cpp
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/room.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/socket.h
@@ -1047,6 +1058,7 @@ CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/jumping_state.cpp.o: ../src/user_data.h
 
@@ -1088,6 +1100,7 @@ CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/little_projectile.cpp
 CMakeFiles/tp.dir/src/little_projectile.cpp.o: ../src/little_projectile.h
@@ -1146,6 +1159,7 @@ CMakeFiles/tp.dir/src/morter.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/morter.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/morter.cpp.o: ../src/user_data.h
@@ -1196,6 +1210,7 @@ CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/multiple_proxy.cpp
 CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/multiple_proxy.cpp.o: ../src/socket.h
 
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../Box2D/Box2D.h
@@ -1243,21 +1258,25 @@ CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/projectile.cpp
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/ray_cast_all_callback.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/projectile.cpp.o: ../src/user_data.h
 
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.cpp
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/queue.h
 
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.cpp
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket_error.h
 
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.cpp
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/socket.h
@@ -1305,6 +1324,7 @@ CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/regresive_projectile.h
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/regresive_projetile.cpp
 CMakeFiles/tp.dir/src/regresive_projetile.cpp.o: ../src/socket.h
@@ -1357,6 +1377,7 @@ CMakeFiles/tp.dir/src/room.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/room.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/room.cpp
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/room.h
 CMakeFiles/tp.dir/src/room.cpp.o: ../src/socket.h
@@ -1411,6 +1432,7 @@ CMakeFiles/tp.dir/src/server.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/server.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/receiver.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/room.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/server.cpp
@@ -1456,6 +1478,7 @@ CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/protected_queue.h
+CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o: ../src/projectile.h
@@ -1526,6 +1549,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/projectile.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/turn.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/turn.cpp
@@ -1608,6 +1632,7 @@ CMakeFiles/tp.dir/src/viga.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/proxy.h
+CMakeFiles/tp.dir/src/viga.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/viga.cpp
 CMakeFiles/tp.dir/src/viga.cpp.o: ../src/viga.h

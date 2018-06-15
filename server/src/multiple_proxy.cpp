@@ -131,13 +131,6 @@ void MultipleProxy::sendGameWon(int player_id){
 	}
 }
 
-void MultipleProxy::sendRoomMembers(std::vector<std::string>& names){
-	std::map<int, Proxy*>::iterator it = this->proxys.begin();
-	for (; it != this->proxys.end(); ++it){
-		it->second->sendRoomMembers(names);
-	}
-}
-
 void MultipleProxy::sendRoomCreation(const std::string& name, 
 	int cant_players, int max_players, unsigned int map_id){
 	std::lock_guard<std::mutex> lock(this->mutex);

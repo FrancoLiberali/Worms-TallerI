@@ -1,6 +1,7 @@
 #include "initiador.h"
 #include <arpa/inet.h>
 #include <iostream>
+#include "blocking_queue.h"
 
 Initiador::Initiador(ProtectedQueue& queue_e, MultipleProxy& proxy_e, 
 	std::vector<std::pair<std::string, Receiver*>>& players_e, std::map<std::string, Room*>& rooms_e, std::mutex& mutex):

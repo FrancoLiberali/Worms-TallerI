@@ -353,6 +353,8 @@ queue
 -
 mutex
 -
+queue.h
+../src/queue.h
 
 ../src/proxy.h
 socket.h
@@ -364,6 +366,10 @@ string
 vector
 -
 map
+-
+
+../src/queue.h
+queue
 -
 
 ../src/receiver.h
@@ -992,6 +998,16 @@ multiple_proxy.h
 map
 -
 
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
+queue
+-
+mutex
+-
+condition_variable
+-
+queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/queue.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/contact_listener.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
@@ -1195,6 +1211,8 @@ arpa/inet.h
 -
 iostream
 -
+blocking_queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
 thread.h
@@ -1337,6 +1355,8 @@ queue
 -
 mutex
 -
+queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp
 proxy.h
@@ -1360,6 +1380,10 @@ string
 vector
 -
 map
+-
+
+/home/franco/Documentos/taller1/tpfinal/server/src/queue.h
+queue
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h

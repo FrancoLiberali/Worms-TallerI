@@ -67,8 +67,6 @@ class Proxy{
 		
 		void sendGameWon(int player_id);
 		
-		void sendRoomMembers(std::vector<std::string>& names);
-		
 		void sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id);
 		
 		void sendRoomPlayersChange(const std::string& name, int cant_players);

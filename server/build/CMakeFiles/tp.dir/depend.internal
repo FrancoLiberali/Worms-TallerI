@@ -546,6 +546,7 @@ CMakeFiles/tp.dir/main.cpp.o
  ../src/multiple_proxy.h
  ../src/protected_queue.h
  ../src/proxy.h
+ ../src/queue.h
  ../src/receiver.h
  ../src/room.h
  ../src/server.h
@@ -597,6 +598,7 @@ CMakeFiles/tp.dir/src/banana.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
@@ -646,6 +648,7 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
@@ -694,6 +697,7 @@ CMakeFiles/tp.dir/src/exploted_state.cpp.o
 CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o
  ../src/fake_proxy/mok_proxy.h
  ../src/protected_queue.h
+ ../src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.cpp
 CMakeFiles/tp.dir/src/fragment_projectile.cpp.o
  ..//Box2D/Box2D.h
@@ -742,6 +746,7 @@ CMakeFiles/tp.dir/src/fragment_projectile.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
@@ -797,6 +802,7 @@ CMakeFiles/tp.dir/src/game.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
@@ -882,6 +888,7 @@ CMakeFiles/tp.dir/src/green_granade.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
@@ -936,6 +943,7 @@ CMakeFiles/tp.dir/src/gusano.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_finished.h
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
@@ -946,6 +954,7 @@ CMakeFiles/tp.dir/src/hall.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/room.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
@@ -991,11 +1000,13 @@ CMakeFiles/tp.dir/src/inactive_state.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.h
 CMakeFiles/tp.dir/src/initiador.cpp.o
+ /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
  /home/franco/Documentos/taller1/tpfinal/server/src/room.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
@@ -1048,6 +1059,7 @@ CMakeFiles/tp.dir/src/jumping_state.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 CMakeFiles/tp.dir/src/little_projectile.cpp.o
@@ -1089,6 +1101,7 @@ CMakeFiles/tp.dir/src/little_projectile.cpp.o
  ..//Box2D/Dynamics/b2World.h
  ..//Box2D/Dynamics/b2WorldCallbacks.h
  ../src/protected_queue.h
+ ../src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.h
@@ -1147,6 +1160,7 @@ CMakeFiles/tp.dir/src/morter.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
@@ -1197,6 +1211,7 @@ CMakeFiles/tp.dir/src/multiple_proxy.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
 CMakeFiles/tp.dir/src/projectile.cpp.o
  ..//Box2D/Box2D.h
@@ -1244,21 +1259,25 @@ CMakeFiles/tp.dir/src/projectile.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 CMakeFiles/tp.dir/src/protected_queue.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
 CMakeFiles/tp.dir/src/receiver.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/receiver.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
@@ -1306,6 +1325,7 @@ CMakeFiles/tp.dir/src/regresive_projetile.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
@@ -1358,6 +1378,7 @@ CMakeFiles/tp.dir/src/room.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/room.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/room.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
@@ -1412,6 +1433,7 @@ CMakeFiles/tp.dir/src/server.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
  /home/franco/Documentos/taller1/tpfinal/server/src/room.h
  /home/franco/Documentos/taller1/tpfinal/server/src/server.cpp
@@ -1457,6 +1479,7 @@ CMakeFiles/tp.dir/src/simple_projectile.cpp.o
  ..//Box2D/Dynamics/b2World.h
  ..//Box2D/Dynamics/b2WorldCallbacks.h
  ../src/protected_queue.h
+ ../src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
@@ -1527,6 +1550,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/turn.cpp
@@ -1609,6 +1633,7 @@ CMakeFiles/tp.dir/src/viga.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/viga.h

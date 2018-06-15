@@ -253,19 +253,8 @@ void Proxy::sendGameWon(int player_id){
 	this->send_int(player_id);
 }
 
-void Proxy::sendRoomMembers(std::vector<std::string>& names){
-	char event = 16;
-	this->socket.send(&event, ONEBYTE);
-	this->send_int(names.size());
-	std::vector<std::string>::iterator it = names.begin();
-	for (; it != names.end(); ++it){
-		this->send_int(it->length());
-		this->socket.send(it->data(), it->length());
-	}
-}
-
 void Proxy::sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id){
-	char event = 17;
+	char event = 16;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(name.length());
 	this->socket.send(name.data(), name.length());
@@ -275,7 +264,7 @@ void Proxy::sendRoomCreation(const std::string& name, int cant_players, int max_
 }
 
 void Proxy::sendRoomPlayersChange(const std::string& name, int cant_players){
-	char event = 18;
+	char event = 17;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(name.length());
 	this->socket.send(name.data(), name.length());
@@ -283,14 +272,14 @@ void Proxy::sendRoomPlayersChange(const std::string& name, int cant_players){
 }
 
 void Proxy::sendRoomDeletion(const std::string& name){
-	char event = 19;
+	char event = 18;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(name.length());
 	this->socket.send(name.data(), name.length());
 }
 
 void Proxy::sendPlayerConnection(int id, const std::string& name){
-	char event = 20;
+	char event = 19;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(id);
 	this->send_int(name.length());
@@ -298,7 +287,7 @@ void Proxy::sendPlayerConnection(int id, const std::string& name){
 }
 
 void Proxy::sendRoomNameError(){
-	char event = 21;
+	char event = 20;
 	this->socket.send(&event, ONEBYTE);
 }
 

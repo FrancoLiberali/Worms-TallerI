@@ -121,25 +121,18 @@ void MokProxy::receive_event(){
 			int id = this->receive_int();
 			std::cout << "13 " << id << "\n";
 			break;
-		}
-		case 14: {//jugador gano la partida
+		}		
+		case 14: {//jugador perdio
 			int id = this->receive_int();
 			std::cout << "14 " << id << "\n";
 			break;
 		}
-		case 15: {//informacion de los members de la room
-			int names_size = this->receive_int();
-			for (int i = 0; i < names_size; i++){
-				int name_len = this->receive_int();
-				char* name_c = new char[name_len];
-				this->socket.receive_(name_c, name_len);
-				std::string name(name_c, name_len);
-				std::cout << "15 " << i << " " << name << "\n";
-				delete[] name_c;
-			}
+		case 15: {//jugador gano la partida
+			int id = this->receive_int();
+			std::cout << "15 " << id << "\n";
 			break;
 		}
-		case 16: {//informacion de una room
+		case 16: {//creacion de una room
 			int name_len = this->receive_int();
 			char* name_c = new char[name_len];
 			this->socket.receive_(name_c, name_len);
