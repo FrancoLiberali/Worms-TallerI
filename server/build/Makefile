@@ -1608,6 +1608,33 @@ src/gusano.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/gusano.cpp.s
 .PHONY : src/gusano.cpp.s
 
+src/hall.o: src/hall.cpp.o
+
+.PHONY : src/hall.o
+
+# target to build an object file
+src/hall.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.o
+.PHONY : src/hall.cpp.o
+
+src/hall.i: src/hall.cpp.i
+
+.PHONY : src/hall.i
+
+# target to preprocess a source file
+src/hall.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.i
+.PHONY : src/hall.cpp.i
+
+src/hall.s: src/hall.cpp.s
+
+.PHONY : src/hall.s
+
+# target to generate assembly for a file
+src/hall.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.s
+.PHONY : src/hall.cpp.s
+
 src/inactive_state.o: src/inactive_state.cpp.o
 
 .PHONY : src/inactive_state.o
@@ -1634,6 +1661,33 @@ src/inactive_state.s: src/inactive_state.cpp.s
 src/inactive_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/inactive_state.cpp.s
 .PHONY : src/inactive_state.cpp.s
+
+src/initiador.o: src/initiador.cpp.o
+
+.PHONY : src/initiador.o
+
+# target to build an object file
+src/initiador.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/initiador.cpp.o
+.PHONY : src/initiador.cpp.o
+
+src/initiador.i: src/initiador.cpp.i
+
+.PHONY : src/initiador.i
+
+# target to preprocess a source file
+src/initiador.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/initiador.cpp.i
+.PHONY : src/initiador.cpp.i
+
+src/initiador.s: src/initiador.cpp.s
+
+.PHONY : src/initiador.s
+
+# target to generate assembly for a file
+src/initiador.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/initiador.cpp.s
+.PHONY : src/initiador.cpp.s
 
 src/jumping_state.o: src/jumping_state.cpp.o
 
@@ -1905,6 +1959,33 @@ src/regresive_projetile.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/regresive_projetile.cpp.s
 .PHONY : src/regresive_projetile.cpp.s
 
+src/room.o: src/room.cpp.o
+
+.PHONY : src/room.o
+
+# target to build an object file
+src/room.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/room.cpp.o
+.PHONY : src/room.cpp.o
+
+src/room.i: src/room.cpp.i
+
+.PHONY : src/room.i
+
+# target to preprocess a source file
+src/room.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/room.cpp.i
+.PHONY : src/room.cpp.i
+
+src/room.s: src/room.cpp.s
+
+.PHONY : src/room.s
+
+# target to generate assembly for a file
+src/room.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/room.cpp.s
+.PHONY : src/room.cpp.s
+
 src/rotating_state.o: src/rotating_state.cpp.o
 
 .PHONY : src/rotating_state.o
@@ -1931,6 +2012,33 @@ src/rotating_state.s: src/rotating_state.cpp.s
 src/rotating_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/rotating_state.cpp.s
 .PHONY : src/rotating_state.cpp.s
+
+src/server.o: src/server.cpp.o
+
+.PHONY : src/server.o
+
+# target to build an object file
+src/server.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
+
+src/server.i: src/server.cpp.i
+
+.PHONY : src/server.i
+
+# target to preprocess a source file
+src/server.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
+
+src/server.s: src/server.cpp.s
+
+.PHONY : src/server.s
+
+# target to generate assembly for a file
+src/server.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
 
 src/simple_projectile.o: src/simple_projectile.cpp.o
 
@@ -2066,6 +2174,33 @@ src/turn.s: src/turn.cpp.s
 src/turn.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/turn.cpp.s
 .PHONY : src/turn.cpp.s
+
+src/util/yamlparser.o: src/util/yamlparser.cpp.o
+
+.PHONY : src/util/yamlparser.o
+
+# target to build an object file
+src/util/yamlparser.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/util/yamlparser.cpp.o
+.PHONY : src/util/yamlparser.cpp.o
+
+src/util/yamlparser.i: src/util/yamlparser.cpp.i
+
+.PHONY : src/util/yamlparser.i
+
+# target to preprocess a source file
+src/util/yamlparser.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/util/yamlparser.cpp.i
+.PHONY : src/util/yamlparser.cpp.i
+
+src/util/yamlparser.s: src/util/yamlparser.cpp.s
+
+.PHONY : src/util/yamlparser.s
+
+# target to generate assembly for a file
+src/util/yamlparser.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/util/yamlparser.cpp.s
+.PHONY : src/util/yamlparser.cpp.s
 
 src/viga.o: src/viga.cpp.o
 
@@ -2295,9 +2430,15 @@ help:
 	@echo "... src/gusano.o"
 	@echo "... src/gusano.i"
 	@echo "... src/gusano.s"
+	@echo "... src/hall.o"
+	@echo "... src/hall.i"
+	@echo "... src/hall.s"
 	@echo "... src/inactive_state.o"
 	@echo "... src/inactive_state.i"
 	@echo "... src/inactive_state.s"
+	@echo "... src/initiador.o"
+	@echo "... src/initiador.i"
+	@echo "... src/initiador.s"
 	@echo "... src/jumping_state.o"
 	@echo "... src/jumping_state.i"
 	@echo "... src/jumping_state.s"
@@ -2328,9 +2469,15 @@ help:
 	@echo "... src/regresive_projetile.o"
 	@echo "... src/regresive_projetile.i"
 	@echo "... src/regresive_projetile.s"
+	@echo "... src/room.o"
+	@echo "... src/room.i"
+	@echo "... src/room.s"
 	@echo "... src/rotating_state.o"
 	@echo "... src/rotating_state.i"
 	@echo "... src/rotating_state.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 	@echo "... src/simple_projectile.o"
 	@echo "... src/simple_projectile.i"
 	@echo "... src/simple_projectile.s"
@@ -2346,6 +2493,9 @@ help:
 	@echo "... src/turn.o"
 	@echo "... src/turn.i"
 	@echo "... src/turn.s"
+	@echo "... src/util/yamlparser.o"
+	@echo "... src/util/yamlparser.i"
+	@echo "... src/util/yamlparser.s"
 	@echo "... src/viga.o"
 	@echo "... src/viga.i"
 	@echo "... src/viga.s"

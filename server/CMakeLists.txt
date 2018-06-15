@@ -15,9 +15,10 @@ find_package(yaml-cpp)
 
 add_executable(tp main.cpp ${SRC_FILES} ${BOX2D_FILES})
 
+target_link_libraries(tp yaml-cpp)
 target_link_libraries( tp ${CMAKE_THREAD_LIBS_INIT} )
 # Use the Widgets module from YAML.
-target_link_libraries(tp yaml-cpp)
+
 
 
 

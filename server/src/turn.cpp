@@ -12,6 +12,7 @@
 #include "morter.h"
 #include <cmath>
 #include <stdexcept>
+#include "game_finished.h"
 
 #define MOVE_TAM 9
 #define TURN_LEN 3600
@@ -153,8 +154,12 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
 			Gusano* gusano = this->players[active_player][active_gusano];
-			if (msj[0] == 1){
+			if (msj[0] == 10){
 				this->disconnect(player_id, active_player, i);
+				if (this->players.size() == 1){
+					delete[] msj;
+					throw GameFinished();
+				}
 			}
 			else if (player_id == active_player && continue_turn && gusano->isInactive()){
 				switch (msj[0]){
@@ -213,7 +218,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			this->players[gusanos_remover_it->first].erase(gusanos_remover_it->second);
 			delete dead_gusano;
 			if (this->players[gusanos_remover_it->first].size() == 0){
+				this->proxy.sendPlayerLoose(gusanos_remover_it->first);
 				this->players.erase(gusanos_remover_it->first);
+				if (this->players.size() == 1){
+					throw GameFinished();
+				}
 			}
 		}
 		this->to_remove_gusanos.clear();

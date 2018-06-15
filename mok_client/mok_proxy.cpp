@@ -17,6 +17,13 @@ void MokProxy::close_communication(){
 	this->socket.shutdown_();
 }
 
+void MokProxy::sendName(std::string name){
+	std::cout << "name\n";
+	this->room_name = name + "_room";
+	this->send_int(name.length());
+	this->socket.send_(name.data(), name.length());
+}
+
 void MokProxy::receive_event(){
 	char entry = 0;
 	this->socket.receive_(&entry, 1);
@@ -24,9 +31,6 @@ void MokProxy::receive_event(){
 		case 0: {//se recibe id de jugador
 				this->id = this->receive_int();
 				std::cout << "0 " << this->id << "\n";
-				if (this->id == 1){
-					this->sendMapAndPlayers(0,2);
-				}
 				break;
 			}
 		case 1: {//se recibe nombre de jugador
@@ -123,6 +127,62 @@ void MokProxy::receive_event(){
 			std::cout << "14 " << id << "\n";
 			break;
 		}
+		case 15: {//informacion de los members de la room
+			int names_size = this->receive_int();
+			for (int i = 0; i < names_size; i++){
+				int name_len = this->receive_int();
+				char* name_c = new char[name_len];
+				this->socket.receive_(name_c, name_len);
+				std::string name(name_c, name_len);
+				std::cout << "15 " << i << " " << name << "\n";
+				delete[] name_c;
+			}
+			break;
+		}
+		case 16: {//informacion de una room
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			int cant_players = this->receive_int();
+			int max_players = this->receive_int();
+			int map_id = this->receive_int();
+			std::cout << "16 room_name: " << name << " cant_players: " << cant_players << "/" << max_players << " on: " << map_id << "\n";
+			break;
+		}
+		case 17: {//cambio en los jugadores de un room
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			int cant_players = this->receive_int();
+			std::cout << "17 room_name: " << name << " cant_players: " << cant_players << "\n";
+			break;
+		}
+		case 18: {//destruccion de una room
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			std::cout << "18 room_name: " << name << "\n";
+			break;
+		}
+		case 19: {//nombre de un usuario que esta en la misma room
+			int id = this->receive_int();
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			std::cout << "19 id: " << id << " name: " << name << "\n";
+			break;
+		}
+		case 20: //room name error
+			std::cout << "20 room name error" << "\n";
+			break;
 	}
 }
 
@@ -144,14 +204,45 @@ void MokProxy::sendMapAndPlayers(int map, int players){
 
 void MokProxy::send(char event){
 	switch (event){
-		case 'n': {//mandar nombre
-				std::cout << "name\n";
-				char ev = 0;
+		case 'o': {//salir de la room
+				std::cout << "salir del room\n";
+				char ev = 11;
 				this->socket.send_(&ev, 1);
 				this->send_int(this->id);
-				char name[5] = "pepe";
-				this->send_int(4);
-				this->socket.send_(name, 4);
+				char franco_room[12] = "franco_room";
+				this->send_int(11);
+				this->socket.send_(franco_room, 11);
+				break;
+			}
+		case 'p': {//salir de la room
+				std::cout << "salir del room activo\n";
+				char ev = 14;
+				this->socket.send_(&ev, 1);
+				this->send_int(this->id);
+				char franco_room[12] = "franco_room";
+				this->send_int(11);
+				this->socket.send_(franco_room, 11);
+				break;
+			}
+		case 'e': {//entrar a una room
+				std::cout << "entrar a room\n";
+				char ev = 12;
+				this->socket.send_(&ev, 1);
+				this->send_int(this->id);
+				char franco_room[12] = "franco_room";
+				this->send_int(11);
+				this->socket.send_(franco_room, 11);
+				break;
+			}
+		case 'r': {//crear room
+				std::cout << "crear room\n";
+				char ev = 13;
+				this->socket.send_(&ev, 1);
+				this->send_int(this->id);
+				this->send_int(0);//map_id
+				this->send_int(2);//max_players
+				this->send_int(this->room_name.length());
+				this->socket.send_(this->room_name.data(), this->room_name.length());
 				break;
 			}
 		case 'a': {//mover un gusano a la izquierda

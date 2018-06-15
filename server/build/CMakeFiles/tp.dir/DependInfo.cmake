@@ -59,7 +59,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/franco/Documentos/taller1/tpfinal/server/src/game.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/game.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/green_granade.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/gusano.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/hall.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/hall.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/inactive_state.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/initiador.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/initiador.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/jumping_state.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/little_projectile.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/little_projectile.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/morter.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/morter.cpp.o"
@@ -70,12 +72,15 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/proxy.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/receiver.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/receiver.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projetile.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/regresive_projetile.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/room.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/room.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/rotating_state.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/server.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/server.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/simple_projectile.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/socket.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/socket.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/socket_error.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/socket_error.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/thread.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/thread.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/turn.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/turn.cpp.o"
+  "/home/franco/Documentos/taller1/tpfinal/server/src/util/yamlparser.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/util/yamlparser.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/viga.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/viga.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/water.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/water.cpp.o"
   )
@@ -85,6 +90,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../"
   "../src"
+  "/usr/local/include"
   )
 
 # Targets to which this target links.

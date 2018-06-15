@@ -16,7 +16,7 @@
 
 YAMLParser::YAMLParser() {}
 
-void YAMLParser::cargarConfig(unsigned int id, std::vector<elemento_t>& v, GameConstants& info)
+void YAMLParser::cargarConfig(unsigned int id, std::vector<ElementInfo>& v, GameConstants& info)
 {
     std::string nombre = std::to_string(id).append(".yaml");
     YAML::Node config = YAML::LoadFile(nombre);
@@ -34,7 +34,7 @@ void YAMLParser::cargarConfig(unsigned int id, std::vector<elemento_t>& v, GameC
 void YAMLParser::cargarArmas(const YAML::Node& nodeVect, GameConstants& info)
 {
     for (unsigned i = 0; i < nodeVect.size(); ++i) {
-        arma_t arma;
+        Arma arma;
         const YAML::Node& node = nodeVect[i];
 
         for(YAML::const_iterator it = node.begin(); it!=node.end(); ++it){
@@ -51,9 +51,9 @@ void YAMLParser::cargarArmas(const YAML::Node& nodeVect, GameConstants& info)
     }
 }
 
-void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<elemento_t>& v)
+void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v)
 {  
-    elemento_t elemento;
+    ElementInfo elemento;
     for (unsigned i = 0; i < nodeVect.size(); ++i){
         const YAML::Node& node = nodeVect[i];
 
@@ -78,47 +78,47 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<elemento_t>&
 }
 
 
-void asignar_a_info(arma_t& arma, GameConstants& info)
+void YAMLParser::asignar_a_info(Arma& arma, GameConstants& info)
 {
     if (arma.nombre.compare(BANANA)){
         info.bannana_enabled = decidir_habilitada(arma.habilitada);
-        info.banana_ammunition = convertir_municion(arma.municion)
+        info.banana_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(MORTERO)){
         info.morter_enabled = decidir_habilitada(arma.habilitada);
-        info.morter_ammunition = convertir_municion(arma.municion);
+        info.morter_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(BAZOOKA)){
         info.bazooka_enabled = decidir_habilitada(arma.habilitada);
-        info.bazooka_ammunition = convertir_municion(arma.municion);
+        info.bazooka_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(TELETRANSPORTACION)){
         info.teleport_enabled = decidir_habilitada(arma.habilitada);
-        info.teleport_ammunition = convertir_municion(arma.municion);
+        info.teleport_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(GRANADA_VERDE)){
         info.green_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.green_granade_ammunition = convertir_municion(arma.municion);
+        info.green_granade_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(GRANADA_ROJA)){
         info.red_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.red_granade_ammunition = convertir_municion(arma.municion);
+        info.red_granade_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(GRANADA_SANTA)){
         info.holy_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.holy_granade_ammunition = convertir_municion(arma.municion);
+        info.holy_granade_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(ATAQUE_AEREO)){
         info.air_attack_enabled = decidir_habilitada(arma.habilitada);
-        info.air_attack_ammunition = convertir_municion(arma.municion);
+        info.air_attack_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(BATE)){
         info.bat_enabled = decidir_habilitada(arma.habilitada);
-        info.bat_ammunition = convertir_municion(arma.municion);
+        info.bat_ammunition = convertir_municion(arma.municiones);
     } else if (arma.nombre.compare(DINAMITA)) {
         info.dynamite_enabled = decidir_habilitada(arma.habilitada);
-        info.dynamite_ammunition = convertir_municion(arma.municion);
+        info.dynamite_ammunition = convertir_municion(arma.municiones);
     }
 }
 
-bool decidir_habilitada(std::stirng& habilitada)
+bool YAMLParser::decidir_habilitada(std::string& habilitada)
 {
     return habilitada.compare("si") ? true : false;
 }
 
-int convertir_municion(std::string& municion)
+int YAMLParser::convertir_municion(std::string& municion)
 {
     return municion.compare(INFINITO)? -1 : std::stoi(municion);
 }

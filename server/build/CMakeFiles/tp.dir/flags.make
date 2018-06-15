@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/franco/Documentos/taller1/tpfinal/server -I/home/franco/Documentos/taller1/tpfinal/server/src 
+CXX_INCLUDES = -I/home/franco/Documentos/taller1/tpfinal/server -I/home/franco/Documentos/taller1/tpfinal/server/src -isystem /usr/local/include 
 

@@ -1,4 +1,5 @@
 #include "socket.h"
+#include <string>
 
 #ifndef __MOK_PROXY_H__
 #define __MOK_PROXY_H__
@@ -6,6 +7,7 @@
 class MokProxy{
 	private:
 		Socket& socket;
+		std::string room_name;
 		int id = 0;
 		
 		void send_int(int to_send);
@@ -17,6 +19,8 @@ class MokProxy{
 		~MokProxy();
 		
 		void close_communication();
+		
+		void sendName(std::string name);
 		
 		void receive_event();
 		

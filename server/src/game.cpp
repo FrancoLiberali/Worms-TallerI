@@ -6,13 +6,31 @@
 #include <utility>
 #include <algorithm>
 #include <stdexcept>
-//#include "util/yamlparser.h"
+#include "game_finished.h"
+#include "util/yamlparser.h"
+#include <string>
 
 Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id, int cant_players_e) 
 		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), cant_players(cant_players_e){
 	this->world.SetContactListener(&(this->contact_listener));
 	
+	std::vector<Gusano*> gusanos;
 	//lectura de archivo yalm "map_id" y creacion de vigas y gusanos
+	/*YAMLParser parser;
+	std::vector<ElementInfo> elements;
+	parser.cargarConfig(map_id, elements, this->info);
+	
+	std::vector<ElementInfo>::iterator info_it = elements.begin();
+	for (; info_it != elements.end(); ++info_it){
+		if (info_it->tipo.compare("viga") == 0){
+			Viga viga(this->world, info_it->x, info_it->y, info_it->angulo, this->proxy);
+		}
+		else if (info_it->tipo.compare("gusano") == 0){
+			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, info_it->y, info_it->angulo);
+			gusanos.push_back(gusano);
+		}
+	}*/
+	
 	Viga viga(this->world, 3.0f, 8.0f, 0.0f, this->proxy);
 	Viga viga2(this->world, 9.0f, 8.0f, 0.0f, this->proxy);
 	Viga viga3(this->world, 3.0f, 18.0f, 0.0f, this->proxy);
@@ -20,10 +38,9 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 
 	this->water = new Water(this->world, -10, -10, 20, -10);
 	
-	std::vector<Gusano*> gusanos;
-	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 6.5f, 10.48f, 0.0f);
+	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 6.5f, 8.52f, 0.0f);
 	gusanos.push_back(gusano0);
-	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 4.0f, 10.48f, 0.0f);
+	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 4.0f, 8.52f, 0.0f);
 	gusanos.push_back(gusano1);
 	//Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
 	//gusanos.push_back(gusano2);
@@ -31,10 +48,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	srand(time(0));
 	std::random_shuffle(gusanos.begin(), gusanos.end());
 	
-	//lectura de archivo yalm y modificacion de constantes de juego
-	//this->info.algo = leido
-	
-	// el siguiente gusano para todos los jugadores es el numero
+	// el siguiente gusano para todos los jugadores es el numero 1
 	std::cout << cant_players << "\n";
 	for (int i = 0; i <= cant_players; i++){
 		this->next.push_back(1);
@@ -57,10 +71,12 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	}
 	//aumento de vida a gusanos de jugadores que no completaron
 	this->gusanos_per_player = gusano_number;
-	for (; player <= cant_players; player++){
-		std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
-		for (; it2 != this->players[player].end(); ++it2){
-			it2->second->addLife(25);
+	if (player != 1){
+		for (; player <= cant_players; player++){
+			std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
+			for (; it2 != this->players[player].end(); ++it2){
+				it2->second->addLife(25);
+			}
 		}
 	}
 }
@@ -83,37 +99,40 @@ void Game::play(){
 	this->queue.empty();
 	Turn turn(this->world, this->queue, this->players, this->to_remove_gusanos, this->info, this->proxy);
 	
-	for (int i = 1; i <= this->cant_players; i++){
-		if (this->players.size() == 1){
-			break;
-		}
-		try{
-			std::map<int, Gusano*> gusanos = this->players.at(i);
-			std::cout << "new turn: " << i << "\n";
-			while (true){
-				// es while true ya que si el jugador aun existe, se va a poder encontrar un gusano
-				try{
-					gusanos.at(this->next[i]);
-					turn.play(i, this->next[i]);
-					this->next[i]++;
-					break;
-				} catch (std::out_of_range& e){
-					// ese gusano ya no existe
-					this->next[i]++;
-					if (this->next[i] > this->gusanos_per_player){
-						// reinicio de gusano a utilizar
-						this->next[i] = 1;
+	try {
+		for (int i = 1; i <= this->cant_players; i++){
+			if (this->players.size() == 1){
+				break;
+			}
+			try{
+				std::map<int, Gusano*> gusanos = this->players.at(i);
+				std::cout << "new turn: " << i << "\n";
+				while (true){
+					// es while true ya que si el jugador aun existe, se va a poder encontrar un gusano
+					try{
+						gusanos.at(this->next[i]);
+						turn.play(i, this->next[i]);
+						this->next[i]++;
+						break;
+					} catch (std::out_of_range& e){
+						// ese gusano ya no existe
+						this->next[i]++;
+						if (this->next[i] > this->gusanos_per_player){
+							// reinicio de gusano a utilizar
+							this->next[i] = 1;
+						}
 					}
 				}
+			} catch (std::out_of_range& e){
+				// ese jugador ya no existe
+				continue;
 			}
-		} catch (std::out_of_range& e){
-			// ese jugador ya no existe
-			continue;
+			if (i == this->cant_players){
+				// reinicio de ronda
+				i = 0;
+			}
 		}
-		if (i == this->cant_players){
-			// reinicio de ronda
-			i = 0;
-		}
+	} catch (GameFinished& e){
 	}
 	std::cout << "salio\n";
 	this->proxy.sendGameWon(this->players.begin()->first);

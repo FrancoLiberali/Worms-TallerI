@@ -8,7 +8,6 @@
 
 class Receiver : public Thread{
 	private:
-		ProtectedQueue& queue;
 		Proxy* proxy;
 		std::mutex keep_mutex;
 		bool keep_receiving = true;
@@ -16,7 +15,7 @@ class Receiver : public Thread{
 		// Crea un objeto receiver. La creacion de este objeto es bloqueante
 		// hasta que un jugador se conecte al socket recibido.
 		// Una vez conectado, se crea el proxy de comunciacion con el mismo.
-		Receiver(Socket& socket, ProtectedQueue& queue_e);
+		Receiver(Socket& socket, ProtectedQueue* queue_e);
 		
 		~Receiver();
 		

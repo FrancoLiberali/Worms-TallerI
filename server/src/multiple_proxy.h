@@ -1,13 +1,18 @@
 #include <vector>
 #include "proxy.h"
 #include <string>
+#include "protected_queue.h"
+#include <mutex>
+#include <map>
+
 
 #ifndef __MULTIPLE_PROXY_H__
 #define __MULTIPLE_PROXY_H__
 
 class MultipleProxy{
 	private:
-		std::vector<Proxy*> proxys;
+		std::map<int, Proxy*> proxys;
+		std::mutex mutex;
 		
 	public:
 		// Crea el objeto, el cual tiene la finalidad de contener
@@ -19,11 +24,15 @@ class MultipleProxy{
 		
 		// Agrega un proxy a la lista de proxys a la cual se le enviaran 
 		// todos los mensajes
-		void add(Proxy* proxy);
+		void add(int id, Proxy* proxy);
 		
 		// Saca un jugador de la lista de proxys segun su id, para que
 		// deje de recibir los mensajes del juego
 		void erase(int id);
+		
+		void addNewQueue(ProtectedQueue* queue);
+		
+		void changeToPrevQueue();
 		
 		void sendPlayerName(int player_id, std::string& name);
 		
@@ -49,7 +58,19 @@ class MultipleProxy{
 		
 		void sendPlayerDisconnection(int player_id);
 		
+		void sendPlayerLoose(int player_id);
+		
 		void sendGameWon(int player_id);
+		
+		void sendRoomMembers(std::vector<std::string>& names);
+		
+		void sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id);
+		
+		void sendRoomPlayersChange(const std::string& name, int cant_players);
+		
+		void sendRoomDeletion(const std::string& name);
+		
+		void sendPlayerConnection(int id, const std::string& name);
 		
 };
 

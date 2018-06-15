@@ -2,13 +2,14 @@
 #include <arpa/inet.h>
 #include "socket_error.h"
 #include <iostream>
+#include <cstring>
 
 #define LAST8 0xFF
 #define MOSTSIGNIFICANT 24
 #define SECONDBYTE 16
 #define THIRDBYTE 8
 
-#define TWO_INTS 8
+#define SIZE_INT 4
 #define DISCONNECT_TAM 5
 #define GAME_INFO_TAM 9
 #define MOVE_TAM 9
@@ -20,7 +21,7 @@
 #define SHOT_TAM 5
 #define ONEBYTE 1
 
-Proxy::Proxy(Socket socket_e) : socket(std::move(socket_e)){
+Proxy::Proxy(Socket socket_e, ProtectedQueue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
 }
 		
 Proxy::~Proxy() noexcept{
@@ -30,55 +31,69 @@ void Proxy::close_communication(){
 	this->socket.shutdown();
 }
 
-void Proxy::receive_event(ProtectedQueue& queue){
+void Proxy::addNewQueue(ProtectedQueue* queue){
+	this->prev_queue = this->queue;
+	this->queue = queue;
+}
+
+void Proxy::changeToPrevQueue(){
+	this->queue = this->prev_queue;
+}
+
+std::string Proxy::receiveName(){
+	char* buff = new char[4];
+	this->socket.receive(buff, 4);
+	int name_len = ntohl(*(reinterpret_cast<int*>(buff + 0)));
+	delete[] buff;
+	char* name_c = new char[name_len];
+	this->socket.receive(name_c, name_len);
+	std::string name(name_c, name_len);
+	delete[] name_c;
+	return name;
+}	
+
+void Proxy::receive_event(){
 	try{
 		char event = this->receive_char();
 		switch (event){
-			case 0: {//se recibe el nombre de un jugador
-					char* buff = new char[TWO_INTS];
-					this->socket.receive(buff, TWO_INTS);
-					int name_len = ntohl(*(reinterpret_cast<int*>(buff + 4)));
-					char* msj = new char[TWO_INTS + 1 + name_len];
-					msj[0] = 0;
-					msj[1] = buff[0];
-					msj[2] = buff[1];
-					msj[3] = buff[2];
-					msj[4] = buff[3];
-					msj[5] = buff[4];
-					msj[6] = buff[5];
-					msj[7] = buff[6];
-					msj[8] = buff[7];
-					this->socket.receive(msj + 9, name_len);
-					queue.push(msj);
-					delete[] buff;
-					break;	
-				}				
 			case 1: //se recibe el map_id y el numero de jugadores
-					this->receive_event_info(queue, event, GAME_INFO_TAM);
+					this->receive_event_info(event, GAME_INFO_TAM);
 					break;
 			case 2: //se recibe que se quiere mover un gusano
-					this->receive_event_info(queue, event, MOVE_TAM);
+					this->receive_event_info(event, MOVE_TAM);
 					break;
 			case 3: //se recibe que se quiere hacer saltar a un gusano 
-					this->receive_event_info(queue, event, JUMP_TAM);
+					this->receive_event_info(event, JUMP_TAM);
 					break;
 			case 4: //se recibe que se quiere hacer saltar hacia atras a un gusano 
-					this->receive_event_info(queue, event, JUMP_TAM);
+					this->receive_event_info(event, JUMP_TAM);
 					break;
 			case 5: //se recibe que un gusano saco un arma
-					this->receive_event_info(queue, event, WEAPON_TAM);
+					this->receive_event_info(event, WEAPON_TAM);
 					break;
 			case 6: //se recibe que un gusano cambio angulo de apuntado
-					this->receive_event_info(queue, event, ANGLE_TAM);
+					this->receive_event_info(event, ANGLE_TAM);
 					break;
 			case 7:	//se recibe que se quiere cambiar el tiempo de la cuenta regresiva
-					this->receive_event_info(queue, event, TIME_TAM);
+					this->receive_event_info(event, TIME_TAM);
 					break;
 			case 8: //se recibe que se carga la barra de poder
-					this->receive_event_info(queue, event, POWER_TAM);
+					this->receive_event_info(event, POWER_TAM);
 					break;
 			case 9: //se recibe que se quiere disparar
-					this->receive_event_info(queue, event, SHOT_TAM);
+					this->receive_event_info(event, SHOT_TAM);
+					break;
+			case 11://se recibe que se quiere salir de la room actual
+					this->receiveNameToQueue(event, 2);
+					break;
+			case 12://se recibe que se quiere entrar a una room
+					this->receiveNameToQueue(event, 2);
+					break;	
+			case 13://se recibe que se quiere crear una room
+					this->receiveNameToQueue(event, 4);
+					break;			
+			case 14://se reibe que se quiere salir de una room activa
+					this->receiveNameToQueue(event, 2);
 					break;
 			}
 	}catch (SocketError& e){
@@ -86,21 +101,34 @@ void Proxy::receive_event(ProtectedQueue& queue){
 		std::cout << this->id << "\n";
 		char* msj = new char[DISCONNECT_TAM];
 		//player get desconected message
-		msj[0] = 1;
+		msj[0] = 10;
 		msj[1] = (this->id >> MOSTSIGNIFICANT) & LAST8;
 		msj[2] = (this->id >> SECONDBYTE) & LAST8;
 		msj[3] = (this->id >> THIRDBYTE) & LAST8;
 		msj[4] = this->id & LAST8;
-		queue.push(msj);
+		this->queue->push(msj);
 		throw e;
 	}
 }
 
-void Proxy::receive_event_info(ProtectedQueue& queue, char event, int tam){
+void Proxy::receiveNameToQueue(char event, int cant_ints){
+	char* buff = new char[cant_ints * SIZE_INT];
+	this->socket.receive(buff, cant_ints * SIZE_INT);
+	int name_len = ntohl(*(reinterpret_cast<int*>(buff + (cant_ints - 1) * SIZE_INT)));
+	std::cout << "name len: " << name_len << '\n';
+	char* msj = new char[cant_ints * SIZE_INT + 1 + name_len];
+	msj[0] = event;
+	memcpy(msj+1, buff, cant_ints * SIZE_INT);
+	this->socket.receive(msj + cant_ints * SIZE_INT + 1, name_len);
+	this->queue->push(msj);
+	delete[] buff;
+}
+
+void Proxy::receive_event_info(char event, int tam){
 	char* msj = new char[tam];
 	msj[0] = event;
 	this->socket.receive(msj+1, tam-1);
-	queue.push(msj);
+	this->queue->push(msj);
 }
 
 const unsigned char Proxy::receive_char(){
@@ -210,10 +238,68 @@ void Proxy::sendPlayerDisconnection(int player_id){
 	this->send_int(player_id);
 }
 
-void Proxy::sendGameWon(int player_id){
+void Proxy::sendPlayerLoose(int player_id){
 	char event = 14;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(player_id);
+	if (player_id == this->id){
+		this->changeToPrevQueue();
+	}
+}
+
+void Proxy::sendGameWon(int player_id){
+	char event = 15;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(player_id);
+}
+
+void Proxy::sendRoomMembers(std::vector<std::string>& names){
+	char event = 16;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(names.size());
+	std::vector<std::string>::iterator it = names.begin();
+	for (; it != names.end(); ++it){
+		this->send_int(it->length());
+		this->socket.send(it->data(), it->length());
+	}
+}
+
+void Proxy::sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id){
+	char event = 17;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(name.length());
+	this->socket.send(name.data(), name.length());
+	this->send_int(cant_players);
+	this->send_int(max_players);
+	this->send_int(map_id);
+}
+
+void Proxy::sendRoomPlayersChange(const std::string& name, int cant_players){
+	char event = 18;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(name.length());
+	this->socket.send(name.data(), name.length());
+	this->send_int(cant_players);
+}
+
+void Proxy::sendRoomDeletion(const std::string& name){
+	char event = 19;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(name.length());
+	this->socket.send(name.data(), name.length());
+}
+
+void Proxy::sendPlayerConnection(int id, const std::string& name){
+	char event = 20;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(id);
+	this->send_int(name.length());
+	this->socket.send(name.data(), name.length());
+}
+
+void Proxy::sendRoomNameError(){
+	char event = 21;
+	this->socket.send(&event, ONEBYTE);
 }
 
 void Proxy::send_int(int to_send){

@@ -5,21 +5,20 @@
 #include <string>
 #include "game_constants.h"
 
-typedef struct {
+struct Arma{
 	std::string nombre;
 	std::string habilitada;
 	std::string municiones;
-} arma_t;
+};
 
-typedef struct {
-	// Hacer public.
-	std::string nombre;
+struct ElementInfo{
+	std::string tipo;
 	std::string tam;
 	float x;
 	float y;
 	float angulo = 0;
 	int equipo;
-} elemento_t;
+};
 
 class YAMLParser {
 public:
@@ -28,14 +27,14 @@ public:
     // Carga un mapa.
     // Recibe el id del mapa, un vector de elementos y las constantes del juego.
     // En "v" se almacena todos los objetos que componen el mapa.
-    void cargarConfig(unsigned int id, std::vector<elemento_t>& v,
+    void cargarConfig(unsigned int id, std::vector<ElementInfo>& v,
      GameConstants& info);
     // Carga las armas.
     // Recibe un nodo con la informacion, y un map en donde se va
     // a almacenar la misma.
     void cargarArmas(const YAML::Node& nodeVect, GameConstants& info);
     // Modifica las constantes segun el arma.
-    void asignar_a_info(arma_t& arma, GameConstants& info);
+    void asignar_a_info(Arma& arma, GameConstants& info);
     // Decide si esta habilitada o no.
 	bool decidir_habilitada(std::string& habilitada);
 	// Convierte la municion a un entero.
@@ -45,6 +44,7 @@ public:
 	// Carga el mapa.
     // Recibe un nodo con la informacion, y un map en donde se va
     // a almacenar la misma.
-	void cargarMapa(const YAML::Node& nodeVect, std::vector<elemento_t>& v);
+	void cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v);
 
+};
 #endif // PARSER_H

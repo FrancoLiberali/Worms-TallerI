@@ -8,8 +8,7 @@ Las string se mandan:
 	el string en si sin el '\0' del final
 
 AVISO DE NOMBRE DEL JUGADOR:
-	char en 0
-	int numero de jugador
+	Este mensaje se manda automaticamente despues de la conexion al server por lo que no necesita un codigo de mensaje
 	string con nombre del jugador
 
 AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:
