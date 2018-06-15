@@ -13,10 +13,6 @@ int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments_e, std
 FragmentProjectile::~FragmentProjectile(){
 }
 
-void FragmentProjectile::update(){
-	Projectile::update();
-}
-
 void FragmentProjectile::exploit(){
 	Projectile::exploit();
 	b2Vec2 center = this->body->GetPosition();

@@ -20,6 +20,8 @@ int damage, int radius, std::map<int, Projectile*>& to_remove, MultipleProxy& pr
 	this->body->CreateFixture(&fixtureDef);
 	this->body->SetFixedRotation(true);
 	this->body->SetBullet(true);
+	
+	proxy.sendProjectileCreation(this->number, 11, direction, x, y, angle);
 }
 
 LittleProjectile::~LittleProjectile(){

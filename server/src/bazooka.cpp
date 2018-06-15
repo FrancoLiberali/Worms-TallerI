@@ -31,7 +31,3 @@ Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, int directi
 
 Bazooka::~Bazooka(){
 }
-
-void Bazooka::update(){
-	SimpleProjectile::update();
-}

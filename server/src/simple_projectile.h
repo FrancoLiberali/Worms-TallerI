@@ -11,8 +11,6 @@ class SimpleProjectile : public Projectile{
 		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
 		
 		~SimpleProjectile();
-		
-		virtual void update();
 };
 
 #endif

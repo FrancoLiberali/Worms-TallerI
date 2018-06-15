@@ -21,8 +21,6 @@ class FragmentProjectile : public Projectile{
 		
 		~FragmentProjectile();
 		
-		virtual void update();
-		
 		virtual void exploit();
 };
 

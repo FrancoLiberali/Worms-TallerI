@@ -10,6 +10,7 @@ RegresiveProjectile::~RegresiveProjectile(){
 }
 
 void RegresiveProjectile::update(){
+	Projectile::update();
 	this->time -= 1;
 	if (this->time == 0){
 		this->exploit();
