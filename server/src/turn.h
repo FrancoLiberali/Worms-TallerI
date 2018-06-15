@@ -43,8 +43,8 @@ class Turn{
 		void changeRegresiveTime(char* msj);
 		void loadPower(Gusano* gusano, int& turn_actual_len);
 		void fire(Gusano* gusano, int& turn_actual_len);
-		void fire_bazooka(Gusano* gusano, b2Vec2 position);
-		void fire_morter(Gusano* gusano, b2Vec2 position);
+		void fire_bazooka(Gusano* gusano, b2Vec2 position, int direction);
+		void fire_morter(Gusano* gusano, b2Vec2 position, int direction);
 		
 		
 	public:

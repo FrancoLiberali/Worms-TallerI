@@ -1,9 +1,9 @@
 #include "regresive_projectile.h"
 
 RegresiveProjectile::RegresiveProjectile(b2World& world_entry, int number, float x, float y, 
-		float angle, float vel, int damage_e, int radius_e, 
+		int direction, float angle, float vel, int damage_e, int radius_e, 
 		std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy, unsigned int time_e) :
-		Projectile(world_entry, number, x, y, angle, vel, damage_e, radius_e, 1, to_remove_e, proxy), time(time_e){
+		Projectile(world_entry, number, x, y, direction, angle, vel, damage_e, radius_e, 1, to_remove_e, proxy), time(time_e){
 }
 
 RegresiveProjectile::~RegresiveProjectile(){

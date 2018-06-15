@@ -61,6 +61,7 @@ CREACIÓN DE UN PROYECTIL EN EL MAPA
 	char en 8
 	int id de proyectil
 	int numero de arma: 1=bazooka, 2=mortero, ... continua segun orden en consigna del tp, 11= fragmento de proyectil
+	int direccion: -1= izquierda, 1 = derecha
 	int x
 	int y
 	int angulo

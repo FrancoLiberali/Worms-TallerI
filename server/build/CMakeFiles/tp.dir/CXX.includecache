@@ -411,8 +411,6 @@ thread.h
 ../src/thread.h
 proxy.h
 ../src/proxy.h
-fake_proxy/mok_proxy.h
-../src/fake_proxy/mok_proxy.h
 protected_queue.h
 ../src/protected_queue.h
 mutex
@@ -1331,8 +1329,6 @@ thread.h
 /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
 proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
-fake_proxy/mok_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
 protected_queue.h
 /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
 mutex

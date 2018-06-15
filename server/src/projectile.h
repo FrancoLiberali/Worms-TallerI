@@ -19,14 +19,14 @@ class Projectile {
 		UserData* user_data;
 		
 	public:		
-		Projectile(b2World& world_entry, int number, float x, float y, float angle, float vel,
+		Projectile(b2World& world_entry, int number, float x, float y, int direction, float angle, float vel,
 				   int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy_e);
 		
 		~Projectile();
 		
 		virtual void exploit();
 		
-		virtual void update(int weapon);
+		virtual void update();
 		
 		b2Vec2 GetPosition(){ return this->body->GetPosition();}
 		

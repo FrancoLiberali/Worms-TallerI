@@ -7,12 +7,12 @@
 
 class SimpleProjectile : public Projectile{
 	public:		
-		SimpleProjectile(b2World& world_entry, int number, float x, float y, float angle, float vel, 
+		SimpleProjectile(b2World& world_entry, int number, float x, float y, int direction, float angle, float vel, 
 		int damage_e, int radius_e, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
 		
 		~SimpleProjectile();
 		
-		virtual void update(int weapon);
+		virtual void update();
 };
 
 #endif

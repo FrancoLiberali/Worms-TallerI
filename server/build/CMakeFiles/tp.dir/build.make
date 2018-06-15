@@ -1988,7 +1988,7 @@ tp: CMakeFiles/tp.dir/Box2D/Dynamics/b2Body.cpp.o
 tp: CMakeFiles/tp.dir/Box2D/Dynamics/b2ContactManager.cpp.o
 tp: CMakeFiles/tp.dir/Box2D/Dynamics/b2World.cpp.o
 tp: CMakeFiles/tp.dir/build.make
-tp: /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.5.2
+tp: /usr/local/lib/libyaml-cpp.a
 tp: CMakeFiles/tp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Linking CXX executable tp"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tp.dir/link.txt --verbose=$(VERBOSE)

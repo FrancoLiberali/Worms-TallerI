@@ -39,10 +39,12 @@ class Proxy{
 		void sendGusanoPosition(int gusano_id, int x, int y, int direction, int angle);
 		
 		void sendStateChange(int gusano_id, int new_state);
-				
-		void sendProjectilePosition(int projectile_number, int weapon, int x, int y, int angle);
 		
-		void sendProjectileExplosion(int projectile_number, int x, int y);
+		void sendProjectileCreation(int projectile_number, int weapon, int direction, int x, int y, int angle);
+				
+		void sendProjectilePosition(int projectile_number, int x, int y, int angle);
+		
+		void sendProjectileExplosion(int projectile_number);
 		
 		void sendTakeWeapon(int weapon);
 		

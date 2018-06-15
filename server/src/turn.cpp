@@ -102,13 +102,10 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 		b2Vec2 position = gusano->GetPosition();
 		int direction = gusano->getDirection();
 		this->actual_max_projectile++;
-		if (direction < 0){
-			this->sight_angle = M_PI - this->sight_angle;
-		}
 		switch(this->weapon){
-			case 1: this->fire_bazooka(gusano, position);
+			case 1: this->fire_bazooka(gusano, position, direction);
 					break;
-			case 2: this->fire_morter(gusano, position);
+			case 2: this->fire_morter(gusano, position, direction);
 					break;
 		}
 		*(this->info.ammunition[this->weapon]) -= 1;
@@ -118,16 +115,16 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 	}
 }
 
-void Turn::fire_bazooka(Gusano* gusano, b2Vec2 position){
+void Turn::fire_bazooka(Gusano* gusano, b2Vec2 position, int direction){
 	Bazooka* bazooka = new Bazooka(this->world, this->actual_max_projectile, position.x, 
-						position.y, this->sight_angle, this->power, this->info, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->proxy);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, bazooka));
 }
 
-void Turn::fire_morter(Gusano* gusano, b2Vec2 position){
+void Turn::fire_morter(Gusano* gusano, b2Vec2 position, int direction){
 	Morter* morter = new Morter(this->world, this->actual_max_projectile, position.x, 
-						position.y, this->sight_angle, this->power, this->info, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->to_create, this->proxy);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, morter));
 }
@@ -135,6 +132,7 @@ void Turn::fire_morter(Gusano* gusano, b2Vec2 position){
 void Turn::play(int active_player, unsigned int active_gusano){
 	this->proxy.sendTurnBegining(active_player, this->players[active_player][active_gusano]->getId());
 	this->weapon = 0;
+	this->proxy.sendTakeWeapon(this->weapon);
 	this->fired = false;
 	double extra = 0;
 	bool keep_simulation = false;
@@ -224,7 +222,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			std::cout << "hay projectile para crear\n";
 			this->actual_max_projectile++;
 			LittleProjectile* little = new LittleProjectile(this->world, this->actual_max_projectile, (*c_it)->x,
-			(*c_it)->y, (*c_it)->angle, (*c_it)->vel, (*c_it)->damage, (*c_it)->radius, this->to_remove_projectiles, this->proxy);
+			(*c_it)->y, (*c_it)->direction, (*c_it)->angle, (*c_it)->vel, (*c_it)->damage, (*c_it)->radius, this->to_remove_projectiles, this->proxy);
 			this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, little));
 			delete (*c_it);
 		}
@@ -233,7 +231,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		// Proyectiles en vuelo actual
 		std::map<int, Projectile*>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
-			projectiles_it->second->update(0);
+			projectiles_it->second->update();
 			keep_simulation = true;
 		}
 		

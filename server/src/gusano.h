@@ -30,7 +30,7 @@ class Gusano{
 		std::pair<int, int> number;
 		int id;
 		int life = 100;
-		bool damaged = false;
+		unsigned int damage_suffered = 0;
 		bool head_in_contact = false;
 		
 		void rotateTo(float angle);

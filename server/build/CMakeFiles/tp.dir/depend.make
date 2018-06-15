@@ -1246,7 +1246,6 @@ CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket_error.h
 
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.cpp

@@ -39,7 +39,7 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	dynamicBox.Set(vertices, count);
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
-	fixtureDef.density = 1.0f;
+	fixtureDef.density = 3.0f;
 	fixtureDef.friction = 1.0f;
 	fixtureDef.restitution = 0.0f;
 
@@ -131,7 +131,7 @@ void Gusano::cancelMovement(){
 }
 
 void Gusano::update(){
-	this->damaged = false;
+	this->damage_suffered = 0;
 	try{
 		this->state->sumOneStep();
 	} catch (const MovingFinished& e){
@@ -147,6 +147,8 @@ void Gusano::update(){
 			// hay que girarlo
 			this->rotateTo(this->GetAngle() - M_PI);
 			this->head_in_contact = false;
+		} else if (angles_list.size() == 0){
+			this->rotateTo(0);
 		} else {
 			this->rotateTo(angles_list.back());
 		}
@@ -157,7 +159,6 @@ void Gusano::update(){
 		this->state = new InactiveState();
 		this->body->SetLinearVelocity(b2Vec2(0,0));
 		this->sendPosition();
-		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 	}
 }
 
@@ -211,9 +212,9 @@ void Gusano::addLife(unsigned int to_add){
 }
 
 void Gusano::sufferDamage(unsigned int damage){
-	if (!this->state->isExploted()){
-		this->life -= damage;
-		this->damaged = true;
+	if (damage > this->damage_suffered){
+		this->life -= (damage - this->damage_suffered);
+		this->damage_suffered = damage;
 		this->proxy.sendLifeChange(this->id, this->life);
 		if (this->life <= 0){
 			this->sendPosition();
@@ -224,14 +225,14 @@ void Gusano::sufferDamage(unsigned int damage){
 }
 
 bool Gusano::gotDamaged(){
-	return this->damaged;
+	return (this->damage_suffered > 0);
 }
 
 void Gusano::newContact(float ground_angle){
 	// se guarda en el lista los angulos de las cosas sobre las que el gusano esta parado
 	this->angles_list.push_back(ground_angle);
 	int cant_contacts = angles_list.size();
-	if (cant_contacts == 1){
+	if (cant_contacts == 1 && !(this->state->isExploted())){
 		//significa que antes estaba en el aire y toco el suelo
 		printf("state->inactivo\n");
 		this->state->sumOneStep();
@@ -239,6 +240,7 @@ void Gusano::newContact(float ground_angle){
 		this->state = new InactiveState();
 		this->body->SetGravityScale(0);
 		this->body->SetLinearVelocity(b2Vec2(0,0));
+		this->body->SetAngularVelocity(0);
 		this->proxy.sendStateChange(this->id, INACTIVE_STATE);
 		this->rotateTo(ground_angle);
 	} else if (cant_contacts == 2){
@@ -258,7 +260,7 @@ void Gusano::finishContact(float ground_angle){
 	it = std::find(this->angles_list.begin(), this->angles_list.end(), ground_angle);
     this->angles_list.erase(it);
 	int cant_contacts = angles_list.size();
-	if (cant_contacts == 0 && !(this->state->isFalling())){
+	if (cant_contacts == 0 && !(this->state->isFalling()) && !(this->state->isExploted())){
 		std::cout << "state->falling\n";
 		delete this->state;
 		this->state = new JumpingState(this->body, this);
