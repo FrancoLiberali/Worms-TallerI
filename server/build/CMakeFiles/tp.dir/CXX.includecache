@@ -304,6 +304,16 @@ Box2D/Common/b2Settings.h
 Box2D/Common/b2Math.h
 ../Box2D/Rope/Box2D/Common/b2Math.h
 
+../src/blocking_queue.h
+queue
+-
+mutex
+-
+condition_variable
+-
+queue.h
+../src/queue.h
+
 ../src/fake_proxy/mok_proxy.h
 protected_queue.h
 ../src/fake_proxy/protected_queue.h
@@ -317,8 +327,8 @@ thread.h
 ../src/thread.h
 multiple_proxy.h
 ../src/multiple_proxy.h
-protected_queue.h
-../src/protected_queue.h
+blocking_queue.h
+../src/blocking_queue.h
 receiver.h
 ../src/receiver.h
 room.h
@@ -403,8 +413,8 @@ proxy.h
 ../src/proxy.h
 multiple_proxy.h
 ../src/multiple_proxy.h
-protected_queue.h
-../src/protected_queue.h
+blocking_queue.h
+../src/blocking_queue.h
 initiador.h
 ../src/initiador.h
 mutex
@@ -998,6 +1008,10 @@ multiple_proxy.h
 map
 -
 
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.cpp
+blocking_queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
 queue
 -
@@ -1219,8 +1233,8 @@ thread.h
 /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
 multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
-protected_queue.h
-/home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+blocking_queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
 receiver.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
 room.h
@@ -1483,8 +1497,8 @@ proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
 multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
-protected_queue.h
-/home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+blocking_queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
 initiador.h
 /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
 mutex

@@ -2,7 +2,7 @@
 #include "socket.h"
 #include "proxy.h"
 #include "multiple_proxy.h"
-#include "protected_queue.h"
+#include "blocking_queue.h"
 #include "initiador.h"
 #include <mutex>
 #include <string>
@@ -19,7 +19,7 @@ class Server : public Thread {
 		Socket socket;
 		std::vector<std::pair<std::string, Receiver*>> players;
 		MultipleProxy not_playing;
-		ProtectedQueue hall_queue;
+		BlockingQueue hall_queue;
 		std::map<std::string, Room*> rooms;
 		std::mutex rooms_mutex;
 		Initiador* initiador;

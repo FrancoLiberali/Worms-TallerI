@@ -1446,6 +1446,33 @@ src/bazooka.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bazooka.cpp.s
 .PHONY : src/bazooka.cpp.s
 
+src/blocking_queue.o: src/blocking_queue.cpp.o
+
+.PHONY : src/blocking_queue.o
+
+# target to build an object file
+src/blocking_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/blocking_queue.cpp.o
+.PHONY : src/blocking_queue.cpp.o
+
+src/blocking_queue.i: src/blocking_queue.cpp.i
+
+.PHONY : src/blocking_queue.i
+
+# target to preprocess a source file
+src/blocking_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/blocking_queue.cpp.i
+.PHONY : src/blocking_queue.cpp.i
+
+src/blocking_queue.s: src/blocking_queue.cpp.s
+
+.PHONY : src/blocking_queue.s
+
+# target to generate assembly for a file
+src/blocking_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/blocking_queue.cpp.s
+.PHONY : src/blocking_queue.cpp.s
+
 src/exploted_state.o: src/exploted_state.cpp.o
 
 .PHONY : src/exploted_state.o
@@ -2412,6 +2439,9 @@ help:
 	@echo "... src/bazooka.o"
 	@echo "... src/bazooka.i"
 	@echo "... src/bazooka.s"
+	@echo "... src/blocking_queue.o"
+	@echo "... src/blocking_queue.i"
+	@echo "... src/blocking_queue.s"
 	@echo "... src/exploted_state.o"
 	@echo "... src/exploted_state.i"
 	@echo "... src/exploted_state.s"

@@ -542,6 +542,7 @@ CMakeFiles/tp.dir/Box2D/Rope/b2Rope.cpp.o
  ..//Box2D/Rope/b2Rope.h
  /home/franco/Documentos/taller1/tpfinal/server/Box2D/Rope/b2Rope.cpp
 CMakeFiles/tp.dir/main.cpp.o
+ ../src/blocking_queue.h
  ../src/initiador.h
  ../src/multiple_proxy.h
  ../src/protected_queue.h
@@ -652,6 +653,10 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+CMakeFiles/tp.dir/src/blocking_queue.cpp.o
+ /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.cpp
+ /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 CMakeFiles/tp.dir/src/exploted_state.cpp.o
  ..//Box2D/Box2D.h
  ..//Box2D/Collision/Shapes/b2ChainShape.h
@@ -1429,6 +1434,7 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
 CMakeFiles/tp.dir/src/server.cpp.o
+ /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h

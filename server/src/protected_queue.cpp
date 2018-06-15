@@ -21,7 +21,7 @@ void ProtectedQueue::empty(){
 	}
 }
 
-void ProtectedQueue::push(const char* entry){
+void ProtectedQueue::push(char* entry){
 	std::lock_guard<std::mutex> lock(this->mutex);
 	this->queue.push(entry);
 }

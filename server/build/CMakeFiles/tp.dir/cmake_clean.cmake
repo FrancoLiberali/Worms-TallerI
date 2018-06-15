@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/fake_proxy/mok_proxy.cpp.o"
   "CMakeFiles/tp.dir/src/game.cpp.o"
   "CMakeFiles/tp.dir/src/initiador.cpp.o"
+  "CMakeFiles/tp.dir/src/blocking_queue.cpp.o"
   "CMakeFiles/tp.dir/src/gusano.cpp.o"
   "CMakeFiles/tp.dir/src/bazooka.cpp.o"
   "CMakeFiles/tp.dir/src/socket_error.cpp.o"

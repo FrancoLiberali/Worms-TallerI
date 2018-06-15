@@ -9,7 +9,7 @@ BlockingQueue::~BlockingQueue(){
 
 bool BlockingQueue::isEmpty(){
 	std::unique_lock<std::mutex> lock(this->mutex);
-	return q.empty();
+	return this->queue.empty();
 }
 
 void BlockingQueue::empty(){
@@ -19,7 +19,7 @@ void BlockingQueue::empty(){
 	}
 }
 
-void BlockingQueue::push(const char* entry){
+void BlockingQueue::push(char* entry){
 	std::unique_lock<std::mutex> lock(this->mutex);
 	if (this->queue.empty()){
 		cv.notify_all();
@@ -32,7 +32,7 @@ char* BlockingQueue::pop(){
 	while (this->queue.empty()){
 		cv.wait(lock);
 	}
-	const char* val = this->queue.front();
+	char* val = this->queue.front();
 	this->queue.pop();
 	
 	return val;

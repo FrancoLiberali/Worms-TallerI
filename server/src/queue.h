@@ -16,7 +16,7 @@ class Queue{
 		
 		virtual void empty() = 0;
 		
-		virtual void push(const char* entry) = 0;
+		virtual void push(char* entry) = 0;
 		
 		virtual char* pop() = 0;
 };

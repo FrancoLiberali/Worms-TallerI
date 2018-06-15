@@ -541,6 +541,7 @@ CMakeFiles/tp.dir/Box2D/Rope/b2Rope.cpp.o: ../Box2D/Common/b2Settings.h
 CMakeFiles/tp.dir/Box2D/Rope/b2Rope.cpp.o: ../Box2D/Rope/b2Rope.h
 CMakeFiles/tp.dir/Box2D/Rope/b2Rope.cpp.o: ../Box2D/Rope/b2Rope.cpp
 
+CMakeFiles/tp.dir/main.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/protected_queue.h
@@ -651,6 +652,10 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/simple_projectile.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/bazooka.cpp.o: ../src/user_data.h
+
+CMakeFiles/tp.dir/src/blocking_queue.cpp.o: ../src/blocking_queue.cpp
+CMakeFiles/tp.dir/src/blocking_queue.cpp.o: ../src/blocking_queue.h
+CMakeFiles/tp.dir/src/blocking_queue.cpp.o: ../src/queue.h
 
 CMakeFiles/tp.dir/src/exploted_state.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/exploted_state.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
@@ -1428,6 +1433,7 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_finished.h
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.cpp
 CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.h
 
+CMakeFiles/tp.dir/src/server.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/protected_queue.h

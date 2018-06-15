@@ -20,7 +20,7 @@ class BlockingQueue : public Queue{
   
 		virtual void empty();
   
-		virtual void push(const char* entry);
+		virtual void push(char* entry);
 
 		virtual char* pop();
 
