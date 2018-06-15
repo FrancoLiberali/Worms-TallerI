@@ -11,7 +11,7 @@ cmake ..
 and then the usual
 
 make
-make install
+sudo make install
 
 3. To clean up, just remove the 'build' directory.
 

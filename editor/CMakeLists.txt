@@ -56,6 +56,5 @@ target_link_libraries(editor Qt5::Widgets)
 target_link_libraries(editor yaml-cpp)
 
 # Copio la carpeta de recursos al directorio de instalación.
-install(FILES default_armo.yaml DESTINATION ${INSTALL_PATH})
 install(DIRECTORY recursos DESTINATION ${INSTALL_PATH})
 
