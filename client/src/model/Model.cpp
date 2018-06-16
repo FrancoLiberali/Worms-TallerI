@@ -25,12 +25,24 @@ void Model::AimChangeAngle(const int delta){
     gcp->aimAngle(idJugador, delta);
 }
 
+void Model::chargePower(){
+    gcp->chargePower(idJugador);
+}
+
+void Model::WormShoot(){
+    gcp->shoot(idJugador);
+}
+
+
+void Model::countDown(int time){
+    gcp->countDown(idJugador,time);
+}
+
 int Model::getIdWormSelected(){
     return this->idWormSelected;
 }
 
 void Model::setIdPlayer(int idJugador){
-    //std::cout<<"se agrega player id"<< std::endl;
     this->idJugador = idJugador;
 }
 

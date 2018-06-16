@@ -116,3 +116,22 @@ void ProxyClient::sendChangeAim(int idPlayer, int delta){
     sendInt(idPlayer);
     sendInt(delta);
 }
+
+void ProxyClient::sendChargePower(int idPlayer){
+    //std::cout<<"Power Charge 8 "<< idPlayer <<std::endl;
+    sendChar(8);
+    sendInt(idPlayer);
+}
+
+void ProxyClient::sendWormShoot(int idPlayer){
+    //std::cout<<"Shoot 9 "<< idPlayer <<std::endl;
+    sendChar(9);
+    sendInt(idPlayer);
+}
+
+void ProxyClient::sendCountDown(int idPlayer, int time){
+    //std::cout<<"cuenta regresiva "<< idPlayer << " "<< time << std::endl;
+    sendChar(7);
+    sendInt(idPlayer);
+    sendInt(time);
+}

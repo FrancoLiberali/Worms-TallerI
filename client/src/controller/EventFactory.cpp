@@ -62,19 +62,24 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int newState = proxy.receiveInt();
       return new WormChangeStateEvent(idWorm, newState);
     }
-    case B_POS: {
-      int idBullet = proxy.receiveInt();
+    case M_CREATE:{
+      int idMissile = proxy.receiveInt(); 
       int idWeapon = proxy.receiveInt();
-      int posx = proxy.receivePosY();
-      int posy = proxy.receivePosX();
       int dir = proxy.receiveInt();
+      int x = proxy.receivePosX();
+      int y = proxy.receivePosY();
       int angle = proxy.receiveAngle();
       return nullptr;
     }
-    case B_EXPLOTE: {
-      int idBullet = proxy.receiveInt();
-      int posx = proxy.receivePosX();
-      int posy = proxy.receivePosY();
+    case M_POS: {
+      int idMissile = proxy.receiveInt();
+      int posx = proxy.receivePosY();
+      int posy = proxy.receivePosX();
+      int angle = proxy.receiveAngle();
+      return nullptr;
+    }
+    case M_EXPLOTE: {
+      int idMissile = proxy.receiveInt();
       return nullptr;
     }
     case W_CUR_WEAPON: {

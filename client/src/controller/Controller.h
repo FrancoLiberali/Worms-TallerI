@@ -9,6 +9,7 @@ class Controller {
 private:
     Model& model;
     mainView& view;
+    int power = false;
 public:
     Controller(Model& model, mainView& view);
     void handle(SDL_Event& e);

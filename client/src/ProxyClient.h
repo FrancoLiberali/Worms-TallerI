@@ -20,6 +20,7 @@ public:
     int receiveAngle();
     char receiveChar();
     std::string receiveName();
+
     void sendName(int id, std::string& msg);
     void sendMapAndPlayers(int idMap, int num);
     void sendMoveWorm(int idPlayer, int dir);
@@ -27,6 +28,9 @@ public:
     void sendBackJump(int id);
     void sendWeaponSelect(int idPlayer, int idWeapon);
     void sendChangeAim(int idPlayer, int delta);
+    void sendChargePower(int idPlayer);
+    void sendWormShoot(int idPlayer);
+    void sendCountDown(int idPlayer, int time);
 };
 
 #endif

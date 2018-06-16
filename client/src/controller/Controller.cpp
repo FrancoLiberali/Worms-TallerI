@@ -28,7 +28,22 @@ void Controller::handle(SDL_Event& e) {
                     model.AimChangeAngle(1); break;
                 case SDLK_DOWN:
                     model.AimChangeAngle(-1); break;
-                }
+                case SDLK_SPACE:
+                    model.chargePower();break;
+                case SDLK_1: model.countDown(1); break;
+                case SDLK_2: model.countDown(2); break;
+                case SDLK_3: model.countDown(3); break;
+                case SDLK_4: model.countDown(4); break;
+                case SDLK_5: model.countDown(5); break;  
+            }
+            break;
+        }
+        case SDL_KEYUP:{
+            SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
+            if (keyEvent.keysym.sym == SDLK_SPACE){
+                    model.WormShoot();
+            }
+            break;
         }
         case SDL_MOUSEBUTTONDOWN:
             SDL_Point mousePointer = {e.motion.x, e.motion.y};

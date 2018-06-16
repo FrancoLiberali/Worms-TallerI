@@ -14,6 +14,9 @@ public:
     void jump(const int idJugador, const int direccion);
     void weapon(const int idJugador, const int idWeapon);
     void aimAngle(const int idJugador, const int delta);
+    void chargePower(const int idJugador);
+    void shoot(const int idJugador);
+    void countDown(const int idJugador, const int time);
 };
 
 #endif

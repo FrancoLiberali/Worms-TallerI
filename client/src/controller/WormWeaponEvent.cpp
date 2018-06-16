@@ -20,6 +20,8 @@ WormWeaponEvent::WormWeaponEvent(int wormId, int idWeapon)
 }
 	
 void WormWeaponEvent::process(){
+    if (weaponId == NO_WEAPON)
+        return;
 	WormView* wormView = view->getWormView(wormId);
 	wormView->selectWeapon(weaponId);
 }

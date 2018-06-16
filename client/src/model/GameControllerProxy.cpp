@@ -3,6 +3,9 @@
 #include "WormJumpCommand.h"
 #include "WormWeaponCommand.h"
 #include "ChangeAimCommand.h"
+#include "ChargePowerCommand.h"
+#include "WormShootCommand.h"
+#include "ChangeCountDownCommand.h"
 
 #include <iostream>
 
@@ -23,6 +26,18 @@ void GameControllerProxy::weapon(const int idJugador, const int idWeapon){
 
 void GameControllerProxy::aimAngle(const int idJugador, const int delta){
   queue.push(new ChangeAimCommand(idJugador, delta));
+}
+
+void GameControllerProxy::chargePower(const int idJugador){
+  queue.push(new ChargePowerCommand(idJugador));
+}
+
+void GameControllerProxy::shoot(const int idJugador){
+  queue.push(new WormShootCommand(idJugador));
+}
+
+void GameControllerProxy::countDown(const int idJugador, const int time){
+  queue.push(new ChangeCountDownCommand(idJugador, time));
 }
 
 
