@@ -132,7 +132,6 @@ void Turn::fire_morter(Gusano* gusano, b2Vec2 position, int direction){
 void Turn::play(int active_player, unsigned int active_gusano){
 	this->proxy.sendTurnBegining(active_player, this->players[active_player][active_gusano]->getId());
 	this->weapon = 0;
-	this->proxy.sendTakeWeapon(this->weapon);
 	this->fired = false;
 	double extra = 0;
 	bool keep_simulation = false;
@@ -260,4 +259,6 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			extra = -to_sleep;
 		}
 	}
+	// al final del turno se manda que guarda el arma
+	this->proxy.sendTakeWeapon(0);
 }
