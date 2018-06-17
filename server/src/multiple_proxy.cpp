@@ -24,10 +24,10 @@ void MultipleProxy::sendPlayerName(int player_id, std::string& name){
 	}
 }
 
-void MultipleProxy::sendVigaCreation(int x, int y, int angle){
+void MultipleProxy::sendVigaCreation(float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendVigaCreation(x, y, angle);
+		(*it)->sendVigaCreation((int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 

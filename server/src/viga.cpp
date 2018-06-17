@@ -29,7 +29,7 @@ Viga::Viga(b2World& world, float x, float y, float angle, MultipleProxy& proxy) 
 	fixtureDef.filter.groupIndex = -2;
 
 	vigaBody->CreateFixture(&fixtureDef);
-	proxy.sendVigaCreation((int)x * 1000, (int)y * 1000, (int)angle);
+	proxy.sendVigaCreation(x_center, y_center, angle);
 }
 
 Viga::~Viga(){

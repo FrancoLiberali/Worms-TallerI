@@ -27,7 +27,7 @@ class MultipleProxy{
 		
 		void sendPlayerName(int player_id, std::string& name);
 		
-		void sendVigaCreation(int x, int y, int angle);
+		void sendVigaCreation(float x, float y, float angle);
 		
 		void sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle);
 		
