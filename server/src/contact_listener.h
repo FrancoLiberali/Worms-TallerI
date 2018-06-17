@@ -81,7 +81,7 @@ class ContactListener : public b2ContactListener{
 			data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 			if (data && data->indicator == 0){
 				UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-				if (other_data && other_data->indicator != 2){
+				if ((other_data && other_data->indicator != 2) || (!other_data)){//viga no tiene data
 					Projectile* projectile = static_cast<Projectile*>(data->pointer);
 					projectile->exploit();
 				}
@@ -90,7 +90,7 @@ class ContactListener : public b2ContactListener{
 			data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 			if (data && data->indicator == 0){
 				UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-				if (other_data && other_data->indicator != 2){
+				if ((other_data && other_data->indicator != 2) || (!other_data)){//viga no tiene data
 					Projectile* projectile = static_cast<Projectile*>(data->pointer);
 					projectile->exploit();
 				}
