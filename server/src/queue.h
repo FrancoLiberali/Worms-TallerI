@@ -2,6 +2,7 @@
 #define __QUEUE_H__
 
 #include <queue>
+#include <mutex>
 
 class Queue{
 	protected:

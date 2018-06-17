@@ -37,7 +37,8 @@ void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
 		delete gusano;
 	}
 	this->players.erase(player_id);
-	this->proxy.erase(player_id);
+	Proxy* disconnected = this->proxy.erase(player_id);
+	disconnected->disconnect();
 	this->proxy.sendPlayerDisconnection(player_id);
 	if (player_id == active_player){
 		turn_actual_len = TURN_LEN;
@@ -150,8 +151,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			std::cout << "hay evento\n";
 			//no es posible generar raise condition porque del otro lado 
 			// solo meten asi que si no estaba vacia tampoco lo estara ahora
-			char* msj = this->queue.front();
-			this->queue.pop();
+			char* msj = this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
 			Gusano* gusano = this->players[active_player][active_gusano];
 			if (msj[0] == 10){

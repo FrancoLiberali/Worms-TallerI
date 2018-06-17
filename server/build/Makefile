@@ -1635,33 +1635,6 @@ src/gusano.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/gusano.cpp.s
 .PHONY : src/gusano.cpp.s
 
-src/hall.o: src/hall.cpp.o
-
-.PHONY : src/hall.o
-
-# target to build an object file
-src/hall.cpp.o:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.o
-.PHONY : src/hall.cpp.o
-
-src/hall.i: src/hall.cpp.i
-
-.PHONY : src/hall.i
-
-# target to preprocess a source file
-src/hall.cpp.i:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.i
-.PHONY : src/hall.cpp.i
-
-src/hall.s: src/hall.cpp.s
-
-.PHONY : src/hall.s
-
-# target to generate assembly for a file
-src/hall.cpp.s:
-	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/hall.cpp.s
-.PHONY : src/hall.cpp.s
-
 src/inactive_state.o: src/inactive_state.cpp.o
 
 .PHONY : src/inactive_state.o
@@ -2460,9 +2433,6 @@ help:
 	@echo "... src/gusano.o"
 	@echo "... src/gusano.i"
 	@echo "... src/gusano.s"
-	@echo "... src/hall.o"
-	@echo "... src/hall.i"
-	@echo "... src/hall.s"
 	@echo "... src/inactive_state.o"
 	@echo "... src/inactive_state.i"
 	@echo "... src/inactive_state.s"

@@ -333,6 +333,8 @@ receiver.h
 ../src/receiver.h
 room.h
 ../src/room.h
+player_info.h
+../src/player_info.h
 string
 -
 vector
@@ -358,6 +360,14 @@ mutex
 map
 -
 
+../src/player_info.h
+string
+-
+receiver.h
+../src/receiver.h
+room.h
+../src/room.h
+
 ../src/protected_queue.h
 queue
 -
@@ -369,8 +379,8 @@ queue.h
 ../src/proxy.h
 socket.h
 ../src/socket.h
-protected_queue.h
-../src/protected_queue.h
+queue.h
+../src/queue.h
 string
 -
 vector
@@ -381,14 +391,16 @@ map
 ../src/queue.h
 queue
 -
+mutex
+-
 
 ../src/receiver.h
 thread.h
 ../src/thread.h
 proxy.h
 ../src/proxy.h
-protected_queue.h
-../src/protected_queue.h
+queue.h
+../src/queue.h
 mutex
 -
 
@@ -417,6 +429,8 @@ blocking_queue.h
 ../src/blocking_queue.h
 initiador.h
 ../src/initiador.h
+player_info.h
+../src/player_info.h
 mutex
 -
 string
@@ -1190,26 +1204,6 @@ projectile.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
 
-/home/franco/Documentos/taller1/tpfinal/server/src/hall.cpp
-hall.h
-/home/franco/Documentos/taller1/tpfinal/server/src/hall.h
-
-/home/franco/Documentos/taller1/tpfinal/server/src/hall.h
-thread.h
-/home/franco/Documentos/taller1/tpfinal/server/src/thread.h
-multiple_proxy.h
-/home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
-room.h
-/home/franco/Documentos/taller1/tpfinal/server/src/room.h
-vector
--
-string
--
-map
--
-mutex
--
-
 /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp
 inactive_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.h
@@ -1239,6 +1233,8 @@ receiver.h
 /home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
 room.h
 /home/franco/Documentos/taller1/tpfinal/server/src/room.h
+player_info.h
+/home/franco/Documentos/taller1/tpfinal/server/src/player_info.h
 string
 -
 vector
@@ -1334,6 +1330,14 @@ mutex
 map
 -
 
+/home/franco/Documentos/taller1/tpfinal/server/src/player_info.h
+string
+-
+receiver.h
+/home/franco/Documentos/taller1/tpfinal/server/src/receiver.h
+room.h
+/home/franco/Documentos/taller1/tpfinal/server/src/room.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.cpp
 projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
@@ -1387,8 +1391,8 @@ cstring
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
 socket.h
 /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
-protected_queue.h
-/home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 string
 -
 vector
@@ -1398,6 +1402,8 @@ map
 
 /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 queue
+-
+mutex
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/ray_cast_all_callback.h
@@ -1425,8 +1431,8 @@ thread.h
 /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
 proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
-protected_queue.h
-/home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+queue.h
+/home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 mutex
 -
 
@@ -1501,6 +1507,8 @@ blocking_queue.h
 /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
 initiador.h
 /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
+player_info.h
+/home/franco/Documentos/taller1/tpfinal/server/src/player_info.h
 mutex
 -
 string

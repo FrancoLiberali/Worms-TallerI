@@ -1,11 +1,16 @@
 #include "room.h"
 #include "game.h"
 
-Room::Room(unsigned int map_id_e, int max_players_e) : map_id(map_id_e), max_players(max_players_e){
+Room::Room(std::string name_e, unsigned int map_id_e, int max_players_e) : 
+		name(name_e), map_id(map_id_e), max_players(max_players_e){
 	
 }
 
 Room::~Room(){
+}
+
+std::string Room::getName(){
+	return this->name;
 }
 
 void Room::add(int player_id, std::string player_name, Proxy* player_proxy){
@@ -22,14 +27,18 @@ void Room::erase(int player_id){
 	this->names.erase(player_id);
 	this->proxy.erase(player_id);
 	this->proxy.sendPlayerDisconnection(player_id);
+	//se va a mandar dos veces porque se manda desde aca tambien
 }
 
 void Room::run(){
 	this->proxy.addNewQueue(&(this->queue));
-	this->waiting = false;
-	//Game game(this->proxy, this->queue, this->map_id, this->max_players);
-	//game.play();
-	this->finished = true;
+	this->active = true;
+	std::vector<int> players;
+	std::map<int, std::string>::iterator it = names.begin();
+	for(; it != names.end(); ++it){
+		players.push_back(it->first);
+	}
+	Game game(this->proxy, this->queue, this->map_id, players);
 	//cuando termina vuelven a mandar mensajes a la hall
 	this->proxy.changeToPrevQueue(); 
 }
@@ -37,13 +46,8 @@ void Room::run(){
 void Room::stop(){
 }
 
-bool Room::isWaiting(){
-	//me parece que estan al pedo
-	return this->waiting;
-}
-		
-bool Room::isFinished(){
-	return this->finished;
+bool Room::isActive(){
+	return this->active;
 }
 
 int Room::cantPlayers(){

@@ -14,9 +14,11 @@ void MultipleProxy::add(int id, Proxy* proxy){
 	this->proxys.insert(std::pair<int, Proxy*>(id, proxy));
 }
 
-void MultipleProxy::erase(int id){
+Proxy* MultipleProxy::erase(int id){
 	std::lock_guard<std::mutex> lock(this->mutex);
+	Proxy* erased = this->proxys[id];
 	this->proxys.erase(id);
+	return erased;
 }
 
 void MultipleProxy::addNewQueue(ProtectedQueue* queue){

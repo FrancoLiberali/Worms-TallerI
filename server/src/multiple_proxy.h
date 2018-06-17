@@ -28,7 +28,7 @@ class MultipleProxy{
 		
 		// Saca un jugador de la lista de proxys segun su id, para que
 		// deje de recibir los mensajes del juego
-		void erase(int id);
+		Proxy* erase(int id);
 		
 		void addNewQueue(ProtectedQueue* queue);
 		

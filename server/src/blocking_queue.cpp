@@ -14,8 +14,10 @@ bool BlockingQueue::isEmpty(){
 
 void BlockingQueue::empty(){
 	std::unique_lock<std::mutex> lock(this->mutex);
-	while(this->isEmpty()){
-		delete[] (this->pop());
+	while(!this->queue.empty()){
+		char* val = this->queue.front();
+		this->queue.pop();
+		delete[] val;
 	}
 }
 

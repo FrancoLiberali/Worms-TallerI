@@ -2,7 +2,7 @@
 #include "socket_error.h"
 #include <iostream>
 
-Receiver::Receiver(Socket& socket, ProtectedQueue* queue){
+Receiver::Receiver(Socket& socket, Queue* queue){
 	Socket active = socket.accept();
 	this->proxy = new Proxy(std::move(active), queue);
 }

@@ -24,7 +24,7 @@ void Server::run(){
 			std::string name = proxy->receiveName();
 			std::cout << "name: " << name << '\n'; 
 			proxy->sendPlayerId(cant_players);
-			this->players.push_back(std::pair<std::string, Receiver*>(name, receiver));
+			this->players.insert(std::pair<int, PlayerInfo*>(cant_players, new PlayerInfo(name, receiver)));
 			this->not_playing.add(cant_players, proxy);
 		
 			std::lock_guard<std::mutex> lock_rooms(rooms_mutex);
@@ -58,10 +58,11 @@ void Server::stop(){
 		//rooms_it->second->join();//para las que se estan jugando detener el juego
 		delete rooms_it->second;
 	}
-	std::vector<std::pair<std::string, Receiver*>>::iterator it = players.begin();
+	std::map<int, PlayerInfo*>::iterator it = players.begin();
 	for (; it != players.end(); ++it){
-		it->second->stop();
-		it->second->join();
+		it->second->receiver->stop();
+		it->second->receiver->join();
+		delete it->second->receiver;
 		delete it->second;
 	} 
 	this->socket.shutdown();

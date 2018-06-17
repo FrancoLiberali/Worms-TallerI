@@ -9,18 +9,20 @@
 
 class Room : public Thread{
 	private:
+		std::string name;
 		unsigned int map_id;
 		int max_players;
 		std::map<int, std::string> names;
 		MultipleProxy proxy;
 		ProtectedQueue queue;
-		bool waiting = true;
-		bool finished = false;
+		bool active = false;
 		
 	public:
-		Room(unsigned int map_id_e, int max_players_e);
+		Room(std::string name, unsigned int map_id_e, int max_players_e);
 		
 		~Room();
+		
+		std::string getName();
 		
 		void add(int player_id, std::string player_name, Proxy* player_proxy);
 		
@@ -30,9 +32,7 @@ class Room : public Thread{
 		
 		virtual void stop();
 		
-		bool isWaiting();
-		
-		bool isFinished();
+		bool isActive();
 		
 		int cantPlayers();
 		

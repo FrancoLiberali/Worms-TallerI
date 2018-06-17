@@ -7,6 +7,7 @@
 
 JumpingState::JumpingState(b2Body* body_e, Gusano* gusano_e) : body(body_e), gusano(gusano_e){
 	this->y_max = this->body->GetPosition().y;
+	this->y_last = this->body->GetPosition().y;
 }
 
 JumpingState::~JumpingState(){

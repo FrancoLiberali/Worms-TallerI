@@ -1,6 +1,6 @@
 #include "thread.h"
 #include "proxy.h"
-#include "protected_queue.h"
+#include "queue.h"
 #include <mutex>
 
 #ifndef __RECEIVER_H__
@@ -15,7 +15,7 @@ class Receiver : public Thread{
 		// Crea un objeto receiver. La creacion de este objeto es bloqueante
 		// hasta que un jugador se conecte al socket recibido.
 		// Una vez conectado, se crea el proxy de comunciacion con el mismo.
-		Receiver(Socket& socket, ProtectedQueue* queue_e);
+		Receiver(Socket& socket, Queue* queue);
 		
 		~Receiver();
 		

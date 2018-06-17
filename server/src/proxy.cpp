@@ -19,9 +19,10 @@
 #define TIME_TAM 9
 #define POWER_TAM 5
 #define SHOT_TAM 5
+#define EXIT_TAM 5
 #define ONEBYTE 1
 
-Proxy::Proxy(Socket socket_e, ProtectedQueue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
+Proxy::Proxy(Socket socket_e, Queue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
 }
 		
 Proxy::~Proxy() noexcept{
@@ -31,7 +32,7 @@ void Proxy::close_communication(){
 	this->socket.shutdown();
 }
 
-void Proxy::addNewQueue(ProtectedQueue* queue){
+void Proxy::addNewQueue(Queue* queue){
 	this->prev_queue = this->queue;
 	this->queue = queue;
 }
@@ -84,31 +85,37 @@ void Proxy::receive_event(){
 					this->receive_event_info(event, SHOT_TAM);
 					break;
 			case 11://se recibe que se quiere salir de la room actual
-					this->receiveNameToQueue(event, 2);
+					this->receive_event_info(event, EXIT_TAM);
 					break;
 			case 12://se recibe que se quiere entrar a una room
 					this->receiveNameToQueue(event, 2);
 					break;	
 			case 13://se recibe que se quiere crear una room
 					this->receiveNameToQueue(event, 4);
-					break;			
-			case 14://se reibe que se quiere salir de una room activa
-					this->receiveNameToQueue(event, 2);
 					break;
 			}
 	}catch (SocketError& e){
 		std::cout << "se desconecto\n";
 		std::cout << this->id << "\n";
-		char* msj = new char[DISCONNECT_TAM];
-		//player get desconected message
-		msj[0] = 10;
-		msj[1] = (this->id >> MOSTSIGNIFICANT) & LAST8;
-		msj[2] = (this->id >> SECONDBYTE) & LAST8;
-		msj[3] = (this->id >> THIRDBYTE) & LAST8;
-		msj[4] = this->id & LAST8;
-		this->queue->push(msj);
+		this->pushDisconnectionMessage();
 		throw e;
 	}
+}
+
+void Proxy::pushDisconnectionMessage(){
+	char* msj = new char[DISCONNECT_TAM];
+	//player get disconected message
+	msj[0] = 10;
+	msj[1] = (this->id >> MOSTSIGNIFICANT) & LAST8;
+	msj[2] = (this->id >> SECONDBYTE) & LAST8;
+	msj[3] = (this->id >> THIRDBYTE) & LAST8;
+	msj[4] = this->id & LAST8;
+	this->queue->push(msj);
+}
+
+void Proxy::disconnect(){
+	this->changeToPrevQueue();
+	this->pushDisconnectionMessage();
 }
 
 void Proxy::receiveNameToQueue(char event, int cant_ints){

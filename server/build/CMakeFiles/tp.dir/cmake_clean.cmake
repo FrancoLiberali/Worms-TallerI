@@ -25,7 +25,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/turn.cpp.o"
   "CMakeFiles/tp.dir/src/server.cpp.o"
   "CMakeFiles/tp.dir/src/moving_state.cpp.o"
-  "CMakeFiles/tp.dir/src/hall.cpp.o"
   "CMakeFiles/tp.dir/src/rotating_state.cpp.o"
   "CMakeFiles/tp.dir/src/green_granade.cpp.o"
   "CMakeFiles/tp.dir/src/util/yamlparser.cpp.o"

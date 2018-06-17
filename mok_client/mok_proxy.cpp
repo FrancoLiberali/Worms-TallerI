@@ -202,19 +202,6 @@ void MokProxy::send(char event){
 				char ev = 11;
 				this->socket.send_(&ev, 1);
 				this->send_int(this->id);
-				char franco_room[12] = "franco_room";
-				this->send_int(11);
-				this->socket.send_(franco_room, 11);
-				break;
-			}
-		case 'p': {//salir de la room
-				std::cout << "salir del room activo\n";
-				char ev = 14;
-				this->socket.send_(&ev, 1);
-				this->send_int(this->id);
-				char franco_room[12] = "franco_room";
-				this->send_int(11);
-				this->socket.send_(franco_room, 11);
 				break;
 			}
 		case 'e': {//entrar a una room

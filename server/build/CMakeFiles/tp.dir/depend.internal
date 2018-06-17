@@ -545,6 +545,7 @@ CMakeFiles/tp.dir/main.cpp.o
  ../src/blocking_queue.h
  ../src/initiador.h
  ../src/multiple_proxy.h
+ ../src/player_info.h
  ../src/protected_queue.h
  ../src/proxy.h
  ../src/queue.h
@@ -953,16 +954,6 @@ CMakeFiles/tp.dir/src/gusano.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
-CMakeFiles/tp.dir/src/hall.cpp.o
- /home/franco/Documentos/taller1/tpfinal/server/src/hall.cpp
- /home/franco/Documentos/taller1/tpfinal/server/src/hall.h
- /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
- /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
- /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
- /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
- /home/franco/Documentos/taller1/tpfinal/server/src/room.h
- /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
- /home/franco/Documentos/taller1/tpfinal/server/src/thread.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o
  ..//Box2D/Box2D.h
  ..//Box2D/Collision/Shapes/b2ChainShape.h
@@ -1009,6 +1000,7 @@ CMakeFiles/tp.dir/src/initiador.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/player_info.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
@@ -1273,14 +1265,12 @@ CMakeFiles/tp.dir/src/protected_queue.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o
- /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket_error.h
 CMakeFiles/tp.dir/src/receiver.cpp.o
- /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/receiver.cpp
@@ -1437,6 +1427,7 @@ CMakeFiles/tp.dir/src/server.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/blocking_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/initiador.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/player_info.h
  /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
@@ -1542,6 +1533,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o
  ..//Box2D/Dynamics/b2TimeStep.h
  ..//Box2D/Dynamics/b2World.h
  ..//Box2D/Dynamics/b2WorldCallbacks.h
+ ../src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fragment_info.h
@@ -1554,7 +1546,6 @@ CMakeFiles/tp.dir/src/turn.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/morter.h
  /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
- /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h

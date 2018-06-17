@@ -60,7 +60,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/franco/Documentos/taller1/tpfinal/server/src/game.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/game.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/green_granade.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/gusano.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/gusano.cpp.o"
-  "/home/franco/Documentos/taller1/tpfinal/server/src/hall.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/hall.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/inactive_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/inactive_state.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/initiador.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/initiador.cpp.o"
   "/home/franco/Documentos/taller1/tpfinal/server/src/jumping_state.cpp" "/home/franco/Documentos/taller1/tpfinal/server/build/CMakeFiles/tp.dir/src/jumping_state.cpp.o"

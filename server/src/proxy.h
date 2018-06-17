@@ -1,5 +1,5 @@
 #include "socket.h"
-#include "protected_queue.h"
+#include "queue.h"
 #include <string>
 #include <vector>
 #include <map>
@@ -11,29 +11,32 @@ class Proxy{
 	private:
 		Socket socket;
 		int id = 0;
-		ProtectedQueue* queue;
-		ProtectedQueue* prev_queue;
+		Queue* queue;
+		Queue* prev_queue;
 		
 		void receive_event_info(char event, int tam);
 		void receiveNameToQueue(char event, int cant_ints);
+		void pushDisconnectionMessage();
 	public:
 		// Objeto que envia todos los mensajes a un juagador via 
 		// el socket recibido.
 		// La estructura de los mensajes respeta el protocolo
 		// de comunicacion definido para este programa
-		Proxy(Socket socket_e, ProtectedQueue* queue);
+		Proxy(Socket socket_e, Queue* queue);
 		
 		~Proxy() noexcept;
 		
 		void close_communication();
 		
-		void addNewQueue(ProtectedQueue* queue);
+		void addNewQueue(Queue* queue);
 		
 		void changeToPrevQueue();
 		
 		std::string receiveName();
 		
 		void receive_event();
+		
+		void disconnect();
 		
 		const unsigned char receive_char();
 		

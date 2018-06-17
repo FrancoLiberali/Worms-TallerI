@@ -544,6 +544,7 @@ CMakeFiles/tp.dir/Box2D/Rope/b2Rope.cpp.o: ../Box2D/Rope/b2Rope.cpp
 CMakeFiles/tp.dir/main.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/main.cpp.o: ../src/player_info.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/main.cpp.o: ../src/queue.h
@@ -953,16 +954,6 @@ CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/rotating_state.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/gusano.cpp.o: ../src/user_data.h
 
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/hall.cpp
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/hall.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/multiple_proxy.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/protected_queue.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/proxy.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/queue.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/room.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/socket.h
-CMakeFiles/tp.dir/src/hall.cpp.o: ../src/thread.h
-
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Box2D.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Collision/Shapes/b2ChainShape.h
 CMakeFiles/tp.dir/src/inactive_state.cpp.o: ../Box2D/Collision/Shapes/b2CircleShape.h
@@ -1008,6 +999,7 @@ CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/initiador.cpp
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/player_info.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/initiador.cpp.o: ../src/queue.h
@@ -1272,14 +1264,12 @@ CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.cpp
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/protected_queue.cpp.o: ../src/queue.h
 
-CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.cpp
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket.h
 CMakeFiles/tp.dir/src/proxy.cpp.o: ../src/socket_error.h
 
-CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/receiver.cpp.o: ../src/receiver.cpp
@@ -1436,6 +1426,7 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o: ../src/rotating_state.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/blocking_queue.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/initiador.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/multiple_proxy.h
+CMakeFiles/tp.dir/src/server.cpp.o: ../src/player_info.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/server.cpp.o: ../src/queue.h
@@ -1541,6 +1532,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o: ../Box2D/Dynamics/b2Fixture.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../Box2D/Dynamics/b2TimeStep.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../Box2D/Dynamics/b2World.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../Box2D/Dynamics/b2WorldCallbacks.h
+CMakeFiles/tp.dir/src/turn.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/bazooka.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/fake_proxy/mok_proxy.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/fragment_info.h
@@ -1553,7 +1545,6 @@ CMakeFiles/tp.dir/src/turn.cpp.o: ../src/little_projectile.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/morter.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/multiple_proxy.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/projectile.h
-CMakeFiles/tp.dir/src/turn.cpp.o: ../src/protected_queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/proxy.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/queue.h
 CMakeFiles/tp.dir/src/turn.cpp.o: ../src/simple_projectile.h

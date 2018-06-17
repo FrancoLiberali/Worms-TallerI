@@ -4,6 +4,7 @@
 #include "multiple_proxy.h"
 #include "blocking_queue.h"
 #include "initiador.h"
+#include "player_info.h"
 #include <mutex>
 #include <string>
 #include <vector>
@@ -17,7 +18,7 @@ class Server : public Thread {
 	private:
 		std::mutex& syslog_mutex;
 		Socket socket;
-		std::vector<std::pair<std::string, Receiver*>> players;
+		std::map<int, PlayerInfo*> players;
 		MultipleProxy not_playing;
 		BlockingQueue hall_queue;
 		std::map<std::string, Room*> rooms;
