@@ -1,15 +1,21 @@
-Para iniciar una partida un cliente se debe conectar al servidor.
-Al ver que se conecto un client, el servidor siempre responde con el numero de jugador que le corresponde,
-con el mensaje:
-	char en 0 que es codigo del mensaje numero de jugador
-	int de 4 bytes big endian con el numero de jugador correspondiente
+Cuando un client se conecta al servidor, el mismo lo acepta y se queda esperando que este client le mande su nombre instantaneamente.
+En el client, este nombre deberia ser pedido previo a permitirle conectarse.
+->Primer pantalla:
+	Ingrese nombre:
+	CONTINUAR
+->Sengunda pantalla
+	ip:
+	port:
+	CONECTARSE ->al tocar este boton se conecta y envia el nombre
+El nombre se manda en el formato string del protocolo.
+A continuacion, el client pasa al hall de partidas. Primero va a recibir todas las salas que ya estan creadas actualmente mediante el mensaje 16 del server. Con esta informacion, el client debera mostrar una lista de partidas disponibles.
+A medida que pase el tiempo, las salas iran cambiando la cantidad de integrantes que tienen dentro, lo que se avisa con el mensaje 17 del server. Tambien, existe un mensaje 18 que es cuando se tiene que dejar de mostrar en esta lista una determinada sala, ya sea porque esta te completo e inicio el juego, o porque esta se vacio y se destruyo.
+Aqui el client tiene dos opciones:
+1- Conectarse a una sala ya existente: El client debera elegir a que sala se quiere conectar y mandar el mensaje 12 del client
+Luego de conectarse, el client recibira con el mensaje 19 del server, la informacion de todos los jugadores que ya estaban conectados a esta sala
+2- Crear una nueva sala: con el mensaje 13 el client podra crear una nueva sala, enviando el mapa a jugar, la cantidad de jugadores a esperar que se conecten y el nombre que le quiere poner a la sala. Si el nombre de sala ya existe, recibira el mensaje 20 del server, error de nombre.
 
-Cuando se conecta el primer jugador, el servidor se queda esperando que el mismo le mande el siguiente mensaje:
-	char en 0 que es codigo del mensaje de configuracion de partida
-	int de 4 bytes big endian con el numero de mapa que desea jugar
-	int de 4 bytes big endian con el numero de jugadores que van a jugar (entre 2 y 10)
+En ambos casos, luego de lo descripto, el client recibira los mensajes 19 o 13 del server, un nuevo jugador se ha conectado o un jugador se ha desconectado de la sala respectivamente, para actualizar la pantalla con la informacion de la sala. Esto sucedera hasta que la sala se complete
+y comience el juego o hasta que el client decida irse de la sala(si o si antes de que comience el juego) con el mensaje 11 del client.
 
-Es decir, que el client debe chequear si la respuesta a la conexion fue que es el jugador 1 para darle al servidor esta informacion.
-Una vez que el client le de al server la info de mapa y cantidad de jugadores, el server esperará a que se conecten el resto
-de jugadores para completar el numero indicado (aun no esta implimentada una solucion a que uno de los clientes se desconecte en 
-la sala de espera). Cada jugador ademas debe mandar un mensaje con su nombre apenas se conecte(mensaje 0 de protocolo client). Cuando esto suceda, se cargará el mapa y el juego empezará.
+En caso de que la sala se complete, inicia el juego. El client no puede irse de juego hasta que el mismo no termine. Esto significa, que hasta que no reciba el mensaje 14 del server con su propio id(es decir que el jugador perdio) o el mensaje 15 de que algun jugador gano, el mismo no debe tener la opcion de enviar el mensaje 11 para salir de la sala y volver al hall de partidas para jugar otra partida. Entonces, si el jugador pierde, debe aparecer un nuevo boton para que el jugador envie este mensaje si quiere o si quiere no tocarlo y quedarse mirando la partida hasta su fin. 

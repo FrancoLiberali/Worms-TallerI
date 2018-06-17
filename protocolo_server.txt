@@ -88,9 +88,40 @@ UN JUGADOR SE HA DESCONECTADO
 	char en 13
 	int numero de jugador que se desconecto
 
-Un JUGADOR HA GANADO LA PARTIDA
+UN JUGADOR HA PERDIDO
 	char en 14
+	int numero de jugador que perdio(todos gusanos fueron asesinados)
+
+Un JUGADOR HA GANADO LA PARTIDA
+	char en 15
 	int numero de jugador ganador
+
+----MENSAJES DE HALL DE PARTIDAS----
+SE HA CREADO UNA NUEVA SALA
+	char en 16
+	(a agregar un id de sala para no tener que andar mandando siempre los strings)
+	string nombre de la sala
+	int cantidad de jugadores
+	int numero maximo de jugadores
+	int numero de map
+	Este mensaje se manda ya sea cuando realmente se crea una sala en ese momento pero tambien cuando un nuevo client se conecta se le mande este mensaje con todas las salas que ya existian para que las pueda mostrar(a sus ojos se estan creando)
+
+CAMBIO EN EL NUMERO DE JUGADORES DENTRO DE UNA SALA
+	Para que el client pueda actualizar el numero de jugadores que hay dentro de la sala
+	char en 17
+	string nombre de la sala(a cambiar por un id)
+	int nueva cantidad de jugadores
+
+DESTRUCCION DE UNA SALA
+	las salas se destruyen ya sea porque todos los jugadores se fueron o porque se completo la cantidad maxima de jugadores y empezo la partida
+	char en 18
+	string nombre de la sala(a cambiar por un id)
+
+UN NUEVO JUGADOR SE HA CONECTADO A LA SALA
+	La idea de este mensaje es que el client vaya guardando para los jugadores de la sala su id y su nombre ya que luego en la partida los va a necesitar
+	char en 19
+	int id nuevo jugador
+	string nombre nuevo jugador
 
 	
 
