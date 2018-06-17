@@ -47,6 +47,7 @@ void Controller::handle(SDL_Event& e) {
         }
         case SDL_MOUSEBUTTONDOWN:
             SDL_Point mousePointer = {e.motion.x, e.motion.y};
+            //printf("%i - %i\n", e.motion.x, e.motion.y);
             if (view.hasClickedMenu(mousePointer)){
                 Weapon* weapon = view.retrieveWeaponClicked(mousePointer);
                 if (weapon)

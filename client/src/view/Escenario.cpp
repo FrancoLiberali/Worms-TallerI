@@ -2,12 +2,10 @@
 #include "newView/TextureManager.h"
 
 Escenario::Escenario(SdlScreen& screen):screen(screen){
-	viga = new VigaView(200,200,0, screen);
 }
 
 void Escenario::draw(){
 	TextureManager::Instance().draw("sky", 0, 0, 0, screen.getRenderer());
-	viga->draw();
 	for (auto vi = vigas.begin(); vi != vigas.end(); vi++)
 		(*vi)->draw();
 }

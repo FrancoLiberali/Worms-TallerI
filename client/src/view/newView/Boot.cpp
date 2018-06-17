@@ -67,6 +67,24 @@ void Boot::loadSprites(){
 		SpriteConfigurator::Instance().add("banana", 60, 60, 32, false, 16);
 
 		// projectiles
+
+		TextureManager::Instance().load("../resource/images/misiles/bazzoka.png", "bullet_bazooka", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/mortar.png", "bullet_mortar", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/airmisl.png", "bullet_airmisl", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/dynamite.png", "bullet_dinamita", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/hgrenade.png", "bullet_holy", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/ggrenade.png", "bullet_ggrenade", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/rgrenade.png", "bullet_rgrenade", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/banana.png", "bullet_banana", this->getScreen().getRenderer());
+
+		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_dinamita", 60, 60, 129, true);
+		SpriteConfigurator::Instance().add("bullet_holy", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_ggrenade", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_rgrenade", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_bazooka", 60, 60, 32, true, 23);
+		SpriteConfigurator::Instance().add("bullet_mortar", 60, 60, 32, true, 23);
+		SpriteConfigurator::Instance().add("bullet_banana", 60, 60, 32, true);
 		
 		//Vigas
 		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
@@ -78,14 +96,10 @@ void Boot::loadSprites(){
 
 		// explosiones
 		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/circle50.png", "circle50", screen.getRenderer());			
-		TextureManager::Instance().load("../resource/images/circle75.png", "circle75", screen.getRenderer());			
-		TextureManager::Instance().load("../resource/images/circle100.png", "circle100", screen.getRenderer());
+		TextureManager::Instance().load("../resource/images/explotion.png", "explotion", screen.getRenderer());
 
 		SpriteConfigurator::Instance().add("circle25", 50, 50, 8, false);
-		SpriteConfigurator::Instance().add("circle50", 100, 100, 8, false);
-		SpriteConfigurator::Instance().add("circle75", 150, 150, 4, false);
-		SpriteConfigurator::Instance().add("circle100", 200, 200, 4, false);
+		SpriteConfigurator::Instance().add("explotion", 134, 134, 12, false);
 
 		} catch (GameException & e) {
             std::cerr << e.what() << std::endl;

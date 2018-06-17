@@ -147,7 +147,7 @@ void WormView::update(){
 		}
 
 	} else if (this->state == DEAD) {
-			if (alive)
+		if (alive)
 			currentSprite = &this->sprites["morir"];
 
 		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame())
@@ -168,8 +168,7 @@ void WormView::draw(){
 									currentSprite->getWidth(),
 									currentSprite->getHeight(),
 									currentSprite->getCurrentRow(),
-									0,
-									screen->getRenderer(),false,flip);
+									0, screen->getRenderer(),false,flip);
 	 
 	if (this->selected)
 		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
@@ -187,7 +186,7 @@ void WormView::draw(){
 
 void WormView::selectWeapon(WeaponId idWapon){
 	this->weaponId = idWapon;
-	aim.reset();
+	//aim.reset();
 }
 
 
@@ -231,7 +230,7 @@ int WormView::getYCenter()
 }
 
 void WormView::changeLife(int newLife){
-	int widhtLifeCurrent = newLife * widhtLife100 /100;
+	widhtLifeCurrent = newLife * widhtLife100 /100;
 	currentLife = newLife;
 }
 

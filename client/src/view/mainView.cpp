@@ -32,6 +32,9 @@ mainView::~mainView(){
 	for (auto& it: worms){
 		delete it.second;
 	}
+	for (auto& it: bullets){
+		delete it.second;
+	}
 }
 
 bool mainView::isOpen(){
@@ -57,22 +60,32 @@ void mainView::update(){
 		event->process();
 		delete event;
 		updateWorms();
+		updateBullets();
 		screen.render();
 	}
 	updateWorms();
+	updateBullets();
 	menuWeapon->draw(screen);
 	screen.render();
 }
 
 WormView* mainView::getWormView(int id){
-		return worms[id];
+	return worms[id];
+}
+
+BulletView* mainView::getBulletView(int id){
+	return bullets[id];
 }
 
 void mainView::updateWorms(){
-	for(auto& it: this->worms)
+	for (auto& it: this->worms)
 		it.second->update();
 }
 
+void mainView::updateBullets(){
+	for (auto& it: this->bullets)
+		it.second->update();
+}
 
 void mainView::actionMenu(){
 	menuWeapon->actionMenu();
@@ -98,6 +111,13 @@ void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, in
 void mainView::addViga(int x, int y, int angle){
 	stage.addViga(x, y, angle);
 }
+
+void mainView::addMissile(int id, WeaponId idWeapon, int dir, int posx, int posy, int angle){
+	//std::cout<<"creo un missil de: "<<(int)idWeapon<<std::endl;
+	BulletView* bullet = BulletFactory::createBulletView(idWeapon, id, dir, posx, posy, angle, screen);
+	this->bullets[id] = bullet;
+}
+
 
 std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	turnView.setColor(255,10,255);

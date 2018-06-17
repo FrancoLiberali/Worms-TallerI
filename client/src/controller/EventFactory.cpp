@@ -9,6 +9,9 @@
 #include "PlayerConnectEvent.h"
 #include "CreateVigaEvent.h"
 #include "CreateWormEvent.h"
+#include "CreateMissileEvent.h"
+#include "MissileMoveEvent.h"
+#include "MissileExploteEvent.h"
 #include "StartTurnEvent.h"
 #include "PlayerOffEvent.h"
 #include "WormChangeAimEvent.h"
@@ -66,25 +69,24 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int idMissile = proxy.receiveInt(); 
       int idWeapon = proxy.receiveInt();
       int dir = proxy.receiveInt();
-      int x = proxy.receivePosX();
-      int y = proxy.receivePosY();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       int angle = proxy.receiveAngle();
-      return nullptr;
+      return new CreateMissileEvent(idMissile, idWeapon, dir, posx, posy, angle, view);
     }
     case M_POS: {
       int idMissile = proxy.receiveInt();
-      int posx = proxy.receivePosY();
-      int posy = proxy.receivePosX();
+      int posx = proxy.receivePosX();
+      int posy = proxy.receivePosY();
       int angle = proxy.receiveAngle();
-      return nullptr;
+      return new MissileMoveEvent(idMissile, posx, posy, angle);
     }
     case M_EXPLOTE: {
       int idMissile = proxy.receiveInt();
-      return nullptr;
+      return new MissileExploteEvent(idMissile);
     }
     case W_CUR_WEAPON: {
       int idWeapon = proxy.receiveInt();
-      //std::cout<<"Change Weapon " << idWeapon << std::endl; 
       return new WormWeaponEvent(model.getIdWormSelected(), idWeapon);
     }
     case W_CUR_AIM: {

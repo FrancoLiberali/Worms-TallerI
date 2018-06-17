@@ -21,6 +21,7 @@ enum WeaponId {
 	BATE,
 	AIRATTACK,
 	TELEPORT,
+	FRAGMENT,
 };
 
 #endif

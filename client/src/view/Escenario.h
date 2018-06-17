@@ -7,7 +7,6 @@
 
 class Escenario{
 	SdlScreen& screen;
-	VigaView* viga;
 	std::vector<VigaView*> vigas;
 public:
 	Escenario(SdlScreen& screen);

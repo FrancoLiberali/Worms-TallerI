@@ -8,7 +8,6 @@
 #define MAX_NAME_LEN 20
 
 #define ESCALA (140/6)
-#define MILES
 
 ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)), open(true){
 }

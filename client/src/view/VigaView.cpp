@@ -1,5 +1,7 @@
 #include "VigaView.h"
 
+#define OFFSET 3
+
 VigaView::VigaView(int posX, int posY, int angle, SdlScreen& screen) 
         : x(posX), y(posY), angle(angle), screen(screen){
 }

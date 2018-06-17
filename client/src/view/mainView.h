@@ -5,6 +5,8 @@
 #include "Escenario.h"
 #include "WormView.h"
 #include "../controller/Event.h"
+#include "BulletFactory.h"
+#include "BulletView.h"
 
 
 #include <SDL2/SDL.h>
@@ -29,18 +31,21 @@ private:
 	TextView turnView;
 
 	std::map<int,WormView*> worms;
+	std::map<int,BulletView*> bullets;
+
 	bool open;
 	bool endGame;
 	void init();
 	void updateWorms();
+	void updateBullets();
 public:
 	mainView(EventHandler& eventHandler, SdlScreen& screen);
 	~mainView();
 	bool isOpen();
 	void update();
 	void close();
-	//para pruebas
 	WormView* getWormView(int id);
+	BulletView* getBulletView(int id);
 	SdlScreen& getScreen(){return screen;}
 	void setMenuWeapon();
 	void actionMenu();
@@ -49,6 +54,7 @@ public:
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
 	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);
+    void addMissile(int id, WeaponId weaponId, int dir, int posx, int posy, int angle);
 	std::string changeTurn(std::string namePlayer, int idWorm);
 	void showWinner();
 	void showLosser();
