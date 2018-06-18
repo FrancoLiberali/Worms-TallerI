@@ -59,7 +59,7 @@ SALIR DE LA SALA ACTUAL
 ENTRAR EN UNA SALA
 	char en 12
 	int id jugador
-	string nombre de sala a entrar(a cambiar por un id de sala)
+	int id sala
 
 CREAR UNA SALA
 	char en 13

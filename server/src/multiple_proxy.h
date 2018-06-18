@@ -12,7 +12,6 @@
 class MultipleProxy{
 	private:
 		std::map<int, Proxy*> proxys;
-		std::mutex mutex;
 		
 	public:
 		// Crea el objeto, el cual tiene la finalidad de contener
@@ -62,11 +61,11 @@ class MultipleProxy{
 		
 		void sendGameWon(int player_id);
 		
-		void sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id);
+		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, unsigned int map_id);
 		
-		void sendRoomPlayersChange(const std::string& name, int cant_players);
+		void sendRoomPlayersChange(int room_id, int cant_players);
 		
-		void sendRoomDeletion(const std::string& name);
+		void sendRoomDeletion(int room_id);
 		
 		void sendPlayerConnection(int id, const std::string& name);
 		

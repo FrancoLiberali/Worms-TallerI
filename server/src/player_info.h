@@ -9,11 +9,13 @@ struct PlayerInfo{
 	public:
 		std::string name;
 		Receiver* receiver;
-		Room* room = nullptr;
+		int room_id = 0;
 		
-		PlayerInfo(std::string name_e, Receiver* receiver_e) :  name(name_e), receiver(receiver_e){}
+		PlayerInfo(std::string name_e, Receiver* receiver_e) :  name(std::move(name_e)), receiver(receiver_e){}
 		
-		void setRoom(Room* room){this->room = room;}
+		void setRoom(int id){this->room_id = id;}
+		
+		std::string& getName() {return this->name;}
 		
 };
 

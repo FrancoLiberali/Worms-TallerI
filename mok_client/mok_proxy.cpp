@@ -133,6 +133,7 @@ void MokProxy::receive_event(){
 			break;
 		}
 		case 16: {//creacion de una room
+			this->last_room_id = this->receive_int();
 			int name_len = this->receive_int();
 			char* name_c = new char[name_len];
 			this->socket.receive_(name_c, name_len);
@@ -141,26 +142,18 @@ void MokProxy::receive_event(){
 			int cant_players = this->receive_int();
 			int max_players = this->receive_int();
 			int map_id = this->receive_int();
-			std::cout << "16 room_name: " << name << " cant_players: " << cant_players << "/" << max_players << " on: " << map_id << "\n";
+			std::cout << "16 room_id: " << this->last_room_id<< " room_name: " << name << " cant_players: " << cant_players << "/" << max_players << " on: " << map_id << "\n";
 			break;
 		}
 		case 17: {//cambio en los jugadores de un room
-			int name_len = this->receive_int();
-			char* name_c = new char[name_len];
-			this->socket.receive_(name_c, name_len);
-			std::string name(name_c, name_len);
-			delete[] name_c;
+			int room_id = this->receive_int();
 			int cant_players = this->receive_int();
-			std::cout << "17 room_name: " << name << " cant_players: " << cant_players << "\n";
+			std::cout << "17 room_id: " << room_id << " cant_players: " << cant_players << "\n";
 			break;
 		}
 		case 18: {//destruccion de una room
-			int name_len = this->receive_int();
-			char* name_c = new char[name_len];
-			this->socket.receive_(name_c, name_len);
-			std::string name(name_c, name_len);
-			delete[] name_c;
-			std::cout << "18 room_name: " << name << "\n";
+			int room_id = this->receive_int();
+			std::cout << "18 room_id: " << room_id << "\n";
 			break;
 		}
 		case 19: {//nombre de un usuario que esta en la misma room
@@ -173,9 +166,6 @@ void MokProxy::receive_event(){
 			std::cout << "19 id: " << id << " name: " << name << "\n";
 			break;
 		}
-		case 20: //room name error
-			std::cout << "20 room name error" << "\n";
-			break;
 	}
 }
 
@@ -209,9 +199,7 @@ void MokProxy::send(char event){
 				char ev = 12;
 				this->socket.send_(&ev, 1);
 				this->send_int(this->id);
-				char franco_room[12] = "franco_room";
-				this->send_int(11);
-				this->socket.send_(franco_room, 11);
+				this->send_int(this->last_room_id);
 				break;
 			}
 		case 'r': {//crear room

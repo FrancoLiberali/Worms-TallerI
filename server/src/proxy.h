@@ -70,15 +70,13 @@ class Proxy{
 		
 		void sendGameWon(int player_id);
 		
-		void sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id);
+		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, unsigned int map_id);
 		
-		void sendRoomPlayersChange(const std::string& name, int cant_players);
+		void sendRoomPlayersChange(int room_id, int cant_players);
 		
-		void sendRoomDeletion(const std::string& name);
+		void sendRoomDeletion(int room_id);
 		
 		void sendPlayerConnection(int id, const std::string& name);
-		
-		void sendRoomNameError();
 		
 		void send_int(int to_send);
 		

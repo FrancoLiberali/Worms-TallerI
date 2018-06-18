@@ -10,12 +10,10 @@ MultipleProxy::~MultipleProxy(){
 }
 
 void MultipleProxy::add(int id, Proxy* proxy){
-	std::lock_guard<std::mutex> lock(this->mutex);
 	this->proxys.insert(std::pair<int, Proxy*>(id, proxy));
 }
 
 Proxy* MultipleProxy::erase(int id){
-	std::lock_guard<std::mutex> lock(this->mutex);
 	Proxy* erased = this->proxys[id];
 	this->proxys.erase(id);
 	return erased;
@@ -133,33 +131,29 @@ void MultipleProxy::sendGameWon(int player_id){
 	}
 }
 
-void MultipleProxy::sendRoomCreation(const std::string& name, 
+void MultipleProxy::sendRoomCreation(int room_id, const std::string& name, 
 	int cant_players, int max_players, unsigned int map_id){
-	std::lock_guard<std::mutex> lock(this->mutex);
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendRoomCreation(name, cant_players, max_players, map_id);
+		it->second->sendRoomCreation(room_id, name, cant_players, max_players, map_id);
 	}
 }
 
-void MultipleProxy::sendRoomPlayersChange(const std::string& name, int cant_players){
-	std::lock_guard<std::mutex> lock(this->mutex);
+void MultipleProxy::sendRoomPlayersChange(int room_id, int cant_players){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendRoomPlayersChange(name, cant_players);
+		it->second->sendRoomPlayersChange(room_id, cant_players);
 	}
 }
 
-void MultipleProxy::sendRoomDeletion(const std::string& name){
-	std::lock_guard<std::mutex> lock(this->mutex);
+void MultipleProxy::sendRoomDeletion(int room_id){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendRoomDeletion(name);
+		it->second->sendRoomDeletion(room_id);
 	}
 }
 
 void MultipleProxy::sendPlayerConnection(int id, const std::string& name){
-	std::lock_guard<std::mutex> lock(this->mutex);
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
 		it->second->sendPlayerConnection(id, name);

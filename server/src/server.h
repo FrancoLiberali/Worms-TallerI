@@ -19,10 +19,10 @@ class Server : public Thread {
 		std::mutex& syslog_mutex;
 		Socket socket;
 		std::map<int, PlayerInfo*> players;
+		std::mutex mutex;
 		MultipleProxy not_playing;
 		BlockingQueue hall_queue;
-		std::map<std::string, Room*> rooms;
-		std::mutex rooms_mutex;
+		std::map<int, Room*> rooms;
 		Initiador* initiador;
 		std::mutex keep_mutex;
 		bool keep_accepting;

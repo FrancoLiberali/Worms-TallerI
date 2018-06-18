@@ -20,6 +20,7 @@
 #define POWER_TAM 5
 #define SHOT_TAM 5
 #define EXIT_TAM 5
+#define CONNECT_TAM 9
 #define ONEBYTE 1
 
 Proxy::Proxy(Socket socket_e, Queue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
@@ -50,7 +51,7 @@ std::string Proxy::receiveName(){
 	this->socket.receive(name_c, name_len);
 	std::string name(name_c, name_len);
 	delete[] name_c;
-	return name;
+	return std::move(name);
 }	
 
 void Proxy::receive_event(){
@@ -88,7 +89,7 @@ void Proxy::receive_event(){
 					this->receive_event_info(event, EXIT_TAM);
 					break;
 			case 12://se recibe que se quiere entrar a una room
-					this->receiveNameToQueue(event, 2);
+					this->receive_event_info(event, CONNECT_TAM);
 					break;	
 			case 13://se recibe que se quiere crear una room
 					this->receiveNameToQueue(event, 4);
@@ -260,9 +261,10 @@ void Proxy::sendGameWon(int player_id){
 	this->send_int(player_id);
 }
 
-void Proxy::sendRoomCreation(const std::string& name, int cant_players, int max_players, unsigned int map_id){
+void Proxy::sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, unsigned int map_id){
 	char event = 16;
 	this->socket.send(&event, ONEBYTE);
+	this->send_int(room_id);
 	this->send_int(name.length());
 	this->socket.send(name.data(), name.length());
 	this->send_int(cant_players);
@@ -270,19 +272,17 @@ void Proxy::sendRoomCreation(const std::string& name, int cant_players, int max_
 	this->send_int(map_id);
 }
 
-void Proxy::sendRoomPlayersChange(const std::string& name, int cant_players){
+void Proxy::sendRoomPlayersChange(int room_id, int cant_players){
 	char event = 17;
 	this->socket.send(&event, ONEBYTE);
-	this->send_int(name.length());
-	this->socket.send(name.data(), name.length());
+	this->send_int(room_id);
 	this->send_int(cant_players);
 }
 
-void Proxy::sendRoomDeletion(const std::string& name){
+void Proxy::sendRoomDeletion(int room_id){
 	char event = 18;
 	this->socket.send(&event, ONEBYTE);
-	this->send_int(name.length());
-	this->socket.send(name.data(), name.length());
+	this->send_int(room_id);
 }
 
 void Proxy::sendPlayerConnection(int id, const std::string& name){
@@ -291,11 +291,6 @@ void Proxy::sendPlayerConnection(int id, const std::string& name){
 	this->send_int(id);
 	this->send_int(name.length());
 	this->socket.send(name.data(), name.length());
-}
-
-void Proxy::sendRoomNameError(){
-	char event = 20;
-	this->socket.send(&event, ONEBYTE);
 }
 
 void Proxy::send_int(int to_send){

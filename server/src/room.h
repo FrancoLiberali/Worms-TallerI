@@ -12,7 +12,7 @@ class Room : public Thread{
 		std::string name;
 		unsigned int map_id;
 		int max_players;
-		std::map<int, std::string> names;
+		std::map<int, std::string&> names;
 		MultipleProxy proxy;
 		ProtectedQueue queue;
 		bool active = false;
@@ -22,9 +22,9 @@ class Room : public Thread{
 		
 		~Room();
 		
-		std::string getName();
+		std::string& getName();
 		
-		void add(int player_id, std::string player_name, Proxy* player_proxy);
+		void add(int player_id, std::string& player_name, Proxy* player_proxy);
 		
 		void erase(int player_id);
 		

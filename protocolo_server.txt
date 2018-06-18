@@ -99,7 +99,7 @@ Un JUGADOR HA GANADO LA PARTIDA
 ----MENSAJES DE HALL DE PARTIDAS----
 SE HA CREADO UNA NUEVA SALA
 	char en 16
-	(a agregar un id de sala para no tener que andar mandando siempre los strings)
+	int id sala creada
 	string nombre de la sala
 	int cantidad de jugadores
 	int numero maximo de jugadores
@@ -109,13 +109,13 @@ SE HA CREADO UNA NUEVA SALA
 CAMBIO EN EL NUMERO DE JUGADORES DENTRO DE UNA SALA
 	Para que el client pueda actualizar el numero de jugadores que hay dentro de la sala
 	char en 17
-	string nombre de la sala(a cambiar por un id)
+	int id sala
 	int nueva cantidad de jugadores
 
 DESTRUCCION DE UNA SALA
 	las salas se destruyen ya sea porque todos los jugadores se fueron o porque se completo la cantidad maxima de jugadores y empezo la partida
 	char en 18
-	string nombre de la sala(a cambiar por un id)
+	int id sala
 
 UN NUEVO JUGADOR SE HA CONECTADO A LA SALA
 	La idea de este mensaje es que el client vaya guardando para los jugadores de la sala su id y su nombre ya que luego en la partida los va a necesitar

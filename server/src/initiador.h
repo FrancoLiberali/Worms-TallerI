@@ -18,24 +18,25 @@ class Initiador : public Thread{
 		BlockingQueue& queue;
 		MultipleProxy& not_playing;
 		std::map<int, PlayerInfo*>& players;
-		std::map<std::string, Room*>& rooms;
-		std::map<std::string, Room*> playing_rooms;
-		std::mutex& rooms_mutex;
+		std::map<int, Room*>& rooms;
+		std::mutex& mutex;
 		std::mutex keep_mutex;
 		bool keep_working;
+		int room_id = 1;
 		
-		void disconnectFromRoom(int player_id, Room* room);
-		void sendAllRoomsInfo(int player_id);
+		void disconnectFromRoom(int player_id, int room_id);
 	
 	public:
 		Initiador(BlockingQueue& queue, MultipleProxy& proxy, 
-		std::map<int, PlayerInfo*>& players, std::map<std::string, Room*>& rooms, std::mutex& mutex);
+		std::map<int, PlayerInfo*>& players, std::map<int, Room*>& rooms, std::mutex& mutex);
 		
 		~Initiador();
 		
 		virtual void run();
 		
 		virtual void stop();
+		
+		void sendAllRoomsInfo(int player_id, Proxy* proxy);
 		
 };
 
