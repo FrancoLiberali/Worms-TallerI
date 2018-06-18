@@ -7,6 +7,7 @@ PlayerIdEvent::PlayerIdEvent(int id, Model& model, ProxyClient& proxy)
 
 void PlayerIdEvent::process(){
     model.setIdPlayer(playerId);
+    view->setIdPlayer(playerId);
     //std::cout<<"player Id :"<< playerId << std::endl;
 
     if (playerId == 1){

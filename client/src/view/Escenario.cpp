@@ -5,7 +5,7 @@ Escenario::Escenario(SdlScreen& screen, Camera& camera)
 	:screen(screen), camera(camera){}
 
 void Escenario::draw(){
-	TextureManager::Instance().draw("sky", -60 - camera.getX(),-60-camera.getY(), 0, screen.getRenderer());
+	//TextureManager::Instance().draw("sky", -60 - camera.getX(),-60-camera.getY(), 0, screen.getRenderer());
 	for (auto vi = vigas.begin(); vi != vigas.end(); vi++)
 		(*vi)->draw();
 }

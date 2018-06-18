@@ -29,8 +29,12 @@ void Controller::handle(SDL_Event& e) {
                     model.AimChangeAngle(1); break;
                 case SDLK_DOWN:
                     model.AimChangeAngle(-1); break;
-                case SDLK_SPACE:
-                    model.chargePower(); view.updatePower(); break;
+                case SDLK_SPACE:{
+                    model.chargePower();
+                    WormView* worm = view.getWormView(model.getIdWormSelected());
+                    worm->upatePower();
+                    break;
+                }
                 case SDLK_1: model.countDown(1); break;
                 case SDLK_2: model.countDown(2); break;
                 case SDLK_3: model.countDown(3); break;

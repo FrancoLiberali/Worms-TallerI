@@ -2,12 +2,12 @@
 
 #include <iostream>
 
-WormView::WormView(int idWorm, int idOwner, Camera& camera, PowerView& power)
-	:flip(SDL_FLIP_NONE), camera(camera), power(power), aim(camera){
+WormView::WormView(int idWorm, int idOwner, Camera& camera)
+	:flip(SDL_FLIP_NONE), camera(camera), aim(camera){
 	this->idOwner = idOwner;
 	this->state = STATIC;
 	currentSprite = NULL;
-	this->selected = true;
+	this->selected = false;
 	this->weaponId = NO_WEAPON;
 	this->widhtLife100 = 25;
 	this->widhtLifeCurrent = 25;
@@ -42,6 +42,7 @@ SDL_Color getColor(int id){
 void WormView::load(int x, int y, SdlScreen* screen){
 	this->setPos(x, y);
 	this->screen = screen;
+	this->power.setScreen(screen);
 	this->aim.setScreen(screen);
 	//Cargamos los sprites
 	try {
@@ -68,7 +69,6 @@ void WormView::load(int x, int y, SdlScreen* screen){
 		std::cout<<e.what()<<std::endl;
 		return;
 	}
-	this->update();
 }
 
 void WormView::setPos(int x, int y){
@@ -84,7 +84,7 @@ void WormView::setPlayerName(std::string player){
 }
 
 
-void WormView::update(){
+void WormView::update(int idPlayer){
 	if (currentSprite == NULL) {
 		currentSprite = &this->sprites["static"];
 		aim.disable();
@@ -169,11 +169,11 @@ void WormView::update(){
 		currentSprite->update();
 	}
 	
-	draw();
+	draw(idPlayer);
 }
 
 
-void WormView::draw(){
+void WormView::draw(int idPlayer){
 	
 	TextureManager::Instance().drawFrame(currentSprite->getImageId(),
 									getXCenter()-camera.getX(),
@@ -183,11 +183,12 @@ void WormView::draw(){
 									currentSprite->getCurrentRow(),
 									0, screen->getRenderer(),false,flip);
 	 
-	if (this->selected)
+	if (this->selected){
 		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
-	aim.draw();
-	power.setPos(getX()-camera.getX()+100, getY()-camera.getY()+100);
-	power.draw();
+	if (this->idOwner == idPlayer)	
+		aim.draw();
+		power.draw();
+	}
 	SDL_Rect rect;
 	rect.x = this->getX()-camera.getX() - 10;
 	rect.y = this->getY()-camera.getY() - 22;
@@ -260,4 +261,15 @@ void WormView::onFocus(){
 
 void WormView::offFocus(){
 	focus = false;
+}
+
+void WormView::select(){
+	selected = true;
+}
+void WormView::unselect(){
+	selected = false;
+}
+
+void WormView::upatePower(){
+	power.update();
 }

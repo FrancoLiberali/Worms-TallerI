@@ -11,13 +11,10 @@ private:
     void loadSprites();
     void loadImages();
     void loadWaterImage();
-    void loadEart();
     void loadMenuWeapon();
-    void initCamera(int w, int h);
-    void realoadEart();
+    void loadSounds();
 public:
     void init();
-    void reinit();
     SdlScreen& getScreen();    
 };
 
