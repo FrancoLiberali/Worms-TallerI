@@ -68,6 +68,8 @@ add_library(alllib
 	src/view/BulletFactory.cpp
 	src/view/BulletView.cpp
 	src/view/PowerView.cpp
+
+	src/sound/SoundManager.cpp
 )
 
 
