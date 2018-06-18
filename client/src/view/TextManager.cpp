@@ -75,7 +75,7 @@ void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color c
 					   &origen,
 					   &destino);
 	} catch (std::exception &e) {
-        //std::cout << e.what() << std::endl;
+        std::cout << e.what() << std::endl;
 	}
 	
 }

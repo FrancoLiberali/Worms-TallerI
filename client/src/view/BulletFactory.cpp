@@ -1,6 +1,7 @@
 #include "BulletFactory.h"
 #include "SpriteConfigurator.h"
 #include "GameException.h"
+#include "../sound/SoundManager.h"
 #include <iostream>
 
 BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, int posx, int posy,
@@ -36,6 +37,7 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 bullet->setSpriteBullet(SpriteConfigurator::Instance().get("bullet_fragment"));
                 break;
         }
+        bullet->setExplotionSound(EXPLOTION);
         bullet->setSpriteExplosion(SpriteConfigurator::Instance().get("explotion"));
     }catch(GameException& e){
         std::cout<<e.what()<<std::endl;

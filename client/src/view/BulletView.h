@@ -4,6 +4,7 @@
 #include "Sprite.h"
 #include "SdlScreen.h"
 #include "Camera.h"
+#include "../sound/SoundManager.h"
 
 class BulletView {
 private:
@@ -19,6 +20,7 @@ private:
 
 	Sprite spriteBullet;
 	Sprite spriteExplosion;
+    SoundId explotioSound;
 	bool detonated;
     void draw();
     int getCenterX();
@@ -28,6 +30,7 @@ public:
             SdlScreen& screen, Camera& camera);
     void setSpriteBullet(Sprite spriteBullet);
     void setSpriteExplosion(Sprite spriteExplosion);
+    void setExplotionSound(SoundId idSound);
     void updatePos(int x, int y, int angle);
     void update();
     void detonate();

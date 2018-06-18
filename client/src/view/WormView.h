@@ -30,7 +30,7 @@ private:
 	WeaponId weaponId;
 	AimView aim;
 	Camera& camera;
-	PowerView& power;
+	PowerView power;
 
 	bool selected;
 	bool focus;
@@ -39,20 +39,19 @@ private:
 	TextView labelUsuario;
 	int idOwner;
 
-	void draw();
+	void draw(int idPlayerTurn);
 	int getXCenter();
 	int getYCenter();
 public:
-	WormView(int idWorm, int idOwner, Camera& camera, PowerView& power);
+	WormView(int idWorm, int idOwner, Camera& camera);
 	void setPlayerName(std::string player);
 	~WormView();
 	void selectWeapon(WeaponId idWapon);
-	void unselectWeapon() {this->weaponId = NO_WEAPON;}
 	void load(int x, int y, SdlScreen* window);
 	void setPos(int x, int y);
 	int getX();
 	int getY();
-	void update();
+	void update(int idPlayer);
 	void changeState(WormState newState);
 	void setDirection(int dir);
 	void setAngle(int angle);
@@ -60,6 +59,9 @@ public:
 	void changeAimAngle(int delta);
 	void onFocus();
 	void offFocus();
+	void select();
+	void unselect();
+	void upatePower();
 };
 
 #endif

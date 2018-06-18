@@ -31,13 +31,13 @@ private:
 	MenuWeaponView* menuWeapon;
 
 	TextView turnView;
-	PowerView powerView;
 
 	std::map<int,WormView*> worms;
 	std::map<int,BulletView*> bullets;
 
 	bool open;
 	bool endGame;
+	int idPlayer;
 	void init();
 	void updateWorms();
 	void updateBullets();
@@ -47,6 +47,7 @@ public:
 	bool isOpen();
 	void update();
 	void close();
+	void setIdPlayer(int idPlayer);
 	WormView* getWormView(int id);
 	BulletView* getBulletView(int id);
 	SdlScreen& getScreen(){return screen;}
@@ -54,7 +55,6 @@ public:
 	void actionMenu();
 	bool isMenuOn();
 	bool hasClickedMenu(SDL_Point clickPoint);
-	void updatePower();
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
 	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);

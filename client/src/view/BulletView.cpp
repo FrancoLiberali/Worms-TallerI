@@ -15,6 +15,10 @@ void BulletView::setSpriteBullet(Sprite spriteBullet){
 void BulletView::setSpriteExplosion(Sprite spriteExplosion){
     this->spriteExplosion = spriteExplosion;
 }
+
+void BulletView::setExplotionSound(SoundId idSound){
+    this->explotioSound = idSound;
+}
 void BulletView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
@@ -31,6 +35,7 @@ void BulletView::update(){
 void BulletView::detonate(){
     currentSprite = &spriteExplosion;
     detonated = true;
+    SoundManager::Instance().playSound(explotioSound);
 }
 
 bool BulletView::isIdBullet(int id){

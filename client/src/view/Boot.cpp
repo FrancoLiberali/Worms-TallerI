@@ -3,6 +3,7 @@
 #include "TextureManager.h"
 #include "TextManager.h"
 #include "SpriteConfigurator.h"
+#include "../sound/SoundManager.h"
 #include <iostream>
 
 #define W_WIDHT 800
@@ -17,15 +18,10 @@ void Boot::init(){
 
 	TextManager::Instance().init(screen.getRenderer());
     TextureManager::Instance().init(W_WIDHT, W_HEIGHT);
+	SoundManager::Instance().init();
     loadSprites();
 	loadMenuWeapon();
-	initCamera(0,0);
-}
-
-void Boot::reinit(){}
-
-void Boot::loadConfigGame(){
-
+	loadSounds();
 }
 
 void Boot::loadSprites(){
@@ -106,11 +102,7 @@ void Boot::loadSprites(){
 		} catch (GameException & e) {
             std::cerr << e.what() << std::endl;
 		}
-	////std::cout << "Se cargaron todas las texturas" << std::endl;
 }
-void Boot::loadImages(){}
-void Boot::loadWaterImage(){}
-void Boot::loadEart(){}
 
 void Boot::loadMenuWeapon(){
 	try {
@@ -157,19 +149,17 @@ void Boot::loadMenuWeapon(){
 		TextManager::Instance().loadFont(Arial12);
 
 	} catch (GameException & e) {
-		////std::cout << e.what() << std::endl;	
+		std::cout << e.what() << std::endl;	
 	}
 
 	////std::cout << "Se cargo el menu" << std::endl;
 
 }
 
-void Boot::initCamera(int x, int y){
-	int widht = screen.getWidth();
-	int height = screen.getHeight();
-	//TextureManager::Instance().getCamera().setDimension(widht, height);
+void Boot::loadSounds(){
+	SoundManager::Instance().loadMusic(BACKGROUND, "../resource/sounds/background.wav");
+	SoundManager::Instance().loadSound(EXPLOTION, "../resource/sounds/explotion2.wav");
 }
-void Boot::realoadEart(){}
 
 SdlScreen& Boot::getScreen(){
     return screen;

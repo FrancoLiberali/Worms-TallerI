@@ -1,14 +1,12 @@
 #include "mainView.h"
 
 #include "TextureManager.h"
+#include "../sound/SoundManager.h"
 #include <iostream>
-
-#define X_POWER 400
-#define Y_POWER 700
 
 mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen, Camera& camera)
 		: screen(screen), camera(camera), eventHandler(eventHandler), open(true), 
-		stage(screen, camera), endGame(false), powerView(screen){
+		stage(screen, camera), endGame(false){
 	this->init();
 }
 
@@ -30,6 +28,7 @@ void mainView::init(){
 	allowW.push_back(MORTERO);
 	allowW.push_back(TELEPORT);
 	menuWeapon->allowWeapon(allowW);
+	//SoundManager::Instance().playMusic(BACKGROUND);
 }
 
 mainView::~mainView(){
@@ -81,9 +80,13 @@ BulletView* mainView::getBulletView(int id){
 	return bullets[id];
 }
 
+void mainView::setIdPlayer(int idPlayer){
+	this->idPlayer = idPlayer;
+}
+
 void mainView::updateWorms(){
 	for (auto& it: this->worms)
-		it.second->update();
+		it.second->update(idPlayer);
 }
 
 void mainView::updateBullets(){
@@ -103,12 +106,8 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
-void mainView::updatePower(){
-	powerView.update();
-}
-
 void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle){
-	WormView* worm = new WormView(id, idOwner, camera, powerView);
+	WormView* worm = new WormView(id, idOwner, camera);
 	worm->setPlayerName(player);
 	worm->setDirection(dir);
 	worm->setAngle(angle);
@@ -132,26 +131,31 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	SDL_Color red = {255,255,255};
 	turnView.setText("Turno " + namePlayer,red);
 	
-	for(auto& it: this->worms)
+	for(auto& it: this->worms){
 		it.second->offFocus();
+		it.second->unselect();
+	}
+	worms[idWorm]->select();
 	worms[idWorm]->onFocus();
 }
 
 void mainView::showWinner(){
-	//screen.clear();
+	endGame = true;
+	menuWeapon->actionMenu();
 	screen.fill();
+	screen.clear();
 	TextureManager::Instance().draw("win", 0 , 0, 0, screen.getRenderer());
 	camera.focusCenterWindow();
-	endGame = true;
 	screen.render();
 }
 
 void mainView::showLosser(){
-	//screen.clear();
+	endGame = true;
+	menuWeapon->actionMenu();
+	screen.clear();
 	screen.fill();
 	TextureManager::Instance().draw("lose", 0, 0, 0, screen.getRenderer());
 	camera.focusCenterWindow();
-	endGame = true;
 	screen.render();
 }
 

@@ -10,10 +10,11 @@ private:
 	TextView label;
 	SDL_Rect rect;
 	bool ballow;
-    SdlScreen& screen;
+    SdlScreen* screen;
     int posx, posy;
 public:
-	PowerView(SdlScreen& screen);
+	PowerView();
+	void setScreen(SdlScreen* screen);
     void setPos(int x, int y);
 	void clean();
 	void update();
