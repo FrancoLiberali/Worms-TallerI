@@ -1,14 +1,15 @@
 #ifndef _AIM_VIEW_H
 #define _AIM_VIEW_H
 
-#include "newView/SdlScreen.h"
-#include "newView/TextureManager.h"
+#include "SdlScreen.h"
+#include "TextureManager.h"
 
 #include <math.h>
 
 class AimView {
 private:
     SdlScreen* screen; 
+    Camera& camera;
     float angle;
     int posAngle = 17;
     int dir;
@@ -20,7 +21,7 @@ private:
                             186,192,198,204,210,216,222,228,234,240,246,252,258,264,270};
 
 public:
-	AimView();
+	AimView(Camera& camera);
     void setCenter(int x, int y);
     void setScreen(SdlScreen* screen);
     void changeAngle(int delta);

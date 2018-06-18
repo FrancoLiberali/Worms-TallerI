@@ -1,8 +1,9 @@
 #include "WormView.h"
+
 #include <iostream>
 
-WormView::WormView(int idWorm, int idOwner, Camera& camera)
-	:flip(SDL_FLIP_NONE), camera(camera){
+WormView::WormView(int idWorm, int idOwner, Camera& camera, PowerView& power)
+	:flip(SDL_FLIP_NONE), camera(camera), power(power), aim(camera){
 	this->idOwner = idOwner;
 	this->state = STATIC;
 	currentSprite = NULL;
@@ -103,46 +104,57 @@ void WormView::update(){
 	} else if (this->state == STATIC){
 		if (this->weaponId == G_GRENADE && currentSprite != &this->sprites["ggranada"]){
 			currentSprite = &this->sprites["ggranada"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == R_GRENADE && currentSprite != &this->sprites["rgranada"]){
 			currentSprite = &this->sprites["rgranada"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]){
 			currentSprite = &this->sprites["dinamita"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]){
 			currentSprite = &this->sprites["bazooka"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == BANANA && currentSprite != &this->sprites["banana"]){
 			currentSprite = &this->sprites["banana"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == MORTERO && currentSprite != &this->sprites["mortero"]){
 			currentSprite = &this->sprites["mortero"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == HOLY && currentSprite != &this->sprites["holy"]){
 			currentSprite = &this->sprites["holy"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == AIRATTACK && currentSprite != &this->sprites["radio"]){
 			currentSprite = &this->sprites["radio"];
+			power.deny();
 			aim.disable();
 		}
 		else if (this->weaponId == BATE && currentSprite != &this->sprites["bate"]){
 			currentSprite = &this->sprites["bate"];
+			power.allow();
 			aim.enable();
 		}
 		else if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]){
 			currentSprite = &this->sprites["teleport"];
+			power.deny();
 			aim.disable();
 		}
 		else if (this->weaponId == NO_WEAPON && currentSprite != &this->sprites["static"]){
 			currentSprite = &this->sprites["static"];
+			power.deny();
 			aim.disable();
 		}
 
@@ -164,17 +176,18 @@ void WormView::update(){
 void WormView::draw(){
 	
 	TextureManager::Instance().drawFrame(currentSprite->getImageId(),
-									getXCenter(),getYCenter(), angle, 
-									currentSprite->getWidth(),
+									getXCenter()-camera.getX(),
+									getYCenter()-camera.getY(),
+									angle, currentSprite->getWidth(),
 									currentSprite->getHeight(),
 									currentSprite->getCurrentRow(),
 									0, screen->getRenderer(),false,flip);
 	 
 	if (this->selected)
 		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
- 
 	aim.draw();
-
+	power.setPos(getX()-camera.getX()+100, getY()-camera.getY()+100);
+	power.draw();
 	SDL_Rect rect;
 	rect.x = this->getX()-camera.getX() - 10;
 	rect.y = this->getY()-camera.getY() - 22;
@@ -185,8 +198,10 @@ void WormView::draw(){
 }
 
 void WormView::selectWeapon(WeaponId idWapon){
+	this->currentSprite->clean();
 	this->weaponId = idWapon;
-	//aim.reset();
+	aim.reset();
+	power.clean();
 }
 
 

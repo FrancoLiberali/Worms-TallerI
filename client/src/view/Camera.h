@@ -12,7 +12,8 @@ private:
     int gap;
 public:
     Camera();
-    void setDimension(int w, int h);
+    Camera(int w, int h);
+    //void setDimension(int w, int h);
     int getX();
     int getY();
     void updateCenter(int x, int y);

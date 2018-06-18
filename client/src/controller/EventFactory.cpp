@@ -104,7 +104,6 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case G_PLAYER_WIN:{
       int idPlayer = proxy.receiveInt();
-      printf("Game winner");
       return new GameWinnerEvent(idPlayer, model, view);
     }
   }

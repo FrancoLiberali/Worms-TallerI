@@ -1,8 +1,8 @@
 #ifndef _VIGA_VIEW_H_
 #define _VIGA_VIEW_H_
 
-#include "newView/SdlScreen.h"
-#include "newView/TextureManager.h"
+#include "SdlScreen.h"
+#include "TextureManager.h"
 
 class VigaView {
 private:
@@ -11,9 +11,10 @@ private:
 	int getXCenter();
 	int getYCenter();
     SdlScreen& screen;
+    Camera& camera;
     int angle;
 public:
-    VigaView(int posX, int posY, int angle, SdlScreen& screen);
+    VigaView(int posX, int posY, int angle, SdlScreen& screen, Camera& camera);
     ~VigaView();
     void draw();
 };

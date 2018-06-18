@@ -26,14 +26,12 @@ public:
 	void setWidth(int width) {this->width = width;}
 	void setHeight(int height) {this->height = height;}
 	void setRows(int rows) {this->rows = rows;}
-	//void setCurrentFrame(int currentFrame) {this->currentFrame = currentFrame;}
 	void setCurrentRow(int currentRow) {this->currentRow = currentRow;}
 	
 	std::string getImageId() {return this->imageId;}
 	int getWidth() {return this->width;}
 	int getHeight() {return this->height;}
 	int getRows() {return this->rows;}
-	//int getCurrentFrame() {return this->currentFrame;}
 	int getCurrentRow() {return this->currentRow;}
 	bool isLastFrame();
 };

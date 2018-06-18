@@ -1,15 +1,15 @@
 #ifndef _WORM_VIEW_
 #define _WORM_VIEW_ 
 
-#include "newView/SdlScreen.h"
+#include "SdlScreen.h"
 #include "WormState.h"
-#include "newView/Sprite.h"
-#include "newView/SpriteConfigurator.h"
-#include "newView/TextureManager.h"
-#include "newView/TextView.h"
+#include "Sprite.h"
+#include "SpriteConfigurator.h"
+#include "TextureManager.h"
+#include "TextView.h"
 #include "AimView.h"
 #include "Camera.h"
-
+#include "PowerView.h"
 #include <map>
 
 class WormView {
@@ -30,6 +30,7 @@ private:
 	WeaponId weaponId;
 	AimView aim;
 	Camera& camera;
+	PowerView& power;
 
 	bool selected;
 	bool focus;
@@ -42,7 +43,7 @@ private:
 	int getXCenter();
 	int getYCenter();
 public:
-	WormView(int idWorm, int idOwner, Camera& camera);
+	WormView(int idWorm, int idOwner, Camera& camera, PowerView& power);
 	void setPlayerName(std::string player);
 	~WormView();
 	void selectWeapon(WeaponId idWapon);

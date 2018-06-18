@@ -7,6 +7,10 @@ SdlException::SdlException(const char* description, const char* sdlError)
     this->description.append("\n SDL_ERROR: ").append(sdlError);
 }
 
+SdlException::SdlException(const char* description)
+    : std::exception(), description(description) {
+}
+
 const char* SdlException::what() const noexcept{
     return this->description.c_str();
 }

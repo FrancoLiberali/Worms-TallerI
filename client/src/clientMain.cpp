@@ -11,7 +11,7 @@
 #include "model/GameControllerProxy.h"
 #include "model/Model.h"
 #include "controller/Controller.h"
-#include "view/newView/Boot.h"
+#include "view/Boot.h"
 #include "common/socket.h"
 #include "common/socket_error.h"
 #include <iostream>
@@ -43,6 +43,9 @@ int main(int argc, char *argv[]){
 	//cargamos todas las texturas y el screen principal
 	Boot boot;
 	boot.init();
+
+	Camera camera(boot.getScreen().getWidth(), boot.getScreen().getHeight());
+
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
 	ClientCommandSender commmandSender(proxy, commandsQueue);
@@ -50,7 +53,7 @@ int main(int argc, char *argv[]){
 
 	EventHandler ehandler;
 
-	mainView clientView(ehandler, boot.getScreen());
+	mainView clientView(ehandler, boot.getScreen(), camera);
 	ehandler.setView(&clientView);
 
 	GameControllerProxy gcp(commandsQueue);
@@ -67,6 +70,7 @@ int main(int argc, char *argv[]){
 	model.setComunnication(&commmandSender, &eventReceiver);
 
 	Controller controller(model, clientView);
+
 	//Game loop
 	SDL_Event e;
 	while(clientView.isOpen() ){

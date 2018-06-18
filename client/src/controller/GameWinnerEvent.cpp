@@ -1,5 +1,5 @@
 #include "GameWinnerEvent.h"
-#include "../view/newView/SdlScreen.h"
+#include "../view/SdlScreen.h"
 
 #include <iostream>
 #define W_HEIGHT  900

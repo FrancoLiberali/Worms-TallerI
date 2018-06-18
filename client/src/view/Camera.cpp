@@ -7,14 +7,17 @@
 Camera::Camera(){
 }
 
-void Camera::setDimension(int w, int h){
+/*void Camera::setDimension(int w, int h){
     this->w = w;
     this->h = h;
     this->map_h = M_H;
     this->map_w = M_W;
     this->vel = 2;
     this->gap = 10; 
-}
+}*/
+
+Camera::Camera(int w, int h) : w(w), h(h), map_h(M_H), map_w(M_W),
+    vel(2), gap(10){}
 
 int Camera::getX(){
     return centerX - w/2;

@@ -56,8 +56,8 @@ void TextureManager::draw(std::string id, int x, int y, double angle,
 	
 		destRect.w = srcRect.w;
 		destRect.h = srcRect.h;
-		destRect.x = x - camera.getX();
-		destRect.y = y - camera.getY();
+		destRect.x = x;
+		destRect.y = y;
 		if (id == "sky"){
 			destRect.x = x;
 			destRect.y = y;
@@ -82,8 +82,8 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 	
 	srcRect.w = destRect.w = width;
 	srcRect.h = destRect.h = height;
-	destRect.x = x - camera.getX();
-	destRect.y = y - camera.getY();
+	destRect.x = x;
+	destRect.y = y;
 		
 	viewPort.x = 0;
 	viewPort.y = 0;

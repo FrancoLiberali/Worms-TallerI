@@ -15,12 +15,18 @@ add_library(alllib
     src/controller/WormWeaponEvent.cpp
 	src/controller/CreateVigaEvent.cpp
 	src/controller/CreateWormEvent.cpp
+	src/controller/CreateMissileEvent.cpp
+	src/controller/MissileMoveEvent.cpp
+	src/controller/MissileExploteEvent.cpp
 	src/controller/PlayerIdEvent.cpp
 	src/controller/PlayerConnectEvent.cpp
 	src/controller/WormChangeAimEvent.cpp
 	src/controller/StartTurnEvent.cpp
 	src/controller/PlayerOffEvent.cpp
 	src/controller/GameWinnerEvent.cpp
+	src/controller/MouseState.cpp
+	src/controller/CameraMove.cpp
+
 
     src/controller/ClientCommandSender.cpp
 	src/controller/Controller.cpp
@@ -37,25 +43,31 @@ add_library(alllib
 	src/model/WormJumpCommand.cpp
 	src/model/WormWeaponCommand.cpp
 	src/model/ChangeAimCommand.cpp
+	src/model/WormShootCommand.cpp
+	src/model/ChargePowerCommand.cpp
+	src/model/ChangeCountDownCommand.cpp
 
 	src/view/mainView.cpp
 	src/view/SdlException.cpp
 	src/view/Escenario.cpp
 	src/view/WormView.cpp
-	src/view/newView/Boot.cpp
-	src/view/newView/SdlException.cpp
-	src/view/newView/SdlScreen.cpp
-	src/view/newView/Sprite.cpp
-	src/view/newView/SpriteConfigurator.cpp
-	src/view/newView/TextureManager.cpp
-	src/view/newView/TextManager.cpp
-	src/view/newView/TextView.cpp
+	src/view/Boot.cpp
+	src/view/SdlException.cpp
+	src/view/SdlScreen.cpp
+	src/view/Sprite.cpp
+	src/view/SpriteConfigurator.cpp
+	src/view/TextureManager.cpp
+	src/view/TextManager.cpp
+	src/view/TextView.cpp
 	src/view/MenuWeaponView.cpp
 	src/view/Weapon.cpp
 	src/view/Shape.cpp
 	src/view/VigaView.cpp
 	src/view/AimView.cpp
 	src/view/Camera.cpp
+	src/view/BulletFactory.cpp
+	src/view/BulletView.cpp
+	src/view/PowerView.cpp
 )
 
 

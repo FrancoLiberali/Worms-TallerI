@@ -3,7 +3,8 @@
 
 #include <list>
 #include "WormState.h"
-#include "newView/SdlScreen.h"
+#include "SdlScreen.h"
+#include "Camera.h"
 #include "Shape.h"
 #include <SDL2/SDL.h>
 
@@ -12,10 +13,11 @@ using namespace std;
 class Weapon {
 
 public:
-	Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon);
+	Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon, Camera& camera);
 	~Weapon();
 	bool findWeapon(string key);
 	WeaponId getId();
+	Camera& camera;
 	void setWeapon(string key);
 	void setRender();
 	void removeWeapon(string key);

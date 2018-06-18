@@ -1,10 +1,11 @@
 #include "BulletFactory.h"
-#include "newView/SpriteConfigurator.h"
-#include "newView/GameException.h"
+#include "SpriteConfigurator.h"
+#include "GameException.h"
 #include <iostream>
 
-BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, int posx, int posy, int angle, SdlScreen& screen){
-    BulletView* bullet = new BulletView(id, dir,posx, posy, angle, screen);
+BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, int posx, int posy,
+     int angle, SdlScreen& screen, Camera& camera){
+    BulletView* bullet = new BulletView(id, dir,posx, posy, angle, screen, camera);
     try {    
         switch (idWeapon){
             case BAZOOKA:
@@ -30,6 +31,9 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 break;
             case AIRATTACK:
                 bullet->setSpriteBullet(SpriteConfigurator::Instance().get("bullet_airattack"));
+                break;
+            case FRAGMENT:
+                bullet->setSpriteBullet(SpriteConfigurator::Instance().get("bullet_fragment"));
                 break;
         }
         bullet->setSpriteExplosion(SpriteConfigurator::Instance().get("explotion"));
