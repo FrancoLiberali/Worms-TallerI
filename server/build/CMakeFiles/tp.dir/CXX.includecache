@@ -1334,6 +1334,24 @@ protected_queue.h
 mutex
 -
 
+/home/franco/Documentos/taller1/tpfinal/server/src/red_granade.cpp
+red_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/red_granade.h
+iostream
+-
+fragment_info.h
+/home/franco/Documentos/taller1/tpfinal/server/src/fragment_info.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/red_granade.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+regresive_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+fragment_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.h
+game_constants.h
+/home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
@@ -1449,6 +1467,12 @@ bazooka.h
 /home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
 morter.h
 /home/franco/Documentos/taller1/tpfinal/server/src/morter.h
+green_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/green_granade.h
+red_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/red_granade.h
+banana.h
+/home/franco/Documentos/taller1/tpfinal/server/src/banana.h
 cmath
 -
 stdexcept

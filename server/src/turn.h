@@ -30,7 +30,7 @@ class Turn{
 		std::vector<FragmentInfo*> to_create;
 		int weapon = 0;
 		float sight_angle = 0;
-		int regresive_time = 5;
+		unsigned int regresive_time = 5;
 		float power = 1;
 		bool fired;
 		
@@ -43,8 +43,14 @@ class Turn{
 		void changeRegresiveTime(char* msj);
 		void loadPower(Gusano* gusano, int& turn_actual_len);
 		void fire(Gusano* gusano, int& turn_actual_len);
-		void fire_bazooka(Gusano* gusano, b2Vec2 position, int direction);
-		void fire_morter(Gusano* gusano, b2Vec2 position, int direction);
+		void fire_bazooka(b2Vec2 position, int direction);
+		void fire_morter(b2Vec2 position, int direction);
+		void fire_green_granade(b2Vec2 position, int direction);
+		void fire_red_granade(b2Vec2 position, int direction);
+		void fire_banana(b2Vec2 position, int direction);
+		//void fire_saint_granade(b2Vec2 position, int direction);
+		//void fire_dynamite(b2Vec2 position, int direction);
+		//void fire_bat(b2Vec2 position, int direction);
 		
 		
 	public:

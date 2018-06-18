@@ -23,6 +23,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/moving_state.cpp.o"
   "CMakeFiles/tp.dir/src/rotating_state.cpp.o"
   "CMakeFiles/tp.dir/src/green_granade.cpp.o"
+  "CMakeFiles/tp.dir/src/red_granade.cpp.o"
   "CMakeFiles/tp.dir/src/proxy.cpp.o"
   "CMakeFiles/tp.dir/src/thread.cpp.o"
   "CMakeFiles/tp.dir/src/receiver.cpp.o"

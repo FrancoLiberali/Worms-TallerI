@@ -32,7 +32,3 @@ Morter::Morter(b2World& world_entry, int number, float x, float y, int direction
 
 Morter::~Morter(){
 }
-
-void Morter::update(){
-	FragmentProjectile::update();
-}

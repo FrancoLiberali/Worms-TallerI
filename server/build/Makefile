@@ -1878,6 +1878,33 @@ src/receiver.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/receiver.cpp.s
 .PHONY : src/receiver.cpp.s
 
+src/red_granade.o: src/red_granade.cpp.o
+
+.PHONY : src/red_granade.o
+
+# target to build an object file
+src/red_granade.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/red_granade.cpp.o
+.PHONY : src/red_granade.cpp.o
+
+src/red_granade.i: src/red_granade.cpp.i
+
+.PHONY : src/red_granade.i
+
+# target to preprocess a source file
+src/red_granade.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/red_granade.cpp.i
+.PHONY : src/red_granade.cpp.i
+
+src/red_granade.s: src/red_granade.cpp.s
+
+.PHONY : src/red_granade.s
+
+# target to generate assembly for a file
+src/red_granade.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/red_granade.cpp.s
+.PHONY : src/red_granade.cpp.s
+
 src/regresive_projetile.o: src/regresive_projetile.cpp.o
 
 .PHONY : src/regresive_projetile.o
@@ -2325,6 +2352,9 @@ help:
 	@echo "... src/receiver.o"
 	@echo "... src/receiver.i"
 	@echo "... src/receiver.s"
+	@echo "... src/red_granade.o"
+	@echo "... src/red_granade.i"
+	@echo "... src/red_granade.s"
 	@echo "... src/regresive_projetile.o"
 	@echo "... src/regresive_projetile.i"
 	@echo "... src/regresive_projetile.s"

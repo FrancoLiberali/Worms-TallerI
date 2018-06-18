@@ -10,6 +10,9 @@
 #include "fake_proxy/mok_proxy.h"
 #include "bazooka.h"
 #include "morter.h"
+#include "green_granade.h"
+#include "red_granade.h"
+#include "banana.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -103,9 +106,21 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 		int direction = gusano->getDirection();
 		this->actual_max_projectile++;
 		switch(this->weapon){
-			case 1: this->fire_bazooka(gusano, position, direction);
+			case 1: this->fire_bazooka(position, direction);
 					break;
-			case 2: this->fire_morter(gusano, position, direction);
+			case 2: this->fire_morter(position, direction);
+					break;
+			case 3: this->fire_green_granade(position, direction);
+					break;
+			case 4: this->fire_red_granade(position, direction);
+					break;
+			case 5: this->fire_banana(position, direction);
+					break;
+			case 6: //this->fire_saint_granade(position, direction);
+					break;
+			case 7: //this->fire_dynamite(position, direction);
+					break;
+			case 8: //this->fire_bat(position, direction);
 					break;
 		}
 		*(this->info.ammunition[this->weapon]) -= 1;
@@ -115,18 +130,39 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 	}
 }
 
-void Turn::fire_bazooka(Gusano* gusano, b2Vec2 position, int direction){
+void Turn::fire_bazooka(b2Vec2 position, int direction){
 	Bazooka* bazooka = new Bazooka(this->world, this->actual_max_projectile, position.x, 
 						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->proxy);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, bazooka));
 }
 
-void Turn::fire_morter(Gusano* gusano, b2Vec2 position, int direction){
+void Turn::fire_morter(b2Vec2 position, int direction){
 	Morter* morter = new Morter(this->world, this->actual_max_projectile, position.x, 
 						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->to_create, this->proxy);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, morter));
+}
+
+void Turn::fire_green_granade(b2Vec2 position, int direction){
+	GreenGranade* green = new GreenGranade(this->world, this->actual_max_projectile, position.x, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
+						this->to_remove_projectiles, this->proxy, this->regresive_time);
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, green));
+}
+
+void Turn::fire_red_granade(b2Vec2 position, int direction){
+	RedGranade* red = new RedGranade(this->world, this->actual_max_projectile, position.x, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
+						this->to_remove_projectiles, this->to_create, this->proxy, this->regresive_time);
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, red));
+}
+
+void Turn::fire_banana(b2Vec2 position, int direction){
+	Banana* banana = new Banana(this->world, this->actual_max_projectile, position.x, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
+						this->to_remove_projectiles, this->proxy, this->regresive_time);
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, banana));
 }
 
 void Turn::play(int active_player, unsigned int active_gusano){
