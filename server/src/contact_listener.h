@@ -141,16 +141,24 @@ class ContactListener : public b2ContactListener{
 			//check if body A was gusano
 			UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 			if (data && data->indicator == 1){
-				//check if body B was gusano
-				UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-				if (other_data && other_data->indicator == 1){
-					Gusano* gusanoA = static_cast<Gusano*>(data->pointer);
-					Gusano* gusanoB = static_cast<Gusano*>(other_data->pointer);
-					if (gusanoA->isInactive()){
+				Gusano* gusanoA = static_cast<Gusano*>(data->pointer);
+				if (gusanoA->isInactive()){
+					//check if body B was gusano or projectile
+					UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
+					if (other_data && (other_data->indicator == 1 || other_data->indicator == 0 || other_data->indicator == -1)){
 						std::cout << "canceled\n";
 						gusanoA->cancelMovement();
 					}
-					if (gusanoB->isInactive()){
+				}
+			}
+			//check if body B was gusano
+			data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
+			if (data && data->indicator == 1){
+				Gusano* gusanoB = static_cast<Gusano*>(data->pointer);
+				if (gusanoB->isInactive()){
+					//check if body B was gusano or projectile
+					UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+					if (other_data && (other_data->indicator == 1 || other_data->indicator == 0 || other_data->indicator == -1)){
 						std::cout << "canceled\n";
 						gusanoB->cancelMovement();
 					}
