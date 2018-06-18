@@ -103,7 +103,7 @@ SE HA CREADO UNA NUEVA SALA
 	string nombre de la sala
 	int cantidad de jugadores
 	int numero maximo de jugadores
-	int numero de map
+	string nombre del map
 	Este mensaje se manda ya sea cuando realmente se crea una sala en ese momento pero tambien cuando un nuevo client se conecta se le mande este mensaje con todas las salas que ya existian para que las pueda mostrar(a sus ojos se estan creando)
 
 CAMBIO EN EL NUMERO DE JUGADORES DENTRO DE UNA SALA
@@ -122,6 +122,13 @@ UN NUEVO JUGADOR SE HA CONECTADO A LA SALA
 	char en 19
 	int id nuevo jugador
 	string nombre nuevo jugador
+
+LISTA DE MAPS DISPONIBLES PARA JUGAR
+	char en 20
+	int cantidad mapas
+	por cada mapa:
+		string nombre de mapa
+	
 
 	
 

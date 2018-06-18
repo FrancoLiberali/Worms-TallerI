@@ -11,6 +11,7 @@ MokProxy::MokProxy(Socket& socket_e): socket(socket_e){
 }
 
 MokProxy::~MokProxy(){
+	delete this->map_name;
 }
 
 void MokProxy::close_communication(){
@@ -132,7 +133,7 @@ void MokProxy::receive_event(){
 			std::cout << "15 " << id << "\n";
 			break;
 		}
-		case 16: {//creacion de una room
+		case 16: {//creacion de una room	
 			this->last_room_id = this->receive_int();
 			int name_len = this->receive_int();
 			char* name_c = new char[name_len];
@@ -141,8 +142,12 @@ void MokProxy::receive_event(){
 			delete[] name_c;
 			int cant_players = this->receive_int();
 			int max_players = this->receive_int();
-			int map_id = this->receive_int();
-			std::cout << "16 room_id: " << this->last_room_id<< " room_name: " << name << " cant_players: " << cant_players << "/" << max_players << " on: " << map_id << "\n";
+			int map_len = this->receive_int();
+			char* map_name_c = new char[map_len];
+			this->socket.receive_(map_name_c, map_len);
+			std::string map_name(map_name_c, map_len);
+			delete[] map_name_c;
+			std::cout << "16 room_id: " << this->last_room_id<< " room_name: " << name << " cant_players: " << cant_players << "/" << max_players << " on: " << map_name << "\n";
 			break;
 		}
 		case 17: {//cambio en los jugadores de un room
@@ -164,6 +169,24 @@ void MokProxy::receive_event(){
 			std::string name(name_c, name_len);
 			delete[] name_c;
 			std::cout << "19 id: " << id << " name: " << name << "\n";
+			break;
+		}
+		case 20:{//nombre de mapa disponible
+			int cant = this->receive_int();
+			std::cout << "20 " << cant;
+			for (int i = 0; i < cant; i++){
+				int map_len = this->receive_int();
+				//std::cout << map_len << "\n";
+				char* name_c = new char[map_len];
+				this->socket.receive_(name_c, map_len);
+				std::string name (name_c, map_len);
+				if (!this->map_name){
+					this->map_name = new std::string(name_c, map_len);
+				}
+				delete[] name_c;
+				std::cout << " " << name;
+			}
+			std::cout << "\n";
 			break;
 		}
 	}
@@ -207,8 +230,9 @@ void MokProxy::send(char event){
 				char ev = 13;
 				this->socket.send_(&ev, 1);
 				this->send_int(this->id);
-				this->send_int(0);//map_id
 				this->send_int(2);//max_players
+				this->send_int(this->map_name->length());
+				this->socket.send_(this->map_name->data(), this->map_name->length());
 				this->send_int(this->room_name.length());
 				this->socket.send_(this->room_name.data(), this->room_name.length());
 				break;

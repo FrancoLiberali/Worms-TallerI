@@ -10,15 +10,15 @@
 #include "util/yamlparser.h"
 #include <string>
 
-Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id, std::vector<int> players_ids_e) 
+Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids_e) 
 		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), players_ids(players_ids_e){
 	this->world.SetContactListener(&(this->contact_listener));
 	
 	std::vector<Gusano*> gusanos;
-	//lectura de archivo yalm "map_id" y creacion de vigas y gusanos
+	//lectura de archivo yalm "map_name" y creacion de vigas y gusanos
 	/*YAMLParser parser;
 	std::vector<ElementInfo> elements;
-	parser.cargarConfig(map_id, elements, this->info);
+	parser.cargarConfig(map_name, elements, this->info);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){

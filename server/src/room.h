@@ -10,7 +10,7 @@
 class Room : public Thread{
 	private:
 		std::string name;
-		unsigned int map_id;
+		std::string map_name;
 		int max_players;
 		std::map<int, std::string&> names;
 		MultipleProxy proxy;
@@ -18,7 +18,7 @@ class Room : public Thread{
 		bool active = false;
 		
 	public:
-		Room(std::string name, unsigned int map_id_e, int max_players_e);
+		Room(std::string name, std::string map_name_e, int max_players_e);
 		
 		~Room();
 		
@@ -38,7 +38,7 @@ class Room : public Thread{
 		
 		int maxPlayers();
 		
-		unsigned int mapId();
+		std::string& mapName();
 };
 
 #endif

@@ -64,8 +64,8 @@ ENTRAR EN UNA SALA
 CREAR UNA SALA
 	char en 13
 	int id de jugador
-	int id de mapa a jugar
 	int cantidad de jugadores a jugar (2..10)
+	string nombre de mapa a jugar(si o si debe estar dentro de los mapas enviados en el mensaje 20 del server)
 	string nombre de la sala
 
 

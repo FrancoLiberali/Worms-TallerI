@@ -15,7 +15,6 @@ class Proxy{
 		Queue* prev_queue;
 		
 		void receive_event_info(char event, int tam);
-		void receiveNameToQueue(char event, int cant_ints);
 		void pushDisconnectionMessage();
 	public:
 		// Objeto que envia todos los mensajes a un juagador via 
@@ -70,13 +69,15 @@ class Proxy{
 		
 		void sendGameWon(int player_id);
 		
-		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, unsigned int map_id);
+		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, const std::string& map_name);
 		
 		void sendRoomPlayersChange(int room_id, int cant_players);
 		
 		void sendRoomDeletion(int room_id);
 		
 		void sendPlayerConnection(int id, const std::string& name);
+		
+		void sendAvailableMaps(std::vector<std::string>& maps);
 		
 		void send_int(int to_send);
 		

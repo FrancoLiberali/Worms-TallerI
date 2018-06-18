@@ -987,6 +987,8 @@ iostream
 -
 thread.h
 /home/franco/Documentos/taller1/tpfinal/server/thread.h
+dirent.h
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/banana.cpp
 banana.h

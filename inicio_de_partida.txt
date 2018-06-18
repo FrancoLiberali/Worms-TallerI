@@ -8,6 +8,7 @@ En el client, este nombre deberia ser pedido previo a permitirle conectarse.
 	port:
 	CONECTARSE ->al tocar este boton se conecta y envia el nombre
 El nombre se manda en el formato string del protocolo.
+Primero que nada, se recibe el numero de jugador con el mensaje 0 del server y luego los mapas disponibles con el mensaje 20 del server.
 A continuacion, el client pasa al hall de partidas. Primero va a recibir todas las salas que ya estan creadas actualmente mediante el mensaje 16 del server. Con esta informacion, el client debera mostrar una lista de partidas disponibles.
 A medida que pase el tiempo, las salas iran cambiando la cantidad de integrantes que tienen dentro, lo que se avisa con el mensaje 17 del server. Tambien, existe un mensaje 18 que es cuando se tiene que dejar de mostrar en esta lista una determinada sala, ya sea porque esta te completo e inicio el juego, o porque esta se vacio y se destruyo.
 Aqui el client tiene dos opciones:

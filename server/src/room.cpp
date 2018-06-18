@@ -1,8 +1,8 @@
 #include "room.h"
 #include "game.h"
 
-Room::Room(std::string name_e, unsigned int map_id_e, int max_players_e) : 
-		name(std::move(name_e)), map_id(map_id_e), max_players(max_players_e){
+Room::Room(std::string name_e, std::string map_name_e, int max_players_e) : 
+		name(std::move(name_e)), map_name(std::move(map_name_e)), max_players(max_players_e){
 	
 }
 
@@ -38,7 +38,7 @@ void Room::run(){
 	for(; it != names.end(); ++it){
 		players.push_back(it->first);
 	}
-	//Game game(this->proxy, this->queue, this->map_id, players);
+	//Game game(this->proxy, this->queue, this->map_name, players);
 	//cuando termina vuelven a mandar mensajes a la hall
 	this->proxy.changeToPrevQueue(); 
 }
@@ -58,6 +58,6 @@ int Room::maxPlayers(){
 	return this->max_players;
 }
 
-unsigned int Room::mapId(){
-	return this->map_id;
+std::string& Room::mapName(){
+	return this->map_name;
 }

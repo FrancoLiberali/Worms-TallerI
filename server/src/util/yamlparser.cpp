@@ -16,10 +16,9 @@
 
 YAMLParser::YAMLParser() {}
 
-void YAMLParser::cargarConfig(unsigned int id, std::vector<ElementInfo>& v, GameConstants& info)
+void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, GameConstants& info)
 {
-    std::string nombre = std::to_string(id).append(".yaml");
-    YAML::Node config = YAML::LoadFile(nombre);
+    YAML::Node config = YAML::LoadFile(name);
     for (YAML::const_iterator it = config.begin(); it != config.end(); ++it){
         std::string key(it->first.as<std::string>());
         if (key.compare("armas") == 0){

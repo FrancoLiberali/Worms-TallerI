@@ -132,10 +132,10 @@ void MultipleProxy::sendGameWon(int player_id){
 }
 
 void MultipleProxy::sendRoomCreation(int room_id, const std::string& name, 
-	int cant_players, int max_players, unsigned int map_id){
+	int cant_players, int max_players, const std::string& map_name){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendRoomCreation(room_id, name, cant_players, max_players, map_id);
+		it->second->sendRoomCreation(room_id, name, cant_players, max_players, map_name);
 	}
 }
 

@@ -34,7 +34,7 @@ class Game {
 		// especificado por el map_id, lo que aun no esta implementado y
 		// la creacion del mapa se hace aqui mismo.
 		// Ademas se asignan a cada jugador sus correspondientes gusanos.
-		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id, std::vector<int> players_ids);
+		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids);
 		
 		~Game();
 		

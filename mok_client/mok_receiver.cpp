@@ -12,7 +12,6 @@ void MokReceiver::stop(){
 		std::lock_guard<std::mutex> lock(this->keep_mutex);
 		this->keep_receiving = false;
 	}
-	// en mok proxy esta funcion no desbloquea, por lo que hay que tirar un enter o algo para que termine
 	this->proxy.close_communication();
 	
 }
@@ -25,9 +24,10 @@ void MokReceiver::run(){
 			std::lock_guard<std::mutex> lock(this->keep_mutex);
 			keep = this->keep_receiving;
 		} catch (SocketError& e){
-			this->stop();
-			std::lock_guard<std::mutex> lock(this->keep_mutex);
-			keep = this->keep_receiving;
+			//this->stop();
+			//std::lock_guard<std::mutex> lock(this->keep_mutex);
+			//keep = this->keep_receiving;
+			keep = false;
 		}
 			
 	}

@@ -61,7 +61,7 @@ class MultipleProxy{
 		
 		void sendGameWon(int player_id);
 		
-		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, unsigned int map_id);
+		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, const std::string& map_name);
 		
 		void sendRoomPlayersChange(int room_id, int cant_players);
 		

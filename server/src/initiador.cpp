@@ -34,7 +34,7 @@ void Initiador::sendAllRoomsInfo(int player_id, Proxy* proxy){
 	for (; rooms_it != rooms.end(); ++rooms_it){
 		if (!rooms_it->second->isActive()){
 			proxy->sendRoomCreation(rooms_it->first, rooms_it->second->getName(), rooms_it->second->cantPlayers(), 
-				rooms_it->second->maxPlayers(), rooms_it->second->mapId());
+				rooms_it->second->maxPlayers(), rooms_it->second->mapName());
 		}
 	}
 	this->not_playing.add(player_id, proxy);
@@ -87,22 +87,24 @@ void Initiador::run(){
 				}				
 			case 13: {//creacion de una room
 					std::cout << "crear room\n";
-					unsigned int map_id = ntohl(*(reinterpret_cast<unsigned int*>(msj + 5)));
-					int max_players = ntohl(*(reinterpret_cast<int*>(msj + 9)));
-					int name_len = ntohl(*(reinterpret_cast<unsigned int*>(msj + 13)));
-					std::string room_name(msj + 17, name_len);
+					int max_players = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+					int map_len = ntohl(*(reinterpret_cast<int*>(msj + 9)));
+					std::string map_name(msj + 13, map_len);
+					std::cout << map_name << '\n';
+					int name_len = ntohl(*(reinterpret_cast<int*>(msj + 13 + map_len)));
+					std::string room_name(msj + 17 + map_len, name_len);
 					std::cout << room_name << '\n';
 					
 					Proxy* player_proxy = this->players[player_id]->receiver->getProxy();
 					std::string& name = this->players[player_id]->getName();
 					this->players[player_id]->setRoom(this->room_id);
 					
-					Room* room = new Room(std::move(room_name), map_id, max_players);
+					Room* room = new Room(std::move(room_name), std::move(map_name), max_players);
 					room->add(player_id, name, player_proxy);
 					this->rooms.insert(std::pair<int, Room*>(this->room_id, room));
 					this->not_playing.erase(player_id);
 					this->not_playing.sendRoomCreation(this->room_id, room->getName(), room->cantPlayers(), 
-							room->maxPlayers(), room->mapId());
+							room->maxPlayers(), room->mapName());
 					(this->room_id)++;
 					break;
 				}
