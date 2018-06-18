@@ -1,4 +1,5 @@
 #include "Controller.h"
+
 #include "MouseState.h"
 
 #include <iostream>
@@ -29,7 +30,7 @@ void Controller::handle(SDL_Event& e) {
                 case SDLK_DOWN:
                     model.AimChangeAngle(-1); break;
                 case SDLK_SPACE:
-                    model.chargePower();break;
+                    model.chargePower(); view.updatePower(); break;
                 case SDLK_1: model.countDown(1); break;
                 case SDLK_2: model.countDown(2); break;
                 case SDLK_3: model.countDown(3); break;
@@ -47,7 +48,6 @@ void Controller::handle(SDL_Event& e) {
         }
         case SDL_MOUSEBUTTONDOWN:
             SDL_Point mousePointer = {e.motion.x, e.motion.y};
-            //printf("%i - %i\n", e.motion.x, e.motion.y);
             if (view.hasClickedMenu(mousePointer)){
                 Weapon* weapon = view.retrieveWeaponClicked(mousePointer);
                 if (weapon)

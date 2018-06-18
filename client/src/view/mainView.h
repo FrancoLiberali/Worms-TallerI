@@ -1,13 +1,14 @@
 #ifndef _MAIN_View_H
 #define _MAIN_View_H
 #include "../controller/EventHandler.h"
-#include "newView/SdlScreen.h"
+#include "SdlScreen.h"
 #include "Escenario.h"
 #include "WormView.h"
+#include "Camera.h"
 #include "../controller/Event.h"
 #include "BulletFactory.h"
 #include "BulletView.h"
-
+#include "PowerView.h"
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
@@ -15,7 +16,7 @@
 #include <map>
 
 #include "MenuWeaponView.h"
-#include "newView/TextView.h"
+#include "TextView.h"
 
 class EventHandler;
 
@@ -25,10 +26,12 @@ private:
 	Escenario stage;
 
 	SdlScreen& screen;
+	Camera& camera;
 	EventHandler& eventHandler;
 	MenuWeaponView* menuWeapon;
 
 	TextView turnView;
+	PowerView powerView;
 
 	std::map<int,WormView*> worms;
 	std::map<int,BulletView*> bullets;
@@ -39,7 +42,7 @@ private:
 	void updateWorms();
 	void updateBullets();
 public:
-	mainView(EventHandler& eventHandler, SdlScreen& screen);
+	mainView(EventHandler& eventHandler, SdlScreen& screen, Camera& camera);
 	~mainView();
 	bool isOpen();
 	void update();
@@ -51,6 +54,7 @@ public:
 	void actionMenu();
 	bool isMenuOn();
 	bool hasClickedMenu(SDL_Point clickPoint);
+	void updatePower();
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
 	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);

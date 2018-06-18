@@ -2,8 +2,8 @@
 
 #define OFFSET 3
 
-VigaView::VigaView(int posX, int posY, int angle, SdlScreen& screen) 
-        : x(posX), y(posY), angle(angle), screen(screen){
+VigaView::VigaView(int posX, int posY, int angle, SdlScreen& screen,  Camera& camera) 
+        : x(posX), y(posY), angle(angle), screen(screen), camera(camera){
 }
 
 VigaView::~VigaView(){
@@ -11,7 +11,8 @@ VigaView::~VigaView(){
 }
 
 void VigaView::draw(){
-    TextureManager::Instance().draw("viga", getXCenter(), getYCenter(), angle, screen.getRenderer());
+    TextureManager::Instance().draw("viga", getXCenter()-camera.getX(),
+         getYCenter()-camera.getY(), angle, screen.getRenderer());
 }
 
 int  VigaView::getXCenter(){

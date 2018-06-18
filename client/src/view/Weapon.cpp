@@ -1,10 +1,11 @@
 #include "Weapon.h"
-#include "newView/TextureManager.h"
+#include "TextureManager.h"
 #include <algorithm>
 #include <iostream>
 
 
-Weapon::Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon){
+Weapon::Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon, Camera& camera):
+	camera(camera){
 	pair<int, int> data;
 	this->id = id;
 	data = s.getPosition();
@@ -54,9 +55,7 @@ void Weapon::drawItems(SdlScreen & screen){
 		it != lWeaponView.end();
 		it++){
 		TextureManager::Instance().drawFrame(
-					(*it), x+TextureManager::Instance().getCamera().getX(),
-					y + TextureManager::Instance().getCamera().getY() ,
-					0, width, height, 
+					(*it), x, y, 0, width, height, 
 					0, 0, screen.getRenderer(),
 					false, SDL_FLIP_NONE);
 	}

@@ -7,7 +7,7 @@
 class BulletFactory{
 public:
 	static BulletView* createBulletView(WeaponId idWeapon, int id, int dir, int posx,
-                         int posy, int angle, SdlScreen& screen);
+                         int posy, int angle, SdlScreen& screen, Camera& camera);
 };
 
 #endif

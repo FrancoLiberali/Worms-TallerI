@@ -1,8 +1,9 @@
 #ifndef _BULLET_VIEW_H
 #define _BULLET_VIEW_H
 
-#include "newView/Sprite.h"
-#include "newView/SdlScreen.h"
+#include "Sprite.h"
+#include "SdlScreen.h"
+#include "Camera.h"
 
 class BulletView {
 private:
@@ -14,6 +15,7 @@ private:
     Sprite* currentSprite;
     SDL_RendererFlip flip;
     SdlScreen& screen;
+    Camera& camera;
 
 	Sprite spriteBullet;
 	Sprite spriteExplosion;
@@ -22,7 +24,8 @@ private:
     int getCenterX();
     int getCenterY();
 public:
-    BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen& screen);
+    BulletView(int id, int dir, int posx, int posy, int angle,
+            SdlScreen& screen, Camera& camera);
     void setSpriteBullet(Sprite spriteBullet);
     void setSpriteExplosion(Sprite spriteExplosion);
     void updatePos(int x, int y, int angle);

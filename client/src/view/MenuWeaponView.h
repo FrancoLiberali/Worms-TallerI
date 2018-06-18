@@ -1,8 +1,9 @@
 #ifndef __MENU_WEAPON_VIEW__
 #define __MENU_WEAPON_VIEW__
 
-#include "newView/TextureManager.h"
-#include "newView/SdlScreen.h"
+#include "TextureManager.h"
+
+#include "SdlScreen.h"
 #include "WormState.h"
 #include "Weapon.h"
 #include <map>
@@ -11,7 +12,7 @@
 class MenuWeaponView {
 
 public:
-	MenuWeaponView();
+	MenuWeaponView(Camera& camera);
 	~MenuWeaponView();
 	void buildWeapon();
 	void actionMenu();
@@ -26,6 +27,7 @@ public:
 private:
 	map<WeaponId, Weapon*> mapa;
 	Weapon* menu;
+	Camera& camera;
 };
 
 

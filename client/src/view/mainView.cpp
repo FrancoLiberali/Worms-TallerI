@@ -1,16 +1,20 @@
 #include "mainView.h"
-#include "newView/TextureManager.h"
+
+#include "TextureManager.h"
 #include <iostream>
 
+#define X_POWER 400
+#define Y_POWER 700
 
-mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen)
-		: screen(screen), eventHandler(eventHandler), open(true), stage(screen), endGame(false){
+mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen, Camera& camera)
+		: screen(screen), camera(camera), eventHandler(eventHandler), open(true), 
+		stage(screen, camera), endGame(false), powerView(screen){
 	this->init();
 }
 
 void mainView::init(){
 	//creamos el menu de armas
-	menuWeapon = new MenuWeaponView;
+	menuWeapon = new MenuWeaponView(camera);
 	menuWeapon->buildWeapon();
 
 	list<WeaponId> allowW;
@@ -99,8 +103,12 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
+void mainView::updatePower(){
+	powerView.update();
+}
+
 void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle){
-	WormView* worm = new WormView(id, idOwner, TextureManager().Instance().getCamera());
+	WormView* worm = new WormView(id, idOwner, camera, powerView);
 	worm->setPlayerName(player);
 	worm->setDirection(dir);
 	worm->setAngle(angle);
@@ -113,15 +121,15 @@ void mainView::addViga(int x, int y, int angle){
 }
 
 void mainView::addMissile(int id, WeaponId idWeapon, int dir, int posx, int posy, int angle){
-	//std::cout<<"creo un missil de: "<<(int)idWeapon<<std::endl;
-	BulletView* bullet = BulletFactory::createBulletView(idWeapon, id, dir, posx, posy, angle, screen);
+	BulletView* bullet = BulletFactory::createBulletView(idWeapon, id, dir, posx, posy,
+		 angle, screen, camera);
 	this->bullets[id] = bullet;
 }
 
 
 std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	turnView.setColor(255,10,255);
-	SDL_Color red = {0,0,0};
+	SDL_Color red = {255,255,255};
 	turnView.setText("Turno " + namePlayer,red);
 	
 	for(auto& it: this->worms)
@@ -133,7 +141,7 @@ void mainView::showWinner(){
 	//screen.clear();
 	screen.fill();
 	TextureManager::Instance().draw("win", 0 , 0, 0, screen.getRenderer());
-	TextureManager::Instance().getCamera().focusCenterWindow();
+	camera.focusCenterWindow();
 	endGame = true;
 	screen.render();
 }
@@ -142,11 +150,11 @@ void mainView::showLosser(){
 	//screen.clear();
 	screen.fill();
 	TextureManager::Instance().draw("lose", 0, 0, 0, screen.getRenderer());
-	TextureManager::Instance().getCamera().focusCenterWindow();
+	camera.focusCenterWindow();
 	endGame = true;
 	screen.render();
 }
 
 Camera& mainView::getCamera(){
-	return TextureManager::Instance().getCamera();
+	return camera;
 }

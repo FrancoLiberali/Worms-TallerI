@@ -7,7 +7,7 @@
 #include <string>
 #include "SdlException.h"
 #include "GameException.h"
-#include "../Camera.h"
+#include "Camera.h"
 
 class TextureManager {
 private:

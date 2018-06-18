@@ -1,8 +1,8 @@
 #include "BulletView.h"
-#include "newView/TextureManager.h"
+#include "TextureManager.h"
 
-BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen& screen)
-    :id(id), posx(posx), posy(posy), angle(angle), detonated(false), screen(screen){
+BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen& screen, Camera& camera)
+    :id(id), posx(posx), posy(posy), angle(angle), detonated(false), screen(screen), camera(camera){
     
     this->flip = (dir == 1)? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
     currentSprite =&this->spriteBullet; 
@@ -18,6 +18,7 @@ void BulletView::setSpriteExplosion(Sprite spriteExplosion){
 void BulletView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
+    camera.updateCenter(getCenterX(), getCenterY());
     this->angle = angle;
 }
 
@@ -44,7 +45,8 @@ void BulletView::draw(){
     if (currentSprite->isLastFrame())
         return;
     TextureManager::Instance().drawFrame(currentSprite->getImageId(), 
-										getCenterX(), getCenterY(), angle, 
+										getCenterX() - camera.getX(),
+                                        getCenterY() - camera.getY(), angle, 
 										currentSprite->getWidth(),
 										currentSprite->getHeight(), 
 										currentSprite->getCurrentRow(), 

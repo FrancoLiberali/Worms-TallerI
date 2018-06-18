@@ -2,6 +2,7 @@
 #define _WORM_WEAPON_EVENT
 
 #include "Event.h"
+
 #include "../view/WormState.h"
 
 class WormWeaponEvent : public Event {

@@ -76,6 +76,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/misiles/ggrenade.png", "bullet_ggrenade", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/rgrenade.png", "bullet_rgrenade", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/banana.png", "bullet_banana", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/fragment.png", "bullet_fragment", this->getScreen().getRenderer());
 
 		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true);
 		SpriteConfigurator::Instance().add("bullet_dinamita", 60, 60, 129, true);
@@ -85,6 +86,7 @@ void Boot::loadSprites(){
 		SpriteConfigurator::Instance().add("bullet_bazooka", 60, 60, 32, true, 23);
 		SpriteConfigurator::Instance().add("bullet_mortar", 60, 60, 32, true, 23);
 		SpriteConfigurator::Instance().add("bullet_banana", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_fragment", 60, 60, 6, true);
 		
 		//Vigas
 		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
@@ -165,7 +167,7 @@ void Boot::loadMenuWeapon(){
 void Boot::initCamera(int x, int y){
 	int widht = screen.getWidth();
 	int height = screen.getHeight();
-	TextureManager::Instance().getCamera().setDimension(widht, height);
+	//TextureManager::Instance().getCamera().setDimension(widht, height);
 }
 void Boot::realoadEart(){}
 

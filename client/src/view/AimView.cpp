@@ -5,8 +5,8 @@
 #define PI 3.14159265
 #define INIT 16
 
-AimView::AimView():show(false), posAngle(INIT), dir(-1){
-}
+AimView::AimView(Camera& camera):show(false), posAngle(INIT),
+     dir(-1), camera(camera){}
 
 
 void AimView::setCenter(int x, int y){
@@ -48,7 +48,8 @@ void AimView::draw(){
     int posx = centerX + (int)(cos(currAngle*PI/180.0)*RADIUS) - w/2;
     int posy = centerY + (int)(sin(currAngle*PI/180.0)*RADIUS) - h/2;
 
-    TextureManager::Instance().draw("aim", posx, posy, 0, screen->getRenderer());
+    TextureManager::Instance().draw("aim", posx-camera.getX(), posy-camera.getY(),
+            0, screen->getRenderer());
 }
 
 void AimView::enable(){

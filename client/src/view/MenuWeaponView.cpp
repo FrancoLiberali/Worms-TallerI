@@ -1,5 +1,6 @@
 #include "MenuWeaponView.h"
-#include "newView/TextureManager.h"
+#include "TextureManager.h"
+
 #include <list>
 
 
@@ -8,8 +9,7 @@
 #define WIDTH_MENU_WEAPON 150
 #define HEIGHT_MENU_WEAPON 70
 
-MenuWeaponView::MenuWeaponView(){
-}
+MenuWeaponView::MenuWeaponView(Camera& camera):camera(camera){}
 
 MenuWeaponView::~MenuWeaponView(){
 }
@@ -103,69 +103,69 @@ void MenuWeaponView::buildWeapon(){
 	x = widthScreen - WIDTH_MENU_WEAPON;
 	y = HEIGHT_MENU_WEAPON;
 
-	menu = new Weapon(NO_WEAPON,Shape(x,y,WIDTH_MENU_WEAPON,HEIGHT_MENU_WEAPON), lweapons, "");
+	menu = new Weapon(NO_WEAPON,Shape(x,y,WIDTH_MENU_WEAPON,HEIGHT_MENU_WEAPON), lweapons, "", camera);
 
 	x += 1;	y += 2;
 	lweapons.clear();
 	lweapons.push_back("bazooka.2");
-	weapon = new Weapon(BAZOOKA, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "bazooka.1");
+	weapon = new Weapon(BAZOOKA, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "bazooka.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(BAZOOKA,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	lweapons.clear();
 	lweapons.push_back("mortar.2");
-	weapon = new Weapon(MORTERO, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "mortar.1");
+	weapon = new Weapon(MORTERO, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "mortar.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(MORTERO,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	lweapons.clear();
 	lweapons.push_back("g_grenade.2");
-	weapon = new Weapon(G_GRENADE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "g_grenade.1");
+	weapon = new Weapon(G_GRENADE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "g_grenade.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(G_GRENADE,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	lweapons.clear();
 	lweapons.push_back("r_grenade.2");
-	weapon = new Weapon(R_GRENADE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "r_grenade.1");
+	weapon = new Weapon(R_GRENADE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "r_grenade.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(R_GRENADE,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	lweapons.clear();
 	lweapons.push_back("banana.2");
-	weapon = new Weapon(BANANA, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "banana.1");
+	weapon = new Weapon(BANANA, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "banana.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(BANANA,weapon));
 
 	x  = widthScreen - WIDTH_MENU_WEAPON + 1;
 	y  += HEIGHT_WEAPON;
 	lweapons.clear();
 	lweapons.push_back("hgrenade.2");
-	weapon = new Weapon(HOLY, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "hgrenade.1");
+	weapon = new Weapon(HOLY, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "hgrenade.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(HOLY,weapon));
 
 	x += WIDTH_WEAPON - 2;
 	lweapons.clear();
 	lweapons.push_back("dynamite.2");
-	weapon = new Weapon(DYNAMITE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "dynamite.1");
+	weapon = new Weapon(DYNAMITE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "dynamite.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(DYNAMITE,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	lweapons.clear();
 	lweapons.push_back("baseball.2");
-	weapon = new Weapon(BATE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "baseball.1");
+	weapon = new Weapon(BATE, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "baseball.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(BATE,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	//y = y - 5;
 	lweapons.clear();
 	lweapons.push_back("airstrke.2");
-	weapon = new Weapon(AIRATTACK, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "airstrke.1");
+	weapon = new Weapon(AIRATTACK, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "airstrke.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(AIRATTACK,weapon));
 
 	x += WIDTH_WEAPON - 3;
 	//y += 5;
 	lweapons.clear();
 	lweapons.push_back("teleport.2");
-	weapon = new Weapon(TELEPORT, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "teleport.1");
+	weapon = new Weapon(TELEPORT, Shape(x, y, WIDTH_WEAPON, HEIGHT_WEAPON), lweapons, "teleport.1", camera);
 	mapa.insert(pair<WeaponId, Weapon*>(TELEPORT,weapon));
 
 }
