@@ -387,6 +387,8 @@ vector
 -
 map
 -
+mutex
+-
 
 ../src/queue.h
 queue
@@ -1400,6 +1402,8 @@ string
 vector
 -
 map
+-
+mutex
 -
 
 /home/franco/Documentos/taller1/tpfinal/server/src/queue.h

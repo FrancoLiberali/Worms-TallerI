@@ -23,10 +23,10 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){
 		if (info_it->tipo.compare("viga") == 0){
-			Viga viga(this->world, info_it->x, info_it->y, info_it->angulo, this->proxy);
+			Viga viga(this->world, info_it->x, -info_it->y, info_it->angulo, this->proxy);
 		}
 		else if (info_it->tipo.compare("gusano") == 0){
-			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, info_it->y, info_it->angulo);
+			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, -info_it->y, info_it->angulo);
 			gusanos.push_back(gusano);
 		}
 	}*/

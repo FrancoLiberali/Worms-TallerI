@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <mutex>
 
 #ifndef __PROXY_H__
 #define __PROXY_H__
@@ -13,6 +14,7 @@ class Proxy{
 		int id = 0;
 		Queue* queue;
 		Queue* prev_queue;
+		std::mutex queue_mutex;
 		
 		void receive_event_info(char event, int tam);
 		void pushDisconnectionMessage();

@@ -34,11 +34,13 @@ void Proxy::close_communication(){
 }
 
 void Proxy::addNewQueue(Queue* queue){
+	std::lock_guard<std::mutex> lock(this->queue_mutex);
 	this->prev_queue = this->queue;
 	this->queue = queue;
 }
 
 void Proxy::changeToPrevQueue(){
+	std::lock_guard<std::mutex> lock(this->queue_mutex);
 	this->queue = this->prev_queue;
 }
 
@@ -132,6 +134,7 @@ void Proxy::pushDisconnectionMessage(){
 	msj[2] = (this->id >> SECONDBYTE) & LAST8;
 	msj[3] = (this->id >> THIRDBYTE) & LAST8;
 	msj[4] = this->id & LAST8;
+	std::lock_guard<std::mutex> lock(this->queue_mutex);
 	this->queue->push(msj);
 }
 
@@ -144,6 +147,7 @@ void Proxy::receive_event_info(char event, int tam){
 	char* msj = new char[tam];
 	msj[0] = event;
 	this->socket.receive(msj+1, tam-1);
+	std::lock_guard<std::mutex> lock(this->queue_mutex);
 	this->queue->push(msj);
 }
 
