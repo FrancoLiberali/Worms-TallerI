@@ -692,6 +692,54 @@ CMakeFiles/tp.dir/src/bazooka.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
+CMakeFiles/tp.dir/src/dynamite.cpp.o
+ ..//Box2D/Box2D.h
+ ..//Box2D/Collision/Shapes/b2ChainShape.h
+ ..//Box2D/Collision/Shapes/b2CircleShape.h
+ ..//Box2D/Collision/Shapes/b2EdgeShape.h
+ ..//Box2D/Collision/Shapes/b2PolygonShape.h
+ ..//Box2D/Collision/Shapes/b2Shape.h
+ ..//Box2D/Collision/b2BroadPhase.h
+ ..//Box2D/Collision/b2Collision.h
+ ..//Box2D/Collision/b2Distance.h
+ ..//Box2D/Collision/b2DynamicTree.h
+ ..//Box2D/Collision/b2TimeOfImpact.h
+ ..//Box2D/Common/b2BlockAllocator.h
+ ..//Box2D/Common/b2Draw.h
+ ..//Box2D/Common/b2GrowableStack.h
+ ..//Box2D/Common/b2Math.h
+ ..//Box2D/Common/b2Settings.h
+ ..//Box2D/Common/b2StackAllocator.h
+ ..//Box2D/Common/b2Timer.h
+ ..//Box2D/Dynamics/Contacts/b2Contact.h
+ ..//Box2D/Dynamics/Joints/b2DistanceJoint.h
+ ..//Box2D/Dynamics/Joints/b2FrictionJoint.h
+ ..//Box2D/Dynamics/Joints/b2GearJoint.h
+ ..//Box2D/Dynamics/Joints/b2Joint.h
+ ..//Box2D/Dynamics/Joints/b2MotorJoint.h
+ ..//Box2D/Dynamics/Joints/b2MouseJoint.h
+ ..//Box2D/Dynamics/Joints/b2PrismaticJoint.h
+ ..//Box2D/Dynamics/Joints/b2PulleyJoint.h
+ ..//Box2D/Dynamics/Joints/b2RevoluteJoint.h
+ ..//Box2D/Dynamics/Joints/b2RopeJoint.h
+ ..//Box2D/Dynamics/Joints/b2WeldJoint.h
+ ..//Box2D/Dynamics/Joints/b2WheelJoint.h
+ ..//Box2D/Dynamics/b2Body.h
+ ..//Box2D/Dynamics/b2ContactManager.h
+ ..//Box2D/Dynamics/b2Fixture.h
+ ..//Box2D/Dynamics/b2TimeStep.h
+ ..//Box2D/Dynamics/b2World.h
+ ..//Box2D/Dynamics/b2WorldCallbacks.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/dynamite.cpp
+ /home/franco/Documentos/taller1/tpfinal/server/src/dynamite.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 CMakeFiles/tp.dir/src/exploted_state.cpp.o
  ..//Box2D/Box2D.h
  ..//Box2D/Collision/Shapes/b2ChainShape.h
@@ -1396,6 +1444,54 @@ CMakeFiles/tp.dir/src/rotating_state.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_finished.h
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.cpp
  /home/franco/Documentos/taller1/tpfinal/server/src/rotating_state.h
+CMakeFiles/tp.dir/src/saint_granade.cpp.o
+ ..//Box2D/Box2D.h
+ ..//Box2D/Collision/Shapes/b2ChainShape.h
+ ..//Box2D/Collision/Shapes/b2CircleShape.h
+ ..//Box2D/Collision/Shapes/b2EdgeShape.h
+ ..//Box2D/Collision/Shapes/b2PolygonShape.h
+ ..//Box2D/Collision/Shapes/b2Shape.h
+ ..//Box2D/Collision/b2BroadPhase.h
+ ..//Box2D/Collision/b2Collision.h
+ ..//Box2D/Collision/b2Distance.h
+ ..//Box2D/Collision/b2DynamicTree.h
+ ..//Box2D/Collision/b2TimeOfImpact.h
+ ..//Box2D/Common/b2BlockAllocator.h
+ ..//Box2D/Common/b2Draw.h
+ ..//Box2D/Common/b2GrowableStack.h
+ ..//Box2D/Common/b2Math.h
+ ..//Box2D/Common/b2Settings.h
+ ..//Box2D/Common/b2StackAllocator.h
+ ..//Box2D/Common/b2Timer.h
+ ..//Box2D/Dynamics/Contacts/b2Contact.h
+ ..//Box2D/Dynamics/Joints/b2DistanceJoint.h
+ ..//Box2D/Dynamics/Joints/b2FrictionJoint.h
+ ..//Box2D/Dynamics/Joints/b2GearJoint.h
+ ..//Box2D/Dynamics/Joints/b2Joint.h
+ ..//Box2D/Dynamics/Joints/b2MotorJoint.h
+ ..//Box2D/Dynamics/Joints/b2MouseJoint.h
+ ..//Box2D/Dynamics/Joints/b2PrismaticJoint.h
+ ..//Box2D/Dynamics/Joints/b2PulleyJoint.h
+ ..//Box2D/Dynamics/Joints/b2RevoluteJoint.h
+ ..//Box2D/Dynamics/Joints/b2RopeJoint.h
+ ..//Box2D/Dynamics/Joints/b2WeldJoint.h
+ ..//Box2D/Dynamics/Joints/b2WheelJoint.h
+ ..//Box2D/Dynamics/b2Body.h
+ ..//Box2D/Dynamics/b2ContactManager.h
+ ..//Box2D/Dynamics/b2Fixture.h
+ ..//Box2D/Dynamics/b2TimeStep.h
+ ..//Box2D/Dynamics/b2World.h
+ ..//Box2D/Dynamics/b2WorldCallbacks.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/protected_queue.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.cpp
+ /home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 CMakeFiles/tp.dir/src/simple_projectile.cpp.o
  ..//Box2D/Box2D.h
  ..//Box2D/Collision/Shapes/b2ChainShape.h
@@ -1493,6 +1589,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o
  ..//Box2D/Dynamics/b2WorldCallbacks.h
  /home/franco/Documentos/taller1/tpfinal/server/src/banana.h
  /home/franco/Documentos/taller1/tpfinal/server/src/bazooka.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/dynamite.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fake_proxy/mok_proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fragment_info.h
  /home/franco/Documentos/taller1/tpfinal/server/src/fragment_projectile.h
@@ -1508,6 +1605,7 @@ CMakeFiles/tp.dir/src/turn.cpp.o
  /home/franco/Documentos/taller1/tpfinal/server/src/proxy.h
  /home/franco/Documentos/taller1/tpfinal/server/src/red_granade.h
  /home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+ /home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.h
  /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
  /home/franco/Documentos/taller1/tpfinal/server/src/socket.h
  /home/franco/Documentos/taller1/tpfinal/server/src/turn.cpp

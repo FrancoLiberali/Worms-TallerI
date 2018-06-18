@@ -1446,6 +1446,33 @@ src/bazooka.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bazooka.cpp.s
 .PHONY : src/bazooka.cpp.s
 
+src/dynamite.o: src/dynamite.cpp.o
+
+.PHONY : src/dynamite.o
+
+# target to build an object file
+src/dynamite.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/dynamite.cpp.o
+.PHONY : src/dynamite.cpp.o
+
+src/dynamite.i: src/dynamite.cpp.i
+
+.PHONY : src/dynamite.i
+
+# target to preprocess a source file
+src/dynamite.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/dynamite.cpp.i
+.PHONY : src/dynamite.cpp.i
+
+src/dynamite.s: src/dynamite.cpp.s
+
+.PHONY : src/dynamite.s
+
+# target to generate assembly for a file
+src/dynamite.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/dynamite.cpp.s
+.PHONY : src/dynamite.cpp.s
+
 src/exploted_state.o: src/exploted_state.cpp.o
 
 .PHONY : src/exploted_state.o
@@ -1959,6 +1986,33 @@ src/rotating_state.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/rotating_state.cpp.s
 .PHONY : src/rotating_state.cpp.s
 
+src/saint_granade.o: src/saint_granade.cpp.o
+
+.PHONY : src/saint_granade.o
+
+# target to build an object file
+src/saint_granade.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/saint_granade.cpp.o
+.PHONY : src/saint_granade.cpp.o
+
+src/saint_granade.i: src/saint_granade.cpp.i
+
+.PHONY : src/saint_granade.i
+
+# target to preprocess a source file
+src/saint_granade.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/saint_granade.cpp.i
+.PHONY : src/saint_granade.cpp.i
+
+src/saint_granade.s: src/saint_granade.cpp.s
+
+.PHONY : src/saint_granade.s
+
+# target to generate assembly for a file
+src/saint_granade.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/saint_granade.cpp.s
+.PHONY : src/saint_granade.cpp.s
+
 src/simple_projectile.o: src/simple_projectile.cpp.o
 
 .PHONY : src/simple_projectile.o
@@ -2304,6 +2358,9 @@ help:
 	@echo "... src/bazooka.o"
 	@echo "... src/bazooka.i"
 	@echo "... src/bazooka.s"
+	@echo "... src/dynamite.o"
+	@echo "... src/dynamite.i"
+	@echo "... src/dynamite.s"
 	@echo "... src/exploted_state.o"
 	@echo "... src/exploted_state.i"
 	@echo "... src/exploted_state.s"
@@ -2361,6 +2418,9 @@ help:
 	@echo "... src/rotating_state.o"
 	@echo "... src/rotating_state.i"
 	@echo "... src/rotating_state.s"
+	@echo "... src/saint_granade.o"
+	@echo "... src/saint_granade.i"
+	@echo "... src/saint_granade.s"
 	@echo "... src/simple_projectile.o"
 	@echo "... src/simple_projectile.i"
 	@echo "... src/simple_projectile.s"

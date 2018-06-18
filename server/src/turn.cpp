@@ -13,6 +13,8 @@
 #include "green_granade.h"
 #include "red_granade.h"
 #include "banana.h"
+#include "saint_granade.h"
+#include "dynamite.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -116,9 +118,9 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 					break;
 			case 5: this->fire_banana(position, direction);
 					break;
-			case 6: //this->fire_saint_granade(position, direction);
+			case 6: this->fire_saint_granade(position, direction);
 					break;
-			case 7: //this->fire_dynamite(position, direction);
+			case 7: this->fire_dynamite(position, direction);
 					break;
 			case 8: //this->fire_bat(position, direction);
 					break;
@@ -163,6 +165,20 @@ void Turn::fire_banana(b2Vec2 position, int direction){
 						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->proxy, this->regresive_time);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, banana));
+}
+
+void Turn::fire_saint_granade(b2Vec2 position, int direction){
+	SaintGranade* saint = new SaintGranade(this->world, this->actual_max_projectile, position.x, 
+						position.y, direction, this->sight_angle, this->power, this->info, 
+						this->to_remove_projectiles, this->proxy, this->regresive_time);
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, saint));
+}
+
+void Turn::fire_dynamite(b2Vec2 position, int direction){
+	Dynamite* dynamite = new Dynamite(this->world, this->actual_max_projectile, position.x, 
+						position.y, direction, this->info, 
+						this->to_remove_projectiles, this->proxy, this->regresive_time);
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, dynamite));
 }
 
 void Turn::play(int active_player, unsigned int active_gusano){

@@ -25,7 +25,7 @@ RedGranade::RedGranade(b2World& world_entry, int number, float x, float y, int d
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
 	fixtureDef.friction = 0.0f;
-	fixtureDef.restitution = 0.0f;
+	fixtureDef.restitution = 0.2f;
 
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();

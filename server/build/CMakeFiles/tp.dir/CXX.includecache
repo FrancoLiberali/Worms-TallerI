@@ -1020,6 +1020,18 @@ user_data.h
 iostream
 -
 
+/home/franco/Documentos/taller1/tpfinal/server/src/dynamite.cpp
+dynamite.h
+/home/franco/Documentos/taller1/tpfinal/server/src/dynamite.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/dynamite.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+regresive_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+game_constants.h
+/home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
 exploted_state.h
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.h
@@ -1384,6 +1396,18 @@ gusano_state.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.cpp
+saint_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+regresive_projectile.h
+/home/franco/Documentos/taller1/tpfinal/server/src/regresive_projectile.h
+game_constants.h
+/home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.cpp
 simple_projectile.h
 /home/franco/Documentos/taller1/tpfinal/server/src/simple_projectile.h
@@ -1473,6 +1497,10 @@ red_granade.h
 /home/franco/Documentos/taller1/tpfinal/server/src/red_granade.h
 banana.h
 /home/franco/Documentos/taller1/tpfinal/server/src/banana.h
+saint_granade.h
+/home/franco/Documentos/taller1/tpfinal/server/src/saint_granade.h
+dynamite.h
+/home/franco/Documentos/taller1/tpfinal/server/src/dynamite.h
 cmath
 -
 stdexcept
