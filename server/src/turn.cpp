@@ -67,7 +67,7 @@ void Turn::take_weapon(char* msj){
 	if (!this->fired && *(this->info.ammunition[to_take]) != 0){
 		this->weapon = to_take; 
 		this->sight_angle = 0;
-		this->regresive_time = 5;
+		this->regresive_time = 5 / this->time_step;
 		this->power = 1;
 		this->proxy.sendTakeWeapon(this->weapon);
 	}
@@ -86,7 +86,7 @@ void Turn::changeSightAngle(char* msj){
 
 void Turn::changeRegresiveTime(char* msj){
 	if (this->weapon != 0){
-		this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5)));
+		this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5))) / this->time_step;
 	}
 }
 
