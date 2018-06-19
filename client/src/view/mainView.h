@@ -6,8 +6,8 @@
 #include "WormView.h"
 #include "Camera.h"
 #include "../controller/Event.h"
-#include "BulletFactory.h"
-#include "BulletView.h"
+#include "bullets/BulletFactory.h"
+#include "bullets/BulletView.h"
 #include "PowerView.h"
 
 #include <SDL2/SDL.h>

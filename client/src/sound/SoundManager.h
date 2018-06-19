@@ -5,7 +5,7 @@
 #include <string>
 #include <SDL2/SDL.h>
 
-enum SoundId {AIRSTRIKE,BANANA_IMPACT,EXPLOTION};
+enum SoundId {AIRSTRIKE,BANANA_S,EXPLOTION, FUSE, HOLY_S, SHOOT, JUMP_S, COMMUNICATOR, TELELEPORT_S};
 
 enum MusicId {BACKGROUND, WAIT,};
 
@@ -23,7 +23,7 @@ public:
 	void close();
     void loadSound(SoundId id, std::string path);
     void loadMusic(MusicId id, std::string path);
-    void playSound(SoundId id);
+    void playSound(SoundId id, int times = 0, int channel = -1);
     void playMusic(MusicId id);
 };
 

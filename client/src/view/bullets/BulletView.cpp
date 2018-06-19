@@ -1,5 +1,5 @@
 #include "BulletView.h"
-#include "TextureManager.h"
+#include "../TextureManager.h"
 
 BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen& screen, Camera& camera)
     :id(id), posx(posx), posy(posy), angle(angle), detonated(false), screen(screen), camera(camera){
@@ -17,12 +17,14 @@ void BulletView::setSpriteExplosion(Sprite spriteExplosion){
 }
 
 void BulletView::setExplotionSound(SoundId idSound){
-    this->explotioSound = idSound;
+    this->explotionSound = idSound;
 }
+
 void BulletView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
-    camera.updateCenter(getCenterX(), getCenterY());
+    if (isOnCamera)
+        camera.updateCenter(getCenterX(), getCenterY());
     this->angle = angle;
 }
 
@@ -32,10 +34,14 @@ void BulletView::update(){
     draw();
 }
 
+void BulletView::disableCamera(){
+    this->isOnCamera = false;
+}
+
 void BulletView::detonate(){
     currentSprite = &spriteExplosion;
     detonated = true;
-    SoundManager::Instance().playSound(explotioSound);
+    SoundManager::Instance().playSound(explotionSound);
 }
 
 bool BulletView::isIdBullet(int id){

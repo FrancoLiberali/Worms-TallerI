@@ -1,4 +1,5 @@
 #include "WormChangeStateEvent.h"
+#include "../sound/SoundManager.h"
 #include <iostream>
 
 WormChangeStateEvent::WormChangeStateEvent(int id, int state)
@@ -14,5 +15,7 @@ WormChangeStateEvent::WormChangeStateEvent(int id, int state)
 void WormChangeStateEvent::process(){
 	WormView* wormView = view->getWormView(wormID);
 	wormView->changeState(newState);
-	//std::cout<<"Change state "<<std::endl;
+    if (newState == JUMP)
+        SoundManager::Instance().playSound(JUMP_S);
+
 }

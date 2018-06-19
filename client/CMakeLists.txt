@@ -65,8 +65,16 @@ add_library(alllib
 	src/view/VigaView.cpp
 	src/view/AimView.cpp
 	src/view/Camera.cpp
-	src/view/BulletFactory.cpp
-	src/view/BulletView.cpp
+	src/view/bullets/BulletFactory.cpp
+	src/view/bullets/BulletView.cpp
+	src/view/bullets/BazookaView.cpp
+	src/view/bullets/MortarView.cpp
+	src/view/bullets/FragmentView.cpp
+	src/view/bullets/GreenGrenadeView.cpp
+	src/view/bullets/RedGrenadeView.cpp
+	src/view/bullets/BananaView.cpp
+	src/view/bullets/HolyView.cpp
+	src/view/bullets/DynamiteView.cpp
 	src/view/PowerView.cpp
 
 	src/sound/SoundManager.cpp

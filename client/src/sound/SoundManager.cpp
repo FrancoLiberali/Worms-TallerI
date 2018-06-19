@@ -1,9 +1,11 @@
 #include "SoundManager.h"
 #include "../view/GameException.h"
+#include <string>
 
 void SoundManager::init(){
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2 ,2048) < 0)
         throw GameException("Error al cargar el MIXER");
+    //Mix_AllocateChannels(100);
 }
 
 void SoundManager::loadSound(SoundId id, std::string path){
@@ -29,9 +31,11 @@ void SoundManager::close(){
 	Mix_Quit();
 }
 
-void SoundManager::playSound(SoundId id){
-    if (Mix_PlayChannel(-1, sounds[id], 0) < 0)
+void SoundManager::playSound(SoundId id, int times, int channel){
+    Mix_HaltChannel(channel);
+    if (Mix_PlayChannel(channel, sounds[id], times) < 0){
         throw GameException("Error al reproducir el sonido");
+    }
 }
 
 void SoundManager::playMusic(MusicId id){

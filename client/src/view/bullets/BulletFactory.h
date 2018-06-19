@@ -1,7 +1,7 @@
 #ifndef _BULLET_FACTORY_H
 #define _BULLET_FACTORY_H
 
-#include "WormState.h"
+#include "../WormState.h"
 #include "BulletView.h"
 
 class BulletFactory{

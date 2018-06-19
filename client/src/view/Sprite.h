@@ -34,6 +34,7 @@ public:
 	int getRows() {return this->rows;}
 	int getCurrentRow() {return this->currentRow;}
 	bool isLastFrame();
+	bool isInit();
 };
 
 

@@ -114,8 +114,8 @@ void WormView::update(int idPlayer){
 		}
 		else if (this->weaponId == DYNAMITE && currentSprite != &this->sprites["dinamita"]){
 			currentSprite = &this->sprites["dinamita"];
-			power.allow();
-			aim.enable();
+			power.deny();
+			aim.disable();
 		}
 		else if (this->weaponId == BAZOOKA && currentSprite != &this->sprites["bazooka"]){
 			currentSprite = &this->sprites["bazooka"];

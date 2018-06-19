@@ -50,3 +50,7 @@ void Sprite::update(int modifier) {
 bool Sprite::isLastFrame(){
 	return (this->currentRow == this->rows - 1);
 }
+
+bool Sprite::isInit(){
+	return this->currentRow == initFrame;
+}

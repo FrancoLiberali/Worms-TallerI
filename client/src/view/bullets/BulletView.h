@@ -1,13 +1,13 @@
 #ifndef _BULLET_VIEW_H
 #define _BULLET_VIEW_H
 
-#include "Sprite.h"
-#include "SdlScreen.h"
-#include "Camera.h"
-#include "../sound/SoundManager.h"
+#include "../Sprite.h"
+#include "../SdlScreen.h"
+#include "../Camera.h"
+#include "../../sound/SoundManager.h"
 
 class BulletView {
-private:
+protected:
     int id;
     int posx; 
     int posy;
@@ -18,10 +18,11 @@ private:
     SdlScreen& screen;
     Camera& camera;
 
-	Sprite spriteBullet;
+    Sprite spriteBullet;
 	Sprite spriteExplosion;
-    SoundId explotioSound;
+    SoundId explotionSound;
 	bool detonated;
+    bool isOnCamera;
     void draw();
     int getCenterX();
     int getCenterY();
@@ -31,10 +32,11 @@ public:
     void setSpriteBullet(Sprite spriteBullet);
     void setSpriteExplosion(Sprite spriteExplosion);
     void setExplotionSound(SoundId idSound);
-    void updatePos(int x, int y, int angle);
-    void update();
+    virtual void updatePos(int x, int y, int angle);
+    virtual void update();
     void detonate();
     bool isIdBullet(int id);
     bool isDetonateDone();
+    void disableCamera();
 };
 #endif

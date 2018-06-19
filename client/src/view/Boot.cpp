@@ -67,7 +67,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/misiles/bazzoka.png", "bullet_bazooka", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/mortar.png", "bullet_mortar", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/airmisl.png", "bullet_airmisl", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/dynamite.png", "bullet_dinamita", this->getScreen().getRenderer());
+		TextureManager::Instance().load("../resource/images/misiles/dynamite.png", "bullet_dynamite", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/hgrenade.png", "bullet_holy", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/ggrenade.png", "bullet_ggrenade", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/rgrenade.png", "bullet_rgrenade", this->getScreen().getRenderer());
@@ -75,7 +75,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/misiles/fragment.png", "bullet_fragment", this->getScreen().getRenderer());
 
 		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true);
-		SpriteConfigurator::Instance().add("bullet_dinamita", 60, 60, 129, true);
+		SpriteConfigurator::Instance().add("bullet_dynamite", 60, 60, 129, true);
 		SpriteConfigurator::Instance().add("bullet_holy", 60, 60, 32, true);
 		SpriteConfigurator::Instance().add("bullet_ggrenade", 60, 60, 32, true);
 		SpriteConfigurator::Instance().add("bullet_rgrenade", 60, 60, 32, true);
@@ -159,6 +159,13 @@ void Boot::loadMenuWeapon(){
 void Boot::loadSounds(){
 	SoundManager::Instance().loadMusic(BACKGROUND, "../resource/sounds/background.wav");
 	SoundManager::Instance().loadSound(EXPLOTION, "../resource/sounds/explotion2.wav");
+	SoundManager::Instance().loadSound(FUSE, "../resource/sounds/FUSE.wav");
+	SoundManager::Instance().loadSound(HOLY_S, "../resource/sounds/holy.wav");
+	SoundManager::Instance().loadSound(BANANA_S, "../resource/sounds/BananaImpact.wav");
+	SoundManager::Instance().loadSound(JUMP_S, "../resource/sounds/jump.wav");
+	SoundManager::Instance().loadSound(SHOOT, "../resource/sounds/handgunfire.wav");
+	SoundManager::Instance().loadSound(COMMUNICATOR, "../resource/sounds/communicator.wav");
+	SoundManager::Instance().loadSound(TELELEPORT_S, "../resource/sounds/teleport.wav");
 }
 
 SdlScreen& Boot::getScreen(){
