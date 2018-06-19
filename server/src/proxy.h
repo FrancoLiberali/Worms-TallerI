@@ -32,6 +32,8 @@ class Proxy{
 		
 		void sendVigaCreation(int x, int y, int angle);
 		
+		void sendMapDimentions(int widht, int height);
+		
 		void sendGusanoCreation(int gusano_id, int player_id, int x, int y, int direction, int angle);
 		
 		void sendTurnBegining(int player_id, int gusano_id);

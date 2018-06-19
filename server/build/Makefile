@@ -1419,6 +1419,33 @@ src/banana.cpp.s:
 	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/banana.cpp.s
 .PHONY : src/banana.cpp.s
 
+src/bat.o: src/bat.cpp.o
+
+.PHONY : src/bat.o
+
+# target to build an object file
+src/bat.cpp.o:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bat.cpp.o
+.PHONY : src/bat.cpp.o
+
+src/bat.i: src/bat.cpp.i
+
+.PHONY : src/bat.i
+
+# target to preprocess a source file
+src/bat.cpp.i:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bat.cpp.i
+.PHONY : src/bat.cpp.i
+
+src/bat.s: src/bat.cpp.s
+
+.PHONY : src/bat.s
+
+# target to generate assembly for a file
+src/bat.cpp.s:
+	$(MAKE) -f CMakeFiles/tp.dir/build.make CMakeFiles/tp.dir/src/bat.cpp.s
+.PHONY : src/bat.cpp.s
+
 src/bazooka.o: src/bazooka.cpp.o
 
 .PHONY : src/bazooka.o
@@ -2355,6 +2382,9 @@ help:
 	@echo "... src/banana.o"
 	@echo "... src/banana.i"
 	@echo "... src/banana.s"
+	@echo "... src/bat.o"
+	@echo "... src/bat.i"
+	@echo "... src/bat.s"
 	@echo "... src/bazooka.o"
 	@echo "... src/bazooka.i"
 	@echo "... src/bazooka.s"

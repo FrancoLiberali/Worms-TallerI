@@ -18,6 +18,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/tp.dir/src/dynamite.cpp.o"
   "CMakeFiles/tp.dir/src/morter.cpp.o"
   "CMakeFiles/tp.dir/src/regresive_projetile.cpp.o"
+  "CMakeFiles/tp.dir/src/bat.cpp.o"
   "CMakeFiles/tp.dir/src/jumping_state.cpp.o"
   "CMakeFiles/tp.dir/src/fragment_projectile.cpp.o"
   "CMakeFiles/tp.dir/src/turn.cpp.o"

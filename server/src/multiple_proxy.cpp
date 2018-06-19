@@ -24,6 +24,13 @@ void MultipleProxy::sendPlayerName(int player_id, std::string& name){
 	}
 }
 
+void MultipleProxy::sendMapDimentions(int widht, int height){
+	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		(*it)->sendMapDimentions(widht, height);
+	}
+}
+
 void MultipleProxy::sendVigaCreation(float x, float y, float angle){
 	std::vector<Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){

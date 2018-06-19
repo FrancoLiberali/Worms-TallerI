@@ -29,6 +29,8 @@ class MultipleProxy{
 		
 		void sendVigaCreation(float x, float y, float angle);
 		
+		void sendMapDimentions(int widht, int height);
+		
 		void sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle);
 		
 		void sendTurnBegining(int player_id, int gusano_id);

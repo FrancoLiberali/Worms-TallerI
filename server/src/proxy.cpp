@@ -124,6 +124,13 @@ void Proxy::sendPlayerName(int player_id, std::string& name){
 	this->socket.send(name.data(), name.length());
 }
 
+void Proxy::sendMapDimentions(int widht, int height){
+	char event = 3;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(widht);
+	this->send_int(height);
+}
+
 void Proxy::sendVigaCreation(int x, int y, int angle){
 	char event = 2;
 	this->socket.send(&event, ONEBYTE);
