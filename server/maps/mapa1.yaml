@@ -5,25 +5,20 @@ objetos:
   - vida_gusanos: 100
   - tipo: viga
     tamanio: grande
-    angulo: 0.06981317
-    x: 25.24031
-    y: 12.6562
+    angulo: 0.122173
+    x: 14.0303
+    y: 14.97368
   - tipo: viga
     tamanio: grande
-    angulo: 0.1396263
-    x: 19.24828
-    y: 13.22437
-  - tipo: viga
-    tamanio: grande
-    angulo: 0.1396263
-    x: 31.29176
-    y: 12.00698
+    angulo: 0
+    x: 19.86957
+    y: 14.6087
   - tipo: gusano
-    x: 25.26087
-    y: 11.6087
+    x: 19.91304
+    y: 13.3913
   - tipo: gusano
-    x: 18.52174
-    y: 12.30435
+    x: 17.47826
+    y: 13.47826
 armas:
   - tipo: Ataque Aereo
     habilitada: si

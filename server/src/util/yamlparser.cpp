@@ -1,5 +1,6 @@
 #include "util/yamlparser.h"
 #include "game_constants.h"
+#include <iostream>
 
 #define INF_VALUE -1
 #define INFINITO "infinitas"
@@ -18,7 +19,8 @@ YAMLParser::YAMLParser() {}
 
 void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, GameConstants& info)
 {
-    YAML::Node config = YAML::LoadFile(name);
+	std::cout << name << "\n";
+    YAML::Node config = YAML::LoadFile("../maps/" + name);
     for (YAML::const_iterator it = config.begin(); it != config.end(); ++it){
         std::string key(it->first.as<std::string>());
         if (key.compare("armas") == 0){
@@ -28,13 +30,13 @@ void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, Ga
             cargarMapa(it->second, v, info);
         }
         if (key.compare("metadata") == 0){
-			for(YAML::const_iterator it = it->second.begin(); it!=it->second.end(); ++it){
-				std::string key2(it->first.as<std::string>());
+			for(YAML::const_iterator it2 = it->second.begin(); it2!=it->second.end(); ++it2){
+				std::string key2(it2->first.as<std::string>());
 				if (key2.compare("ancho") == 0){
-					info.map_widht = it->second.as<float>();
+					info.map_widht = it2->second.as<float>();
 				}
 				if (key2.compare("alto") == 0){
-					info.map_height = it->second.as<float>();
+					info.map_height = it2->second.as<float>();
 				}
 			}
 		}

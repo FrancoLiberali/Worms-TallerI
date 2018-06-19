@@ -1647,6 +1647,8 @@ util/yamlparser.h
 /home/franco/Documentos/taller1/tpfinal/server/src/util/util/yamlparser.h
 game_constants.h
 /home/franco/Documentos/taller1/tpfinal/server/src/util/game_constants.h
+iostream
+-
 
 /home/franco/Documentos/taller1/tpfinal/server/src/util/yamlparser.h
 iostream

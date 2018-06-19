@@ -38,7 +38,7 @@ void Room::run(){
 	for(; it != names.end(); ++it){
 		players.push_back(it->first);
 	}
-	//Game game(this->proxy, this->queue, this->map_name, players);
+	Game game(this->proxy, this->queue, this->map_name, players);
 	//cuando termina vuelven a mandar mensajes a la hall
 	this->proxy.changeToPrevQueue(); 
 }

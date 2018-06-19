@@ -4,6 +4,8 @@ project(box2d-example)
 
 set (CMAKE_CXX_STANDARD 11)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 include_directories(${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/src)
 
 file(GLOB_RECURSE BOX2D_FILES ${PROJECT_SOURCE_DIR}/Box2D/*.cpp)

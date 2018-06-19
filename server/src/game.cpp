@@ -23,15 +23,18 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	std::vector<ElementInfo> elements;
 	parser.cargarConfig(map_name, elements, this->info);
 	
-	this->proxy.sendMapDimentions(info.map_widht + 2 * MAP_OFFSET, info.map_height + WATER_DEPPNESS);
+	//this->proxy.sendMapDimentions(info.map_widht + 2 * MAP_OFFSET, info.map_height + WATER_DEPPNESS);
 	this->water = new Water(this->world, 0, -info.map_height, info.map_widht + 2 * MAP_OFFSET, -info.map_height);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){
+		std::cout << "hay elem\n";
 		if (info_it->tipo.compare("viga") == 0){
+			std::cout << "crear viga\n";
 			Viga viga(this->world, info_it->x, -info_it->y, info_it->angulo, this->proxy);
 		}
 		else if (info_it->tipo.compare("gusano") == 0){
+			std::cout << "crear gusano\n";
 			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, -info_it->y, info_it->angulo);
 			gusanos.push_back(gusano);
 		}
