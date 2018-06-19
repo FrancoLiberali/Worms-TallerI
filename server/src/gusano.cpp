@@ -39,8 +39,8 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	dynamicBox.Set(vertices, count);
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
-	fixtureDef.density = 3.0f;
-	fixtureDef.friction = 1.0f;
+	fixtureDef.density = 6.0f;
+	fixtureDef.friction = 0.2f;
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);

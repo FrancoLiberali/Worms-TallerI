@@ -21,7 +21,7 @@ Banana::Banana(b2World& world_entry, int number, float x, float y, int direction
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.0f;
+	fixtureDef.friction = 0.5f;
 	fixtureDef.restitution = 1.0f;
 
 	this->body->CreateFixture(&fixtureDef);
