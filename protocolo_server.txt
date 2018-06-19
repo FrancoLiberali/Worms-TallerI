@@ -22,9 +22,10 @@ CREACION DE UNA VIGA EN EL MAPA:
 	int y
 	int angle
 
-CREACION DEL AGUA EN EL MAPA:
+DIMENSIONES DEL MAPA:
 	char en 3
-	a definir segun editor como se va a guardar en el yalm
+	int ancho
+	int alto
 
 CREACION DE UN GUSANO EN EL MAPA
 	char en 4

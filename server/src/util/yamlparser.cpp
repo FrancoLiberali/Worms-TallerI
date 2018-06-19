@@ -25,8 +25,19 @@ void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, Ga
             cargarArmas(it->second, info);
         }
         if (key.compare("objetos") == 0){
-            cargarMapa(it->second, v);
+            cargarMapa(it->second, v, info);
         }
+        if (key.compare("metadata") == 0){
+			for(YAML::const_iterator it = it->second.begin(); it!=it->second.end(); ++it){
+				std::string key2(it->first.as<std::string>());
+				if (key2.compare("ancho") == 0){
+					info.map_widht = it->second.as<float>();
+				}
+				if (key2.compare("alto") == 0){
+					info.map_height = it->second.as<float>();
+				}
+			}
+		}
     }
 }
 
@@ -50,7 +61,7 @@ void YAMLParser::cargarArmas(const YAML::Node& nodeVect, GameConstants& info)
     }
 }
 
-void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v)
+void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v, GameConstants& info)
 {  
     ElementInfo elemento;
     for (unsigned i = 0; i < nodeVect.size(); ++i){
@@ -60,6 +71,8 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>
             std::string key(it->first.as<std::string>());
             if (key.compare("tipo") == 0){
                 elemento.tipo = it->second.as<std::string>();
+            } else if (key.compare("vida_gusanos") == 0) {
+                info.worms_life = it->second.as<int>();
             } else if (key.compare("x") == 0) {
                 elemento.x = it->second.as<float>();
             } else if (key.compare("y") == 0) {
@@ -80,44 +93,33 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>
 void YAMLParser::asignar_a_info(Arma& arma, GameConstants& info)
 {
     if (arma.nombre.compare(BANANA)){
-        info.bannana_enabled = decidir_habilitada(arma.habilitada);
-        info.banana_ammunition = convertir_municion(arma.municiones);
+        info.banana_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(MORTERO)){
-        info.morter_enabled = decidir_habilitada(arma.habilitada);
-        info.morter_ammunition = convertir_municion(arma.municiones);
+        info.morter_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(BAZOOKA)){
-        info.bazooka_enabled = decidir_habilitada(arma.habilitada);
-        info.bazooka_ammunition = convertir_municion(arma.municiones);
+        info.bazooka_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(TELETRANSPORTACION)){
-        info.teleport_enabled = decidir_habilitada(arma.habilitada);
-        info.teleport_ammunition = convertir_municion(arma.municiones);
+        info.teleport_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(GRANADA_VERDE)){
-        info.green_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.green_granade_ammunition = convertir_municion(arma.municiones);
+        info.green_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(GRANADA_ROJA)){
-        info.red_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.red_granade_ammunition = convertir_municion(arma.municiones);
+        info.red_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(GRANADA_SANTA)){
-        info.holy_granade_enabled = decidir_habilitada(arma.habilitada);
-        info.holy_granade_ammunition = convertir_municion(arma.municiones);
+        info.holy_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(ATAQUE_AEREO)){
-        info.air_attack_enabled = decidir_habilitada(arma.habilitada);
-        info.air_attack_ammunition = convertir_municion(arma.municiones);
+        info.air_attack_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(BATE)){
-        info.bat_enabled = decidir_habilitada(arma.habilitada);
-        info.bat_ammunition = convertir_municion(arma.municiones);
+        info.bat_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(DINAMITA)) {
-        info.dynamite_enabled = decidir_habilitada(arma.habilitada);
-        info.dynamite_ammunition = convertir_municion(arma.municiones);
+        info.dynamite_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     }
 }
 
-bool YAMLParser::decidir_habilitada(std::string& habilitada)
-{
-    return habilitada.compare("si") ? true : false;
-}
-
-int YAMLParser::convertir_municion(std::string& municion)
-{
-    return municion.compare(INFINITO)? -1 : std::stoi(municion);
+int YAMLParser::toAmmunition(std::string& habilitada, std::string& municion){
+	bool enabled = habilitada.compare("si");
+	if (enabled){
+		return municion.compare(INFINITO)? -1 : std::stoi(municion);
+	} else {
+		0;
+	}
 }

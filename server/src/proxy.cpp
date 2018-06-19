@@ -180,6 +180,13 @@ void Proxy::sendVigaCreation(int x, int y, int angle){
 	this->send_int(angle);
 }
 
+void Proxy::sendMapDimentions(int widht, int height){
+	char event = 3;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(widht);
+	this->send_int(height);
+}
+
 void Proxy::sendGusanoCreation(int gusano_id, int player_id, int x, int y, int direction, int angle){
 	char event = 4;
 	this->socket.send(&event, ONEBYTE);

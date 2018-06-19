@@ -33,18 +33,20 @@ public:
     // Recibe un nodo con la informacion, y un map en donde se va
     // a almacenar la misma.
     void cargarArmas(const YAML::Node& nodeVect, GameConstants& info);
-    // Modifica las constantes segun el arma.
+   
+   	// Carga el mapa.
+    // Recibe un nodo con la informacion, y un map en donde se va
+    // a almacenar la misma.
+	void cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v, GameConstants& info);
+	
+	// Modifica las constantes segun el arma.
     void asignar_a_info(Arma& arma, GameConstants& info);
+    
     // Decide si esta habilitada o no.
-	bool decidir_habilitada(std::string& habilitada);
 	// Convierte la municion a un entero.
 	// Recibe municion como un string.
 	// En caso de ser "infinitas" devuelve -1.
-	int convertir_municion(std::string& municion);
-	// Carga el mapa.
-    // Recibe un nodo con la informacion, y un map en donde se va
-    // a almacenar la misma.
-	void cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>& v);
+	int toAmmunition(std::string& habilitada, std::string& municion);
 
 };
 #endif // PARSER_H

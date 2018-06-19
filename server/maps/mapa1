@@ -1,0 +1,57 @@
+metadata:
+  ancho: 78.26087
+  alto: 44.52174
+objetos:
+  - vida_gusanos: 100
+  - tipo: viga
+    tamanio: grande
+    angulo: 0.06981317
+    x: 25.24031
+    y: 12.6562
+  - tipo: viga
+    tamanio: grande
+    angulo: 0.1396263
+    x: 19.24828
+    y: 13.22437
+  - tipo: viga
+    tamanio: grande
+    angulo: 0.1396263
+    x: 31.29176
+    y: 12.00698
+  - tipo: gusano
+    x: 25.26087
+    y: 11.6087
+  - tipo: gusano
+    x: 18.52174
+    y: 12.30435
+armas:
+  - tipo: Ataque Aereo
+    habilitada: si
+    municiones: 2
+  - tipo: Banana
+    habilitada: si
+    municiones: 5
+  - tipo: Bate de Baseball
+    habilitada: si
+    municiones: infinitas
+  - tipo: Bazooka
+    habilitada: si
+    municiones: infinitas
+  - tipo: Dinamita
+    habilitada: si
+    municiones: 5
+  - tipo: Granada Roja
+    habilitada: si
+    municiones: 10
+  - tipo: Granada Santa
+    habilitada: si
+    municiones: 2
+  - tipo: Granada Verde
+    habilitada: si
+    municiones: infinitas
+  - tipo: Mortero
+    habilitada: si
+    municiones: 10
+  - tipo: Teletransportacion
+    habilitada: si
+    municiones: infinitas

@@ -10,15 +10,21 @@
 #include "util/yamlparser.h"
 #include <string>
 
+#define MAP_OFFSET 25
+#define WATER_DEPPNESS 3
+
 Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids_e) 
 		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), players_ids(players_ids_e){
 	this->world.SetContactListener(&(this->contact_listener));
 	
 	std::vector<Gusano*> gusanos;
 	//lectura de archivo yalm "map_name" y creacion de vigas y gusanos
-	/*YAMLParser parser;
+	YAMLParser parser;
 	std::vector<ElementInfo> elements;
 	parser.cargarConfig(map_name, elements, this->info);
+	
+	this->proxy.sendMapDimentions(info.map_widht + 2 * MAP_OFFSET, info.map_height + WATER_DEPPNESS);
+	this->water = new Water(this->world, 0, -info.map_height, info.map_widht + 2 * MAP_OFFSET, -info.map_height);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){
@@ -29,9 +35,9 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, -info_it->y, info_it->angulo);
 			gusanos.push_back(gusano);
 		}
-	}*/
+	}
 	
-	Viga viga(this->world, 3.0f, 8.0f, 0.0f, this->proxy);
+	/*Viga viga(this->world, 3.0f, 8.0f, 0.0f, this->proxy);
 	Viga viga2(this->world, 9.0f, 8.0f, 0.0f, this->proxy);
 	Viga viga3(this->world, 3.0f, 18.0f, 0.0f, this->proxy);
 	Viga viga4(this->world, 9.0f, 18.0f, 0.0f, this->proxy);
@@ -43,7 +49,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 4.0f, 8.52f, 0.0f);
 	gusanos.push_back(gusano1);
 	//Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
-	//gusanos.push_back(gusano2);
+	//gusanos.push_back(gusano2);*/
 	
 	srand(time(0));
 	//para que los gusanos toquen en orden aleatorio

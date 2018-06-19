@@ -47,6 +47,13 @@ void MultipleProxy::sendVigaCreation(int x, int y, int angle){
 	}
 }
 
+void MultipleProxy::sendMapDimentions(int widht, int height){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendMapDimentions(widht, height);
+	}
+}
+
 void MultipleProxy::sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){

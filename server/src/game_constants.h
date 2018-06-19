@@ -5,6 +5,11 @@
 
 class GameConstants{
 	public:
+		int worms_life = 100;
+		
+		float map_widht = 50;
+		float map_height = 50;
+		
 		//deberian ser unsigned varias cosas
 		int bazooka_vel = 3;
 		int bazooka_damage = 50;
