@@ -62,6 +62,7 @@ public:
 	void select();
 	void unselect();
 	void upatePower();
+	void useWeapon();
 };
 
 #endif

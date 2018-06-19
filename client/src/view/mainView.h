@@ -63,7 +63,7 @@ public:
 	void showWinner();
 	void showLosser();
 	Camera& getCamera();
-
+	void WormShoot(int idWorm);
 };
 
 #endif

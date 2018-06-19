@@ -162,3 +162,7 @@ void mainView::showLosser(){
 Camera& mainView::getCamera(){
 	return camera;
 }
+
+void mainView::WormShoot(int idWorm){
+	worms[idWorm]->useWeapon();
+}

@@ -47,6 +47,7 @@ void Controller::handle(SDL_Event& e) {
             SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
             if (keyEvent.keysym.sym == SDLK_SPACE){
                     model.WormShoot();
+                    view.WormShoot(model.getIdWormSelected());
             }
             break;
         }

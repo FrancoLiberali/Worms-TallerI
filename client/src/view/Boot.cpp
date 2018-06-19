@@ -166,6 +166,8 @@ void Boot::loadSounds(){
 	SoundManager::Instance().loadSound(SHOOT, "../resource/sounds/handgunfire.wav");
 	SoundManager::Instance().loadSound(COMMUNICATOR, "../resource/sounds/communicator.wav");
 	SoundManager::Instance().loadSound(TELELEPORT_S, "../resource/sounds/teleport.wav");
+	SoundManager::Instance().loadSound(BAT_IMPACT, "../resource/sounds/bat_impact.wav");
+	SoundManager::Instance().loadSound(BAT_JINGLE, "../resource/sounds/bat_jingle.wav");
 }
 
 SdlScreen& Boot::getScreen(){

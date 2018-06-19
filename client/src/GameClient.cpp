@@ -1,46 +1,24 @@
-#include <iostream>
-#include <string>
-
-#include "common/socket.h"
-#include "common/socket_error.h"
-#include "ProxyClient.h"
 #include "GameClient.h"
+#include "controller/ClientEventReceiver.h"
+#include "controller/ClientCommandSender.h"
+#include "controller/EventHandler.h"
+#include "controller/Event.h"
+#include "controller/Controller.h"
+#include "model/GameControllerProxy.h"
+#include "model/Model.h"
+#include "view/Boot.h"
+#include "view/mainView.h"
+#include "common/Queue.h"
 
-int main(int argc, char *argv[]){
-	std::string name;
-	std::string host;
-	std::string port;
+#include <iostream>
 
-	printf("Ingrese su nombre: ");
-	getline(std::cin,name);
-	
-	printf("Ingrese la IP del server: ");
-	getline(std::cin,host);
+GameClient::GameClient(ProxyClient& proxy, std::string nameClient)
+    :proxy(proxy), name(nameClient){};
 
-	printf("Ingrese el puerto de conexion : ");
-	getline(std::cin,port);
-
-	Socket socket;
-	try{
-		socket.connect_(host.c_str(),port.c_str());
-	} catch(SocketError& e){
-		std::cout<<e.what()<<std::endl;
-		return 0;
-	}
-
-	ProxyClient proxy(std::move(socket));
-
-	//Iniciar el juego
-	GameClient game(proxy, name);
-
-	game.run();
-	
-	proxy.close();
-
+void GameClient::run(){
 	//cargamos todas las texturas y el screen principal
-	/*Boot boot;
+	Boot boot;
 	boot.init();
-
 	Camera camera(boot.getScreen().getWidth(), boot.getScreen().getHeight());
 
 	//cola de comandos a enviar
@@ -81,10 +59,8 @@ int main(int argc, char *argv[]){
 		}
 		clientView.update();
 	}
-	proxy.close();
 	commandsQueue.push(nullptr);
 	eventReceiver.stop();
 	commmandSender.join();
-	eventReceiver.join();*/
-	return 0;
+	eventReceiver.join();
 }

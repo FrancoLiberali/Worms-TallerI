@@ -35,7 +35,7 @@ add_library(alllib
 	src/common/socket.cpp
 	src/common/socket_error.cpp
 	src/ProxyClient.cpp
-	src/GameBuilder.cpp
+	src/GameClient.cpp
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp

@@ -1,4 +1,5 @@
 #include "WormView.h"
+#include "../sound/SoundManager.h"
 
 #include <iostream>
 
@@ -144,7 +145,7 @@ void WormView::update(int idPlayer){
 		}
 		else if (this->weaponId == BATE && currentSprite != &this->sprites["bate"]){
 			currentSprite = &this->sprites["bate"];
-			power.allow();
+			power.deny();
 			aim.enable();
 		}
 		else if (this->weaponId == TELEPORT && currentSprite != &this->sprites["teleport"]){
@@ -272,4 +273,14 @@ void WormView::unselect(){
 
 void WormView::upatePower(){
 	power.update();
+}
+
+
+void WormView::useWeapon(){
+	if (this->weaponId == BATE){
+		SoundManager::Instance().playSound(BAT_IMPACT);
+		SoundManager::Instance().playSound(BAT_JINGLE);
+	} else if (this->weaponId == TELEPORT){
+		SoundManager::Instance().playSound(TELELEPORT_S);
+	}
 }
