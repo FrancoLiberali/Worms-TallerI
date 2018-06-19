@@ -53,7 +53,10 @@ class GameConstants{
 		int dynamite_ammunition = 5;
 		bool dynamite_enabled = true;
 		
+		int bat_damage = 10;
+		int bat_impulse = 10;
 		int bat_ammunition = -1; //inf
+		float bat_max_radius = 3.5;
 		bool bat_enabled = true;
 
 		int air_attack_damage = 40;

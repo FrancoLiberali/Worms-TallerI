@@ -3,9 +3,10 @@
 #include <utility>
 #include "gusano.h"
 #include "user_data.h"
+#include <iostream>
 
-#ifndef __RAY_CAST_CALLBACK_H__
-#define __RAY_CAST_CALLBACK_H__
+#ifndef __RAY_CAST_A_CALLBACK_H__
+#define __RAY_CAST_A_CALLBACK_H__
 
 class RayCastAllCallback : public b2RayCastCallback{
 	private:
@@ -14,10 +15,9 @@ class RayCastAllCallback : public b2RayCastCallback{
 		RayCastAllCallback(){}
 
 		float32 ReportFixture(b2Fixture* fixture, const b2Vec2& point, const b2Vec2& normal, float32 fraction){
-			void* fixture_user_data = fixture->GetUserData();
-			//es gusano
-			if (fixture_user_data){
-				UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+			UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
+			if (data && data->indicator == 1){
+				//es gusano
 				Gusano* gusano = static_cast<Gusano*>(data->pointer);
 				std::pair<Gusano*, b2Vec2> new_point(gusano, point);
 				this->points.push_back(new_point);

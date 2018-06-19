@@ -15,6 +15,7 @@
 #include "banana.h"
 #include "saint_granade.h"
 #include "dynamite.h"
+#include "bat.h"
 #include <cmath>
 #include <stdexcept>
 
@@ -122,7 +123,7 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 					break;
 			case 7: this->fire_dynamite(position, direction);
 					break;
-			case 8: //this->fire_bat(position, direction);
+			case 8: this->fire_bat(gusano, position, direction);
 					break;
 		}
 		*(this->info.ammunition[this->weapon]) -= 1;
@@ -179,6 +180,13 @@ void Turn::fire_dynamite(b2Vec2 position, int direction){
 						position.y, direction, this->info, 
 						this->to_remove_projectiles, this->proxy, this->regresive_time);
 	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, dynamite));
+}
+
+
+void Turn::fire_bat(Gusano* gusano, b2Vec2 position, int direction){
+	std::cout << "bat\n";
+	std::cout << this->sight_angle <<"\n";
+	Bat(gusano, this->world, position.x, position.y, direction, this->sight_angle, this->info);
 }
 
 void Turn::play(int active_player, unsigned int active_gusano){
