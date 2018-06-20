@@ -15,6 +15,7 @@
 #define JUMPING_STATE 2
 #define SINKING_STATE 3
 #define DEAD_STATE 4
+#define EXPLOTION_STATE 5
 
 Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
@@ -283,10 +284,13 @@ void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
 	this->sufferDamage(damage);
 	std::cout << "volar por explosion \n";
 	this->body->ApplyLinearImpulse(impulse, apply_point, true);
-	delete this->state;
-	this->state = new ExplotedState(this->body);
-	this->body->SetGravityScale(1);
-	this->body->SetFixedRotation(false);
+	if (!(this->state->isExploted())){
+		delete this->state;
+		this->state = new ExplotedState(this->body);
+		this->proxy.sendStateChange(this->id, EXPLOTION_STATE);
+		this->body->SetGravityScale(1);
+		this->body->SetFixedRotation(false);
+	}
 }
 		
 		
