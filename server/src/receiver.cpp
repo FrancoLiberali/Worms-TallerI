@@ -1,9 +1,10 @@
 #include "receiver.h"
 #include "socket_error.h"
+#include <iostream>
 
-Receiver::Receiver(Socket& socket, ProtectedQueue& queue_e) : queue(queue_e){
+Receiver::Receiver(Socket& socket, Queue* queue){
 	Socket active = socket.accept();
-	this->proxy = new Proxy(std::move(active));
+	this->proxy = new Proxy(std::move(active), queue);
 }
 
 Receiver::~Receiver(){
@@ -27,7 +28,7 @@ void Receiver::run(){
 	bool keep = this->keep_receiving;
 	while(keep){
 		try{
-			this->proxy->receive_event(queue);
+			this->proxy->receive_event();
 			std::lock_guard<std::mutex> lock(this->keep_mutex);
 			keep = this->keep_receiving;
 		} catch (SocketError& e){

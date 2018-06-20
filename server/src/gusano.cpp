@@ -41,6 +41,7 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 6.0f;
 	fixtureDef.friction = 0.2f;
+	//fixtureDef.friction = 1.0f;
 	fixtureDef.restitution = 0.0f;
 
 	this->body->CreateFixture(&fixtureDef);
@@ -200,9 +201,9 @@ void Gusano::backJump(){
     this->body->SetLinearVelocity( vel );
 }
 
-void Gusano::sink(){
+void Gusano::destroy(){
 	this->sendPosition();
-	this->proxy.sendStateChange(this->id, SINKING_STATE);
+	this->proxy.sendStateChange(this->id, DEAD_STATE);
 	this->to_remove_gusanos.push_back(this->number);
 }
 
@@ -281,8 +282,8 @@ void Gusano::headFinishContact(){
 void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
 	this->sufferDamage(damage);
 	std::cout << "volar por explosion \n";
-    this->body->ApplyLinearImpulse(impulse, apply_point, true);
-    delete this->state;
+	this->body->ApplyLinearImpulse(impulse, apply_point, true);
+	delete this->state;
 	this->state = new ExplotedState(this->body);
 	this->body->SetGravityScale(1);
 	this->body->SetFixedRotation(false);

@@ -2,6 +2,7 @@
 #include "socket.h"
 #include "mok_proxy.h"
 #include "mok_receiver.h"
+#include <string>
 
 #define EXIT 'q'
 
@@ -13,6 +14,10 @@ int main(int argc, char** argv){
 		Socket socket;
 		socket.connect_(argv[1], argv[2]);
 		MokProxy proxy(socket);
+		char name_c[20];
+		std::cin.get(name_c, 20, '\n');
+		std::string name(name_c);
+		proxy.sendName(name);
 		MokReceiver receiver(proxy);
 		receiver.start();
 	

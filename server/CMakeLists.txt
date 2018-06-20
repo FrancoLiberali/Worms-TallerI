@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.11)
 
-project(box2d-example)
+project(WORMS-SERVER)
 
 set (CMAKE_CXX_STANDARD 11)
 
@@ -15,10 +15,10 @@ file(GLOB_RECURSE SRC_FILES ${PROJECT_SOURCE_DIR}/src/*.cpp)
 find_package( Threads )
 find_package(yaml-cpp)
 
-add_executable(tp main.cpp ${SRC_FILES} ${BOX2D_FILES})
+add_executable(worms-server main.cpp ${SRC_FILES} ${BOX2D_FILES})
 
-target_link_libraries(tp yaml-cpp)
-target_link_libraries( tp ${CMAKE_THREAD_LIBS_INIT} )
+target_link_libraries(worms-server yaml-cpp)
+target_link_libraries( worms-server ${CMAKE_THREAD_LIBS_INIT} )
 # Use the Widgets module from YAML.
 
 

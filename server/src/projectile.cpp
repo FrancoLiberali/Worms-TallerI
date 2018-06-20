@@ -67,7 +67,11 @@ void Projectile::exploit(){
 	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 
-void Projectile::sink(){
+void Projectile::destroy(){
+	b2Vec2 center = this->body->GetPosition();
+	float angle = this->GetAngle();
+	this->proxy.sendProjectilePosition(this->number, center.x, center.y, angle);
+	this->proxy.sendProjectileExplosion(this->number);
 	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
 }
 

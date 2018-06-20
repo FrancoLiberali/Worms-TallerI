@@ -1,6 +1,9 @@
 #include "socket.h"
-#include "protected_queue.h"
+#include "queue.h"
 #include <string>
+#include <vector>
+#include <map>
+#include <mutex>
 
 #ifndef __PROXY_H__
 #define __PROXY_H__
@@ -9,20 +12,32 @@ class Proxy{
 	private:
 		Socket socket;
 		int id = 0;
+		Queue* queue;
+		Queue* prev_queue;
+		std::mutex queue_mutex;
 		
-		void receive_event_info(ProtectedQueue& queue, char event, int tam);
+		void receive_event_info(char event, int tam);
+		void pushDisconnectionMessage();
 	public:
 		// Objeto que envia todos los mensajes a un juagador via 
 		// el socket recibido.
 		// La estructura de los mensajes respeta el protocolo
 		// de comunicacion definido para este programa
-		Proxy(Socket socket_e);
+		Proxy(Socket socket_e, Queue* queue);
 		
 		~Proxy() noexcept;
 		
 		void close_communication();
 		
-		void receive_event(ProtectedQueue& queue);
+		void addNewQueue(Queue* queue);
+		
+		void changeToPrevQueue();
+		
+		std::string receiveName();
+		
+		void receive_event();
+		
+		void disconnect();
 		
 		const unsigned char receive_char();
 		
@@ -56,7 +71,19 @@ class Proxy{
 		
 		void sendPlayerDisconnection(int player_id);
 		
+		void sendPlayerLoose(int player_id);
+		
 		void sendGameWon(int player_id);
+		
+		void sendRoomCreation(int room_id, const std::string& name, int cant_players, int max_players, const std::string& map_name);
+		
+		void sendRoomPlayersChange(int room_id, int cant_players);
+		
+		void sendRoomDeletion(int room_id);
+		
+		void sendPlayerConnection(int id, const std::string& name);
+		
+		void sendAvailableMaps(std::vector<std::string>& maps);
 		
 		void send_int(int to_send);
 		

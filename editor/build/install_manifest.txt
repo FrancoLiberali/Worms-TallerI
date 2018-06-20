@@ -1,0 +1,8 @@
+/usr/local/recursos/default_armo.yaml
+/usr/local/recursos/sky3.png
+/usr/local/recursos/75066210-vector-seamless-pattern-modern-texture-repeating-geometric-tiles-composition-from-blue-rhombus-.jpg
+/usr/local/recursos/gusano.png
+/usr/local/recursos/42444898-the-sword-icon-sign-seamless-pattern-with-geometric-texture-vector-illustration.jpg
+/usr/local/recursos/cartoon-clouds-seamless-pattern-texture-vector-70144767.jpg
+/usr/local/recursos/vigac.png
+/usr/local/recursos/viga.png

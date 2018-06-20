@@ -9,6 +9,7 @@
 #include "contact_listener.h"
 #include <mutex>
 #include "multiple_proxy.h"
+#include "delimiter.h"
 
 #ifndef __GAME_H__
 #define __GAME_H__
@@ -18,9 +19,10 @@ class Game {
 		MultipleProxy& proxy;
 		ProtectedQueue& queue;
 		b2World world;
-		int cant_players;
+		std::vector<int> players_ids;
 		ContactListener contact_listener;
-		Water* water;
+		std::vector<Delimiter*> delimiters;
+		//Water* water;
 		std::vector<std::pair<int, int>> to_remove_gusanos;
 		std::map<int, std::map<int, Gusano*>> players;
 		std::vector<int> next;
@@ -34,7 +36,7 @@ class Game {
 		// especificado por el map_id, lo que aun no esta implementado y
 		// la creacion del mapa se hace aqui mismo.
 		// Ademas se asignan a cada jugador sus correspondientes gusanos.
-		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id, int cant_players);
+		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids);
 		
 		~Game();
 		

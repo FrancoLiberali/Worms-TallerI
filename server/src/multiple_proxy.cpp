@@ -1,6 +1,7 @@
 #include "multiple_proxy.h"
 #include <cmath>
 #include <iostream>
+#include <utility>
 
 MultipleProxy::MultipleProxy(){
 }
@@ -8,117 +9,171 @@ MultipleProxy::MultipleProxy(){
 MultipleProxy::~MultipleProxy(){
 }
 
-void MultipleProxy::add(Proxy* proxy){
-	this->proxys.push_back(proxy);
+void MultipleProxy::add(int id, Proxy* proxy){
+	this->proxys.insert(std::pair<int, Proxy*>(id, proxy));
 }
 
-void MultipleProxy::erase(int id){
-	this->proxys.erase(this->proxys.begin() + (id - 1));
-	std::cout << this->proxys.size() << "\n";
+Proxy* MultipleProxy::erase(int id){
+	std::cout << "tam: " << this->proxys.size() << "\n";
+	Proxy* erased = this->proxys[id];
+	this->proxys.erase(id);
+	return erased;
 }
 
-void MultipleProxy::sendPlayerName(int player_id, std::string& name){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+void MultipleProxy::addNewQueue(ProtectedQueue* queue){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendPlayerName(player_id, name);
+		it->second->addNewQueue(queue);
 	}
 }
 
-void MultipleProxy::sendMapDimentions(int widht, int height){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+void MultipleProxy::changeToPrevQueue(){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendMapDimentions(widht, height);
+		it->second->changeToPrevQueue();
+	}
+}
+
+void MultipleProxy::sendPlayerName(int player_id, std::string& name){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendPlayerName(player_id, name);
 	}
 }
 
 void MultipleProxy::sendVigaCreation(float x, float y, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendVigaCreation((int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second->sendVigaCreation((int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+	}
+}
+
+void MultipleProxy::sendMapDimentions(int widht, int height){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendMapDimentions(widht * 1000, height * 1000);
 	}
 }
 
 void MultipleProxy::sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendGusanoCreation(gusano_id, player_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+		it->second->sendGusanoCreation(gusano_id, player_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
 	}
 }
 
 void MultipleProxy::sendTurnBegining(int player_id, int gusano_id){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendTurnBegining(player_id, gusano_id);
+		it->second->sendTurnBegining(player_id, gusano_id);
 	}
 }
 
 void MultipleProxy::sendGusanoPosition(int gusano_id, float x, float y, int direction, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendGusanoPosition(gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+		it->second->sendGusanoPosition(gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
 	}
 }
 
 void MultipleProxy::sendStateChange(int gusano_id, int new_state){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendStateChange(gusano_id, new_state);
+		it->second->sendStateChange(gusano_id, new_state);
 	}
 }
 
 void MultipleProxy::sendProjectileCreation(int projectile_number, int weapon, int direction, float x, float y, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectileCreation(projectile_number, weapon, direction, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second->sendProjectileCreation(projectile_number, weapon, direction, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 
 void MultipleProxy::sendProjectilePosition(int projectile_number, float x, float y, float angle){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectilePosition(projectile_number, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second->sendProjectilePosition(projectile_number, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
 	}
 }
 
 void MultipleProxy::sendProjectileExplosion(int projectile_number){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendProjectileExplosion(projectile_number);
+		it->second->sendProjectileExplosion(projectile_number);
 	}
 }
 
 void MultipleProxy::sendTakeWeapon(int weapon){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendTakeWeapon(weapon);
+		it->second->sendTakeWeapon(weapon);
 	}
 }
 
 void MultipleProxy::sendChangeSightAngle(int change){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendChangeSightAngle(change);
+		it->second->sendChangeSightAngle(change);
 	}
 }
 
 void MultipleProxy::sendLifeChange(int gusano_id, int new_life){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendLifeChange(gusano_id, new_life);
+		it->second->sendLifeChange(gusano_id, new_life);
 	}
 }
 
 void MultipleProxy::sendPlayerDisconnection(int player_id){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendPlayerDisconnection(player_id);
+		std::cout << "hay proxy\n";
+		std::cout << "id: " << it->first << "\n";
+		it->second->sendPlayerDisconnection(player_id);
+	}
+}
+
+void MultipleProxy::sendPlayerLoose(int player_id){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendPlayerLoose(player_id);
 	}
 }
 
 void MultipleProxy::sendGameWon(int player_id){
-	std::vector<Proxy*>::iterator it = this->proxys.begin();
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		(*it)->sendGameWon(player_id);
+		it->second->sendGameWon(player_id);
+	}
+}
+
+void MultipleProxy::sendRoomCreation(int room_id, const std::string& name, 
+	int cant_players, int max_players, const std::string& map_name){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendRoomCreation(room_id, name, cant_players, max_players, map_name);
+	}
+}
+
+void MultipleProxy::sendRoomPlayersChange(int room_id, int cant_players){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendRoomPlayersChange(room_id, cant_players);
+	}
+}
+
+void MultipleProxy::sendRoomDeletion(int room_id){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendRoomDeletion(room_id);
+	}
+}
+
+void MultipleProxy::sendPlayerConnection(int id, const std::string& name){
+	std::map<int, Proxy*>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second->sendPlayerConnection(id, name);
 	}
 }
 		

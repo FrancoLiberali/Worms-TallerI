@@ -8,15 +8,9 @@ Las string se mandan:
 	el string en si sin el '\0' del final
 
 AVISO DE NOMBRE DEL JUGADOR:
-	char en 0
-	int numero de jugador
+	Este mensaje se manda automaticamente despues de la conexion al server por lo que no necesita un codigo de mensaje
 	string con nombre del jugador
 
-AVISO DE MAPA A JUGAR Y CANTIDAD MAXIMA DE JUGADORES:
-	char en 1
-	int con map_id
-	int con cantidad maxima de jugadores
-	este mensaje debe ser mandado solo por el jugador que reciba el numero de jugador 1, como se explica en "inicio_de_partida.txt"
 
 El sistema de movimiento del gusano es el siguiente: al inicio de cada turno todos los jugadores reciben el mensaje "INICIO DE TURNO"(mirar protocolo_server.txt) en donde son informados del jugador y gusano actual. Los mensajes que afectan a los gusanos envian siempre el numero de jugador que lo envia, y sera el server quien chequee si el jugador que envia el mensaje tiene derecho o no a mover el gusano del turno actual.
 MOVER UN GUSANO:
@@ -54,5 +48,24 @@ GUSANO CARGA BARRA DE PODER:
 PARAR DE CARGA BARRA DE PODER Y DISPARAR:
 	char en 9
 	int numero de jugador
+
+----MENSAJES DE HALL DE PARTIDAS----
+el mensaje 10 se encuentra reservado para uso interno del server, para la desconeccion de un cliente
+
+SALIR DE LA SALA ACTUAL
+	char en 11 
+	int id jugador
+
+ENTRAR EN UNA SALA
+	char en 12
+	int id jugador
+	int id sala
+
+CREAR UNA SALA
+	char en 13
+	int id de jugador
+	int cantidad de jugadores a jugar (2..10)
+	string nombre de mapa a jugar(si o si debe estar dentro de los mapas enviados en el mensaje 20 del server)
+	string nombre de la sala
 
 

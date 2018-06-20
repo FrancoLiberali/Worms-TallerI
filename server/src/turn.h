@@ -21,6 +21,7 @@ class Turn{
 		std::vector<std::pair<int, int>>& to_remove_gusanos;
 		GameConstants& info;
 		MultipleProxy& proxy;
+		std::map<int, std::vector<int>> ammunition;
 		const float time_step;
 		const int velocity_iterations; 
 		const int position_iterations;
@@ -38,11 +39,11 @@ class Turn{
 		void gusano_move(char* msj, Gusano* gusano);
 		void gusano_jump(char* msj, Gusano* gusano);
 		void gusano_back_jump(char* msj, Gusano* gusano);
-		void take_weapon(char* msj);
+		void take_weapon(int player_id, char* msj);
 		void changeSightAngle(char* msj);
 		void changeRegresiveTime(char* msj);
-		void loadPower(Gusano* gusano, int& turn_actual_len);
-		void fire(Gusano* gusano, int& turn_actual_len);
+		void loadPower(int player_id, Gusano* gusano, int& turn_actual_len);
+		void fire(int player_id, Gusano* gusano, int& turn_actual_len);
 		void fire_bazooka(b2Vec2 position, int direction);
 		void fire_morter(b2Vec2 position, int direction);
 		void fire_green_granade(b2Vec2 position, int direction);

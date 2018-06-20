@@ -17,7 +17,7 @@ git revert --noo-commit HEAD lo mimso pero no hace commit nuevo sino que lo deja
 git log --oneline --graph muestra grafo de ramas
 git branch nos muestra la lista de ramas
 git branch nombrederama crea una nueva rama
-git cheakout nombrederama me lleva a la rama
+git checkout nombrederama me lleva a la rama
 git checkout -b nombrederama la crea y me lleva a ella
 git branch -m nombreanterior nuevonombre cambia el nombre de una rama
 git branch -d nombrederama elimina una rama
