@@ -6,7 +6,6 @@
 #include "game_constants.h"
 #include "gusano.h"
 #include "multiple_proxy.h"
-#include "fake_proxy/mok_proxy.h"
 #include "fragment_info.h"
 #include <utility>
 
@@ -34,6 +33,7 @@ class Turn{
 		unsigned int regresive_time = 5;
 		float power = 1;
 		bool fired;
+		b2Vec2 remote_position;
 		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
 		void gusano_move(char* msj, Gusano* gusano);
@@ -44,6 +44,7 @@ class Turn{
 		void changeRegresiveTime(char* msj);
 		void loadPower(int player_id, Gusano* gusano, int& turn_actual_len);
 		void fire(int player_id, Gusano* gusano, int& turn_actual_len);
+		void changeRemoteObjetive(char* msj);
 		void fire_bazooka(b2Vec2 position, int direction);
 		void fire_morter(b2Vec2 position, int direction);
 		void fire_green_granade(b2Vec2 position, int direction);
@@ -52,7 +53,7 @@ class Turn{
 		void fire_saint_granade(b2Vec2 position, int direction);
 		void fire_dynamite(b2Vec2 position, int direction);
 		void fire_bat(Gusano* gusano, b2Vec2 position, int direction);
-		
+		void teleport(Gusano* gusano);
 		
 	public:
 		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 

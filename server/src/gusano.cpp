@@ -279,6 +279,16 @@ void Gusano::applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse){
 		this->body->SetFixedRotation(false);
 	}
 }
+
+void Gusano::teleport(b2Vec2 new_position){
+	this->body->SetTransform(new_position, 0);
+	this->sendPosition();
+	delete this->state;
+	this->state = new JumpingState(this->body, this);
+	this->proxy.sendStateChange(this->id, JUMPING_STATE);
+	this->body->SetGravityScale(1);
+	this->body->SetLinearVelocity(b2Vec2(0,-0.1));
+}
 		
 		
 		

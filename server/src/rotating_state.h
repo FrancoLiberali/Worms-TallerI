@@ -1,8 +1,8 @@
 #include "gusano_state.h"
 #include "Box2D/Box2D.h"
 
-#ifndef __ROTATING_STATE_2_H__
-#define __ROTATING_STATE_2_H__
+#ifndef __ROTATING_STATE_H__
+#define __ROTATING_STATE_H__
 
 class RotatingState : public GusanoState{
 	private:

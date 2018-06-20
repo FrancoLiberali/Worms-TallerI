@@ -3,7 +3,6 @@
 #include <vector>
 #include "user_data.h"
 #include "multiple_proxy.h"
-#include "fake_proxy/mok_proxy.h"
 #include <map>
 #include <utility>
 #include "projectile.h"
@@ -107,6 +106,8 @@ class Gusano{
 		// El gusano estaba cerca de una explosion y por lo tanto debe
 		// ser herido y sufrir fuerzas repulsivas.
 		void applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse);
+		
+		void teleport(b2Vec2 new_position);
 		
 };
 

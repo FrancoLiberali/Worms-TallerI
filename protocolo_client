@@ -68,4 +68,11 @@ CREAR UNA SALA
 	string nombre de mapa a jugar(si o si debe estar dentro de los mapas enviados en el mensaje 20 del server)
 	string nombre de la sala
 
+--------------------------------------------------
+MENSAJES QUE QUEDARON PENDIENTES
+
+MODIFICAR POSICION DE TELEDIRIGIDO
+	char en 14
+	int x
+	int y
 

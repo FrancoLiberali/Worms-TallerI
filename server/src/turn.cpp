@@ -7,7 +7,6 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include "proxy.h"
-#include "fake_proxy/mok_proxy.h"
 #include "bazooka.h"
 #include "morter.h"
 #include "green_granade.h"
@@ -19,12 +18,15 @@
 #include <cmath>
 #include <stdexcept>
 #include "game_finished.h"
+#include "query_callback.h"
 
 #define MOVE_TAM 9
 #define TURN_LEN 3600
 #define MIN_ANGLE_CHANGE 0.09817477
 #define THREE_SECONDS 181
 #define MAX_POWER 5
+#define GUSANO_HEIGHT 0.5
+#define GUSANO_WIDTH 0.25
 
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
@@ -73,7 +75,8 @@ void Turn::gusano_back_jump(char* msj, Gusano* gusano){
 void Turn::take_weapon(int player_id, char* msj){
 	int to_take = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 	if (!this->fired && this->ammunition[player_id][to_take] != 0){
-		this->weapon = to_take; 
+		this->weapon = to_take;
+		this->remote_position = b2Vec2(0, 0);
 		this->sight_angle = 0;
 		this->regresive_time = 5 / this->time_step;
 		this->power = 1;
@@ -130,6 +133,8 @@ void Turn::fire(int player_id, Gusano* gusano, int& turn_actual_len){
 					break;
 			case 8: this->fire_bat(gusano, position, direction);
 					break;
+			case 10: this->teleport(gusano);
+					break;
 		}
 		this->ammunition[player_id][this->weapon] -= 1;
 		std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
@@ -139,6 +144,13 @@ void Turn::fire(int player_id, Gusano* gusano, int& turn_actual_len){
 		this->fired = true;
 		turn_actual_len = TURN_LEN - THREE_SECONDS;
 	}
+}
+
+void Turn::changeRemoteObjetive(char* msj){
+	this->remote_position = b2Vec2(ntohl(*(reinterpret_cast<int*>(msj + 5))) / 1000, 
+								   ntohl(*(reinterpret_cast<int*>(msj + 9))) / 1000);
+	this->remote_position.y = -this->remote_position.y;
+	std::cout << "cambio a: " << this->remote_position.x << "; " << this->remote_position.y << "\n";
 }
 
 void Turn::fire_bazooka(b2Vec2 position, int direction){
@@ -197,6 +209,27 @@ void Turn::fire_bat(Gusano* gusano, b2Vec2 position, int direction){
 	Bat(gusano, this->world, position.x, position.y, direction, this->sight_angle, this->info);
 }
 
+void Turn::teleport(Gusano* gusano){
+	std::cout << "usando teleporter\n";
+	float x_to = this->remote_position.x;
+	float y_to = this->remote_position.y;
+	std::cout << x_to << "\n";
+	std::cout << y_to << "\n";
+	if (x_to != 0 && y_to != 0){
+		std::cout << "entro\n";
+		//chequea si el lugar donde se quiere poner al gusano no se encuentra ocupado
+		QueryCallback callback;
+		b2AABB aabb;
+		aabb.lowerBound = b2Vec2(x_to - GUSANO_WIDTH, y_to - GUSANO_HEIGHT);
+		aabb.upperBound = b2Vec2(x_to + GUSANO_WIDTH, y_to + GUSANO_HEIGHT);
+		this->world.QueryAABB(&callback, aabb);
+		if (callback.isDesocuped()){
+			std::cout << "desocupado\n";
+			gusano->teleport(this->remote_position);
+		}
+	}
+}
+
 void Turn::play(int active_player, unsigned int active_gusano){
 	this->proxy.sendTurnBegining(active_player, this->players[active_player][active_gusano]->getId());
 	this->weapon = 0;
@@ -229,6 +262,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 					this->gusano_move(msj, gusano);
 				}
 				else if (gusano->isInactive()){
+					std::cout << "estoy aca\n";
 					switch (msj[0]){
 						case 3: this->gusano_jump(msj, gusano);
 								break;
@@ -244,6 +278,8 @@ void Turn::play(int active_player, unsigned int active_gusano){
 								break;
 						case 9: this->fire(active_player, gusano, i);
 								break;
+						case 14: this->changeRemoteObjetive(msj);
+								 break;
 					}
 				}
 			}

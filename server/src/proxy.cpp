@@ -21,6 +21,7 @@
 #define SHOT_TAM 5
 #define EXIT_TAM 5
 #define CONNECT_TAM 9
+#define TELE_TAM 13
 #define ONEBYTE 1
 
 Proxy::Proxy(Socket socket_e, Queue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
@@ -117,6 +118,9 @@ void Proxy::receive_event(){
 					this->queue->push(msj);
 					break;
 				}
+			case 14://se recibe que se quiere modificar el apuntado del teledirigido
+					this->receive_event_info(event, TELE_TAM);
+					break;	
 			}
 	}catch (SocketError& e){
 		std::cout << "se desconecto\n";

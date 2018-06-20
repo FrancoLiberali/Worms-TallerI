@@ -291,6 +291,14 @@ void MokProxy::send(char event){
 				this->send_int(1);
 				break;
 			}
+		case 't': {//sacar teleporter
+				std::cout << "teleporter\n";
+				char ev = 5;
+				this->socket.send_(&ev, 1);
+				this->send_int(this->id);
+				this->send_int(10);
+				break;
+			}
 		case 'm': {//sacar mortero
 				std::cout << "mortero\n";
 				char ev = 5;
@@ -367,6 +375,15 @@ void MokProxy::send(char event){
 			char ev = 9;
 			this->socket.send_(&ev, 1);
 			this->send_int(this->id);
+			break;
+		}
+		case 'l':{//seleccionar luegar de teledirijido
+			std::cout << "selec teledirigido\n";
+			char ev = 14;
+			this->socket.send_(&ev, 1);
+			this->send_int(this->id);
+			this->send_int(50000);
+			this->send_int(38000);
 			break;
 		}
 	}

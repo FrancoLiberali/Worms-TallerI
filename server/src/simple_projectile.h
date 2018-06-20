@@ -1,6 +1,5 @@
 #include "Box2D/Box2D.h"
 #include "projectile.h"
-#include "fake_proxy/mok_proxy.h"
 
 #ifndef __SIMPLE_PROJECTILE_H__
 #define __SIMPLE_PROJECTILE_H__
