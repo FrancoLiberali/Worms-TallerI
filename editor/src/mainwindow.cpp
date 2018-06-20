@@ -149,7 +149,10 @@ void MainWindow::on_actionsave_as_triggered()
 
 void MainWindow::on_actionSalir_triggered()
 {   
-    if(guardado) this->close();
+    if(guardado) {
+		this->close();
+		return;
+	}
 
     QMessageBox msgBox;
     msgBox.setText("El mapa fue modificado.");
