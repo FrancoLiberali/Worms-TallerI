@@ -24,7 +24,10 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
 		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e), info(info_e), 
 		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
-	
+	std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();
+	for (; players_it != this->players.end(); ++players_it){
+		this->ammunition[players_it->first] = this->info.ammunition;
+	}
 }
 
 Turn::~Turn(){
@@ -61,9 +64,9 @@ void Turn::gusano_back_jump(char* msj, Gusano* gusano){
 	gusano->backJump();
 }
 
-void Turn::take_weapon(char* msj){
+void Turn::take_weapon(int player_id, char* msj){
 	int to_take = ntohl(*(reinterpret_cast<int*>(msj + 5)));
-	if (!this->fired && *(this->info.ammunition[to_take]) != 0){
+	if (!this->fired && this->ammunition[player_id][to_take] != 0){
 		this->weapon = to_take; 
 		this->sight_angle = 0;
 		this->regresive_time = 5;
@@ -89,16 +92,16 @@ void Turn::changeRegresiveTime(char* msj){
 	}
 }
 
-void Turn::loadPower(Gusano* gusano, int& turn_actual_len){
+void Turn::loadPower(int player_id, Gusano* gusano, int& turn_actual_len){
 	if (this->power < MAX_POWER){
 		this->power += 0.1;
 	}
 	if (this->power == MAX_POWER){
-		this->fire(gusano, turn_actual_len);
+		this->fire(player_id, gusano, turn_actual_len);
 	}
 }
 
-void Turn::fire(Gusano* gusano, int& turn_actual_len){
+void Turn::fire(int player_id, Gusano* gusano, int& turn_actual_len){
 	if (!this->fired && this->weapon){
 		std::cout << "fire\n";
 		b2Vec2 position = gusano->GetPosition();
@@ -113,8 +116,8 @@ void Turn::fire(Gusano* gusano, int& turn_actual_len){
 			case 2: this->fire_morter(gusano, position);
 					break;
 		}
-		*(this->info.ammunition[this->weapon]) -= 1;
-		std::cout << "quedan " << *(this->info.ammunition[this->weapon]) << "\n";
+		this->ammunition[player_id][this->weapon] -= 1;
+		std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
 		this->fired = true;
 		turn_actual_len = TURN_LEN - THREE_SECONDS;
 	}
@@ -170,15 +173,15 @@ void Turn::play(int active_player, unsigned int active_gusano){
 							break;
 					case 4: this->gusano_back_jump(msj, gusano);
 							break;
-					case 5: this->take_weapon(msj);
+					case 5: this->take_weapon(active_player, msj);
 							break;
 					case 6: this->changeSightAngle(msj);
 							break;
 					case 7: this->changeRegresiveTime(msj);
 							break;
-					case 8: this->loadPower(gusano, i);
+					case 8: this->loadPower(active_player, gusano, i);
 							break;
-					case 9: this->fire(gusano, i);
+					case 9: this->fire(active_player, gusano, i);
 							break;
 				}
 			}
