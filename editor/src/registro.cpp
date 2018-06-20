@@ -6,7 +6,10 @@
 #include <iostream>
 #include <yaml-cpp/yaml.h>
 
-Registro::Registro() : vida_gusanos(100) {}
+#define VIDA_DEFAULT 100
+#define FONDO_DEFAULT "sky3.png"
+
+Registro::Registro() : nombre_fondo(FONDO_DEFAULT), vida_gusanos(VIDA_DEFAULT) {}
 
 void Registro::agregar_viga(Viga* viga)
 {
@@ -71,6 +74,11 @@ void Registro::set_vida_gusanos(int vida)
     this->vida_gusanos = vida;
 }
 
+void Registro::set_fondo(QString& nombre)
+{
+    this->nombre_fondo = nombre;
+}
+
 YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)
 {
     out << YAML::BeginMap;
@@ -81,9 +89,10 @@ YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)
        out << YAML::Value << obj.conversor.pixel_a_metros(obj.tam_mapa.first);
        out << YAML::Key << "alto";
        out << YAML::Value << obj.conversor.pixel_a_metros(obj.tam_mapa.second);
+       out << YAML::Key << "fondo";
+       out << YAML::Value << obj.nombre_fondo.toStdString();
        out << YAML::EndMap;
 
-    //out << YAML::BeginMap;
     out << YAML::Key << "objetos";
     out << YAML::Value << YAML::BeginSeq;
 

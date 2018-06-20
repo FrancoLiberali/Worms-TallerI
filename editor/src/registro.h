@@ -1,6 +1,7 @@
 #ifndef REGISTRO_H
 #define REGISTRO_H
 #include <QPair>
+#include <QString>
 #include "gusano.h"
 #include "vigagrande.h"
 #include "arma.h"
@@ -11,6 +12,7 @@ typedef typename std::map<std::string, Arma*> map_armas;
 class Registro
 {
 private:
+    QString nombre_fondo;
     map_armas armas;
     std::vector<Gusano*> gusanos;
     std::vector<Viga*> vigas;
@@ -38,6 +40,8 @@ public:
     unsigned int get_cant_vigas() const;
     // Setea la vida de los gusanos.
     void set_vida_gusanos(int vida);
+    // Setea el nombre del fondo de pantalla.
+    void set_fondo(QString& nombre);
     // Obtiene un arma.
     Arma* get_arma(const std::string& nombre) const;
     // Obtiene una lista con los nombres de las aramas.

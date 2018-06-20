@@ -9,6 +9,7 @@
 #include <fstream>
 #include <iostream>
 #include <QMessageBox>
+#include <QFileInfo>
 
 #define MIN_ANGULO 0
 #define MAX_ANGULO 360
@@ -94,8 +95,11 @@ void MainWindow::on_actionFondo_de_Pantalla_triggered()
                 tr("Abrir Imagen de fondo"),
                 "img (*.jpg,*.png)"
                 );
-    ui->graphicsView->setBackgroundBrush(QBrush(QPixmap(nombre_archivo)));
-    // guardar file_name
+    if (nombre_archivo.isEmpty()) {
+        ui->graphicsView->setBackgroundBrush(QBrush(QPixmap(nombre_archivo)));
+    }
+    nombre_archivo = QFileInfo(nombre_archivo).fileName();
+    registro.set_fondo(nombre_archivo);
 }
 
 
