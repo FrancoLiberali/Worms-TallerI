@@ -198,6 +198,11 @@ void MokProxy::receive_event(){
 			std::cout << "\n";
 			break;
 		}
+		case 22:{//recibir que se acabo la municion de un arma
+			int weapon_id = this->receive_int();
+			std::cout << "22 weapon_id: " << weapon_id << "\n";
+			break;
+		}
 	}
 }
 

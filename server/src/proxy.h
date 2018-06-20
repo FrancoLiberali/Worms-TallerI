@@ -85,6 +85,8 @@ class Proxy{
 		
 		void sendAvailableMaps(std::vector<std::string>& maps);
 		
+		void sendFinishedAmunnition(int weapon_id);
+		
 		void send_int(int to_send);
 		
 };

@@ -73,6 +73,8 @@ class MultipleProxy{
 		
 		void sendPlayerConnection(int id, const std::string& name);
 		
+		void sendFinishedAmunnition(int player_id, int weapon_id);
+		
 };
 
 #endif

@@ -333,6 +333,12 @@ void Proxy::sendAvailableMaps(std::vector<std::string>& maps){
 	}
 }
 
+void Proxy::sendFinishedAmunnition(int weapon_id){
+	char event = 22;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(weapon_id);
+}
+
 void Proxy::send_int(int to_send){
 	int net_to_send = htonl(to_send);
 	char* number = (char*)&net_to_send;

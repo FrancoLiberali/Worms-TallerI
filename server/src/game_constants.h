@@ -14,7 +14,7 @@ class GameConstants{
 		int bazooka_vel = 3;
 		int bazooka_damage = 50;
 		int bazooka_radius = 2;
-		int bazooka_ammunition = -1; //inf
+		int bazooka_ammunition = 1; //inf
 		
 		int morter_vel = 3;
 		int morter_damage = 50;

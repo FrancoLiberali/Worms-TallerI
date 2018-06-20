@@ -135,6 +135,15 @@ LISTA DE MAPS DISPONIBLES PARA JUGAR
 	int cantidad mapas
 	por cada mapa:
 		string nombre de mapa
+
+------------------------------------------------------------------------
+MENSAJES QUE QUEDARON PENDIENTES DE LA PARTE DEL JUEGO
+
+SE HA ACABADO LA MUNICION DE UN ARMA
+	char en 22
+	int id de arma
+	solo se le manda al jugador que se quedo sin la municion para que muestre el logito del arma en el menu en rojo
+	
 	
 
 	

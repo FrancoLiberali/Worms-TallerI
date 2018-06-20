@@ -176,4 +176,8 @@ void MultipleProxy::sendPlayerConnection(int id, const std::string& name){
 		it->second->sendPlayerConnection(id, name);
 	}
 }
+
+void MultipleProxy::sendFinishedAmunnition(int player_id, int weapon_id){
+	this->proxys[player_id]->sendFinishedAmunnition(weapon_id);
+}
 		

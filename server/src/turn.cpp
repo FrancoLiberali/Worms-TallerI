@@ -133,6 +133,9 @@ void Turn::fire(int player_id, Gusano* gusano, int& turn_actual_len){
 		}
 		this->ammunition[player_id][this->weapon] -= 1;
 		std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
+		if (this->ammunition[player_id][this->weapon] == 0){
+			this->proxy.sendFinishedAmunnition(player_id, this->weapon);
+		} 
 		this->fired = true;
 		turn_actual_len = TURN_LEN - THREE_SECONDS;
 	}
