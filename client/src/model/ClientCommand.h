@@ -2,6 +2,7 @@
 #define _CLIENT_COMMAND
 
 #include "../ProxyClient.h"
+class ProxyClient;
 
 class ClientCommand {
 public:

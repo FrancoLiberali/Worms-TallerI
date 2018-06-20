@@ -3,6 +3,7 @@
 
 #include <map>
 #include "SdlScreen.h"
+//#include  "../mapwindow.h"
 
 class Boot {
 private:

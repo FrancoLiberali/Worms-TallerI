@@ -7,6 +7,7 @@
 
 class ClientCommandSender;
 class ClientEventReceiver;
+class GameControllerProxy;
 
 #include <map>
 /*Modelo del cliente*/
@@ -39,6 +40,7 @@ public:
 	void setNamePlayer(std::string name);
 	std::string getNamePlayer();
 	bool isPlayer(int id);
+	int getIdPlayer();
 	void setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver);
 	void closeComunnication();
 };

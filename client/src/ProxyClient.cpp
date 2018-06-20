@@ -13,12 +13,22 @@ ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)), open(true){
 }
  
 ProxyClient::~ProxyClient() noexcept{
+    close();
+}
+
+void ProxyClient::addModel(Model* model){
+    this->model = model;
+}
+
+void ProxyClient::connect(std::string& host, std::string& port){
+    socket.connect_(host.c_str(), port.c_str());
 }
 
 void ProxyClient::close(){
     if (!open)
         return;
     this->socket.shutdown_();
+    printf("Cerro\n");
     open = false;
 }
 
@@ -58,6 +68,17 @@ char ProxyClient::receiveChar(){
     return received;
 }
 
+
+int ProxyClient::receiveWidht(){
+    int w = receiveInt();
+    return w*ESCALA;
+}
+int ProxyClient::receiveHeight(){
+    int h = receiveInt();
+    return h*ESCALA;
+}
+
+
 std::string ProxyClient::receiveName(){
     char buffer[MAX_NAME_LEN];
     memset(buffer, 0, MAX_NAME_LEN);
@@ -67,10 +88,10 @@ std::string ProxyClient::receiveName(){
     return std::string((char*)buffer);
 }
 
-void ProxyClient::sendName(int id, std::string& name){
+void ProxyClient::sendName(std::string& name){
     //std::cout<<"Send name "<< name<<std::endl;
-    sendChar(0);
-    sendInt(id);
+    //sendChar(0);
+    //sendInt(id);
     sendInt(name.length());
     socket.send_(name.data(), name.length());
 }
@@ -133,4 +154,12 @@ void ProxyClient::sendCountDown(int idPlayer, int time){
     sendChar(7);
     sendInt(idPlayer);
     sendInt(time);
+}
+
+void ProxyClient::sendCreateRoom(std::string& nameRoom,int  numPlayer,std::string nameMap){
+    sendChar(13);
+    sendInt(model->getIdPlayer());
+    sendInt(numPlayer);
+    sendName(nameMap);
+    sendName(nameRoom);
 }

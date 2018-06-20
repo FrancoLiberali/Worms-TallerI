@@ -70,6 +70,9 @@ bool Model::isPlayer(int id){
     return idJugador == id;
 }
 
+int Model::getIdPlayer(){
+    return idJugador;
+}
 
 void Model::setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver){
     this->sender = sender;

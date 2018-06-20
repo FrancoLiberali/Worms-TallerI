@@ -13,3 +13,9 @@ void Escenario::draw(){
 void Escenario::addViga(int x, int y, int angle){
 	vigas.push_back(new VigaView(x, y, angle, screen,camera));
 }
+
+void Escenario::setDimention(int widht, int height){
+	this->widht = widht;
+	this->height = height;
+	
+}

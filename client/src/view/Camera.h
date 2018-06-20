@@ -13,7 +13,7 @@ private:
 public:
     Camera();
     Camera(int w, int h);
-    //void setDimension(int w, int h);
+    void setDimentionMap(int widht, int height);
     int getX();
     int getY();
     void updateCenter(int x, int y);

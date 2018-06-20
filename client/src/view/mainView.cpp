@@ -166,3 +166,7 @@ Camera& mainView::getCamera(){
 void mainView::WormShoot(int idWorm){
 	worms[idWorm]->useWeapon();
 }
+
+void mainView::createStage(int widht, int height){
+	stage.setDimention(widht, height);
+}

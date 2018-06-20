@@ -57,42 +57,1958 @@ include CMakeFiles/client.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/client.dir/flags.make
 
-CMakeFiles/client.dir/src/clientMain.cpp.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/src/clientMain.cpp.o: ../src/clientMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/client.dir/src/clientMain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/clientMain.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/clientMain.cpp
+ui_namewindow.h: ../ui/namewindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating ui_namewindow.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/ui_namewindow.h /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/ui/namewindow.ui
 
-CMakeFiles/client.dir/src/clientMain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/clientMain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/clientMain.cpp > CMakeFiles/client.dir/src/clientMain.cpp.i
+ui_connectwindow.h: ../ui/connectwindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating ui_connectwindow.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/ui_connectwindow.h /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/ui/connectwindow.ui
 
-CMakeFiles/client.dir/src/clientMain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/clientMain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/clientMain.cpp -o CMakeFiles/client.dir/src/clientMain.cpp.s
+ui_mapwindow.h: ../ui/mapwindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating ui_mapwindow.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/ui_mapwindow.h /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/ui/mapwindow.ui
 
-CMakeFiles/client.dir/src/clientMain.cpp.o.requires:
+ui_mainwindow.h: ../ui/mainwindow.ui
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating ui_mainwindow.h"
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic -o /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/ui_mainwindow.h /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/ui/mainwindow.ui
 
-.PHONY : CMakeFiles/client.dir/src/clientMain.cpp.o.requires
+CMakeFiles/client.dir/src/main.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/main.cpp.o: ../src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/client.dir/src/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/main.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/main.cpp
 
-CMakeFiles/client.dir/src/clientMain.cpp.o.provides: CMakeFiles/client.dir/src/clientMain.cpp.o.requires
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/clientMain.cpp.o.provides.build
-.PHONY : CMakeFiles/client.dir/src/clientMain.cpp.o.provides
+CMakeFiles/client.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/main.cpp > CMakeFiles/client.dir/src/main.cpp.i
 
-CMakeFiles/client.dir/src/clientMain.cpp.o.provides.build: CMakeFiles/client.dir/src/clientMain.cpp.o
+CMakeFiles/client.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/main.cpp -o CMakeFiles/client.dir/src/main.cpp.s
+
+CMakeFiles/client.dir/src/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/main.cpp.o.requires
+
+CMakeFiles/client.dir/src/main.cpp.o.provides: CMakeFiles/client.dir/src/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/main.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/main.cpp.o.provides
+
+CMakeFiles/client.dir/src/main.cpp.o.provides.build: CMakeFiles/client.dir/src/main.cpp.o
+
+
+CMakeFiles/client.dir/src/mapwindow.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/mapwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/client.dir/src/mapwindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/mapwindow.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.cpp
+
+CMakeFiles/client.dir/src/mapwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/mapwindow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.cpp > CMakeFiles/client.dir/src/mapwindow.cpp.i
+
+CMakeFiles/client.dir/src/mapwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/mapwindow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.cpp -o CMakeFiles/client.dir/src/mapwindow.cpp.s
+
+CMakeFiles/client.dir/src/mapwindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/mapwindow.cpp.o.requires
+
+CMakeFiles/client.dir/src/mapwindow.cpp.o.provides: CMakeFiles/client.dir/src/mapwindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mapwindow.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/mapwindow.cpp.o.provides
+
+CMakeFiles/client.dir/src/mapwindow.cpp.o.provides.build: CMakeFiles/client.dir/src/mapwindow.cpp.o
+
+
+CMakeFiles/client.dir/src/namewindow.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/namewindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/client.dir/src/namewindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/namewindow.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/namewindow.cpp
+
+CMakeFiles/client.dir/src/namewindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/namewindow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/namewindow.cpp > CMakeFiles/client.dir/src/namewindow.cpp.i
+
+CMakeFiles/client.dir/src/namewindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/namewindow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/namewindow.cpp -o CMakeFiles/client.dir/src/namewindow.cpp.s
+
+CMakeFiles/client.dir/src/namewindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/namewindow.cpp.o.requires
+
+CMakeFiles/client.dir/src/namewindow.cpp.o.provides: CMakeFiles/client.dir/src/namewindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/namewindow.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/namewindow.cpp.o.provides
+
+CMakeFiles/client.dir/src/namewindow.cpp.o.provides.build: CMakeFiles/client.dir/src/namewindow.cpp.o
+
+
+CMakeFiles/client.dir/src/connectwindow.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/connectwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/client.dir/src/connectwindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/connectwindow.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/connectwindow.cpp
+
+CMakeFiles/client.dir/src/connectwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/connectwindow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/connectwindow.cpp > CMakeFiles/client.dir/src/connectwindow.cpp.i
+
+CMakeFiles/client.dir/src/connectwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/connectwindow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/connectwindow.cpp -o CMakeFiles/client.dir/src/connectwindow.cpp.s
+
+CMakeFiles/client.dir/src/connectwindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/connectwindow.cpp.o.requires
+
+CMakeFiles/client.dir/src/connectwindow.cpp.o.provides: CMakeFiles/client.dir/src/connectwindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/connectwindow.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/connectwindow.cpp.o.provides
+
+CMakeFiles/client.dir/src/connectwindow.cpp.o.provides.build: CMakeFiles/client.dir/src/connectwindow.cpp.o
+
+
+CMakeFiles/client.dir/src/mainwindow.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/client.dir/src/mainwindow.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/mainwindow.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mainwindow.cpp
+
+CMakeFiles/client.dir/src/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/mainwindow.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mainwindow.cpp > CMakeFiles/client.dir/src/mainwindow.cpp.i
+
+CMakeFiles/client.dir/src/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/mainwindow.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mainwindow.cpp -o CMakeFiles/client.dir/src/mainwindow.cpp.s
+
+CMakeFiles/client.dir/src/mainwindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/mainwindow.cpp.o.requires
+
+CMakeFiles/client.dir/src/mainwindow.cpp.o.provides: CMakeFiles/client.dir/src/mainwindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mainwindow.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/mainwindow.cpp.o.provides
+
+CMakeFiles/client.dir/src/mainwindow.cpp.o.provides.build: CMakeFiles/client.dir/src/mainwindow.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/controller/ClientEventReceiver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp > CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.i
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp -o CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.s
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.provides: CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/controller/EventHandler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/client.dir/src/controller/EventHandler.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/EventHandler.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/EventHandler.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp > CMakeFiles/client.dir/src/controller/EventHandler.cpp.i
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/EventHandler.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.cpp -o CMakeFiles/client.dir/src/controller/EventHandler.cpp.s
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.provides: CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/EventHandler.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/Event.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/controller/Event.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/client.dir/src/controller/Event.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/Event.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp
+
+CMakeFiles/client.dir/src/controller/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/Event.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp > CMakeFiles/client.dir/src/controller/Event.cpp.i
+
+CMakeFiles/client.dir/src/controller/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/Event.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.cpp -o CMakeFiles/client.dir/src/controller/Event.cpp.s
+
+CMakeFiles/client.dir/src/controller/Event.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/Event.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/Event.cpp.o.provides: CMakeFiles/client.dir/src/controller/Event.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Event.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/Event.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/Event.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/Event.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/EventFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/client.dir/src/controller/EventFactory.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/EventFactory.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/EventFactory.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp > CMakeFiles/client.dir/src/controller/EventFactory.cpp.i
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/EventFactory.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.cpp -o CMakeFiles/client.dir/src/controller/EventFactory.cpp.s
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.provides: CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/controller/WormMoveEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp > CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormMoveEvent.cpp -o CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/controller/WormChangeStateEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp > CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.cpp -o CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/controller/WormChangeLifeEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp > CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.cpp -o CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/controller/WormWeaponEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormWeaponEvent.cpp
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormWeaponEvent.cpp > CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormWeaponEvent.cpp -o CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/controller/CreateVigaEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.cpp
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.cpp > CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateVigaEvent.cpp -o CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/controller/CreateWormEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.cpp
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.cpp > CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateWormEvent.cpp -o CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/controller/CreateMissileEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateMissileEvent.cpp
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateMissileEvent.cpp > CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateMissileEvent.cpp -o CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/controller/CreateStageEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateStageEvent.cpp
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateStageEvent.cpp > CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CreateStageEvent.cpp -o CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/controller/MissileMoveEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileMoveEvent.cpp
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileMoveEvent.cpp > CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileMoveEvent.cpp -o CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/controller/MissileExploteEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileExploteEvent.cpp
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileExploteEvent.cpp > CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileExploteEvent.cpp -o CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/controller/PlayerIdEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.cpp
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.cpp > CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.cpp -o CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/controller/PlayerConnectEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.cpp
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.cpp > CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.cpp -o CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/controller/WormChangeAimEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeAimEvent.cpp
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeAimEvent.cpp > CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeAimEvent.cpp -o CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/controller/StartTurnEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.cpp
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.cpp > CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.cpp -o CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/controller/PlayerOffEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp > CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp -o CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/controller/GameWinnerEvent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/GameWinnerEvent.cpp
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/GameWinnerEvent.cpp > CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.i
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/GameWinnerEvent.cpp -o CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.s
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.provides: CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/controller/MouseState.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/client.dir/src/controller/MouseState.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/MouseState.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MouseState.cpp
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/MouseState.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MouseState.cpp > CMakeFiles/client.dir/src/controller/MouseState.cpp.i
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/MouseState.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MouseState.cpp -o CMakeFiles/client.dir/src/controller/MouseState.cpp.s
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/MouseState.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o.provides: CMakeFiles/client.dir/src/controller/MouseState.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MouseState.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/MouseState.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/MouseState.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/controller/CameraMove.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/client.dir/src/controller/CameraMove.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/CameraMove.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CameraMove.cpp
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/CameraMove.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CameraMove.cpp > CMakeFiles/client.dir/src/controller/CameraMove.cpp.i
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/CameraMove.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/CameraMove.cpp -o CMakeFiles/client.dir/src/controller/CameraMove.cpp.s
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.provides: CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/CameraMove.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/controller/ClientCommandSender.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp > CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.i
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.cpp -o CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.s
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.provides: CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o
+
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/controller/Controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/client.dir/src/controller/Controller.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/controller/Controller.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.cpp
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/controller/Controller.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.cpp > CMakeFiles/client.dir/src/controller/Controller.cpp.i
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/controller/Controller.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Controller.cpp -o CMakeFiles/client.dir/src/controller/Controller.cpp.s
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/controller/Controller.cpp.o.requires
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.o.provides: CMakeFiles/client.dir/src/controller/Controller.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Controller.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/controller/Controller.cpp.o.provides
+
+CMakeFiles/client.dir/src/controller/Controller.cpp.o.provides.build: CMakeFiles/client.dir/src/controller/Controller.cpp.o
+
+
+CMakeFiles/client.dir/src/common/Thread.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/common/Thread.cpp.o: ../src/common/Thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/client.dir/src/common/Thread.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/common/Thread.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp
+
+CMakeFiles/client.dir/src/common/Thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/common/Thread.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp > CMakeFiles/client.dir/src/common/Thread.cpp.i
+
+CMakeFiles/client.dir/src/common/Thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/common/Thread.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp -o CMakeFiles/client.dir/src/common/Thread.cpp.s
+
+CMakeFiles/client.dir/src/common/Thread.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/common/Thread.cpp.o.requires
+
+CMakeFiles/client.dir/src/common/Thread.cpp.o.provides: CMakeFiles/client.dir/src/common/Thread.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/Thread.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/common/Thread.cpp.o.provides
+
+CMakeFiles/client.dir/src/common/Thread.cpp.o.provides.build: CMakeFiles/client.dir/src/common/Thread.cpp.o
+
+
+CMakeFiles/client.dir/src/common/socket.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/common/socket.cpp.o: ../src/common/socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/client.dir/src/common/socket.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/common/socket.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.cpp
+
+CMakeFiles/client.dir/src/common/socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/common/socket.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.cpp > CMakeFiles/client.dir/src/common/socket.cpp.i
+
+CMakeFiles/client.dir/src/common/socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/common/socket.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.cpp -o CMakeFiles/client.dir/src/common/socket.cpp.s
+
+CMakeFiles/client.dir/src/common/socket.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/common/socket.cpp.o.requires
+
+CMakeFiles/client.dir/src/common/socket.cpp.o.provides: CMakeFiles/client.dir/src/common/socket.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/common/socket.cpp.o.provides
+
+CMakeFiles/client.dir/src/common/socket.cpp.o.provides.build: CMakeFiles/client.dir/src/common/socket.cpp.o
+
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/common/socket_error.cpp.o: ../src/common/socket_error.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/client.dir/src/common/socket_error.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/common/socket_error.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.cpp
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/common/socket_error.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.cpp > CMakeFiles/client.dir/src/common/socket_error.cpp.i
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/common/socket_error.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.cpp -o CMakeFiles/client.dir/src/common/socket_error.cpp.s
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/common/socket_error.cpp.o.requires
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.o.provides: CMakeFiles/client.dir/src/common/socket_error.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket_error.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/common/socket_error.cpp.o.provides
+
+CMakeFiles/client.dir/src/common/socket_error.cpp.o.provides.build: CMakeFiles/client.dir/src/common/socket_error.cpp.o
+
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/ProxyClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/client.dir/src/ProxyClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/ProxyClient.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/ProxyClient.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp > CMakeFiles/client.dir/src/ProxyClient.cpp.i
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/ProxyClient.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp -o CMakeFiles/client.dir/src/ProxyClient.cpp.s
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/ProxyClient.cpp.o.requires
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.o.provides: CMakeFiles/client.dir/src/ProxyClient.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/ProxyClient.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/ProxyClient.cpp.o.provides
+
+CMakeFiles/client.dir/src/ProxyClient.cpp.o.provides.build: CMakeFiles/client.dir/src/ProxyClient.cpp.o
+
+
+CMakeFiles/client.dir/src/GameClient.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/GameClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/client.dir/src/GameClient.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/GameClient.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameClient.cpp
+
+CMakeFiles/client.dir/src/GameClient.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/GameClient.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameClient.cpp > CMakeFiles/client.dir/src/GameClient.cpp.i
+
+CMakeFiles/client.dir/src/GameClient.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/GameClient.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameClient.cpp -o CMakeFiles/client.dir/src/GameClient.cpp.s
+
+CMakeFiles/client.dir/src/GameClient.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/GameClient.cpp.o.requires
+
+CMakeFiles/client.dir/src/GameClient.cpp.o.provides: CMakeFiles/client.dir/src/GameClient.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/GameClient.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/GameClient.cpp.o.provides
+
+CMakeFiles/client.dir/src/GameClient.cpp.o.provides.build: CMakeFiles/client.dir/src/GameClient.cpp.o
+
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/PreGameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/client.dir/src/PreGameManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/PreGameManager.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.cpp
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/PreGameManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.cpp > CMakeFiles/client.dir/src/PreGameManager.cpp.i
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/PreGameManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.cpp -o CMakeFiles/client.dir/src/PreGameManager.cpp.s
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/PreGameManager.cpp.o.requires
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.o.provides: CMakeFiles/client.dir/src/PreGameManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/PreGameManager.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/PreGameManager.cpp.o.provides
+
+CMakeFiles/client.dir/src/PreGameManager.cpp.o.provides.build: CMakeFiles/client.dir/src/PreGameManager.cpp.o
+
+
+CMakeFiles/client.dir/src/model/Model.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/model/Model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/client.dir/src/model/Model.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/Model.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.cpp
+
+CMakeFiles/client.dir/src/model/Model.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/Model.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.cpp > CMakeFiles/client.dir/src/model/Model.cpp.i
+
+CMakeFiles/client.dir/src/model/Model.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/Model.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.cpp -o CMakeFiles/client.dir/src/model/Model.cpp.s
+
+CMakeFiles/client.dir/src/model/Model.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/Model.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/Model.cpp.o.provides: CMakeFiles/client.dir/src/model/Model.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/Model.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/Model.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/Model.cpp.o.provides.build: CMakeFiles/client.dir/src/model/Model.cpp.o
+
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/model/GameControllerProxy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.cpp
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.cpp > CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.i
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.cpp -o CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.s
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.provides: CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.provides.build: CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o
+
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/model/WormMoveCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormMoveCommand.cpp
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormMoveCommand.cpp > CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormMoveCommand.cpp -o CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/model/WormJumpCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.cpp
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.cpp > CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormJumpCommand.cpp -o CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/model/WormWeaponCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormWeaponCommand.cpp
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormWeaponCommand.cpp > CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormWeaponCommand.cpp -o CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/model/ChangeAimCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeAimCommand.cpp
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeAimCommand.cpp > CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeAimCommand.cpp -o CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/model/WormShootCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormShootCommand.cpp
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/WormShootCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormShootCommand.cpp > CMakeFiles/client.dir/src/model/WormShootCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/WormShootCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/WormShootCommand.cpp -o CMakeFiles/client.dir/src/model/WormShootCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/model/ChargePowerCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChargePowerCommand.cpp
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChargePowerCommand.cpp > CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChargePowerCommand.cpp -o CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/model/ChangeCountDownCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeCountDownCommand.cpp
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeCountDownCommand.cpp > CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.i
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeCountDownCommand.cpp -o CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.s
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.requires
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.provides: CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.provides
+
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.provides.build: CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o
+
+
+CMakeFiles/client.dir/src/view/mainView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/view/mainView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/client.dir/src/view/mainView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/mainView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.cpp
+
+CMakeFiles/client.dir/src/view/mainView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/mainView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.cpp > CMakeFiles/client.dir/src/view/mainView.cpp.i
+
+CMakeFiles/client.dir/src/view/mainView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/mainView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.cpp -o CMakeFiles/client.dir/src/view/mainView.cpp.s
+
+CMakeFiles/client.dir/src/view/mainView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/mainView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/mainView.cpp.o.provides: CMakeFiles/client.dir/src/view/mainView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/mainView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/mainView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/mainView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/mainView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/SdlException.cpp.o: ../src/view/SdlException.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/client.dir/src/view/SdlException.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/SdlException.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.cpp
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/SdlException.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.cpp > CMakeFiles/client.dir/src/view/SdlException.cpp.i
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/SdlException.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.cpp -o CMakeFiles/client.dir/src/view/SdlException.cpp.s
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/SdlException.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.o.provides: CMakeFiles/client.dir/src/view/SdlException.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlException.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/SdlException.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/SdlException.cpp.o.provides.build: CMakeFiles/client.dir/src/view/SdlException.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Escenario.cpp.o: ../src/view/Escenario.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/client.dir/src/view/Escenario.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Escenario.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Escenario.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp > CMakeFiles/client.dir/src/view/Escenario.cpp.i
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Escenario.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.cpp -o CMakeFiles/client.dir/src/view/Escenario.cpp.s
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Escenario.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.o.provides: CMakeFiles/client.dir/src/view/Escenario.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Escenario.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Escenario.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Escenario.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Escenario.cpp.o
+
+
+CMakeFiles/client.dir/src/view/WormView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/WormView.cpp.o: ../src/view/WormView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/client.dir/src/view/WormView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/WormView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.cpp
+
+CMakeFiles/client.dir/src/view/WormView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/WormView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.cpp > CMakeFiles/client.dir/src/view/WormView.cpp.i
+
+CMakeFiles/client.dir/src/view/WormView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/WormView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.cpp -o CMakeFiles/client.dir/src/view/WormView.cpp.s
+
+CMakeFiles/client.dir/src/view/WormView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/WormView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/WormView.cpp.o.provides: CMakeFiles/client.dir/src/view/WormView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/WormView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/WormView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/WormView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/WormView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Boot.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Boot.cpp.o: ../src/view/Boot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/client.dir/src/view/Boot.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Boot.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Boot.cpp
+
+CMakeFiles/client.dir/src/view/Boot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Boot.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Boot.cpp > CMakeFiles/client.dir/src/view/Boot.cpp.i
+
+CMakeFiles/client.dir/src/view/Boot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Boot.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Boot.cpp -o CMakeFiles/client.dir/src/view/Boot.cpp.s
+
+CMakeFiles/client.dir/src/view/Boot.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Boot.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Boot.cpp.o.provides: CMakeFiles/client.dir/src/view/Boot.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Boot.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Boot.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Boot.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Boot.cpp.o
+
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.o: ../src/view/SdlScreen.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object CMakeFiles/client.dir/src/view/SdlScreen.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/SdlScreen.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlScreen.cpp
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/SdlScreen.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlScreen.cpp > CMakeFiles/client.dir/src/view/SdlScreen.cpp.i
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/SdlScreen.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlScreen.cpp -o CMakeFiles/client.dir/src/view/SdlScreen.cpp.s
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.provides: CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.provides.build: CMakeFiles/client.dir/src/view/SdlScreen.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Sprite.cpp.o: ../src/view/Sprite.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object CMakeFiles/client.dir/src/view/Sprite.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Sprite.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Sprite.cpp
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Sprite.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Sprite.cpp > CMakeFiles/client.dir/src/view/Sprite.cpp.i
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Sprite.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Sprite.cpp -o CMakeFiles/client.dir/src/view/Sprite.cpp.s
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Sprite.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.o.provides: CMakeFiles/client.dir/src/view/Sprite.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Sprite.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Sprite.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Sprite.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Sprite.cpp.o
+
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o: ../src/view/SpriteConfigurator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SpriteConfigurator.cpp
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SpriteConfigurator.cpp > CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.i
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SpriteConfigurator.cpp -o CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.s
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.provides: CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.provides.build: CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o
+
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/TextureManager.cpp.o: ../src/view/TextureManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object CMakeFiles/client.dir/src/view/TextureManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/TextureManager.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextureManager.cpp
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/TextureManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextureManager.cpp > CMakeFiles/client.dir/src/view/TextureManager.cpp.i
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/TextureManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextureManager.cpp -o CMakeFiles/client.dir/src/view/TextureManager.cpp.s
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/TextureManager.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.o.provides: CMakeFiles/client.dir/src/view/TextureManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextureManager.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/TextureManager.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/TextureManager.cpp.o.provides.build: CMakeFiles/client.dir/src/view/TextureManager.cpp.o
+
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/TextManager.cpp.o: ../src/view/TextManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object CMakeFiles/client.dir/src/view/TextManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/TextManager.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextManager.cpp
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/TextManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextManager.cpp > CMakeFiles/client.dir/src/view/TextManager.cpp.i
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/TextManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextManager.cpp -o CMakeFiles/client.dir/src/view/TextManager.cpp.s
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/TextManager.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.o.provides: CMakeFiles/client.dir/src/view/TextManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextManager.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/TextManager.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/TextManager.cpp.o.provides.build: CMakeFiles/client.dir/src/view/TextManager.cpp.o
+
+
+CMakeFiles/client.dir/src/view/TextView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/TextView.cpp.o: ../src/view/TextView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object CMakeFiles/client.dir/src/view/TextView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/TextView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextView.cpp
+
+CMakeFiles/client.dir/src/view/TextView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/TextView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextView.cpp > CMakeFiles/client.dir/src/view/TextView.cpp.i
+
+CMakeFiles/client.dir/src/view/TextView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/TextView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextView.cpp -o CMakeFiles/client.dir/src/view/TextView.cpp.s
+
+CMakeFiles/client.dir/src/view/TextView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/TextView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/TextView.cpp.o.provides: CMakeFiles/client.dir/src/view/TextView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/TextView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/TextView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/TextView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o: ../src/view/MenuWeaponView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.cpp
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.cpp > CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.i
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.cpp -o CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.s
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.provides: CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Weapon.cpp.o: ../src/view/Weapon.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object CMakeFiles/client.dir/src/view/Weapon.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Weapon.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.cpp
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Weapon.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.cpp > CMakeFiles/client.dir/src/view/Weapon.cpp.i
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Weapon.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.cpp -o CMakeFiles/client.dir/src/view/Weapon.cpp.s
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Weapon.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.o.provides: CMakeFiles/client.dir/src/view/Weapon.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Weapon.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Weapon.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Weapon.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Weapon.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Shape.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Shape.cpp.o: ../src/view/Shape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object CMakeFiles/client.dir/src/view/Shape.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Shape.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.cpp
+
+CMakeFiles/client.dir/src/view/Shape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Shape.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.cpp > CMakeFiles/client.dir/src/view/Shape.cpp.i
+
+CMakeFiles/client.dir/src/view/Shape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Shape.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.cpp -o CMakeFiles/client.dir/src/view/Shape.cpp.s
+
+CMakeFiles/client.dir/src/view/Shape.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Shape.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Shape.cpp.o.provides: CMakeFiles/client.dir/src/view/Shape.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Shape.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Shape.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Shape.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Shape.cpp.o
+
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/VigaView.cpp.o: ../src/view/VigaView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object CMakeFiles/client.dir/src/view/VigaView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/VigaView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.cpp
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/VigaView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.cpp > CMakeFiles/client.dir/src/view/VigaView.cpp.i
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/VigaView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.cpp -o CMakeFiles/client.dir/src/view/VigaView.cpp.s
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/VigaView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.o.provides: CMakeFiles/client.dir/src/view/VigaView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/VigaView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/VigaView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/VigaView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/VigaView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/AimView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/AimView.cpp.o: ../src/view/AimView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object CMakeFiles/client.dir/src/view/AimView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/AimView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.cpp
+
+CMakeFiles/client.dir/src/view/AimView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/AimView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.cpp > CMakeFiles/client.dir/src/view/AimView.cpp.i
+
+CMakeFiles/client.dir/src/view/AimView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/AimView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.cpp -o CMakeFiles/client.dir/src/view/AimView.cpp.s
+
+CMakeFiles/client.dir/src/view/AimView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/AimView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/AimView.cpp.o.provides: CMakeFiles/client.dir/src/view/AimView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/AimView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/AimView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/AimView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/AimView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/Camera.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/Camera.cpp.o: ../src/view/Camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object CMakeFiles/client.dir/src/view/Camera.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/Camera.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp
+
+CMakeFiles/client.dir/src/view/Camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/Camera.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp > CMakeFiles/client.dir/src/view/Camera.cpp.i
+
+CMakeFiles/client.dir/src/view/Camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/Camera.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.cpp -o CMakeFiles/client.dir/src/view/Camera.cpp.s
+
+CMakeFiles/client.dir/src/view/Camera.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/Camera.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/Camera.cpp.o.provides: CMakeFiles/client.dir/src/view/Camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Camera.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/Camera.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/Camera.cpp.o.provides.build: CMakeFiles/client.dir/src/view/Camera.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o: ../src/view/bullets/BulletFactory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletFactory.cpp
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletFactory.cpp > CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletFactory.cpp -o CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o: ../src/view/bullets/BulletView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletView.cpp > CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletView.cpp -o CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o: ../src/view/bullets/BazookaView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BazookaView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BazookaView.cpp > CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BazookaView.cpp -o CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o: ../src/view/bullets/MortarView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/MortarView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/MortarView.cpp > CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/MortarView.cpp -o CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o: ../src/view/bullets/FragmentView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/FragmentView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/FragmentView.cpp > CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/FragmentView.cpp -o CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o: ../src/view/bullets/GreenGrenadeView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/GreenGrenadeView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/GreenGrenadeView.cpp > CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/GreenGrenadeView.cpp -o CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o: ../src/view/bullets/RedGrenadeView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/RedGrenadeView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/RedGrenadeView.cpp > CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/RedGrenadeView.cpp -o CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o: ../src/view/bullets/BananaView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BananaView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BananaView.cpp > CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BananaView.cpp -o CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o: ../src/view/bullets/HolyView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/HolyView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/HolyView.cpp > CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/HolyView.cpp -o CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o: ../src/view/bullets/DynamiteView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/DynamiteView.cpp
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/DynamiteView.cpp > CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.i
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/DynamiteView.cpp -o CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.s
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.provides: CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o
+
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/view/PowerView.cpp.o: ../src/view/PowerView.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object CMakeFiles/client.dir/src/view/PowerView.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/view/PowerView.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/PowerView.cpp
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/view/PowerView.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/PowerView.cpp > CMakeFiles/client.dir/src/view/PowerView.cpp.i
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/view/PowerView.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/PowerView.cpp -o CMakeFiles/client.dir/src/view/PowerView.cpp.s
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/view/PowerView.cpp.o.requires
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.o.provides: CMakeFiles/client.dir/src/view/PowerView.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/PowerView.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/view/PowerView.cpp.o.provides
+
+CMakeFiles/client.dir/src/view/PowerView.cpp.o.provides.build: CMakeFiles/client.dir/src/view/PowerView.cpp.o
+
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.o: ../src/sound/SoundManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object CMakeFiles/client.dir/src/sound/SoundManager.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/src/sound/SoundManager.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/sound/SoundManager.cpp
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/src/sound/SoundManager.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/sound/SoundManager.cpp > CMakeFiles/client.dir/src/sound/SoundManager.cpp.i
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/src/sound/SoundManager.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/sound/SoundManager.cpp -o CMakeFiles/client.dir/src/sound/SoundManager.cpp.s
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.requires
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.provides: CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.provides
+
+CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.provides.build: CMakeFiles/client.dir/src/sound/SoundManager.cpp.o
+
+
+CMakeFiles/client.dir/client_automoc.cpp.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/client_automoc.cpp.o: client_automoc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object CMakeFiles/client.dir/client_automoc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client_automoc.cpp.o -c /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/client_automoc.cpp
+
+CMakeFiles/client.dir/client_automoc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/client_automoc.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/client_automoc.cpp > CMakeFiles/client.dir/client_automoc.cpp.i
+
+CMakeFiles/client.dir/client_automoc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/client_automoc.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/client_automoc.cpp -o CMakeFiles/client.dir/client_automoc.cpp.s
+
+CMakeFiles/client.dir/client_automoc.cpp.o.requires:
+
+.PHONY : CMakeFiles/client.dir/client_automoc.cpp.o.requires
+
+CMakeFiles/client.dir/client_automoc.cpp.o.provides: CMakeFiles/client.dir/client_automoc.cpp.o.requires
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_automoc.cpp.o.provides.build
+.PHONY : CMakeFiles/client.dir/client_automoc.cpp.o.provides
+
+CMakeFiles/client.dir/client_automoc.cpp.o.provides.build: CMakeFiles/client.dir/client_automoc.cpp.o
 
 
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/src/clientMain.cpp.o"
+"CMakeFiles/client.dir/src/main.cpp.o" \
+"CMakeFiles/client.dir/src/mapwindow.cpp.o" \
+"CMakeFiles/client.dir/src/namewindow.cpp.o" \
+"CMakeFiles/client.dir/src/connectwindow.cpp.o" \
+"CMakeFiles/client.dir/src/mainwindow.cpp.o" \
+"CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o" \
+"CMakeFiles/client.dir/src/controller/EventHandler.cpp.o" \
+"CMakeFiles/client.dir/src/controller/Event.cpp.o" \
+"CMakeFiles/client.dir/src/controller/EventFactory.cpp.o" \
+"CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o" \
+"CMakeFiles/client.dir/src/controller/MouseState.cpp.o" \
+"CMakeFiles/client.dir/src/controller/CameraMove.cpp.o" \
+"CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o" \
+"CMakeFiles/client.dir/src/controller/Controller.cpp.o" \
+"CMakeFiles/client.dir/src/common/Thread.cpp.o" \
+"CMakeFiles/client.dir/src/common/socket.cpp.o" \
+"CMakeFiles/client.dir/src/common/socket_error.cpp.o" \
+"CMakeFiles/client.dir/src/ProxyClient.cpp.o" \
+"CMakeFiles/client.dir/src/GameClient.cpp.o" \
+"CMakeFiles/client.dir/src/PreGameManager.cpp.o" \
+"CMakeFiles/client.dir/src/model/Model.cpp.o" \
+"CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o" \
+"CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o" \
+"CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o" \
+"CMakeFiles/client.dir/src/view/mainView.cpp.o" \
+"CMakeFiles/client.dir/src/view/SdlException.cpp.o" \
+"CMakeFiles/client.dir/src/view/Escenario.cpp.o" \
+"CMakeFiles/client.dir/src/view/WormView.cpp.o" \
+"CMakeFiles/client.dir/src/view/Boot.cpp.o" \
+"CMakeFiles/client.dir/src/view/SdlScreen.cpp.o" \
+"CMakeFiles/client.dir/src/view/Sprite.cpp.o" \
+"CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o" \
+"CMakeFiles/client.dir/src/view/TextureManager.cpp.o" \
+"CMakeFiles/client.dir/src/view/TextManager.cpp.o" \
+"CMakeFiles/client.dir/src/view/TextView.cpp.o" \
+"CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o" \
+"CMakeFiles/client.dir/src/view/Weapon.cpp.o" \
+"CMakeFiles/client.dir/src/view/Shape.cpp.o" \
+"CMakeFiles/client.dir/src/view/VigaView.cpp.o" \
+"CMakeFiles/client.dir/src/view/AimView.cpp.o" \
+"CMakeFiles/client.dir/src/view/Camera.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o" \
+"CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o" \
+"CMakeFiles/client.dir/src/view/PowerView.cpp.o" \
+"CMakeFiles/client.dir/src/sound/SoundManager.cpp.o" \
+"CMakeFiles/client.dir/client_automoc.cpp.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
-client: CMakeFiles/client.dir/src/clientMain.cpp.o
+client: CMakeFiles/client.dir/src/main.cpp.o
+client: CMakeFiles/client.dir/src/mapwindow.cpp.o
+client: CMakeFiles/client.dir/src/namewindow.cpp.o
+client: CMakeFiles/client.dir/src/connectwindow.cpp.o
+client: CMakeFiles/client.dir/src/mainwindow.cpp.o
+client: CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o
+client: CMakeFiles/client.dir/src/controller/EventHandler.cpp.o
+client: CMakeFiles/client.dir/src/controller/Event.cpp.o
+client: CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
+client: CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o
+client: CMakeFiles/client.dir/src/controller/MouseState.cpp.o
+client: CMakeFiles/client.dir/src/controller/CameraMove.cpp.o
+client: CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o
+client: CMakeFiles/client.dir/src/controller/Controller.cpp.o
+client: CMakeFiles/client.dir/src/common/Thread.cpp.o
+client: CMakeFiles/client.dir/src/common/socket.cpp.o
+client: CMakeFiles/client.dir/src/common/socket_error.cpp.o
+client: CMakeFiles/client.dir/src/ProxyClient.cpp.o
+client: CMakeFiles/client.dir/src/GameClient.cpp.o
+client: CMakeFiles/client.dir/src/PreGameManager.cpp.o
+client: CMakeFiles/client.dir/src/model/Model.cpp.o
+client: CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o
+client: CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o
+client: CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o
+client: CMakeFiles/client.dir/src/view/mainView.cpp.o
+client: CMakeFiles/client.dir/src/view/SdlException.cpp.o
+client: CMakeFiles/client.dir/src/view/Escenario.cpp.o
+client: CMakeFiles/client.dir/src/view/WormView.cpp.o
+client: CMakeFiles/client.dir/src/view/Boot.cpp.o
+client: CMakeFiles/client.dir/src/view/SdlScreen.cpp.o
+client: CMakeFiles/client.dir/src/view/Sprite.cpp.o
+client: CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o
+client: CMakeFiles/client.dir/src/view/TextureManager.cpp.o
+client: CMakeFiles/client.dir/src/view/TextManager.cpp.o
+client: CMakeFiles/client.dir/src/view/TextView.cpp.o
+client: CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o
+client: CMakeFiles/client.dir/src/view/Weapon.cpp.o
+client: CMakeFiles/client.dir/src/view/Shape.cpp.o
+client: CMakeFiles/client.dir/src/view/VigaView.cpp.o
+client: CMakeFiles/client.dir/src/view/AimView.cpp.o
+client: CMakeFiles/client.dir/src/view/Camera.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o
+client: CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o
+client: CMakeFiles/client.dir/src/view/PowerView.cpp.o
+client: CMakeFiles/client.dir/src/sound/SoundManager.cpp.o
+client: CMakeFiles/client.dir/client_automoc.cpp.o
 client: CMakeFiles/client.dir/build.make
-client: liballlib.a
+client: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.5.1
+client: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.5.1
+client: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.5.1
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Linking CXX executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,7 +2016,80 @@ CMakeFiles/client.dir/build: client
 
 .PHONY : CMakeFiles/client.dir/build
 
-CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/clientMain.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/main.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/mapwindow.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/namewindow.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/connectwindow.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/mainwindow.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/EventHandler.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/Event.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/EventFactory.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/MouseState.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/CameraMove.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/controller/Controller.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/common/Thread.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/common/socket.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/common/socket_error.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/ProxyClient.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/GameClient.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/PreGameManager.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/Model.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/mainView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/SdlException.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Escenario.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/WormView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Boot.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/SdlScreen.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Sprite.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/TextureManager.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/TextManager.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/TextView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Weapon.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Shape.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/VigaView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/AimView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/Camera.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/view/PowerView.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/src/sound/SoundManager.cpp.o.requires
+CMakeFiles/client.dir/requires: CMakeFiles/client.dir/client_automoc.cpp.o.requires
 
 .PHONY : CMakeFiles/client.dir/requires
 
@@ -108,7 +2097,10 @@ CMakeFiles/client.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/client.dir/clean
 
-CMakeFiles/client.dir/depend:
+CMakeFiles/client.dir/depend: ui_namewindow.h
+CMakeFiles/client.dir/depend: ui_connectwindow.h
+CMakeFiles/client.dir/depend: ui_mapwindow.h
+CMakeFiles/client.dir/depend: ui_mainwindow.h
 	cd /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/client.dir/depend
 

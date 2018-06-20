@@ -6,9 +6,12 @@
 #include "../common/socket_error.h"
 #include "../ProxyClient.h"
 #include "../model/Model.h"
+#include "../PreGameManager.h"
 #include "Event.h"
 
 class Model;
+class ProxyClient;
+class PreGameManager;
 
 class ClientEventReceiver : public Thread{
 private:
@@ -16,10 +19,13 @@ private:
 	ProxyClient& proxy;
 	Model& model;
 	mainView& view;
+	PreGameManager& preGame;
 	bool closed;
+	bool isPreGameEvent(int t);
+	void process(int t);
 public:
 	ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& eventQueue, 
-	Model& model, mainView& view);
+	Model& model, mainView& view, PreGameManager& preGame);
 	~ClientEventReceiver();
 	virtual void run() override;
 	void stop();

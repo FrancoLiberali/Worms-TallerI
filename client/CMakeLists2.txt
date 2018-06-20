@@ -1,0 +1,101 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(worms_client)
+
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
+
+add_library(alllib
+	src/controller/ClientEventReceiver.cpp
+    src/controller/EventHandler.cpp
+    src/controller/Event.cpp
+    src/controller/EventFactory.cpp
+    src/controller/WormMoveEvent.cpp
+    src/controller/WormChangeStateEvent.cpp
+	src/controller/WormChangeLifeEvent.cpp
+    src/controller/WormWeaponEvent.cpp
+	src/controller/CreateVigaEvent.cpp
+	src/controller/CreateWormEvent.cpp
+	src/controller/CreateMissileEvent.cpp
+	src/controller/CreateStageEvent.cpp
+	src/controller/MissileMoveEvent.cpp
+	src/controller/MissileExploteEvent.cpp
+	src/controller/PlayerIdEvent.cpp
+	src/controller/PlayerConnectEvent.cpp
+	src/controller/WormChangeAimEvent.cpp
+	src/controller/StartTurnEvent.cpp
+	src/controller/PlayerOffEvent.cpp
+	src/controller/GameWinnerEvent.cpp
+	src/controller/MouseState.cpp
+	src/controller/CameraMove.cpp
+
+
+    src/controller/ClientCommandSender.cpp
+	src/controller/Controller.cpp
+
+	src/common/Thread.cpp
+	src/common/socket.cpp
+	src/common/socket_error.cpp
+	src/ProxyClient.cpp
+	src/GameClient.cpp
+
+	src/model/Model.cpp
+	src/model/GameControllerProxy.cpp
+	src/model/WormMoveCommand.cpp
+	src/model/WormJumpCommand.cpp
+	src/model/WormWeaponCommand.cpp
+	src/model/ChangeAimCommand.cpp
+	src/model/WormShootCommand.cpp
+	src/model/ChargePowerCommand.cpp
+	src/model/ChangeCountDownCommand.cpp
+
+	src/view/mainView.cpp
+	src/view/SdlException.cpp
+	src/view/Escenario.cpp
+	src/view/WormView.cpp
+	src/view/Boot.cpp
+	src/view/SdlException.cpp
+	src/view/SdlScreen.cpp
+	src/view/Sprite.cpp
+	src/view/SpriteConfigurator.cpp
+	src/view/TextureManager.cpp
+	src/view/TextManager.cpp
+	src/view/TextView.cpp
+	src/view/MenuWeaponView.cpp
+	src/view/Weapon.cpp
+	src/view/Shape.cpp
+	src/view/VigaView.cpp
+	src/view/AimView.cpp
+	src/view/Camera.cpp
+	src/view/bullets/BulletFactory.cpp
+	src/view/bullets/BulletView.cpp
+	src/view/bullets/BazookaView.cpp
+	src/view/bullets/MortarView.cpp
+	src/view/bullets/FragmentView.cpp
+	src/view/bullets/GreenGrenadeView.cpp
+	src/view/bullets/RedGrenadeView.cpp
+	src/view/bullets/BananaView.cpp
+	src/view/bullets/HolyView.cpp
+	src/view/bullets/DynamiteView.cpp
+	src/view/PowerView.cpp
+
+	src/sound/SoundManager.cpp
+)
+
+
+message("Agregando '${PROJECT_BINARY_DIR}' como directorio de includes")
+include_directories(${PROJECT_BINARY_DIR})
+
+add_executable (client
+	src/clientMain.cpp
+)
+
+find_package(PkgConfig REQUIRED)
+
+INCLUDE(FindPkgConfig)
+
+PKG_SEARCH_MODULE(SDL2 REQUIRED sdl2)
+PKG_SEARCH_MODULE(SDL2IMAGE REQUIRED SDL2_image>=2.0.0)
+PKG_SEARCH_MODULE(SDL2MIXER REQUIRED SDL2_mixer>=2.0.0)
+PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
+
+target_link_libraries(client alllib SDL2 SDL2_image SDL2_mixer ${GTK3_LIBRARIES} ${GTKMM_LIBRARIES})

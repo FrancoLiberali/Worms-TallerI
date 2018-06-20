@@ -4,6 +4,8 @@
 #include "../common/Queue.h"
 #include "ClientCommand.h"
 
+class ClientCommand;
+
 class GameControllerProxy{
 private:
     Queue<ClientCommand *> &queue;

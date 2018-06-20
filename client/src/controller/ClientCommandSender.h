@@ -7,6 +7,9 @@
 #include "../model/ClientCommand.h"
 #include "../ProxyClient.h"
 
+class ProxyClient;
+class ClientCommand;
+
 class ClientCommandSender : public Thread {
 private:
 	std::string socket_file;

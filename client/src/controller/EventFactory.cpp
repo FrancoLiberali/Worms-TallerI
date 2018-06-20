@@ -10,6 +10,7 @@
 #include "CreateVigaEvent.h"
 #include "CreateWormEvent.h"
 #include "CreateMissileEvent.h"
+#include "CreateStageEvent.h"
 #include "MissileMoveEvent.h"
 #include "MissileExploteEvent.h"
 #include "StartTurnEvent.h"
@@ -18,7 +19,7 @@
 #include "GameWinnerEvent.h"
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
-  //std::cout << "hay evento " << (EventType)type << std::endl;
+  std::cout << "hay evento " << (EventType)type << std::endl;
   switch (type) {
     case ID_PLAYER:{
       int id = proxy.receiveInt();
@@ -35,8 +36,11 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int angle = proxy.receiveAngle();
       return new CreateVigaEvent(posx, posy, angle, view);
     }
-    case CREATE_WATER:{
-      return nullptr;
+    case CREATE_STAGE:{
+      int widht = proxy.receiveWidht();
+      int height = proxy.receiveHeight();
+      printf("DIMENSIONES %i, %i", widht, height);
+      return new CreateStageEvent(widht, height) ;
     }
     case CREATE_WORM:{
       int idWorm = proxy.receiveInt();

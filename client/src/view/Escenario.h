@@ -9,10 +9,13 @@ class Escenario{
 	SdlScreen& screen;
 	Camera& camera;
 	std::vector<VigaView*> vigas;
+	int widht;
+	int height;
 public:
 	Escenario(SdlScreen& screen, Camera& camera);
 	void draw();
 	void build();
 	void addViga(int x, int y, int angle);
+	void setDimention(int widht, int height);
 };
 #endif

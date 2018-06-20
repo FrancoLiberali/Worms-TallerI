@@ -1,5 +1,4 @@
 #include "Controller.h"
-
 #include "MouseState.h"
 
 #include <iostream>

@@ -9,6 +9,7 @@
 #include "view/Boot.h"
 #include "view/mainView.h"
 #include "common/Queue.h"
+#include "PreGameManager.h"
 
 #include <iostream>
 
@@ -16,10 +17,6 @@ GameClient::GameClient(ProxyClient& proxy, std::string nameClient)
     :proxy(proxy), name(nameClient){};
 
 void GameClient::run(){
-	//cargamos todas las texturas y el screen principal
-	Boot boot;
-	boot.init();
-	Camera camera(boot.getScreen().getWidth(), boot.getScreen().getHeight());
 
 	//cola de comandos a enviar
 	Queue<ClientCommand*> commandsQueue;
@@ -27,6 +24,13 @@ void GameClient::run(){
 	commmandSender.start();
 
 	EventHandler ehandler;
+
+
+
+	//cargamos todas las texturas y el screen principal
+	Boot boot;
+	boot.init();
+	Camera camera(boot.getScreen().getWidth(), boot.getScreen().getHeight());
 
 	mainView clientView(ehandler, boot.getScreen(), camera);
 	ehandler.setView(&clientView);
@@ -36,16 +40,23 @@ void GameClient::run(){
 	Model model;
 	model.setGameControllerProxy(&gcp);
 	model.setNamePlayer(name);
+	//proxy.addModel(&model);
 
+	PreGameManager preGame(proxy);
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue; 
-	ClientEventReceiver eventReceiver(proxy, eventQueue, model, clientView);
+	ClientEventReceiver eventReceiver(proxy, eventQueue, model, clientView, preGame);
 	eventReceiver.start();
 
 	model.setComunnication(&commmandSender, &eventReceiver);
 
 	Controller controller(model, clientView);
+	
+	//Enviamos el nombre del jugodor
+	proxy.sendName(name);
+	preGame.showHall();
 
+	printf("INICIO DEL JUEGO \n");
 	//Game loop
 	SDL_Event e;
 	while(clientView.isOpen() ){
@@ -58,6 +69,7 @@ void GameClient::run(){
 			ehandler.add(eventQueue.pop());
 		}
 		clientView.update();
+		//AGREGAR SLEEP
 	}
 	commandsQueue.push(nullptr);
 	eventReceiver.stop();

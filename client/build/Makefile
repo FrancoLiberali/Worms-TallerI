@@ -124,44 +124,98 @@ client/fast:
 .PHONY : client/fast
 
 #=============================================================================
-# Target rules for targets named alllib
+# Target rules for targets named client_automoc
 
 # Build rule for target.
-alllib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 alllib
-.PHONY : alllib
+client_automoc: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 client_automoc
+.PHONY : client_automoc
 
 # fast build rule for target.
-alllib/fast:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/build
-.PHONY : alllib/fast
+client_automoc/fast:
+	$(MAKE) -f CMakeFiles/client_automoc.dir/build.make CMakeFiles/client_automoc.dir/build
+.PHONY : client_automoc/fast
 
-src/GameBuilder.o: src/GameBuilder.cpp.o
+client_automoc.o: client_automoc.cpp.o
 
-.PHONY : src/GameBuilder.o
+.PHONY : client_automoc.o
 
 # target to build an object file
-src/GameBuilder.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.o
-.PHONY : src/GameBuilder.cpp.o
+client_automoc.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_automoc.cpp.o
+.PHONY : client_automoc.cpp.o
 
-src/GameBuilder.i: src/GameBuilder.cpp.i
+client_automoc.i: client_automoc.cpp.i
 
-.PHONY : src/GameBuilder.i
+.PHONY : client_automoc.i
 
 # target to preprocess a source file
-src/GameBuilder.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.i
-.PHONY : src/GameBuilder.cpp.i
+client_automoc.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_automoc.cpp.i
+.PHONY : client_automoc.cpp.i
 
-src/GameBuilder.s: src/GameBuilder.cpp.s
+client_automoc.s: client_automoc.cpp.s
 
-.PHONY : src/GameBuilder.s
+.PHONY : client_automoc.s
 
 # target to generate assembly for a file
-src/GameBuilder.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/GameBuilder.cpp.s
-.PHONY : src/GameBuilder.cpp.s
+client_automoc.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client_automoc.cpp.s
+.PHONY : client_automoc.cpp.s
+
+src/GameClient.o: src/GameClient.cpp.o
+
+.PHONY : src/GameClient.o
+
+# target to build an object file
+src/GameClient.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/GameClient.cpp.o
+.PHONY : src/GameClient.cpp.o
+
+src/GameClient.i: src/GameClient.cpp.i
+
+.PHONY : src/GameClient.i
+
+# target to preprocess a source file
+src/GameClient.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/GameClient.cpp.i
+.PHONY : src/GameClient.cpp.i
+
+src/GameClient.s: src/GameClient.cpp.s
+
+.PHONY : src/GameClient.s
+
+# target to generate assembly for a file
+src/GameClient.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/GameClient.cpp.s
+.PHONY : src/GameClient.cpp.s
+
+src/PreGameManager.o: src/PreGameManager.cpp.o
+
+.PHONY : src/PreGameManager.o
+
+# target to build an object file
+src/PreGameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/PreGameManager.cpp.o
+.PHONY : src/PreGameManager.cpp.o
+
+src/PreGameManager.i: src/PreGameManager.cpp.i
+
+.PHONY : src/PreGameManager.i
+
+# target to preprocess a source file
+src/PreGameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/PreGameManager.cpp.i
+.PHONY : src/PreGameManager.cpp.i
+
+src/PreGameManager.s: src/PreGameManager.cpp.s
+
+.PHONY : src/PreGameManager.s
+
+# target to generate assembly for a file
+src/PreGameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/PreGameManager.cpp.s
+.PHONY : src/PreGameManager.cpp.s
 
 src/ProxyClient.o: src/ProxyClient.cpp.o
 
@@ -169,7 +223,7 @@ src/ProxyClient.o: src/ProxyClient.cpp.o
 
 # target to build an object file
 src/ProxyClient.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/ProxyClient.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/ProxyClient.cpp.o
 .PHONY : src/ProxyClient.cpp.o
 
 src/ProxyClient.i: src/ProxyClient.cpp.i
@@ -178,7 +232,7 @@ src/ProxyClient.i: src/ProxyClient.cpp.i
 
 # target to preprocess a source file
 src/ProxyClient.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/ProxyClient.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/ProxyClient.cpp.i
 .PHONY : src/ProxyClient.cpp.i
 
 src/ProxyClient.s: src/ProxyClient.cpp.s
@@ -187,35 +241,8 @@ src/ProxyClient.s: src/ProxyClient.cpp.s
 
 # target to generate assembly for a file
 src/ProxyClient.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/ProxyClient.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/ProxyClient.cpp.s
 .PHONY : src/ProxyClient.cpp.s
-
-src/clientMain.o: src/clientMain.cpp.o
-
-.PHONY : src/clientMain.o
-
-# target to build an object file
-src/clientMain.cpp.o:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/clientMain.cpp.o
-.PHONY : src/clientMain.cpp.o
-
-src/clientMain.i: src/clientMain.cpp.i
-
-.PHONY : src/clientMain.i
-
-# target to preprocess a source file
-src/clientMain.cpp.i:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/clientMain.cpp.i
-.PHONY : src/clientMain.cpp.i
-
-src/clientMain.s: src/clientMain.cpp.s
-
-.PHONY : src/clientMain.s
-
-# target to generate assembly for a file
-src/clientMain.cpp.s:
-	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/clientMain.cpp.s
-.PHONY : src/clientMain.cpp.s
 
 src/common/Thread.o: src/common/Thread.cpp.o
 
@@ -223,7 +250,7 @@ src/common/Thread.o: src/common/Thread.cpp.o
 
 # target to build an object file
 src/common/Thread.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/Thread.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/Thread.cpp.o
 .PHONY : src/common/Thread.cpp.o
 
 src/common/Thread.i: src/common/Thread.cpp.i
@@ -232,7 +259,7 @@ src/common/Thread.i: src/common/Thread.cpp.i
 
 # target to preprocess a source file
 src/common/Thread.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/Thread.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/Thread.cpp.i
 .PHONY : src/common/Thread.cpp.i
 
 src/common/Thread.s: src/common/Thread.cpp.s
@@ -241,7 +268,7 @@ src/common/Thread.s: src/common/Thread.cpp.s
 
 # target to generate assembly for a file
 src/common/Thread.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/Thread.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/Thread.cpp.s
 .PHONY : src/common/Thread.cpp.s
 
 src/common/socket.o: src/common/socket.cpp.o
@@ -250,7 +277,7 @@ src/common/socket.o: src/common/socket.cpp.o
 
 # target to build an object file
 src/common/socket.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket.cpp.o
 .PHONY : src/common/socket.cpp.o
 
 src/common/socket.i: src/common/socket.cpp.i
@@ -259,7 +286,7 @@ src/common/socket.i: src/common/socket.cpp.i
 
 # target to preprocess a source file
 src/common/socket.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket.cpp.i
 .PHONY : src/common/socket.cpp.i
 
 src/common/socket.s: src/common/socket.cpp.s
@@ -268,7 +295,7 @@ src/common/socket.s: src/common/socket.cpp.s
 
 # target to generate assembly for a file
 src/common/socket.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket.cpp.s
 .PHONY : src/common/socket.cpp.s
 
 src/common/socket_error.o: src/common/socket_error.cpp.o
@@ -277,7 +304,7 @@ src/common/socket_error.o: src/common/socket_error.cpp.o
 
 # target to build an object file
 src/common/socket_error.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket_error.cpp.o
 .PHONY : src/common/socket_error.cpp.o
 
 src/common/socket_error.i: src/common/socket_error.cpp.i
@@ -286,7 +313,7 @@ src/common/socket_error.i: src/common/socket_error.cpp.i
 
 # target to preprocess a source file
 src/common/socket_error.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket_error.cpp.i
 .PHONY : src/common/socket_error.cpp.i
 
 src/common/socket_error.s: src/common/socket_error.cpp.s
@@ -295,8 +322,62 @@ src/common/socket_error.s: src/common/socket_error.cpp.s
 
 # target to generate assembly for a file
 src/common/socket_error.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/common/socket_error.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/common/socket_error.cpp.s
 .PHONY : src/common/socket_error.cpp.s
+
+src/connectwindow.o: src/connectwindow.cpp.o
+
+.PHONY : src/connectwindow.o
+
+# target to build an object file
+src/connectwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/connectwindow.cpp.o
+.PHONY : src/connectwindow.cpp.o
+
+src/connectwindow.i: src/connectwindow.cpp.i
+
+.PHONY : src/connectwindow.i
+
+# target to preprocess a source file
+src/connectwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/connectwindow.cpp.i
+.PHONY : src/connectwindow.cpp.i
+
+src/connectwindow.s: src/connectwindow.cpp.s
+
+.PHONY : src/connectwindow.s
+
+# target to generate assembly for a file
+src/connectwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/connectwindow.cpp.s
+.PHONY : src/connectwindow.cpp.s
+
+src/controller/CameraMove.o: src/controller/CameraMove.cpp.o
+
+.PHONY : src/controller/CameraMove.o
+
+# target to build an object file
+src/controller/CameraMove.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CameraMove.cpp.o
+.PHONY : src/controller/CameraMove.cpp.o
+
+src/controller/CameraMove.i: src/controller/CameraMove.cpp.i
+
+.PHONY : src/controller/CameraMove.i
+
+# target to preprocess a source file
+src/controller/CameraMove.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CameraMove.cpp.i
+.PHONY : src/controller/CameraMove.cpp.i
+
+src/controller/CameraMove.s: src/controller/CameraMove.cpp.s
+
+.PHONY : src/controller/CameraMove.s
+
+# target to generate assembly for a file
+src/controller/CameraMove.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CameraMove.cpp.s
+.PHONY : src/controller/CameraMove.cpp.s
 
 src/controller/ClientCommandSender.o: src/controller/ClientCommandSender.cpp.o
 
@@ -304,7 +385,7 @@ src/controller/ClientCommandSender.o: src/controller/ClientCommandSender.cpp.o
 
 # target to build an object file
 src/controller/ClientCommandSender.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o
 .PHONY : src/controller/ClientCommandSender.cpp.o
 
 src/controller/ClientCommandSender.i: src/controller/ClientCommandSender.cpp.i
@@ -313,7 +394,7 @@ src/controller/ClientCommandSender.i: src/controller/ClientCommandSender.cpp.i
 
 # target to preprocess a source file
 src/controller/ClientCommandSender.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.i
 .PHONY : src/controller/ClientCommandSender.cpp.i
 
 src/controller/ClientCommandSender.s: src/controller/ClientCommandSender.cpp.s
@@ -322,7 +403,7 @@ src/controller/ClientCommandSender.s: src/controller/ClientCommandSender.cpp.s
 
 # target to generate assembly for a file
 src/controller/ClientCommandSender.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientCommandSender.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.s
 .PHONY : src/controller/ClientCommandSender.cpp.s
 
 src/controller/ClientEventReceiver.o: src/controller/ClientEventReceiver.cpp.o
@@ -331,7 +412,7 @@ src/controller/ClientEventReceiver.o: src/controller/ClientEventReceiver.cpp.o
 
 # target to build an object file
 src/controller/ClientEventReceiver.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o
 .PHONY : src/controller/ClientEventReceiver.cpp.o
 
 src/controller/ClientEventReceiver.i: src/controller/ClientEventReceiver.cpp.i
@@ -340,7 +421,7 @@ src/controller/ClientEventReceiver.i: src/controller/ClientEventReceiver.cpp.i
 
 # target to preprocess a source file
 src/controller/ClientEventReceiver.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.i
 .PHONY : src/controller/ClientEventReceiver.cpp.i
 
 src/controller/ClientEventReceiver.s: src/controller/ClientEventReceiver.cpp.s
@@ -349,7 +430,7 @@ src/controller/ClientEventReceiver.s: src/controller/ClientEventReceiver.cpp.s
 
 # target to generate assembly for a file
 src/controller/ClientEventReceiver.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/ClientEventReceiver.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.s
 .PHONY : src/controller/ClientEventReceiver.cpp.s
 
 src/controller/Controller.o: src/controller/Controller.cpp.o
@@ -358,7 +439,7 @@ src/controller/Controller.o: src/controller/Controller.cpp.o
 
 # target to build an object file
 src/controller/Controller.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Controller.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Controller.cpp.o
 .PHONY : src/controller/Controller.cpp.o
 
 src/controller/Controller.i: src/controller/Controller.cpp.i
@@ -367,7 +448,7 @@ src/controller/Controller.i: src/controller/Controller.cpp.i
 
 # target to preprocess a source file
 src/controller/Controller.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Controller.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Controller.cpp.i
 .PHONY : src/controller/Controller.cpp.i
 
 src/controller/Controller.s: src/controller/Controller.cpp.s
@@ -376,8 +457,62 @@ src/controller/Controller.s: src/controller/Controller.cpp.s
 
 # target to generate assembly for a file
 src/controller/Controller.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Controller.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Controller.cpp.s
 .PHONY : src/controller/Controller.cpp.s
+
+src/controller/CreateMissileEvent.o: src/controller/CreateMissileEvent.cpp.o
+
+.PHONY : src/controller/CreateMissileEvent.o
+
+# target to build an object file
+src/controller/CreateMissileEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o
+.PHONY : src/controller/CreateMissileEvent.cpp.o
+
+src/controller/CreateMissileEvent.i: src/controller/CreateMissileEvent.cpp.i
+
+.PHONY : src/controller/CreateMissileEvent.i
+
+# target to preprocess a source file
+src/controller/CreateMissileEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.i
+.PHONY : src/controller/CreateMissileEvent.cpp.i
+
+src/controller/CreateMissileEvent.s: src/controller/CreateMissileEvent.cpp.s
+
+.PHONY : src/controller/CreateMissileEvent.s
+
+# target to generate assembly for a file
+src/controller/CreateMissileEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.s
+.PHONY : src/controller/CreateMissileEvent.cpp.s
+
+src/controller/CreateStageEvent.o: src/controller/CreateStageEvent.cpp.o
+
+.PHONY : src/controller/CreateStageEvent.o
+
+# target to build an object file
+src/controller/CreateStageEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o
+.PHONY : src/controller/CreateStageEvent.cpp.o
+
+src/controller/CreateStageEvent.i: src/controller/CreateStageEvent.cpp.i
+
+.PHONY : src/controller/CreateStageEvent.i
+
+# target to preprocess a source file
+src/controller/CreateStageEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.i
+.PHONY : src/controller/CreateStageEvent.cpp.i
+
+src/controller/CreateStageEvent.s: src/controller/CreateStageEvent.cpp.s
+
+.PHONY : src/controller/CreateStageEvent.s
+
+# target to generate assembly for a file
+src/controller/CreateStageEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.s
+.PHONY : src/controller/CreateStageEvent.cpp.s
 
 src/controller/CreateVigaEvent.o: src/controller/CreateVigaEvent.cpp.o
 
@@ -385,7 +520,7 @@ src/controller/CreateVigaEvent.o: src/controller/CreateVigaEvent.cpp.o
 
 # target to build an object file
 src/controller/CreateVigaEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o
 .PHONY : src/controller/CreateVigaEvent.cpp.o
 
 src/controller/CreateVigaEvent.i: src/controller/CreateVigaEvent.cpp.i
@@ -394,7 +529,7 @@ src/controller/CreateVigaEvent.i: src/controller/CreateVigaEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/CreateVigaEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.i
 .PHONY : src/controller/CreateVigaEvent.cpp.i
 
 src/controller/CreateVigaEvent.s: src/controller/CreateVigaEvent.cpp.s
@@ -403,7 +538,7 @@ src/controller/CreateVigaEvent.s: src/controller/CreateVigaEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/CreateVigaEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateVigaEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.s
 .PHONY : src/controller/CreateVigaEvent.cpp.s
 
 src/controller/CreateWormEvent.o: src/controller/CreateWormEvent.cpp.o
@@ -412,7 +547,7 @@ src/controller/CreateWormEvent.o: src/controller/CreateWormEvent.cpp.o
 
 # target to build an object file
 src/controller/CreateWormEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o
 .PHONY : src/controller/CreateWormEvent.cpp.o
 
 src/controller/CreateWormEvent.i: src/controller/CreateWormEvent.cpp.i
@@ -421,7 +556,7 @@ src/controller/CreateWormEvent.i: src/controller/CreateWormEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/CreateWormEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.i
 .PHONY : src/controller/CreateWormEvent.cpp.i
 
 src/controller/CreateWormEvent.s: src/controller/CreateWormEvent.cpp.s
@@ -430,7 +565,7 @@ src/controller/CreateWormEvent.s: src/controller/CreateWormEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/CreateWormEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/CreateWormEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.s
 .PHONY : src/controller/CreateWormEvent.cpp.s
 
 src/controller/Event.o: src/controller/Event.cpp.o
@@ -439,7 +574,7 @@ src/controller/Event.o: src/controller/Event.cpp.o
 
 # target to build an object file
 src/controller/Event.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Event.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Event.cpp.o
 .PHONY : src/controller/Event.cpp.o
 
 src/controller/Event.i: src/controller/Event.cpp.i
@@ -448,7 +583,7 @@ src/controller/Event.i: src/controller/Event.cpp.i
 
 # target to preprocess a source file
 src/controller/Event.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Event.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Event.cpp.i
 .PHONY : src/controller/Event.cpp.i
 
 src/controller/Event.s: src/controller/Event.cpp.s
@@ -457,7 +592,7 @@ src/controller/Event.s: src/controller/Event.cpp.s
 
 # target to generate assembly for a file
 src/controller/Event.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/Event.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/Event.cpp.s
 .PHONY : src/controller/Event.cpp.s
 
 src/controller/EventFactory.o: src/controller/EventFactory.cpp.o
@@ -466,7 +601,7 @@ src/controller/EventFactory.o: src/controller/EventFactory.cpp.o
 
 # target to build an object file
 src/controller/EventFactory.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
 .PHONY : src/controller/EventFactory.cpp.o
 
 src/controller/EventFactory.i: src/controller/EventFactory.cpp.i
@@ -475,7 +610,7 @@ src/controller/EventFactory.i: src/controller/EventFactory.cpp.i
 
 # target to preprocess a source file
 src/controller/EventFactory.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventFactory.cpp.i
 .PHONY : src/controller/EventFactory.cpp.i
 
 src/controller/EventFactory.s: src/controller/EventFactory.cpp.s
@@ -484,7 +619,7 @@ src/controller/EventFactory.s: src/controller/EventFactory.cpp.s
 
 # target to generate assembly for a file
 src/controller/EventFactory.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventFactory.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventFactory.cpp.s
 .PHONY : src/controller/EventFactory.cpp.s
 
 src/controller/EventHandler.o: src/controller/EventHandler.cpp.o
@@ -493,7 +628,7 @@ src/controller/EventHandler.o: src/controller/EventHandler.cpp.o
 
 # target to build an object file
 src/controller/EventHandler.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventHandler.cpp.o
 .PHONY : src/controller/EventHandler.cpp.o
 
 src/controller/EventHandler.i: src/controller/EventHandler.cpp.i
@@ -502,7 +637,7 @@ src/controller/EventHandler.i: src/controller/EventHandler.cpp.i
 
 # target to preprocess a source file
 src/controller/EventHandler.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventHandler.cpp.i
 .PHONY : src/controller/EventHandler.cpp.i
 
 src/controller/EventHandler.s: src/controller/EventHandler.cpp.s
@@ -511,7 +646,7 @@ src/controller/EventHandler.s: src/controller/EventHandler.cpp.s
 
 # target to generate assembly for a file
 src/controller/EventHandler.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/EventHandler.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/EventHandler.cpp.s
 .PHONY : src/controller/EventHandler.cpp.s
 
 src/controller/GameWinnerEvent.o: src/controller/GameWinnerEvent.cpp.o
@@ -520,7 +655,7 @@ src/controller/GameWinnerEvent.o: src/controller/GameWinnerEvent.cpp.o
 
 # target to build an object file
 src/controller/GameWinnerEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o
 .PHONY : src/controller/GameWinnerEvent.cpp.o
 
 src/controller/GameWinnerEvent.i: src/controller/GameWinnerEvent.cpp.i
@@ -529,7 +664,7 @@ src/controller/GameWinnerEvent.i: src/controller/GameWinnerEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/GameWinnerEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.i
 .PHONY : src/controller/GameWinnerEvent.cpp.i
 
 src/controller/GameWinnerEvent.s: src/controller/GameWinnerEvent.cpp.s
@@ -538,8 +673,89 @@ src/controller/GameWinnerEvent.s: src/controller/GameWinnerEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/GameWinnerEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/GameWinnerEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.s
 .PHONY : src/controller/GameWinnerEvent.cpp.s
+
+src/controller/MissileExploteEvent.o: src/controller/MissileExploteEvent.cpp.o
+
+.PHONY : src/controller/MissileExploteEvent.o
+
+# target to build an object file
+src/controller/MissileExploteEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o
+.PHONY : src/controller/MissileExploteEvent.cpp.o
+
+src/controller/MissileExploteEvent.i: src/controller/MissileExploteEvent.cpp.i
+
+.PHONY : src/controller/MissileExploteEvent.i
+
+# target to preprocess a source file
+src/controller/MissileExploteEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.i
+.PHONY : src/controller/MissileExploteEvent.cpp.i
+
+src/controller/MissileExploteEvent.s: src/controller/MissileExploteEvent.cpp.s
+
+.PHONY : src/controller/MissileExploteEvent.s
+
+# target to generate assembly for a file
+src/controller/MissileExploteEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.s
+.PHONY : src/controller/MissileExploteEvent.cpp.s
+
+src/controller/MissileMoveEvent.o: src/controller/MissileMoveEvent.cpp.o
+
+.PHONY : src/controller/MissileMoveEvent.o
+
+# target to build an object file
+src/controller/MissileMoveEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o
+.PHONY : src/controller/MissileMoveEvent.cpp.o
+
+src/controller/MissileMoveEvent.i: src/controller/MissileMoveEvent.cpp.i
+
+.PHONY : src/controller/MissileMoveEvent.i
+
+# target to preprocess a source file
+src/controller/MissileMoveEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.i
+.PHONY : src/controller/MissileMoveEvent.cpp.i
+
+src/controller/MissileMoveEvent.s: src/controller/MissileMoveEvent.cpp.s
+
+.PHONY : src/controller/MissileMoveEvent.s
+
+# target to generate assembly for a file
+src/controller/MissileMoveEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.s
+.PHONY : src/controller/MissileMoveEvent.cpp.s
+
+src/controller/MouseState.o: src/controller/MouseState.cpp.o
+
+.PHONY : src/controller/MouseState.o
+
+# target to build an object file
+src/controller/MouseState.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MouseState.cpp.o
+.PHONY : src/controller/MouseState.cpp.o
+
+src/controller/MouseState.i: src/controller/MouseState.cpp.i
+
+.PHONY : src/controller/MouseState.i
+
+# target to preprocess a source file
+src/controller/MouseState.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MouseState.cpp.i
+.PHONY : src/controller/MouseState.cpp.i
+
+src/controller/MouseState.s: src/controller/MouseState.cpp.s
+
+.PHONY : src/controller/MouseState.s
+
+# target to generate assembly for a file
+src/controller/MouseState.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/MouseState.cpp.s
+.PHONY : src/controller/MouseState.cpp.s
 
 src/controller/PlayerConnectEvent.o: src/controller/PlayerConnectEvent.cpp.o
 
@@ -547,7 +763,7 @@ src/controller/PlayerConnectEvent.o: src/controller/PlayerConnectEvent.cpp.o
 
 # target to build an object file
 src/controller/PlayerConnectEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o
 .PHONY : src/controller/PlayerConnectEvent.cpp.o
 
 src/controller/PlayerConnectEvent.i: src/controller/PlayerConnectEvent.cpp.i
@@ -556,7 +772,7 @@ src/controller/PlayerConnectEvent.i: src/controller/PlayerConnectEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/PlayerConnectEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.i
 .PHONY : src/controller/PlayerConnectEvent.cpp.i
 
 src/controller/PlayerConnectEvent.s: src/controller/PlayerConnectEvent.cpp.s
@@ -565,7 +781,7 @@ src/controller/PlayerConnectEvent.s: src/controller/PlayerConnectEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/PlayerConnectEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerConnectEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.s
 .PHONY : src/controller/PlayerConnectEvent.cpp.s
 
 src/controller/PlayerIdEvent.o: src/controller/PlayerIdEvent.cpp.o
@@ -574,7 +790,7 @@ src/controller/PlayerIdEvent.o: src/controller/PlayerIdEvent.cpp.o
 
 # target to build an object file
 src/controller/PlayerIdEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o
 .PHONY : src/controller/PlayerIdEvent.cpp.o
 
 src/controller/PlayerIdEvent.i: src/controller/PlayerIdEvent.cpp.i
@@ -583,7 +799,7 @@ src/controller/PlayerIdEvent.i: src/controller/PlayerIdEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/PlayerIdEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.i
 .PHONY : src/controller/PlayerIdEvent.cpp.i
 
 src/controller/PlayerIdEvent.s: src/controller/PlayerIdEvent.cpp.s
@@ -592,7 +808,7 @@ src/controller/PlayerIdEvent.s: src/controller/PlayerIdEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/PlayerIdEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerIdEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.s
 .PHONY : src/controller/PlayerIdEvent.cpp.s
 
 src/controller/PlayerOffEvent.o: src/controller/PlayerOffEvent.cpp.o
@@ -601,7 +817,7 @@ src/controller/PlayerOffEvent.o: src/controller/PlayerOffEvent.cpp.o
 
 # target to build an object file
 src/controller/PlayerOffEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o
 .PHONY : src/controller/PlayerOffEvent.cpp.o
 
 src/controller/PlayerOffEvent.i: src/controller/PlayerOffEvent.cpp.i
@@ -610,7 +826,7 @@ src/controller/PlayerOffEvent.i: src/controller/PlayerOffEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/PlayerOffEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.i
 .PHONY : src/controller/PlayerOffEvent.cpp.i
 
 src/controller/PlayerOffEvent.s: src/controller/PlayerOffEvent.cpp.s
@@ -619,7 +835,7 @@ src/controller/PlayerOffEvent.s: src/controller/PlayerOffEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/PlayerOffEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/PlayerOffEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.s
 .PHONY : src/controller/PlayerOffEvent.cpp.s
 
 src/controller/StartTurnEvent.o: src/controller/StartTurnEvent.cpp.o
@@ -628,7 +844,7 @@ src/controller/StartTurnEvent.o: src/controller/StartTurnEvent.cpp.o
 
 # target to build an object file
 src/controller/StartTurnEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o
 .PHONY : src/controller/StartTurnEvent.cpp.o
 
 src/controller/StartTurnEvent.i: src/controller/StartTurnEvent.cpp.i
@@ -637,7 +853,7 @@ src/controller/StartTurnEvent.i: src/controller/StartTurnEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/StartTurnEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.i
 .PHONY : src/controller/StartTurnEvent.cpp.i
 
 src/controller/StartTurnEvent.s: src/controller/StartTurnEvent.cpp.s
@@ -646,7 +862,7 @@ src/controller/StartTurnEvent.s: src/controller/StartTurnEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/StartTurnEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/StartTurnEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.s
 .PHONY : src/controller/StartTurnEvent.cpp.s
 
 src/controller/WormChangeAimEvent.o: src/controller/WormChangeAimEvent.cpp.o
@@ -655,7 +871,7 @@ src/controller/WormChangeAimEvent.o: src/controller/WormChangeAimEvent.cpp.o
 
 # target to build an object file
 src/controller/WormChangeAimEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o
 .PHONY : src/controller/WormChangeAimEvent.cpp.o
 
 src/controller/WormChangeAimEvent.i: src/controller/WormChangeAimEvent.cpp.i
@@ -664,7 +880,7 @@ src/controller/WormChangeAimEvent.i: src/controller/WormChangeAimEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/WormChangeAimEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.i
 .PHONY : src/controller/WormChangeAimEvent.cpp.i
 
 src/controller/WormChangeAimEvent.s: src/controller/WormChangeAimEvent.cpp.s
@@ -673,7 +889,7 @@ src/controller/WormChangeAimEvent.s: src/controller/WormChangeAimEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/WormChangeAimEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeAimEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.s
 .PHONY : src/controller/WormChangeAimEvent.cpp.s
 
 src/controller/WormChangeLifeEvent.o: src/controller/WormChangeLifeEvent.cpp.o
@@ -682,7 +898,7 @@ src/controller/WormChangeLifeEvent.o: src/controller/WormChangeLifeEvent.cpp.o
 
 # target to build an object file
 src/controller/WormChangeLifeEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o
 .PHONY : src/controller/WormChangeLifeEvent.cpp.o
 
 src/controller/WormChangeLifeEvent.i: src/controller/WormChangeLifeEvent.cpp.i
@@ -691,7 +907,7 @@ src/controller/WormChangeLifeEvent.i: src/controller/WormChangeLifeEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/WormChangeLifeEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.i
 .PHONY : src/controller/WormChangeLifeEvent.cpp.i
 
 src/controller/WormChangeLifeEvent.s: src/controller/WormChangeLifeEvent.cpp.s
@@ -700,7 +916,7 @@ src/controller/WormChangeLifeEvent.s: src/controller/WormChangeLifeEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/WormChangeLifeEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeLifeEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.s
 .PHONY : src/controller/WormChangeLifeEvent.cpp.s
 
 src/controller/WormChangeStateEvent.o: src/controller/WormChangeStateEvent.cpp.o
@@ -709,7 +925,7 @@ src/controller/WormChangeStateEvent.o: src/controller/WormChangeStateEvent.cpp.o
 
 # target to build an object file
 src/controller/WormChangeStateEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o
 .PHONY : src/controller/WormChangeStateEvent.cpp.o
 
 src/controller/WormChangeStateEvent.i: src/controller/WormChangeStateEvent.cpp.i
@@ -718,7 +934,7 @@ src/controller/WormChangeStateEvent.i: src/controller/WormChangeStateEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/WormChangeStateEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.i
 .PHONY : src/controller/WormChangeStateEvent.cpp.i
 
 src/controller/WormChangeStateEvent.s: src/controller/WormChangeStateEvent.cpp.s
@@ -727,7 +943,7 @@ src/controller/WormChangeStateEvent.s: src/controller/WormChangeStateEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/WormChangeStateEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormChangeStateEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.s
 .PHONY : src/controller/WormChangeStateEvent.cpp.s
 
 src/controller/WormMoveEvent.o: src/controller/WormMoveEvent.cpp.o
@@ -736,7 +952,7 @@ src/controller/WormMoveEvent.o: src/controller/WormMoveEvent.cpp.o
 
 # target to build an object file
 src/controller/WormMoveEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o
 .PHONY : src/controller/WormMoveEvent.cpp.o
 
 src/controller/WormMoveEvent.i: src/controller/WormMoveEvent.cpp.i
@@ -745,7 +961,7 @@ src/controller/WormMoveEvent.i: src/controller/WormMoveEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/WormMoveEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.i
 .PHONY : src/controller/WormMoveEvent.cpp.i
 
 src/controller/WormMoveEvent.s: src/controller/WormMoveEvent.cpp.s
@@ -754,7 +970,7 @@ src/controller/WormMoveEvent.s: src/controller/WormMoveEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/WormMoveEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormMoveEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.s
 .PHONY : src/controller/WormMoveEvent.cpp.s
 
 src/controller/WormWeaponEvent.o: src/controller/WormWeaponEvent.cpp.o
@@ -763,7 +979,7 @@ src/controller/WormWeaponEvent.o: src/controller/WormWeaponEvent.cpp.o
 
 # target to build an object file
 src/controller/WormWeaponEvent.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o
 .PHONY : src/controller/WormWeaponEvent.cpp.o
 
 src/controller/WormWeaponEvent.i: src/controller/WormWeaponEvent.cpp.i
@@ -772,7 +988,7 @@ src/controller/WormWeaponEvent.i: src/controller/WormWeaponEvent.cpp.i
 
 # target to preprocess a source file
 src/controller/WormWeaponEvent.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.i
 .PHONY : src/controller/WormWeaponEvent.cpp.i
 
 src/controller/WormWeaponEvent.s: src/controller/WormWeaponEvent.cpp.s
@@ -781,8 +997,89 @@ src/controller/WormWeaponEvent.s: src/controller/WormWeaponEvent.cpp.s
 
 # target to generate assembly for a file
 src/controller/WormWeaponEvent.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/controller/WormWeaponEvent.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.s
 .PHONY : src/controller/WormWeaponEvent.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/mainwindow.o: src/mainwindow.cpp.o
+
+.PHONY : src/mainwindow.o
+
+# target to build an object file
+src/mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
+
+src/mainwindow.i: src/mainwindow.cpp.i
+
+.PHONY : src/mainwindow.i
+
+# target to preprocess a source file
+src/mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
+
+src/mainwindow.s: src/mainwindow.cpp.s
+
+.PHONY : src/mainwindow.s
+
+# target to generate assembly for a file
+src/mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
+
+src/mapwindow.o: src/mapwindow.cpp.o
+
+.PHONY : src/mapwindow.o
+
+# target to build an object file
+src/mapwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mapwindow.cpp.o
+.PHONY : src/mapwindow.cpp.o
+
+src/mapwindow.i: src/mapwindow.cpp.i
+
+.PHONY : src/mapwindow.i
+
+# target to preprocess a source file
+src/mapwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mapwindow.cpp.i
+.PHONY : src/mapwindow.cpp.i
+
+src/mapwindow.s: src/mapwindow.cpp.s
+
+.PHONY : src/mapwindow.s
+
+# target to generate assembly for a file
+src/mapwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/mapwindow.cpp.s
+.PHONY : src/mapwindow.cpp.s
 
 src/model/ChangeAimCommand.o: src/model/ChangeAimCommand.cpp.o
 
@@ -790,7 +1087,7 @@ src/model/ChangeAimCommand.o: src/model/ChangeAimCommand.cpp.o
 
 # target to build an object file
 src/model/ChangeAimCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o
 .PHONY : src/model/ChangeAimCommand.cpp.o
 
 src/model/ChangeAimCommand.i: src/model/ChangeAimCommand.cpp.i
@@ -799,7 +1096,7 @@ src/model/ChangeAimCommand.i: src/model/ChangeAimCommand.cpp.i
 
 # target to preprocess a source file
 src/model/ChangeAimCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.i
 .PHONY : src/model/ChangeAimCommand.cpp.i
 
 src/model/ChangeAimCommand.s: src/model/ChangeAimCommand.cpp.s
@@ -808,8 +1105,62 @@ src/model/ChangeAimCommand.s: src/model/ChangeAimCommand.cpp.s
 
 # target to generate assembly for a file
 src/model/ChangeAimCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/ChangeAimCommand.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.s
 .PHONY : src/model/ChangeAimCommand.cpp.s
+
+src/model/ChangeCountDownCommand.o: src/model/ChangeCountDownCommand.cpp.o
+
+.PHONY : src/model/ChangeCountDownCommand.o
+
+# target to build an object file
+src/model/ChangeCountDownCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o
+.PHONY : src/model/ChangeCountDownCommand.cpp.o
+
+src/model/ChangeCountDownCommand.i: src/model/ChangeCountDownCommand.cpp.i
+
+.PHONY : src/model/ChangeCountDownCommand.i
+
+# target to preprocess a source file
+src/model/ChangeCountDownCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.i
+.PHONY : src/model/ChangeCountDownCommand.cpp.i
+
+src/model/ChangeCountDownCommand.s: src/model/ChangeCountDownCommand.cpp.s
+
+.PHONY : src/model/ChangeCountDownCommand.s
+
+# target to generate assembly for a file
+src/model/ChangeCountDownCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.s
+.PHONY : src/model/ChangeCountDownCommand.cpp.s
+
+src/model/ChargePowerCommand.o: src/model/ChargePowerCommand.cpp.o
+
+.PHONY : src/model/ChargePowerCommand.o
+
+# target to build an object file
+src/model/ChargePowerCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o
+.PHONY : src/model/ChargePowerCommand.cpp.o
+
+src/model/ChargePowerCommand.i: src/model/ChargePowerCommand.cpp.i
+
+.PHONY : src/model/ChargePowerCommand.i
+
+# target to preprocess a source file
+src/model/ChargePowerCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.i
+.PHONY : src/model/ChargePowerCommand.cpp.i
+
+src/model/ChargePowerCommand.s: src/model/ChargePowerCommand.cpp.s
+
+.PHONY : src/model/ChargePowerCommand.s
+
+# target to generate assembly for a file
+src/model/ChargePowerCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.s
+.PHONY : src/model/ChargePowerCommand.cpp.s
 
 src/model/GameControllerProxy.o: src/model/GameControllerProxy.cpp.o
 
@@ -817,7 +1168,7 @@ src/model/GameControllerProxy.o: src/model/GameControllerProxy.cpp.o
 
 # target to build an object file
 src/model/GameControllerProxy.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/GameControllerProxy.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o
 .PHONY : src/model/GameControllerProxy.cpp.o
 
 src/model/GameControllerProxy.i: src/model/GameControllerProxy.cpp.i
@@ -826,7 +1177,7 @@ src/model/GameControllerProxy.i: src/model/GameControllerProxy.cpp.i
 
 # target to preprocess a source file
 src/model/GameControllerProxy.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/GameControllerProxy.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.i
 .PHONY : src/model/GameControllerProxy.cpp.i
 
 src/model/GameControllerProxy.s: src/model/GameControllerProxy.cpp.s
@@ -835,7 +1186,7 @@ src/model/GameControllerProxy.s: src/model/GameControllerProxy.cpp.s
 
 # target to generate assembly for a file
 src/model/GameControllerProxy.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/GameControllerProxy.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.s
 .PHONY : src/model/GameControllerProxy.cpp.s
 
 src/model/Model.o: src/model/Model.cpp.o
@@ -844,7 +1195,7 @@ src/model/Model.o: src/model/Model.cpp.o
 
 # target to build an object file
 src/model/Model.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/Model.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/Model.cpp.o
 .PHONY : src/model/Model.cpp.o
 
 src/model/Model.i: src/model/Model.cpp.i
@@ -853,7 +1204,7 @@ src/model/Model.i: src/model/Model.cpp.i
 
 # target to preprocess a source file
 src/model/Model.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/Model.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/Model.cpp.i
 .PHONY : src/model/Model.cpp.i
 
 src/model/Model.s: src/model/Model.cpp.s
@@ -862,7 +1213,7 @@ src/model/Model.s: src/model/Model.cpp.s
 
 # target to generate assembly for a file
 src/model/Model.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/Model.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/Model.cpp.s
 .PHONY : src/model/Model.cpp.s
 
 src/model/WormJumpCommand.o: src/model/WormJumpCommand.cpp.o
@@ -871,7 +1222,7 @@ src/model/WormJumpCommand.o: src/model/WormJumpCommand.cpp.o
 
 # target to build an object file
 src/model/WormJumpCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o
 .PHONY : src/model/WormJumpCommand.cpp.o
 
 src/model/WormJumpCommand.i: src/model/WormJumpCommand.cpp.i
@@ -880,7 +1231,7 @@ src/model/WormJumpCommand.i: src/model/WormJumpCommand.cpp.i
 
 # target to preprocess a source file
 src/model/WormJumpCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.i
 .PHONY : src/model/WormJumpCommand.cpp.i
 
 src/model/WormJumpCommand.s: src/model/WormJumpCommand.cpp.s
@@ -889,7 +1240,7 @@ src/model/WormJumpCommand.s: src/model/WormJumpCommand.cpp.s
 
 # target to generate assembly for a file
 src/model/WormJumpCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormJumpCommand.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.s
 .PHONY : src/model/WormJumpCommand.cpp.s
 
 src/model/WormMoveCommand.o: src/model/WormMoveCommand.cpp.o
@@ -898,7 +1249,7 @@ src/model/WormMoveCommand.o: src/model/WormMoveCommand.cpp.o
 
 # target to build an object file
 src/model/WormMoveCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o
 .PHONY : src/model/WormMoveCommand.cpp.o
 
 src/model/WormMoveCommand.i: src/model/WormMoveCommand.cpp.i
@@ -907,7 +1258,7 @@ src/model/WormMoveCommand.i: src/model/WormMoveCommand.cpp.i
 
 # target to preprocess a source file
 src/model/WormMoveCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.i
 .PHONY : src/model/WormMoveCommand.cpp.i
 
 src/model/WormMoveCommand.s: src/model/WormMoveCommand.cpp.s
@@ -916,8 +1267,35 @@ src/model/WormMoveCommand.s: src/model/WormMoveCommand.cpp.s
 
 # target to generate assembly for a file
 src/model/WormMoveCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormMoveCommand.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.s
 .PHONY : src/model/WormMoveCommand.cpp.s
+
+src/model/WormShootCommand.o: src/model/WormShootCommand.cpp.o
+
+.PHONY : src/model/WormShootCommand.o
+
+# target to build an object file
+src/model/WormShootCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o
+.PHONY : src/model/WormShootCommand.cpp.o
+
+src/model/WormShootCommand.i: src/model/WormShootCommand.cpp.i
+
+.PHONY : src/model/WormShootCommand.i
+
+# target to preprocess a source file
+src/model/WormShootCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormShootCommand.cpp.i
+.PHONY : src/model/WormShootCommand.cpp.i
+
+src/model/WormShootCommand.s: src/model/WormShootCommand.cpp.s
+
+.PHONY : src/model/WormShootCommand.s
+
+# target to generate assembly for a file
+src/model/WormShootCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormShootCommand.cpp.s
+.PHONY : src/model/WormShootCommand.cpp.s
 
 src/model/WormWeaponCommand.o: src/model/WormWeaponCommand.cpp.o
 
@@ -925,7 +1303,7 @@ src/model/WormWeaponCommand.o: src/model/WormWeaponCommand.cpp.o
 
 # target to build an object file
 src/model/WormWeaponCommand.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o
 .PHONY : src/model/WormWeaponCommand.cpp.o
 
 src/model/WormWeaponCommand.i: src/model/WormWeaponCommand.cpp.i
@@ -934,7 +1312,7 @@ src/model/WormWeaponCommand.i: src/model/WormWeaponCommand.cpp.i
 
 # target to preprocess a source file
 src/model/WormWeaponCommand.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.i
 .PHONY : src/model/WormWeaponCommand.cpp.i
 
 src/model/WormWeaponCommand.s: src/model/WormWeaponCommand.cpp.s
@@ -943,8 +1321,62 @@ src/model/WormWeaponCommand.s: src/model/WormWeaponCommand.cpp.s
 
 # target to generate assembly for a file
 src/model/WormWeaponCommand.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/model/WormWeaponCommand.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.s
 .PHONY : src/model/WormWeaponCommand.cpp.s
+
+src/namewindow.o: src/namewindow.cpp.o
+
+.PHONY : src/namewindow.o
+
+# target to build an object file
+src/namewindow.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/namewindow.cpp.o
+.PHONY : src/namewindow.cpp.o
+
+src/namewindow.i: src/namewindow.cpp.i
+
+.PHONY : src/namewindow.i
+
+# target to preprocess a source file
+src/namewindow.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/namewindow.cpp.i
+.PHONY : src/namewindow.cpp.i
+
+src/namewindow.s: src/namewindow.cpp.s
+
+.PHONY : src/namewindow.s
+
+# target to generate assembly for a file
+src/namewindow.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/namewindow.cpp.s
+.PHONY : src/namewindow.cpp.s
+
+src/sound/SoundManager.o: src/sound/SoundManager.cpp.o
+
+.PHONY : src/sound/SoundManager.o
+
+# target to build an object file
+src/sound/SoundManager.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/sound/SoundManager.cpp.o
+.PHONY : src/sound/SoundManager.cpp.o
+
+src/sound/SoundManager.i: src/sound/SoundManager.cpp.i
+
+.PHONY : src/sound/SoundManager.i
+
+# target to preprocess a source file
+src/sound/SoundManager.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/sound/SoundManager.cpp.i
+.PHONY : src/sound/SoundManager.cpp.i
+
+src/sound/SoundManager.s: src/sound/SoundManager.cpp.s
+
+.PHONY : src/sound/SoundManager.s
+
+# target to generate assembly for a file
+src/sound/SoundManager.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/sound/SoundManager.cpp.s
+.PHONY : src/sound/SoundManager.cpp.s
 
 src/view/AimView.o: src/view/AimView.cpp.o
 
@@ -952,7 +1384,7 @@ src/view/AimView.o: src/view/AimView.cpp.o
 
 # target to build an object file
 src/view/AimView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/AimView.cpp.o
 .PHONY : src/view/AimView.cpp.o
 
 src/view/AimView.i: src/view/AimView.cpp.i
@@ -961,7 +1393,7 @@ src/view/AimView.i: src/view/AimView.cpp.i
 
 # target to preprocess a source file
 src/view/AimView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/AimView.cpp.i
 .PHONY : src/view/AimView.cpp.i
 
 src/view/AimView.s: src/view/AimView.cpp.s
@@ -970,8 +1402,35 @@ src/view/AimView.s: src/view/AimView.cpp.s
 
 # target to generate assembly for a file
 src/view/AimView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/AimView.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/AimView.cpp.s
 .PHONY : src/view/AimView.cpp.s
+
+src/view/Boot.o: src/view/Boot.cpp.o
+
+.PHONY : src/view/Boot.o
+
+# target to build an object file
+src/view/Boot.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Boot.cpp.o
+.PHONY : src/view/Boot.cpp.o
+
+src/view/Boot.i: src/view/Boot.cpp.i
+
+.PHONY : src/view/Boot.i
+
+# target to preprocess a source file
+src/view/Boot.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Boot.cpp.i
+.PHONY : src/view/Boot.cpp.i
+
+src/view/Boot.s: src/view/Boot.cpp.s
+
+.PHONY : src/view/Boot.s
+
+# target to generate assembly for a file
+src/view/Boot.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Boot.cpp.s
+.PHONY : src/view/Boot.cpp.s
 
 src/view/Camera.o: src/view/Camera.cpp.o
 
@@ -979,7 +1438,7 @@ src/view/Camera.o: src/view/Camera.cpp.o
 
 # target to build an object file
 src/view/Camera.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Camera.cpp.o
 .PHONY : src/view/Camera.cpp.o
 
 src/view/Camera.i: src/view/Camera.cpp.i
@@ -988,7 +1447,7 @@ src/view/Camera.i: src/view/Camera.cpp.i
 
 # target to preprocess a source file
 src/view/Camera.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Camera.cpp.i
 .PHONY : src/view/Camera.cpp.i
 
 src/view/Camera.s: src/view/Camera.cpp.s
@@ -997,7 +1456,7 @@ src/view/Camera.s: src/view/Camera.cpp.s
 
 # target to generate assembly for a file
 src/view/Camera.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Camera.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Camera.cpp.s
 .PHONY : src/view/Camera.cpp.s
 
 src/view/Escenario.o: src/view/Escenario.cpp.o
@@ -1006,7 +1465,7 @@ src/view/Escenario.o: src/view/Escenario.cpp.o
 
 # target to build an object file
 src/view/Escenario.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Escenario.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Escenario.cpp.o
 .PHONY : src/view/Escenario.cpp.o
 
 src/view/Escenario.i: src/view/Escenario.cpp.i
@@ -1015,7 +1474,7 @@ src/view/Escenario.i: src/view/Escenario.cpp.i
 
 # target to preprocess a source file
 src/view/Escenario.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Escenario.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Escenario.cpp.i
 .PHONY : src/view/Escenario.cpp.i
 
 src/view/Escenario.s: src/view/Escenario.cpp.s
@@ -1024,7 +1483,7 @@ src/view/Escenario.s: src/view/Escenario.cpp.s
 
 # target to generate assembly for a file
 src/view/Escenario.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Escenario.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Escenario.cpp.s
 .PHONY : src/view/Escenario.cpp.s
 
 src/view/MenuWeaponView.o: src/view/MenuWeaponView.cpp.o
@@ -1033,7 +1492,7 @@ src/view/MenuWeaponView.o: src/view/MenuWeaponView.cpp.o
 
 # target to build an object file
 src/view/MenuWeaponView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.o
 .PHONY : src/view/MenuWeaponView.cpp.o
 
 src/view/MenuWeaponView.i: src/view/MenuWeaponView.cpp.i
@@ -1042,7 +1501,7 @@ src/view/MenuWeaponView.i: src/view/MenuWeaponView.cpp.i
 
 # target to preprocess a source file
 src/view/MenuWeaponView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.i
 .PHONY : src/view/MenuWeaponView.cpp.i
 
 src/view/MenuWeaponView.s: src/view/MenuWeaponView.cpp.s
@@ -1051,8 +1510,35 @@ src/view/MenuWeaponView.s: src/view/MenuWeaponView.cpp.s
 
 # target to generate assembly for a file
 src/view/MenuWeaponView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/MenuWeaponView.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/MenuWeaponView.cpp.s
 .PHONY : src/view/MenuWeaponView.cpp.s
+
+src/view/PowerView.o: src/view/PowerView.cpp.o
+
+.PHONY : src/view/PowerView.o
+
+# target to build an object file
+src/view/PowerView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/PowerView.cpp.o
+.PHONY : src/view/PowerView.cpp.o
+
+src/view/PowerView.i: src/view/PowerView.cpp.i
+
+.PHONY : src/view/PowerView.i
+
+# target to preprocess a source file
+src/view/PowerView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/PowerView.cpp.i
+.PHONY : src/view/PowerView.cpp.i
+
+src/view/PowerView.s: src/view/PowerView.cpp.s
+
+.PHONY : src/view/PowerView.s
+
+# target to generate assembly for a file
+src/view/PowerView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/PowerView.cpp.s
+.PHONY : src/view/PowerView.cpp.s
 
 src/view/SdlException.o: src/view/SdlException.cpp.o
 
@@ -1060,7 +1546,7 @@ src/view/SdlException.o: src/view/SdlException.cpp.o
 
 # target to build an object file
 src/view/SdlException.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/SdlException.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlException.cpp.o
 .PHONY : src/view/SdlException.cpp.o
 
 src/view/SdlException.i: src/view/SdlException.cpp.i
@@ -1069,7 +1555,7 @@ src/view/SdlException.i: src/view/SdlException.cpp.i
 
 # target to preprocess a source file
 src/view/SdlException.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/SdlException.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlException.cpp.i
 .PHONY : src/view/SdlException.cpp.i
 
 src/view/SdlException.s: src/view/SdlException.cpp.s
@@ -1078,8 +1564,35 @@ src/view/SdlException.s: src/view/SdlException.cpp.s
 
 # target to generate assembly for a file
 src/view/SdlException.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/SdlException.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlException.cpp.s
 .PHONY : src/view/SdlException.cpp.s
+
+src/view/SdlScreen.o: src/view/SdlScreen.cpp.o
+
+.PHONY : src/view/SdlScreen.o
+
+# target to build an object file
+src/view/SdlScreen.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlScreen.cpp.o
+.PHONY : src/view/SdlScreen.cpp.o
+
+src/view/SdlScreen.i: src/view/SdlScreen.cpp.i
+
+.PHONY : src/view/SdlScreen.i
+
+# target to preprocess a source file
+src/view/SdlScreen.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlScreen.cpp.i
+.PHONY : src/view/SdlScreen.cpp.i
+
+src/view/SdlScreen.s: src/view/SdlScreen.cpp.s
+
+.PHONY : src/view/SdlScreen.s
+
+# target to generate assembly for a file
+src/view/SdlScreen.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SdlScreen.cpp.s
+.PHONY : src/view/SdlScreen.cpp.s
 
 src/view/Shape.o: src/view/Shape.cpp.o
 
@@ -1087,7 +1600,7 @@ src/view/Shape.o: src/view/Shape.cpp.o
 
 # target to build an object file
 src/view/Shape.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Shape.cpp.o
 .PHONY : src/view/Shape.cpp.o
 
 src/view/Shape.i: src/view/Shape.cpp.i
@@ -1096,7 +1609,7 @@ src/view/Shape.i: src/view/Shape.cpp.i
 
 # target to preprocess a source file
 src/view/Shape.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Shape.cpp.i
 .PHONY : src/view/Shape.cpp.i
 
 src/view/Shape.s: src/view/Shape.cpp.s
@@ -1105,8 +1618,143 @@ src/view/Shape.s: src/view/Shape.cpp.s
 
 # target to generate assembly for a file
 src/view/Shape.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Shape.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Shape.cpp.s
 .PHONY : src/view/Shape.cpp.s
+
+src/view/Sprite.o: src/view/Sprite.cpp.o
+
+.PHONY : src/view/Sprite.o
+
+# target to build an object file
+src/view/Sprite.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Sprite.cpp.o
+.PHONY : src/view/Sprite.cpp.o
+
+src/view/Sprite.i: src/view/Sprite.cpp.i
+
+.PHONY : src/view/Sprite.i
+
+# target to preprocess a source file
+src/view/Sprite.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Sprite.cpp.i
+.PHONY : src/view/Sprite.cpp.i
+
+src/view/Sprite.s: src/view/Sprite.cpp.s
+
+.PHONY : src/view/Sprite.s
+
+# target to generate assembly for a file
+src/view/Sprite.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Sprite.cpp.s
+.PHONY : src/view/Sprite.cpp.s
+
+src/view/SpriteConfigurator.o: src/view/SpriteConfigurator.cpp.o
+
+.PHONY : src/view/SpriteConfigurator.o
+
+# target to build an object file
+src/view/SpriteConfigurator.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.o
+.PHONY : src/view/SpriteConfigurator.cpp.o
+
+src/view/SpriteConfigurator.i: src/view/SpriteConfigurator.cpp.i
+
+.PHONY : src/view/SpriteConfigurator.i
+
+# target to preprocess a source file
+src/view/SpriteConfigurator.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.i
+.PHONY : src/view/SpriteConfigurator.cpp.i
+
+src/view/SpriteConfigurator.s: src/view/SpriteConfigurator.cpp.s
+
+.PHONY : src/view/SpriteConfigurator.s
+
+# target to generate assembly for a file
+src/view/SpriteConfigurator.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/SpriteConfigurator.cpp.s
+.PHONY : src/view/SpriteConfigurator.cpp.s
+
+src/view/TextManager.o: src/view/TextManager.cpp.o
+
+.PHONY : src/view/TextManager.o
+
+# target to build an object file
+src/view/TextManager.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextManager.cpp.o
+.PHONY : src/view/TextManager.cpp.o
+
+src/view/TextManager.i: src/view/TextManager.cpp.i
+
+.PHONY : src/view/TextManager.i
+
+# target to preprocess a source file
+src/view/TextManager.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextManager.cpp.i
+.PHONY : src/view/TextManager.cpp.i
+
+src/view/TextManager.s: src/view/TextManager.cpp.s
+
+.PHONY : src/view/TextManager.s
+
+# target to generate assembly for a file
+src/view/TextManager.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextManager.cpp.s
+.PHONY : src/view/TextManager.cpp.s
+
+src/view/TextView.o: src/view/TextView.cpp.o
+
+.PHONY : src/view/TextView.o
+
+# target to build an object file
+src/view/TextView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextView.cpp.o
+.PHONY : src/view/TextView.cpp.o
+
+src/view/TextView.i: src/view/TextView.cpp.i
+
+.PHONY : src/view/TextView.i
+
+# target to preprocess a source file
+src/view/TextView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextView.cpp.i
+.PHONY : src/view/TextView.cpp.i
+
+src/view/TextView.s: src/view/TextView.cpp.s
+
+.PHONY : src/view/TextView.s
+
+# target to generate assembly for a file
+src/view/TextView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextView.cpp.s
+.PHONY : src/view/TextView.cpp.s
+
+src/view/TextureManager.o: src/view/TextureManager.cpp.o
+
+.PHONY : src/view/TextureManager.o
+
+# target to build an object file
+src/view/TextureManager.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextureManager.cpp.o
+.PHONY : src/view/TextureManager.cpp.o
+
+src/view/TextureManager.i: src/view/TextureManager.cpp.i
+
+.PHONY : src/view/TextureManager.i
+
+# target to preprocess a source file
+src/view/TextureManager.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextureManager.cpp.i
+.PHONY : src/view/TextureManager.cpp.i
+
+src/view/TextureManager.s: src/view/TextureManager.cpp.s
+
+.PHONY : src/view/TextureManager.s
+
+# target to generate assembly for a file
+src/view/TextureManager.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/TextureManager.cpp.s
+.PHONY : src/view/TextureManager.cpp.s
 
 src/view/VigaView.o: src/view/VigaView.cpp.o
 
@@ -1114,7 +1762,7 @@ src/view/VigaView.o: src/view/VigaView.cpp.o
 
 # target to build an object file
 src/view/VigaView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/VigaView.cpp.o
 .PHONY : src/view/VigaView.cpp.o
 
 src/view/VigaView.i: src/view/VigaView.cpp.i
@@ -1123,7 +1771,7 @@ src/view/VigaView.i: src/view/VigaView.cpp.i
 
 # target to preprocess a source file
 src/view/VigaView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/VigaView.cpp.i
 .PHONY : src/view/VigaView.cpp.i
 
 src/view/VigaView.s: src/view/VigaView.cpp.s
@@ -1132,7 +1780,7 @@ src/view/VigaView.s: src/view/VigaView.cpp.s
 
 # target to generate assembly for a file
 src/view/VigaView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/VigaView.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/VigaView.cpp.s
 .PHONY : src/view/VigaView.cpp.s
 
 src/view/Weapon.o: src/view/Weapon.cpp.o
@@ -1141,7 +1789,7 @@ src/view/Weapon.o: src/view/Weapon.cpp.o
 
 # target to build an object file
 src/view/Weapon.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Weapon.cpp.o
 .PHONY : src/view/Weapon.cpp.o
 
 src/view/Weapon.i: src/view/Weapon.cpp.i
@@ -1150,7 +1798,7 @@ src/view/Weapon.i: src/view/Weapon.cpp.i
 
 # target to preprocess a source file
 src/view/Weapon.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Weapon.cpp.i
 .PHONY : src/view/Weapon.cpp.i
 
 src/view/Weapon.s: src/view/Weapon.cpp.s
@@ -1159,7 +1807,7 @@ src/view/Weapon.s: src/view/Weapon.cpp.s
 
 # target to generate assembly for a file
 src/view/Weapon.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/Weapon.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/Weapon.cpp.s
 .PHONY : src/view/Weapon.cpp.s
 
 src/view/WormView.o: src/view/WormView.cpp.o
@@ -1168,7 +1816,7 @@ src/view/WormView.o: src/view/WormView.cpp.o
 
 # target to build an object file
 src/view/WormView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/WormView.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/WormView.cpp.o
 .PHONY : src/view/WormView.cpp.o
 
 src/view/WormView.i: src/view/WormView.cpp.i
@@ -1177,7 +1825,7 @@ src/view/WormView.i: src/view/WormView.cpp.i
 
 # target to preprocess a source file
 src/view/WormView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/WormView.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/WormView.cpp.i
 .PHONY : src/view/WormView.cpp.i
 
 src/view/WormView.s: src/view/WormView.cpp.s
@@ -1186,8 +1834,278 @@ src/view/WormView.s: src/view/WormView.cpp.s
 
 # target to generate assembly for a file
 src/view/WormView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/WormView.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/WormView.cpp.s
 .PHONY : src/view/WormView.cpp.s
+
+src/view/bullets/BananaView.o: src/view/bullets/BananaView.cpp.o
+
+.PHONY : src/view/bullets/BananaView.o
+
+# target to build an object file
+src/view/bullets/BananaView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.o
+.PHONY : src/view/bullets/BananaView.cpp.o
+
+src/view/bullets/BananaView.i: src/view/bullets/BananaView.cpp.i
+
+.PHONY : src/view/bullets/BananaView.i
+
+# target to preprocess a source file
+src/view/bullets/BananaView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.i
+.PHONY : src/view/bullets/BananaView.cpp.i
+
+src/view/bullets/BananaView.s: src/view/bullets/BananaView.cpp.s
+
+.PHONY : src/view/bullets/BananaView.s
+
+# target to generate assembly for a file
+src/view/bullets/BananaView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BananaView.cpp.s
+.PHONY : src/view/bullets/BananaView.cpp.s
+
+src/view/bullets/BazookaView.o: src/view/bullets/BazookaView.cpp.o
+
+.PHONY : src/view/bullets/BazookaView.o
+
+# target to build an object file
+src/view/bullets/BazookaView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.o
+.PHONY : src/view/bullets/BazookaView.cpp.o
+
+src/view/bullets/BazookaView.i: src/view/bullets/BazookaView.cpp.i
+
+.PHONY : src/view/bullets/BazookaView.i
+
+# target to preprocess a source file
+src/view/bullets/BazookaView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.i
+.PHONY : src/view/bullets/BazookaView.cpp.i
+
+src/view/bullets/BazookaView.s: src/view/bullets/BazookaView.cpp.s
+
+.PHONY : src/view/bullets/BazookaView.s
+
+# target to generate assembly for a file
+src/view/bullets/BazookaView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BazookaView.cpp.s
+.PHONY : src/view/bullets/BazookaView.cpp.s
+
+src/view/bullets/BulletFactory.o: src/view/bullets/BulletFactory.cpp.o
+
+.PHONY : src/view/bullets/BulletFactory.o
+
+# target to build an object file
+src/view/bullets/BulletFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.o
+.PHONY : src/view/bullets/BulletFactory.cpp.o
+
+src/view/bullets/BulletFactory.i: src/view/bullets/BulletFactory.cpp.i
+
+.PHONY : src/view/bullets/BulletFactory.i
+
+# target to preprocess a source file
+src/view/bullets/BulletFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.i
+.PHONY : src/view/bullets/BulletFactory.cpp.i
+
+src/view/bullets/BulletFactory.s: src/view/bullets/BulletFactory.cpp.s
+
+.PHONY : src/view/bullets/BulletFactory.s
+
+# target to generate assembly for a file
+src/view/bullets/BulletFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletFactory.cpp.s
+.PHONY : src/view/bullets/BulletFactory.cpp.s
+
+src/view/bullets/BulletView.o: src/view/bullets/BulletView.cpp.o
+
+.PHONY : src/view/bullets/BulletView.o
+
+# target to build an object file
+src/view/bullets/BulletView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.o
+.PHONY : src/view/bullets/BulletView.cpp.o
+
+src/view/bullets/BulletView.i: src/view/bullets/BulletView.cpp.i
+
+.PHONY : src/view/bullets/BulletView.i
+
+# target to preprocess a source file
+src/view/bullets/BulletView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.i
+.PHONY : src/view/bullets/BulletView.cpp.i
+
+src/view/bullets/BulletView.s: src/view/bullets/BulletView.cpp.s
+
+.PHONY : src/view/bullets/BulletView.s
+
+# target to generate assembly for a file
+src/view/bullets/BulletView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/BulletView.cpp.s
+.PHONY : src/view/bullets/BulletView.cpp.s
+
+src/view/bullets/DynamiteView.o: src/view/bullets/DynamiteView.cpp.o
+
+.PHONY : src/view/bullets/DynamiteView.o
+
+# target to build an object file
+src/view/bullets/DynamiteView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.o
+.PHONY : src/view/bullets/DynamiteView.cpp.o
+
+src/view/bullets/DynamiteView.i: src/view/bullets/DynamiteView.cpp.i
+
+.PHONY : src/view/bullets/DynamiteView.i
+
+# target to preprocess a source file
+src/view/bullets/DynamiteView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.i
+.PHONY : src/view/bullets/DynamiteView.cpp.i
+
+src/view/bullets/DynamiteView.s: src/view/bullets/DynamiteView.cpp.s
+
+.PHONY : src/view/bullets/DynamiteView.s
+
+# target to generate assembly for a file
+src/view/bullets/DynamiteView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/DynamiteView.cpp.s
+.PHONY : src/view/bullets/DynamiteView.cpp.s
+
+src/view/bullets/FragmentView.o: src/view/bullets/FragmentView.cpp.o
+
+.PHONY : src/view/bullets/FragmentView.o
+
+# target to build an object file
+src/view/bullets/FragmentView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.o
+.PHONY : src/view/bullets/FragmentView.cpp.o
+
+src/view/bullets/FragmentView.i: src/view/bullets/FragmentView.cpp.i
+
+.PHONY : src/view/bullets/FragmentView.i
+
+# target to preprocess a source file
+src/view/bullets/FragmentView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.i
+.PHONY : src/view/bullets/FragmentView.cpp.i
+
+src/view/bullets/FragmentView.s: src/view/bullets/FragmentView.cpp.s
+
+.PHONY : src/view/bullets/FragmentView.s
+
+# target to generate assembly for a file
+src/view/bullets/FragmentView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/FragmentView.cpp.s
+.PHONY : src/view/bullets/FragmentView.cpp.s
+
+src/view/bullets/GreenGrenadeView.o: src/view/bullets/GreenGrenadeView.cpp.o
+
+.PHONY : src/view/bullets/GreenGrenadeView.o
+
+# target to build an object file
+src/view/bullets/GreenGrenadeView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.o
+.PHONY : src/view/bullets/GreenGrenadeView.cpp.o
+
+src/view/bullets/GreenGrenadeView.i: src/view/bullets/GreenGrenadeView.cpp.i
+
+.PHONY : src/view/bullets/GreenGrenadeView.i
+
+# target to preprocess a source file
+src/view/bullets/GreenGrenadeView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.i
+.PHONY : src/view/bullets/GreenGrenadeView.cpp.i
+
+src/view/bullets/GreenGrenadeView.s: src/view/bullets/GreenGrenadeView.cpp.s
+
+.PHONY : src/view/bullets/GreenGrenadeView.s
+
+# target to generate assembly for a file
+src/view/bullets/GreenGrenadeView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/GreenGrenadeView.cpp.s
+.PHONY : src/view/bullets/GreenGrenadeView.cpp.s
+
+src/view/bullets/HolyView.o: src/view/bullets/HolyView.cpp.o
+
+.PHONY : src/view/bullets/HolyView.o
+
+# target to build an object file
+src/view/bullets/HolyView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.o
+.PHONY : src/view/bullets/HolyView.cpp.o
+
+src/view/bullets/HolyView.i: src/view/bullets/HolyView.cpp.i
+
+.PHONY : src/view/bullets/HolyView.i
+
+# target to preprocess a source file
+src/view/bullets/HolyView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.i
+.PHONY : src/view/bullets/HolyView.cpp.i
+
+src/view/bullets/HolyView.s: src/view/bullets/HolyView.cpp.s
+
+.PHONY : src/view/bullets/HolyView.s
+
+# target to generate assembly for a file
+src/view/bullets/HolyView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/HolyView.cpp.s
+.PHONY : src/view/bullets/HolyView.cpp.s
+
+src/view/bullets/MortarView.o: src/view/bullets/MortarView.cpp.o
+
+.PHONY : src/view/bullets/MortarView.o
+
+# target to build an object file
+src/view/bullets/MortarView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.o
+.PHONY : src/view/bullets/MortarView.cpp.o
+
+src/view/bullets/MortarView.i: src/view/bullets/MortarView.cpp.i
+
+.PHONY : src/view/bullets/MortarView.i
+
+# target to preprocess a source file
+src/view/bullets/MortarView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.i
+.PHONY : src/view/bullets/MortarView.cpp.i
+
+src/view/bullets/MortarView.s: src/view/bullets/MortarView.cpp.s
+
+.PHONY : src/view/bullets/MortarView.s
+
+# target to generate assembly for a file
+src/view/bullets/MortarView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/MortarView.cpp.s
+.PHONY : src/view/bullets/MortarView.cpp.s
+
+src/view/bullets/RedGrenadeView.o: src/view/bullets/RedGrenadeView.cpp.o
+
+.PHONY : src/view/bullets/RedGrenadeView.o
+
+# target to build an object file
+src/view/bullets/RedGrenadeView.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o
+.PHONY : src/view/bullets/RedGrenadeView.cpp.o
+
+src/view/bullets/RedGrenadeView.i: src/view/bullets/RedGrenadeView.cpp.i
+
+.PHONY : src/view/bullets/RedGrenadeView.i
+
+# target to preprocess a source file
+src/view/bullets/RedGrenadeView.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.i
+.PHONY : src/view/bullets/RedGrenadeView.cpp.i
+
+src/view/bullets/RedGrenadeView.s: src/view/bullets/RedGrenadeView.cpp.s
+
+.PHONY : src/view/bullets/RedGrenadeView.s
+
+# target to generate assembly for a file
+src/view/bullets/RedGrenadeView.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.s
+.PHONY : src/view/bullets/RedGrenadeView.cpp.s
 
 src/view/mainView.o: src/view/mainView.cpp.o
 
@@ -1195,7 +2113,7 @@ src/view/mainView.o: src/view/mainView.cpp.o
 
 # target to build an object file
 src/view/mainView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.o
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/mainView.cpp.o
 .PHONY : src/view/mainView.cpp.o
 
 src/view/mainView.i: src/view/mainView.cpp.i
@@ -1204,7 +2122,7 @@ src/view/mainView.i: src/view/mainView.cpp.i
 
 # target to preprocess a source file
 src/view/mainView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.i
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/mainView.cpp.i
 .PHONY : src/view/mainView.cpp.i
 
 src/view/mainView.s: src/view/mainView.cpp.s
@@ -1213,224 +2131,8 @@ src/view/mainView.s: src/view/mainView.cpp.s
 
 # target to generate assembly for a file
 src/view/mainView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/mainView.cpp.s
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/view/mainView.cpp.s
 .PHONY : src/view/mainView.cpp.s
-
-src/view/newView/Boot.o: src/view/newView/Boot.cpp.o
-
-.PHONY : src/view/newView/Boot.o
-
-# target to build an object file
-src/view/newView/Boot.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.o
-.PHONY : src/view/newView/Boot.cpp.o
-
-src/view/newView/Boot.i: src/view/newView/Boot.cpp.i
-
-.PHONY : src/view/newView/Boot.i
-
-# target to preprocess a source file
-src/view/newView/Boot.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.i
-.PHONY : src/view/newView/Boot.cpp.i
-
-src/view/newView/Boot.s: src/view/newView/Boot.cpp.s
-
-.PHONY : src/view/newView/Boot.s
-
-# target to generate assembly for a file
-src/view/newView/Boot.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Boot.cpp.s
-.PHONY : src/view/newView/Boot.cpp.s
-
-src/view/newView/SdlException.o: src/view/newView/SdlException.cpp.o
-
-.PHONY : src/view/newView/SdlException.o
-
-# target to build an object file
-src/view/newView/SdlException.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.o
-.PHONY : src/view/newView/SdlException.cpp.o
-
-src/view/newView/SdlException.i: src/view/newView/SdlException.cpp.i
-
-.PHONY : src/view/newView/SdlException.i
-
-# target to preprocess a source file
-src/view/newView/SdlException.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.i
-.PHONY : src/view/newView/SdlException.cpp.i
-
-src/view/newView/SdlException.s: src/view/newView/SdlException.cpp.s
-
-.PHONY : src/view/newView/SdlException.s
-
-# target to generate assembly for a file
-src/view/newView/SdlException.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlException.cpp.s
-.PHONY : src/view/newView/SdlException.cpp.s
-
-src/view/newView/SdlScreen.o: src/view/newView/SdlScreen.cpp.o
-
-.PHONY : src/view/newView/SdlScreen.o
-
-# target to build an object file
-src/view/newView/SdlScreen.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.o
-.PHONY : src/view/newView/SdlScreen.cpp.o
-
-src/view/newView/SdlScreen.i: src/view/newView/SdlScreen.cpp.i
-
-.PHONY : src/view/newView/SdlScreen.i
-
-# target to preprocess a source file
-src/view/newView/SdlScreen.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.i
-.PHONY : src/view/newView/SdlScreen.cpp.i
-
-src/view/newView/SdlScreen.s: src/view/newView/SdlScreen.cpp.s
-
-.PHONY : src/view/newView/SdlScreen.s
-
-# target to generate assembly for a file
-src/view/newView/SdlScreen.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SdlScreen.cpp.s
-.PHONY : src/view/newView/SdlScreen.cpp.s
-
-src/view/newView/Sprite.o: src/view/newView/Sprite.cpp.o
-
-.PHONY : src/view/newView/Sprite.o
-
-# target to build an object file
-src/view/newView/Sprite.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.o
-.PHONY : src/view/newView/Sprite.cpp.o
-
-src/view/newView/Sprite.i: src/view/newView/Sprite.cpp.i
-
-.PHONY : src/view/newView/Sprite.i
-
-# target to preprocess a source file
-src/view/newView/Sprite.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.i
-.PHONY : src/view/newView/Sprite.cpp.i
-
-src/view/newView/Sprite.s: src/view/newView/Sprite.cpp.s
-
-.PHONY : src/view/newView/Sprite.s
-
-# target to generate assembly for a file
-src/view/newView/Sprite.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/Sprite.cpp.s
-.PHONY : src/view/newView/Sprite.cpp.s
-
-src/view/newView/SpriteConfigurator.o: src/view/newView/SpriteConfigurator.cpp.o
-
-.PHONY : src/view/newView/SpriteConfigurator.o
-
-# target to build an object file
-src/view/newView/SpriteConfigurator.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.o
-.PHONY : src/view/newView/SpriteConfigurator.cpp.o
-
-src/view/newView/SpriteConfigurator.i: src/view/newView/SpriteConfigurator.cpp.i
-
-.PHONY : src/view/newView/SpriteConfigurator.i
-
-# target to preprocess a source file
-src/view/newView/SpriteConfigurator.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.i
-.PHONY : src/view/newView/SpriteConfigurator.cpp.i
-
-src/view/newView/SpriteConfigurator.s: src/view/newView/SpriteConfigurator.cpp.s
-
-.PHONY : src/view/newView/SpriteConfigurator.s
-
-# target to generate assembly for a file
-src/view/newView/SpriteConfigurator.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/SpriteConfigurator.cpp.s
-.PHONY : src/view/newView/SpriteConfigurator.cpp.s
-
-src/view/newView/TextManager.o: src/view/newView/TextManager.cpp.o
-
-.PHONY : src/view/newView/TextManager.o
-
-# target to build an object file
-src/view/newView/TextManager.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.o
-.PHONY : src/view/newView/TextManager.cpp.o
-
-src/view/newView/TextManager.i: src/view/newView/TextManager.cpp.i
-
-.PHONY : src/view/newView/TextManager.i
-
-# target to preprocess a source file
-src/view/newView/TextManager.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.i
-.PHONY : src/view/newView/TextManager.cpp.i
-
-src/view/newView/TextManager.s: src/view/newView/TextManager.cpp.s
-
-.PHONY : src/view/newView/TextManager.s
-
-# target to generate assembly for a file
-src/view/newView/TextManager.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextManager.cpp.s
-.PHONY : src/view/newView/TextManager.cpp.s
-
-src/view/newView/TextView.o: src/view/newView/TextView.cpp.o
-
-.PHONY : src/view/newView/TextView.o
-
-# target to build an object file
-src/view/newView/TextView.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.o
-.PHONY : src/view/newView/TextView.cpp.o
-
-src/view/newView/TextView.i: src/view/newView/TextView.cpp.i
-
-.PHONY : src/view/newView/TextView.i
-
-# target to preprocess a source file
-src/view/newView/TextView.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.i
-.PHONY : src/view/newView/TextView.cpp.i
-
-src/view/newView/TextView.s: src/view/newView/TextView.cpp.s
-
-.PHONY : src/view/newView/TextView.s
-
-# target to generate assembly for a file
-src/view/newView/TextView.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextView.cpp.s
-.PHONY : src/view/newView/TextView.cpp.s
-
-src/view/newView/TextureManager.o: src/view/newView/TextureManager.cpp.o
-
-.PHONY : src/view/newView/TextureManager.o
-
-# target to build an object file
-src/view/newView/TextureManager.cpp.o:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.o
-.PHONY : src/view/newView/TextureManager.cpp.o
-
-src/view/newView/TextureManager.i: src/view/newView/TextureManager.cpp.i
-
-.PHONY : src/view/newView/TextureManager.i
-
-# target to preprocess a source file
-src/view/newView/TextureManager.cpp.i:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.i
-.PHONY : src/view/newView/TextureManager.cpp.i
-
-src/view/newView/TextureManager.s: src/view/newView/TextureManager.cpp.s
-
-.PHONY : src/view/newView/TextureManager.s
-
-# target to generate assembly for a file
-src/view/newView/TextureManager.cpp.s:
-	$(MAKE) -f CMakeFiles/alllib.dir/build.make CMakeFiles/alllib.dir/src/view/newView/TextureManager.cpp.s
-.PHONY : src/view/newView/TextureManager.cpp.s
 
 # Help Target
 help:
@@ -1441,16 +2143,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... client"
-	@echo "... alllib"
-	@echo "... src/GameBuilder.o"
-	@echo "... src/GameBuilder.i"
-	@echo "... src/GameBuilder.s"
+	@echo "... client_automoc"
+	@echo "... client_automoc.o"
+	@echo "... client_automoc.i"
+	@echo "... client_automoc.s"
+	@echo "... src/GameClient.o"
+	@echo "... src/GameClient.i"
+	@echo "... src/GameClient.s"
+	@echo "... src/PreGameManager.o"
+	@echo "... src/PreGameManager.i"
+	@echo "... src/PreGameManager.s"
 	@echo "... src/ProxyClient.o"
 	@echo "... src/ProxyClient.i"
 	@echo "... src/ProxyClient.s"
-	@echo "... src/clientMain.o"
-	@echo "... src/clientMain.i"
-	@echo "... src/clientMain.s"
 	@echo "... src/common/Thread.o"
 	@echo "... src/common/Thread.i"
 	@echo "... src/common/Thread.s"
@@ -1460,6 +2165,12 @@ help:
 	@echo "... src/common/socket_error.o"
 	@echo "... src/common/socket_error.i"
 	@echo "... src/common/socket_error.s"
+	@echo "... src/connectwindow.o"
+	@echo "... src/connectwindow.i"
+	@echo "... src/connectwindow.s"
+	@echo "... src/controller/CameraMove.o"
+	@echo "... src/controller/CameraMove.i"
+	@echo "... src/controller/CameraMove.s"
 	@echo "... src/controller/ClientCommandSender.o"
 	@echo "... src/controller/ClientCommandSender.i"
 	@echo "... src/controller/ClientCommandSender.s"
@@ -1469,6 +2180,12 @@ help:
 	@echo "... src/controller/Controller.o"
 	@echo "... src/controller/Controller.i"
 	@echo "... src/controller/Controller.s"
+	@echo "... src/controller/CreateMissileEvent.o"
+	@echo "... src/controller/CreateMissileEvent.i"
+	@echo "... src/controller/CreateMissileEvent.s"
+	@echo "... src/controller/CreateStageEvent.o"
+	@echo "... src/controller/CreateStageEvent.i"
+	@echo "... src/controller/CreateStageEvent.s"
 	@echo "... src/controller/CreateVigaEvent.o"
 	@echo "... src/controller/CreateVigaEvent.i"
 	@echo "... src/controller/CreateVigaEvent.s"
@@ -1487,6 +2204,15 @@ help:
 	@echo "... src/controller/GameWinnerEvent.o"
 	@echo "... src/controller/GameWinnerEvent.i"
 	@echo "... src/controller/GameWinnerEvent.s"
+	@echo "... src/controller/MissileExploteEvent.o"
+	@echo "... src/controller/MissileExploteEvent.i"
+	@echo "... src/controller/MissileExploteEvent.s"
+	@echo "... src/controller/MissileMoveEvent.o"
+	@echo "... src/controller/MissileMoveEvent.i"
+	@echo "... src/controller/MissileMoveEvent.s"
+	@echo "... src/controller/MouseState.o"
+	@echo "... src/controller/MouseState.i"
+	@echo "... src/controller/MouseState.s"
 	@echo "... src/controller/PlayerConnectEvent.o"
 	@echo "... src/controller/PlayerConnectEvent.i"
 	@echo "... src/controller/PlayerConnectEvent.s"
@@ -1514,9 +2240,24 @@ help:
 	@echo "... src/controller/WormWeaponEvent.o"
 	@echo "... src/controller/WormWeaponEvent.i"
 	@echo "... src/controller/WormWeaponEvent.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
+	@echo "... src/mapwindow.o"
+	@echo "... src/mapwindow.i"
+	@echo "... src/mapwindow.s"
 	@echo "... src/model/ChangeAimCommand.o"
 	@echo "... src/model/ChangeAimCommand.i"
 	@echo "... src/model/ChangeAimCommand.s"
+	@echo "... src/model/ChangeCountDownCommand.o"
+	@echo "... src/model/ChangeCountDownCommand.i"
+	@echo "... src/model/ChangeCountDownCommand.s"
+	@echo "... src/model/ChargePowerCommand.o"
+	@echo "... src/model/ChargePowerCommand.i"
+	@echo "... src/model/ChargePowerCommand.s"
 	@echo "... src/model/GameControllerProxy.o"
 	@echo "... src/model/GameControllerProxy.i"
 	@echo "... src/model/GameControllerProxy.s"
@@ -1529,12 +2270,24 @@ help:
 	@echo "... src/model/WormMoveCommand.o"
 	@echo "... src/model/WormMoveCommand.i"
 	@echo "... src/model/WormMoveCommand.s"
+	@echo "... src/model/WormShootCommand.o"
+	@echo "... src/model/WormShootCommand.i"
+	@echo "... src/model/WormShootCommand.s"
 	@echo "... src/model/WormWeaponCommand.o"
 	@echo "... src/model/WormWeaponCommand.i"
 	@echo "... src/model/WormWeaponCommand.s"
+	@echo "... src/namewindow.o"
+	@echo "... src/namewindow.i"
+	@echo "... src/namewindow.s"
+	@echo "... src/sound/SoundManager.o"
+	@echo "... src/sound/SoundManager.i"
+	@echo "... src/sound/SoundManager.s"
 	@echo "... src/view/AimView.o"
 	@echo "... src/view/AimView.i"
 	@echo "... src/view/AimView.s"
+	@echo "... src/view/Boot.o"
+	@echo "... src/view/Boot.i"
+	@echo "... src/view/Boot.s"
 	@echo "... src/view/Camera.o"
 	@echo "... src/view/Camera.i"
 	@echo "... src/view/Camera.s"
@@ -1544,12 +2297,33 @@ help:
 	@echo "... src/view/MenuWeaponView.o"
 	@echo "... src/view/MenuWeaponView.i"
 	@echo "... src/view/MenuWeaponView.s"
+	@echo "... src/view/PowerView.o"
+	@echo "... src/view/PowerView.i"
+	@echo "... src/view/PowerView.s"
 	@echo "... src/view/SdlException.o"
 	@echo "... src/view/SdlException.i"
 	@echo "... src/view/SdlException.s"
+	@echo "... src/view/SdlScreen.o"
+	@echo "... src/view/SdlScreen.i"
+	@echo "... src/view/SdlScreen.s"
 	@echo "... src/view/Shape.o"
 	@echo "... src/view/Shape.i"
 	@echo "... src/view/Shape.s"
+	@echo "... src/view/Sprite.o"
+	@echo "... src/view/Sprite.i"
+	@echo "... src/view/Sprite.s"
+	@echo "... src/view/SpriteConfigurator.o"
+	@echo "... src/view/SpriteConfigurator.i"
+	@echo "... src/view/SpriteConfigurator.s"
+	@echo "... src/view/TextManager.o"
+	@echo "... src/view/TextManager.i"
+	@echo "... src/view/TextManager.s"
+	@echo "... src/view/TextView.o"
+	@echo "... src/view/TextView.i"
+	@echo "... src/view/TextView.s"
+	@echo "... src/view/TextureManager.o"
+	@echo "... src/view/TextureManager.i"
+	@echo "... src/view/TextureManager.s"
 	@echo "... src/view/VigaView.o"
 	@echo "... src/view/VigaView.i"
 	@echo "... src/view/VigaView.s"
@@ -1559,33 +2333,39 @@ help:
 	@echo "... src/view/WormView.o"
 	@echo "... src/view/WormView.i"
 	@echo "... src/view/WormView.s"
+	@echo "... src/view/bullets/BananaView.o"
+	@echo "... src/view/bullets/BananaView.i"
+	@echo "... src/view/bullets/BananaView.s"
+	@echo "... src/view/bullets/BazookaView.o"
+	@echo "... src/view/bullets/BazookaView.i"
+	@echo "... src/view/bullets/BazookaView.s"
+	@echo "... src/view/bullets/BulletFactory.o"
+	@echo "... src/view/bullets/BulletFactory.i"
+	@echo "... src/view/bullets/BulletFactory.s"
+	@echo "... src/view/bullets/BulletView.o"
+	@echo "... src/view/bullets/BulletView.i"
+	@echo "... src/view/bullets/BulletView.s"
+	@echo "... src/view/bullets/DynamiteView.o"
+	@echo "... src/view/bullets/DynamiteView.i"
+	@echo "... src/view/bullets/DynamiteView.s"
+	@echo "... src/view/bullets/FragmentView.o"
+	@echo "... src/view/bullets/FragmentView.i"
+	@echo "... src/view/bullets/FragmentView.s"
+	@echo "... src/view/bullets/GreenGrenadeView.o"
+	@echo "... src/view/bullets/GreenGrenadeView.i"
+	@echo "... src/view/bullets/GreenGrenadeView.s"
+	@echo "... src/view/bullets/HolyView.o"
+	@echo "... src/view/bullets/HolyView.i"
+	@echo "... src/view/bullets/HolyView.s"
+	@echo "... src/view/bullets/MortarView.o"
+	@echo "... src/view/bullets/MortarView.i"
+	@echo "... src/view/bullets/MortarView.s"
+	@echo "... src/view/bullets/RedGrenadeView.o"
+	@echo "... src/view/bullets/RedGrenadeView.i"
+	@echo "... src/view/bullets/RedGrenadeView.s"
 	@echo "... src/view/mainView.o"
 	@echo "... src/view/mainView.i"
 	@echo "... src/view/mainView.s"
-	@echo "... src/view/newView/Boot.o"
-	@echo "... src/view/newView/Boot.i"
-	@echo "... src/view/newView/Boot.s"
-	@echo "... src/view/newView/SdlException.o"
-	@echo "... src/view/newView/SdlException.i"
-	@echo "... src/view/newView/SdlException.s"
-	@echo "... src/view/newView/SdlScreen.o"
-	@echo "... src/view/newView/SdlScreen.i"
-	@echo "... src/view/newView/SdlScreen.s"
-	@echo "... src/view/newView/Sprite.o"
-	@echo "... src/view/newView/Sprite.i"
-	@echo "... src/view/newView/Sprite.s"
-	@echo "... src/view/newView/SpriteConfigurator.o"
-	@echo "... src/view/newView/SpriteConfigurator.i"
-	@echo "... src/view/newView/SpriteConfigurator.s"
-	@echo "... src/view/newView/TextManager.o"
-	@echo "... src/view/newView/TextManager.i"
-	@echo "... src/view/newView/TextManager.s"
-	@echo "... src/view/newView/TextView.o"
-	@echo "... src/view/newView/TextView.i"
-	@echo "... src/view/newView/TextView.s"
-	@echo "... src/view/newView/TextureManager.o"
-	@echo "... src/view/newView/TextureManager.i"
-	@echo "... src/view/newView/TextureManager.s"
 .PHONY : help
 
 

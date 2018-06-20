@@ -64,6 +64,7 @@ public:
 	void showLosser();
 	Camera& getCamera();
 	void WormShoot(int idWorm);
+	void createStage(int widht, int height);
 };
 
 #endif
