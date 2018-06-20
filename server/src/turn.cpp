@@ -144,7 +144,7 @@ void Turn::fire_morter(b2Vec2 position, int direction){
 	Morter* morter = new Morter(this->world, this->actual_max_projectile, position.x, 
 						position.y, direction, this->sight_angle, this->power, this->info, 
 						this->to_remove_projectiles, this->to_create, this->proxy);
-	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, morter));
+	this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, morter));//std::move aca para no new
 }
 
 void Turn::fire_green_granade(b2Vec2 position, int direction){

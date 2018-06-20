@@ -18,8 +18,8 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, unsigned int map_id,
 	Viga viga3(this->world, 3.0f, 18.0f, 0.0f, this->proxy);
 	Viga viga4(this->world, 9.0f, 18.0f, 0.0f, this->proxy);
 
-	this->water = new Water(this->world, -10, -10, 20, -10);
-	this->proxy.sendMapDimentions(30, 10);
+	this->water = new Water(this->world, -100, -10, 100, -10);
+	//this->proxy.sendMapDimentions(30, 10);
 	
 	std::vector<Gusano*> gusanos;
 	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 6.5f, 10.48f, 0.0f);
