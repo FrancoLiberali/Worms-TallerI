@@ -78,9 +78,9 @@ class Gusano{
 		// El gusano salta hacia atras, su estado cambiara a saltando
 		void backJump();
 		
-		// El gusano toco el agua y por lo tanto se debe hundir
-		// y ser destruido del juego
-		void sink();
+		// El gusano toco el final del mapa por lo que
+		// debe ser destruido del juego
+		void destroy();
 		
 		// agrega vida al gusano
 		void addLife(unsigned int life);

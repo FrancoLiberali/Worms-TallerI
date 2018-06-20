@@ -153,6 +153,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			// solo meten asi que si no estaba vacia tampoco lo estara ahora
 			char* msj = this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
+			std::cout << "player_id: " << player_id << "\n";
 			Gusano* gusano = this->players[active_player][active_gusano];
 			if (msj[0] == 10){
 				this->disconnect(player_id, active_player, i);

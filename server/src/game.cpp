@@ -23,19 +23,30 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	std::vector<ElementInfo> elements;
 	parser.cargarConfig(map_name, elements, this->info);
 	
-	//this->proxy.sendMapDimentions(info.map_widht + 2 * MAP_OFFSET, info.map_height + WATER_DEPPNESS);
-	this->water = new Water(this->world, 0, -info.map_height, info.map_widht + 2 * MAP_OFFSET, -info.map_height);
+	//se agregan al mapa espacios vacios a izquierda, derecha y arriba, y abajo un pequenio especio para el agua
+	float down_limit = info.map_height + WATER_DEPPNESS + MAP_OFFSET;
+	float right_limit = info.map_widht + 2 * MAP_OFFSET;
+	this->proxy.sendMapDimentions(right_limit, down_limit);
+	//se agregan delimitadores de mapa
+	this->delimiters.push_back(new Delimiter(this->world, 0, 0, 0, -down_limit)); //left
+	this->delimiters.push_back(new Delimiter(this->world, 0, 0, right_limit, 0));//up
+	this->delimiters.push_back(new Delimiter(this->world, right_limit, 
+									0, right_limit, -down_limit));//right
+	this->delimiters.push_back(new Delimiter(this->world, 0, -down_limit, 
+							right_limit, -down_limit));//down			
+	//this->water = new Water(this->world, 0, -down_limit + WATER_DEPPNESS, right_limit, -down_limit + WATER_DEPPNESS);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){
 		std::cout << "hay elem\n";
 		if (info_it->tipo.compare("viga") == 0){
 			std::cout << "crear viga\n";
-			Viga viga(this->world, info_it->x, -info_it->y, info_it->angulo, this->proxy);
+			Viga viga(this->world, info_it->x + MAP_OFFSET, -info_it->y - MAP_OFFSET, info_it->angulo, this->proxy);
 		}
 		else if (info_it->tipo.compare("gusano") == 0){
 			std::cout << "crear gusano\n";
-			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos, info_it->x, -info_it->y, info_it->angulo);
+			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos,
+				info_it->x + MAP_OFFSET, -info_it->y - MAP_OFFSET, info_it->angulo);
 			gusanos.push_back(gusano);
 		}
 	}
@@ -95,7 +106,11 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 }
 
 Game::~Game(){
-	delete this->water;
+	//delete this->water;
+	std::vector<Delimiter*>::iterator delimiters_it = this->delimiters.begin();
+	for (; delimiters_it != this->delimiters.end(); ++delimiters_it){
+		delete *delimiters_it;
+	}
 	//destruccion de gusanos que quedaron vivos
 	std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();
 	for (; players_it != this->players.end(); ++players_it) {

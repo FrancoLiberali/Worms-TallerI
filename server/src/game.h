@@ -9,6 +9,7 @@
 #include "contact_listener.h"
 #include <mutex>
 #include "multiple_proxy.h"
+#include "delimiter.h"
 
 #ifndef __GAME_H__
 #define __GAME_H__
@@ -20,7 +21,8 @@ class Game {
 		b2World world;
 		std::vector<int> players_ids;
 		ContactListener contact_listener;
-		Water* water;
+		std::vector<Delimiter*> delimiters;
+		//Water* water;
 		std::vector<std::pair<int, int>> to_remove_gusanos;
 		std::map<int, std::map<int, Gusano*>> players;
 		std::vector<int> next;

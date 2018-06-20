@@ -32,7 +32,7 @@ class Projectile {
 		
 		float32 GetAngle(){ return this->body->GetAngle();}
 		
-		void sink();
+		void destroy();
 };
 
 #endif

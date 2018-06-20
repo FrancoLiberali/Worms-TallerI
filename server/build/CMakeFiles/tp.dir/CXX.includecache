@@ -1040,6 +1040,10 @@ condition_variable
 queue.h
 /home/franco/Documentos/taller1/tpfinal/server/src/queue.h
 
+/home/franco/Documentos/taller1/tpfinal/server/src/contact_listener.cpp
+contact_listener.h
+/home/franco/Documentos/taller1/tpfinal/server/src/contact_listener.h
+
 /home/franco/Documentos/taller1/tpfinal/server/src/contact_listener.h
 Box2D/Box2D.h
 /home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
@@ -1051,6 +1055,16 @@ user_data.h
 /home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 iostream
 -
+
+/home/franco/Documentos/taller1/tpfinal/server/src/delimiter.cpp
+delimiter.h
+/home/franco/Documentos/taller1/tpfinal/server/src/delimiter.h
+
+/home/franco/Documentos/taller1/tpfinal/server/src/delimiter.h
+Box2D/Box2D.h
+/home/franco/Documentos/taller1/tpfinal/server/src/Box2D/Box2D.h
+user_data.h
+/home/franco/Documentos/taller1/tpfinal/server/src/user_data.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/exploted_state.cpp
 exploted_state.h
@@ -1141,6 +1155,8 @@ mutex
 -
 multiple_proxy.h
 /home/franco/Documentos/taller1/tpfinal/server/src/multiple_proxy.h
+delimiter.h
+/home/franco/Documentos/taller1/tpfinal/server/src/delimiter.h
 
 /home/franco/Documentos/taller1/tpfinal/server/src/game_constants.h
 vector

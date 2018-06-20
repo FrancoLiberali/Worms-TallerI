@@ -198,9 +198,9 @@ void Gusano::backJump(){
     this->body->SetLinearVelocity( vel );
 }
 
-void Gusano::sink(){
+void Gusano::destroy(){
 	this->sendPosition();
-	this->proxy.sendStateChange(this->id, SINKING_STATE);
+	this->proxy.sendStateChange(this->id, DEAD_STATE);
 	this->to_remove_gusanos.push_back(this->number);
 }
 

@@ -51,8 +51,10 @@ void MokProxy::receive_event(){
 				std::cout << "2 " << x << " " << y << " " << angle << "\n";
 				break;
 			}
-		case 3: {//se recibe posicion del agua en el mapa
-				//a definir
+		case 3: {//se recibe dimenciones del mapa
+				int ancho = this->receive_int();
+				int alto = this->receive_int();
+				std::cout << "3 " << ancho << " " << alto << "\n";
 				break;
 			}
 		case 4: {//se recibe la creacion de un gusano en el mapa

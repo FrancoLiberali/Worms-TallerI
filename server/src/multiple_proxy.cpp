@@ -14,6 +14,7 @@ void MultipleProxy::add(int id, Proxy* proxy){
 }
 
 Proxy* MultipleProxy::erase(int id){
+	std::cout << "tam: " << this->proxys.size() << "\n";
 	Proxy* erased = this->proxys[id];
 	this->proxys.erase(id);
 	return erased;
@@ -50,7 +51,7 @@ void MultipleProxy::sendVigaCreation(int x, int y, int angle){
 void MultipleProxy::sendMapDimentions(int widht, int height){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendMapDimentions(widht, height);
+		it->second->sendMapDimentions(widht * 1000, height * 1000);
 	}
 }
 
@@ -120,6 +121,8 @@ void MultipleProxy::sendLifeChange(int gusano_id, int new_life){
 void MultipleProxy::sendPlayerDisconnection(int player_id){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
+		std::cout << "hay proxy\n";
+		std::cout << "id: " << it->first << "\n";
 		it->second->sendPlayerDisconnection(player_id);
 	}
 }
