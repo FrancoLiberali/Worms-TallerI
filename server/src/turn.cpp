@@ -224,24 +224,27 @@ void Turn::play(int active_player, unsigned int active_gusano){
 					throw GameFinished();
 				}
 			}
-			else if (player_id == active_player && continue_turn && gusano->isInactive()){
-				switch (msj[0]){
-					case 2: this->gusano_move(msj, gusano);
-							break;
-					case 3: this->gusano_jump(msj, gusano);
-							break;
-					case 4: this->gusano_back_jump(msj, gusano);
-							break;
-					case 5: this->take_weapon(active_player, msj);
-							break;
-					case 6: this->changeSightAngle(msj);
-							break;
-					case 7: this->changeRegresiveTime(msj);
-							break;
-					case 8: this->loadPower(active_player, gusano, i);
-							break;
-					case 9: this->fire(active_player, gusano, i);
-							break;
+			else if (player_id == active_player && continue_turn){
+				if (msj[0] == 2){
+					this->gusano_move(msj, gusano);
+				}
+				else if (gusano->isInactive()){
+					switch (msj[0]){
+						case 3: this->gusano_jump(msj, gusano);
+								break;
+						case 4: this->gusano_back_jump(msj, gusano);
+								break;
+						case 5: this->take_weapon(active_player, msj);
+								break;
+						case 6: this->changeSightAngle(msj);
+								break;
+						case 7: this->changeRegresiveTime(msj);
+								break;
+						case 8: this->loadPower(active_player, gusano, i);
+								break;
+						case 9: this->fire(active_player, gusano, i);
+								break;
+					}
 				}
 			}
 			delete[] msj;

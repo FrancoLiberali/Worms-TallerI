@@ -22,3 +22,9 @@ bool MovingState::isInactive(){
 bool MovingState::isFalling(){
 	return false;
 }
+
+void MovingState::move(GusanoState*& state, int new_dir, int& old_dir, 
+					int id, b2Vec2 position, float angle, MultipleProxy& proxy, b2Body* body){
+	//re-init the movement
+	this->rest_steps = 30;
+}

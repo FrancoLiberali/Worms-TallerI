@@ -111,20 +111,7 @@ void Gusano::sendPosition(){
 }
 
 void Gusano::move(int dir){
-	if (this->direction != dir){
-		// si no estaba mirando hacia esa direccion solo se gira
-		this->direction = -this->direction;
-		this->sendPosition();
-	} else {
-		delete this->state;
-		this->state = new MovingState();
-		this->proxy.sendStateChange(this->id, MOVING_STATE);
-		b2Vec2 vel;
-		float angle = this->GetAngle();
-		vel.x = 0.2f * this->direction * cos(angle);
-		vel.y = 0.2f * this->direction * sin(angle);
-		this->body->SetLinearVelocity(vel);
-	}
+	this->state->move(this->state, dir, this->direction, this->id, this->GetPosition(), this->GetAngle(), this->proxy, this->body);
 }
 
 void Gusano::cancelMovement(){
