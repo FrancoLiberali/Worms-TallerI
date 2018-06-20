@@ -95,9 +95,9 @@ void MainWindow::on_actionFondo_de_Pantalla_triggered()
                 tr("Abrir Imagen de fondo"),
                 "img (*.jpg,*.png)"
                 );
-    if (nombre_archivo.isEmpty()) {
-        ui->graphicsView->setBackgroundBrush(QBrush(QPixmap(nombre_archivo)));
-    }
+    if (nombre_archivo.isEmpty()) return;
+    
+    ui->graphicsView->setBackgroundBrush(QBrush(QPixmap(nombre_archivo)));
     nombre_archivo = QFileInfo(nombre_archivo).fileName();
     registro.set_fondo(nombre_archivo);
 }
