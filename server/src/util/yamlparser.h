@@ -16,8 +16,15 @@ struct ElementInfo{
 	std::string tam;
 	float x;
 	float y;
-	float angulo = 0;
-	int equipo;
+	float angulo;
+	
+	void reset(){
+		this->tipo = "";
+		this->tam = "";
+		this->x = 0;
+		this->y = 0;
+		this->angulo = 0;
+	}
 };
 
 class YAMLParser {

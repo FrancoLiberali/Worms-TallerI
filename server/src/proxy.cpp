@@ -343,6 +343,13 @@ void Proxy::sendFinishedAmunnition(int weapon_id){
 	this->send_int(weapon_id);
 }
 
+void Proxy::sendMapBackground(std::string& background){
+	char event = 23;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(background.length());
+	this->socket.send(background.data(), background.length());
+}
+
 void Proxy::send_int(int to_send){
 	int net_to_send = htonl(to_send);
 	char* number = (char*)&net_to_send;

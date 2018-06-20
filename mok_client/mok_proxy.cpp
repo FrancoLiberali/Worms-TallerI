@@ -203,6 +203,15 @@ void MokProxy::receive_event(){
 			std::cout << "22 weapon_id: " << weapon_id << "\n";
 			break;
 		}
+		case 23: {//nombre del fondo de pantalla
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			std::cout << "23 fondo: " << name << "\n";
+			break;
+		}
 	}
 }
 

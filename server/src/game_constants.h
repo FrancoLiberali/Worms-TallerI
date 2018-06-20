@@ -1,4 +1,5 @@
 #include <vector>
+#include <string>
 
 #ifndef __GAME_CONSTANTS_H__
 #define __GAME_CONSTANTS_H__
@@ -9,6 +10,7 @@ class GameConstants{
 		
 		float map_widht = 50;
 		float map_height = 50;
+		std::string map_background;
 		
 		//deberian ser unsigned varias cosas
 		int bazooka_vel = 3;

@@ -143,6 +143,10 @@ SE HA ACABADO LA MUNICION DE UN ARMA
 	char en 22
 	int id de arma
 	solo se le manda al jugador que se quedo sin la municion para que muestre el logito del arma en el menu en rojo
+
+INFORMACION DE FONDO DE PANTALLA DEL MAPA
+	char en 23
+	string del nombre del fondo de pantalla ej: "fondo1.jpg"
 	
 	
 

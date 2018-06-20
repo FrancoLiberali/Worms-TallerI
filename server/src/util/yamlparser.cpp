@@ -38,6 +38,9 @@ void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, Ga
 				if (key2.compare("alto") == 0){
 					info.map_height = it2->second.as<float>();
 				}
+				if (key2.compare("fondo") == 0){
+					info.map_background = it2->second.as<std::string>();
+				}
 			}
 		}
     }
@@ -68,6 +71,7 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>
     ElementInfo elemento;
     for (unsigned i = 0; i < nodeVect.size(); ++i){
         const YAML::Node& node = nodeVect[i];
+        elemento.reset();
 
         for(YAML::const_iterator it = node.begin(); it!=node.end(); ++it){
             std::string key(it->first.as<std::string>());
@@ -79,8 +83,6 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>
                 elemento.x = it->second.as<float>();
             } else if (key.compare("y") == 0) {
                 elemento.y = it->second.as<float>();
-            } else if (key.compare("equipo") == 0) {
-                elemento.equipo = it->second.as<int>();
             } else if (key.compare("tamanio") == 0) {
                 elemento.tam = it->second.as<std::string>();
             } else if (key.compare("angulo") == 0) {

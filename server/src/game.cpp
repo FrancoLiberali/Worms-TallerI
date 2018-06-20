@@ -27,6 +27,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	float down_limit = info.map_height + WATER_DEPPNESS + MAP_OFFSET;
 	float right_limit = info.map_widht + 2 * MAP_OFFSET;
 	this->proxy.sendMapDimentions(right_limit, down_limit);
+	this->proxy.sendMapBackground(this->info.map_background);
 	//se agregan delimitadores de mapa
 	this->delimiters.push_back(new Delimiter(this->world, 0, 0, 0, -down_limit)); //left
 	this->delimiters.push_back(new Delimiter(this->world, 0, 0, right_limit, 0));//up

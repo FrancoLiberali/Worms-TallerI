@@ -87,6 +87,8 @@ class Proxy{
 		
 		void sendFinishedAmunnition(int weapon_id);
 		
+		void sendMapBackground(std::string& background);
+		
 		void send_int(int to_send);
 		
 };

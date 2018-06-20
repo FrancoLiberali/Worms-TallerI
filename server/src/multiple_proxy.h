@@ -75,6 +75,8 @@ class MultipleProxy{
 		
 		void sendFinishedAmunnition(int player_id, int weapon_id);
 		
+		void sendMapBackground(std::string& background);
+		
 };
 
 #endif
