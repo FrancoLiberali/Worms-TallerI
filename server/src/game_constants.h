@@ -58,9 +58,13 @@ class GameConstants{
 		int bat_ammunition = -1; //inf
 		float bat_max_radius = 3.5;
 		
+		int air_attack_vel = 3;
 		int air_attack_damage = 40;
 		int air_attack_radius = 2;
 		int air_attack_ammunition = 2;
+		int air_attack_cant_missiles = 6;
+		int air_attack_missiles_distance = 1.5;
+		
 
 		int teleport_ammunition = -1; //inf
 

@@ -53,6 +53,7 @@ class Turn{
 		void fire_saint_granade(b2Vec2 position, int direction);
 		void fire_dynamite(b2Vec2 position, int direction);
 		void fire_bat(Gusano* gusano, b2Vec2 position, int direction);
+		void fire_air_attack();
 		void teleport(Gusano* gusano);
 		
 	public:

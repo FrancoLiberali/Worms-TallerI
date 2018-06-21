@@ -15,6 +15,7 @@
 #include "saint_granade.h"
 #include "dynamite.h"
 #include "bat.h"
+#include "air_attack_missile.h"
 #include <cmath>
 #include <stdexcept>
 #include "game_finished.h"
@@ -133,6 +134,8 @@ void Turn::fire(int player_id, Gusano* gusano, int& turn_actual_len){
 					break;
 			case 8: this->fire_bat(gusano, position, direction);
 					break;
+			case 9: this->fire_air_attack();
+					break;
 			case 10: this->teleport(gusano);
 					break;
 		}
@@ -207,6 +210,16 @@ void Turn::fire_bat(Gusano* gusano, b2Vec2 position, int direction){
 	std::cout << "bat\n";
 	std::cout << this->sight_angle <<"\n";
 	Bat(gusano, this->world, position.x, position.y, direction, this->sight_angle, this->info);
+}
+
+void Turn::fire_air_attack(){
+	for (int i = 0; i < this->info.air_attack_cant_missiles; i++){
+		AirAttackMissile* missile = new AirAttackMissile(this->world, this->actual_max_projectile, 
+						this->remote_position.x + this->info.air_attack_missiles_distance * (i - (int) this->info.air_attack_cant_missiles / 2),
+						this->info, this->to_remove_projectiles, this->proxy);
+		this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, missile));
+		this->actual_max_projectile++;
+	}
 }
 
 void Turn::teleport(Gusano* gusano){

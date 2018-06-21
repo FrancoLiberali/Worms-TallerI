@@ -34,16 +34,15 @@ void MokProxy::receive_event(){
 				std::cout << "0 " << this->id << "\n";
 				break;
 			}
-		case 1: {//se recibe nombre de jugador
-				int player_id = this->receive_int();
-				int name_len = this->receive_int();
-				char* name_c = new char[name_len];
-				this->socket.receive_(name_c, name_len);
-				std::string name(name_c, name_len);
-				std::cout << "1 " << player_id << " " << name << "\n";
-				delete[] name_c;
-				break;
-			}
+		case 1: {//nombre del fondo de pantalla
+			int name_len = this->receive_int();
+			char* name_c = new char[name_len];
+			this->socket.receive_(name_c, name_len);
+			std::string name(name_c, name_len);
+			delete[] name_c;
+			std::cout << "1 fondo: " << name << "\n";
+			break;
+		}
 		case 2:{ //se recibe la posicion de una viga en el mapa
 				int x = this->receive_int();
 				int y = this->receive_int();
@@ -203,15 +202,6 @@ void MokProxy::receive_event(){
 			std::cout << "22 weapon_id: " << weapon_id << "\n";
 			break;
 		}
-		case 23: {//nombre del fondo de pantalla
-			int name_len = this->receive_int();
-			char* name_c = new char[name_len];
-			this->socket.receive_(name_c, name_len);
-			std::string name(name_c, name_len);
-			delete[] name_c;
-			std::cout << "23 fondo: " << name << "\n";
-			break;
-		}
 	}
 }
 
@@ -306,6 +296,14 @@ void MokProxy::send(char event){
 				this->socket.send_(&ev, 1);
 				this->send_int(this->id);
 				this->send_int(10);
+				break;
+			}
+		case 'y': {//sacar airattack
+				std::cout << "airattack\n";
+				char ev = 5;
+				this->socket.send_(&ev, 1);
+				this->send_int(this->id);
+				this->send_int(9);
 				break;
 			}
 		case 'm': {//sacar mortero
