@@ -1,5 +1,6 @@
 #include "Controller.h"
 #include "MouseState.h"
+#include "../view/WormState.h"
 
 #include <iostream>
 
@@ -32,6 +33,7 @@ void Controller::handle(SDL_Event& e) {
                     model.chargePower();
                     WormView* worm = view.getWormView(model.getIdWormSelected());
                     worm->upatePower();
+                    view.update();
                     break;
                 }
                 case SDLK_1: model.countDown(1); break;
@@ -51,12 +53,21 @@ void Controller::handle(SDL_Event& e) {
             break;
         }
         case SDL_MOUSEBUTTONDOWN:
+            //veo si clickeo el menu
             SDL_Point mousePointer = {e.motion.x, e.motion.y};
             if (view.hasClickedMenu(mousePointer)){
                 Weapon* weapon = view.retrieveWeaponClicked(mousePointer);
                 if (weapon)
                     model.WormWeapon((int)weapon->getId());
             }
+            else{
+            //veo si esta con arma telediriga
+            /*WormView* worm = view.getWormView(model.getIdWormSelected());
+            if (worm->isCurrWeapon(TELEPORT) || worm->isCurrWeapon(AIRATTACK))
+                model.*/
+                model.teledirigido(e.motion.x, e.motion.y);
+            }
+            view.update();
             break;
 		}
 }
@@ -67,4 +78,5 @@ void Controller::checkMouseState(SDL_Event& e, EventHandler& eventHandler){
         MouseState mouseState;
         mouseState.handle(e, eventHandler);
     }
+    view.update();
 }

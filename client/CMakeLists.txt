@@ -59,7 +59,7 @@ add_executable(client
 	src/controller/MissileExploteEvent.cpp
 	src/controller/PlayerIdEvent.cpp
 	src/controller/PlayerLoseEvent.cpp
-	src/controller/PlayerConnectEvent.cpp
+	src/controller/BackgroundEvent.cpp
 	src/controller/WormChangeAimEvent.cpp
 	src/controller/StartTurnEvent.cpp
 	src/controller/PlayerOffEvent.cpp
@@ -87,6 +87,7 @@ add_executable(client
 	src/model/WormShootCommand.cpp
 	src/model/ChargePowerCommand.cpp
 	src/model/ChangeCountDownCommand.cpp
+	src/model/TeledirigidoCommand.cpp
 
 	src/view/mainView.cpp
 	src/view/SdlException.cpp

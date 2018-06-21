@@ -1,7 +1,7 @@
 #include "Sprite.h"
 
 
-Sprite::Sprite():imageId(""), width(0), height(0), rows(0), currentRow(0), repeat(true), countFrame(20), initFrame(0){
+Sprite::Sprite():imageId(""), width(0), height(0), rows(0), currentRow(0), repeat(true), countFrame(10), initFrame(0){
 }
  
 Sprite::Sprite(std::string imageId, int width, int height, int rows, bool repeat,int initFrame)
@@ -43,7 +43,7 @@ void Sprite::update(int modifier) {
 		} else if (currentRow >= rows){
 			currentRow = rows - 1;
 		}
-		countFrame = 20;
+		countFrame = 10;
 	}
 }
 

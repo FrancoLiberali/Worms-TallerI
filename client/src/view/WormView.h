@@ -63,6 +63,7 @@ public:
 	void unselect();
 	void upatePower();
 	void useWeapon();
+	bool isCurrWeapon(WeaponId id);
 };
 
 #endif

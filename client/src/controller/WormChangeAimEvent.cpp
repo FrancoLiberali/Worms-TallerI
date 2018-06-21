@@ -9,4 +9,5 @@ WormChangeAimEvent::WormChangeAimEvent(int wormId, int delta)
 void WormChangeAimEvent::process(){
 	WormView* wormView = view->getWormView(wormId);
 	wormView->changeAimAngle(delta);
+	view->update();
 }

@@ -284,3 +284,8 @@ void WormView::useWeapon(){
 		SoundManager::Instance().playSound(TELELEPORT_S);
 	}
 }
+
+
+bool WormView::isCurrWeapon(WeaponId id){
+	return this->weaponId == id;
+}

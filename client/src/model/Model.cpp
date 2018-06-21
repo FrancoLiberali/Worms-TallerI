@@ -38,6 +38,12 @@ void Model::countDown(int time){
     gcp->countDown(idJugador,time);
 }
 
+
+void Model::teledirigido(int x, int y){
+    gcp->teledirigido(idJugador, x, y);
+}
+
+
 int Model::getIdWormSelected(){
     return this->idWormSelected;
 }

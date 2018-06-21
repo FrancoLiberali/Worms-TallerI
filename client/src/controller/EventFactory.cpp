@@ -6,7 +6,7 @@
 #include "WormWeaponEvent.h"
 #include "WormChangeLifeEvent.h"
 #include "PlayerIdEvent.h"
-#include "PlayerConnectEvent.h"
+#include "BackgroundEvent.h"
 #include "CreateVigaEvent.h"
 #include "CreateWormEvent.h"
 #include "CreateMissileEvent.h"
@@ -22,16 +22,15 @@
 
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
-  //std::cout << "hay evento " << (EventType)type << std::endl;
+  std::cout << "hay evento " << (EventType)type << std::endl;
   switch (type) {
     case ID_PLAYER:{
       int id = proxy.receiveInt();
       return new PlayerIdEvent(id, model, proxy);
     }
-    case PLAYER_CONECT:{
-      int id = proxy.receiveInt();
+    case BACKGROUND_STAGE:{
       std::string name = proxy.receiveName();
-      return new PlayerConnectEvent(id, name, model);
+      return new BackgroundEvent(name);
     }
     case CREATE_VIGA:{
       int posx = proxy.receivePosX();
@@ -42,7 +41,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case CREATE_STAGE:{
       int widht = proxy.receiveWidht();
       int height = proxy.receiveHeight();
-      printf("DIMENSIONES %i, %i", widht, height);
+      printf("DIMENSIONES %i, %i\n", widht, height);
       return new CreateStageEvent(widht, height) ;
     }
     case CREATE_WORM:{

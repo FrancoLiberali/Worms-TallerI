@@ -43,6 +43,7 @@ public:
 	int getIdPlayer();
 	void setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver);
 	void closeComunnication();
+	void teledirigido(int x, int y);
 };
 
 #endif

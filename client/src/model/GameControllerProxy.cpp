@@ -6,6 +6,7 @@
 #include "ChargePowerCommand.h"
 #include "WormShootCommand.h"
 #include "ChangeCountDownCommand.h"
+#include "TeledirigidoCommand.h"
 
 #include <iostream>
 
@@ -38,6 +39,10 @@ void GameControllerProxy::shoot(const int idJugador){
 
 void GameControllerProxy::countDown(const int idJugador, const int time){
   queue.push(new ChangeCountDownCommand(idJugador, time));
+}
+
+void GameControllerProxy::teledirigido(const int idJugador, const int x, const int y){
+  queue.push(new TeledirigidoCommand(idJugador, x, y));
 }
 
 
