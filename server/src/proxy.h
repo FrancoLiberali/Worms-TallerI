@@ -43,8 +43,6 @@ class Proxy{
 		
 		void sendPlayerId(int id);
 		
-		void sendPlayerName(int player_id, std::string& name);
-		
 		void sendVigaCreation(int x, int y, int angle);
 		
 		void sendMapDimentions(int widht, int height);

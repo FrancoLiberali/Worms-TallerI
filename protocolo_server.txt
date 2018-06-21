@@ -11,10 +11,9 @@ ASIGNACION DE ID DE JUGADOR(se manda solo al jugador que corresponde):
 	char en 0
 	int con numero de jugador
 
-CONECCION DE UN JUGADOR(se manda a todos los jugadores. En caso de que un jugador se desconecte y se conecte otro la idea seria volver a mandar este mensaje con el mismo numero de jugador y otro nombre, para sobreescribir el anterior):
+INFORMACION DE FONDO DE PANTALLA DEL MAPA
 	char en 1
-	int numero de jugador
-	string nombre del jugador
+	string del nombre del fondo de pantalla ej: "fondo1.jpg"
 
 CREACION DE UNA VIGA EN EL MAPA:
 	char en 2
@@ -143,10 +142,6 @@ SE HA ACABADO LA MUNICION DE UN ARMA
 	char en 22
 	int id de arma
 	solo se le manda al jugador que se quedo sin la municion para que muestre el logito del arma en el menu en rojo
-
-INFORMACION DE FONDO DE PANTALLA DEL MAPA
-	char en 23
-	string del nombre del fondo de pantalla ej: "fondo1.jpg"
 	
 	
 

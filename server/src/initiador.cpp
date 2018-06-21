@@ -94,7 +94,7 @@ void Initiador::run(){
 					int name_len = ntohl(*(reinterpret_cast<int*>(msj + 13 + map_len)));
 					std::string room_name(msj + 17 + map_len, name_len);
 					std::cout << room_name << '\n';
-					
+					std::cout << "player_id: " << player_id << "\n";
 					Proxy* player_proxy = this->players[player_id]->receiver->getProxy();
 					std::string& name = this->players[player_id]->getName();
 					this->players[player_id]->setRoom(this->room_id);

@@ -168,12 +168,11 @@ void Proxy::sendPlayerId(int id){
 	this->send_int(id);
 }
 
-void Proxy::sendPlayerName(int player_id, std::string& name){
+void Proxy::sendMapBackground(std::string& background){
 	char event = 1;
 	this->socket.send(&event, ONEBYTE);
-	this->send_int(player_id);
-	this->send_int(name.length());
-	this->socket.send(name.data(), name.length());
+	this->send_int(background.length());
+	this->socket.send(background.data(), background.length());
 }
 
 void Proxy::sendVigaCreation(int x, int y, int angle){
@@ -341,13 +340,6 @@ void Proxy::sendFinishedAmunnition(int weapon_id){
 	char event = 22;
 	this->socket.send(&event, ONEBYTE);
 	this->send_int(weapon_id);
-}
-
-void Proxy::sendMapBackground(std::string& background){
-	char event = 23;
-	this->socket.send(&event, ONEBYTE);
-	this->send_int(background.length());
-	this->socket.send(background.data(), background.length());
 }
 
 void Proxy::send_int(int to_send){

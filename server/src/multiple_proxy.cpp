@@ -34,10 +34,10 @@ void MultipleProxy::changeToPrevQueue(){
 	}
 }
 
-void MultipleProxy::sendPlayerName(int player_id, std::string& name){
+void MultipleProxy::sendMapBackground(std::string& background){
 	std::map<int, Proxy*>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second->sendPlayerName(player_id, name);
+		it->second->sendMapBackground(background);
 	}
 }
 
@@ -179,12 +179,5 @@ void MultipleProxy::sendPlayerConnection(int id, const std::string& name){
 
 void MultipleProxy::sendFinishedAmunnition(int player_id, int weapon_id){
 	this->proxys[player_id]->sendFinishedAmunnition(weapon_id);
-}
-
-void MultipleProxy::sendMapBackground(std::string& background){
-	std::map<int, Proxy*>::iterator it = this->proxys.begin();
-	for (; it != this->proxys.end(); ++it){
-		it->second->sendMapBackground(background);
-	}
 }
 		

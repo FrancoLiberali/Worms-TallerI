@@ -33,7 +33,7 @@ class MultipleProxy{
 		
 		void changeToPrevQueue();
 		
-		void sendPlayerName(int player_id, std::string& name);
+		void sendMapBackground(std::string& background);
 		
 		void sendVigaCreation(float x, float y, float angle);
 		
@@ -74,8 +74,6 @@ class MultipleProxy{
 		void sendPlayerConnection(int id, const std::string& name);
 		
 		void sendFinishedAmunnition(int player_id, int weapon_id);
-		
-		void sendMapBackground(std::string& background);
 		
 };
 
