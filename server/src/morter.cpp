@@ -1,7 +1,7 @@
 #include "morter.h"
 
 Morter::Morter(b2World& world_entry, int number, float x, float y, int direction, float angle, float power, 
-	GameConstants& info, std::map<int, Projectile*>& to_remove, std::vector<FragmentInfo*>& to_create_e, MultipleProxy& proxy) : 
+	GameConstants& info, std::vector<int>& to_remove, std::vector<FragmentInfo*>& to_create_e, MultipleProxy& proxy) : 
 			FragmentProjectile(world_entry, number, x + (sqrt(0.3125) + 0.2) * cos(angle) * direction, 
 			y + (sqrt(0.3125) + 0.2) * sin(angle), direction, angle, 
 			info.morter_vel * power, info.morter_damage, info.morter_radius, 

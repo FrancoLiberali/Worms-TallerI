@@ -5,7 +5,7 @@
 #include <cmath>
 #include <vector>
 
-Bat::Bat(Gusano* executer, b2World& world, float x, float y, int direction, float angle, GameConstants& info){
+Bat::Bat(Gusano& executer, b2World& world, float x, float y, int direction, float angle, GameConstants& info){
 	std::cout << direction << "\n";
 	b2Vec2 center(x, y);
 	b2Vec2 ray_dir(cos(angle) * direction, sin(angle));

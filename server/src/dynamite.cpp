@@ -1,7 +1,7 @@
 #include "dynamite.h"
 
 Dynamite::Dynamite(b2World& world_entry, int number, float x, float y, int direction,
-		GameConstants& info, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
+		GameConstants& info, std::vector<int>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
 			RegresiveProjectile(world_entry, number, x + (sqrt(0.3125) + 0.1) * direction, 
 			y, direction, 0, 0, info.dynamite_damage, 
 			info.dynamite_radius, to_remove_e, proxy, time){

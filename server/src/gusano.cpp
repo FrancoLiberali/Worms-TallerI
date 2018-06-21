@@ -19,14 +19,13 @@
 
 Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
-		: world(world_entry), proxy(proxy_e), to_remove_gusanos(to_remove_gusanos_e){
+		: world(world_entry), proxy(proxy_e), to_remove_gusanos(to_remove_gusanos_e), user_data(1, this){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.position.Set(x, y);
 	bodyDef.fixedRotation = true;
 	this->body = this->world.CreateBody(&bodyDef);
-	this->user_data = new UserData(1, this);
-	this->body->SetUserData((void*)this->user_data);
+	this->body->SetUserData((void*)&this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
 	b2Vec2 vertices[3];
@@ -68,14 +67,50 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	this->direction = 1;
 }
 
+Gusano::Gusano(Gusano&& other) : world(other.world), proxy(other.proxy), to_remove_gusanos(other.to_remove_gusanos),
+		body(other.body), state(other.state), user_data(other.user_data), 
+		foot_sensor_data(other.foot_sensor_data),
+		head_sensor_data(other.head_sensor_data), direction(other.direction), number(other.number), id(other.id), life(other.life){
+	other.state = nullptr;
+	other.body = nullptr;
+	other.foot_sensor_data = nullptr;
+	other.head_sensor_data = nullptr;
+	this->user_data.pointer = this;
+	this->body->SetUserData((void*)&this->user_data);
+}
+
+Gusano& Gusano::operator=(Gusano&& other){
+	this->world = other.world;
+	this->proxy = other.proxy;
+	this->to_remove_gusanos = other.to_remove_gusanos;
+	this->body = other.body;
+	other.body = nullptr;
+	this->state = other.state;
+	other.state = nullptr;
+	this->user_data = other.user_data;
+	this->user_data.pointer = this;
+	this->foot_sensor_data = other.foot_sensor_data;
+	other.foot_sensor_data = nullptr;
+	this->head_sensor_data = other.head_sensor_data;
+	other.head_sensor_data = nullptr;
+	this->body->SetUserData((void*)&this->user_data);
+	
+	return *this;
+}
+
 Gusano::~Gusano(){
-	delete this->state;
-	delete this->user_data;
-	delete this->foot_sensor_data;
-	delete this->head_sensor_data;
-	this->user_data = nullptr;
-	this->foot_sensor_data = nullptr;
-	this->world.DestroyBody(this->body);
+	if (this->state){
+		delete this->state;
+	}
+	if (this->foot_sensor_data){
+		delete this->foot_sensor_data;
+	}
+	if (this->head_sensor_data){
+		delete this->head_sensor_data;
+	}
+	if (this->body){
+		this->world.DestroyBody(this->body);
+	}
 }
 
 void Gusano::setId(int player, int number_e, int id_e){

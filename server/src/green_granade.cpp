@@ -1,7 +1,7 @@
 #include "green_granade.h"
 
 GreenGranade::GreenGranade(b2World& world_entry, int number, float x, float y, int direction, float angle, float power,
-	GameConstants& info, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
+	GameConstants& info, std::vector<int>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
 			RegresiveProjectile(world_entry, number, x + (sqrt(0.3125) + 0.15) * cos(angle) * direction, 
 			y + (sqrt(0.3125) + 0.15) * sin(angle), direction, angle, info.green_granade_vel * power, info.green_granade_damage, 
 			info.green_granade_radius, to_remove_e, proxy, time){

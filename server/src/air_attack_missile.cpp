@@ -2,7 +2,7 @@
 #include <cmath>
 
 AirAttackMissile::AirAttackMissile(b2World& world_entry, int number, float x, GameConstants& info, 
-		std::map<int, Projectile*>& to_remove, MultipleProxy& proxy) : 
+		std::vector<int>& to_remove, MultipleProxy& proxy) : 
 				SimpleProjectile(world_entry, number, x, -2 , 1, -M_PI/2, 
 				info.air_attack_vel, info.air_attack_damage, info.air_attack_radius, to_remove, proxy){
 	

@@ -17,7 +17,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), players_ids(players_ids_e){
 	this->world.SetContactListener(&(this->contact_listener));
 	
-	std::vector<Gusano*> gusanos;
+	std::vector<Gusano> gusanos;
 	//lectura de archivo yalm "map_name" y creacion de vigas y gusanos
 	YAMLParser parser;
 	std::vector<ElementInfo> elements;
@@ -46,26 +46,11 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 		}
 		else if (info_it->tipo.compare("gusano") == 0){
 			std::cout << "crear gusano\n";
-			Gusano* gusano = new Gusano(this->world, this->proxy, this->to_remove_gusanos,
+			Gusano gusano(this->world, this->proxy, this->to_remove_gusanos,
 				info_it->x + MAP_OFFSET, -info_it->y - MAP_OFFSET, info_it->angulo);
-			gusanos.push_back(gusano);
+			gusanos.push_back(std::move(gusano));
 		}
 	}
-	
-	/*Viga viga(this->world, 3.0f, 8.0f, 0.0f, this->proxy);
-	Viga viga2(this->world, 9.0f, 8.0f, 0.0f, this->proxy);
-	Viga viga3(this->world, 3.0f, 18.0f, 0.0f, this->proxy);
-	Viga viga4(this->world, 9.0f, 18.0f, 0.0f, this->proxy);
-
-	this->water = new Water(this->world, -100, -10, 100, -10);
-	//this->proxy.sendMapDimentions(30, 10);
-	
-	Gusano* gusano0 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 6.5f, 8.52f, 0.0f);
-	gusanos.push_back(gusano0);
-	Gusano* gusano1 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 4.0f, 8.52f, 0.0f);
-	gusanos.push_back(gusano1);
-	//Gusano* gusano2 = new Gusano(this->world, this->proxy, this->to_remove_gusanos, 5.0f, 0.52f, 0.0f);
-	//gusanos.push_back(gusano2);*/
 	
 	srand(time(0));
 	//para que los gusanos toquen en orden aleatorio
@@ -82,13 +67,13 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	// En el server, cada player tiene sus gusanos 1,2,3, etc para guardarlos
 	// en el doble mapa players. El gusano_id es el id unico para cada gusano,
 	// con el que el client identificara a ese gusano.
-	std::vector<Gusano*>::iterator it = gusanos.begin();
+	std::vector<Gusano>::iterator it = gusanos.begin();
 	int player, gusano_number, gusano_id;
 	for (player = 0, gusano_number = 1, gusano_id = 1; it != gusanos.end(); player++, gusano_id++, ++it){
 		std::cout << player << "\n";
 		std::cout << gusano_number << "\n";
-		(*it)->setId(this->players_ids[player], gusano_number, gusano_id);
-		this->players[this->players_ids[player]][gusano_number] = (*it);
+		it->setId(this->players_ids[player], gusano_number, gusano_id);
+		this->players[this->players_ids[player]].insert(std::pair<int, Gusano>(gusano_number, std::move(*it)));
 		if (player == this->players_ids.size() - 1){
 			player = -1;
 			gusano_number++;
@@ -98,9 +83,9 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	this->gusanos_per_player = gusano_number;
 	if (player != 0){
 		for (; player < this->players_ids.size(); player++){
-			std::map<int, Gusano*>::iterator it2 = this->players[player].begin();  
+			std::map<int, Gusano>::iterator it2 = this->players[player].begin();  
 			for (; it2 != this->players[this->players_ids[player]].end(); ++it2){
-				it2->second->addLife(25);
+				it2->second.addLife(25);
 			}
 		}
 	}
@@ -114,14 +99,14 @@ Game::~Game(){
 		delete *delimiters_it;
 	}
 	//destruccion de gusanos que quedaron vivos
-	std::map<int, std::map<int, Gusano*>>::iterator players_it = this->players.begin();
+	/*std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
 	for (; players_it != this->players.end(); ++players_it) {
-		std::map<int, Gusano*>::iterator gusanos_it = players_it->second.begin();
+		std::map<int, Gusano>::iterator gusanos_it = players_it->second.begin();
 		for (; gusanos_it != players_it->second.end(); ++gusanos_it) {
 			Gusano* gusano = gusanos_it->second;
 			delete gusano;
 		}
-	}
+	}*/
 	this->queue.empty();
 }
 
@@ -136,7 +121,7 @@ void Game::play(){
 				break;
 			}
 			try{
-				std::map<int, Gusano*> gusanos = this->players.at(player_id);
+				std::map<int, Gusano>& gusanos = this->players.at(player_id);
 				std::cout << "new turn: " << player_id << "\n";
 				while (true){
 					// es while true ya que si el jugador aun existe, se va a poder encontrar un gusano

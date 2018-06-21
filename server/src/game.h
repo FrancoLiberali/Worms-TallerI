@@ -24,7 +24,7 @@ class Game {
 		std::vector<Delimiter*> delimiters;
 		//Water* water;
 		std::vector<std::pair<int, int>> to_remove_gusanos;
-		std::map<int, std::map<int, Gusano*>> players;
+		std::map<int, std::map<int, Gusano>> players;
 		std::vector<int> next;
 		int gusanos_per_player;
 		GameConstants info;

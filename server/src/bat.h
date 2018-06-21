@@ -7,7 +7,7 @@
 
 class Bat{
 	public:
-		Bat(Gusano* executer, b2World& world, float x, float y, int direction, float angle, GameConstants& info);
+		Bat(Gusano& executer, b2World& world, float x, float y, int direction, float angle, GameConstants& info);
 		
 		~Bat();
 };

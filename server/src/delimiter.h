@@ -5,7 +5,7 @@
 #define __DELIMITER_H__
 class Delimiter{
 	private:
-		UserData* user_data;
+		UserData user_data;
 	public:
 		Delimiter(b2World& world, float x_from, float y_from, float x_to, float y_to);
 		

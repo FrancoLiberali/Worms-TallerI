@@ -16,7 +16,7 @@ class Turn{
 	private:
 		b2World& world;
 		ProtectedQueue& queue;
-		std::map<int, std::map<int, Gusano*>>& players;
+		std::map<int, std::map<int, Gusano>>& players;
 		std::vector<std::pair<int, int>>& to_remove_gusanos;
 		GameConstants& info;
 		MultipleProxy& proxy;
@@ -24,8 +24,8 @@ class Turn{
 		const float time_step;
 		const int velocity_iterations; 
 		const int position_iterations;
-		std::map<int, Projectile*> to_remove_projectiles;
-		std::map<int, Projectile*> projectiles;
+		std::vector<int> to_remove_projectiles;
+		std::map<int, std::unique_ptr<Projectile>> projectiles;
 		int actual_max_projectile = 0;
 		std::vector<FragmentInfo*> to_create;
 		int weapon = 0;
@@ -36,14 +36,14 @@ class Turn{
 		b2Vec2 remote_position;
 		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
-		void gusano_move(char* msj, Gusano* gusano);
-		void gusano_jump(char* msj, Gusano* gusano);
-		void gusano_back_jump(char* msj, Gusano* gusano);
+		void gusano_move(char* msj, Gusano& gusano);
+		void gusano_jump(Gusano& gusano);
+		void gusano_back_jump(Gusano& gusano);
 		void take_weapon(int player_id, char* msj);
 		void changeSightAngle(char* msj);
 		void changeRegresiveTime(char* msj);
-		void loadPower(int player_id, Gusano* gusano, int& turn_actual_len);
-		void fire(int player_id, Gusano* gusano, int& turn_actual_len);
+		void loadPower(int player_id, Gusano& gusano, int& turn_actual_len);
+		void fire(int player_id, Gusano& gusano, int& turn_actual_len);
 		void changeRemoteObjetive(char* msj);
 		void fire_bazooka(b2Vec2 position, int direction);
 		void fire_morter(b2Vec2 position, int direction);
@@ -52,12 +52,12 @@ class Turn{
 		void fire_banana(b2Vec2 position, int direction);
 		void fire_saint_granade(b2Vec2 position, int direction);
 		void fire_dynamite(b2Vec2 position, int direction);
-		void fire_bat(Gusano* gusano, b2Vec2 position, int direction);
+		void fire_bat(Gusano& gusano, b2Vec2 position, int direction);
 		void fire_air_attack();
-		void teleport(Gusano* gusano);
+		void teleport(Gusano& gusano);
 		
 	public:
-		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano*>>& players_e, 
+		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano>>& players_e, 
 			std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e);
 		
 		~Turn();

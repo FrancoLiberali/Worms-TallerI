@@ -8,16 +8,16 @@
 #define NUM_RAYS 360
 
 Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction, float angle, float vel, 
-	int damage_e, int radius_e, int type, std::map<int, Projectile*>& to_remove_e, MultipleProxy& proxy_e) : 
+	int damage_e, int radius_e, int type, std::vector<int>& to_remove_e, MultipleProxy& proxy_e) : 
 			world(world_entry), number(number_e), damage(damage_e), 
-			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e){
+			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e), user_data(type, this){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.bullet = true;
 	bodyDef.position.Set(x, y);
 	this->body = this->world.CreateBody(&bodyDef);
-	this->user_data = new UserData(type, this);
-	this->body->SetUserData((void*)this->user_data);
+	//this->user_data = new UserData(type, this);
+	this->body->SetUserData((void*)&this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
 	b2Vec2 vel_vec;
@@ -27,8 +27,10 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int
 }
 
 Projectile::~Projectile(){
-	delete this->user_data;
-	this->world.DestroyBody(this->body);
+	//if (this->user_data){
+		//delete this->user_data;
+		this->world.DestroyBody(this->body);
+//	}
 }
 
 void Projectile::exploit(){
@@ -55,16 +57,16 @@ void Projectile::exploit(){
 			float damage_by_distance = this->damage * (1- (distance / this->radius));
 			distance_vec.Normalize();
 			b2Vec2 impulse_by_distance = (damage_by_distance / 100000 * (NUM_RAYS)) * distance_vec; //* (1/(float)NUM_RAYS);
-			std::cout << center.x << "; " << center.y << "\n";
+			/*std::cout << center.x << "; " << center.y << "\n";
 			std::cout << it->second.x << "; " << it->second.y << "\n";
 			std::cout << angle << "\n";
 			std::cout << distance << "\n";
 			std::cout << damage_by_distance << "\n";
-			std::cout << impulse_by_distance.x << "; " << impulse_by_distance.y << "\n";
+			std::cout << impulse_by_distance.x << "; " << impulse_by_distance.y << "\n";*/
 			it->first->applyExplotion(it->second, damage_by_distance, impulse_by_distance);
 		}
 	}
-	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
+	this->to_remove.push_back(this->number);
 }
 
 void Projectile::destroy(){
@@ -72,7 +74,7 @@ void Projectile::destroy(){
 	float angle = this->GetAngle();
 	this->proxy.sendProjectilePosition(this->number, center.x, center.y, angle);
 	this->proxy.sendProjectileExplosion(this->number);
-	this->to_remove.insert(std::pair<int, Projectile*>(this->number, this));
+	this->to_remove.push_back(this->number);
 }
 
 void Projectile::update(){
@@ -80,4 +82,17 @@ void Projectile::update(){
 	float angle = this->GetAngle();
 	this->proxy.sendProjectilePosition(this->number, position.x, position.y, angle);
 }
+
+/* de cuando estaba intentado no necesitar ponerlos en el heap
+ * Projectile::Projectile(Projectile&& other) : world(other.world), number(other.number), damage(other.damage), 
+			radius(other.radius), to_remove(other.to_remove), proxy(other.proxy){
+	std::cout << "se llama proyectil\n";
+	this->body = other.body;
+	other.body = nullptr;
+	this->user_data = other.user_data;
+	this->user_data->pointer = this;
+	other.user_data = nullptr;
+}*/
+	
+	
 

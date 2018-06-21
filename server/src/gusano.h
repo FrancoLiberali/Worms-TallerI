@@ -20,7 +20,7 @@ class Gusano{
 		//las datas son punteros que los cuerpos del mundo de simulacion
 		// tienen asociados para poder reconocerlos a la hora de un contacto
 		// y poder llamar a sus metodos. Para mas info ver contact_listener
-		UserData* user_data;
+		UserData user_data;
 		int* foot_sensor_data;
 		int* head_sensor_data;
 		
@@ -38,6 +38,9 @@ class Gusano{
 		// Crea un gusano en el mundo
 		Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 		std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle);
+		
+		Gusano(Gusano&& other);
+		Gusano& operator=(Gusano&& other);
 		
 		~Gusano();
 		

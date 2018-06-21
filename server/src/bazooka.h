@@ -11,7 +11,7 @@
 class Bazooka : public SimpleProjectile {
 	public:
 		Bazooka(b2World& world_entry, int number, float x, float y, int direction, float angle, float power, 
-		GameConstants& info, std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
+		GameConstants& info, std::vector<int>& to_remove, MultipleProxy& proxy);
 		
 		~Bazooka();
 };

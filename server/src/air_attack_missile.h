@@ -11,7 +11,7 @@
 class AirAttackMissile : public SimpleProjectile {
 	public:
 		AirAttackMissile(b2World& world_entry, int number, float x, GameConstants& info, 
-							std::map<int, Projectile*>& to_remove, MultipleProxy& proxy);
+							std::vector<int>& to_remove, MultipleProxy& proxy);
 		
 		~AirAttackMissile();
 };
