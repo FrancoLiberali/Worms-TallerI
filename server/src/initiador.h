@@ -17,7 +17,7 @@ class Initiador : public Thread{
 	private:
 		BlockingQueue& queue;
 		MultipleProxy& not_playing;
-		std::map<int, PlayerInfo*>& players;
+		std::map<int, PlayerInfo>& players;
 		std::map<int, Room*>& rooms;
 		std::mutex& mutex;
 		std::mutex keep_mutex;
@@ -28,7 +28,7 @@ class Initiador : public Thread{
 	
 	public:
 		Initiador(BlockingQueue& queue, MultipleProxy& proxy, 
-		std::map<int, PlayerInfo*>& players, std::map<int, Room*>& rooms, std::mutex& mutex);
+		std::map<int, PlayerInfo>& players, std::map<int, Room*>& rooms, std::mutex& mutex);
 		
 		~Initiador();
 		

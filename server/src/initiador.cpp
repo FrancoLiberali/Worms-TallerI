@@ -4,7 +4,7 @@
 #include "blocking_queue.h"
 
 Initiador::Initiador(BlockingQueue& queue_e, MultipleProxy& proxy_e, 
-	std::map<int, PlayerInfo*>& players_e, std::map<int, Room*>& rooms_e, std::mutex& mutex_e) :
+	std::map<int, PlayerInfo>& players_e, std::map<int, Room*>& rooms_e, std::mutex& mutex_e) :
 		queue(queue_e), not_playing(proxy_e), players(players_e), rooms(rooms_e), mutex(mutex_e){
 	
 	this->keep_working = true;
@@ -48,22 +48,21 @@ void Initiador::run(){
 		std::lock_guard<std::mutex> lock(this->mutex);
 		switch (msj[0]){
 			case 10:{ //desconeccion
-					int room_id = this->players[player_id]->room_id;
+					int room_id = this->players.at(player_id).room_id;
 					if (room_id){
 						this->disconnectFromRoom(player_id, room_id);
 					}
-					this->players[player_id]->receiver->stop();
-					this->players[player_id]->receiver->join();
-					delete this->players[player_id]->receiver;
-					delete this->players[player_id];
+					this->players.at(player_id).receiver->stop();
+					this->players.at(player_id).receiver->join();
+					delete this->players.at(player_id).receiver;
 					this->players.erase(player_id);
 					this->not_playing.erase(player_id);
 					break;
 				}
 			case 11: {//salida del room		
-					int room_id = this->players[player_id]->room_id;
-					Proxy* proxy = this->players[player_id]->receiver->getProxy();
-					this->players[player_id]->setRoom(0);
+					int room_id = this->players.at(player_id).room_id;
+					Proxy* proxy = this->players.at(player_id).receiver->getProxy();
+					this->players.at(player_id).setRoom(0);
 					if (room_id){
 						this->disconnectFromRoom(player_id, room_id);
 						this->sendAllRoomsInfo(player_id, proxy);
@@ -73,9 +72,9 @@ void Initiador::run(){
 			case 12:{ //conexion a una partida
 					int room_id = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 					Room* room = this->rooms.at(room_id);
-					room->add(player_id, this->players[player_id]->name, 
-							this->players[player_id]->receiver->getProxy());
-					this->players[player_id]->setRoom(room_id);
+					room->add(player_id, this->players.at(player_id).name, 
+							this->players.at(player_id).receiver->getProxy());
+					this->players.at(player_id).setRoom(room_id);
 					this->not_playing.erase(player_id);
 					if (room->cantPlayers() == room->maxPlayers()){
 						this->not_playing.sendRoomDeletion(room_id);
@@ -95,9 +94,9 @@ void Initiador::run(){
 					std::string room_name(msj + 17 + map_len, name_len);
 					std::cout << room_name << '\n';
 					std::cout << "player_id: " << player_id << "\n";
-					Proxy* player_proxy = this->players[player_id]->receiver->getProxy();
-					std::string& name = this->players[player_id]->getName();
-					this->players[player_id]->setRoom(this->room_id);
+					Proxy* player_proxy = this->players.at(player_id).receiver->getProxy();
+					std::string& name = this->players.at(player_id).getName();
+					this->players.at(player_id).setRoom(this->room_id);
 					
 					Room* room = new Room(std::move(room_name), std::move(map_name), max_players);
 					room->add(player_id, name, player_proxy);

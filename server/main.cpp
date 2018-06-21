@@ -40,15 +40,14 @@ int main(int argc, char* argv[]){
     }
 	std::mutex syslog_mutex;
 	try{
-		Thread* server = new Server(argv[PORT], syslog_mutex, maps);
-		server->start();
+		Server server(argv[PORT], syslog_mutex, maps);
+		server.start();
 		char entry = 0;
 		while (entry != EXIT){
 			entry = std::cin.get();
 		}
-		server->stop();
-		server->join();
-		delete server;
+		server.stop();
+		server.join();
 		return 0;
 	} catch(const std::exception& e){
 		std::lock_guard<std::mutex> lock(syslog_mutex);

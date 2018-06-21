@@ -23,11 +23,12 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	std::vector<ElementInfo> elements;
 	parser.cargarConfig(map_name, elements, this->info);
 	
-	//se agregan al mapa espacios vacios a izquierda, derecha y arriba, y abajo un pequenio especio para el agua
+	//se agregan al mapa espacios vacios a izquierda, derecha y arriba, y abajo un pequenio espacio para el agua
 	float down_limit = info.map_height + WATER_DEPPNESS + MAP_OFFSET;
 	float right_limit = info.map_widht + 2 * MAP_OFFSET;
 	this->proxy.sendMapDimentions(right_limit, down_limit);
 	this->proxy.sendMapBackground(this->info.map_background);
+	
 	//se agregan delimitadores de mapa
 	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, 0, -down_limit))); //left
 	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, right_limit, 0)));//up
@@ -70,8 +71,6 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	std::vector<Gusano>::iterator it = gusanos.begin();
 	int player, gusano_number, gusano_id;
 	for (player = 0, gusano_number = 1, gusano_id = 1; it != gusanos.end(); player++, gusano_id++, ++it){
-		std::cout << player << "\n";
-		std::cout << gusano_number << "\n";
 		it->setId(this->players_ids[player], gusano_number, gusano_id);
 		this->players[this->players_ids[player]].insert(std::pair<int, Gusano>(gusano_number, std::move(*it)));
 		if (player == this->players_ids.size() - 1){

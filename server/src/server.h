@@ -19,12 +19,12 @@ class Server : public Thread {
 		std::mutex& syslog_mutex;
 		std::vector<std::string>& maps;
 		Socket socket;
-		std::map<int, PlayerInfo*> players;
+		std::map<int, PlayerInfo> players;
 		std::mutex mutex;
 		MultipleProxy not_playing;
 		BlockingQueue hall_queue;
 		std::map<int, Room*> rooms;
-		Initiador* initiador;
+		Initiador hall;
 		std::mutex keep_mutex;
 		bool keep_accepting;
 		int cant_players = 0;
