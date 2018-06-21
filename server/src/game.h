@@ -21,7 +21,7 @@ class Game {
 		b2World world;
 		std::vector<int> players_ids;
 		ContactListener contact_listener;
-		std::vector<Delimiter*> delimiters;
+		std::vector<Delimiter> delimiters;
 		//Water* water;
 		std::vector<std::pair<int, int>> to_remove_gusanos;
 		std::map<int, std::map<int, Gusano>> players;

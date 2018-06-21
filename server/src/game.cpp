@@ -29,12 +29,12 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	this->proxy.sendMapDimentions(right_limit, down_limit);
 	this->proxy.sendMapBackground(this->info.map_background);
 	//se agregan delimitadores de mapa
-	this->delimiters.push_back(new Delimiter(this->world, 0, 0, 0, -down_limit)); //left
-	this->delimiters.push_back(new Delimiter(this->world, 0, 0, right_limit, 0));//up
-	this->delimiters.push_back(new Delimiter(this->world, right_limit, 
-									0, right_limit, -down_limit));//right
-	this->delimiters.push_back(new Delimiter(this->world, 0, -down_limit, 
-							right_limit, -down_limit));//down			
+	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, 0, -down_limit))); //left
+	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, right_limit, 0)));//up
+	this->delimiters.push_back(std::move(Delimiter(this->world, right_limit, 
+									0, right_limit, -down_limit)));//right
+	this->delimiters.push_back(std::move(Delimiter(this->world, 0, -down_limit, 
+							right_limit, -down_limit)));//down			
 	//this->water = new Water(this->world, 0, -down_limit + WATER_DEPPNESS, right_limit, -down_limit + WATER_DEPPNESS);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
@@ -93,20 +93,6 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 }
 
 Game::~Game(){
-	//delete this->water;
-	std::vector<Delimiter*>::iterator delimiters_it = this->delimiters.begin();
-	for (; delimiters_it != this->delimiters.end(); ++delimiters_it){
-		delete *delimiters_it;
-	}
-	//destruccion de gusanos que quedaron vivos
-	/*std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
-	for (; players_it != this->players.end(); ++players_it) {
-		std::map<int, Gusano>::iterator gusanos_it = players_it->second.begin();
-		for (; gusanos_it != players_it->second.end(); ++gusanos_it) {
-			Gusano* gusano = gusanos_it->second;
-			delete gusano;
-		}
-	}*/
 	this->queue.empty();
 }
 

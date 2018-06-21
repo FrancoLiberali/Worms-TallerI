@@ -3,7 +3,6 @@
 Delimiter::Delimiter(b2World& world, float x_from, float y_from, float x_to, float y_to) : user_data(2, nullptr){
 	b2BodyDef delimiter_body_def;
 	b2Body* delimiter_body = world.CreateBody(&delimiter_body_def);
-	//this->user_data = new UserData(2, nullptr);
 	delimiter_body->SetUserData((void*)&this->user_data);
 	
 	b2FixtureDef delimiter_fixture_def;
@@ -15,5 +14,4 @@ Delimiter::Delimiter(b2World& world, float x_from, float y_from, float x_to, flo
 }
 
 Delimiter::~Delimiter(){
-	//delete this->user_data;
 }

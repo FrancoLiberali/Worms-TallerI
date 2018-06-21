@@ -80,9 +80,6 @@ Gusano::Gusano(Gusano&& other) : world(other.world), proxy(other.proxy), to_remo
 }
 
 Gusano& Gusano::operator=(Gusano&& other){
-	this->world = other.world;
-	this->proxy = other.proxy;
-	this->to_remove_gusanos = other.to_remove_gusanos;
 	this->body = other.body;
 	other.body = nullptr;
 	this->state = other.state;
