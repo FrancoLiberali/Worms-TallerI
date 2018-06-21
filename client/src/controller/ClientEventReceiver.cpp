@@ -75,7 +75,6 @@ void ClientEventReceiver::process(int t){
 		case 20:{
 			int idPlayer = proxy.receiveInt();
 			std::string namePlayer = proxy.receiveName();
-			//preGame.addPlayerToRoom()
 			model.addPlayers(idPlayer, namePlayer);
 			break;
 		}

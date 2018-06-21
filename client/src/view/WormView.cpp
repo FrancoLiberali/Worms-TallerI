@@ -21,21 +21,15 @@ WormView::WormView(int idWorm, int idOwner, Camera& camera)
 /*optinizar esto*/
 SDL_Color getColor(int id){
 	switch (id){
-		case 1:{
-			SDL_Color color = {255,0,0};
-			return color;
+		case 0:{ SDL_Color color = {255,50,50}; return color;
 		}
-		case 2:{
-			SDL_Color color = {0,0,255};
-			return color;
+		case 1:{ SDL_Color color = {255,0,0}; return color;
 		}
-		case 3:{
-			SDL_Color color = {0,255,0};
-			return color;
+		case 2:{SDL_Color color = {0,0,255}; return color;
 		}
-		case 4:{
-			SDL_Color color = {153,102,0};
-			return color;
+		case 3:{ SDL_Color color = {0,255,0}; return color;
+		}
+		case 4:{SDL_Color color = {153,102,0}; return color;
 		}
 	}
 }
@@ -184,12 +178,11 @@ void WormView::draw(int idPlayer){
 									currentSprite->getCurrentRow(),
 									0, screen->getRenderer(),false,flip);
 	 
-	if (this->selected){
+	if (this->selected)
 		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
-	if (this->idOwner == idPlayer)	
-		aim.draw();
-		power.draw();
-	}
+
+	aim.draw();
+	power.draw();
 	SDL_Rect rect;
 	rect.x = this->getX()-camera.getX() - 10;
 	rect.y = this->getY()-camera.getY() - 22;

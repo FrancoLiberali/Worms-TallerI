@@ -60,14 +60,6 @@ void Controller::handle(SDL_Event& e) {
                 if (weapon)
                     model.WormWeapon((int)weapon->getId());
             }
-            else{
-            //veo si esta con arma telediriga
-            /*WormView* worm = view.getWormView(model.getIdWormSelected());
-            if (worm->isCurrWeapon(TELEPORT) || worm->isCurrWeapon(AIRATTACK))
-                model.*/
-                model.teledirigido(e.motion.x, e.motion.y);
-            }
-            view.update();
             break;
 		}
 }

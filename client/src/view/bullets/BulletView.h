@@ -23,7 +23,6 @@ protected:
     SoundId explotionSound;
 	bool detonated;
     bool isOnCamera;
-    void draw();
     int getCenterX();
     int getCenterY();
 public:
@@ -38,5 +37,7 @@ public:
     bool isIdBullet(int id);
     bool isDetonateDone();
     void disableCamera();
+    void draw();
+
 };
 #endif

@@ -68,7 +68,7 @@ void GameClient::run(){
 		while (!eventQueue.empty()){
 			ehandler.add(eventQueue.pop());
 		}
-		//clientView.update();
+		clientView.update();
 		//AGREGAR SLEEP
 	}
 	commandsQueue.push(nullptr);
