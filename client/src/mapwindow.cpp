@@ -16,10 +16,17 @@ mapWindow::~mapWindow()
 }
 
 void mapWindow::on_btn_unirse_clicked(){
-    std::string name2("\nSucces");
-    proxy.sendName(name2);
-    done = true;
+    int id = 0;
+    std::string name = ui->cmb_salas->currentText().toStdString();
+    for (auto& it: this->rooms){
+        if ( it.second->isName(name))
+            id = it.first;
+    }
+
+    proxy.sendJoinRoom(id);
+    close();
 }
+
 
 void mapWindow::on_btn_crear_clicked(){
     std::string nameRoom = ui->lineNameRoom->text().toStdString();
@@ -31,6 +38,12 @@ void mapWindow::on_btn_crear_clicked(){
 }
 
 void mapWindow::addMap(std::string& map){
-    std::cout << "add map " <<std::endl;
     ui->cmb_maps->addItem(map.c_str());
+}
+
+void mapWindow::addRoom(Room* room){
+    std::cout << "add sala " <<std::endl;
+
+    this->rooms.emplace(room->getId(), room);
+    ui->cmb_salas->addItem(room->getName().c_str());
 }

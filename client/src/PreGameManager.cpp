@@ -13,3 +13,7 @@ void PreGameManager::addMap(std::string nameMap){
     hall->addMap(nameMap);
 }
 
+void PreGameManager::addRoom(Room* room){
+    hall->addRoom(room);
+}
+

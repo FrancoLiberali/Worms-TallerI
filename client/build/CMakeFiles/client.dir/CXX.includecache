@@ -91,6 +91,8 @@ mapwindow.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.h
 ProxyClient.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+Room.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp
 ProxyClient.h
@@ -111,6 +113,16 @@ common/socket.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
 model/Model.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.cpp
+Room.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
+string
+-
+map
+-
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
 queue
@@ -219,6 +231,8 @@ string
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.cpp
 ClientEventReceiver.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.h
+../Room.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
 EventFactory.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.h
 EventType.h
@@ -339,10 +353,14 @@ StartTurnEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
 PlayerOffEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
+PlayerLoseEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.h
 WormChangeAimEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeAimEvent.h
 GameWinnerEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/GameWinnerEvent.h
+WeaponDoneEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.h
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventFactory.h
 EventType.h
@@ -436,6 +454,14 @@ string
 Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.cpp
+PlayerLoseEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.cpp
 PlayerOffEvent.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
@@ -451,6 +477,14 @@ string
 -
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
+Event.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.cpp
+WeaponDoneEvent.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.h
+
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.h
 Event.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
 
@@ -561,6 +595,10 @@ ProxyClient.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
 common/Thread.h
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
+Room.h
+/home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
+map
+-
 
 /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ChangeAimCommand.cpp
 ChangeAimCommand.h

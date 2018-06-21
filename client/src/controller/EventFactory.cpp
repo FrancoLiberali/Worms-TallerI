@@ -15,11 +15,14 @@
 #include "MissileExploteEvent.h"
 #include "StartTurnEvent.h"
 #include "PlayerOffEvent.h"
+#include "PlayerLoseEvent.h"
 #include "WormChangeAimEvent.h"
 #include "GameWinnerEvent.h"
+#include "WeaponDoneEvent.h"
+
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
-  std::cout << "hay evento " << (EventType)type << std::endl;
+  //std::cout << "hay evento " << (EventType)type << std::endl;
   switch (type) {
     case ID_PLAYER:{
       int id = proxy.receiveInt();
@@ -102,13 +105,21 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int newLife = proxy.receiveInt();
       return new WormChangeLifeEvent(idWorm, newLife);
     }
-    case G_PLAYER_OFF: {
+    case A_PLAYER_OFF: {
       int idPlayer = proxy.receiveInt();
       return new PlayerOffEvent(idPlayer, model, view);
     }
-    case G_PLAYER_WIN:{
+    case A_PLAYER_LOSE:{
+      int idPlayer = proxy.receiveInt();
+      return new PlayerLoseEvent(idPlayer);
+    }
+    case A_PLAYER_WIN:{
       int idPlayer = proxy.receiveInt();
       return new GameWinnerEvent(idPlayer, model, view);
+    }
+    case WEAPON_DONE:{
+      int idWeapon = proxy.receiveInt();
+      return new WeaponDoneEvent(idWeapon);
     }
   }
   return nullptr; //nunca deberia llegar todos los casos cubiertos

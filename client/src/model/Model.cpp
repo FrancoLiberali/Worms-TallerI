@@ -44,6 +44,7 @@ int Model::getIdWormSelected(){
 
 void Model::setIdPlayer(int idJugador){
     this->idJugador = idJugador;
+    this->players[idJugador] = this->namePlayer;
 }
 
 void Model::addPlayers(int id, std::string name){

@@ -40,6 +40,7 @@ public:
     void sendWormShoot(int idPlayer);
     void sendCountDown(int idPlayer, int time);
     void sendCreateRoom(std::string& nameRoom,int  numPlayer,std::string nameMap);
+    void sendJoinRoom(int idRoom);
 };
 
 #endif

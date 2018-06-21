@@ -162,4 +162,12 @@ void ProxyClient::sendCreateRoom(std::string& nameRoom,int  numPlayer,std::strin
     sendInt(numPlayer);
     sendName(nameMap);
     sendName(nameRoom);
+    //std::cout<<" "<< model->getIdPlayer() << " "<< numPlayer << nameMap << nameRoom <<std::endl;
+}
+
+void ProxyClient::sendJoinRoom(int idRoom){
+    sendChar(12);
+    sendInt(model->getIdPlayer());
+    sendInt(idRoom);
+    std::cout<<"JOIN room "<<idRoom <<std::endl;
 }

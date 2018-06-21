@@ -169,4 +169,5 @@ void mainView::WormShoot(int idWorm){
 
 void mainView::createStage(int widht, int height){
 	stage.setDimention(widht, height);
+	camera.setDimentionMap(widht, height);
 }

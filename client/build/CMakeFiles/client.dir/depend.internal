@@ -9,6 +9,7 @@ CMakeFiles/client.dir/client_automoc.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/build/moc_namewindow.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -158,6 +159,7 @@ CMakeFiles/client.dir/src/GameClient.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameClient.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -301,6 +303,7 @@ CMakeFiles/client.dir/src/PreGameManager.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -442,6 +445,7 @@ CMakeFiles/client.dir/src/ProxyClient.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -579,6 +583,9 @@ CMakeFiles/client.dir/src/ProxyClient.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+CMakeFiles/client.dir/src/Room.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
 CMakeFiles/client.dir/src/common/Thread.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.cpp
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
@@ -592,6 +599,7 @@ CMakeFiles/client.dir/src/common/socket_error.cpp.o
 CMakeFiles/client.dir/src/connectwindow.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -788,6 +796,7 @@ CMakeFiles/client.dir/src/connectwindow.cpp.o
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -930,6 +939,7 @@ CMakeFiles/client.dir/src/controller/CameraMove.cpp.o
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1071,6 +1081,7 @@ CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1214,6 +1225,7 @@ CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o
 CMakeFiles/client.dir/src/controller/Controller.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1357,6 +1369,7 @@ CMakeFiles/client.dir/src/controller/Controller.cpp.o
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1499,6 +1512,7 @@ CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1641,6 +1655,7 @@ CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1783,6 +1798,7 @@ CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -1925,6 +1941,7 @@ CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o
 CMakeFiles/client.dir/src/controller/Event.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2066,6 +2083,7 @@ CMakeFiles/client.dir/src/controller/Event.cpp.o
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2086,8 +2104,10 @@ CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/MissileMoveEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerConnectEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerIdEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerOffEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/StartTurnEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeAimEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeLifeEvent.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WormChangeStateEvent.h
@@ -2225,6 +2245,7 @@ CMakeFiles/client.dir/src/controller/EventFactory.cpp.o
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2366,6 +2387,7 @@ CMakeFiles/client.dir/src/controller/EventHandler.cpp.o
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2508,6 +2530,7 @@ CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2650,6 +2673,7 @@ CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2792,6 +2816,7 @@ CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -2935,6 +2960,7 @@ CMakeFiles/client.dir/src/controller/MouseState.cpp.o
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3077,6 +3103,7 @@ CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3216,9 +3243,153 @@ CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/PlayerLoseEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/sound/SoundManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/FontManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/GameException.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/PowerView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlScreen.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Sprite.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SpriteConfigurator.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextureManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletFactory.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3361,6 +3532,7 @@ CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3500,9 +3672,153 @@ CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket_error.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientCommandSender.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/ClientEventReceiver.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/Event.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/EventHandler.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.cpp
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/controller/WeaponDoneEvent.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/mapwindow.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/ClientCommand.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/GameControllerProxy.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/model/Model.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/sound/SoundManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/AimView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Camera.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Escenario.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/FontManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/GameException.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/MenuWeaponView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/PowerView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlException.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SdlScreen.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Shape.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Sprite.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/SpriteConfigurator.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/TextureManager.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/VigaView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/Weapon.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormState.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/WormView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletFactory.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/bullets/BulletView.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/view/mainView.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3645,6 +3961,7 @@ CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3787,6 +4104,7 @@ CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -3929,6 +4247,7 @@ CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4071,6 +4390,7 @@ CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4214,6 +4534,7 @@ CMakeFiles/client.dir/src/main.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/GameClient.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4369,6 +4690,7 @@ CMakeFiles/client.dir/src/main.cpp.o
 CMakeFiles/client.dir/src/mainwindow.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4568,6 +4890,7 @@ CMakeFiles/client.dir/src/mainwindow.cpp.o
 CMakeFiles/client.dir/src/mapwindow.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4766,6 +5089,7 @@ CMakeFiles/client.dir/src/mapwindow.cpp.o
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -4908,6 +5232,7 @@ CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5050,6 +5375,7 @@ CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5192,6 +5518,7 @@ CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5340,6 +5667,7 @@ CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o
 CMakeFiles/client.dir/src/model/Model.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5481,6 +5809,7 @@ CMakeFiles/client.dir/src/model/Model.cpp.o
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5623,6 +5952,7 @@ CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5765,6 +6095,7 @@ CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -5907,6 +6238,7 @@ CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -6049,6 +6381,7 @@ CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o
 CMakeFiles/client.dir/src/namewindow.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h
@@ -6497,6 +6830,7 @@ CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o
 CMakeFiles/client.dir/src/view/mainView.cpp.o
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/PreGameManager.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/ProxyClient.h
+ /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/Room.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Queue.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/Thread.h
  /home/edlinux/Escritorio/taller/TPs/TP_final/Worms-TallerI/client/src/common/socket.h

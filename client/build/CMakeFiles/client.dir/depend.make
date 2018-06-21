@@ -8,6 +8,7 @@ CMakeFiles/client.dir/client_automoc.cpp.o: moc_mapwindow.cpp
 CMakeFiles/client.dir/client_automoc.cpp.o: moc_namewindow.cpp
 CMakeFiles/client.dir/client_automoc.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/client_automoc.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/client_automoc.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/client_automoc.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/client_automoc.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/client_automoc.cpp.o: ../src/common/socket.h
@@ -157,6 +158,7 @@ CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/GameClient.cpp
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/GameClient.h
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/GameClient.cpp.o: ../src/common/socket.h
@@ -300,6 +302,7 @@ CMakeFiles/client.dir/src/GameClient.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Qt
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/PreGameManager.cpp
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/PreGameManager.cpp.o: ../src/common/socket.h
@@ -441,6 +444,7 @@ CMakeFiles/client.dir/src/PreGameManager.cpp.o: /usr/include/x86_64-linux-gnu/qt
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/ProxyClient.cpp
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: ../src/common/socket.h
@@ -579,6 +583,9 @@ CMakeFiles/client.dir/src/ProxyClient.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
 CMakeFiles/client.dir/src/ProxyClient.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 
+CMakeFiles/client.dir/src/Room.cpp.o: ../src/Room.cpp
+CMakeFiles/client.dir/src/Room.cpp.o: ../src/Room.h
+
 CMakeFiles/client.dir/src/common/Thread.cpp.o: ../src/common/Thread.cpp
 CMakeFiles/client.dir/src/common/Thread.cpp.o: ../src/common/Thread.h
 
@@ -591,6 +598,7 @@ CMakeFiles/client.dir/src/common/socket_error.cpp.o: ../src/common/socket_error.
 
 CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/connectwindow.cpp.o: ../src/common/socket.h
@@ -787,6 +795,7 @@ CMakeFiles/client.dir/src/connectwindow.cpp.o: ui_connectwindow.h
 
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: ../src/common/socket.h
@@ -929,6 +938,7 @@ CMakeFiles/client.dir/src/controller/CameraMove.cpp.o: /usr/include/x86_64-linux
 
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: ../src/common/socket.h
@@ -1070,6 +1080,7 @@ CMakeFiles/client.dir/src/controller/ClientCommandSender.cpp.o: /usr/include/x86
 
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: ../src/common/socket.h
@@ -1213,6 +1224,7 @@ CMakeFiles/client.dir/src/controller/ClientEventReceiver.cpp.o: /usr/include/x86
 
 CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/Controller.cpp.o: ../src/common/socket.h
@@ -1356,6 +1368,7 @@ CMakeFiles/client.dir/src/controller/Controller.cpp.o: /usr/include/x86_64-linux
 
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: ../src/common/socket.h
@@ -1498,6 +1511,7 @@ CMakeFiles/client.dir/src/controller/CreateMissileEvent.cpp.o: /usr/include/x86_
 
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: ../src/common/socket.h
@@ -1640,6 +1654,7 @@ CMakeFiles/client.dir/src/controller/CreateStageEvent.cpp.o: /usr/include/x86_64
 
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: ../src/common/socket.h
@@ -1782,6 +1797,7 @@ CMakeFiles/client.dir/src/controller/CreateVigaEvent.cpp.o: /usr/include/x86_64-
 
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: ../src/common/socket.h
@@ -1924,6 +1940,7 @@ CMakeFiles/client.dir/src/controller/CreateWormEvent.cpp.o: /usr/include/x86_64-
 
 CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/Event.cpp.o: ../src/common/socket.h
@@ -2065,6 +2082,7 @@ CMakeFiles/client.dir/src/controller/Event.cpp.o: /usr/include/x86_64-linux-gnu/
 
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/common/socket.h
@@ -2085,8 +2103,10 @@ CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/Missi
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/MissileMoveEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerConnectEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerIdEvent.h
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerLoseEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/PlayerOffEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/StartTurnEvent.h
+CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/WeaponDoneEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/WormChangeAimEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/WormChangeLifeEvent.h
 CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: ../src/controller/WormChangeStateEvent.h
@@ -2224,6 +2244,7 @@ CMakeFiles/client.dir/src/controller/EventFactory.cpp.o: /usr/include/x86_64-lin
 
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: ../src/common/socket.h
@@ -2365,6 +2386,7 @@ CMakeFiles/client.dir/src/controller/EventHandler.cpp.o: /usr/include/x86_64-lin
 
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: ../src/common/socket.h
@@ -2507,6 +2529,7 @@ CMakeFiles/client.dir/src/controller/GameWinnerEvent.cpp.o: /usr/include/x86_64-
 
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: ../src/common/socket.h
@@ -2649,6 +2672,7 @@ CMakeFiles/client.dir/src/controller/MissileExploteEvent.cpp.o: /usr/include/x86
 
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: ../src/common/socket.h
@@ -2791,6 +2815,7 @@ CMakeFiles/client.dir/src/controller/MissileMoveEvent.cpp.o: /usr/include/x86_64
 
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/MouseState.cpp.o: ../src/common/socket.h
@@ -2934,6 +2959,7 @@ CMakeFiles/client.dir/src/controller/MouseState.cpp.o: /usr/include/x86_64-linux
 
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: ../src/common/socket.h
@@ -3076,6 +3102,7 @@ CMakeFiles/client.dir/src/controller/PlayerConnectEvent.cpp.o: /usr/include/x86_
 
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: ../src/common/socket.h
@@ -3216,8 +3243,152 @@ CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: /usr/include/x86_64-li
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
 CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/PreGameManager.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/Room.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/common/Thread.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/ClientEventReceiver.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/Event.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/EventHandler.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/PlayerLoseEvent.cpp
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/controller/PlayerLoseEvent.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/mapwindow.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/model/ClientCommand.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/model/GameControllerProxy.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/model/Model.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/sound/SoundManager.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/Camera.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/Escenario.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/FontManager.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/GameException.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/MenuWeaponView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/PowerView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/SdlException.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/SdlScreen.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/Shape.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/Sprite.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/SpriteConfigurator.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/TextManager.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/TextView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/TextureManager.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/VigaView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/Weapon.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/WormState.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/WormView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/bullets/BulletFactory.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/bullets/BulletView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: ../src/view/mainView.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: ../src/common/socket.h
@@ -3360,6 +3531,7 @@ CMakeFiles/client.dir/src/controller/PlayerOffEvent.cpp.o: /usr/include/x86_64-l
 
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: ../src/common/socket.h
@@ -3500,8 +3672,152 @@ CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: /usr/include/x86_64-l
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
 CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/PreGameManager.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/Room.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/common/Queue.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/common/Thread.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/common/socket.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/common/socket_error.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/ClientCommandSender.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/ClientEventReceiver.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/Event.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/EventHandler.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/WeaponDoneEvent.cpp
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/controller/WeaponDoneEvent.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/mapwindow.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/model/ClientCommand.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/model/GameControllerProxy.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/model/Model.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/sound/SoundManager.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/AimView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/Camera.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/Escenario.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/FontManager.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/GameException.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/MenuWeaponView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/PowerView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/SdlException.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/SdlScreen.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/Shape.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/Sprite.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/SpriteConfigurator.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/TextManager.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/TextView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/TextureManager.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/VigaView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/Weapon.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/WormState.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/WormView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/bullets/BulletFactory.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/bullets/BulletView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: ../src/view/mainView.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv5.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv6.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_armv7.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_bootstrap.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_gcc.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_ia64.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_unix.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_x86.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfeatures.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qisenum.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject_impl.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qregexp.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qscopedpointer.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypetraits.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontinfo.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qfontmetrics.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qimage.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtransform.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
+CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
+
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: ../src/common/socket.h
@@ -3644,6 +3960,7 @@ CMakeFiles/client.dir/src/controller/WormChangeAimEvent.cpp.o: /usr/include/x86_
 
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: ../src/common/socket.h
@@ -3786,6 +4103,7 @@ CMakeFiles/client.dir/src/controller/WormChangeLifeEvent.cpp.o: /usr/include/x86
 
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: ../src/common/socket.h
@@ -3928,6 +4246,7 @@ CMakeFiles/client.dir/src/controller/WormChangeStateEvent.cpp.o: /usr/include/x8
 
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: ../src/common/socket.h
@@ -4070,6 +4389,7 @@ CMakeFiles/client.dir/src/controller/WormMoveEvent.cpp.o: /usr/include/x86_64-li
 
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: ../src/common/socket.h
@@ -4213,6 +4533,7 @@ CMakeFiles/client.dir/src/controller/WormWeaponEvent.cpp.o: /usr/include/x86_64-
 CMakeFiles/client.dir/src/main.cpp.o: ../src/GameClient.h
 CMakeFiles/client.dir/src/main.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/main.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/main.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/main.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/main.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/main.cpp.o: ../src/common/socket.h
@@ -4368,6 +4689,7 @@ CMakeFiles/client.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidget
 
 CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/mainwindow.cpp.o: ../src/common/socket.h
@@ -4567,6 +4889,7 @@ CMakeFiles/client.dir/src/mainwindow.cpp.o: ui_mainwindow.h
 
 CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/mapwindow.cpp.o: ../src/common/socket.h
@@ -4765,6 +5088,7 @@ CMakeFiles/client.dir/src/mapwindow.cpp.o: ui_mapwindow.h
 
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: ../src/common/socket.h
@@ -4907,6 +5231,7 @@ CMakeFiles/client.dir/src/model/ChangeAimCommand.cpp.o: /usr/include/x86_64-linu
 
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: ../src/common/socket.h
@@ -5049,6 +5374,7 @@ CMakeFiles/client.dir/src/model/ChangeCountDownCommand.cpp.o: /usr/include/x86_6
 
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: ../src/common/socket.h
@@ -5191,6 +5517,7 @@ CMakeFiles/client.dir/src/model/ChargePowerCommand.cpp.o: /usr/include/x86_64-li
 
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: ../src/common/socket.h
@@ -5339,6 +5666,7 @@ CMakeFiles/client.dir/src/model/GameControllerProxy.cpp.o: /usr/include/x86_64-l
 
 CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/Model.cpp.o: ../src/common/socket.h
@@ -5480,6 +5808,7 @@ CMakeFiles/client.dir/src/model/Model.cpp.o: /usr/include/x86_64-linux-gnu/qt5/Q
 
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: ../src/common/socket.h
@@ -5622,6 +5951,7 @@ CMakeFiles/client.dir/src/model/WormJumpCommand.cpp.o: /usr/include/x86_64-linux
 
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: ../src/common/socket.h
@@ -5764,6 +6094,7 @@ CMakeFiles/client.dir/src/model/WormMoveCommand.cpp.o: /usr/include/x86_64-linux
 
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: ../src/common/socket.h
@@ -5906,6 +6237,7 @@ CMakeFiles/client.dir/src/model/WormShootCommand.cpp.o: /usr/include/x86_64-linu
 
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: ../src/common/socket.h
@@ -6048,6 +6380,7 @@ CMakeFiles/client.dir/src/model/WormWeaponCommand.cpp.o: /usr/include/x86_64-lin
 
 CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/namewindow.cpp.o: ../src/common/socket.h
@@ -6496,6 +6829,7 @@ CMakeFiles/client.dir/src/view/bullets/RedGrenadeView.cpp.o: ../src/view/bullets
 
 CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/PreGameManager.h
 CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/ProxyClient.h
+CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/Room.h
 CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/common/Queue.h
 CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/common/Thread.h
 CMakeFiles/client.dir/src/view/mainView.cpp.o: ../src/common/socket.h

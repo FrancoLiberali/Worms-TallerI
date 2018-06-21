@@ -17,5 +17,4 @@ void Escenario::addViga(int x, int y, int angle){
 void Escenario::setDimention(int widht, int height){
 	this->widht = widht;
 	this->height = height;
-	
 }

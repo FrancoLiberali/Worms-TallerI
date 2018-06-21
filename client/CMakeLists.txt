@@ -58,11 +58,13 @@ add_executable(client
 	src/controller/MissileMoveEvent.cpp
 	src/controller/MissileExploteEvent.cpp
 	src/controller/PlayerIdEvent.cpp
+	src/controller/PlayerLoseEvent.cpp
 	src/controller/PlayerConnectEvent.cpp
 	src/controller/WormChangeAimEvent.cpp
 	src/controller/StartTurnEvent.cpp
 	src/controller/PlayerOffEvent.cpp
 	src/controller/GameWinnerEvent.cpp
+	src/controller/WeaponDoneEvent.cpp
 	src/controller/MouseState.cpp
 	src/controller/CameraMove.cpp
 	src/controller/ClientCommandSender.cpp
@@ -74,6 +76,7 @@ add_executable(client
 	src/ProxyClient.cpp
 	src/GameClient.cpp
 	src/PreGameManager.cpp
+	src/Room.cpp
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp

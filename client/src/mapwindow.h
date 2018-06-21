@@ -4,6 +4,9 @@
 #include <QDialog>
 #include "ProxyClient.h"
 #include "common/Thread.h"
+#include "Room.h"
+
+#include <map>
 
 namespace Ui {
 class mapWindow;
@@ -18,10 +21,12 @@ private:
     Ui::mapWindow *ui;
     ProxyClient& proxy;
     bool done;
+    std::map<int, Room*> rooms;
 public:
     explicit mapWindow(ProxyClient& proxy, QWidget *parent = 0);
     ~mapWindow();
     void addMap(std::string& map);
+    void addRoom(Room* room);
     void run();
 private slots:
 

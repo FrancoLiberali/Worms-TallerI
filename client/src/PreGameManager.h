@@ -3,6 +3,7 @@
 
 #include "mapwindow.h"
 #include "ProxyClient.h"
+#include "Room.h"
 
 class mapWindow;
 class ProxyClient;
@@ -16,6 +17,7 @@ public:
     PreGameManager(ProxyClient& proxy);
     void showHall();
     void addMap(std::string nameMap);
+    void addRoom(Room* room);
 };
 
 #endif

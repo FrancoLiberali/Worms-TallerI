@@ -8,8 +8,10 @@ Camera::Camera(){
 }
 
 void Camera::setDimentionMap(int widht, int height){
-    this->map_w = widht;
-    this->map_h = height;
+    /*this->map_w = widht;
+    this->map_h = height;*/
+    this->map_h = M_H;
+    this->map_w = M_H;
 }
 
 

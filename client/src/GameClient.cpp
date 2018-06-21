@@ -40,7 +40,7 @@ void GameClient::run(){
 	Model model;
 	model.setGameControllerProxy(&gcp);
 	model.setNamePlayer(name);
-	//proxy.addModel(&model);
+	proxy.addModel(&model);
 
 	PreGameManager preGame(proxy);
 	//cola de eventos a recibir
@@ -56,7 +56,7 @@ void GameClient::run(){
 	proxy.sendName(name);
 	preGame.showHall();
 
-	printf("INICIO DEL JUEGO \n");
+	printf("Espere a otros jugadores\n");
 	//Game loop
 	SDL_Event e;
 	while(clientView.isOpen() ){

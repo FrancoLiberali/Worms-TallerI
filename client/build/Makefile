@@ -244,6 +244,33 @@ src/ProxyClient.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/ProxyClient.cpp.s
 .PHONY : src/ProxyClient.cpp.s
 
+src/Room.o: src/Room.cpp.o
+
+.PHONY : src/Room.o
+
+# target to build an object file
+src/Room.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Room.cpp.o
+.PHONY : src/Room.cpp.o
+
+src/Room.i: src/Room.cpp.i
+
+.PHONY : src/Room.i
+
+# target to preprocess a source file
+src/Room.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Room.cpp.i
+.PHONY : src/Room.cpp.i
+
+src/Room.s: src/Room.cpp.s
+
+.PHONY : src/Room.s
+
+# target to generate assembly for a file
+src/Room.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/Room.cpp.s
+.PHONY : src/Room.cpp.s
+
 src/common/Thread.o: src/common/Thread.cpp.o
 
 .PHONY : src/common/Thread.o
@@ -811,6 +838,33 @@ src/controller/PlayerIdEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerIdEvent.cpp.s
 .PHONY : src/controller/PlayerIdEvent.cpp.s
 
+src/controller/PlayerLoseEvent.o: src/controller/PlayerLoseEvent.cpp.o
+
+.PHONY : src/controller/PlayerLoseEvent.o
+
+# target to build an object file
+src/controller/PlayerLoseEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.o
+.PHONY : src/controller/PlayerLoseEvent.cpp.o
+
+src/controller/PlayerLoseEvent.i: src/controller/PlayerLoseEvent.cpp.i
+
+.PHONY : src/controller/PlayerLoseEvent.i
+
+# target to preprocess a source file
+src/controller/PlayerLoseEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.i
+.PHONY : src/controller/PlayerLoseEvent.cpp.i
+
+src/controller/PlayerLoseEvent.s: src/controller/PlayerLoseEvent.cpp.s
+
+.PHONY : src/controller/PlayerLoseEvent.s
+
+# target to generate assembly for a file
+src/controller/PlayerLoseEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/PlayerLoseEvent.cpp.s
+.PHONY : src/controller/PlayerLoseEvent.cpp.s
+
 src/controller/PlayerOffEvent.o: src/controller/PlayerOffEvent.cpp.o
 
 .PHONY : src/controller/PlayerOffEvent.o
@@ -864,6 +918,33 @@ src/controller/StartTurnEvent.s: src/controller/StartTurnEvent.cpp.s
 src/controller/StartTurnEvent.cpp.s:
 	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/StartTurnEvent.cpp.s
 .PHONY : src/controller/StartTurnEvent.cpp.s
+
+src/controller/WeaponDoneEvent.o: src/controller/WeaponDoneEvent.cpp.o
+
+.PHONY : src/controller/WeaponDoneEvent.o
+
+# target to build an object file
+src/controller/WeaponDoneEvent.cpp.o:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.o
+.PHONY : src/controller/WeaponDoneEvent.cpp.o
+
+src/controller/WeaponDoneEvent.i: src/controller/WeaponDoneEvent.cpp.i
+
+.PHONY : src/controller/WeaponDoneEvent.i
+
+# target to preprocess a source file
+src/controller/WeaponDoneEvent.cpp.i:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.i
+.PHONY : src/controller/WeaponDoneEvent.cpp.i
+
+src/controller/WeaponDoneEvent.s: src/controller/WeaponDoneEvent.cpp.s
+
+.PHONY : src/controller/WeaponDoneEvent.s
+
+# target to generate assembly for a file
+src/controller/WeaponDoneEvent.cpp.s:
+	$(MAKE) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/controller/WeaponDoneEvent.cpp.s
+.PHONY : src/controller/WeaponDoneEvent.cpp.s
 
 src/controller/WormChangeAimEvent.o: src/controller/WormChangeAimEvent.cpp.o
 
@@ -2156,6 +2237,9 @@ help:
 	@echo "... src/ProxyClient.o"
 	@echo "... src/ProxyClient.i"
 	@echo "... src/ProxyClient.s"
+	@echo "... src/Room.o"
+	@echo "... src/Room.i"
+	@echo "... src/Room.s"
 	@echo "... src/common/Thread.o"
 	@echo "... src/common/Thread.i"
 	@echo "... src/common/Thread.s"
@@ -2219,12 +2303,18 @@ help:
 	@echo "... src/controller/PlayerIdEvent.o"
 	@echo "... src/controller/PlayerIdEvent.i"
 	@echo "... src/controller/PlayerIdEvent.s"
+	@echo "... src/controller/PlayerLoseEvent.o"
+	@echo "... src/controller/PlayerLoseEvent.i"
+	@echo "... src/controller/PlayerLoseEvent.s"
 	@echo "... src/controller/PlayerOffEvent.o"
 	@echo "... src/controller/PlayerOffEvent.i"
 	@echo "... src/controller/PlayerOffEvent.s"
 	@echo "... src/controller/StartTurnEvent.o"
 	@echo "... src/controller/StartTurnEvent.i"
 	@echo "... src/controller/StartTurnEvent.s"
+	@echo "... src/controller/WeaponDoneEvent.o"
+	@echo "... src/controller/WeaponDoneEvent.i"
+	@echo "... src/controller/WeaponDoneEvent.s"
 	@echo "... src/controller/WormChangeAimEvent.o"
 	@echo "... src/controller/WormChangeAimEvent.i"
 	@echo "... src/controller/WormChangeAimEvent.s"
