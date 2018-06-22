@@ -18,6 +18,7 @@ class mapWindow : public QDialog{
     Q_OBJECT
 
 private:
+    bool verifyValid(const std::string& str, const char* errorMsj);
     Ui::mapWindow *ui;
     ProxyClient& proxy;
     bool done;

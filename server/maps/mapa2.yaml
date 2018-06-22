@@ -1,0 +1,138 @@
+metadata:
+  ancho: 78.26087
+  alto: 44.52174
+  fondo: sky3.png
+objetos:
+  - vida_gusanos: 100
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 24.04348
+    y: 27.08696
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 5.217391
+    y: 19.43478
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 9.173913
+    y: 27.17391
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 15.26087
+    y: 27.13043
+  - tipo: viga
+    tamanio: grande
+    angulo: 1.570796370506287
+    x: 6.521739
+    y: 23.82609
+  - tipo: viga
+    tamanio: grande
+    angulo: 1.570796370506287
+    x: 2.565217
+    y: 15.91304
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 28.04348
+    y: 26.17391
+  - tipo: viga
+    tamanio: grande
+    angulo: 1.570796370506287
+    x: 30.65217
+    y: 22.82609
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 33.26087
+    y: 19.34783
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 30.13043
+    y: 14
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 48.43478
+    y: 25.43478
+  - tipo: viga
+    tamanio: grande
+    angulo: 0.3490658402442932
+    x: 15.53038
+    y: 12.2372
+  - tipo: viga
+    tamanio: grande
+    angulo: 0.3490658402442932
+    x: 24.61733
+    y: 14.93285
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 21.08696
+    y: 11.30435
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 28.30435
+    y: 3.608696
+  - tipo: viga
+    tamanio: grande
+    angulo: 0
+    x: 38
+    y: 8.043478
+  - tipo: gusano
+    x: 5.608696
+    y: 17.21739
+  - tipo: gusano
+    x: 22.30435
+    y: 8.869565
+  - tipo: gusano
+    x: 13.86957
+    y: 10.47826
+  - tipo: gusano
+    x: 27.91304
+    y: 12.26087
+  - tipo: gusano
+    x: 31.17391
+    y: 17.65217
+  - tipo: gusano
+    x: 11.26087
+    y: 25.56522
+  - tipo: gusano
+    x: 39.47826
+    y: 6.130435
+armas:
+  - tipo: Ataque Aereo
+    habilitada: si
+    municiones: 2
+  - tipo: Banana
+    habilitada: si
+    municiones: 5
+  - tipo: Bate de Baseball
+    habilitada: si
+    municiones: infinitas
+  - tipo: Bazooka
+    habilitada: si
+    municiones: infinitas
+  - tipo: Dinamita
+    habilitada: si
+    municiones: 5
+  - tipo: Granada Roja
+    habilitada: si
+    municiones: 10
+  - tipo: Granada Santa
+    habilitada: si
+    municiones: 2
+  - tipo: Granada Verde
+    habilitada: si
+    municiones: infinitas
+  - tipo: Mortero
+    habilitada: si
+    municiones: 10
+  - tipo: Teletransportacion
+    habilitada: si
+    municiones: infinitas

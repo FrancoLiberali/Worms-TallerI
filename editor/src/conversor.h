@@ -17,7 +17,7 @@ public:
     // Convierte un angulo a radiantes.
     // Recibe el angulo.
     // Devuelve el angulo en radianes.
-    float a_radianes(float angulo) const;
+    double a_radianes(float angulo) const;
     // Convierte un angulo de radianes a sexagesimal.
     // Recibe el angulo en radianes.
     // Devuelve el angulo en sexagesimal.
