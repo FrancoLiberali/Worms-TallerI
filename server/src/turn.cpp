@@ -345,6 +345,9 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			std::cout << "hay gusano para destruir\n";
 			//remove it from list of gusanos in simulation
 			this->players[gusanos_remover_it->first].erase(gusanos_remover_it->second);
+			if (gusanos_remover_it->second == active_gusano){
+				i = TURN_LEN;
+			}
 			if (this->players[gusanos_remover_it->first].size() == 0){
 				this->proxy.sendPlayerLoose(gusanos_remover_it->first);
 				this->players.erase(gusanos_remover_it->first);

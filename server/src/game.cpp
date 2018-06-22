@@ -37,7 +37,6 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 									0, right_limit, -down_limit)));//right
 	this->delimiters.push_back(std::move(Delimiter(this->world, 0, -down_limit, 
 							right_limit, -down_limit)));//down			
-	//this->water = new Water(this->world, 0, -down_limit + WATER_DEPPNESS, right_limit, -down_limit + WATER_DEPPNESS);
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){

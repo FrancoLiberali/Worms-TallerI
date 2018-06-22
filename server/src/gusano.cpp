@@ -16,6 +16,7 @@
 #define SINKING_STATE 3
 #define DEAD_STATE 4
 #define EXPLOTION_STATE 5
+#define MUCHO 3000
 
 Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
@@ -223,6 +224,8 @@ void Gusano::backJump(){
 }
 
 void Gusano::destroy(){
+	//para que no mande danio despues de muerto
+	this->damage_suffered = MUCHO;
 	this->sendPosition();
 	this->proxy.sendStateChange(this->id, DEAD_STATE);
 	this->to_remove_gusanos.push_back(this->number);
@@ -237,11 +240,11 @@ void Gusano::sufferDamage(unsigned int damage){
 	if (damage > this->damage_suffered){
 		this->life -= (damage - this->damage_suffered);
 		this->damage_suffered = damage;
-		this->proxy.sendLifeChange(this->id, this->life);
 		if (this->life <= 0){
-			this->sendPosition();
-			this->proxy.sendStateChange(this->id, DEAD_STATE);
-			this->to_remove_gusanos.push_back(this->number);
+			this->proxy.sendLifeChange(this->id, 0);
+			this->destroy();
+		} else {
+			this->proxy.sendLifeChange(this->id, this->life);
 		}
 	}
 }
