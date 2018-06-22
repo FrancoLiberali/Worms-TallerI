@@ -16,7 +16,6 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int
 	bodyDef.bullet = true;
 	bodyDef.position.Set(x, y);
 	this->body = this->world.CreateBody(&bodyDef);
-	//this->user_data = new UserData(type, this);
 	this->body->SetUserData((void*)&this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
@@ -27,10 +26,7 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int
 }
 
 Projectile::~Projectile(){
-	//if (this->user_data){
-		//delete this->user_data;
-		this->world.DestroyBody(this->body);
-//	}
+	this->world.DestroyBody(this->body);
 }
 
 void Projectile::exploit(){

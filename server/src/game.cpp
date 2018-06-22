@@ -22,6 +22,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	YAMLParser parser;
 	std::vector<ElementInfo> elements;
 	parser.cargarConfig(map_name, elements, this->info);
+	this->info.setAmmunition(); 
 	
 	//se agregan al mapa espacios vacios a izquierda, derecha y arriba, y abajo un pequenio espacio para el agua
 	float down_limit = info.map_height + WATER_DEPPNESS + MAP_OFFSET;
@@ -82,7 +83,7 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	this->gusanos_per_player = gusano_number;
 	if (player != 0){
 		for (; player < this->players_ids.size(); player++){
-			std::map<int, Gusano>::iterator it2 = this->players[player].begin();  
+			std::map<int, Gusano>::iterator it2 = this->players[this->players_ids[player]].begin();  
 			for (; it2 != this->players[this->players_ids[player]].end(); ++it2){
 				it2->second.addLife(25);
 			}

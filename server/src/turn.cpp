@@ -293,7 +293,6 @@ void Turn::play(int active_player, unsigned int active_gusano){
 					this->gusano_move(msj, gusano_actual);
 				}
 				else if (gusano_actual.isInactive()){
-					std::cout << "era: " << msj[0] << "\n";
 					switch (msj[0]){
 						case 3: this->gusano_jump(gusano_actual);
 								break;
@@ -309,8 +308,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 								break;
 						case 9: this->fire(active_player, gusano_actual, i);
 								break;
-						case 14: std::cout << "aca\n";
-								 this->changeRemoteObjetive(msj);
+						case 14: this->changeRemoteObjetive(msj);
 								 break;
 						
 					}

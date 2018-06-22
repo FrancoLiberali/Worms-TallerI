@@ -70,7 +70,9 @@ class GameConstants{
 
 		std::vector<int> ammunition;
 		
-		GameConstants(){
+		GameConstants(){}
+		
+		void setAmmunition(){		
 			this->ammunition.push_back(-1);
 			this->ammunition.push_back(this->bazooka_ammunition);
 			this->ammunition.push_back(this->morter_ammunition);
@@ -83,6 +85,7 @@ class GameConstants{
 			this->ammunition.push_back(this->air_attack_ammunition);
 			this->ammunition.push_back(this->teleport_ammunition);
 		}
+		
 };
 
 #endif

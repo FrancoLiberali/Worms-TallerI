@@ -1,0 +1,4 @@
+/home/franco/Documentos/taller1/tpfinal/client/build/CMakeFiles/rebuild_cache.dir
+/home/franco/Documentos/taller1/tpfinal/client/build/CMakeFiles/edit_cache.dir
+/home/franco/Documentos/taller1/tpfinal/client/build/CMakeFiles/client.dir
+/home/franco/Documentos/taller1/tpfinal/client/build/CMakeFiles/client_automoc.dir

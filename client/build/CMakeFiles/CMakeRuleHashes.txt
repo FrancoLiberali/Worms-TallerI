@@ -1,0 +1,6 @@
+# Hashes of file build rules.
+12ddf0a731e1e510c3150a624e9e29cd CMakeFiles/client_automoc
+c11ecebe889e9c80261066ad213eec10 ui_connectwindow.h
+cb55ebe1d3e13a9ebdb941a932ac72d0 ui_mainwindow.h
+6d9eafb358210c8ec2d4ad2588af98ec ui_mapwindow.h
+d92b1b16c69a6f647fb3bc72021d2342 ui_namewindow.h

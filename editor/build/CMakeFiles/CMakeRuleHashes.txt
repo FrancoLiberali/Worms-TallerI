@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+65729f79e4ddfc1079d00c61e9607c78 CMakeFiles/editor_automoc
+3141c24a8c3316afae6f5d47e206e5da ui_configarmas.h
+8d04b9f0bff1d91f6bcb27e2cb6a5cd6 ui_configgusanos.h
+ac478d6f9d9a9d7f1a7f34c7a010e568 ui_mainwindow.h

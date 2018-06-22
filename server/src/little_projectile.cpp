@@ -13,8 +13,6 @@ int damage, int radius, std::vector<int>& to_remove, MultipleProxy& proxy) :
 	fixtureDef.friction = 0;
 	fixtureDef.restitution = 0.0f;
 	
-	//fixtureDef.filter.categoryBits = 0x1000;
-	//fixtureDef.filter.maskBits = 0x0011;
 	fixtureDef.filter.groupIndex = -1;
 
 	this->body->CreateFixture(&fixtureDef);
