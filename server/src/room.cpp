@@ -30,8 +30,8 @@ void Room::add(int player_id, std::string& player_name, Proxy& player_proxy){
 
 void Room::erase(int player_id){
 	this->names.erase(player_id);
-	this->proxy.erase(player_id);
 	if (!this->active){
+		this->proxy.erase(player_id);
 		this->proxy.sendPlayerDisconnection(player_id);
 	}
 }

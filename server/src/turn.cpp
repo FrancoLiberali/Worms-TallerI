@@ -276,6 +276,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			char* msj = this->queue.pop();
 			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
 			if (msj[0] == 10){
+				std::cout << "player a desconectar: " << player_id << "\n";
 				this->disconnect(player_id, active_player, i);
 				if (this->players.size() == 1){
 					delete[] msj;
