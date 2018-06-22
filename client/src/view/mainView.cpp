@@ -123,6 +123,7 @@ void mainView::addMissile(int id, WeaponId idWeapon, int dir, int posx, int posy
 	BulletView* bullet = BulletFactory::createBulletView(idWeapon, id, dir, posx, posy,
 		 angle, screen, camera);
 	this->bullets[id] = bullet;
+	printf("Crear misiles\n");
 }
 
 

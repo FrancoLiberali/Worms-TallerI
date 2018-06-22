@@ -17,5 +17,4 @@ void WormChangeStateEvent::process(){
 	wormView->changeState(newState);
     if (newState == JUMP)
         SoundManager::Instance().playSound(JUMP_S);
-
 }

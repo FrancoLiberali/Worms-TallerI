@@ -15,7 +15,6 @@ void BazookaView::updatePos(int x, int y, int angle){
     posy = y;
     camera.updateCenter(getCenterX(), getCenterY());
     angle = angle;
-    printf("Pos %i, %i\n", posx, posy);
 }
 
 void BazookaView::update(){

@@ -5,10 +5,11 @@
 
 class TeledirigidoCommand : public ClientCommand{
 private:
+    int idPlayer;
     int x;
     int y;
 public:
-    TeledirigidoCommand(int x, int y);
+    TeledirigidoCommand(int idPlayer, int x, int y);
     void send(ProxyClient& proxy);
 };
 

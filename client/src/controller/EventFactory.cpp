@@ -31,7 +31,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case BACKGROUND_STAGE:{
       std::string name = proxy.receiveName();
-      //printf("fondo %s\n", name.c_str());
+      printf("fondo %s\n", name.c_str());
       return new BackgroundEvent(name);
     }
     case CREATE_VIGA:{

@@ -174,8 +174,9 @@ void ProxyClient::sendJoinRoom(int idRoom){
     std::cout<<"JOIN room "<<idRoom <<std::endl;
 }
 
-void ProxyClient::sendTeledirigido(int x, int y){
+void ProxyClient::sendTeledirigido(int idPlayer, int x, int y){
     sendChar(14);
+    sendInt(idPlayer);
     sendInt((x/ESCALA)*1000);
     sendInt((y/ESCALA)*1000);
     std::cout<<"enviar teledirigo "<<(x/ESCALA)*1000<<"-"<<(y/ESCALA)*1000<<std::endl;

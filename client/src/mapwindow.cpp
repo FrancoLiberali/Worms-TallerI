@@ -5,6 +5,7 @@
 
 #define INVALID_NAME_ROOM_MSJ "El nombre de la sala es invalido"
 #define EMPTY_ROOMS_MSJ "No hay salas disponibles"
+#define INVALID_MAP_MSJ "Debe elegir un mapa"
 
 mapWindow::mapWindow(ProxyClient& proxy, QWidget *parent) :
     QDialog(parent),ui(new Ui::mapWindow), proxy(proxy), done(false)
@@ -14,7 +15,6 @@ mapWindow::mapWindow(ProxyClient& proxy, QWidget *parent) :
 
 mapWindow::~mapWindow()
 {
-    //proxy.close();
     delete ui;
 }
 
@@ -39,6 +39,7 @@ void mapWindow::on_btn_crear_clicked(){
 
     int numPlayer = ui->cmb_jugadores->currentText().toInt();
     std::string nameMap = ui->cmb_maps->currentText().toStdString();
+    if (verifyValid(nameMap, INVALID_MAP_MSJ)) return;
     
     proxy.sendCreateRoom(nameRoom, numPlayer, nameMap);
     close();

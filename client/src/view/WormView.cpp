@@ -21,7 +21,7 @@ WormView::WormView(int idWorm, int idOwner, Camera& camera)
 /*optinizar esto*/
 SDL_Color getColor(int id){
 	switch (id){
-		case 0:{ SDL_Color color = {255,50,50}; return color;
+		case 0:{ SDL_Color color = {255,204,0}; return color;
 		}
 		case 1:{ SDL_Color color = {255,0,0}; return color;
 		}
@@ -157,19 +157,21 @@ void WormView::update(int idPlayer){
 		if (alive)
 			currentSprite = &this->sprites["morir"];
 
-		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame())
+		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame()){
 			currentSprite = &this->sprites["explosion"];
-
+        	SoundManager::Instance().playSound(BYE);
+		}
 		alive = false;
 		currentSprite->update();
 	}
 	
+	if (currentSprite == &this->sprites["explosion"] && currentSprite->isLastFrame())
+		return;
 	draw(idPlayer);
 }
 
 
 void WormView::draw(int idPlayer){
-	
 	TextureManager::Instance().drawFrame(currentSprite->getImageId(),
 									getXCenter()-camera.getX(),
 									getYCenter()-camera.getY(),

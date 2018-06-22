@@ -74,7 +74,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load("../resource/images/misiles/banana.png", "bullet_banana", this->getScreen().getRenderer());
 		TextureManager::Instance().load("../resource/images/misiles/fragment.png", "bullet_fragment", this->getScreen().getRenderer());
 
-		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true);
+		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true, 23);
 		SpriteConfigurator::Instance().add("bullet_dynamite", 60, 60, 129, true);
 		SpriteConfigurator::Instance().add("bullet_holy", 60, 60, 32, true);
 		SpriteConfigurator::Instance().add("bullet_ggrenade", 60, 60, 32, true);
@@ -168,6 +168,7 @@ void Boot::loadSounds(){
 	SoundManager::Instance().loadSound(TELELEPORT_S, "../resource/sounds/teleport.wav");
 	SoundManager::Instance().loadSound(BAT_IMPACT, "../resource/sounds/bat_impact.wav");
 	SoundManager::Instance().loadSound(BAT_JINGLE, "../resource/sounds/bat_jingle.wav");
+	SoundManager::Instance().loadSound(BYE, "../resource/sounds/byebye.wav");
 }
 
 SdlScreen& Boot::getScreen(){
