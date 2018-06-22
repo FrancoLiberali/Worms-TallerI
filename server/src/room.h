@@ -20,11 +20,13 @@ class Room : public Thread{
 	public:
 		Room(std::string name, std::string map_name_e, int max_players_e);
 		
+		Room(Room&& other);
+		
 		~Room();
 		
 		std::string& getName();
 		
-		void add(int player_id, std::string& player_name, Proxy* player_proxy);
+		void add(int player_id, std::string& player_name, Proxy& player_proxy);
 		
 		void erase(int player_id);
 		

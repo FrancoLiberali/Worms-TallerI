@@ -3,6 +3,9 @@
 ProtectedQueue::ProtectedQueue(){
 }
 
+ProtectedQueue::ProtectedQueue(ProtectedQueue&& other) : Queue(std::move(other)){
+}
+
 ProtectedQueue::~ProtectedQueue(){
 	this->empty();
 }

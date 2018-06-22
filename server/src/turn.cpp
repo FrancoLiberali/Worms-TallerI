@@ -49,8 +49,8 @@ void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
 		//delete gusano;
 	//}
 	this->players.erase(player_id);
-	Proxy* disconnected = this->proxy.erase(player_id);
-	disconnected->disconnect();
+	Proxy& disconnected = this->proxy.erase(player_id);
+	disconnected.disconnect();
 	this->proxy.sendPlayerDisconnection(player_id);
 	if (player_id == active_player){
 		turn_actual_len = TURN_LEN;

@@ -26,6 +26,10 @@
 
 Proxy::Proxy(Socket socket_e, Queue* queue_e) : socket(std::move(socket_e)), queue(queue_e){
 }
+
+Proxy::Proxy(Proxy&& other) : socket(std::move(other.socket)), id(other.id), queue(other.queue),
+		prev_queue(other.prev_queue){
+}
 		
 Proxy::~Proxy() noexcept{
 }

@@ -23,7 +23,6 @@ class Server : public Thread {
 		std::mutex mutex;
 		MultipleProxy not_playing;
 		BlockingQueue hall_queue;
-		std::map<int, Room*> rooms;
 		Initiador hall;
 		std::mutex keep_mutex;
 		bool keep_accepting;

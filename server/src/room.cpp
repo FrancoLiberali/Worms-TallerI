@@ -6,6 +6,11 @@ Room::Room(std::string name_e, std::string map_name_e, int max_players_e) :
 	
 }
 
+Room::Room(Room&& other) : name(std::move(other.name)), map_name(std::move(other.map_name)),
+		max_players(other.max_players), names(std::move(other.names)), proxy(std::move(other.proxy)),
+		queue(std::move(other.queue)), active(other.active){
+}
+
 Room::~Room(){
 }
 
@@ -13,10 +18,10 @@ std::string& Room::getName(){
 	return this->name;
 }
 
-void Room::add(int player_id, std::string& player_name, Proxy* player_proxy){
+void Room::add(int player_id, std::string& player_name, Proxy& player_proxy){
 	std::map<int, std::string&>::iterator names_it = names.begin();
 	for (; names_it != names.end(); ++names_it){
-		player_proxy->sendPlayerConnection(names_it->first, names_it->second);
+		player_proxy.sendPlayerConnection(names_it->first, names_it->second);
 	}
 	this->names.insert(std::pair<int, std::string&>(player_id, player_name));
 	this->proxy.sendPlayerConnection(player_id, player_name);

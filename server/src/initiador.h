@@ -18,8 +18,8 @@ class Initiador : public Thread{
 		BlockingQueue& queue;
 		MultipleProxy& not_playing;
 		std::map<int, PlayerInfo>& players;
-		std::map<int, Room*>& rooms;
 		std::mutex& mutex;
+		std::map<int, Room> rooms;
 		std::mutex keep_mutex;
 		bool keep_working;
 		int room_id = 1;
@@ -28,7 +28,7 @@ class Initiador : public Thread{
 	
 	public:
 		Initiador(BlockingQueue& queue, MultipleProxy& proxy, 
-		std::map<int, PlayerInfo>& players, std::map<int, Room*>& rooms, std::mutex& mutex);
+		std::map<int, PlayerInfo>& players, std::mutex& mutex);
 		
 		~Initiador();
 		
@@ -36,7 +36,7 @@ class Initiador : public Thread{
 		
 		virtual void stop();
 		
-		void sendAllRoomsInfo(int player_id, Proxy* proxy);
+		void sendAllRoomsInfo(int player_id, Proxy& proxy);
 		
 };
 
