@@ -2,13 +2,13 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
+#include "../config.h"
 #define POS_INICIAL QPointF(10,10)
 
 Gusano::Gusano() : eliminado(false)
 {
     // Seteando la imagen.
-    setPixmap(QPixmap("/usr/local/recursos/gusano.png").scaled(32,\
+    setPixmap(QPixmap(_INSTALL_PATH_ "/recursos/gusano.png").scaled(32,\
         32, Qt::IgnoreAspectRatio, Qt::FastTransformation));
 
     // Posicion inicial dentro del editor.

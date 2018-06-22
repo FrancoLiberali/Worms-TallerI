@@ -1,12 +1,14 @@
 #include "vigagrande.h"
 #include <QGraphicsScene>
 #include <iostream>
+#include "../config.h"
+
 #define POS_INICIAL QPointF(20,20)
 
 VigaGrande::VigaGrande(int angulo) : Viga(angulo)
 {
     // Setear las imagenes.
-    QPixmap viga("/usr/local/recursos/viga.png");
+    QPixmap viga(_INSTALL_PATH_ "/recursos/viga.png");
     setPixmap(viga);
     // Inicializar.
     setPos(POS_INICIAL);

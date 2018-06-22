@@ -10,6 +10,7 @@
 #include <iostream>
 #include <QMessageBox>
 #include <QFileInfo>
+#include "../config.h"
 
 #define MIN_ANGULO 0
 #define MAX_ANGULO 360
@@ -33,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->show();
     // Imagen de fondo default.
     ui->graphicsView->setBackgroundBrush(QBrush(
-        QPixmap("/usr/local/recursos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
+        QPixmap(_INSTALL_PATH_ "/recursos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
     this->setWindowTitle("Editor");
 
     // Cargar configuracion default de armas.

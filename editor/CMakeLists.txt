@@ -3,7 +3,6 @@ PROJECT(editor CXX)
 
 set (CMAKE_CXX_STANDARD 11)
 set(CMAKE_AUTOMOC ON)
-set(INSTALL_PATH "/usr/local")
 
 # Find the QtWidgets library
 find_package(Qt5Widgets)
@@ -54,6 +53,18 @@ add_executable(editor
 target_link_libraries(editor Qt5::Widgets)
 # Use the Widgets module from YAML.
 target_link_libraries(editor yaml-cpp)
+
+# Puedo definir funciones desde la linea de comando ejecutando `cmake .. -DINSTALL_PATH=<dir>`
+if(NOT INSTALL_PATH)
+  set(INSTALL_PATH "/usr/local")
+endif(NOT INSTALL_PATH)
+
+
+# El primero es el template, el segundo es el destino
+configure_file(
+  "${PROJECT_SOURCE_DIR}/config.h.in"
+  "${PROJECT_SOURCE_DIR}/config.h"
+)
 
 # Copio la carpeta de recursos al directorio de instalación.
 install(DIRECTORY recursos DESTINATION ${INSTALL_PATH})

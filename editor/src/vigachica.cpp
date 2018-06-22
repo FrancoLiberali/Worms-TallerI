@@ -1,12 +1,13 @@
 #include "vigachica.h"
 #include <QPoint>
 #include "conversor.h"
+#include "../config.h"
 #define POS_INICIAL QPointF(20,20)
 
 VigaChica::VigaChica(int angulo) : Viga(angulo)
 {
     // Setear las imagenes.
-    QPixmap viga("/usr/local/recursos/vigac.png");
+    QPixmap viga(_INSTALL_PATH_ "/recursos/vigac.png");
     setPixmap(viga);
     // Inicializar.
     setRotation((-1)*angulo);
