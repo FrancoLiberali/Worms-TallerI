@@ -5,7 +5,7 @@ SdlScreen::SdlScreen() {
 }
 
 SdlScreen::~SdlScreen(){
-    SDL_DestroyTexture(this->mTexture);	
+    //SDL_DestroyTexture(this->mTexture);	
 	SDL_DestroyWindow(m_pWindow);
 	SDL_DestroyRenderer(renderer);
     IMG_Quit();

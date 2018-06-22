@@ -11,6 +11,10 @@
 #include "common/Queue.h"
 #include "PreGameManager.h"
 
+#include <chrono>
+#include <ctime>
+#include <thread>
+
 #include <iostream>
 
 GameClient::GameClient(ProxyClient& proxy, std::string nameClient)
@@ -59,7 +63,10 @@ void GameClient::run(){
 	printf("Espere a otros jugadores\n");
 	//Game loop
 	SDL_Event e;
+	double extra = 0;
 	while(clientView.isOpen() ){
+		auto t_start = std::chrono::high_resolution_clock::now();
+
 		while(SDL_PollEvent(&e) != 0)
 			controller.handle(e);
 		//Chequeo del mouse para saber si se debe mover la camara
@@ -69,7 +76,17 @@ void GameClient::run(){
 			ehandler.add(eventQueue.pop());
 		}
 		clientView.update();
-		//AGREGAR SLEEP
+
+		auto t_end = std::chrono::high_resolution_clock::now();
+		double time_delta = (std::chrono::duration<double, std::micro>(t_end-t_start)).count();
+		
+		int to_sleep = int(double(1000000/60) - time_delta - extra);
+		if (to_sleep >= 0){
+			std::this_thread::sleep_for(std::chrono::microseconds(to_sleep));
+			extra = 0;
+		} else {
+			extra = -to_sleep;
+		}
 	}
 	commandsQueue.push(nullptr);
 	eventReceiver.stop();
