@@ -10,8 +10,8 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, double desired
 	double new_x = position.x;
 	double new_y = position.y;
 	double pi = M_PI;
-	//actual_angle = actual_angle % (2 * pi); ESTABA CON ESTOOOO
-	//desired_angle = desired_angle % (2 * pi);
+	actual_angle = this->normalizate(actual_angle);
+	desired_angle = this->normalizate(desired_angle);
 	if ((actual_angle < -pi/2 && actual_angle > -3*pi/2) || (actual_angle > pi/2 && actual_angle < 3*pi/2)){
 		new_y += 0.5 * cos(actual_angle);
 	} else {
@@ -55,4 +55,18 @@ bool RotatingState::isInactive(){
 
 bool RotatingState::isFalling(){
 	return false;
+}
+
+float RotatingState::normalizate(float angle){
+	double pi = M_PI;
+	if (angle < 0){
+		while(angle < -2 * pi){
+			angle += 2 * pi;
+		}
+	} else {
+		while(angle > 2 * pi){
+			angle -= 2 * pi;
+		}
+	}
+	return angle;
 }

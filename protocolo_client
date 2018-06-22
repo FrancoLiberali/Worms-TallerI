@@ -73,6 +73,7 @@ MENSAJES QUE QUEDARON PENDIENTES
 
 MODIFICAR POSICION DE TELEDIRIGIDO
 	char en 14
+	int id de jugador
 	int x
 	int y
 

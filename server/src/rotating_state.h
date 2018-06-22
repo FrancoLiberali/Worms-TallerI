@@ -9,6 +9,9 @@ class RotatingState : public GusanoState{
 		b2Body* body;
 		float desired_angle;
 		b2Vec2 new_position;
+		
+		//lleva a un angulo cualquiera al rango (-2pi, 2pi)
+		float normalizate(float angle);
 	public:
 		RotatingState(b2Body* body_entry, b2Vec2 position, double desired_angle_entry);
 		

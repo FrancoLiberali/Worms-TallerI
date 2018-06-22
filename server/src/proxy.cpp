@@ -11,7 +11,6 @@
 
 #define SIZE_INT 4
 #define DISCONNECT_TAM 5
-#define GAME_INFO_TAM 9
 #define MOVE_TAM 9
 #define JUMP_TAM 5
 #define WEAPON_TAM 9
@@ -65,9 +64,6 @@ void Proxy::receive_event(){
 	try{
 		char event = this->receive_char();
 		switch (event){
-			case 1: //se recibe el map_id y el numero de jugadores
-					this->receive_event_info(event, GAME_INFO_TAM);
-					break;
 			case 2: //se recibe que se quiere mover un gusano
 					this->receive_event_info(event, MOVE_TAM);
 					break;
@@ -123,6 +119,7 @@ void Proxy::receive_event(){
 					break;
 				}
 			case 14://se recibe que se quiere modificar el apuntado del teledirigido
+					std::cout << "llego 14 \n";
 					this->receive_event_info(event, TELE_TAM);
 					break;	
 			}

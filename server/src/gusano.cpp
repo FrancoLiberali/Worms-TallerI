@@ -50,6 +50,7 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
     fixtureDef.density = 0.0f;
     fixtureDef.restitution = 0.0f;
     fixtureDef.isSensor = true;
+    fixtureDef.filter.groupIndex = -5;
     b2Fixture* footSensorFixture = this->body->CreateFixture(&fixtureDef);
     this->foot_sensor_data = new int(1);
     footSensorFixture->SetUserData((void*)this->foot_sensor_data);
@@ -287,6 +288,8 @@ void Gusano::finishContact(float ground_angle){
 		this->state = new JumpingState(this->body, this);
 		this->proxy.sendStateChange(this->id, JUMPING_STATE);
 		this->body->SetGravityScale(1);
+		//se setea una pequenia velocidad para que el world lo comience a tener en cuenta para la simulacion
+		this->body->SetLinearVelocity(b2Vec2(0,-0.1));
 	}
 	if (cant_contacts == 1){
 		printf("solo toca a 1\n");
@@ -319,6 +322,7 @@ void Gusano::teleport(b2Vec2 new_position){
 	this->state = new JumpingState(this->body, this);
 	this->proxy.sendStateChange(this->id, JUMPING_STATE);
 	this->body->SetGravityScale(1);
+	//se setea una pequenia velocidad para que el world lo comience a tener en cuenta para la simulacion
 	this->body->SetLinearVelocity(b2Vec2(0,-0.1));
 }
 		

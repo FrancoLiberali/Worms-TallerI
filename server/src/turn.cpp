@@ -28,6 +28,7 @@
 #define MAX_POWER 5
 #define GUSANO_HEIGHT 0.5
 #define GUSANO_WIDTH 0.25
+#define MAP_OFFSET 25
 
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano>>& players_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
@@ -227,13 +228,17 @@ void Turn::fire_bat(Gusano& gusano, b2Vec2 position, int direction){
 }
 
 void Turn::fire_air_attack(){
-	for (int i = 0; i < this->info.air_attack_cant_missiles; i++){
-		AirAttackMissile* missile = new AirAttackMissile(this->world, this->actual_max_projectile, 
-						this->remote_position.x + this->info.air_attack_missiles_distance * (i - (int) this->info.air_attack_cant_missiles / 2),
-						this->info, this->to_remove_projectiles, this->proxy);
-		this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(missile)));
-		this->actual_max_projectile++;
+	float x_to = this->remote_position.x;
+	float y_to = this->remote_position.y;
+	if (x_to > MAP_OFFSET  &&  x_to < this->info.map_widht + MAP_OFFSET && y_to != 0){
+		for (int i = 0; i < this->info.air_attack_cant_missiles; i++){
+			AirAttackMissile* missile = new AirAttackMissile(this->world, this->actual_max_projectile, 
+							x_to + this->info.air_attack_missiles_distance * (i - (int) this->info.air_attack_cant_missiles / 2),
+							this->info, this->to_remove_projectiles, this->proxy);
+			this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
+							std::unique_ptr<Projectile>(missile)));
+			this->actual_max_projectile++;
+		}
 	}
 }
 
@@ -241,7 +246,7 @@ void Turn::teleport(Gusano& gusano){
 	std::cout << "usando teleporter\n";
 	float x_to = this->remote_position.x;
 	float y_to = this->remote_position.y;
-	if (x_to != 0 && y_to != 0){
+	if (x_to > MAP_OFFSET  &&  x_to < this->info.map_widht + MAP_OFFSET && y_to != 0){
 		//chequea si el lugar donde se quiere poner al gusano no se encuentra ocupado
 		QueryCallback callback;
 		b2AABB aabb;
@@ -288,6 +293,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 					this->gusano_move(msj, gusano_actual);
 				}
 				else if (gusano_actual.isInactive()){
+					std::cout << "era: " << msj[0] << "\n";
 					switch (msj[0]){
 						case 3: this->gusano_jump(gusano_actual);
 								break;
@@ -303,8 +309,10 @@ void Turn::play(int active_player, unsigned int active_gusano){
 								break;
 						case 9: this->fire(active_player, gusano_actual, i);
 								break;
-						case 14: this->changeRemoteObjetive(msj);
+						case 14: std::cout << "aca\n";
+								 this->changeRemoteObjetive(msj);
 								 break;
+						
 					}
 				}
 			}
