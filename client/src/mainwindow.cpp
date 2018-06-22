@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "namewindow.h"
+#include "../config.h"
+
 
 MainWindow::MainWindow(ProxyClient& proxy, std::string& name, QWidget *parent) :
     QMainWindow(parent),ui(new Ui::MainWindow), proxy(proxy), name(name)
@@ -12,7 +14,7 @@ MainWindow::MainWindow(ProxyClient& proxy, std::string& name, QWidget *parent) :
     this->setWindowTitle("Worms");
 
     // Setear imagen inicio.
-    ui->label->setPixmap(QPixmap("../resource/images/a.png"));
+    ui->label->setPixmap(QPixmap(_INSTALL_PATH_ "/resource/images/a.png"));
     ui->label->show();
 
     this->nameW = new nameWindow(proxy, name);

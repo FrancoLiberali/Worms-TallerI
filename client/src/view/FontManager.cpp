@@ -1,5 +1,6 @@
 #include "FontManager.h"
 #include "SdlException.h"
+#include "../../config.h"
 
 void FontManager::init(SDL_Renderer * renderer)
 {
@@ -11,7 +12,7 @@ void FontManager::init(SDL_Renderer * renderer)
 
 void FontManager::openFonts()
 {
-	TTF_Font * aFont = TTF_OpenFont( "../resource/font/arial.ttf", 11 );
+	TTF_Font * aFont = TTF_OpenFont(_INSTALL_PATH_ "/resource/font/arial.ttf", 11 );
 	if (!aFont)
 		throw SdlException("No hay fuente SDL_ttf Error", TTF_GetError());
 	map["arial"] = aFont;

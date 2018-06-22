@@ -5,10 +5,7 @@
 #include <map>
 #include <SDL2/SDL.h>
 #include "TextureManager.h"
-
-#define ARIAL16 "../resource/images/arial16.png"
-
-#define ARIAL12 "../resource/images/arial12.png"
+#include "../../config.h"
 
 enum Tfont{
 	Arial16,

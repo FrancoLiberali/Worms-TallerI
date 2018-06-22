@@ -4,6 +4,7 @@
 #include "TextManager.h"
 #include "SpriteConfigurator.h"
 #include "../sound/SoundManager.h"
+#include "../../config.h"
 #include <iostream>
 
 #define W_WIDHT 800
@@ -27,22 +28,22 @@ void Boot::init(){
 void Boot::loadSprites(){
 	try {
 		// worm
-		TextureManager::Instance().load("../resource/images/wwalk.png", "caminar", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wdie.png", "morir", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wflyup.png", "saltar", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wwalk.png", "caminar", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wdie.png", "morir", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wflyup.png", "saltar", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/grave2.png", "cripta", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wstatic.png", "static", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbaz.png", "bazooka", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbaz.png", "mortero", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wdynbak.png", "dinamita", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wthrgrn.png", "ggranada", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wthrcls.png", "rgranada", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wthrhgr.png", "holy", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wairbak.png", "radio", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wbsbaim.png", "bate", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wtelbak.png", "teleport", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/wthrban.png", "banana", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/grave2.png", "cripta", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wstatic.png", "static", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wbaz.png", "bazooka", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wbaz.png", "mortero", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wdynbak.png", "dinamita", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrgrn.png", "ggranada", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrcls.png", "rgranada", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrhgr.png", "holy", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wairbak.png", "radio", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wbsbaim.png", "bate", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wtelbak.png", "teleport", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrban.png", "banana", screen.getRenderer());
 
 
 		SpriteConfigurator::Instance().add("caminar", 60, 60, 15, true);
@@ -64,15 +65,15 @@ void Boot::loadSprites(){
 
 		// projectiles
 
-		TextureManager::Instance().load("../resource/images/misiles/bazzoka.png", "bullet_bazooka", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/mortar.png", "bullet_mortar", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/airmisl.png", "bullet_airmisl", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/dynamite.png", "bullet_dynamite", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/hgrenade.png", "bullet_holy", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/ggrenade.png", "bullet_ggrenade", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/rgrenade.png", "bullet_rgrenade", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/banana.png", "bullet_banana", this->getScreen().getRenderer());
-		TextureManager::Instance().load("../resource/images/misiles/fragment.png", "bullet_fragment", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/bazzoka.png", "bullet_bazooka", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/mortar.png", "bullet_mortar", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/airmisl.png", "bullet_airmisl", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/dynamite.png", "bullet_dynamite", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/hgrenade.png", "bullet_holy", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/ggrenade.png", "bullet_ggrenade", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/rgrenade.png", "bullet_rgrenade", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/banana.png", "bullet_banana", this->getScreen().getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/misiles/fragment.png", "bullet_fragment", this->getScreen().getRenderer());
 
 		SpriteConfigurator::Instance().add("bullet_airmisl", 60, 60, 32, true, 23);
 		SpriteConfigurator::Instance().add("bullet_dynamite", 60, 60, 129, true);
@@ -85,16 +86,16 @@ void Boot::loadSprites(){
 		SpriteConfigurator::Instance().add("bullet_fragment", 60, 60, 6, true);
 		//#define RESOURCES_ROOT @INSTALL_PATH@
 		//Vigas
-		TextureManager::Instance().load("../resource/images/vigah.png", "viga", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
-		TextureManager::Instance().load("../resource/images/sky.png", "sky",screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/win.png", "win", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/lose.png", "lose", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/sky.png", "sky",screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/win.png", "win", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/lose.png", "lose", screen.getRenderer());
 
 		// explosiones
-		TextureManager::Instance().load("../resource/images/circle25.png", "circle25", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/explotion.png", "explotion", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/circle25.png", "circle25", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/explotion.png", "explotion", screen.getRenderer());
 
 		SpriteConfigurator::Instance().add("circle25", 50, 50, 8, false);
 		SpriteConfigurator::Instance().add("explotion", 134, 134, 12, false);
@@ -107,41 +108,41 @@ void Boot::loadSprites(){
 void Boot::loadMenuWeapon(){
 	try {
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/MenuWeapon.png", "MenuWeapon", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/MenuWeapon.png", "MenuWeapon", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/aim.png", "aim", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/aim.png", "aim", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/ok.png", "ok", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/ok.png", "ok", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.1.png", "bazooka.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/bazooka.2.png", "bazooka.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/bazooka.1.png", "bazooka.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/bazooka.2.png", "bazooka.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.1.png", "mortar.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/mortar.2.png", "mortar.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/mortar.1.png", "mortar.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/mortar.2.png", "mortar.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.1.png", "g_grenade.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/grenade.2.png", "g_grenade.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/grenade.1.png", "g_grenade.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/grenade.2.png", "g_grenade.2", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.1.png", "r_grenade.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/cluster.2.png", "r_grenade.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/cluster.1.png", "r_grenade.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/cluster.2.png", "r_grenade.2", screen.getRenderer());
 		
-		TextureManager::Instance().load("../resource/images/menuWeapon/banana.1.png", "banana.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/banana.2.png", "banana.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/banana.1.png", "banana.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/banana.2.png", "banana.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.1.png", "hgrenade.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/hgrenade.2.png", "hgrenade.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/hgrenade.1.png", "hgrenade.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/hgrenade.2.png", "hgrenade.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.1.png", "dynamite.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/dynamite.2.png", "dynamite.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/dynamite.1.png", "dynamite.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/dynamite.2.png", "dynamite.2", screen.getRenderer());
 	
-		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.1.png", "baseball.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/baseball.2.png", "baseball.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/baseball.1.png", "baseball.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/baseball.2.png", "baseball.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.1.png", "airstrke.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/airstrke.2.png", "airstrke.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/airstrke.1.png", "airstrke.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/airstrke.2.png", "airstrke.2", screen.getRenderer());
 
-		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.1.png", "teleport.1", screen.getRenderer());
-		TextureManager::Instance().load("../resource/images/menuWeapon/teleport.2.png", "teleport.2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/teleport.1.png", "teleport.1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/menuWeapon/teleport.2.png", "teleport.2", screen.getRenderer());
 
 		/*inicia el manejo del texto*/
 		TextManager::Instance().init(screen.getRenderer());
@@ -157,18 +158,18 @@ void Boot::loadMenuWeapon(){
 }
 
 void Boot::loadSounds(){
-	SoundManager::Instance().loadMusic(BACKGROUND, "../resource/sounds/background.wav");
-	SoundManager::Instance().loadSound(EXPLOTION, "../resource/sounds/explotion2.wav");
-	SoundManager::Instance().loadSound(FUSE, "../resource/sounds/FUSE.wav");
-	SoundManager::Instance().loadSound(HOLY_S, "../resource/sounds/holy.wav");
-	SoundManager::Instance().loadSound(BANANA_S, "../resource/sounds/BananaImpact.wav");
-	SoundManager::Instance().loadSound(JUMP_S, "../resource/sounds/jump.wav");
-	SoundManager::Instance().loadSound(SHOOT, "../resource/sounds/handgunfire.wav");
-	SoundManager::Instance().loadSound(COMMUNICATOR, "../resource/sounds/communicator.wav");
-	SoundManager::Instance().loadSound(TELELEPORT_S, "../resource/sounds/teleport.wav");
-	SoundManager::Instance().loadSound(BAT_IMPACT, "../resource/sounds/bat_impact.wav");
-	SoundManager::Instance().loadSound(BAT_JINGLE, "../resource/sounds/bat_jingle.wav");
-	SoundManager::Instance().loadSound(BYE, "../resource/sounds/byebye.wav");
+	SoundManager::Instance().loadMusic(BACKGROUND, _INSTALL_PATH_ "/resource/sounds/background.wav");
+	SoundManager::Instance().loadSound(EXPLOTION, _INSTALL_PATH_ "/resource/sounds/explotion2.wav");
+	SoundManager::Instance().loadSound(FUSE, _INSTALL_PATH_ "/resource/sounds/FUSE.wav");
+	SoundManager::Instance().loadSound(HOLY_S, _INSTALL_PATH_ "/resource/sounds/holy.wav");
+	SoundManager::Instance().loadSound(BANANA_S, _INSTALL_PATH_ "/resource/sounds/BananaImpact.wav");
+	SoundManager::Instance().loadSound(JUMP_S, _INSTALL_PATH_ "/resource/sounds/jump.wav");
+	SoundManager::Instance().loadSound(SHOOT, _INSTALL_PATH_ "/resource/sounds/handgunfire.wav");
+	SoundManager::Instance().loadSound(COMMUNICATOR, _INSTALL_PATH_ "/resource/sounds/communicator.wav");
+	SoundManager::Instance().loadSound(TELELEPORT_S, _INSTALL_PATH_ "/resource/sounds/teleport.wav");
+	SoundManager::Instance().loadSound(BAT_IMPACT, _INSTALL_PATH_ "/resource/sounds/bat_impact.wav");
+	SoundManager::Instance().loadSound(BAT_JINGLE, _INSTALL_PATH_ "/resource/sounds/bat_jingle.wav");
+	SoundManager::Instance().loadSound(BYE, _INSTALL_PATH_ "/resource/sounds/byebye.wav");
 }
 
 SdlScreen& Boot::getScreen(){

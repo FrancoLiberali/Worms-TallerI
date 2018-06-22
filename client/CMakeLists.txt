@@ -1,9 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
-PROJECT(worm_client CXX)
+PROJECT(worms-client CXX)
 
-#set (CMAKE_CXX_STANDARD 11)
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -pthread")
-
 set(CMAKE_AUTOMOC ON)
 
 # Find the QtWidgets library
@@ -11,7 +9,6 @@ find_package(Qt5Widgets)
 
 message("[INFO] La raiz del proyecto es ${PROJECT_SOURCE_DIR}")
 
-# Agrego ej3/include a la lista de directorios de includes
 include_directories(${PROJECT_SOURCE_DIR}/src)
 
 # Esta macro toma cada uno los parámetros y ejecuta *uic* sobre ellos
@@ -36,7 +33,7 @@ message("Headers generados: ${UIS_HEADERS}")
 # Agrego los recursos.
 qt5_add_resources(RESOURCES src/recursos.qrc)
 
-add_executable(client
+add_executable(worms-client
 	src/main.cpp
 	src/mapwindow.cpp
 	src/namewindow.cpp
@@ -119,14 +116,14 @@ add_executable(client
 	src/view/bullets/DynamiteView.cpp
 	src/view/bullets/AirMissileView.cpp
 	src/view/PowerView.cpp
-
 	src/sound/SoundManager.cpp
-
-  ${UIS_HEADERS}
-
-
+	${UIS_HEADERS}
 )
 
+
+
+
+#busca que las librerias necesarias se encuentren instaldas
 find_package(PkgConfig REQUIRED)
 
 INCLUDE(FindPkgConfig)
@@ -137,5 +134,21 @@ PKG_SEARCH_MODULE(SDL2MIXER REQUIRED SDL2_mixer>=2.0.0)
 PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
 
 # Use the Widgets module from Qt 5.
-target_link_libraries(client Qt5::Widgets SDL2 SDL2_image SDL2_mixer)
+target_link_libraries(worms-client Qt5::Widgets)
 
+#Agrego las librearias de SDL2
+target_link_libraries(worms-client SDL2 SDL2_image SDL2_mixer)
+
+# Definiendo la dirección de instalacicón `cmake .. -DINSTALL_PATH=<dir>`
+if(NOT INSTALL_PATH)
+  set(INSTALL_PATH "/usr/local")
+endif(NOT INSTALL_PATH)
+
+# El primero es el template, el segundo es el destino
+configure_file(
+  "${PROJECT_SOURCE_DIR}/config.h.in"
+  "${PROJECT_SOURCE_DIR}/config.h"
+)
+
+# Copio la carpeta de recursos al directorio de instalación.
+install(DIRECTORY resource DESTINATION ${INSTALL_PATH})

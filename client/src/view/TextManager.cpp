@@ -6,7 +6,6 @@ void TextManager::init(SDL_Renderer * renderer){
 	this->renderer = renderer;
 }
 
-
 void TextManager::loadFont(Tfont fuente){
 	std::string path;
 	std::string idFont;
@@ -18,7 +17,7 @@ void TextManager::loadFont(Tfont fuente){
 	stFont font;
 
 	if (fuente == Arial16){
-		path = ARIAL16;
+		path = _INSTALL_PATH_ "/resource/images/arial16.png";
 		idFont = "arial16";
 		h = 256;
 		w = 256;
@@ -27,7 +26,7 @@ void TextManager::loadFont(Tfont fuente){
 	}
 
 	if (fuente == Arial12){
-		path = ARIAL12;
+		path = _INSTALL_PATH_ "/resource/images/arial12.png";
 		idFont = "arial12";
 		h = 192;
 		w = 192;
