@@ -32,6 +32,8 @@
 *.app
 
 server/build/*
+client/build/*
+editor/build/*
 server/build/CMakeFiles/*
 server/build/CMakeFiles/tp.dir/*
 server/test/runner
