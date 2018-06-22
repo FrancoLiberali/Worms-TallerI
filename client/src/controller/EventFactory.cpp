@@ -44,7 +44,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case CREATE_STAGE:{
       int widht = proxy.receiveWidht();
       int height = proxy.receiveHeight();
-      ///printf("DIMENSIONES %i, %i\n", widht, height);
+      printf("DIMENSIONES %i, %i\n", widht, height);
       return new CreateStageEvent(widht, height) ;
     }
     case CREATE_WORM:{

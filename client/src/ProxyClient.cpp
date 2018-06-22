@@ -49,11 +49,13 @@ int ProxyClient::receiveInt(){
 
 int ProxyClient::receivePosY(){
     int pos_mm = receiveInt();
+    //printf("Posy: %i\n", pos_mm);
     return (-pos_mm*ESCALA/1000);
 }
 
 int ProxyClient::receivePosX(){
     int pos_mm = receiveInt();
+    //printf("Posx: %i\n", pos_mm);
     return (pos_mm*ESCALA/1000);
 }
 
@@ -71,11 +73,11 @@ char ProxyClient::receiveChar(){
 
 int ProxyClient::receiveWidht(){
     int w = receiveInt();
-    return w*ESCALA;
+    return w*ESCALA/1000;
 }
 int ProxyClient::receiveHeight(){
     int h = receiveInt();
-    return h*ESCALA;
+    return h*ESCALA/1000;
 }
 
 
@@ -174,6 +176,7 @@ void ProxyClient::sendJoinRoom(int idRoom){
 
 void ProxyClient::sendTeledirigido(int x, int y){
     sendChar(14);
-    sendInt(x);
-    sendInt(y);
+    sendInt((x/ESCALA)*1000);
+    sendInt((y/ESCALA)*1000);
+    std::cout<<"enviar teledirigo "<<(x/ESCALA)*1000<<"-"<<(y/ESCALA)*1000<<std::endl;
 }

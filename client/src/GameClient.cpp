@@ -30,7 +30,6 @@ void GameClient::run(){
 	EventHandler ehandler;
 
 
-
 	//cargamos todas las texturas y el screen principal
 	Boot boot;
 	boot.init();

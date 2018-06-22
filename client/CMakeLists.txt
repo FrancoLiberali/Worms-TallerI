@@ -117,6 +117,7 @@ add_executable(client
 	src/view/bullets/BananaView.cpp
 	src/view/bullets/HolyView.cpp
 	src/view/bullets/DynamiteView.cpp
+	src/view/bullets/AirMissileView.cpp
 	src/view/PowerView.cpp
 
 	src/sound/SoundManager.cpp

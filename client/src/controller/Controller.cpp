@@ -59,6 +59,8 @@ void Controller::handle(SDL_Event& e) {
                 Weapon* weapon = view.retrieveWeaponClicked(mousePointer);
                 if (weapon)
                     model.WormWeapon((int)weapon->getId());
+            }else{
+                model.teledirigido(e.motion.x, e.motion.y);
             }
             break;
 		}

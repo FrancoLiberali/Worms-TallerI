@@ -7,6 +7,7 @@
 #include "BananaView.h"
 #include "HolyView.h"
 #include "DynamiteView.h"
+#include "AirMissileView.h"
 
 #include "FragmentView.h"
 
@@ -43,6 +44,8 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 return new DynamiteView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case AIRATTACK:
+                printf("Pos %i - %i\n", posx, posy);
+                return new AirMissileView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case FRAGMENT:
                 return new FragmentView(id, dir, posx, posy, angle, screen, camera);
