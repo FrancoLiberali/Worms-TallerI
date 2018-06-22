@@ -1,8 +1,0 @@
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/install.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/list_install_components.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/rebuild_cache.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/editor.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/edit_cache.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/install/strip.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/install/local.dir
-/home/franco/Documentos/taller1/tpfinal/editor/build/CMakeFiles/editor_automoc.dir
