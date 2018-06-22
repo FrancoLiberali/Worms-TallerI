@@ -11,7 +11,7 @@
 
 class MultipleProxy{
 	private:
-		std::map<int, Proxy*> proxys;
+		std::map<int, Proxy&> proxys;
 		
 	public:
 		// Crea el objeto, el cual tiene la finalidad de contener
@@ -23,11 +23,11 @@ class MultipleProxy{
 		
 		// Agrega un proxy a la lista de proxys a la cual se le enviaran 
 		// todos los mensajes
-		void add(int id, Proxy* proxy);
+		void add(int id, Proxy& proxy);
 		
 		// Saca un jugador de la lista de proxys segun su id, para que
 		// deje de recibir los mensajes del juego
-		Proxy* erase(int id);
+		Proxy& erase(int id);
 		
 		void addNewQueue(ProtectedQueue* queue);
 		

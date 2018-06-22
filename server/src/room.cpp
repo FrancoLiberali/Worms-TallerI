@@ -13,10 +13,10 @@ std::string& Room::getName(){
 	return this->name;
 }
 
-void Room::add(int player_id, std::string& player_name, Proxy* player_proxy){
+void Room::add(int player_id, std::string& player_name, Proxy& player_proxy){
 	std::map<int, std::string&>::iterator names_it = names.begin();
 	for (; names_it != names.end(); ++names_it){
-		player_proxy->sendPlayerConnection(names_it->first, names_it->second);
+		player_proxy.sendPlayerConnection(names_it->first, names_it->second);
 	}
 	this->names.insert(std::pair<int, std::string&>(player_id, player_name));
 	this->proxy.sendPlayerConnection(player_id, player_name);

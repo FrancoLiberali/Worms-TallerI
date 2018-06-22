@@ -89,6 +89,8 @@ class Proxy{
 		
 		void send_int(int to_send);
 		
+		Proxy(Proxy&& other);
+		
 };
 
 #endif

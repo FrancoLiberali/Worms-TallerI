@@ -24,7 +24,7 @@ class Room : public Thread{
 		
 		std::string& getName();
 		
-		void add(int player_id, std::string& player_name, Proxy* player_proxy);
+		void add(int player_id, std::string& player_name, Proxy& player_proxy);
 		
 		void erase(int player_id);
 		

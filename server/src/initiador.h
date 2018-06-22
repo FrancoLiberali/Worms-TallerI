@@ -36,7 +36,7 @@ class Initiador : public Thread{
 		
 		virtual void stop();
 		
-		void sendAllRoomsInfo(int player_id, Proxy* proxy);
+		void sendAllRoomsInfo(int player_id, Proxy& proxy);
 		
 };
 
