@@ -5,7 +5,7 @@
 #define INFO "[Info] ​%s"
 
 Server::Server(const char* port, std::mutex& syslog_mutex_e, std::vector<std::string>& maps_e) : 
-		syslog_mutex(syslog_mutex_e), maps(maps_e), hall(hall_queue, not_playing, players, rooms, mutex){
+		syslog_mutex(syslog_mutex_e), maps(maps_e), hall(hall_queue, not_playing, players, mutex){
 	this->socket.bind(port);
 	
 	this->hall.start();
@@ -50,15 +50,6 @@ void Server::stop(){
 	}
 	this->hall.stop();
 	this->hall.join();
-	std::map<int, Room*>::iterator rooms_it = this->rooms.begin();
-	for (; rooms_it != this->rooms.end(); ++rooms_it){
-		if (rooms_it->second->isActive()){
-			//para las que se estan jugando detener el juego
-			//rooms_it->second->stop();
-			rooms_it->second->join();
-		}
-		delete rooms_it->second;
-	}
 	std::map<int, PlayerInfo>::iterator it = players.begin();
 	for (; it != players.end(); ++it){
 		it->second.receiver.stop();

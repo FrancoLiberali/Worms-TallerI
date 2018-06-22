@@ -11,6 +11,8 @@ class Queue{
 	public:
 		Queue() {}
 		
+		Queue(Queue&& other) : queue(std::move(other.queue)){}
+		
 		~Queue() {}
 		
 		virtual bool isEmpty() = 0;

@@ -20,6 +20,8 @@ class Room : public Thread{
 	public:
 		Room(std::string name, std::string map_name_e, int max_players_e);
 		
+		Room(Room&& other);
+		
 		~Room();
 		
 		std::string& getName();

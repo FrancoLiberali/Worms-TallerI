@@ -6,6 +6,11 @@ Room::Room(std::string name_e, std::string map_name_e, int max_players_e) :
 	
 }
 
+Room::Room(Room&& other) : name(std::move(other.name)), map_name(std::move(other.map_name)),
+		max_players(other.max_players), names(std::move(other.names)), proxy(std::move(other.proxy)),
+		queue(std::move(other.queue)), active(other.active){
+}
+
 Room::~Room(){
 }
 

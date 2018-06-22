@@ -9,6 +9,8 @@ class ProtectedQueue: public Queue{
 	public:
 		ProtectedQueue();
 		
+		ProtectedQueue(ProtectedQueue&& other);
+		
 		~ProtectedQueue();
 		
 		virtual bool isEmpty(); 
