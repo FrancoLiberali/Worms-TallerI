@@ -96,34 +96,33 @@ void YAMLParser::cargarMapa(const YAML::Node& nodeVect, std::vector<ElementInfo>
 
 void YAMLParser::asignar_a_info(Arma& arma, GameConstants& info)
 {
-    if (arma.nombre.compare(BANANA)){
+    if (arma.nombre.compare(BANANA) == 0){
         info.banana_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(MORTERO)){
+    } else if (arma.nombre.compare(MORTERO) == 0){
         info.morter_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(BAZOOKA)){
+    } else if (arma.nombre.compare(BAZOOKA) == 0){
         info.bazooka_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(TELETRANSPORTACION)){
+    } else if (arma.nombre.compare(TELETRANSPORTACION) == 0){
         info.teleport_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(GRANADA_VERDE)){
+    } else if (arma.nombre.compare(GRANADA_VERDE) == 0){
         info.green_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(GRANADA_ROJA)){
+    } else if (arma.nombre.compare(GRANADA_ROJA) == 0){
         info.red_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(GRANADA_SANTA)){
+    } else if (arma.nombre.compare(GRANADA_SANTA) == 0){
         info.holy_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(ATAQUE_AEREO)){
+    } else if (arma.nombre.compare(ATAQUE_AEREO) == 0){
         info.air_attack_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(BATE)){
+    } else if (arma.nombre.compare(BATE) == 0){
         info.bat_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
-    } else if (arma.nombre.compare(DINAMITA)) {
+    } else if (arma.nombre.compare(DINAMITA) == 0) {
         info.dynamite_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     }
 }
 
 int YAMLParser::toAmmunition(std::string& habilitada, std::string& municion){
-	bool enabled = habilitada.compare("si");
-	if (enabled){
-		return municion.compare(INFINITO)? -1 : std::stoi(municion);
+	if (habilitada.compare("si") == 0){
+		return (municion.compare(INFINITO) == 0)? -1 : std::stoi(municion);
 	} else {
-		0;
+		return 0;
 	}
 }

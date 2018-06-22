@@ -36,7 +36,7 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
 	std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
 	for (; players_it != this->players.end(); ++players_it){
-		this->ammunition[players_it->first] = this->info.ammunition;
+		this->ammunition.insert(std::pair<int, std::vector<int>>(players_it->first, this->info.ammunition));
 	}
 }
 
@@ -345,6 +345,9 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			std::cout << "hay gusano para destruir\n";
 			//remove it from list of gusanos in simulation
 			this->players[gusanos_remover_it->first].erase(gusanos_remover_it->second);
+			if (gusanos_remover_it->second == active_gusano){
+				i = TURN_LEN;
+			}
 			if (this->players[gusanos_remover_it->first].size() == 0){
 				this->proxy.sendPlayerLoose(gusanos_remover_it->first);
 				this->players.erase(gusanos_remover_it->first);
@@ -362,7 +365,8 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			this->actual_max_projectile++;
 			LittleProjectile* little = new LittleProjectile(this->world, this->actual_max_projectile, (*c_it)->x,
 			(*c_it)->y, (*c_it)->direction, (*c_it)->angle, (*c_it)->vel, (*c_it)->damage, (*c_it)->radius, this->to_remove_projectiles, this->proxy);
-			//this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, little));
+			this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
+							std::unique_ptr<Projectile>(little)));
 			delete (*c_it);
 		}
 		this->to_create.clear();

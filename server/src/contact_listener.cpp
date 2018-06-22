@@ -5,6 +5,7 @@ void ContactListener::BeginContact(b2Contact* contact){
 	//check if body A was delimiter
 	UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 	if (data && data->indicator == 2){
+		std::cout << "delimiter\n";
 		//check if body B was gusano
 		UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 		if (other_data && other_data->indicator == 1){
@@ -15,11 +16,13 @@ void ContactListener::BeginContact(b2Contact* contact){
 			Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
 			projectile->destroy();
 		}
+		return;
 	}
 	
 	//check if body B was delimiter
 	data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 	if (data && data->indicator == 2){
+		std::cout << "delimiter\n";
 		//check if body A was gusano
 		UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
 		if (other_data && other_data->indicator == 1){
@@ -30,6 +33,7 @@ void ContactListener::BeginContact(b2Contact* contact){
 			Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
 			projectile->destroy();
 		}
+		return;
 	}
 		
 	//check if fixture A was the foot sensor

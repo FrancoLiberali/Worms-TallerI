@@ -6,10 +6,13 @@
 class Delimiter{
 	private:
 		UserData user_data;
+		b2Body* body;
 	public:
 		Delimiter(b2World& world, float x_from, float y_from, float x_to, float y_to);
 		
 		~Delimiter();		
+		
+		Delimiter(Delimiter&& other);
 };
 
 #endif
