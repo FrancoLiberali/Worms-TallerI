@@ -362,7 +362,8 @@ void Turn::play(int active_player, unsigned int active_gusano){
 			this->actual_max_projectile++;
 			LittleProjectile* little = new LittleProjectile(this->world, this->actual_max_projectile, (*c_it)->x,
 			(*c_it)->y, (*c_it)->direction, (*c_it)->angle, (*c_it)->vel, (*c_it)->damage, (*c_it)->radius, this->to_remove_projectiles, this->proxy);
-			//this->projectiles.insert(std::pair<int, Projectile*>(this->actual_max_projectile, little));
+			this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
+							std::unique_ptr<Projectile>(little)));
 			delete (*c_it);
 		}
 		this->to_create.clear();

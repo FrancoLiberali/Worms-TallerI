@@ -21,8 +21,8 @@ GreenGranade::GreenGranade(b2World& world_entry, int number, float x, float y, i
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;
-	fixtureDef.friction = 0.5f;
-	fixtureDef.restitution = 0.2f;
+	fixtureDef.friction = 1.0f;
+	fixtureDef.restitution = 0.4f;
 
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();
