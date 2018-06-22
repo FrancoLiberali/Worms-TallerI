@@ -36,7 +36,7 @@ Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int
 		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
 	std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
 	for (; players_it != this->players.end(); ++players_it){
-		this->ammunition[players_it->first] = this->info.ammunition;
+		this->ammunition.insert(std::pair<int, std::vector<int>>(players_it->first, this->info.ammunition));
 	}
 }
 
