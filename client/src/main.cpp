@@ -12,17 +12,16 @@
 
 
 int main(int argc, char *argv[]){
-    QApplication a(argc, argv);
+    QApplication worms(argc, argv);
     //Loguin inicial
     Socket socket;
     std::string name = "";
     ProxyClient proxy(std::move(socket));
     
-    MainWindow w(proxy, name);
-    w.show();
-    a.exec();
-    if (name.length() <= 0)
-        return 0;
+    MainWindow wormsMenu(proxy, name);
+    wormsMenu.show();
+    worms.exec();
+    
     //Inicio del juego
     GameClient game(proxy, name);
     game.run();

@@ -18,9 +18,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 # como primer parámetro.
 # No, no los genera con la carpeta como prefijo.
 qt5_wrap_ui(UIS_HEADERS
-	ui/namewindow.ui
-        ui/connectwindow.ui
-        ui/mapwindow.ui
+    ui/mapwindow.ui
 	ui/mainwindow.ui
 )
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-PROJECT(editor CXX)
+PROJECT(worms-editor CXX)
 
 set (CMAKE_CXX_STANDARD 11)
 set(CMAKE_AUTOMOC ON)
@@ -34,7 +34,7 @@ message("Headers generados: ${UIS_HEADERS}")
 # Agrego los recursos.
 qt5_add_resources(RESOURCES src/recursos.qrc)
 
-add_executable(editor
+add_executable(worms-editor
   src/configarmas.cpp
   src/configgusanos.cpp
   src/conversor.cpp
@@ -50,9 +50,9 @@ add_executable(editor
   ${UIS_HEADERS})
 
 # Use the Widgets module from Qt 5.
-target_link_libraries(editor Qt5::Widgets)
+target_link_libraries(worms-editor Qt5::Widgets)
 # Use the Widgets module from YAML.
-target_link_libraries(editor yaml-cpp)
+target_link_libraries(worms-editor yaml-cpp)
 
 # Puedo definir funciones desde la linea de comando ejecutando `cmake .. -DINSTALL_PATH=<dir>`
 if(NOT INSTALL_PATH)
