@@ -70,7 +70,7 @@ class GameConstants{
 		int bat_damage = 10;
 		int bat_impulse = 10;
 		int bat_ammunition = -1; //inf
-		float bat_max_radius = 0.5;
+		float bat_max_radius = 0.75;
 		
 		int air_attack_vel = 3;
 		int air_attack_damage = 40;

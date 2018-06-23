@@ -31,3 +31,9 @@ Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, int directi
 
 Bazooka::~Bazooka(){
 }
+
+void Bazooka::update(float wind){
+	this->setWindForce(wind);
+	this->setDragForce(0.125);
+	Projectile::update(wind);
+}

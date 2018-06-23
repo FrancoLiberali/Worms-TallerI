@@ -21,3 +21,9 @@ AirAttackMissile::AirAttackMissile(b2World& world_entry, int number, float x, Ga
 
 AirAttackMissile::~AirAttackMissile(){
 }
+
+void AirAttackMissile::update(float wind){
+	this->setWindForce(wind);
+	this->setDragForce(0.5);
+	Projectile::update(wind);
+}

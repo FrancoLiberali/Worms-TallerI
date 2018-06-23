@@ -14,6 +14,8 @@ class AirAttackMissile : public SimpleProjectile {
 							std::vector<int>& to_remove, MultipleProxy& proxy);
 		
 		~AirAttackMissile();
+		
+		virtual void update(float wind);
 };
 
 #endif

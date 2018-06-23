@@ -17,6 +17,8 @@ class Morter : public FragmentProjectile {
 		MultipleProxy& proxy);
 		
 		~Morter();
+		
+		virtual void update(float wind);
 };
 
 #endif

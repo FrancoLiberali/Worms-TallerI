@@ -9,8 +9,8 @@ RegresiveProjectile::RegresiveProjectile(b2World& world_entry, int number, float
 RegresiveProjectile::~RegresiveProjectile(){
 }
 
-void RegresiveProjectile::update(){
-	Projectile::update();
+void RegresiveProjectile::update(float wind){
+	Projectile::update(wind);
 	this->time -= 1;
 	if (this->time == 0){
 		this->exploit();

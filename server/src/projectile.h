@@ -27,7 +27,11 @@ class Projectile {
 		
 		virtual void exploit();
 		
-		virtual void update();
+		virtual void update(float wind);
+		
+		void setWindForce(float wind);
+
+		void setDragForce(float missile_widht);
 		
 		b2Vec2 GetPosition(){ return this->body->GetPosition();}
 		

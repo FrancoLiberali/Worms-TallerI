@@ -7,6 +7,7 @@
 
 #define NUM_RAYS 360
 #define DRAG_CONSTANT 0.2
+#define WIND_CONSTANT 5
 
 Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction_e, float angle, float vel, 
 	int damage_e, int radius_e, int type, std::vector<int>& to_remove_e, MultipleProxy& proxy_e) : 
@@ -76,21 +77,28 @@ void Projectile::destroy(){
 	this->to_remove.push_back(this->number);
 }
 
-void Projectile::update(){
-	//agregando drag con el viento
-	// forma de calcularlo sacada de http://www.iforce2d.net/b2dtut/sticky-projectiles
-	b2Vec2 pointingDirection = this->body->GetWorldVector(b2Vec2(0.2,0));
-	b2Vec2 flightDirection = this->body->GetLinearVelocity();
-	float flightSpeed = flightDirection.Normalize();//normalizes and returns length
-	
-	float dot = b2Dot(flightDirection, pointingDirection);
-	float dragForceMagnitude = (1 - fabs(dot)) * flightSpeed * flightSpeed * DRAG_CONSTANT * this->body->GetMass();
-  
-	b2Vec2 arrowTailPosition = this->body->GetWorldPoint(b2Vec2(-0.2, 0));
-	this->body->ApplyForce(dragForceMagnitude * -flightDirection, arrowTailPosition, true);
+void Projectile::update(float wind){
 	b2Vec2 position = this->GetPosition();
 	float angle = this->GetAngle();
 	this->proxy.sendProjectilePosition(this->number, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
+}
+
+void Projectile::setWindForce(float wind){
+	this->body->ApplyForce(b2Vec2(wind * WIND_CONSTANT, 0), this->body->GetPosition(), true);
+}
+
+void Projectile::setDragForce(float missile_widht){
+	//agregando drag con el viento
+	// forma de calcularlo sacada de http://www.iforce2d.net/b2dtut/sticky-projectiles
+	b2Vec2 pointing_direction = this->body->GetWorldVector(b2Vec2(missile_widht,0));
+	b2Vec2 flight_direction = this->body->GetLinearVelocity();
+	float flight_speed = flight_direction.Normalize();//normalizes and returns length
+	
+	float dot = b2Dot(flight_direction, pointing_direction);
+	float drag_force_magnitude = (1 - fabs(dot)) * flight_speed * flight_speed * DRAG_CONSTANT * this->body->GetMass();
+  
+	b2Vec2 missile_tail_position = this->body->GetWorldPoint(b2Vec2(-missile_widht, 0));
+	this->body->ApplyForce(drag_force_magnitude * -flight_direction, missile_tail_position, true);
 }
 
 /* de cuando estaba intentado no necesitar ponerlos en el heap

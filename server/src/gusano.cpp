@@ -285,7 +285,9 @@ void Gusano::headContact(){
 void Gusano::finishContact(float ground_angle){
 	std::vector<float>::iterator it;
 	it = std::find(this->angles_list.begin(), this->angles_list.end(), ground_angle);
-    this->angles_list.erase(it);
+	if (it != this->angles_list.end()){
+		this->angles_list.erase(it);
+	}
 	int cant_contacts = angles_list.size();
 	if (cant_contacts == 0 && !(this->state->isFalling()) && !(this->state->isExploted())){
 		std::cout << "state->falling\n";

@@ -16,7 +16,7 @@ class RegresiveProjectile : public Projectile{
 		
 		~RegresiveProjectile();
 		
-		virtual void update();
+		virtual void update(float wind);
 };
 
 #endif

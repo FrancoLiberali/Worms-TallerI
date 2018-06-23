@@ -14,6 +14,8 @@ class Bazooka : public SimpleProjectile {
 		GameConstants& info, std::vector<int>& to_remove, MultipleProxy& proxy);
 		
 		~Bazooka();
+		
+		virtual void update(float wind);
 };
 
 #endif

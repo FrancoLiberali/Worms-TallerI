@@ -32,6 +32,7 @@ class Turn{
 		float power = 1;
 		bool fired;
 		b2Vec2 remote_position;
+		float wind = 0;
 		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
 		void gusano_move(char* msj, Gusano& gusano);

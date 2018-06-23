@@ -301,10 +301,19 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 		this->to_create.clear();
 		
+		//cambio en el viento, hace de vez en cuando
+		if (i % 1000 == 0){
+			/* initialize random seed: */
+			srand (time(0));
+			/* generate number between -0.1 and 0.1: */
+			this->wind += ((rand() % 10) / 50.0) - 0.1;
+			std::cout << "wind: " << this->wind << "\n";
+		}
+		
 		// Proyectiles en vuelo actual
 		std::map<int, std::unique_ptr<Projectile>>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
-			projectiles_it->second->update();
+			projectiles_it->second->update(this->wind);
 			keep_simulation = true;
 		}
 		
