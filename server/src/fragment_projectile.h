@@ -12,12 +12,12 @@ class FragmentProjectile : public Projectile{
 		int fragment_damage;
 		int fragment_radius;
 		int vel;
-		std::vector<FragmentInfo*>& to_create;
+		std::vector<FragmentInfo>& to_create;
 		
 	public:
 		FragmentProjectile(b2World& world_entry, int number, float x, float y, int direction, float angle, float vel, 
 		int damage_e, int radius_e, std::vector<int>& to_remove_e, MultipleProxy& proxy,
-		int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments, std::vector<FragmentInfo*>& to_create_e);
+		int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments, std::vector<FragmentInfo>& to_create_e);
 		
 		~FragmentProjectile();
 		

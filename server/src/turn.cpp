@@ -293,15 +293,11 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		this->to_remove_gusanos.clear();
 		
 		//lista de creacion de proyectiles luego de la explosion de un proyectil fragmentario
-		std::vector<FragmentInfo*>::iterator c_it = this->to_create.begin();
+		std::vector<FragmentInfo>::iterator c_it = this->to_create.begin();
 		for (; c_it != this->to_create.end(); ++c_it) {
 			std::cout << "hay projectile para crear\n";
 			this->actual_max_projectile++;
-			LittleProjectile* little = new LittleProjectile(this->world, this->actual_max_projectile, (*c_it)->x,
-			(*c_it)->y, (*c_it)->direction, (*c_it)->angle, (*c_it)->vel, (*c_it)->damage, (*c_it)->radius, this->to_remove_projectiles, this->proxy);
-			this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-							std::unique_ptr<Projectile>(little)));
-			delete (*c_it);
+			this->factory.createLittleProjectile(this->actual_max_projectile, (*c_it));
 		}
 		this->to_create.clear();
 		

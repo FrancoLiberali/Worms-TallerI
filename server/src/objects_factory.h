@@ -20,7 +20,7 @@ class ObjectsFactory{
 		GameConstants& info;
 		std::map<int, std::unique_ptr<Projectile>>* projectiles;
 		std::vector<int>* to_remove_projectiles;
-		std::vector<FragmentInfo*>* to_create;
+		std::vector<FragmentInfo>* to_create;
 		
 	public:
 		ObjectsFactory(b2World& world_e, MultipleProxy& proxy_e, 
@@ -30,7 +30,7 @@ class ObjectsFactory{
 		~ObjectsFactory();
 		
 		void addTurnInfo(std::map<int, std::unique_ptr<Projectile>>* projectiles, 
-					std::vector<int>* to_remove_projectiles_e, std::vector<FragmentInfo*>* to_create);
+					std::vector<int>* to_remove_projectiles_e, std::vector<FragmentInfo>* to_create);
 		
 		void createDelimiters(std::vector<Delimiter>& delimiters);
 		
@@ -62,6 +62,8 @@ class ObjectsFactory{
 		void createBat(Gusano& gusano, b2Vec2 position, int direction, float angle);
 		
 		void createAirAttackMissile(int number, float x);
+		
+		void createLittleProjectile(int number, FragmentInfo& information);
 		
 };
 

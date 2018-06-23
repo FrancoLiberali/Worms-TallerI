@@ -8,6 +8,7 @@
 #include "dynamite.h"
 #include "bat.h"
 #include "air_attack_missile.h"
+#include "little_projectile.h"
 #include <cmath>
 
 #define MAP_OFFSET 25
@@ -29,7 +30,7 @@ ObjectsFactory::~ObjectsFactory(){
 }
 
 void ObjectsFactory::addTurnInfo(std::map<int, std::unique_ptr<Projectile>>* projectiles_e, 
-					std::vector<int>* to_remove_projectiles_e, std::vector<FragmentInfo*>* to_create_e){
+					std::vector<int>* to_remove_projectiles_e, std::vector<FragmentInfo>* to_create_e){
 	this->projectiles = projectiles_e;
 	this->to_remove_projectiles = to_remove_projectiles_e;
 	this->to_create = to_create_e;
@@ -155,4 +156,12 @@ void ObjectsFactory::createAirAttackMissile(int number, float x){
 						x, this->info, *(this->to_remove_projectiles), this->proxy);
 	this->projectiles->insert(std::pair<int, std::unique_ptr<Projectile>>(number, 
 						std::unique_ptr<Projectile>(missile)));
+}
+
+void ObjectsFactory::createLittleProjectile(int number, FragmentInfo& information){
+	LittleProjectile* little = new LittleProjectile(this->world, number, information.x,
+			information.y, information.direction, information.angle, information.vel, 
+			information.damage, information.radius, *(this->to_remove_projectiles), this->proxy);
+	this->projectiles->insert(std::pair<int, std::unique_ptr<Projectile>>(number, 
+							std::unique_ptr<Projectile>(little)));
 }

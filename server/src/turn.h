@@ -2,7 +2,6 @@
 #include <map>
 #include "proxy.h"
 #include "projectile.h"
-#include "little_projectile.h"
 #include "game_constants.h"
 #include "gusano.h"
 #include "multiple_proxy.h"
@@ -26,7 +25,7 @@ class Turn{
 		std::map<int, std::unique_ptr<Projectile>> projectiles;
 		std::vector<int> to_remove_projectiles;
 		int actual_max_projectile = 0;
-		std::vector<FragmentInfo*> to_create;
+		std::vector<FragmentInfo> to_create;
 		int weapon = 0;
 		float sight_angle = 0;
 		unsigned int regresive_time = 5;

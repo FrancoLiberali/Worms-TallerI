@@ -3,7 +3,7 @@
 #include "fragment_info.h"
 
 RedGranade::RedGranade(b2World& world_entry, int number, float x, float y, int direction, float angle, float power,
-		GameConstants& info_e, std::vector<int>& to_remove_e, std::vector<FragmentInfo*>& to_create_e, 
+		GameConstants& info_e, std::vector<int>& to_remove_e, std::vector<FragmentInfo>& to_create_e, 
 		MultipleProxy& proxy, unsigned int time): 
 			RegresiveProjectile(world_entry, number, x, y, direction, angle, 
 			info_e.red_granade_vel * power, info_e.red_granade_damage, 
@@ -50,7 +50,7 @@ void RedGranade::exploit(){
 			direction = -1;
 		}
         
-        this->to_create.push_back(new FragmentInfo(center.x, center.y, direction,
-				angle, this->info.red_granade_vel, this->info.red_granade_fragment_damage, this->info.red_granade_fragment_radius));
+        this->to_create.push_back(std::move(FragmentInfo(center.x, center.y, direction,
+				angle, this->info.red_granade_vel, this->info.red_granade_fragment_damage, this->info.red_granade_fragment_radius)));
 	}
 }
