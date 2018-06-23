@@ -5,11 +5,11 @@
 #include "protected_queue.h"
 #include "game_constants.h"
 #include "gusano.h"
-#include "water.h"
 #include "contact_listener.h"
 #include <mutex>
 #include "multiple_proxy.h"
 #include "delimiter.h"
+#include "objects_factory.h"
 
 #ifndef __GAME_H__
 #define __GAME_H__
@@ -23,6 +23,7 @@ class Game {
 		ContactListener contact_listener;
 		std::vector<Delimiter> delimiters;
 		std::vector<std::pair<int, int>> to_remove_gusanos;
+		ObjectsFactory factory;
 		std::map<int, std::map<int, Gusano>> players;
 		std::vector<int> next;
 		int gusanos_per_player;

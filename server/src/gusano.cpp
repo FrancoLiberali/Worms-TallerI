@@ -19,8 +19,8 @@
 #define MUCHO 3000
 
 Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e, 
-	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle) 
-		: world(world_entry), proxy(proxy_e), to_remove_gusanos(to_remove_gusanos_e), user_data(1, this){
+	std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle, int life_e) 
+		: world(world_entry), proxy(proxy_e), to_remove_gusanos(to_remove_gusanos_e), user_data(1, this), life(life_e){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.position.Set(x, y);
@@ -93,6 +93,7 @@ Gusano& Gusano::operator=(Gusano&& other){
 	this->head_sensor_data = other.head_sensor_data;
 	other.head_sensor_data = nullptr;
 	this->body->SetUserData((void*)&this->user_data);
+	this->life = other.life;
 	
 	return *this;
 }

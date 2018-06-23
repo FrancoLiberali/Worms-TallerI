@@ -2,12 +2,12 @@
 
 Dynamite::Dynamite(b2World& world_entry, int number, float x, float y, int direction,
 		GameConstants& info, std::vector<int>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
-			RegresiveProjectile(world_entry, number, x + (sqrt(0.3125) + 0.1) * direction, 
+			RegresiveProjectile(world_entry, number, x, 
 			y, direction, 0, 0, info.dynamite_damage, 
 			info.dynamite_radius, to_remove_e, proxy, time){
 	
 	b2PolygonShape dynamicBox;
-	dynamicBox.SetAsBox(0.1f, 0.2f);
+	dynamicBox.SetAsBox(0.05f, 0.15f);
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &dynamicBox;
 	fixtureDef.density = 1.0f;

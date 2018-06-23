@@ -3,8 +3,7 @@
 
 Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, int direction, float angle, float power,
 		GameConstants& info, std::vector<int>& to_remove, MultipleProxy& proxy) : 
-				SimpleProjectile(world_entry, number, x + (0.6 + 0.125) * cos(angle) * direction, 
-				y + (0.6 + 0.125) * sin(angle), direction, (direction == -1)? M_PI-angle : angle, info.bazooka_vel * power, 
+				SimpleProjectile(world_entry, number, x, y, direction, angle, info.bazooka_vel * power, 
 				info.bazooka_damage, info.bazooka_radius, to_remove, proxy){
 	b2Vec2 vertices[6];
 	vertices[0].Set(-0.125f, 0.1f);
@@ -27,7 +26,7 @@ Bazooka::Bazooka(b2World& world_entry, int number, float x, float y, int directi
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();
 	angle = this->body->GetAngle();
-	proxy.sendProjectileCreation(this->number, 1, direction, position.x, position.y, angle);
+	proxy.sendProjectileCreation(this->number, 1, direction, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
 }
 
 Bazooka::~Bazooka(){

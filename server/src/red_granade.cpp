@@ -5,8 +5,8 @@
 RedGranade::RedGranade(b2World& world_entry, int number, float x, float y, int direction, float angle, float power,
 		GameConstants& info_e, std::vector<int>& to_remove_e, std::vector<FragmentInfo*>& to_create_e, 
 		MultipleProxy& proxy, unsigned int time): 
-			RegresiveProjectile(world_entry, number, x + (sqrt(0.3125) + 0.15) * cos(angle) * direction, 
-			y + (sqrt(0.3125) + 0.15) * sin(angle), direction, angle, info_e.red_granade_vel * power, info_e.red_granade_damage, 
+			RegresiveProjectile(world_entry, number, x, y, direction, angle, 
+			info_e.red_granade_vel * power, info_e.red_granade_damage, 
 			info_e.red_granade_radius, to_remove_e, proxy, time), info(info_e), to_create(to_create_e){
 	b2Vec2 vertices[7];
 	vertices[0].Set(0.0f, -0.2f);
@@ -29,7 +29,8 @@ RedGranade::RedGranade(b2World& world_entry, int number, float x, float y, int d
 
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();
-	proxy.sendProjectileCreation(this->number, 4, direction, position.x, position.y, angle);
+	angle = this->body->GetAngle();
+	proxy.sendProjectileCreation(this->number, 4, direction, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
 }
 
 RedGranade::~RedGranade(){

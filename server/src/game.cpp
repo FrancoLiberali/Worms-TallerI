@@ -10,11 +10,9 @@
 #include "util/yamlparser.h"
 #include <string>
 
-#define MAP_OFFSET 25
-#define WATER_DEPPNESS 3
-
 Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids_e) 
-		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), players_ids(players_ids_e){
+		: proxy(proxy_e), queue(queue_e), world(b2Vec2(0.0f, -10.0f)), players_ids(players_ids_e), 
+		factory(world, proxy, to_remove_gusanos, info) {
 	this->world.SetContactListener(&(this->contact_listener));
 	
 	std::vector<Gusano> gusanos;
@@ -24,32 +22,16 @@ Game::Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_nam
 	parser.cargarConfig(map_name, elements, this->info);
 	this->info.setAmmunition(); 
 	
-	//se agregan al mapa espacios vacios a izquierda, derecha y arriba, y abajo un pequenio espacio para el agua
-	float down_limit = info.map_height + WATER_DEPPNESS + MAP_OFFSET;
-	float right_limit = info.map_widht + 2 * MAP_OFFSET;
-	this->proxy.sendMapDimentions(right_limit, down_limit);
-	this->proxy.sendMapBackground(this->info.map_background);
-	
-	//se agregan delimitadores de mapa
-	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, 0, -down_limit))); //left
-	this->delimiters.push_back(std::move(Delimiter(this->world, 0, 0, right_limit, 0)));//up
-	this->delimiters.push_back(std::move(Delimiter(this->world, right_limit, 
-									0, right_limit, -down_limit)));//right
-	this->delimiters.push_back(std::move(Delimiter(this->world, 0, -down_limit, 
-							right_limit, -down_limit)));//down			
+	this->factory.createDelimiters(this->delimiters);
+	this->proxy.sendMapBackground(this->info.map_background);	
 	
 	std::vector<ElementInfo>::iterator info_it = elements.begin();
 	for (; info_it != elements.end(); ++info_it){
-		std::cout << "hay elem\n";
 		if (info_it->tipo.compare("viga") == 0){
-			std::cout << "crear viga\n";
-			Viga viga(this->world, info_it->x + MAP_OFFSET, -info_it->y - MAP_OFFSET, info_it->angulo, this->proxy);
+			this->factory.createViga(*info_it);
 		}
 		else if (info_it->tipo.compare("gusano") == 0){
-			std::cout << "crear gusano\n";
-			Gusano gusano(this->world, this->proxy, this->to_remove_gusanos,
-				info_it->x + MAP_OFFSET, -info_it->y - MAP_OFFSET, info_it->angulo);
-			gusanos.push_back(std::move(gusano));
+			this->factory.createGusano(gusanos, *info_it);
 		}
 	}
 	
@@ -97,7 +79,8 @@ Game::~Game(){
 
 void Game::play(){
 	this->queue.empty();
-	Turn turn(this->world, this->queue, this->players, this->to_remove_gusanos, this->info, this->proxy);
+	Turn turn(this->world, this->queue, this->players, this->to_remove_gusanos, 
+		this->info, this->proxy, this->factory);
 	
 	try {
 		for (int i = 0; i < this->players_ids.size(); i++){

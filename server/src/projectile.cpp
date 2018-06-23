@@ -7,9 +7,9 @@
 
 #define NUM_RAYS 360
 
-Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction, float angle, float vel, 
+Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction_e, float angle, float vel, 
 	int damage_e, int radius_e, int type, std::vector<int>& to_remove_e, MultipleProxy& proxy_e) : 
-			world(world_entry), number(number_e), damage(damage_e), 
+			world(world_entry), number(number_e), direction(direction_e), damage(damage_e), 
 			radius(radius_e), to_remove(to_remove_e), proxy(proxy_e), user_data(type, this){
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
@@ -20,7 +20,7 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int
 	this->body->SetTransform(this->body->GetPosition(), angle);
 	
 	b2Vec2 vel_vec;
-	vel_vec.x = vel * cos(angle) * direction;
+	vel_vec.x = vel * cos(angle);
 	vel_vec.y = vel * sin(angle);
 	this->body->SetLinearVelocity(vel_vec);
 }
@@ -76,7 +76,7 @@ void Projectile::destroy(){
 void Projectile::update(){
 	b2Vec2 position = this->GetPosition();
 	float angle = this->GetAngle();
-	this->proxy.sendProjectilePosition(this->number, position.x, position.y, angle);
+	this->proxy.sendProjectilePosition(this->number, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
 }
 
 /* de cuando estaba intentado no necesitar ponerlos en el heap

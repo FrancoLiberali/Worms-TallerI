@@ -7,19 +7,14 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include "proxy.h"
-#include "bazooka.h"
-#include "morter.h"
-#include "green_granade.h"
-#include "red_granade.h"
-#include "banana.h"
-#include "saint_granade.h"
-#include "dynamite.h"
-#include "bat.h"
-#include "air_attack_missile.h"
 #include <cmath>
 #include <stdexcept>
 #include "game_finished.h"
 #include "query_callback.h"
+
+#define FPS 60.0
+#define VELOCITY_IT 8
+#define POSITION_IT 3
 
 #define MOVE_TAM 9
 #define TURN_LEN 3600
@@ -31,24 +26,22 @@
 #define MAP_OFFSET 25
 
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano>>& players_e, 
-	std::vector<std::pair<int, int>>& to_remove_gusanos_e, GameConstants& info_e, MultipleProxy& proxy_e) :
-		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e), info(info_e), 
-		proxy(proxy_e), time_step(1.0f / 60.0f), velocity_iterations(8), position_iterations(3){
+	std::vector<std::pair<int, int>>& to_remove_gusanos_e,
+	GameConstants& info_e, MultipleProxy& proxy_e,
+	ObjectsFactory& factory_e) :
+		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e),
+		info(info_e), proxy(proxy_e), factory(factory_e){
 	std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
 	for (; players_it != this->players.end(); ++players_it){
 		this->ammunition.insert(std::pair<int, std::vector<int>>(players_it->first, this->info.ammunition));
 	}
+	this->factory.addTurnInfo(&(this->projectiles), &(this->to_remove_projectiles), &(this->to_create));
 }
 
 Turn::~Turn(){
 }
 
 void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
-	//std::map<int, Gusano>::iterator gusanos_it = players[player_id].begin();
-	//for (; gusanos_it != players[player_id].end(); ++gusanos_it) {
-		//Gusano* gusano = gusanos_it->second;
-		//delete gusano;
-	//}
 	this->players.erase(player_id);
 	Proxy& disconnected = this->proxy.erase(player_id);
 	disconnected.disconnect();
@@ -80,7 +73,7 @@ void Turn::take_weapon(int player_id, char* msj){
 		this->weapon = to_take;
 		this->remote_position = b2Vec2(0, 0);
 		this->sight_angle = 0;
-		this->regresive_time = 5 / this->time_step;
+		this->regresive_time = 5 * FPS;
 		this->power = 1;
 		this->proxy.sendTakeWeapon(this->weapon);
 	}
@@ -99,7 +92,7 @@ void Turn::changeSightAngle(char* msj){
 
 void Turn::changeRegresiveTime(char* msj){
 	if (this->weapon != 0){
-		this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5))) / this->time_step;
+		this->regresive_time = ntohl(*(reinterpret_cast<int*>(msj + 5))) * FPS;
 	}
 }
 
@@ -114,41 +107,52 @@ void Turn::loadPower(int player_id, Gusano& gusano, int& turn_actual_len){
 }
 
 void Turn::fire(int player_id, Gusano& gusano, int& turn_actual_len){
-	if (!this->fired && this->weapon){
+	if (!this->fired && this->weapon && this->weapon != 9 && this->weapon != 10){
 		std::cout << "fire\n";
 		b2Vec2 position = gusano.GetPosition();
 		int direction = gusano.getDirection();
 		this->actual_max_projectile++;
 		switch(this->weapon){
-			case 1: this->fire_bazooka(position, direction);
+			case 1: this->factory.createBazooka(this->actual_max_projectile, position,
+												direction, this->sight_angle, this->power);
 					break;
-			case 2: this->fire_morter(position, direction);
+			case 2: this->factory.createMorter(this->actual_max_projectile, position,
+												direction, this->sight_angle, this->power);
 					break;
-			case 3: this->fire_green_granade(position, direction);
+			case 3: this->factory.createGreenGranade(this->actual_max_projectile, position,
+										direction, this->sight_angle, this->power, this->regresive_time);
 					break;
-			case 4: this->fire_red_granade(position, direction);
+			case 4: this->factory.createRedGranade(this->actual_max_projectile, position,
+										direction, this->sight_angle, this->power, this->regresive_time);
 					break;
-			case 5: this->fire_banana(position, direction);
+			case 5: this->factory.createBanana(this->actual_max_projectile, position,
+										direction, this->sight_angle, this->power, this->regresive_time);
 					break;
-			case 6: this->fire_saint_granade(position, direction);
+			case 6: this->factory.createSaintGranade(this->actual_max_projectile, position,
+										direction, this->sight_angle, this->power, this->regresive_time);
 					break;
-			case 7: this->fire_dynamite(position, direction);
+			case 7: this->factory.createDynamite(this->actual_max_projectile, position,
+										direction, this->regresive_time);
 					break;
-			case 8: this->fire_bat(gusano, position, direction);
-					break;
-			case 9: this->fire_air_attack();
-					break;
-			case 10: this->teleport(gusano);
+			case 8: this->factory.createBat(gusano, position, direction, this->sight_angle);
 					break;
 		}
-		this->ammunition[player_id][this->weapon] -= 1;
-		std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
-		if (this->ammunition[player_id][this->weapon] == 0){
-			this->proxy.sendFinishedAmunnition(player_id, this->weapon);
-		} 
-		this->fired = true;
-		turn_actual_len = TURN_LEN - THREE_SECONDS;
+		this->setFired(player_id, turn_actual_len);
+	} else if (this->weapon == 9){
+		this->fire_air_attack(player_id, turn_actual_len);
+	} else if (this->weapon == 10){
+		this->teleport(player_id, turn_actual_len, gusano);
 	}
+}
+
+void Turn::setFired(int player_id, int& turn_actual_len){
+	this->ammunition[player_id][this->weapon] -= 1;
+	std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
+	if (this->ammunition[player_id][this->weapon] == 0){
+		this->proxy.sendFinishedAmunnition(player_id, this->weapon);
+	} 
+	this->fired = true;
+	turn_actual_len = TURN_LEN - THREE_SECONDS;
 }
 
 void Turn::changeRemoteObjetive(char* msj){
@@ -158,91 +162,20 @@ void Turn::changeRemoteObjetive(char* msj){
 	std::cout << "cambio a: " << this->remote_position.x << "; " << this->remote_position.y << "\n";
 }
 
-void Turn::fire_bazooka(b2Vec2 position, int direction){
-	Bazooka* bazooka = new Bazooka(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->proxy);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(bazooka)));
-	/*intente hacer esto para tenerlo en el stack pero no funciono por object slicing
-	 * Bazooka bazooka(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->proxy);
-	this->projectiles.insert(std::pair<int, Projectile>(this->actual_max_projectile, std::move(bazooka)));
-	* tambien intente usar std::forward y rvalues pero no lo entendi del todo bien que estaba haciendo y no funionaba*/
-}
-
-void Turn::fire_morter(b2Vec2 position, int direction){
-	Morter* morter = new Morter(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->to_create, this->proxy);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(morter)));
-}
-
-void Turn::fire_green_granade(b2Vec2 position, int direction){
-	GreenGranade* green = new GreenGranade(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->proxy, this->regresive_time);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(green)));
-}
-
-void Turn::fire_red_granade(b2Vec2 position, int direction){
-	RedGranade* red = new RedGranade(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->to_create, this->proxy, this->regresive_time);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(red)));
-}
-
-void Turn::fire_banana(b2Vec2 position, int direction){
-	Banana* banana = new Banana(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->proxy, this->regresive_time);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(banana)));
-}
-
-void Turn::fire_saint_granade(b2Vec2 position, int direction){
-	SaintGranade* saint = new SaintGranade(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->sight_angle, this->power, this->info, 
-						this->to_remove_projectiles, this->proxy, this->regresive_time);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(saint)));
-}
-
-void Turn::fire_dynamite(b2Vec2 position, int direction){
-	Dynamite* dynamite = new Dynamite(this->world, this->actual_max_projectile, position.x, 
-						position.y, direction, this->info, 
-						this->to_remove_projectiles, this->proxy, this->regresive_time);
-	this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-						std::unique_ptr<Projectile>(dynamite)));
-}
-
-
-void Turn::fire_bat(Gusano& gusano, b2Vec2 position, int direction){
-	std::cout << "bat\n";
-	std::cout << this->sight_angle <<"\n";
-	Bat(gusano, this->world, position.x, position.y, direction, this->sight_angle, this->info);
-}
-
-void Turn::fire_air_attack(){
+void Turn::fire_air_attack(int player_id, int& turn_actual_len){
 	float x_to = this->remote_position.x;
 	float y_to = this->remote_position.y;
 	if (x_to > MAP_OFFSET  &&  x_to < this->info.map_widht + MAP_OFFSET && y_to != 0){
 		for (int i = 0; i < this->info.air_attack_cant_missiles; i++){
-			AirAttackMissile* missile = new AirAttackMissile(this->world, this->actual_max_projectile, 
-							x_to + this->info.air_attack_missiles_distance * (i - (int) this->info.air_attack_cant_missiles / 2),
-							this->info, this->to_remove_projectiles, this->proxy);
-			this->projectiles.insert(std::pair<int, std::unique_ptr<Projectile>>(this->actual_max_projectile, 
-							std::unique_ptr<Projectile>(missile)));
+			this->factory.createAirAttackMissile(this->actual_max_projectile, 
+							x_to + this->info.air_attack_missiles_distance * (i - (int) this->info.air_attack_cant_missiles / 2));
 			this->actual_max_projectile++;
 		}
+		this->setFired(player_id, turn_actual_len);
 	}
 }
 
-void Turn::teleport(Gusano& gusano){
+void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
 	std::cout << "usando teleporter\n";
 	float x_to = this->remote_position.x;
 	float y_to = this->remote_position.y;
@@ -256,6 +189,7 @@ void Turn::teleport(Gusano& gusano){
 		if (callback.isDesocuped()){
 			std::cout << "desocupado\n";
 			gusano.teleport(this->remote_position);
+			this->setFired(player_id, turn_actual_len);
 		}
 	}
 }
@@ -318,7 +252,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 		
 		//simulacion
-		this->world.Step(this->time_step, this->velocity_iterations, this->position_iterations);
+		this->world.Step(1 / float(FPS), VELOCITY_IT, POSITION_IT);
 		
 		//si el gusano actual sufrio danio duerante la simulacion debe terminar el turno
 		if (continue_turn){

@@ -28,7 +28,7 @@ class Gusano{
 		std::vector<float> angles_list;
 		std::pair<int, int> number;
 		int id;
-		int life = 100;
+		int life;
 		unsigned int damage_suffered = 0;
 		bool head_in_contact = false;
 		
@@ -37,7 +37,7 @@ class Gusano{
 	public:
 		// Crea un gusano en el mundo
 		Gusano(b2World& world_entry, MultipleProxy& proxy_e,
-		std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle);
+		std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle, int life_e);
 		
 		Gusano(Gusano&& other);
 		Gusano& operator=(Gusano&& other);

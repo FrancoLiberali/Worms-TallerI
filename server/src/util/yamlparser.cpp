@@ -109,7 +109,7 @@ void YAMLParser::asignar_a_info(Arma& arma, GameConstants& info)
     } else if (arma.nombre.compare(GRANADA_ROJA) == 0){
         info.red_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(GRANADA_SANTA) == 0){
-        info.holy_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
+        info.saint_granade_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(ATAQUE_AEREO) == 0){
         info.air_attack_ammunition = this->toAmmunition(arma.habilitada, arma.municiones);
     } else if (arma.nombre.compare(BATE) == 0){

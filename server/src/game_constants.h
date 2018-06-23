@@ -17,6 +17,8 @@ class GameConstants{
 		int bazooka_damage = 50;
 		int bazooka_radius = 2;
 		int bazooka_ammunition = -1; //inf
+		float bazooka_widht = 0.125;
+		float bazooka_height = 0.1;
 		
 		int morter_vel = 3;
 		int morter_damage = 50;
@@ -25,11 +27,15 @@ class GameConstants{
 		int morter_fragment_radius = 2;
 		int morter_cant_fragments = 6;
 		int morter_ammunition = 10;
+		float morter_widht = 0.2;
+		float morter_height = 0.15;
 
 		int green_granade_vel = 3;
 		int green_granade_damage = 30;
 		int green_granade_radius = 2;
 		int green_granade_ammunition = -1; //inf
+		float green_granade_widht = 0.15;
+		float green_granade_height = 0.15;
 		
 		int red_granade_vel = 3;
 		int red_granade_damage = 30;
@@ -38,20 +44,28 @@ class GameConstants{
 		int red_granade_fragment_radius = 2;
 		int red_granade_cant_fragments = 6;
 		int red_granade_ammunition = 10;
+		float red_granade_widht = 0.15;
+		float red_granade_height = 0.15;
 		
 		int banana_vel = 3;
 		int banana_damage = 70;
 		int banana_radius = 4;
 		int banana_ammunition = 5;
+		float banana_widht = 0.1;
+		float banana_height = 0.15;
 		
-		int holy_granade_vel = 3;
-		int holy_granade_damage = 110;
-		int holy_granade_radius = 8;
-		int holy_granade_ammunition = 2;
+		int saint_granade_vel = 3;
+		int saint_granade_damage = 110;
+		int saint_granade_radius = 8;
+		int saint_granade_ammunition = 2;
+		float saint_granade_widht = 0.2;
+		float saint_granade_height = 0.3;
 
 		int dynamite_damage = 50;
 		int dynamite_radius = 4;
 		int dynamite_ammunition = 5;
+		float dynamite_widht = 0.05;
+		float dynamite_height = 0.15;
 		
 		int bat_damage = 10;
 		int bat_impulse = 10;
@@ -79,7 +93,7 @@ class GameConstants{
 			this->ammunition.push_back(this->green_granade_ammunition);
 			this->ammunition.push_back(this->red_granade_ammunition);
 			this->ammunition.push_back(this->banana_ammunition);
-			this->ammunition.push_back(this->holy_granade_ammunition);
+			this->ammunition.push_back(this->saint_granade_ammunition);
 			this->ammunition.push_back(this->dynamite_ammunition);
 			this->ammunition.push_back(this->bat_ammunition);
 			this->ammunition.push_back(this->air_attack_ammunition);

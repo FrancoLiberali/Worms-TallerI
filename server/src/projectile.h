@@ -11,6 +11,7 @@ class Projectile {
 	protected:
 		b2World& world;
 		int number;
+		int direction;
 		b2Body* body;
 		const int damage;
 		const int radius;
