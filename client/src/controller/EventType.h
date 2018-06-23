@@ -19,7 +19,15 @@ enum EventType {
 	A_PLAYER_OFF,
 	A_PLAYER_LOSE,
 	A_PLAYER_WIN,
-	WEAPON_DONE = 22,
+	WEAPON_DONE = 22
+};
+
+enum PreEvent{ 
+	NEW_ROOM = 17,
+	CHANGE_N_PLAYERS_IN_ROOM,
+	DEL_ROOM,
+	NEW_PLAYER_IN_ROOM,
+	ALLOW_MAPS
 };
 
 #endif

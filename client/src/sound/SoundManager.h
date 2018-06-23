@@ -10,8 +10,7 @@ enum SoundId {AIRSTRIKE,BANANA_S,EXPLOTION, FUSE, HOLY_S, SHOOT, JUMP_S, COMMUNI
 
 enum MusicId {BACKGROUND, WAIT,};
 
-class SoundManager
-{
+class SoundManager{
 private:
     std::map<SoundId,Mix_Chunk*> sounds;
     std::map<MusicId, Mix_Music*> musics;

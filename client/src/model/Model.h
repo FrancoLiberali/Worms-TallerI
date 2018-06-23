@@ -10,7 +10,13 @@ class ClientEventReceiver;
 class GameControllerProxy;
 
 #include <map>
-/*Modelo del cliente*/
+/*Modelo del cliente para mantener la informacion del juego
+y como intermedirario al server*/
+/**
+* @class Model
+* Modelo del cliente para mantener información del estado del juego
+* y como intermediario al server
+*/
 class Model {
 private:
 	int idWormSelected;

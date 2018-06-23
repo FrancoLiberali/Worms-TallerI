@@ -1,6 +1,11 @@
 #ifndef _CAMERA_H
 #define _CAMERA_H
 
+/**
+ * @class Camera
+ * Camara del juego, enfoca la parte del mapa que indique el jugador.
+ * cada vez que se dibuja por defecto al worm en turno
+ */
 class Camera {
 private:
     int centerX, centerY;

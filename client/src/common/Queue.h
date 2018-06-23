@@ -1,10 +1,15 @@
 #ifndef _QUEUE_H
 #define _QUEUE_H
 
-/*Template Cola protegida*/
+
 #include <queue>
 #include <mutex>
 #include <condition_variable>
+
+/**
+* @template Queue
+* Template de una cola bloqueante
+*/
 
 template<class T>
 class Queue {

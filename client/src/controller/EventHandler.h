@@ -4,9 +4,14 @@
 class Event;
 #include <queue>
 #include <string>
-#include "Event.h"
+#include "event/Event.h"
 #include "../view/mainView.h"
 
+/**
+* @class EventHandler
+* Manejador principal de eventos, usa una cola para almacenar
+* los eventos del server como del cliente que alteran a la vista
+*/
 class EventHandler {
 private:
 	mainView* view;

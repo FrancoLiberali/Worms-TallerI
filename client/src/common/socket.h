@@ -10,12 +10,6 @@ class Socket{
 		explicit Socket(int file_descriptor);
 		
 	public:
-	// perdon por los nombres de las funciones pero sino 
-	// no tenian el '_' en el cpp al hacer por ejemplo
-	// bind(...) se me intentaba llamar a estos metodos 
-	// en lugar de las funciones de la libreria de sockets
-	// generandome error de compilacion ya que las firmas 
-	// no correspondian con los argumentos
 		
 		// Crea el socket o lanza SocketError en caso de no ser posible.
 		Socket();

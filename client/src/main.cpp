@@ -13,9 +13,8 @@
 
 int main(int argc, char *argv[]){
     QApplication a(argc, argv);
-
+    //Loguin inicial
     Socket socket;
-    bool is_connected = false;
     std::string name = "";
     ProxyClient proxy(std::move(socket));
     
@@ -24,6 +23,7 @@ int main(int argc, char *argv[]){
     a.exec();
     if (name.length() <= 0)
         return 0;
+    //Inicio del juego
     GameClient game(proxy, name);
     game.run();
     return 0;

@@ -2,7 +2,7 @@
 #include "controller/ClientEventReceiver.h"
 #include "controller/ClientCommandSender.h"
 #include "controller/EventHandler.h"
-#include "controller/Event.h"
+#include "controller/event/Event.h"
 #include "controller/Controller.h"
 #include "model/GameControllerProxy.h"
 #include "model/Model.h"
@@ -55,11 +55,12 @@ void GameClient::run(){
 
 	Controller controller(model, clientView);
 	
-	//Enviamos el nombre del jugodor
+	//Enviamos el nombre del jugador
 	proxy.sendName(name);
 	preGame.showHall();
 
 	printf("Espere a otros jugadores\n");
+
 	//Game loop
 	SDL_Event e;
 	double extra = 0;
@@ -68,9 +69,10 @@ void GameClient::run(){
 
 		while(SDL_PollEvent(&e) != 0)
 			controller.handle(e);
+
 		//Chequeo del mouse para saber si se debe mover la camara
 		controller.checkMouseState(e, ehandler);
-		//desencolo los eventos del server
+		//Desencolo los eventos del server
 		while (!eventQueue.empty()){
 			ehandler.add(eventQueue.pop());
 		}
@@ -87,7 +89,7 @@ void GameClient::run(){
 			extra = -to_sleep;
 		}
 	}
-	commandsQueue.push(nullptr);
+	commandsQueue.push(nullptr);//se cierrar encola nullpttr
 	eventReceiver.stop();
 	commmandSender.join();
 	eventReceiver.join();

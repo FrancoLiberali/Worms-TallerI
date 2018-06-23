@@ -2,7 +2,7 @@
 #define _EVENT_FACTORY 
 
 #include "EventType.h"
-#include "Event.h"
+#include "event/Event.h"
 #include "../ProxyClient.h"
 #include "../model/Model.h"
 #include <string>

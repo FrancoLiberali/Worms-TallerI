@@ -1,34 +1,27 @@
 #include "EventFactory.h"
 #include <iostream>
 
-#include "WormMoveEvent.h"
-#include "WormChangeStateEvent.h"
-#include "WormWeaponEvent.h"
-#include "WormChangeLifeEvent.h"
-#include "PlayerIdEvent.h"
-#include "BackgroundEvent.h"
-#include "CreateVigaEvent.h"
-#include "CreateWormEvent.h"
-#include "CreateMissileEvent.h"
-#include "CreateStageEvent.h"
-#include "MissileMoveEvent.h"
-#include "MissileExploteEvent.h"
-#include "StartTurnEvent.h"
-#include "PlayerOffEvent.h"
-#include "PlayerLoseEvent.h"
-#include "WormChangeAimEvent.h"
-#include "GameWinnerEvent.h"
-#include "WeaponDoneEvent.h"
+#include "event/WormMoveEvent.h"
+#include "event/WormChangeStateEvent.h"
+#include "event/WormWeaponEvent.h"
+#include "event/WormChangeLifeEvent.h"
+#include "event/BackgroundEvent.h"
+#include "event/CreateVigaEvent.h"
+#include "event/CreateWormEvent.h"
+#include "event/CreateMissileEvent.h"
+#include "event/CreateStageEvent.h"
+#include "event/MissileMoveEvent.h"
+#include "event/MissileExploteEvent.h"
+#include "event/StartTurnEvent.h"
+#include "event/PlayerOffEvent.h"
+#include "event/PlayerLoseEvent.h"
+#include "event/WormChangeAimEvent.h"
+#include "event/GameWinnerEvent.h"
+#include "event/WeaponDoneEvent.h"
 
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
   switch (type) {
-    case ID_PLAYER:{
-      int id = proxy.receiveInt();
-      //std::cout << "hay evento " << (EventType)type <<  std::endl;
-      //printf("asignacion de id\n");
-      return new PlayerIdEvent(id, model, proxy);
-    }
     case BACKGROUND_STAGE:{
       std::string name = proxy.receiveName();
       printf("fondo %s\n", name.c_str());

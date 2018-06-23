@@ -8,8 +8,13 @@
 class mapWindow;
 class ProxyClient;
 
-class PreGameManager {
+/**
+* @class PreGameManager
+* Manejador de las ventanas antes de que inicie el juego principal
+* Hall principal y salas de espera
+*/
 
+class PreGameManager {
 private:
     ProxyClient& proxy;
     mapWindow* hall;

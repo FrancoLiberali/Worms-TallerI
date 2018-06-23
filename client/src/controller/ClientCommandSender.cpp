@@ -9,7 +9,6 @@ ClientCommandSender::~ClientCommandSender(){
 	while(!queue.empty()){
 		delete (queue.pop());
 	}
-
 }
 
 void ClientCommandSender::run(){

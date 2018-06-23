@@ -4,6 +4,11 @@
 #include <string>
 #include <map>
 
+/**
+* @class Room
+* Representa una sala de espera 
+* mantiene informacion de los jugadores de la sala
+*/
 class Room {
 private:
     int id;

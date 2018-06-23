@@ -5,7 +5,6 @@
 #include "Escenario.h"
 #include "WormView.h"
 #include "Camera.h"
-#include "../controller/Event.h"
 #include "bullets/BulletFactory.h"
 #include "bullets/BulletView.h"
 #include "PowerView.h"

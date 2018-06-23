@@ -4,6 +4,8 @@
 
 #include <iostream>
 
+#define SALTO 1
+
 Controller::Controller(Model& model, mainView& view)
     : model(model), view(view) {}
 
@@ -22,15 +24,14 @@ void Controller::handle(SDL_Event& e) {
                 case SDLK_m:
                     view.actionMenu(); break;
                 case SDLK_RETURN: //Salto adelante
-                    model.WormJump(1); break;
+                    model.WormJump(SALTO); break;
                 case SDLK_BACKSPACE: //salto atras
-                    model.WormJump(-1); break;
+                    model.WormJump(-SALTO); break;
                 case SDLK_UP:
                     model.AimChangeAngle(1); break;
                 case SDLK_DOWN:
                     model.AimChangeAngle(-1); break;
                 case SDLK_SPACE:{
-                    printf("cargando poder\n");
                     model.chargePower();
                     WormView* worm = view.getWormView(model.getIdWormSelected());
                     worm->upatePower();

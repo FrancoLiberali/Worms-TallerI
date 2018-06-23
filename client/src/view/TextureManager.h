@@ -9,6 +9,11 @@
 #include "GameException.h"
 #include "Camera.h"
 
+/**
+* @class TextureManager
+* Emplea el patrón Singletón y es el que contiene todas las texturas a usar
+* contiene toda la lógica del dibujado de SDL
+*/
 class TextureManager {
 private:
     Camera camera;

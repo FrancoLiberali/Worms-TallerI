@@ -2,7 +2,7 @@
 #define _WORM_CHANGE_STATE_EVENT
 
 #include "Event.h"
-#include "../view/WormState.h"
+#include "../../view/WormState.h"
 
 class WormChangeStateEvent : public Event {
 private:

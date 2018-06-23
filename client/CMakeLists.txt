@@ -40,32 +40,31 @@ add_executable(worms-client
 	src/connectwindow.cpp
 	src/mainwindow.cpp
 
-	src/controller/ClientEventReceiver.cpp
-	src/controller/EventHandler.cpp
-	src/controller/Event.cpp
-	src/controller/EventFactory.cpp
-	src/controller/WormMoveEvent.cpp
-	src/controller/WormChangeStateEvent.cpp
-	src/controller/WormChangeLifeEvent.cpp
-	src/controller/WormWeaponEvent.cpp
-	src/controller/CreateVigaEvent.cpp
-	src/controller/CreateWormEvent.cpp
-	src/controller/CreateMissileEvent.cpp
-	src/controller/CreateStageEvent.cpp
-	src/controller/MissileMoveEvent.cpp
-	src/controller/MissileExploteEvent.cpp
-	src/controller/PlayerIdEvent.cpp
-	src/controller/PlayerLoseEvent.cpp
-	src/controller/BackgroundEvent.cpp
-	src/controller/WormChangeAimEvent.cpp
-	src/controller/StartTurnEvent.cpp
-	src/controller/PlayerOffEvent.cpp
-	src/controller/GameWinnerEvent.cpp
-	src/controller/WeaponDoneEvent.cpp
-	src/controller/MouseState.cpp
-	src/controller/CameraMove.cpp
 	src/controller/ClientCommandSender.cpp
+	src/controller/ClientEventReceiver.cpp
 	src/controller/Controller.cpp
+	src/controller/EventFactory.cpp
+	src/controller/EventHandler.cpp
+	src/controller/MouseState.cpp
+	src/controller/event/Event.cpp
+	src/controller/event/WormMoveEvent.cpp
+	src/controller/event/WormChangeStateEvent.cpp
+	src/controller/event/WormChangeLifeEvent.cpp
+	src/controller/event/WormWeaponEvent.cpp
+	src/controller/event/CreateVigaEvent.cpp
+	src/controller/event/CreateWormEvent.cpp
+	src/controller/event/CreateMissileEvent.cpp
+	src/controller/event/CreateStageEvent.cpp
+	src/controller/event/MissileMoveEvent.cpp
+	src/controller/event/MissileExploteEvent.cpp
+	src/controller/event/PlayerLoseEvent.cpp
+	src/controller/event/BackgroundEvent.cpp
+	src/controller/event/WormChangeAimEvent.cpp
+	src/controller/event/StartTurnEvent.cpp
+	src/controller/event/PlayerOffEvent.cpp
+	src/controller/event/GameWinnerEvent.cpp
+	src/controller/event/WeaponDoneEvent.cpp
+	src/controller/event/CameraMoveEvent.cpp
 
 	src/common/Thread.cpp
 	src/common/socket.cpp
@@ -77,14 +76,14 @@ add_executable(worms-client
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp
-	src/model/WormMoveCommand.cpp
-	src/model/WormJumpCommand.cpp
-	src/model/WormWeaponCommand.cpp
-	src/model/ChangeAimCommand.cpp
-	src/model/WormShootCommand.cpp
-	src/model/ChargePowerCommand.cpp
-	src/model/ChangeCountDownCommand.cpp
-	src/model/TeledirigidoCommand.cpp
+	src/model/command/WormMoveCommand.cpp
+	src/model/command/WormJumpCommand.cpp
+	src/model/command/WormWeaponCommand.cpp
+	src/model/command/ChangeAimCommand.cpp
+	src/model/command/WormShootCommand.cpp
+	src/model/command/ChargePowerCommand.cpp
+	src/model/command/ChangeCountDownCommand.cpp
+	src/model/command/TeledirigidoCommand.cpp
 
 	src/view/mainView.cpp
 	src/view/SdlException.cpp

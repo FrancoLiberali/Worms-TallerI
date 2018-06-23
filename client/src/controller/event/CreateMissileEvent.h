@@ -2,7 +2,7 @@
 #define _CREATE_MISSILE_EVENT_H
 
 #include "Event.h"
-#include "../view/WormState.h"
+#include "../../view/WormState.h"
 
 class CreateMissileEvent : public Event {
 private:

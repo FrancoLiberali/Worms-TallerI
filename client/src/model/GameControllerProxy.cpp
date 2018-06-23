@@ -1,12 +1,12 @@
 #include "GameControllerProxy.h"
-#include "WormMoveCommand.h"
-#include "WormJumpCommand.h"
-#include "WormWeaponCommand.h"
-#include "ChangeAimCommand.h"
-#include "ChargePowerCommand.h"
-#include "WormShootCommand.h"
-#include "ChangeCountDownCommand.h"
-#include "TeledirigidoCommand.h"
+#include "command/WormMoveCommand.h"
+#include "command/WormJumpCommand.h"
+#include "command/WormWeaponCommand.h"
+#include "command/ChangeAimCommand.h"
+#include "command/ChargePowerCommand.h"
+#include "command/WormShootCommand.h"
+#include "command/ChangeCountDownCommand.h"
+#include "command/TeledirigidoCommand.h"
 
 #include <iostream>
 
@@ -44,6 +44,5 @@ void GameControllerProxy::countDown(const int idJugador, const int time){
 void GameControllerProxy::teledirigido(const int idJugador, const int x, const int y){
   queue.push(new TeledirigidoCommand(idJugador, x, y));
 }
-
 
 GameControllerProxy::~GameControllerProxy(){}

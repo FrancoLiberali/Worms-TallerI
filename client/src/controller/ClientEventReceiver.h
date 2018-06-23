@@ -7,12 +7,20 @@
 #include "../ProxyClient.h"
 #include "../model/Model.h"
 #include "../PreGameManager.h"
-#include "Event.h"
+#include "event/Event.h"
 
 class Model;
 class ProxyClient;
 class PreGameManager;
 
+//Clase que recibe todos los eventos del server usa una cola bloqueante
+
+/**
+* @class ClientEventReceiver
+* Recive todos los eventos del server
+* los encola en una cola bloqueante de eventos que después
+* son desencolados y encolados a la cola princiopal de eventos del EventHandler
+*/
 class ClientEventReceiver : public Thread{
 private:
 	Queue<Event*>& q;
@@ -30,7 +38,6 @@ public:
 	virtual void run() override;
 	void stop();
 	bool isClosed() const;
-	
 };
 
 #endif

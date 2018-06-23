@@ -2,10 +2,15 @@
 #define _GAME_CONTROLLER_PROXY_H
 
 #include "../common/Queue.h"
-#include "ClientCommand.h"
+#include "command/ClientCommand.h"
 
 class ClientCommand;
 
+/**
+* @class GameControllerProxy
+* Encola los comandos para enviar al server
+* Los comandos fueron detectados por el Controller
+*/
 class GameControllerProxy{
 private:
     Queue<ClientCommand *> &queue;

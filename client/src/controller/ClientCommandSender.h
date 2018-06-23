@@ -4,12 +4,17 @@
 #include <string>
 #include "../common/Queue.h"
 #include "../common/Thread.h"
-#include "../model/ClientCommand.h"
+#include "../model/command/ClientCommand.h"
 #include "../ProxyClient.h"
 
 class ProxyClient;
 class ClientCommand;
 
+/**
+* @class ClientCommmandSender
+* Envia (ejecuta) todos los comandos al server, desencola de la cola de comandos
+* previamente los comandos fueron encolados por GameControllerProxy
+*/
 class ClientCommandSender : public Thread {
 private:
 	std::string socket_file;

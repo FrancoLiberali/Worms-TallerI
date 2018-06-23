@@ -3,7 +3,7 @@
 
 #include "Event.h"
 
-#include "../view/WormState.h"
+#include "../../view/WormState.h"
 
 class WormWeaponEvent : public Event {
 private:

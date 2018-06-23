@@ -2,8 +2,8 @@
 #define _EVENT_H
 
 class mainView;
-#include "../view/mainView.h"
-#include "../model/Model.h"
+#include "../../view/mainView.h"
+#include "../../model/Model.h"
 
 class Model;
 

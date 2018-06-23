@@ -7,6 +7,11 @@
 
 class Model;
 
+/**
+* @class ProxyClient
+* Usa el patrón Proxy para la comunicación directa con el server
+*/
+
 class ProxyClient {
 private:
     Socket socket;

@@ -3,15 +3,16 @@
 
 #include <map>
 #include "SdlScreen.h"
-//#include  "../mapwindow.h"
-
+/**
+* @class Boot
+* Inicializador de todos los recursas a usar
+* Texturas, sonidos,fuentes
+*/
 class Boot {
 private:
     SdlScreen screen;
-    void loadConfigGame();
     void loadSprites();
     void loadImages();
-    void loadWaterImage();
     void loadMenuWeapon();
     void loadSounds();
 public:

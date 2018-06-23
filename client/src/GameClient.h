@@ -4,6 +4,12 @@
 #include "ProxyClient.h"
 #include <string>
 
+/**
+* @class GameClient
+* Es la clase que contiene toda la lógica del juego 
+* después de la conexión
+*/
+
 class GameClient{
 private:
     ProxyClient& proxy;
