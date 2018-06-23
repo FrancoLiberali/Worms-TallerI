@@ -13,7 +13,7 @@ FragmentView::FragmentView(int id, int dir, int posx, int posy, int angle,
 void FragmentView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
-    angle = angle;
+    this->angle = angle;
 }
 
 void FragmentView::update(){

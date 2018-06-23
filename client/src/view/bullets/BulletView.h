@@ -28,11 +28,8 @@ protected:
 public:
     BulletView(int id, int dir, int posx, int posy, int angle,
             SdlScreen& screen, Camera& camera);
-    void setSpriteBullet(Sprite spriteBullet);
-    void setSpriteExplosion(Sprite spriteExplosion);
-    void setExplotionSound(SoundId idSound);
-    virtual void updatePos(int x, int y, int angle);
-    virtual void update();
+    virtual void updatePos(int x, int y, int angle) = 0;
+    virtual void update() = 0;
     void detonate();
     bool isIdBullet(int id);
     bool isDetonateDone();

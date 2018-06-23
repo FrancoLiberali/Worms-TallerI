@@ -8,31 +8,6 @@ BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen
     currentSprite =&this->spriteBullet; 
 }
 
-void BulletView::setSpriteBullet(Sprite spriteBullet){
-    this->spriteBullet = spriteBullet;
-}
-
-void BulletView::setSpriteExplosion(Sprite spriteExplosion){
-    this->spriteExplosion = spriteExplosion;
-}
-
-void BulletView::setExplotionSound(SoundId idSound){
-    this->explotionSound = idSound;
-}
-
-void BulletView::updatePos(int x, int y, int angle){
-    posx = x;
-    posy = y;
-    if (isOnCamera)
-        camera.updateCenter(getCenterX(), getCenterY());
-    this->angle = angle;
-}
-
-void BulletView::update(){
-    if (detonated && !currentSprite->isLastFrame())
-        currentSprite->update();
-    draw();
-}
 
 void BulletView::disableCamera(){
     this->isOnCamera = false;

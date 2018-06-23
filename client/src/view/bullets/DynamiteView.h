@@ -12,8 +12,8 @@ private:
 public:
     DynamiteView(int id, int dir, int posx, int posy, int angle, 
         SdlScreen& screen, Camera& camera);
-    void updatePos(int x, int y, int angle);
-    void update();
+    virtual void updatePos(int x, int y, int angle);
+    virtual void update();
 };
 
 #endif

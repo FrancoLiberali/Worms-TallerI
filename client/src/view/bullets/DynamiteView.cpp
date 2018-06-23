@@ -15,7 +15,7 @@ DynamiteView::DynamiteView(int id, int dir, int posx, int posy, int angle,
 void DynamiteView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
-    angle = angle;
+    this->angle = angle;
 }
 
 void DynamiteView::update(){

@@ -14,7 +14,7 @@ void GreenGrenadeView::updatePos(int x, int y, int angle){
     posx = x;
     posy = y;
     camera.updateCenter(getCenterX(), getCenterY());
-    angle = angle;
+    this->angle = angle;
 }
 
 void GreenGrenadeView::update(){
