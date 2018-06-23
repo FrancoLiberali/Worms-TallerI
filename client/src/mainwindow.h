@@ -29,10 +29,7 @@ private slots:
     void on_nameButtonBox_rejected();
     void on_connectButtonBox_accepted();
     void on_connectButtonBox_rejected();
-    // Atrapa el evento al querer cerrar la ventana.
-    // Muestra una ventana para confirmar la accion.
-    void closeEvent (QCloseEvent *event);
-
+    
 private:
     Ui::MainWindow *ui;
     ProxyClient& proxy;

@@ -65,18 +65,18 @@ void MainWindow::on_connectButtonBox_rejected()
      ui->stackedWidget->setCurrentIndex(NAME);
 }
 
-void MainWindow::closeEvent (QCloseEvent *event)
-{
-    QMessageBox::StandardButton resBtn = QMessageBox::question( this, "WORMS",
-                                                                tr("Desea salir?\n"),
-                                                                QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
-                                                                QMessageBox::Yes);
-    if (resBtn != QMessageBox::Yes) {
-        event->ignore();
-    } else {
-        exit(EXIT_FAILURE);
-    }
-}
+// void MainWindow::closeEvent (QCloseEvent *event)
+// {
+//     QMessageBox::StandardButton resBtn = QMessageBox::question( this, "WORMS",
+//                                                                 tr("Desea salir?\n"),
+//                                                                 QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
+//                                                                 QMessageBox::Yes);
+//     if (resBtn != QMessageBox::Yes) {
+//         event->ignore();
+//     } else {
+//         exit(EXIT_FAILURE);
+//     }
+// }
 
 MainWindow::~MainWindow()
 {

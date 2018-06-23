@@ -11,6 +11,9 @@ mapWindow::mapWindow(ProxyClient& proxy, QWidget *parent) :
     QDialog(parent),ui(new Ui::mapWindow), proxy(proxy), done(false)
 {
     ui->setupUi(this);
+
+    // Nombre de ventana.
+    this->setWindowTitle("Lobby");
 }
 
 mapWindow::~mapWindow()
