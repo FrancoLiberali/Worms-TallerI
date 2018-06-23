@@ -57,14 +57,14 @@
             <property name="mouseTracking">
              <bool>false</bool>
             </property>
-            <property name="tabletTracking">
-             <bool>false</bool>
-            </property>
             <property name="acceptDrops">
              <bool>false</bool>
             </property>
             <property name="text">
              <string>Jugar</string>
+            </property>
+            <property name="tabletTracking" stdset="0">
+             <bool>false</bool>
             </property>
            </widget>
           </item>
@@ -301,7 +301,7 @@
      <x>0</x>
      <y>0</y>
      <width>630</width>
-     <height>22</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menusonido">
