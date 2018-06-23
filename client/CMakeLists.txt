@@ -34,8 +34,6 @@ qt5_add_resources(RESOURCES src/recursos.qrc)
 add_executable(worms-client
 	src/main.cpp
 	src/mapwindow.cpp
-	src/namewindow.cpp
-	src/connectwindow.cpp
 	src/mainwindow.cpp
 
 	src/controller/ClientCommandSender.cpp
