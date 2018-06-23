@@ -26,6 +26,7 @@ public:
 	bool hasClickedMenu(SDL_Point clickPoint);
 	void selected();
 	void unSelected();
+	void done();
 private:
 	list<string> lWeaponView;
 	WeaponId id;

@@ -176,3 +176,7 @@ void mainView::createStage(int widht, int height){
 void mainView::setBackground(std::string name){
 	stage.setBackground(name);
 }
+void mainView::weaponDone(WeaponId id){
+	Weapon* weaponView  = menuWeapon->findWeaponById(id);
+	weaponView->done();
+}

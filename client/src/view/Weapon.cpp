@@ -63,7 +63,7 @@ void Weapon::drawItems(SdlScreen & screen){
 }
 
 void Weapon::allow(){
-	lWeaponView.clear();
+	//lWeaponView.clear();
 	lWeaponView.push_back(allowWeapon);
 	ballow = true;
 }
@@ -103,4 +103,8 @@ void Weapon::selected(){
 void Weapon::unSelected(){
 	if(findWeapon("ok"))
 		removeWeapon("ok");
+}
+
+void Weapon::done(){
+	this->removeWeapon(allowWeapon);
 }

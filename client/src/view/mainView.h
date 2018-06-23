@@ -65,6 +65,7 @@ public:
 	void WormShoot(int idWorm);
 	void createStage(int widht, int height);
 	void setBackground(std::string name);
+	void weaponDone(WeaponId id);
 };
 
 #endif

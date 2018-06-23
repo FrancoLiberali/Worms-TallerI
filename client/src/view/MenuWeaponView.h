@@ -11,6 +11,10 @@
 
 class MenuWeaponView {
 
+private:
+	std::map<WeaponId, Weapon*> mapa;
+	Weapon* menu;
+	Camera& camera;
 public:
 	MenuWeaponView(Camera& camera);
 	~MenuWeaponView();
@@ -22,12 +26,8 @@ public:
 	bool hasClickedMenu(SDL_Point clickPoint);
 	bool hasClickedWeapon(SDL_Point clickPoint);
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
-	Weapon* findWeaponById(int idWeapon);
+	Weapon* findWeaponById(WeaponId idWeapon);
 	bool isOnAction();
-private:
-	map<WeaponId, Weapon*> mapa;
-	Weapon* menu;
-	Camera& camera;
 };
 
 

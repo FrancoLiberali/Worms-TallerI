@@ -35,6 +35,7 @@ void MenuWeaponView::draw(SdlScreen& screen){
 }
 
 
+
 void MenuWeaponView::allowWeapon(list<WeaponId> items){
 	list<WeaponId>::iterator it;
 	map<WeaponId, Weapon*>::iterator it2;
@@ -89,6 +90,9 @@ Weapon* MenuWeaponView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return result;
 }
 
+Weapon* MenuWeaponView::findWeaponById(WeaponId idWeapon){
+	return this->mapa[idWeapon];
+}
 
 void MenuWeaponView::buildWeapon(){
     
