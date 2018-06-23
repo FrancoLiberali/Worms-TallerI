@@ -25,14 +25,19 @@ int Camera::getY(){
 }
 
 void Camera::updateCenter(int x, int y){
+
     if (x + w/2 >= map_w)
         return;
+    if (x - w/2 <= 0)
+        centerX = w/2;
+    else{
+        centerX = x;
+    }
     if (y + h/2 >= map_h)
         return;
     if (y - h/2 <=0)
         centerY = h/2;
     else{
-        centerX = x;
         centerY = y;
     }
 }
@@ -58,11 +63,11 @@ bool Camera::inLimits(int x, int y){
     int y_aux = 0;
 
     if (x < gap) {
-        x_aux = this->centerX - vel;
+        x_aux = this->centerX - w/2 - vel;
     } else if (x > w - gap) {
         x_aux = this->centerX + vel;
     } else if (y < gap) {
-        y_aux = this->centerY - vel;
+        y_aux = this->centerY - h/2 - vel;
     } else if (y > h - gap) {
         y_aux = this->centerY + vel;
     }

@@ -154,19 +154,13 @@ void WormView::update(int idPlayer){
 		}
 
 	} else if (this->state == DEAD) {
-		if (alive)
-			currentSprite = &this->sprites["morir"];
-
-		if (currentSprite == &this->sprites["morir"] && currentSprite->isLastFrame()){
-			currentSprite = &this->sprites["explosion"];
-        	SoundManager::Instance().playSound(BYE);
+		if (alive){
+			currentSprite = &this->sprites["cripta"];
+			SoundManager::Instance().playSound(BYE);
 		}
 		alive = false;
 		currentSprite->update();
 	}
-	
-	if (currentSprite == &this->sprites["explosion"] && currentSprite->isLastFrame())
-		return;
 	draw(idPlayer);
 }
 

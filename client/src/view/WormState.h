@@ -7,6 +7,7 @@ enum WormState {
 	JUMP,
 	WATER,
 	DEAD,
+	AFECT_EXPLOT,
 };
 
 enum WeaponId {
