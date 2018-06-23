@@ -28,6 +28,7 @@ Gusano::Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 	this->body = this->world.CreateBody(&bodyDef);
 	this->body->SetUserData((void*)&this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
+	this->body->SetAngularDamping(2);
 	
 	b2Vec2 vertices[3];
 	vertices[0].Set(0.0f, -0.5f);

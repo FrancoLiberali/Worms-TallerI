@@ -53,7 +53,8 @@ void ObjectsFactory::createDelimiters(std::vector<Delimiter>& delimiters){
 void ObjectsFactory::createViga(ElementInfo& information){
 	//las coordenas del y se ponen negativas para que el mundo se encuentre en el 4 cuadrante, para que su espacio
 	// sea similar al dibujable por el client
-	Viga viga(this->world, information.x + MAP_OFFSET, -information.y - MAP_OFFSET, information.angulo, this->proxy);
+	Viga viga(this->world, information.x + MAP_OFFSET, -information.y - MAP_OFFSET, information.angulo, 
+		this->proxy, information.tam.compare("grande") == 0);
 }
 
 void ObjectsFactory::createGusano(std::vector<Gusano>& gusanos, ElementInfo& information){

@@ -5,7 +5,7 @@
 #define __VIGA_H__
 class Viga{
 	public:
-		Viga(b2World& world_entry, float x, float y, float angle, MultipleProxy& proxy);
+		Viga(b2World& world_entry, float x, float y, float angle, MultipleProxy& proxy, bool big);
 		
 		~Viga();		
 };

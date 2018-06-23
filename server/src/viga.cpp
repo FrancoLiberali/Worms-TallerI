@@ -3,7 +3,7 @@
 #include <cmath>
 
 #define PI 3.1415927
-Viga::Viga(b2World& world, float x, float y, float angle, MultipleProxy& proxy) {
+Viga::Viga(b2World& world, float x, float y, float angle, MultipleProxy& proxy, bool big) {
 	b2BodyDef vigaBodyDef;
 	vigaBodyDef.position.Set(x, y);
 	b2Body* vigaBody = world.CreateBody(&vigaBodyDef);
@@ -21,7 +21,11 @@ Viga::Viga(b2World& world, float x, float y, float angle, MultipleProxy& proxy) 
 	vigaBody->SetTransform(b2Vec2(x_center, y_center), angle);*/
 	
 	b2PolygonShape vigaBox;
-	vigaBox.SetAsBox(3.0f, 0.4f);
+	if (big){
+		vigaBox.SetAsBox(3.0f, 0.4f);
+	} else {
+		vigaBox.SetAsBox(1.5f, 0.4f);
+	}
 	b2FixtureDef fixtureDef;
 	fixtureDef.shape = &vigaBox;
 	fixtureDef.density = 0.0f;

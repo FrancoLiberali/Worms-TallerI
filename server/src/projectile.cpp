@@ -6,6 +6,7 @@
 #include <iostream>
 
 #define NUM_RAYS 360
+#define DRAG_CONSTANT 0.2
 
 Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int direction_e, float angle, float vel, 
 	int damage_e, int radius_e, int type, std::vector<int>& to_remove_e, MultipleProxy& proxy_e) : 
@@ -14,10 +15,12 @@ Projectile::Projectile(b2World& world_entry, int number_e, float x, float y, int
 	b2BodyDef bodyDef;
 	bodyDef.type = b2_dynamicBody;
 	bodyDef.bullet = true;
+	bodyDef.fixedRotation = false;
 	bodyDef.position.Set(x, y);
 	this->body = this->world.CreateBody(&bodyDef);
 	this->body->SetUserData((void*)&this->user_data);
 	this->body->SetTransform(this->body->GetPosition(), angle);
+	this->body->SetAngularDamping(1);
 	
 	b2Vec2 vel_vec;
 	vel_vec.x = vel * cos(angle);
@@ -74,6 +77,17 @@ void Projectile::destroy(){
 }
 
 void Projectile::update(){
+	//agregando drag con el viento
+	// forma de calcularlo sacada de http://www.iforce2d.net/b2dtut/sticky-projectiles
+	b2Vec2 pointingDirection = this->body->GetWorldVector(b2Vec2(0.2,0));
+	b2Vec2 flightDirection = this->body->GetLinearVelocity();
+	float flightSpeed = flightDirection.Normalize();//normalizes and returns length
+	
+	float dot = b2Dot(flightDirection, pointingDirection);
+	float dragForceMagnitude = (1 - fabs(dot)) * flightSpeed * flightSpeed * DRAG_CONSTANT * this->body->GetMass();
+  
+	b2Vec2 arrowTailPosition = this->body->GetWorldPoint(b2Vec2(-0.2, 0));
+	this->body->ApplyForce(dragForceMagnitude * -flightDirection, arrowTailPosition, true);
 	b2Vec2 position = this->GetPosition();
 	float angle = this->GetAngle();
 	this->proxy.sendProjectilePosition(this->number, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
