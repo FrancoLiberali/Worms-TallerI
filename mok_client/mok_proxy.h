@@ -12,6 +12,7 @@ class MokProxy{
 		std::string* map_name = nullptr;
 		int id = 0;
 		int last_room_id = 0;
+		int seg;
 		
 		void send_int(int to_send);
 		int receive_int();

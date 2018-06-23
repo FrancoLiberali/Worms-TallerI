@@ -343,6 +343,23 @@ void Proxy::sendFinishedAmunnition(int weapon_id){
 	this->send_int(weapon_id);
 }
 
+void Proxy::sendRemoteWork(int weapon_id){
+	char event = 23;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(weapon_id);
+}
+
+void Proxy::sendSecond(){
+	char event = 24;
+	this->socket.send(&event, ONEBYTE);
+}
+
+void Proxy::sendWindChange(int wind){
+	char event = 25;
+	this->socket.send(&event, ONEBYTE);
+	this->send_int(wind);
+}
+
 void Proxy::send_int(int to_send){
 	int net_to_send = htonl(to_send);
 	char* number = (char*)&net_to_send;

@@ -87,6 +87,12 @@ class Proxy{
 		
 		void sendMapBackground(std::string& background);
 		
+		void sendRemoteWork(int weapon_id);
+		
+		void sendSecond();
+		
+		void sendWindChange(int wind);
+		
 		void send_int(int to_send);
 		
 		Proxy(Proxy&& other);

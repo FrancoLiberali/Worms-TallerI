@@ -180,4 +180,25 @@ void MultipleProxy::sendPlayerConnection(int id, const std::string& name){
 void MultipleProxy::sendFinishedAmunnition(int player_id, int weapon_id){
 	this->proxys.at(player_id).sendFinishedAmunnition(weapon_id);
 }
+
+void MultipleProxy::sendRemoteWork(int weapon_id){
+	std::map<int, Proxy&>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second.sendRemoteWork(weapon_id);
+	}
+}
+
+void MultipleProxy::sendSecond(){
+	std::map<int, Proxy&>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second.sendSecond();
+	}
+}
+
+void MultipleProxy::sendWindChange(float wind){
+	std::map<int, Proxy&>::iterator it = this->proxys.begin();
+	for (; it != this->proxys.end(); ++it){
+		it->second.sendWindChange((int)(wind * 100));
+	}
+}
 		

@@ -34,6 +34,17 @@ class Turn{
 		b2Vec2 remote_position;
 		float wind = 0;
 		
+		//interpretacion de todos los mensajes enviados por todos los jugadores hasta el momento
+		// y aplicacion de los cambios correspondientes a estos mensajes, si los mismos son validos
+		void interpretMessages(int active_player,Gusano& gusano_actual, bool& continue_turn, int& turn_actual_len);
+		
+		
+		// procesa la lista to_remove_projectiles,
+		// en el cual se agregaron durante la simulacion
+		// los ids de los projectiles que deben ser eliminados del modelo
+		// dada su explosion
+		void processProjectilesDeletion();
+		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
 		void gusano_move(char* msj, Gusano& gusano);
 		void gusano_jump(Gusano& gusano);
@@ -56,6 +67,8 @@ class Turn{
 		
 		~Turn();
 		
+		// Hace que se juege un turno, realizado la simulacion de los mensajes
+		// que los juadores envien y manejando cuando debe terminar un turno.
 		void play(int player_id, unsigned int gusano_id);
 };
 

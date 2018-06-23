@@ -75,6 +75,12 @@ class MultipleProxy{
 		
 		void sendFinishedAmunnition(int player_id, int weapon_id);
 		
+		void sendRemoteWork(int weapon_id);
+		
+		void sendSecond();
+		
+		void sendWindChange(float wind);
+		
 };
 
 #endif

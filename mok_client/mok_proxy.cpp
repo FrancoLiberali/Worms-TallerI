@@ -69,6 +69,7 @@ void MokProxy::receive_event(){
 		case 5: {//se recibe inicio de turno
 				int jugador_actual = this->receive_int();
 				int id = this->receive_int();
+				this->seg = 0;
 				std::cout << "5 " << jugador_actual << " " << id << "\n";
 				break;
 			}
@@ -200,6 +201,13 @@ void MokProxy::receive_event(){
 		case 22:{//recibir que se acabo la municion de un arma
 			int weapon_id = this->receive_int();
 			std::cout << "22 weapon_id: " << weapon_id << "\n";
+			break;
+		}
+		case 24: this->seg += 1;
+				std::cout << "24 paso segundo: " << this->seg << "\n";
+				break;
+		case 25:{int new_wind = this->receive_int();
+			std::cout << "25 cambio viento a: " << new_wind << "\n";
 			break;
 		}
 	}

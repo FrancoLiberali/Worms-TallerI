@@ -12,13 +12,24 @@
 #include "game_finished.h"
 #include "query_callback.h"
 
-#define FPS 60.0
+#define FPS 60
 #define VELOCITY_IT 8
 #define POSITION_IT 3
 
-#define MOVE_TAM 9
-#define TURN_LEN 3600
-#define MIN_ANGLE_CHANGE 0.09817477
+#define TURN_LEN 3600  //3600 = 60 segundos = largo del turno
+#define EVENT 0
+#define MOVE 2
+#define JUMP 3
+#define BACK_JUMP 4
+#define WEAPON 5
+#define ANGLE 6
+#define TIME 7
+#define POWER 8
+#define FIRE 9
+#define DISCONNECTION 10
+#define OBJETIVE 14
+
+#define MIN_ANGLE_CHANGE 0.09817477 // 5.625 grados, la diferencia que tiene el client entre los angulos del sprite
 #define THREE_SECONDS 181
 #define MAX_POWER 5
 #define GUSANO_HEIGHT 0.5
@@ -172,6 +183,7 @@ void Turn::fire_air_attack(int player_id, int& turn_actual_len){
 			this->actual_max_projectile++;
 		}
 		this->setFired(player_id, turn_actual_len);
+		this->proxy.sendRemoteWork(9);
 	}
 }
 
@@ -190,6 +202,7 @@ void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
 			std::cout << "desocupado\n";
 			gusano.teleport(this->remote_position);
 			this->setFired(player_id, turn_actual_len);
+			this->proxy.sendRemoteWork(10);
 		}
 	}
 }
@@ -197,59 +210,21 @@ void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
 void Turn::play(int active_player, unsigned int active_gusano){
 	Gusano& gusano_actual = this->players.at(active_player).at(active_gusano);
 	this->proxy.sendTurnBegining(active_player, gusano_actual.getId());
-	this->weapon = 0;
-	this->fired = false;
-	double extra = 0;
-	bool keep_simulation = false;
-	bool continue_turn = true;
-	for (int32 i = 0; i < TURN_LEN || keep_simulation; ++i) { //3600 = 60 segundos = largo del turno
+	
+	// seteando todas las variables de inicio de turno
+	this->weapon = 0; //el gusano empieza sin arma
+	this->fired = false; //no se ha disparado
+	double extra = 0; //no se debe tiempo de frames anterior
+	bool something_to_simulate = false; //no hay proyectil ni gusano en movimiento
+	bool continue_turn = true; //todavia queda tiempo en el turno
+	for (int32 i = 0; i < TURN_LEN || something_to_simulate; ++i) {
 		auto t_start = std::chrono::high_resolution_clock::now();
 		
-		keep_simulation = false;
+		// se dice que no hay nada para simular antes de verificar como quedaron las listas de gusanos y proyectiles
+		something_to_simulate = false;
 		continue_turn = (i < TURN_LEN);
-		//interpretacion de todos los mensajes enviados por todos los jugadores
-		while(!this->queue.isEmpty()){
-			std::cout << "hay evento\n";
-			//no es posible generar raise condition porque del otro lado 
-			// solo meten asi que si no estaba vacia tampoco lo estara ahora
-			char* msj = this->queue.pop();
-			int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
-			if (msj[0] == 10){
-				std::cout << "player a desconectar: " << player_id << "\n";
-				this->disconnect(player_id, active_player, i);
-				if (this->players.size() == 1){
-					delete[] msj;
-					throw GameFinished();
-				}
-			}
-			else if (player_id == active_player && continue_turn){
-				if (msj[0] == 2){
-					this->gusano_move(msj, gusano_actual);
-				}
-				else if (gusano_actual.isInactive()){
-					switch (msj[0]){
-						case 3: this->gusano_jump(gusano_actual);
-								break;
-						case 4: this->gusano_back_jump(gusano_actual);
-								break;
-						case 5: this->take_weapon(active_player, msj);
-								break;
-						case 6: this->changeSightAngle(msj);
-								break;
-						case 7: this->changeRegresiveTime(msj);
-								break;
-						case 8: this->loadPower(active_player, gusano_actual, i);
-								break;
-						case 9: this->fire(active_player, gusano_actual, i);
-								break;
-						case 14: this->changeRemoteObjetive(msj);
-								 break;
-						
-					}
-				}
-			}
-			delete[] msj;
-		}
+		
+		this->interpretMessages(active_player, gusano_actual, continue_turn, i);
 		
 		//simulacion
 		this->world.Step(1 / float(FPS), VELOCITY_IT, POSITION_IT);
@@ -260,17 +235,8 @@ void Turn::play(int active_player, unsigned int active_gusano){
 				i = TURN_LEN;
 			}
 		}
-
-		//process map for projectiles deletion
-		// explotaron o se unieron
-		std::vector<int>::iterator projectiles_remover_it = this->to_remove_projectiles.begin();
-		for (; projectiles_remover_it != this->to_remove_projectiles.end(); ++projectiles_remover_it) {
-			std::cout << "hay projectile para destruir\n";
-			//remove it from list of projectiles in simulation
-			this->projectiles.erase(*projectiles_remover_it);
-			//projectile gets deleted because of unique ptr
-		}
-		this->to_remove_projectiles.clear();
+		
+		this->processProjectilesDeletion();
 		
 		//process map for gusanos deletion
 		// murieron o se hundieron
@@ -301,12 +267,21 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		}
 		this->to_create.clear();
 		
-		//cambio en el viento, hace de vez en cuando
-		if (i % 1000 == 0){
+		//cambio en el viento, hace de vez en cuando y cuando no hay ningun proyectil ya en vuelo
+		if (i % 1000 == 0 && this->projectiles.size() == 0){
 			/* initialize random seed: */
 			srand (time(0));
-			/* generate number between -0.1 and 0.1: */
-			this->wind += ((rand() % 10) / 50.0) - 0.1;
+			if (this->wind < 0){
+				/* generate number between -0.7 and 0.13: */
+				this->wind += ((rand() % 10) / 50.0) - 0.05;
+			} else if (this->wind > 0){
+				/* generate number between -0.13 and 0.7: */
+				this->wind += ((rand() % 10) / 50.0) - 0.15;
+			} else {
+				/* generate number between -0.1 and 0.1: */
+				this->wind += ((rand() % 10) / 50.0) - 0.1;
+			}
+			this->proxy.sendWindChange(this->wind);
 			std::cout << "wind: " << this->wind << "\n";
 		}
 		
@@ -314,7 +289,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		std::map<int, std::unique_ptr<Projectile>>::iterator projectiles_it = this->projectiles.begin();
 		for (; projectiles_it != this->projectiles.end(); ++projectiles_it) {
 			projectiles_it->second->update(this->wind);
-			keep_simulation = true;
+			something_to_simulate = true;
 		}
 		
 		std::map<int, std::map<int, Gusano>>::iterator players_it = this->players.begin();
@@ -326,9 +301,13 @@ void Turn::play(int active_player, unsigned int active_gusano){
 				//solo se manda informacion sobre los que estan sufriendo algun cambio
 				if (!(gusano.isInactive())){
 					gusano.sendPosition();
-					keep_simulation = true;
+					something_to_simulate = true;
 				}
 			}
+		}
+		//es un segundo
+		if (i % FPS == 0){
+			this->proxy.sendSecond();
 		}
 		
 		auto t_end = std::chrono::high_resolution_clock::now();
@@ -345,3 +324,60 @@ void Turn::play(int active_player, unsigned int active_gusano){
 	// al final del turno se manda que guarda el arma
 	this->proxy.sendTakeWeapon(0);
 }
+
+void Turn::interpretMessages(int active_player,Gusano& gusano_actual, bool& continue_turn, int& turn_actual_len){
+	while(!this->queue.isEmpty()){
+		std::cout << "hay evento\n";
+		//no es posible generar raise condition porque del otro lado 
+		// solo meten asi que si no estaba vacia tampoco lo estara ahora
+		char* msj = this->queue.pop();
+		int player_id = ntohl(*(reinterpret_cast<int*>(msj + 1)));
+		if (msj[EVENT] == DISCONNECTION){
+			std::cout << "player a desconectar: " << player_id << "\n";
+			this->disconnect(player_id, active_player, turn_actual_len);
+			if (this->players.size() == 1){
+				delete[] msj;
+				throw GameFinished();
+			}
+		}
+		else if (player_id == active_player && continue_turn){
+			if (msj[EVENT] == MOVE){
+				this->gusano_move(msj, gusano_actual);
+			}
+			else if (gusano_actual.isInactive()){
+				switch (msj[EVENT]){
+					case JUMP: this->gusano_jump(gusano_actual);
+							break;
+					case BACK_JUMP: this->gusano_back_jump(gusano_actual);
+							break;
+					case WEAPON: this->take_weapon(active_player, msj);
+							break;
+					case ANGLE: this->changeSightAngle(msj);
+							break;
+					case TIME: this->changeRegresiveTime(msj);
+							break;
+					case POWER: this->loadPower(active_player, gusano_actual, turn_actual_len);
+							break;
+					case FIRE: this->fire(active_player, gusano_actual, turn_actual_len);
+							break;
+					case OBJETIVE: this->changeRemoteObjetive(msj);
+							 break;
+					
+				}
+			}
+		}
+		delete[] msj;
+	}
+}
+
+void Turn::processProjectilesDeletion(){
+	std::vector<int>::iterator projectiles_remover_it = this->to_remove_projectiles.begin();
+	for (; projectiles_remover_it != this->to_remove_projectiles.end(); ++projectiles_remover_it) {
+		std::cout << "hay projectile para destruir\n";
+		//remove it from list of projectiles in simulation
+		this->projectiles.erase(*projectiles_remover_it);
+		//projectile gets deleted because of unique ptr
+	}
+	this->to_remove_projectiles.clear();
+}
+	
