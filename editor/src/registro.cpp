@@ -69,6 +69,17 @@ std::vector<std::string> Registro::get_armas() const
     return armas;
 }
 
+std::vector<std::string> Registro::get_armas_validas() const
+{
+    std::vector<std::string> armas;
+    for (std::map<std::string, Arma*>::const_iterator it =this->armas.begin(); it!=this->armas.end(); ++it) {
+        if (it->second->esta_habilitada()) {
+          armas.push_back(it->first);
+        }
+    }
+    return armas;
+}
+
 void Registro::set_vida_gusanos(int vida)
 {
     this->vida_gusanos = vida;

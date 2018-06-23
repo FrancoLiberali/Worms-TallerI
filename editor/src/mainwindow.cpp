@@ -3,6 +3,7 @@
 #include "vigagrande.h"
 #include "vigachica.h"
 #include "gusano.h"
+#include "validadordemapa.h"
 #include <QTimer>
 #include <QGraphicsTextItem>
 #include <QFileDialog>
@@ -133,10 +134,21 @@ void MainWindow::on_pushButton_6_clicked()
 
 void MainWindow::on_actionsave_as_triggered()
 {
+    // Verifica el mapa.
+    ValidadorDeMapa verifica;
+    if(!verifica(registro)) {
+        QMessageBox::warning(this, tr("ERROR"),
+                               tr("El mapa que intenta guardar no es valido.\n"
+                                  "Intente agregando mas gusanos, vigas o hablitando armas."));
+        return;
+    }
+
+    // Solicita la ruta para guardar el mapa.
     QString fileName = QFileDialog::getSaveFileName(this,
             tr("Guardar Mapa"), "",
             tr("Address Book (*.yaml);;All Files (*)"));
 
+    // Crea el archivo yaml.
     YAML::Emitter out;
     out << registro;
 

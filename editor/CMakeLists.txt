@@ -46,6 +46,7 @@ add_executable(worms-editor
   src/mainwindow.cpp
   src/yamlparser.cpp
   src/registro.cpp
+  src/validadordemapa.cpp
   src/main.cpp
   ${UIS_HEADERS})
 

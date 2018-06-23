@@ -47,6 +47,9 @@ public:
     // Obtiene una lista con los nombres de las aramas.
     // En un orden indefinido.
     std::vector<std::string> get_armas() const;
+    // Obtiene una lista con los nombres de las aramas validas.
+    // En un orden indefinido.
+    std::vector<std::string> get_armas_validas() const;
     // Setea el tamanio de mapa (en pixeles).
     void set_tam_mapa(float ancho, float alto);
     // Escribe obj sobre out en formato YAML.
