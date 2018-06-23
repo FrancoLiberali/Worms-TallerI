@@ -5,7 +5,7 @@
 void SoundManager::init(){
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2 ,2048) < 0)
         throw GameException("Error al cargar el MIXER");
-    //Mix_AllocateChannels(100);
+    Mix_AllocateChannels(100);
 }
 
 void SoundManager::loadSound(SoundId id, std::string path){
@@ -32,10 +32,13 @@ void SoundManager::close(){
 }
 
 void SoundManager::playSound(SoundId id, int times, int channel){
-    Mix_HaltChannel(channel);
     if (Mix_PlayChannel(channel, sounds[id], times) < 0){
         throw GameException("Error al reproducir el sonido");
     }
+}
+
+void SoundManager::stopAllSounds(){
+    Mix_HaltChannel(-1);
 }
 
 void SoundManager::playMusic(MusicId id){

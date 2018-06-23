@@ -6,5 +6,5 @@ BackgroundEvent::BackgroundEvent(std::string name)
     :name(name){};
 
 void BackgroundEvent::process(){
-    //model.addPlayers(playerId, name);
+    view->setBackground(name);
 }

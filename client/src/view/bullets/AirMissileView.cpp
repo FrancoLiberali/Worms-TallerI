@@ -8,6 +8,7 @@ AirMissileView::AirMissileView(int id, int dir, int posx, int posy, int angle,
     this->spriteBullet = SpriteConfigurator::Instance().get("bullet_airmisl");
 	this->spriteExplosion = SpriteConfigurator::Instance().get("explotion");
     this->explotionSound = EXPLOTION;
+    SoundManager::Instance().playSound(AIRSTRIKE, 10);
 }
 
 void AirMissileView::updatePos(int x, int y, int angle){
@@ -15,7 +16,6 @@ void AirMissileView::updatePos(int x, int y, int angle){
     posy = y;
     camera.updateCenter(getCenterX(), getCenterY());
     angle = angle;
-    printf("Pos %i, %i\n", posx, posy);
 }
 
 void AirMissileView::update(){

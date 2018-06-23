@@ -10,13 +10,11 @@ Camera::Camera(){
 void Camera::setDimentionMap(int widht, int height){
     this->map_w = widht;
     this->map_h = height;
-    /*this->map_h = M_H;
-    this->map_w = M_H;*/
 }
 
 
 Camera::Camera(int w, int h) : w(w), h(h), map_h(0), map_w(0),
-    vel(2), gap(10){}
+    vel(5), gap(10){}
 
 int Camera::getX(){
     return centerX - w/2;
@@ -27,8 +25,16 @@ int Camera::getY(){
 }
 
 void Camera::updateCenter(int x, int y){
-    centerX = x;
-    centerY = y;
+    if (x + w/2 >= map_w)
+        return;
+    if (y + h/2 >= map_h)
+        return;
+    if (y - h/2 <=0)
+        centerY = h/2;
+    else{
+        centerX = x;
+        centerY = y;
+    }
 }
 
 void Camera::focusCenterWindow(){
@@ -61,6 +67,7 @@ bool Camera::inLimits(int x, int y){
         y_aux = this->centerY + vel;
     }
 
-    bool limits = x_aux + w/2 < map_w && y_aux + h/2 < map_h;
+    bool limits = x_aux >= 0 && y_aux >= 0 && 
+                x_aux + w/2 < map_w && y_aux + h/2 < map_h;
     return limits;
 }

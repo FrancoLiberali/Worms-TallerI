@@ -278,6 +278,9 @@ void WormView::useWeapon(){
 	} else if (this->weaponId == TELEPORT){
 		SoundManager::Instance().playSound(TELELEPORT_S);
 	}
+	else if (this->weaponId == AIRATTACK){
+		SoundManager::Instance().playSound(COMMUNICATOR);
+	}
 }
 
 

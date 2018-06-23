@@ -65,6 +65,7 @@ public:
 	Camera& getCamera();
 	void WormShoot(int idWorm);
 	void createStage(int widht, int height);
+	void setBackground(std::string name);
 };
 
 #endif

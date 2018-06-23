@@ -40,7 +40,7 @@ void Boot::loadSprites(){
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrgrn.png", "ggranada", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrcls.png", "rgranada", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrhgr.png", "holy", screen.getRenderer());
-		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wairbak.png", "radio", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wairtlk.png", "radio", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wbsbaim.png", "bate", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wtelbak.png", "teleport", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/wthrban.png", "banana", screen.getRenderer());
@@ -84,14 +84,17 @@ void Boot::loadSprites(){
 		SpriteConfigurator::Instance().add("bullet_mortar", 60, 60, 32, true, 23);
 		SpriteConfigurator::Instance().add("bullet_banana", 60, 60, 32, true);
 		SpriteConfigurator::Instance().add("bullet_fragment", 60, 60, 6, true);
-		//#define RESOURCES_ROOT @INSTALL_PATH@
 		//Vigas
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/vigah.png", "viga", screen.getRenderer());
 
 		//imagenes
-		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/sky.png", "sky",screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/win.png", "win", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/lose.png", "lose", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/sky3.png", "sky3.png", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea1.png", "marea1", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea2.png", "marea2", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea3.png", "marea3", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea4.png", "marea4", screen.getRenderer());
 
 		// explosiones
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/circle25.png", "circle25", screen.getRenderer());
@@ -170,6 +173,7 @@ void Boot::loadSounds(){
 	SoundManager::Instance().loadSound(BAT_IMPACT, _INSTALL_PATH_ "/resource/sounds/bat_impact.wav");
 	SoundManager::Instance().loadSound(BAT_JINGLE, _INSTALL_PATH_ "/resource/sounds/bat_jingle.wav");
 	SoundManager::Instance().loadSound(BYE, _INSTALL_PATH_ "/resource/sounds/byebye.wav");
+	SoundManager::Instance().loadSound(AIRSTRIKE, _INSTALL_PATH_ "/resource/sounds/airstrike.wav" );
 }
 
 SdlScreen& Boot::getScreen(){

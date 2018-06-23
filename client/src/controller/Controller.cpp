@@ -30,6 +30,7 @@ void Controller::handle(SDL_Event& e) {
                 case SDLK_DOWN:
                     model.AimChangeAngle(-1); break;
                 case SDLK_SPACE:{
+                    printf("cargando poder\n");
                     model.chargePower();
                     WormView* worm = view.getWormView(model.getIdWormSelected());
                     worm->upatePower();
@@ -47,6 +48,7 @@ void Controller::handle(SDL_Event& e) {
         case SDL_KEYUP:{
             SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
             if (keyEvent.keysym.sym == SDLK_SPACE){
+                    printf("dejar de cargar y disparar\n");
                     model.WormShoot();
                     view.WormShoot(model.getIdWormSelected());
             }
@@ -60,7 +62,10 @@ void Controller::handle(SDL_Event& e) {
                 if (weapon)
                     model.WormWeapon((int)weapon->getId());
             }else{
-                model.teledirigido(e.motion.x, e.motion.y);
+                int x = e.motion.x + view.getCamera().getX();
+                int y = e.motion.y + view.getCamera().getY();
+                printf("Original pos : %i - %i\n", x, y);
+                model.teledirigido(x, y);
             }
             break;
 		}

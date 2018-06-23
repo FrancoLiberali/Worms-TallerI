@@ -172,3 +172,7 @@ void mainView::createStage(int widht, int height){
 	stage.setDimention(widht, height);
 	camera.setDimentionMap(widht, height);
 }
+
+void mainView::setBackground(std::string name){
+	stage.setBackground(name);
+}

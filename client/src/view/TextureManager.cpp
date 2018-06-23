@@ -41,8 +41,8 @@ bool TextureManager::load(std::string fileName,std::string id, SDL_Renderer* pRe
 	throw GameException(msg.str());
 }
 
-void TextureManager::draw(std::string id, int x, int y, double angle, 
-					SDL_Renderer* pRenderer, SDL_RendererFlip flip) {
+void TextureManager::draw(std::string id, int x, int y, double angle, SDL_Renderer* pRenderer
+					, SDL_RendererFlip flip, int d_w, int d_h) {
 	SDL_Rect srcRect;
 	SDL_Rect destRect;
 	try {
@@ -54,14 +54,10 @@ void TextureManager::draw(std::string id, int x, int y, double angle,
 		srcRect.x = 0;
 		srcRect.y = 0;
 	
-		destRect.w = srcRect.w;
-		destRect.h = srcRect.h;
+		destRect.w = (d_w > 0) ? d_w : srcRect.w;
+		destRect.h = (d_h > 0) ? d_h : srcRect.h;
 		destRect.x = x;
 		destRect.y = y;
-		if (id == "sky"){
-			destRect.x = x;
-			destRect.y = y;
-		}
 
 		SDL_RenderCopyEx(pRenderer, aTexture, &srcRect,&destRect, angle, 0, flip);
 	

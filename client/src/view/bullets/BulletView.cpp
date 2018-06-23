@@ -41,6 +41,7 @@ void BulletView::disableCamera(){
 void BulletView::detonate(){
     currentSprite = &spriteExplosion;
     detonated = true;
+    SoundManager::Instance().stopAllSounds();
     SoundManager::Instance().playSound(explotionSound);
 }
 

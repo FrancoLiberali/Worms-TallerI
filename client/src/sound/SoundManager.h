@@ -26,6 +26,7 @@ public:
     void loadMusic(MusicId id, std::string path);
     void playSound(SoundId id, int times = 0, int channel = -1);
     void playMusic(MusicId id);
+    void stopAllSounds();
 };
 
 #endif
