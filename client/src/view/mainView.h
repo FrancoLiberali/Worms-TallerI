@@ -50,6 +50,7 @@ public:
 	bool isOpen();
 	void update();
 	void close();
+	void openWindow();
 	void setIdPlayer(int idPlayer);
 	WormView* getWormView(int id);
 	BulletView* getBulletView(int id);
@@ -64,7 +65,7 @@ public:
     void addMissile(int id, WeaponId weaponId, int dir, int posx, int posy, int angle);
 	std::string changeTurn(std::string namePlayer, int idWorm);
 	void showWinner();
-	void showLosser();
+	void showLosser(std::string name);
 	Camera& getCamera();
 	void WormShoot(int idWorm);
 	void createStage(int widht, int height);

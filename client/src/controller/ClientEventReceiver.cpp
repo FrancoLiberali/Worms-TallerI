@@ -16,9 +16,9 @@ ClientEventReceiver::ClientEventReceiver(ProxyClient& proxy, Queue<Event*>& q,
 
 
 ClientEventReceiver::~ClientEventReceiver() {
-  while (!q.empty()) {
-    delete q.pop();
-  }
+ while (!q.empty()) {
+    	delete q.pop();
+  	}
   //std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
@@ -42,7 +42,8 @@ void ClientEventReceiver::run(){
 }
 
 bool ClientEventReceiver::isPreGameEvent(int t){
-	return  (t >= MIN_PRE_EVENT && t <= MAX_PRE_EVENT )|| t == ID_PLAYER;
+	return  (t >= MIN_PRE_EVENT && t <= MAX_PRE_EVENT )|| t == ID_PLAYER 
+			|| t == A_PLAYER_LOSE || t == A_PLAYER_WIN;
 }
 
 //Manejo de eventos que son previos al juego principal
@@ -79,7 +80,7 @@ void ClientEventReceiver::process(int t){
 			model.addPlayers(idPlayer, namePlayer);
 			break;
 		}
-		case ALLOW_MAPS:
+		case ALLOW_MAPS:{
 			int size = proxy.receiveInt();
 			for (int i = 0; i < size; i++){
 				std::string name_map = proxy.receiveName();
@@ -87,14 +88,45 @@ void ClientEventReceiver::process(int t){
 				preGame.addMap(name_map);
 			}
 			break;
+		}
+		case A_PLAYER_LOSE:{
+			int idPlayer = proxy.receiveInt();
+			std::string name = model.getPlayerById(idPlayer);
+			printf("My id %i, %i\n", model.getIdPlayer(), idPlayer);
+			if (model.isPlayer(idPlayer)){
+				preGame.setResult("Loser");
+				view.close();
+			}else{
+				view.showLosser(name);
+			}
+			break;
+		}
+		case A_PLAYER_WIN:{
+			int idPlayer = proxy.receiveInt();
+			if (model.isPlayer(idPlayer))
+				preGame.setResult("Winner");
+			else
+				preGame.setResult("Loser");
+			view.close();
+			break;
+		}
 	}
 }
 
 void ClientEventReceiver::stop(){
+	printf("Se detuvo el reciver\n");
 	closed = true;
 	proxy.close();
 }
 
 bool ClientEventReceiver::isClosed() const{
 	return closed;
+}
+
+void ClientEventReceiver::keepPlaying(){
+	view.openWindow();
+}
+
+void ClientEventReceiver::clean(){
+	
 }

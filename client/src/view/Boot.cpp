@@ -14,10 +14,9 @@
 void Boot::init(){
     SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO);
 	IMG_Init(IMG_INIT_PNG);
-    screen.init("WORMS ", SDL_WINDOWPOS_CENTERED,
+	screen.init("WORMS ", SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED, W_WIDHT, W_HEIGHT, 
-        SDL_WINDOW_HIDDEN);
-
+        SDL_WINDOW_HIDDEN);	
 	TextManager::Instance().init(screen.getRenderer());
     TextureManager::Instance().init(W_WIDHT, W_HEIGHT);
 	FontManager::Instance().init(screen.getRenderer());

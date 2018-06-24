@@ -38,6 +38,8 @@ public:
 	virtual void run() override;
 	void stop();
 	bool isClosed() const;
+	void keepPlaying();
+	void clean();
 };
 
 #endif

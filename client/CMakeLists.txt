@@ -20,6 +20,7 @@ include_directories(${PROJECT_SOURCE_DIR}/src)
 qt5_wrap_ui(UIS_HEADERS
     ui/mapwindow.ui
 	ui/mainwindow.ui
+	ui/resultwindow.ui
 )
 
 # Agrego la carpeta con los headers autogenerados a los includes
@@ -35,6 +36,7 @@ add_executable(worms-client
 	src/main.cpp
 	src/mapwindow.cpp
 	src/mainwindow.cpp
+	src/resultwindow.cpp
 
 	src/controller/ClientCommandSender.cpp
 	src/controller/ClientEventReceiver.cpp
@@ -83,6 +85,7 @@ add_executable(worms-client
 	src/model/command/ChargePowerCommand.cpp
 	src/model/command/ChangeCountDownCommand.cpp
 	src/model/command/TeledirigidoCommand.cpp
+	src/model/command/LeaveRoomCommand.cpp
 
 	src/view/mainView.cpp
 	src/view/SdlException.cpp

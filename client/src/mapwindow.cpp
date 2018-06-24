@@ -32,7 +32,7 @@ void mapWindow::on_btn_unirse_clicked(){
     }
 
     proxy.sendJoinRoom(id);
-    close();
+    accept();
 }
 
 
@@ -45,7 +45,8 @@ void mapWindow::on_btn_crear_clicked(){
     if (verifyValid(nameMap, INVALID_MAP_MSJ)) return;
     
     proxy.sendCreateRoom(nameRoom, numPlayer, nameMap);
-    close();
+    //limpio toda la información
+    accept();
 }
 
 void mapWindow::addMap(std::string& map){

@@ -21,6 +21,12 @@ int main(int argc, char *argv[]){
     MainWindow wormsMenu(proxy, name);
     wormsMenu.show();
     worms.exec();
+    try {
+        proxy.sendName(name);
+    } catch (SocketError& e){
+        std::cout <<"No hubo conexión" << std::endl;
+        return 0;
+    }
     
     //Inicio del juego
     GameClient game(proxy, name);

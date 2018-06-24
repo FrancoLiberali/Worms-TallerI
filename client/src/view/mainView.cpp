@@ -46,6 +46,13 @@ bool mainView::isOpen(){
 
 void mainView::close(){
 	open = false;
+	SoundManager::Instance().stopAllSounds();
+	SDL_HideWindow(screen.getWindow());
+}
+
+void mainView::openWindow(){
+	printf("se abrio la ventana\n");
+	open = true;
 }
 
 void mainView::update(){
@@ -142,23 +149,24 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 }
 
 void mainView::showWinner(){
-	endGame = true;
+	/*endGame = true;
 	menuWeapon->actionMenu();
 	screen.fill();
 	screen.clear();
 	TextureManager::Instance().draw("win", 0 , 0, 0, screen.getRenderer());
 	camera.focusCenterWindow();
-	screen.render();
+	screen.render();*/
 }
 
-void mainView::showLosser(){
-	endGame = true;
+void mainView::showLosser(std::string name){
+	printf("Alguien perdio\n");
+	/*endGame = true;
 	menuWeapon->actionMenu();
 	screen.clear();
 	screen.fill();
 	TextureManager::Instance().draw("lose", 0, 0, 0, screen.getRenderer());
 	camera.focusCenterWindow();
-	screen.render();
+	screen.render();*/
 }
 
 Camera& mainView::getCamera(){
@@ -185,6 +193,7 @@ void mainView::weaponDone(WeaponId id){
 void mainView::second(){
 	watch.update(screen.getRenderer());
 }
+
 
 
 void mainView::windChanged(int speed){

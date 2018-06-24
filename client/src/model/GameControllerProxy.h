@@ -25,6 +25,7 @@ public:
     void shoot(const int idJugador);
     void countDown(const int idJugador, const int time);
     void teledirigido(const int idJugador, const int x, const int y);
+    void leaveRoom(const int idJugador);
 };
 
 #endif

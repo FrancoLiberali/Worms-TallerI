@@ -7,10 +7,10 @@ GameWinnerEvent::GameWinnerEvent(int idPlayer,Model& model, mainView& view)
 
 void GameWinnerEvent::process(){
     if (model.isPlayer(this->idPlayer)){
-        view.showWinner();
+        //view.showWinner();
     }
     else{
-        view.showLosser();
+        //view.showLosser();
     }
-    model.closeComunnication();
+    //model.closeComunnication();
 }

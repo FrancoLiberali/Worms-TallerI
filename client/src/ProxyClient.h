@@ -47,6 +47,7 @@ public:
     void sendCreateRoom(std::string& nameRoom,int  numPlayer,std::string nameMap);
     void sendJoinRoom(int idRoom);
     void sendTeledirigido(int idPlayer, int x, int y);
+    void sendLeaveRoom();
 
 };
 

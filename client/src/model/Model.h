@@ -4,10 +4,10 @@
 #include "GameControllerProxy.h"
 #include "../controller/ClientEventReceiver.h"
 #include "../controller/ClientCommandSender.h"
-
 class ClientCommandSender;
 class ClientEventReceiver;
 class GameControllerProxy;
+
 
 #include <map>
 /*Modelo del cliente para mantener la informacion del juego
@@ -17,6 +17,7 @@ y como intermedirario al server*/
 * Modelo del cliente para mantener información del estado del juego
 * y como intermediario al server
 */
+
 class Model {
 private:
 	int idWormSelected;
@@ -50,6 +51,8 @@ public:
 	void setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver);
 	void closeComunnication();
 	void teledirigido(int x, int y);
+	void leaveRoom();
+	void keepPlaying();
 };
 
 #endif

@@ -13,6 +13,8 @@ void Controller::handle(SDL_Event& e) {
     switch (e.type){
         case SDL_QUIT:
 				view.close();
+                playing = false;
+                model.closeComunnication();
 				break;
         case SDL_KEYDOWN:{
             SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
@@ -79,4 +81,8 @@ void Controller::checkMouseState(SDL_Event& e, EventHandler& eventHandler){
         mouseState.handle(e, eventHandler);
     }
     view.update();
+}
+
+bool Controller::isPlaying(){
+    return playing;
 }

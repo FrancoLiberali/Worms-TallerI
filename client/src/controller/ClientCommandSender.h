@@ -27,6 +27,7 @@ public:
 	virtual void run() override;
 	void stop();
 	bool isClosed() const;	
+	void clean();
 };
 
 #endif

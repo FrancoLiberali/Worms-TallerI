@@ -71,3 +71,11 @@ int SdlScreen::getXCenter(){
 int SdlScreen::getYCenter(){
 	return height/2;
 }
+
+void SdlScreen::restart(){
+	SDL_DestroyWindow(m_pWindow);
+	SDL_DestroyRenderer(renderer);
+    IMG_Quit();
+	//TTF_Quit();
+	SDL_Quit();
+}

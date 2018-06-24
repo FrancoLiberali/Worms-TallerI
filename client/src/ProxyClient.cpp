@@ -28,7 +28,7 @@ void ProxyClient::close(){
     if (!open)
         return;
     this->socket.shutdown_();
-    printf("Cerro\n");
+    printf("Cerro el proxy\n");
     open = false;
 }
 
@@ -180,4 +180,11 @@ void ProxyClient::sendTeledirigido(int idPlayer, int x, int y){
     sendInt((x/ESCALA)*1000);
     sendInt((y/ESCALA)*1000);
     std::cout<<"enviar teledirigo "<<(x/ESCALA)*1000<<"-"<<(y/ESCALA)*1000<<std::endl;
+}
+
+void ProxyClient::sendLeaveRoom(){
+    sendChar(11);
+    sendInt(model->getIdPlayer());
+    printf("Enviar salida de room y volvio al lobby\n");
+    model->keepPlaying();
 }

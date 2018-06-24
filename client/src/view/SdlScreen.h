@@ -31,6 +31,7 @@ public:
 	SDL_Renderer* getRenderer();
 	int getXCenter();
 	int getYCenter();
+	void restart();
 };
 
 #endif 

@@ -57,10 +57,15 @@ void GameClient::run(){
 
 	Controller controller(model, clientView);
 	
-	//Enviamos el nombre del jugador
-	proxy.sendName(name);
-	preGame.showHall();
-
+	if (!preGame.showHall()){
+		printf("Se cerro el hall\n");
+		printf("Se cierra todo\n");
+		commandsQueue.push(nullptr);//se cierrar encolar nullpttr
+		eventReceiver.stop();
+		commmandSender.join();
+		eventReceiver.join();
+		return;
+	}
 	printf("Espere a otros jugadores\n");
 
 	//Game loop
@@ -91,7 +96,9 @@ void GameClient::run(){
 			extra = -to_sleep;
 		}
 	}
-	commandsQueue.push(nullptr);//se cierrar encola nullpttr
+	preGame.showResult();
+	printf("Se cierra todo\n");
+	commandsQueue.push(nullptr);//se cierra al  encolar nullpttr
 	eventReceiver.stop();
 	commmandSender.join();
 	eventReceiver.join();
