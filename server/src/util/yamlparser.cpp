@@ -1,6 +1,7 @@
 #include "util/yamlparser.h"
 #include "game_constants.h"
 #include <iostream>
+#include "../../config.h"
 
 #define INF_VALUE -1
 #define INFINITO "infinitas"
@@ -20,7 +21,7 @@ YAMLParser::YAMLParser() {}
 void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, GameConstants& info)
 {
 	std::cout << name << "\n";
-    YAML::Node config = YAML::LoadFile("../maps/" + name);
+    YAML::Node config = YAML::LoadFile(_INSTALL_PATH_ "/maps/" + name);
     for (YAML::const_iterator it = config.begin(); it != config.end(); ++it){
         std::string key(it->first.as<std::string>());
         if (key.compare("armas") == 0){

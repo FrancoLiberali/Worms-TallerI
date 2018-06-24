@@ -1,0 +1,3 @@
+#ifndef _INSTALL_PATH_
+#define _INSTALL_PATH_ "@INSTALL_PATH@"
+#endif
