@@ -7,18 +7,17 @@ void FontManager::init(SDL_Renderer * renderer)
 	this->renderer = renderer;
 	if (TTF_Init() == -1)
 		throw SdlException("No se puedo abrir TTF", TTF_GetError());
-	openFonts();
 }
 
-void FontManager::openFonts()
+void FontManager::openFont(std::string id, std::string path, int size)
 {
-	TTF_Font * aFont = TTF_OpenFont(_INSTALL_PATH_ "/resource/font/arial.ttf", 11 );
-	if (!aFont)
+	TTF_Font * font = TTF_OpenFont(path.c_str(), size);
+	if (!font)
 		throw SdlException("No hay fuente SDL_ttf Error", TTF_GetError());
-	map["arial"] = aFont;
+	map[id] = font;
 }
 
-TTF_Font* FontManager::getFont(std::string fontId){
+TTF_Font* FontManager::getFont(std::string& fontId){
 	if (map.find(fontId) == map.end())
 		return NULL;
 	return map[fontId];;

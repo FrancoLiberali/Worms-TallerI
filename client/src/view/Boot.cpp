@@ -2,6 +2,7 @@
 
 #include "TextureManager.h"
 #include "TextManager.h"
+#include "FontManager.h"
 #include "SpriteConfigurator.h"
 #include "../sound/SoundManager.h"
 #include "../../config.h"
@@ -19,10 +20,12 @@ void Boot::init(){
 
 	TextManager::Instance().init(screen.getRenderer());
     TextureManager::Instance().init(W_WIDHT, W_HEIGHT);
+	FontManager::Instance().init(screen.getRenderer());
 	SoundManager::Instance().init();
     loadSprites();
 	loadMenuWeapon();
 	loadSounds();
+	loadFonts();
 }
 
 void Boot::loadSprites(){
@@ -90,6 +93,8 @@ void Boot::loadSprites(){
 		//imagenes
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/win.png", "win", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/lose.png", "lose", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/messageBox.png", "message", screen.getRenderer());
+		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/reloj.png", "reloj", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/sky3.png", "sky3.png", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea1.png", "marea1", screen.getRenderer());
 		TextureManager::Instance().load(_INSTALL_PATH_ "/resource/images/marea2.png", "marea2", screen.getRenderer());
@@ -155,9 +160,6 @@ void Boot::loadMenuWeapon(){
 	} catch (GameException & e) {
 		std::cout << e.what() << std::endl;	
 	}
-
-	////std::cout << "Se cargo el menu" << std::endl;
-
 }
 
 void Boot::loadSounds(){
@@ -174,6 +176,15 @@ void Boot::loadSounds(){
 	SoundManager::Instance().loadSound(BAT_JINGLE, _INSTALL_PATH_ "/resource/sounds/bat_jingle.wav");
 	SoundManager::Instance().loadSound(BYE, _INSTALL_PATH_ "/resource/sounds/byebye.wav");
 	SoundManager::Instance().loadSound(AIRSTRIKE, _INSTALL_PATH_ "/resource/sounds/airstrike.wav" );
+}
+
+void Boot::loadFonts(){
+	try{
+		FontManager::Instance().openFont("arialbd", _INSTALL_PATH_ "/resource/font/arialbd.ttf", 14);
+		FontManager::Instance().openFont("reloj", _INSTALL_PATH_ "/resource/font/reloj.ttf", 25);
+	} catch (SdlException& e){
+		std::cout << e.what() << std::endl;	
+	}
 }
 
 SdlScreen& Boot::getScreen(){

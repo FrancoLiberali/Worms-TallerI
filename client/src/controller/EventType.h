@@ -19,7 +19,10 @@ enum EventType {
 	A_PLAYER_OFF,
 	A_PLAYER_LOSE,
 	A_PLAYER_WIN,
-	WEAPON_DONE = 22
+	WEAPON_DONE = 22,
+	RIGHT_TARGET,
+	SECOND,
+	WIND_CHANGED
 };
 
 enum PreEvent{ 

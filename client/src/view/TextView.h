@@ -25,7 +25,7 @@ public:
 	TextView();
 	~TextView();
 	void setFont(Tfont font);
-	bool setText( std::string textureText, SDL_Color textColor);
+	bool setText( std::string textureText, SDL_Color textColor = {0,0,0});
 	void free();
 	void setColor( Uint8 red, Uint8 green, Uint8 blue );
 	void setBlendMode( SDL_BlendMode blending );

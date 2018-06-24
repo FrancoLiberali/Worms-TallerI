@@ -61,6 +61,9 @@ add_executable(worms-client
 	src/controller/event/GameWinnerEvent.cpp
 	src/controller/event/WeaponDoneEvent.cpp
 	src/controller/event/CameraMoveEvent.cpp
+	src/controller/event/RightTargertEvent.cpp
+	src/controller/event/SecondEvent.cpp
+	src/controller/event/WindChangedEvent.cpp
 
 	src/common/Thread.cpp
 	src/common/socket.cpp
@@ -90,6 +93,7 @@ add_executable(worms-client
 	src/view/SdlScreen.cpp
 	src/view/Sprite.cpp
 	src/view/SpriteConfigurator.cpp
+	src/view/FontManager.cpp
 	src/view/TextureManager.cpp
 	src/view/TextManager.cpp
 	src/view/TextView.cpp
@@ -111,6 +115,9 @@ add_executable(worms-client
 	src/view/bullets/DynamiteView.cpp
 	src/view/bullets/AirMissileView.cpp
 	src/view/PowerView.cpp
+	src/view/PanelInfo.cpp
+	src/view/WatchView.cpp
+
 	src/sound/SoundManager.cpp
 	${UIS_HEADERS}
 )
@@ -132,7 +139,7 @@ PKG_SEARCH_MODULE(SDL2TTF REQUIRED SDL2_ttf>=2.0.0)
 target_link_libraries(worms-client Qt5::Widgets)
 
 #Agrego las librearias de SDL2
-target_link_libraries(worms-client SDL2 SDL2_image SDL2_mixer)
+target_link_libraries(worms-client SDL2 SDL2_image SDL2_mixer SDL2_ttf)
 
 # Definiendo la dirección de instalacicón `cmake .. -DINSTALL_PATH=<dir>`
 if(NOT INSTALL_PATH)

@@ -6,7 +6,7 @@
 
 mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen, Camera& camera)
 		: screen(screen), camera(camera), eventHandler(eventHandler), open(true), 
-		stage(screen, camera), endGame(false){
+		stage(screen, camera), endGame(false), watch(screen){
 	this->init();
 }
 
@@ -53,12 +53,16 @@ void mainView::update(){
 		return;
 	screen.fill();
 	stage.draw();
-	turnView.draw(screen.getRenderer(), 10 , 10);
+	//turnView.draw(screen.getRenderer(), 30 , 30);
+	panelInfo.draw(screen.getRenderer());
+	watch.draw();
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
 		screen.fill();
 		stage.draw();
-		turnView.draw(screen.getRenderer(), 10 , 10);
+		//turnView.draw(screen.getRenderer(), 10 , 10);
+		panelInfo.draw(screen.getRenderer());
+		watch.draw();
 		menuWeapon->draw(screen);
 		event->process();
 		delete event;
@@ -123,15 +127,12 @@ void mainView::addMissile(int id, WeaponId idWeapon, int dir, int posx, int posy
 	BulletView* bullet = BulletFactory::createBulletView(idWeapon, id, dir, posx, posy,
 		 angle, screen, camera);
 	this->bullets[id] = bullet;
-	printf("Crear misiles\n");
 }
 
 
 std::string mainView::changeTurn(std::string namePlayer, int idWorm){
-	turnView.setColor(255,10,255);
-	SDL_Color red = {255,255,255};
-	turnView.setText("Turno " + namePlayer,red);
-	
+	panelInfo.setTextTun("Turno: " + namePlayer);
+	watch.start();
 	for(auto& it: this->worms){
 		it.second->offFocus();
 		it.second->unselect();
@@ -179,4 +180,14 @@ void mainView::setBackground(std::string name){
 void mainView::weaponDone(WeaponId id){
 	Weapon* weaponView  = menuWeapon->findWeaponById(id);
 	weaponView->done();
+}
+
+void mainView::second(){
+	watch.update(screen.getRenderer());
+}
+
+
+void mainView::windChanged(int speed){
+	//turnView.setText("VIENTO : " + std::to_string(speed) + " km/h", red);
+	panelInfo.setTextWind("Viento: " + std::to_string(speed) + " km/h");
 }

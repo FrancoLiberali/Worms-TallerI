@@ -44,6 +44,8 @@ void GameClient::run(){
 	model.setGameControllerProxy(&gcp);
 	model.setNamePlayer(name);
 	proxy.addModel(&model);
+	ehandler.setModel(&model);
+
 
 	PreGameManager preGame(proxy);
 	//cola de eventos a recibir

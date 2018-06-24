@@ -12,7 +12,7 @@
 class MenuWeaponView {
 
 private:
-	std::map<WeaponId, Weapon*> mapa;
+	std::map<WeaponId, Weapon*> weapons;
 	Weapon* menu;
 	Camera& camera;
 public:

@@ -45,7 +45,7 @@ void TextManager::loadFont(Tfont fuente){
 	this->font_map[idFont] = font;
 }
 
-void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color color, bool zoom ){
+void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color color){
 	SDL_Rect destino, origen; 
 	int fila, columna;
 	int letrasPorFila, letrasPorColumna;
@@ -79,7 +79,7 @@ void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color c
 	
 }
 
-void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color, bool zoom ){
+void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color){
 	int i;
 	std::string idFont;
 	if (fuente == Arial16){
@@ -94,7 +94,30 @@ void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color
 						x + (i*(this->font.anchoLetra - 7)) ,
 						y,
 						w[i],
-						color,
-						zoom);
+						color);
 	}
+}
+
+void TextManager::write(SDL_Texture* texture, std::string idfont, int x, int y, std::string text, SDL_Color color){
+	
+	TTF_Font* font = FontManager::Instance().getFont(idfont); 
+	SDL_Surface* surf = TTF_RenderText_Blended(font, text.c_str(), color);
+	if (surf == nullptr){
+		TTF_CloseFont(font);
+		std::cout<< "TTF_RenderText"<<std::endl;
+	}
+	texture = SDL_CreateTextureFromSurface(renderer, surf);
+	if (texture == nullptr){
+		std::cout<< "CreateTexture"<<std::endl;
+	}
+	
+	SDL_FreeSurface(surf);
+	int w, h;
+	SDL_QueryTexture(texture, NULL, NULL, &w, &h);
+	SDL_Rect destRect;
+	destRect.h = h;
+	destRect.w = w;
+	destRect.x = x;
+	destRect.y = y;
+	SDL_RenderCopy(renderer, texture, NULL, &destRect);
 }

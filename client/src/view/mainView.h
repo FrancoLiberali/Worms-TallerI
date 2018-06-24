@@ -16,6 +16,8 @@
 
 #include "MenuWeaponView.h"
 #include "TextView.h"
+#include "PanelInfo.h"
+#include "WatchView.h"
 
 class EventHandler;
 
@@ -29,7 +31,9 @@ private:
 	EventHandler& eventHandler;
 	MenuWeaponView* menuWeapon;
 
-	TextView turnView;
+	//TextView turnView;
+	PanelInfo panelInfo;
+	WatchView watch;
 
 	std::map<int,WormView*> worms;
 	std::map<int,BulletView*> bullets;
@@ -66,6 +70,8 @@ public:
 	void createStage(int widht, int height);
 	void setBackground(std::string name);
 	void weaponDone(WeaponId id);
+	void second();
+	void windChanged(int speed);
 };
 
 #endif

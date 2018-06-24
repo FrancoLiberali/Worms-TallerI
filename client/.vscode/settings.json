@@ -43,7 +43,9 @@
         "cmath": "cpp",
         "cstddef": "cpp",
         "numeric": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "atomic": "cpp",
+        "cstring": "cpp"
     },
     "C_Cpp.intelliSenseEngineFallback": "Disabled",
     "C_Cpp.errorSquiggles": "Disabled"

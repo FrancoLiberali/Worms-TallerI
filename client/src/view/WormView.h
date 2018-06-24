@@ -63,6 +63,7 @@ public:
 	void unselect();
 	void upatePower();
 	void useWeapon();
+	void useTelederigido();
 	bool isCurrWeapon(WeaponId id);
 };
 

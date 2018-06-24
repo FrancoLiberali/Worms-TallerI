@@ -18,8 +18,8 @@ public:
 	}
 
 	void init(SDL_Renderer * renderer);
-	void openFonts();
-	TTF_Font* getFont(std::string fontId);
+	void openFont(std::string id, std::string path, int size);
+	TTF_Font* getFont(std::string& fontId);
 	SDL_Renderer * getRenderer() {return this->renderer;}
 	void closeFonts();
 };

@@ -1,5 +1,6 @@
 #include "Escenario.h"
 #include "TextureManager.h"
+#include "TextManager.h"
 
 #define INITIAL_X 0
 #define INITIAL_Y 0
@@ -14,6 +15,7 @@ void Escenario::draw(){
 	//fondo
 	TextureManager::Instance().draw(background, INITIAL_X - camera.getX()
 	, INITIAL_Y - camera.getY(), 0, screen.getRenderer(), SDL_FLIP_NONE, widht, height);
+
 	//vigas
 	for (auto vi = vigas.begin(); vi != vigas.end(); vi++)
 		(*vi)->draw();

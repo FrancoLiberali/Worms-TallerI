@@ -247,6 +247,7 @@ void WormView::changeAimAngle(int delta){
 
 void WormView::onFocus(){
 	focus = true;
+	camera.updateCenter(x,y);
 }
 
 void WormView::offFocus(){
@@ -269,15 +270,17 @@ void WormView::useWeapon(){
 	if (this->weaponId == BATE){
 		SoundManager::Instance().playSound(BAT_IMPACT);
 		SoundManager::Instance().playSound(BAT_JINGLE);
-	} else if (this->weaponId == TELEPORT){
+	}
+}
+
+void WormView::useTelederigido(){
+	if (this->weaponId == TELEPORT){
 		SoundManager::Instance().playSound(TELELEPORT_S);
 	}
 	else if (this->weaponId == AIRATTACK){
 		SoundManager::Instance().playSound(COMMUNICATOR);
 	}
 }
-
-
 bool WormView::isCurrWeapon(WeaponId id){
 	return this->weaponId == id;
 }

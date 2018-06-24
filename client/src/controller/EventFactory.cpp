@@ -18,6 +18,9 @@
 #include "event/WormChangeAimEvent.h"
 #include "event/GameWinnerEvent.h"
 #include "event/WeaponDoneEvent.h"
+#include "event/RightTargertEvent.h"
+#include "event/SecondEvent.h"
+#include "event/WindChangedEvent.h"
 
 
 Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
@@ -126,6 +129,17 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case WEAPON_DONE:{
       int idWeapon = proxy.receiveInt();
       return new WeaponDoneEvent(idWeapon);
+    }
+    case RIGHT_TARGET:{
+      int idWeapon = proxy.receiveInt();
+      return new RightTargertEvent(idWeapon);
+    }
+    case SECOND:{
+      return new SecondEvent();
+    }
+    case WIND_CHANGED:{
+      int windSpeed = proxy.receiveInt();
+      return new WindChangedEvent(windSpeed);
     }
   }
   printf("MAL\n");

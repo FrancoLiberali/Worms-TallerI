@@ -12,9 +12,10 @@ protected:
 	mainView* view;
 	Model* model;
 public:
-	void setView(mainView *view);
+	void setView(mainView* view);
+	void setModel(Model* model);
 	virtual void process() = 0;
-	virtual ~Event(){};	
+	virtual ~Event(){};
 };
 
 #endif

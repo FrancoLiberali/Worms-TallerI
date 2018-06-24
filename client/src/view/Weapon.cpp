@@ -63,17 +63,14 @@ void Weapon::drawItems(SdlScreen & screen){
 }
 
 void Weapon::allow(){
-	//lWeaponView.clear();
 	lWeaponView.push_back(allowWeapon);
 	ballow = true;
 }
-
 
 bool Weapon::hasClickedMenu(SDL_Point clickPoint){
 	int x1, x2, y1, y2;
 	x1 = x, x2 = x + width;
 	y1 = y, y2 = y + height;
-    //std::cout<<"se hizo click en las armas"<<std::endl;
 	if((!ballow) && (this->id != NO_WEAPON))
 		return false;
 	if(

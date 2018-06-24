@@ -15,6 +15,7 @@ private:
     void loadImages();
     void loadMenuWeapon();
     void loadSounds();
+    void loadFonts();
 public:
     void init();
     SdlScreen& getScreen();    
