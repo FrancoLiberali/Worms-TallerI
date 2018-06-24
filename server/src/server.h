@@ -17,7 +17,7 @@
 class Server : public Thread {
 	private:
 		std::mutex& syslog_mutex;
-		std::vector<std::string>& maps;
+		const std::vector<std::string>& maps;
 		Socket socket;
 		std::map<int, PlayerInfo> players;
 		std::mutex mutex;
@@ -30,7 +30,7 @@ class Server : public Thread {
 	public:
 		// Crea un server que se bindea al puerto port.
 		// Lanza SocketError en caso de error en el bindeo.
-		Server(const char* port, std::mutex& syslog_mutex, std::vector<std::string>& maps);
+		Server(const char* port, std::mutex& syslog_mutex, const std::vector<std::string>& maps);
 		
 		~Server() noexcept;
 		
