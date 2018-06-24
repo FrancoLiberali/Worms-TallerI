@@ -40,10 +40,36 @@ class Turn{
 		
 		
 		// procesa la lista to_remove_projectiles,
-		// en el cual se agregaron durante la simulacion
+		// en la cual se agregaron durante la simulacion
 		// los ids de los projectiles que deben ser eliminados del modelo
 		// dada su explosion
 		void processProjectilesDeletion();
+		
+		// procesa el map to_remove_gusanos,
+		// en el cual se agregaron durante la simulacion
+		// los ids de los gusanos que deben ser eliminados del modelo
+		// dada su eliminacion: muerieron a volaron mas alla de los limites de mapa
+		void processGusanosDeletion(int active_gusano, int& turn_actual_len);
+		
+		// proce la lista to_create
+		// en la cual se agregaron durante la simulacion
+		// los objetos FragmentInfo que contienen la informacion
+		// para crear los pequenios proyectiles causado por 
+		// la explosion de un proyectil fragmentario
+		void processProjectilesCreation();
+		
+		// determina si debe haber algun cambio en el viento
+		// el viento cambia cada un determinado tiempo
+		// siempre y cuando no hay ningun proyectil ya en vuelo 
+		void processWindChange(int turn_actual_len);
+		
+		// actualiza los proyectiles en vuelo
+		void processProjectilesInFlight(bool& something_to_simulate);
+		
+		// actualiza los gusanos vivos y manda la informacion de los que
+		// se encuentren realizando alguna accion
+		void processAliveGusanos(bool& something_to_simulate);
+	
 		
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
 		void gusano_move(char* msj, Gusano& gusano);

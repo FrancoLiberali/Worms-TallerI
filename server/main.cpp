@@ -11,7 +11,7 @@
 #define CRIT_ERROR "[Crit] ​Error: %s"
 #define NO_MAPS "No hay ningun mapa disponible"
 #define MAPS_PATH "../maps"
-#define YAML_LEN 5
+#define YAML_FORMAT ".yaml"
 #define EXIT 'q'
 
 int main(int argc, char* argv[]){
@@ -29,7 +29,7 @@ int main(int argc, char* argv[]){
     }
     while ((map = readdir(maps_dir))){
 		std::string name(map->d_name);
-		if (name.length() > YAML_LEN){
+		if (name.find(YAML_FORMAT) != std::string::npos){
 			maps.push_back(name);
 		}
 	}
