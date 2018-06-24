@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
 		syslog(LOG_CRIT, CRIT_ERROR, MAPS_ERROR);
 		return 0;
     }
-    while (map = readdir(maps_dir)){
+    while ((map = readdir(maps_dir))){
 		std::string name(map->d_name);
 		if (name.find(YAML_FORMAT) != std::string::npos){
 			maps.push_back(name);

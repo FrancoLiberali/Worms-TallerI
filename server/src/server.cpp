@@ -4,7 +4,7 @@
 
 #define INFO "[Info] ​%s"
 
-Server::Server(const char* port, std::mutex& syslog_mutex_e, const std::vector<std::string>& maps_e) : 
+Server::Server(const char* port, std::mutex& syslog_mutex_e, std::vector<std::string>& maps_e) : 
 		syslog_mutex(syslog_mutex_e), maps(maps_e), hall(hall_queue, not_playing, players, mutex){
 	this->socket.bind(port);
 	
