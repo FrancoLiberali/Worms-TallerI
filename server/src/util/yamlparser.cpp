@@ -17,7 +17,7 @@
 
 YAMLParser::YAMLParser() {}
 
-void YAMLParser::cargarConfig(std::string& name, std::vector<ElementInfo>& v, GameConstants& info)
+void YAMLParser::cargarConfig(const std::string& name, std::vector<ElementInfo>& v, GameConstants& info)
 {
 	std::cout << name << "\n";
     YAML::Node config = YAML::LoadFile("../maps/" + name);

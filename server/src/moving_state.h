@@ -9,7 +9,7 @@ class MovingState : public GusanoState{
 		
 		~MovingState();
 		
-		virtual void sumOneStep();
+		virtual void update();
 		
 		virtual bool isInactive();
 		

@@ -34,7 +34,7 @@ public:
     // Carga un mapa.
     // Recibe el id del mapa, un vector de elementos y las constantes del juego.
     // En "v" se almacena todos los objetos que componen el mapa.
-    void cargarConfig(std::string& name, std::vector<ElementInfo>& v,
+    void cargarConfig(const std::string& name, std::vector<ElementInfo>& v,
      GameConstants& info);
     // Carga las armas.
     // Recibe un nodo con la informacion, y un map en donde se va

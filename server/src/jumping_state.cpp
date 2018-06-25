@@ -20,7 +20,7 @@ JumpingState::~JumpingState(){
 	}
 }
 
-void JumpingState::sumOneStep(){
+void JumpingState::update(){
 	this->y_last = this->body->GetPosition().y;
 	if (y_last > this->y_max){
 		y_max = y_last;

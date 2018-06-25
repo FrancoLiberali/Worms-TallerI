@@ -56,9 +56,11 @@
 #define GUSANO_WIDTH 0.25
 #define MAP_OFFSET 25
 
+#define BETWEEN_TURNS_SLEEP 2
+
 Turn::Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano>>& players_e, 
 	std::vector<std::pair<int, int>>& to_remove_gusanos_e,
-	GameConstants& info_e, MultipleProxy& proxy_e,
+	const GameConstants& info_e, MultipleProxy& proxy_e,
 	ObjectsFactory& factory_e) :
 		world(world_e), queue(queue_e), players(players_e), to_remove_gusanos(to_remove_gusanos_e),
 		info(info_e), proxy(proxy_e), factory(factory_e){
@@ -131,6 +133,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 	}
 	// al final del turno se manda que guarda el arma
 	this->proxy.sendTakeWeapon(NO_WEAPON);
+	std::this_thread::sleep_for(std::chrono::seconds(BETWEEN_TURNS_SLEEP));
 }
 
 void Turn::interpretMessages(int active_player,Gusano& gusano_actual, bool& continue_turn, int& turn_actual_len){
@@ -147,14 +150,14 @@ void Turn::interpretMessages(int active_player,Gusano& gusano_actual, bool& cont
 			}
 		} else if (player_id == active_player && continue_turn){
 			if (msj[EVENT] == MOVE){
-				this->gusano_move(msj, gusano_actual);
+				this->gusanoMove(msj, gusano_actual);
 			} else if (gusano_actual.isInactive()){
 				switch (msj[EVENT]){
-					case JUMP: this->gusano_jump(gusano_actual);
+					case JUMP: gusano_actual.jump();
 							break;
-					case BACK_JUMP: this->gusano_back_jump(gusano_actual);
+					case BACK_JUMP: gusano_actual.backJump();
 							break;
-					case WEAPON: this->take_weapon(active_player, msj);
+					case WEAPON: this->takeWeapon(active_player, msj);
 							break;
 					case ANGLE: this->changeSightAngle(msj);
 							break;
@@ -186,20 +189,12 @@ void Turn::disconnect(int player_id, int active_player, int& turn_actual_len){
 	}
 }
 
-void Turn::gusano_move(char* msj, Gusano& gusano){
+void Turn::gusanoMove(char* msj, Gusano& gusano){
 	int direction = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 	gusano.move(direction);
 }
 
-void Turn::gusano_jump(Gusano& gusano){
-	gusano.jump();
-}
-
-void Turn::gusano_back_jump(Gusano& gusano){
-	gusano.backJump();
-}
-
-void Turn::take_weapon(int player_id, char* msj){
+void Turn::takeWeapon(int player_id, char* msj){
 	int to_take = ntohl(*(reinterpret_cast<int*>(msj + 5)));
 	if (!this->fired && this->ammunition[player_id][to_take] != 0){
 		this->weapon = to_take;
@@ -231,9 +226,7 @@ void Turn::changeRegresiveTime(char* msj){
 void Turn::loadPower(int player_id, Gusano& gusano, int& turn_actual_len){
 	if (this->power < MAX_POWER){
 		this->power += MIN_POWER_CHANGE;
-	}
-	if (this->power == MAX_POWER){
-		std::cout << "fire automatico\n";
+	} else {
 		this->fire(player_id, gusano, turn_actual_len);
 	}
 }
@@ -270,7 +263,7 @@ void Turn::fire(int player_id, Gusano& gusano, int& turn_actual_len){
 		}
 		this->setFired(player_id, turn_actual_len);
 	} else if (this->weapon == AIR_ATTACK){
-		this->fire_air_attack(player_id, turn_actual_len);
+		this->fireAirAttack(player_id, turn_actual_len);
 	} else if (this->weapon == TELEPORT){
 		this->teleport(player_id, turn_actual_len, gusano);
 	}
@@ -278,7 +271,6 @@ void Turn::fire(int player_id, Gusano& gusano, int& turn_actual_len){
 
 void Turn::setFired(int player_id, int& turn_actual_len){
 	this->ammunition[player_id][this->weapon] -= 1;
-	std::cout << "quedan " << this->ammunition[player_id][this->weapon] << "\n";
 	if (this->ammunition[player_id][this->weapon] == 0){
 		this->proxy.sendFinishedAmunnition(player_id, this->weapon);
 	} 
@@ -290,10 +282,9 @@ void Turn::changeRemoteObjetive(char* msj){
 	this->remote_position = b2Vec2(ntohl(*(reinterpret_cast<int*>(msj + 5))) / TO_METERS, 
 								   ntohl(*(reinterpret_cast<int*>(msj + 9))) / TO_METERS);
 	this->remote_position.y = -this->remote_position.y;
-	std::cout << "cambio a: " << this->remote_position.x << "; " << this->remote_position.y << "\n";
 }
 
-void Turn::fire_air_attack(int player_id, int& turn_actual_len){
+void Turn::fireAirAttack(int player_id, int& turn_actual_len){
 	float x_to = this->remote_position.x;
 	float y_to = this->remote_position.y;
 	if (x_to > MAP_OFFSET  &&  x_to < this->info.map_widht + MAP_OFFSET && y_to != DEFAULT_REMOTE_Y){

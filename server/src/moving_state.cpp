@@ -8,7 +8,7 @@ MovingState::MovingState(){
 MovingState::~MovingState(){
 }
 
-void MovingState::sumOneStep(){
+void MovingState::update(){
 	this->rest_steps -= 1;
 	if (!this->rest_steps){
 		throw MovingFinished();

@@ -4,7 +4,7 @@
 
 #define INFO "[Info] ​%s"
 
-Server::Server(const char* port, std::mutex& syslog_mutex_e, std::vector<std::string>& maps_e) : 
+Server::Server(const char* port, std::mutex& syslog_mutex_e, const std::vector<std::string>& maps_e) : 
 		syslog_mutex(syslog_mutex_e), maps(maps_e), hall(hall_queue, not_playing, players, mutex){
 	this->socket.bind(port);
 	
@@ -22,9 +22,8 @@ void Server::run(){
 			Socket active = this->socket.accept();
 			Receiver receiver(std::move(active), &hall_queue);
 			Proxy& proxy = receiver.getProxy();
-			std::string name = proxy.receiveName();
-			std::cout << "name: " << name << '\n'; 
-			proxy.sendPlayerId(cant_players);
+			const std::string name = proxy.receiveName();
+			proxy.sendPlayerId(this->cant_players);
 			proxy.sendAvailableMaps(this->maps);
 			std::lock_guard<std::mutex> lock_players(this->mutex);
 			this->players.insert(std::pair<int, PlayerInfo>(cant_players, std::move(PlayerInfo(std::move(name), std::move(receiver)))));

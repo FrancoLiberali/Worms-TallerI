@@ -7,7 +7,7 @@
 
 class Dynamite : public RegresiveProjectile {
 	public:
-		Dynamite(b2World& world_entry, int number, float x, float y, int direction,
+		Dynamite(b2World& world_entry, int number, float x, float y, int direction, float angle,
 		GameConstants& info, std::vector<int>& to_remove_e, MultipleProxy& proxy, unsigned int time);
 		
 		~Dynamite();

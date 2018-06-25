@@ -8,22 +8,23 @@
 
 class FragmentProjectile : public Projectile{
 	private:
-		unsigned int cant_fragments;
-		int fragment_damage;
-		int fragment_radius;
-		int vel;
+		const unsigned int cant_fragments;
+		const int fragment_damage;
+		const int fragment_radius;
+		const int vel;
 		std::vector<FragmentInfo>& to_create;
 		
 	public:
+		// Crea un proyectil que al explotar expulsa fragmentos de proyectil
 		FragmentProjectile(b2World& world_entry, int number, float x, float y, int direction, float angle, float vel, 
 		int damage_e, int radius_e, std::vector<int>& to_remove_e, MultipleProxy& proxy,
 		int fragment_damage_e, int fragment_radius_e, unsigned int cant_fragments, std::vector<FragmentInfo>& to_create_e);
 		
 		~FragmentProjectile();
 		
+		// Realiza la explosion basica de una proyectil
+		// mas la creacion de fragmentos de proyectil que tambien explotan
 		virtual void exploit();
-		
-		//FragmentProjectile(FragmentProjectile&& other);
 };
 
 #endif

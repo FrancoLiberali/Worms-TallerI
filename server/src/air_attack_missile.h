@@ -10,11 +10,13 @@
 
 class AirAttackMissile : public SimpleProjectile {
 	public:
+		// Crea uno de los misiles de un ataque aereo
 		AirAttackMissile(b2World& world_entry, int number, float x, GameConstants& info, 
 							std::vector<int>& to_remove, MultipleProxy& proxy);
 		
 		~AirAttackMissile();
 		
+		// Actualiza la trayectoria del proyectil al viento actual.
 		virtual void update(float wind);
 };
 

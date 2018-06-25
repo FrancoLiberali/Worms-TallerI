@@ -7,20 +7,25 @@
 class RotatingState : public GusanoState{
 	private:
 		b2Body* body;
-		float desired_angle;
+		const float desired_angle;
 		b2Vec2 new_position;
 		
-		//lleva a un angulo cualquiera al rango (-2pi, 2pi)
+		//lleva de un angulo cualquiera a uno en el rango (-2pi, 2pi)
 		float normalizate(float angle);
 	public:
-		RotatingState(b2Body* body_entry, b2Vec2 position, double desired_angle_entry);
+		// Crea un estado de rotacion que hace el gusano rote al desired_angle
+		RotatingState(b2Body* body_entry, b2Vec2 position, float desired_angle_e);
 		
 		~RotatingState();
 		
-		virtual void sumOneStep();
+		// Cuando se actualiza, el gusano no se encuentra en simulacion
+		// por lo que se puede realizar la rotacion.
+		virtual void update();
 		
+		// retorna false
 		virtual bool isInactive();
 		
+		// retorna false
 		virtual bool isFalling();
 		
 };

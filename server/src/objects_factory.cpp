@@ -142,7 +142,7 @@ void ObjectsFactory::createDynamite(int number, b2Vec2 position,
 						int direction, unsigned int time){
 	Dynamite* dynamite = new Dynamite(this->world, number, 
 						position.x + (WORM_HEIGHT + this->info.dynamite_widht) * direction, 
-						position.y, direction, 
+						position.y, direction, (direction == LEFT)? M_PI : 0,
 						this->info, *(this->to_remove_projectiles), this->proxy, time);
 	this->projectiles->insert(std::pair<int, std::unique_ptr<Projectile>>(number, 
 						std::unique_ptr<Projectile>(dynamite)));

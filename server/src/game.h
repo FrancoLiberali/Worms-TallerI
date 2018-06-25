@@ -32,11 +32,10 @@ class Game {
 	public:
 		// Crea el objeto game, creando el mundo de simulaciones fisicas
 		// y agregando en el todos los objetos del juego.
-		// La informacion de estos objetos deberia ser leida del archivo yalm
-		// especificado por el map_id, lo que aun no esta implementado y
-		// la creacion del mapa se hace aqui mismo.
+		// La informacion de estos objetos deberia es leida del archivo yalm
+		// especificado por el map_name.
 		// Ademas se asignan a cada jugador sus correspondientes gusanos.
-		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, std::string& map_name, std::vector<int> players_ids);
+		Game(MultipleProxy& proxy_e, ProtectedQueue& queue_e, const std::string& map_name, std::vector<int> players_ids);
 		
 		~Game();
 		

@@ -17,6 +17,7 @@ class MultipleProxy{
 		// Crea el objeto, el cual tiene la finalidad de contener
 		// distintos proxys que se van a comunicar con distintos juagores
 		// para enviarle a todos los jugadores el mismo mensaje.
+		//Para informacion de que hace cada mensaje leer proxy.h
 		MultipleProxy();
 		
 		~MultipleProxy();

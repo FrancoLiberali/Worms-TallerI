@@ -18,7 +18,7 @@ class Turn{
 		ProtectedQueue& queue;
 		std::map<int, std::map<int, Gusano>>& players;
 		std::vector<std::pair<int, int>>& to_remove_gusanos;
-		GameConstants& info;
+		const GameConstants& info;
 		MultipleProxy& proxy;
 		ObjectsFactory& factory;
 		std::map<int, std::vector<int>> ammunition;
@@ -70,25 +70,60 @@ class Turn{
 		// se encuentren realizando alguna accion
 		void processAliveGusanos(bool& something_to_simulate);
 	
-		
+		// Desconecta al jugador player_id de la partida.
+		// Avisa a todo el resto de jugadores de su desconeccion
+		// elimina sus gusanos y termina el turno si el turno
+		// actual era de el.
 		void disconnect(int player_id, int active_player, int& turn_actual_len);
-		void gusano_move(char* msj, Gusano& gusano);
-		void gusano_jump(Gusano& gusano);
-		void gusano_back_jump(Gusano& gusano);
-		void take_weapon(int player_id, char* msj);
+		
+		// interpreta del msj la direccion en la que
+		// debe ser el movimiento y mueve al gusano.
+		void gusanoMove(char* msj, Gusano& gusano);
+		
+		// Interpreta del mensaje el arma a sacar,
+		// saca el arma si el jugador player_id aun tiene municion
+		// de esa arma y setea todas las variables del 
+		// arma(poder, angulo de mira, etc) al default.
+		void takeWeapon(int player_id, char* msj);
+		
+		// Interpreta del msj la direccion del cambio
+		// y aumenta o reduce el angulo de la mira del arma
+		// si el arma lo permite.
 		void changeSightAngle(char* msj);
+		
+		// Interpreta del mensaje el tiempo que se desea que sea el 
+		// tiempo de explosion del arma actual y lo setea
 		void changeRegresiveTime(char* msj);
+		
+		// Carga poder al arma si el arma lo permite.
+		// Si se llega al poder maximo se dispara automaticamente.
 		void loadPower(int player_id, Gusano& gusano, int& turn_actual_len);
+		
+		// Dispara el arma que tenga el gusano actual.
+		// Llama a la factory para crear el proyectil.
 		void fire(int player_id, Gusano& gusano, int& turn_actual_len);
+		
+		// Setea las variables del turno a que ya se disparo un arma.
 		void setFired(int player_id, int& turn_actual_len);
+		
+		// Interpreta del mensaje la posicion a la que se quiere
+		// cambiar el objetivo de un arma teledirigida y la setea.
 		void changeRemoteObjetive(char* msj);
-		void fire_air_attack(int player_id, int& turn_actual_len);
+		
+		// Chequea que el objetivo de arma teledirigida sea valido
+		// y dispara el ataque aereo.
+		void fireAirAttack(int player_id, int& turn_actual_len);
+		
+		// Chequea que el objetivo de arma teledirigida este desocupado
+		// y teletransporta al gusano.
 		void teleport(int player_id, int& turn_actual_len, Gusano& gusano);
 		
 	public:
+		// Crea el objeto turn, se setean todas las variables necesarias para empezar los turnos de
+		// los jugadores y se agrega a la factory la informacion del turno.
 		Turn(b2World& world_e, ProtectedQueue& queue_e, std::map<int, std::map<int, Gusano>>& players_e, 
 			std::vector<std::pair<int, int>>& to_remove_gusanos_e,
-			GameConstants& info_e, MultipleProxy& proxy_e,
+			const GameConstants& info_e, MultipleProxy& proxy_e,
 			ObjectsFactory& factory);
 		
 		~Turn();

@@ -12,7 +12,7 @@ class ExplotedState : public GusanoState{
 		
 		~ExplotedState();
 		
-		virtual void sumOneStep();
+		virtual void update();
 		
 		virtual bool isInactive();
 		

@@ -16,7 +16,7 @@ class JumpingState : public GusanoState{
 		
 		virtual ~JumpingState();
 		
-		virtual void sumOneStep();
+		virtual void update();
 		
 		virtual bool isInactive();
 		

@@ -8,7 +8,7 @@ class InactiveState : public GusanoState{
 		
 		virtual ~InactiveState();
 		
-		virtual void sumOneStep();
+		virtual void update();
 		
 		virtual bool isInactive();
 		

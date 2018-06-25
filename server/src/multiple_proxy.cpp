@@ -3,6 +3,10 @@
 #include <iostream>
 #include <utility>
 
+#define TO_MILIMETERS 1000
+#define TO_KM_PER_HOUR 100
+#define TO_GRADES 180.0 / M_PI
+
 MultipleProxy::MultipleProxy(){
 }
 
@@ -16,7 +20,6 @@ void MultipleProxy::add(int id, Proxy& proxy){
 Proxy& MultipleProxy::erase(int id){
 	Proxy& erased = this->proxys.at(id);
 	this->proxys.erase(id);
-	std::cout << "tam: " << this->proxys.size() << "\n";
 	return erased;
 }
 
@@ -44,21 +47,22 @@ void MultipleProxy::sendMapBackground(std::string& background){
 void MultipleProxy::sendVigaCreation(float x, float y, float angle){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendVigaCreation((int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second.sendVigaCreation((int)(x * TO_MILIMETERS), (int)(y * TO_MILIMETERS), (int) (angle * TO_GRADES));
 	}
 }
 
 void MultipleProxy::sendMapDimentions(int widht, int height){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendMapDimentions(widht * 1000, height * 1000);
+		it->second.sendMapDimentions(widht * TO_MILIMETERS, height * TO_MILIMETERS);
 	}
 }
 
 void MultipleProxy::sendGusanoCreation(int gusano_id, int player_id, float x, float y, int direction, float angle){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendGusanoCreation(gusano_id, player_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+		it->second.sendGusanoCreation(gusano_id, player_id, (int)(x * TO_MILIMETERS), (int)(y * TO_MILIMETERS),
+									  direction, (int) (angle * TO_GRADES));
 	}
 }
 
@@ -72,7 +76,8 @@ void MultipleProxy::sendTurnBegining(int player_id, int gusano_id){
 void MultipleProxy::sendGusanoPosition(int gusano_id, float x, float y, int direction, float angle){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendGusanoPosition(gusano_id, (int)(x * 1000), (int)(y * 1000), direction, (int) (angle * 180 / M_PI));
+		it->second.sendGusanoPosition(gusano_id, (int)(x * TO_MILIMETERS), (int)(y * TO_MILIMETERS), 
+									  direction, (int) (angle * TO_GRADES));
 	}
 }
 
@@ -86,14 +91,16 @@ void MultipleProxy::sendStateChange(int gusano_id, int new_state){
 void MultipleProxy::sendProjectileCreation(int projectile_number, int weapon, int direction, float x, float y, float angle){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendProjectileCreation(projectile_number, weapon, direction, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second.sendProjectileCreation(projectile_number, weapon, direction, (int)(x * TO_MILIMETERS), 
+											(int)(y * TO_MILIMETERS), (int) (angle * TO_GRADES));
 	}
 }
 
 void MultipleProxy::sendProjectilePosition(int projectile_number, float x, float y, float angle){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendProjectilePosition(projectile_number, (int)(x * 1000), (int)(y * 1000), (int) (angle * 180 / M_PI));
+		it->second.sendProjectilePosition(projectile_number, (int)(x * TO_MILIMETERS), (int)(y * TO_MILIMETERS), 
+										 (int) (angle * TO_GRADES));
 	}
 }
 
@@ -128,8 +135,6 @@ void MultipleProxy::sendLifeChange(int gusano_id, int new_life){
 void MultipleProxy::sendPlayerDisconnection(int player_id){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		std::cout << "hay proxy\n";
-		std::cout << "id: " << it->first << "\n";
 		it->second.sendPlayerDisconnection(player_id);
 	}
 }
@@ -198,7 +203,7 @@ void MultipleProxy::sendSecond(){
 void MultipleProxy::sendWindChange(float wind){
 	std::map<int, Proxy&>::iterator it = this->proxys.begin();
 	for (; it != this->proxys.end(); ++it){
-		it->second.sendWindChange((int)(wind * 100));
+		it->second.sendWindChange((int)(wind * TO_KM_PER_HOUR));
 	}
 }
 		

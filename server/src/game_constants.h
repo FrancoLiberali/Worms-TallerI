@@ -7,6 +7,7 @@
 class GameConstants{
 	public:
 		int worms_life = 100;
+		int worm_extra_life = 25;
 		
 		float map_widht = 50;
 		float map_height = 50;
@@ -86,6 +87,7 @@ class GameConstants{
 		
 		GameConstants(){}
 		
+		// Genera el vector con la municiones de aca arma.
 		void setAmmunition(){		
 			this->ammunition.push_back(-1);
 			this->ammunition.push_back(this->bazooka_ammunition);

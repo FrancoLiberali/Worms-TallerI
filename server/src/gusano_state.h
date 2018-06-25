@@ -13,7 +13,7 @@ class GusanoState{
 		
 		virtual ~GusanoState(){}
 		
-		virtual void sumOneStep() = 0;
+		virtual void update() = 0;
 		
 		virtual bool isInactive() = 0;
 		

@@ -1,9 +1,9 @@
 #include "dynamite.h"
 
-Dynamite::Dynamite(b2World& world_entry, int number, float x, float y, int direction,
+Dynamite::Dynamite(b2World& world_entry, int number, float x, float y, int direction, float angle,
 		GameConstants& info, std::vector<int>& to_remove_e, MultipleProxy& proxy, unsigned int time) : 
 			RegresiveProjectile(world_entry, number, x, 
-			y, direction, 0, 0, info.dynamite_damage, 
+			y, direction, angle, 0, info.dynamite_damage, 
 			info.dynamite_radius, to_remove_e, proxy, time){
 	
 	b2PolygonShape dynamicBox;
@@ -16,7 +16,8 @@ Dynamite::Dynamite(b2World& world_entry, int number, float x, float y, int direc
 
 	this->body->CreateFixture(&fixtureDef);
 	b2Vec2 position = this->body->GetPosition();
-	proxy.sendProjectileCreation(this->number, 7, direction, position.x, position.y, 0);
+	angle = this->body->GetAngle();
+	proxy.sendProjectileCreation(this->number, 7, direction, position.x, position.y, (this->direction == -1)? angle - M_PI : angle);
 }
 
 Dynamite::~Dynamite(){

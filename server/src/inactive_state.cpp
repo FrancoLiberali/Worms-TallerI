@@ -10,7 +10,7 @@ InactiveState::InactiveState(){
 InactiveState::~InactiveState(){
 }
 
-void InactiveState::sumOneStep(){
+void InactiveState::update(){
 }
 
 bool InactiveState::isInactive(){

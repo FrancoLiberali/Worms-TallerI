@@ -7,7 +7,7 @@ ExplotedState::ExplotedState(b2Body* body_entry) : body(body_entry){
 ExplotedState::~ExplotedState(){
 }
 
-void ExplotedState::sumOneStep(){
+void ExplotedState::update(){
 	b2Vec2 vel = this->body->GetLinearVelocity();
 	if (vel.x == 0 && vel.y == 0){
 		throw MovingFinished();

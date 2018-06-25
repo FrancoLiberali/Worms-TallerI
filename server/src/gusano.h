@@ -32,10 +32,12 @@ class Gusano{
 		unsigned int damage_suffered = 0;
 		bool head_in_contact = false;
 		
+		// Rota el cuerpo del gusano al angulo angle
 		void rotateTo(float angle);
 		
 	public:
-		// Crea un gusano en el mundo
+		// Crea un gusano en el mundo en la posicion x,y
+		// con un angulo angle y una vida life.
 		Gusano(b2World& world_entry, MultipleProxy& proxy_e,
 		std::vector<std::pair<int, int>>& to_remove_gusanos_e, float x, float y, float angle, int life_e);
 		
@@ -51,10 +53,14 @@ class Gusano{
 		// Obtiene la id unica del gusano.
 		int getId();
 		
+		// Devuelve el vector posicion del gusano
 		b2Vec2 GetPosition();
 		
+		// Devuelve el angulo en el que se encuentra el gusano.
 		float32 GetAngle();
 		
+		// Devuelve la direccion en la que mira el gusano:
+		// -1: izquierda, 1:derecha
 		int getDirection();
 		
 		// Envia por el proxy multiple la posicion de este gusano.
@@ -68,23 +74,27 @@ class Gusano{
 		// este realizando si este es invalido a nivel de jugabilidad.
 		void cancelMovement();
 		
-		// Actuliza al gusano luego de una simulacion, 
-		// para que pueda determinar el paso del tiempo
+		// Actualiza al gusano luego de una simulacion, 
+		// para que pueda asimilar el paso del tiempo.
 		void update();
 		
+		// Devuelve true si el gusano esta inactivo.
 		bool isInactive();
 		
-		// El gusano salta, su estado cambiara a saltando
+		// El gusano salta un metro hacia adelante
+		// y medio metro hacia arriba.
+		// Su estado cambiara a saltando hasta que toque el suelo nuevamente
 		void jump();
 		
-		// El gusano salta hacia atras, su estado cambiara a saltando
+		// El gusano salta hacia atras 0.2 y 1.2 metros de alto
+		// Su estado cambiara a saltando hasta que toque el suelo nuevamente
 		void backJump();
 		
-		// El gusano toco el final del mapa por lo que
-		// debe ser destruido del juego
+		// Destuir el gusano ya sea porque toco el final del mapa 
+		// o porque se quedo sin vida.
 		void destroy();
 		
-		// agrega vida al gusano
+		// Agrega vida al gusano
 		void addLife(unsigned int life);
 		
 		// dismuye la vida del gusano. Si esta 
@@ -110,6 +120,8 @@ class Gusano{
 		// ser herido y sufrir fuerzas repulsivas.
 		void applyExplotion(b2Vec2 apply_point, float damage, b2Vec2 impulse);
 		
+		// El gusano se teletransporta la nueva posicion
+		// Pre: la posicion esta vacia.
 		void teleport(b2Vec2 new_position);
 		
 };
