@@ -10,10 +10,9 @@
 */
 class WormWeaponEvent : public Event {
 private:
-	int wormId;
     WeaponId weaponId;
 public:
-	WormWeaponEvent(int wormId, int idWeapon);
+	WormWeaponEvent(int idWeapon);
 	void process();
 };
 

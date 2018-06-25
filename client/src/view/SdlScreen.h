@@ -17,26 +17,28 @@ class SdlScreen {
 private:
     SDL_Window* m_pWindow;
 	SDL_Renderer* renderer;
-	SDL_Texture* mTexture;
 	std::string title;
     int width;
 	int height;
 public:
 	SdlScreen();
    	~SdlScreen();
+	//inicia la ventna principal y el renderer
 	void init(const char* title, int xpos, int ypos, int width,
 			int height, int flags);
+	//limpia el renderer
 	void clear();
+	//presenta el renderer en la ventna
 	void render();
+	//rellena o limpia la ventana
 	void fill();
+	//geters
 	int getWidth();
 	int getHeight();
-	void setState(std::string string_state);
 	SDL_Window* getWindow();
 	SDL_Renderer* getRenderer();
 	int getXCenter();
 	int getYCenter();
-	void restart();
 };
 
 #endif 

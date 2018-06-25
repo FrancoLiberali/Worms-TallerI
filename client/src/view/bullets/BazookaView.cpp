@@ -1,6 +1,4 @@
 #include "BazookaView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 BazookaView::BazookaView(int id, int dir, int posx, int posy, int angle, 

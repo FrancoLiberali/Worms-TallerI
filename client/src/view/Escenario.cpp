@@ -1,6 +1,6 @@
 #include "Escenario.h"
-#include "TextureManager.h"
-#include "TextManager.h"
+#include "../manager/TextureManager.h"
+#include "../manager/TextManager.h"
 
 #define INITIAL_X 0
 #define INITIAL_Y 0

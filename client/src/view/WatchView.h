@@ -19,7 +19,9 @@ private:
 public:
     WatchView(SdlScreen& screen);
     ~WatchView();
+    //inicia el reloj
     void start();
+    //actuliza el reloj
     void update(SDL_Renderer* render);
     void draw();
 };

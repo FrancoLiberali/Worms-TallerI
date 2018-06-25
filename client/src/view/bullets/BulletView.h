@@ -4,7 +4,9 @@
 #include "../Sprite.h"
 #include "../SdlScreen.h"
 #include "../Camera.h"
-#include "../../sound/SoundManager.h"
+#include "../../manager/SoundManager.h"
+#include "../../manager/TextureManager.h"
+#include "../../manager/SpriteConfigurator.h"
 
 /**
 * @class BulletView
@@ -34,11 +36,16 @@ protected:
 public:
     BulletView(int id, int dir, int posx, int posy, int angle,
             SdlScreen& screen, Camera& camera);
+    //método virtual que actualiza la podsición de una arma
     virtual void updatePos(int x, int y, int angle) = 0;
+    //método virtual que actuliza el sprite (puede agregar sonidos o efectos
+    //propios de cada arma)
     virtual void update() = 0;
+    //detona la vista, setea el sprite de explosión
     void detonate();
     bool isIdBullet(int id);
     bool isDetonateDone();
+    //desabilita la camara
     void disableCamera();
     void draw();
 

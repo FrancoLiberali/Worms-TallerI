@@ -1,7 +1,4 @@
 #include "MortarView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
-
 
 MortarView::MortarView(int id, int dir, int posx, int posy, int angle, 
     SdlScreen& screen, Camera& camera):BulletView(id,dir,posx, posy,angle, screen, camera){

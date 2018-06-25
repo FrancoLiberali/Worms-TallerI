@@ -2,12 +2,11 @@
 
 #include <iostream>
 
-WormChangeAimEvent::WormChangeAimEvent(int wormId, int delta)
-	:wormId(wormId), delta(delta){
-}
+WormChangeAimEvent::WormChangeAimEvent(int delta)
+	:delta(delta){}
 	
 void WormChangeAimEvent::process(){
-	WormView* wormView = view->getWormView(wormId);
+	WormView* wormView = view->getWormView(model->getIdWormSelected());
 	wormView->changeAimAngle(delta);
 	view->update();
 }

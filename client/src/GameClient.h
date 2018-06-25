@@ -16,6 +16,7 @@ private:
     std::string name;
 public:
     GameClient(ProxyClient& proxy, std::string nameClient);
+    //método principal del juego, game loop.
     void run();
 };
 

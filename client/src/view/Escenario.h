@@ -6,6 +6,11 @@
 #include <string>
 #include "VigaView.h"
 
+/*
+* @class Escenario
+* Contiene todos los elementos fijos del juego: vigas y agua.
+*/
+
 class Escenario{
 	SdlScreen& screen;
 	Camera& camera;
@@ -18,7 +23,6 @@ class Escenario{
 public:
 	Escenario(SdlScreen& screen, Camera& camera);
 	void draw();
-	void build();
 	void addViga(int x, int y, int angle);
 	void setDimention(int widht, int height);
 	void setBackground(std::string name);

@@ -1,6 +1,4 @@
 #include "FragmentView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 FragmentView::FragmentView(int id, int dir, int posx, int posy, int angle, 

@@ -2,12 +2,14 @@
 #define _AIM_VIEW_H
 
 #include "SdlScreen.h"
-#include "TextureManager.h"
+#include "../manager/TextureManager.h"
 
 #include <math.h>
 
-
-
+/*
+*@class AimView
+* Clase que representa a la  mira de una arma.
+*/
 class AimView {
 private:
     SdlScreen* screen; 
@@ -26,11 +28,16 @@ public:
 	AimView(Camera& camera);
     void setCenter(int x, int y);
     void setScreen(SdlScreen* screen);
+    //cambia el angulo de la mira
     void changeAngle(int delta);
+    //invierte la dirección de la mira
     void changeDir();
+    //dibuja la mira
 	void draw();
+    //habilita y desabilita la mira
     void enable();
     void disable();
+    //reinicia la posición de la mira a horizontal (0 grados)
     void reset();
 };
 

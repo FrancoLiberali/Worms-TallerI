@@ -1,6 +1,4 @@
 #include "HolyView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 HolyView::HolyView(int id, int dir, int posx, int posy, int angle, 

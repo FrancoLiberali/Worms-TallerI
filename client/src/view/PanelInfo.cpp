@@ -1,6 +1,6 @@
 #include "PanelInfo.h"
-#include "TextureManager.h"
-#include "TextManager.h"
+#include "../manager/TextureManager.h"
+#include "../manager/TextManager.h"
 
 PanelInfo::PanelInfo(){
     this->colorText = {255, 0, 0};

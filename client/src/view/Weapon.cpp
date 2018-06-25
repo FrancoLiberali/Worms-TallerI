@@ -1,12 +1,12 @@
 #include "Weapon.h"
-#include "TextureManager.h"
+#include "../manager/TextureManager.h"
 #include <algorithm>
 #include <iostream>
 
 
-Weapon::Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon, Camera& camera):
+Weapon::Weapon(WeaponId id, Shape s,std::list<std::string> keys,std::string allowWeapon, Camera& camera):
 	camera(camera){
-	pair<int, int> data;
+	std::pair<int, int> data;
 	this->id = id;
 	data = s.getPosition();
 	this->x = data.first;
@@ -15,9 +15,7 @@ Weapon::Weapon(WeaponId id, Shape s, list<string> keys, string allowWeapon, Came
 	this->width = data.first;
 	this->height = data.second;
 	this->allowWeapon = allowWeapon;
-	lWeaponView.insert(lWeaponView.begin(),
-					   keys.begin(),
-					   keys.end());
+	lWeaponView.insert(lWeaponView.begin(),keys.begin(),keys.end());
 	ballow = false;
 }
 
@@ -25,12 +23,12 @@ Weapon::~Weapon(){
 
 }
 
-void Weapon::setWeapon(string key){
+void Weapon::setWeapon(std::string key){
 	lWeaponView.push_back(key);
 }
 
-void Weapon::removeWeapon(string key){
-	list<string>::iterator it;
+void Weapon::removeWeapon(std::string key){
+	std::list<std::string>::iterator it;
 	it = find(lWeaponView.begin(), 
 		      lWeaponView.end(), key);
 	if(it != lWeaponView.end()){
@@ -38,8 +36,8 @@ void Weapon::removeWeapon(string key){
 	}
 }
 
-bool Weapon::findWeapon(string key){
-	list<string>::iterator it;
+bool Weapon::findWeapon(std::string key){
+	std::list<std::string>::iterator it;
 	it = find(lWeaponView.begin(), 
 		      lWeaponView.end(), key);
 	return (it != lWeaponView.end());
@@ -50,7 +48,7 @@ void Weapon::draw(SdlScreen& screen){
 }
 
 void Weapon::drawItems(SdlScreen & screen){
-	list<string>::iterator it;
+	std::list<std::string>::iterator it;
 	for(it  = lWeaponView.begin();
 		it != lWeaponView.end();
 		it++){
@@ -78,7 +76,6 @@ bool Weapon::hasClickedMenu(SDL_Point clickPoint){
 		&&
 		((y1 <= clickPoint.y) && (y2 >= clickPoint.y))
 		){
-	        ////std::cout<<"ID " << (int)id << std::endl;
 			return true;
 	}
 	else{

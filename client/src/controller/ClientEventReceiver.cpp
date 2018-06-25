@@ -32,7 +32,7 @@ void ClientEventReceiver::run(){
 				continue;
 			}
 			EventType type = static_cast<EventType>(t);
-			Event* event = EventFactory::createEvent(type, proxy, model, view);
+			Event* event = EventFactory::createEvent(type, proxy);
 			q.push(event);
 		}
 	} catch (SocketError& e){

@@ -1,6 +1,4 @@
 #include "mainwindow.h"
-#include "mapwindow.h"
-
 #include <QApplication>
 
 #include "common/socket.h"

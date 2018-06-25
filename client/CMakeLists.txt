@@ -33,12 +33,13 @@ message("Headers generados: ${UIS_HEADERS}")
 qt5_add_resources(RESOURCES src/recursos.qrc)
 
 add_executable(worms-client
-	src/main.cpp
+	src/mainClient.cpp
+	src/ProxyClient.cpp
+	src/GameClient.cpp
+
 	src/mapwindow.cpp
 	src/mainwindow.cpp
 	src/resultwindow.cpp
-	src/ProxyClient.cpp
-	src/GameClient.cpp
 	src/PreGameManager.cpp
 	src/Room.cpp
 
@@ -89,13 +90,10 @@ add_executable(worms-client
 	src/view/mainView.cpp
 	src/view/Escenario.cpp
 	src/view/WormView.cpp
-	src/view/Boot.cpp
+	src/view/
 	src/view/SdlScreen.cpp
 	src/view/Sprite.cpp
-	src/view/SpriteConfigurator.cpp
-	src/view/FontManager.cpp
-	src/view/TextureManager.cpp
-	src/view/TextManager.cpp
+
 	src/view/TextView.cpp
 	src/view/MenuWeaponView.cpp
 	src/view/Weapon.cpp
@@ -117,12 +115,18 @@ add_executable(worms-client
 	src/view/PowerView.cpp
 	src/view/PanelInfo.cpp
 	src/view/WatchView.cpp
-	
+
+	src/manager/Boot.cpp
+	src/manager/FontManager.cpp
+	src/manager/TextureManager.cpp
+	src/manager/TextManager.cpp
+	src/manager/SoundManager.cpp
+	src/manager/SpriteConfigurator.cpp
+
 	src/exception/GameException.cpp
 	src/exception/SdlException.cpp
 	src/exception/socket_error.cpp
 
-	src/sound/SoundManager.cpp
 	${UIS_HEADERS}
 )
 

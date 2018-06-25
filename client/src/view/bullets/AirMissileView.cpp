@@ -1,6 +1,4 @@
 #include "AirMissileView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 #include <iostream>
 
 AirMissileView::AirMissileView(int id, int dir, int posx, int posy, int angle, 

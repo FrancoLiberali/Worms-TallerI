@@ -2,7 +2,7 @@
 #define _VIGA_VIEW_H_
 
 #include "SdlScreen.h"
-#include "TextureManager.h"
+#include "../manager/TextureManager.h"
 
 class VigaView {
 private:

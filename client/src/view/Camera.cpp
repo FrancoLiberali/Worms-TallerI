@@ -42,10 +42,6 @@ void Camera::updateCenter(int x, int y){
     }
 }
 
-void Camera::focusCenterWindow(){
-    updateCenter(w/2, h/2);
-}
-
 void Camera::move(int x, int y){
     if (x < gap) {
         this->centerX -= vel;

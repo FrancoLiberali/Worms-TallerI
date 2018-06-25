@@ -1,6 +1,4 @@
 #include "BananaView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 #include <iostream>
 
 BananaView::BananaView(int id, int dir, int posx, int posy, int angle, 
