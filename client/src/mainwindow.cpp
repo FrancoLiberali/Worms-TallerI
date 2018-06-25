@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "../config.h"
+#include <QIcon>
 
 #include <QMessageBox>
 
@@ -18,6 +19,7 @@ QMainWindow(parent),ui(new Ui::MainWindow), proxy(proxy), name(name)
     this->setWindowTitle("WORMS");
 
     // Setear imagen.
+    setWindowIcon(QIcon(_INSTALL_PATH_ "/resource/images/a.png"));
     ui->homeImgLabel->setPixmap(QPixmap(_INSTALL_PATH_ "/resource/images/a.png"));
     ui->homeImgLabel->show();
 
