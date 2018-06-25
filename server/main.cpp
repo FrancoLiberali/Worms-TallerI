@@ -1,7 +1,7 @@
-#include "server.h"
+#include "server/server.h"
 #include <syslog.h>
 #include <iostream>
-#include "thread.h"
+#include "util/thread.h"
 #include <dirent.h>
 #include "config.h"
 
