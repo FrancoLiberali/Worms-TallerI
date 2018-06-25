@@ -24,7 +24,7 @@ void DynamiteView::update(){
             SoundManager::Instance().playSound(FUSE, 10, 1);
             partialExplote = true;
         }
-        currentSprite->update(1);
+        currentSprite->update();
     }else if (!currentSprite->isLastFrame()){
         currentSprite->update();
     }

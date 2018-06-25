@@ -178,18 +178,19 @@ void WormView::draw(int idPlayer){
 	 
 	if (this->selected){
 		//labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
-		TextManager::Instance().write(usuarioTexture, "reloj", this->getXCenter()-camera.getX(), 
-		 this->getYCenter()-camera.getY()- 10, playerName, getColor(idOwner));
+		TextManager::Instance().write(usuarioTexture, "reloj", this->getX()-camera.getX()-10, 
+		 this->getY()-camera.getY()-50, playerName, getColor(idOwner));
 	}
 
 	aim.draw();
 	power.draw();
 	SDL_Rect rect;
 	rect.x = this->getX()-camera.getX() - 10;
-	rect.y = this->getY()-camera.getY() - 22;
+	rect.y = this->getY()-camera.getY() - 20;
 	rect.w = this->widhtLifeCurrent;
 	rect.h = 5;
 	SDL_Color color = getColor(idOwner);
+	life.draw(screen->getRenderer(),this->getX()-camera.getX()-10,  this->getY()-camera.getY()-35);
 	TextureManager::Instance().drawFillRect(screen->getRenderer(),rect, color);
 
 }
@@ -273,7 +274,7 @@ void WormView::upatePower(){
 }
 
 
-void WormView::useWeapon() {
+void WormView::useWeapon(){
 	if (this->weaponId == BATE){
 		SoundManager::Instance().playSound(BAT_IMPACT);
 		SoundManager::Instance().playSound(BAT_JINGLE);

@@ -6,7 +6,7 @@ Sprite::Sprite():imageId(""), width(0), height(0), rows(0), currentRow(0), repea
  
 Sprite::Sprite(std::string imageId, int width, int height, int rows, bool repeat,int initFrame)
 					:imageId(imageId), width(width), height(height), rows(rows)
-					 ,currentRow(initFrame), repeat(repeat), countFrame(20), initFrame(initFrame){
+					 ,currentRow(initFrame), repeat(repeat), countFrame(10), initFrame(initFrame){
 }
 
 Sprite::Sprite(const Sprite & sprite)
