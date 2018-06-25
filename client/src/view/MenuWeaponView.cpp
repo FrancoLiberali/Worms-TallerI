@@ -1,5 +1,6 @@
 #include "MenuWeaponView.h"
 #include "TextureManager.h"
+#include "../sound/SoundManager.h"
 
 #include <list>
 
@@ -57,6 +58,7 @@ bool MenuWeaponView::hasClickedMenu(SDL_Point clickPoint){
 bool MenuWeaponView::hasClickedWeapon(SDL_Point clickPoint){
 	bool result = false;
 	if(menu->findWeapon("MenuWeapon")){
+		SoundManager::Instance().playSound(CURSOR_SELECT);
 		map<WeaponId, Weapon*>::iterator it;
 		for(it = weapons.begin(); it != weapons.end(); it++){
 			if(it->second->hasClickedMenu(clickPoint)){
@@ -72,6 +74,7 @@ bool MenuWeaponView::hasClickedWeapon(SDL_Point clickPoint){
 Weapon* MenuWeaponView::retrieveWeaponClicked(SDL_Point clickPoint){
 	Weapon* result = NULL;
 	if(menu->findWeapon("MenuWeapon")){
+		SoundManager::Instance().playSound(CURSOR_SELECT);
 		map<WeaponId, Weapon*>::iterator it;
 		for(it = weapons.begin(); it != weapons.end(); it++){
 			if(it->second->hasClickedMenu(clickPoint)){

@@ -6,6 +6,10 @@ resultwindow::resultwindow(ProxyClient& proxy, QWidget *parent) :
     ui(new Ui::resultwindow)
 {
     ui->setupUi(this);
+
+    // Setear imagen.
+    ui->label->setPixmap(QPixmap(_INSTALL_PATH_ "/resource/images/wgusano.png"));
+    ui->label->show();
 }
 
 resultwindow::~resultwindow()

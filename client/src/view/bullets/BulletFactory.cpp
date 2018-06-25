@@ -27,9 +27,11 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 return new MortarView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case G_GRENADE:
+                SoundManager::Instance().playSound(GRANADE);
                 return new GreenGrenadeView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case R_GRENADE:
+                SoundManager::Instance().playSound(GRANADE);
                 return new RedGrenadeView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case BANANA:

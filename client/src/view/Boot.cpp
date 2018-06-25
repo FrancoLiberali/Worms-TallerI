@@ -175,6 +175,11 @@ void Boot::loadSounds(){
 	SoundManager::Instance().loadSound(BAT_JINGLE, _INSTALL_PATH_ "/resource/sounds/bat_jingle.wav");
 	SoundManager::Instance().loadSound(BYE, _INSTALL_PATH_ "/resource/sounds/byebye.wav");
 	SoundManager::Instance().loadSound(AIRSTRIKE, _INSTALL_PATH_ "/resource/sounds/airstrike.wav" );
+	SoundManager::Instance().loadSound(CURSOR_SELECT, _INSTALL_PATH_ "/resource/sounds/CursorSelect.wav");
+	SoundManager::Instance().loadSound(FIRE, _INSTALL_PATH_ "/resource/sounds/FIRE.WAV");
+	SoundManager::Instance().loadSound(HELLO, _INSTALL_PATH_ "/resource/sounds/HELLO.WAV");
+	SoundManager::Instance().loadSound(GRANADE, _INSTALL_PATH_ "/resource/sounds/GRENADE.WAV");
+
 }
 
 void Boot::loadFonts(){

@@ -6,6 +6,7 @@ void SoundManager::init(){
     if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2 ,2048) < 0)
         throw GameException("Error al cargar el MIXER");
     Mix_AllocateChannels(100);
+    Mix_Volume(-1, MIX_MAX_VOLUME/10);
 }
 
 void SoundManager::loadSound(SoundId id, std::string path){

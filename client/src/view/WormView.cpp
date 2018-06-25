@@ -273,7 +273,7 @@ void WormView::upatePower(){
 }
 
 
-void WormView::useWeapon(){
+void WormView::useWeapon() {
 	if (this->weaponId == BATE){
 		SoundManager::Instance().playSound(BAT_IMPACT);
 		SoundManager::Instance().playSound(BAT_JINGLE);
