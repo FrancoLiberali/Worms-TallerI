@@ -5,9 +5,9 @@
 #define MAX_HEIGHT_NO_DAMAGE 2
 #define MAX_DAMAGE 25
 
-JumpingState::JumpingState(b2Body* body_e, Gusano* gusano_e) : body(body_e), gusano(gusano_e){
-	this->y_max = this->body->GetPosition().y;
-	this->y_last = this->body->GetPosition().y;
+JumpingState::JumpingState(Gusano* gusano_e) : gusano(gusano_e){
+	this->y_max = this->gusano->GetPosition().y;
+	this->y_last = this->gusano->GetPosition().y;
 }
 
 JumpingState::~JumpingState(){
@@ -20,8 +20,8 @@ JumpingState::~JumpingState(){
 	}
 }
 
-void JumpingState::update(){
-	this->y_last = this->body->GetPosition().y;
+void JumpingState::update(b2Vec2 position){
+	this->y_last = position.y;
 	if (y_last > this->y_max){
 		y_max = y_last;
 	}

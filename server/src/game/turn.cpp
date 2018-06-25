@@ -116,7 +116,7 @@ void Turn::play(int active_player, unsigned int active_gusano){
 		this->processAliveGusanos(something_to_simulate);
 		
 		//es un segundo
-		if (i % FPS == 0){
+		if (i % FPS == 0 && continue_turn){
 			this->proxy.sendSecond();
 		}
 		
@@ -299,7 +299,6 @@ void Turn::fireAirAttack(int player_id, int& turn_actual_len){
 }
 
 void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
-	std::cout << "usando teleporter\n";
 	float x_to = this->remote_position.x;
 	float y_to = this->remote_position.y;
 	if (x_to > MAP_OFFSET  &&  x_to < this->info.map_widht + MAP_OFFSET && y_to != DEFAULT_REMOTE_Y){
@@ -310,7 +309,6 @@ void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
 		aabb.upperBound = b2Vec2(x_to + GUSANO_WIDTH, y_to + GUSANO_HEIGHT);
 		this->world.QueryAABB(&callback, aabb);
 		if (callback.isDesocuped()){
-			std::cout << "desocupado\n";
 			gusano.teleport(this->remote_position);
 			this->setFired(player_id, turn_actual_len);
 			this->proxy.sendRemoteWork(TELEPORT);
@@ -321,7 +319,6 @@ void Turn::teleport(int player_id, int& turn_actual_len, Gusano& gusano){
 void Turn::processProjectilesDeletion(){
 	std::vector<int>::iterator projectiles_remover_it = this->to_remove_projectiles.begin();
 	for (; projectiles_remover_it != this->to_remove_projectiles.end(); ++projectiles_remover_it) {
-		std::cout << "hay projectile para destruir\n";
 		//remove it from list of projectiles in simulation
 		this->projectiles.erase(*projectiles_remover_it);
 		//projectile gets deleted because of unique ptr
@@ -332,7 +329,6 @@ void Turn::processProjectilesDeletion(){
 void Turn::processGusanosDeletion(int active_gusano, int& turn_actual_len){
 	std::vector<std::pair<int, int>>::iterator gusanos_remover_it = this->to_remove_gusanos.begin();
 	for (; gusanos_remover_it != this->to_remove_gusanos.end(); ++gusanos_remover_it) {
-		std::cout << "hay gusano para destruir\n";
 		//remove it from list of gusanos in simulation
 		this->players[gusanos_remover_it->first].erase(gusanos_remover_it->second);
 		if (gusanos_remover_it->second == active_gusano){
@@ -359,11 +355,11 @@ void Turn::processProjectilesCreation(){
 }
 
 #define WIND_CHANGE_TIME 1000
-#define BETWEEN_1_AND_9 10
-#define BETWEEN_0d02_AND_0d18 50.0
-#define BETWEEN_m0d05_AND_0d11 0.07
-#define BETWEEN_m0d11_AND_0d05 0.13
-#define BETWEEN_m0d08_AND_0d08 0.1
+#define BETWEEN_0_AND_9 10
+#define BETWEEN_0_AND_0d18 50.0
+#define BETWEEN_m0d05_AND_0d13 0.05
+#define BETWEEN_m0d13_AND_0d05 0.13
+#define BETWEEN_m0d09_AND_0d09 0.09
 
 void Turn::processWindChange(int turn_actual_len){
 	if (turn_actual_len % WIND_CHANGE_TIME == 0 && this->projectiles.size() == 0){
@@ -371,13 +367,13 @@ void Turn::processWindChange(int turn_actual_len){
 		srand (time(0));
 		if (this->wind < 0){
 			/* generate number between -0.05 and 0.11: */
-			this->wind += ((rand() % BETWEEN_1_AND_9) / BETWEEN_0d02_AND_0d18) - BETWEEN_m0d05_AND_0d11;
+			this->wind += ((rand() % BETWEEN_0_AND_9) / BETWEEN_0_AND_0d18) - BETWEEN_m0d05_AND_0d13;
 		} else if (this->wind > 0){
 			/* generate number between -0.11 and 0.05: */
-			this->wind += ((rand() % BETWEEN_1_AND_9) / BETWEEN_0d02_AND_0d18) - BETWEEN_m0d11_AND_0d05;
+			this->wind += ((rand() % BETWEEN_0_AND_9) / BETWEEN_0_AND_0d18) - BETWEEN_m0d13_AND_0d05;
 		} else {
 			/* generate number between -0.08 and 0.08: */
-			this->wind += ((rand() % BETWEEN_1_AND_9) / BETWEEN_0d02_AND_0d18) - BETWEEN_m0d08_AND_0d08;
+			this->wind += ((rand() % BETWEEN_0_AND_9) / BETWEEN_0_AND_0d18) - BETWEEN_m0d09_AND_0d09;
 		}
 		this->proxy.sendWindChange(this->wind);
 		std::cout << "wind: " << this->wind << "\n";

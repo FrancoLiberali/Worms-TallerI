@@ -7,12 +7,12 @@
 
 class JumpingState : public GusanoState{
 	private:
+		Gusano* gusano;
 		float y_max;
 		float y_last;
-		b2Body* body;
-		Gusano* gusano;
+		
 	public:
-		JumpingState(b2Body* body, Gusano* gusano);
+		JumpingState(Gusano* gusano_e);
 		
 		// Mira la diferencia de alturas entre el ultimo punto del
 		// salto y el mas alto,
@@ -21,7 +21,7 @@ class JumpingState : public GusanoState{
 		
 		// Actualiza el estado para saber cual fue el punto mas
 		// alto en la trayectoria del salto
-		virtual void update();
+		virtual void update(b2Vec2 position);
 		
 		// Devuelve false.
 		virtual bool isInactive();

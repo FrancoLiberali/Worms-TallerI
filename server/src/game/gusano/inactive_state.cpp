@@ -2,7 +2,6 @@
 #include "game/gusano/moving_state.h"
 
 #define MOVING_STATE 1
-#define GUSANO_VEL 0.2
 
 InactiveState::InactiveState(){
 	this->rest_steps = 0;
@@ -11,7 +10,7 @@ InactiveState::InactiveState(){
 InactiveState::~InactiveState(){
 }
 
-void InactiveState::update(){
+void InactiveState::update(b2Vec2 position){
 }
 
 bool InactiveState::isInactive(){
@@ -23,7 +22,7 @@ bool InactiveState::isFalling(){
 }
 
 void InactiveState::move(GusanoState*& state, int new_dir, int& old_dir, int id, b2Vec2 position, 
-											float angle, MultipleProxy& proxy, b2Body* body){
+											float angle, MultipleProxy& proxy, GusanoBody& body){
 	if (old_dir != new_dir){
 		// si no estaba mirando hacia esa direccion solo se gira
 		old_dir = new_dir;
@@ -31,10 +30,7 @@ void InactiveState::move(GusanoState*& state, int new_dir, int& old_dir, int id,
 	} else {
 		state = new MovingState();
 		proxy.sendStateChange(id, MOVING_STATE);
-		b2Vec2 vel;
-		vel.x = GUSANO_VEL * old_dir * cos(angle);
-		vel.y = GUSANO_VEL * old_dir * sin(angle);
-		body->SetLinearVelocity(vel);
+		body.move(old_dir);
 		delete this;
 	}
 }

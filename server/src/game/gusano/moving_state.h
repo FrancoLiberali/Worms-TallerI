@@ -10,7 +10,7 @@ class MovingState : public GusanoState{
 		~MovingState();
 		
 		// Actualiza la cantidad de frames que le quedan por caminar
-		virtual void update();
+		virtual void update(b2Vec2 position);
 		
 		// Devuelve false.
 		virtual bool isInactive();
@@ -21,7 +21,7 @@ class MovingState : public GusanoState{
 		// Reinicia la cantidad de frames que le quedan por caminar
 		// para que el movimiento siga.
 		virtual void move(GusanoState*& state, int new_dir, int& old_dir, 
-					int id, b2Vec2 position, float angle, MultipleProxy& proxy, b2Body* body);
+					int id, b2Vec2 position, float angle, MultipleProxy& proxy, GusanoBody& body);
 };
 
 #endif

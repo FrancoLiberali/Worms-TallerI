@@ -1,14 +1,14 @@
 #include "game/gusano/exploted_state.h"
 #include "moving_finished.h"
 
-ExplotedState::ExplotedState(b2Body* body_entry) : body(body_entry){
+ExplotedState::ExplotedState(GusanoBody& body_e) : body(body_e){
 }
 
 ExplotedState::~ExplotedState(){
 }
 
-void ExplotedState::update(){
-	b2Vec2 vel = this->body->GetLinearVelocity();
+void ExplotedState::update(b2Vec2 position){
+	b2Vec2 vel = this->body.getLinearVelocity();
 	if (vel.x == 0 && vel.y == 0){
 		throw MovingFinished();
 	}

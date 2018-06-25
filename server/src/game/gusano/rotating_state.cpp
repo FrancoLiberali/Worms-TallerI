@@ -7,9 +7,9 @@
 #define GUSANO_WIDTH 0.5
 #define DOS_PI 2 * M_PI
 
-RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, float desired_angle_entry): 
-							body(body_entry), desired_angle(this->normalizate(desired_angle_entry)){
-	double actual_angle = this->body->GetAngle();
+RotatingState::RotatingState(GusanoBody& body_e, b2Vec2 position, float desired_angle_entry): 
+							body(body_e), desired_angle(this->normalizate(desired_angle_entry)){
+	double actual_angle = this->body.GetAngle();
 	double new_x = position.x;
 	double new_y = position.y;
 	double pi = M_PI;
@@ -40,8 +40,8 @@ RotatingState::RotatingState(b2Body* body_entry, b2Vec2 position, float desired_
 RotatingState::~RotatingState(){
 }
 
-void RotatingState::update(){
-	this->body->SetTransform(this->new_position, this->desired_angle);
+void RotatingState::update(b2Vec2 position){
+	this->body.teleport(this->new_position, this->desired_angle);
 	throw RotatingFinished();
 }
 

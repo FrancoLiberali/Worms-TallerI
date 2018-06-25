@@ -1,32 +1,24 @@
 #include "Box2D/Box2D.h"
 #include "game/gusano/gusano_state.h"
 #include <vector>
-#include "game/Box2d_elements/user_data.h"
 #include "server/multiple_proxy.h"
 #include <map>
 #include <utility>
 #include "game/weapons/projectile.h"
+#include "game/gusano/gusano_body.h"
 
 #ifndef __GUSANO_H__
 #define __GUSANO_H__
 
 #define GUSANO_INDICATOR 1
-#define FOOT_SENSOR_DATA 1
-#define HEAD_SENSOR_DATA 2
 
 class Gusano{
 	private:
 		b2World& world;
 		MultipleProxy& proxy;
 		std::vector<std::pair<int, int>>& to_remove_gusanos;
-		b2Body* body;
+		GusanoBody body;
 		GusanoState* state;
-		//las datas son punteros que los cuerpos del mundo de simulacion
-		// tienen asociados para poder reconocerlos a la hora de un contacto
-		// y poder llamar a sus metodos. Para mas info ver contact_listener
-		UserData user_data;
-		int* foot_sensor_data;
-		int* head_sensor_data;
 		
 		int direction;
 		std::vector<float> angles_list;
@@ -35,6 +27,7 @@ class Gusano{
 		int life;
 		unsigned int damage_suffered = 0;
 		bool head_in_contact = false;
+		UserData user_data;
 		
 		// Rota el cuerpo del gusano al angulo angle
 		void rotateTo(float angle);
@@ -74,10 +67,6 @@ class Gusano{
 		// El estado del gusano cambiara a moviendose.
 		void move(int dir);
 		
-		// Cancela cualquier tipo de movimiento que el gusano
-		// este realizando si este es invalido a nivel de jugabilidad.
-		void cancelMovement();
-		
 		// Actualiza al gusano luego de una simulacion, 
 		// para que pueda asimilar el paso del tiempo.
 		void update();
@@ -93,6 +82,10 @@ class Gusano{
 		// El gusano salta hacia atras 0.2 y 1.2 metros de alto
 		// Su estado cambiara a saltando hasta que toque el suelo nuevamente
 		void backJump();
+		
+		// Cancela cualquier tipo de movimiento que el gusano
+		// este realizando si este es invalido a nivel de jugabilidad.
+		void cancelMovement();
 		
 		// Destuir el gusano ya sea porque toco el final del mapa 
 		// o porque se quedo sin vida.

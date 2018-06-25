@@ -6,15 +6,15 @@
 
 class ExplotedState : public GusanoState{
 	private:
-		b2Body* body;
+		GusanoBody& body;
 	public:
-		ExplotedState(b2Body* body_entry);
+		ExplotedState(GusanoBody& body_e);
 		
 		~ExplotedState();
 		
 		// Actualiza el estado para saber si el gusano ya 
 		// se quedo quieto o todavia se encuentra afectado por la explosion.
-		virtual void update();
+		virtual void update(b2Vec2 position);
 		
 		// Devuelve false.
 		virtual bool isInactive();

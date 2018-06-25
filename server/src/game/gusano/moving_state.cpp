@@ -10,7 +10,7 @@ MovingState::MovingState(){
 MovingState::~MovingState(){
 }
 
-void MovingState::update(){
+void MovingState::update(b2Vec2 position){
 	this->rest_steps -= 1;
 	if (!this->rest_steps){
 		throw MovingFinished();
@@ -26,7 +26,7 @@ bool MovingState::isFalling(){
 }
 
 void MovingState::move(GusanoState*& state, int new_dir, int& old_dir, 
-					int id, b2Vec2 position, float angle, MultipleProxy& proxy, b2Body* body){
+					int id, b2Vec2 position, float angle, MultipleProxy& proxy, GusanoBody& body){
 	//re-init the movement
 	this->rest_steps = MOVING_FRAMES;
 }
