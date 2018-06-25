@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->show();
     // Imagen de fondo default.
     ui->graphicsView->setBackgroundBrush(QBrush(
-        QPixmap(_INSTALL_PATH_ "/recursos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
+        QPixmap(_INSTALL_PATH_ "/recursos/fondos/sky3.png").scaled(ANCHO_MAPA, ALTO_MAPA)));
     this->setWindowTitle("Editor");
 
     // Cargar configuracion default de armas.
@@ -93,10 +93,10 @@ void MainWindow::on_pushButton_5_clicked()
 void MainWindow::on_actionFondo_de_Pantalla_triggered()
 {
     QString nombre_archivo = QFileDialog::getOpenFileName(
-                this,
-                tr("Abrir Imagen de fondo"),
-                "img (*.jpg,*.png)"
-                );
+                this, 
+                tr("Abrir Imagen"),
+                _INSTALL_PATH_ "/recursos/fondos",
+                tr("Images (*.png *.jpg)"));
     if (nombre_archivo.isEmpty()) return;
     
     ui->graphicsView->setBackgroundBrush(QBrush(QPixmap(nombre_archivo)));
@@ -145,8 +145,11 @@ void MainWindow::on_actionsave_as_triggered()
 
     // Solicita la ruta para guardar el mapa.
     QString fileName = QFileDialog::getSaveFileName(this,
-            tr("Guardar Mapa"), "",
+            tr("Guardar Mapa"), 
+            _INSTALL_PATH_ "/maps",
             tr("Address Book (*.yaml);;All Files (*)"));
+
+    if (fileName.isEmpty()) return;
 
     // Crea el archivo yaml.
     YAML::Emitter out;
