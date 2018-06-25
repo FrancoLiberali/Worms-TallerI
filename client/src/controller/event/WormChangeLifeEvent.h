@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@ class: WormChangeLifeEvent
+* Evento de cambio de en la vida de un gusano.
+*/
 class WormChangeLifeEvent : public Event {
 private:
 	int idWorm;

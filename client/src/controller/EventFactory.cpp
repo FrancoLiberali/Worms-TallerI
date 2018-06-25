@@ -35,7 +35,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int posy = proxy.receivePosY();
       int angle = proxy.receiveAngle();
       //printf("crear viga\n");
-      return new CreateVigaEvent(posx, posy, angle, view);
+      return new CreateVigaEvent(posx, posy, angle);
     }
     case CREATE_STAGE:{
       int widht = proxy.receiveWidht();
@@ -51,14 +51,14 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int dir = proxy.receiveInt();
       int angle = proxy.receiveAngle();
       //printf("crear worm\n");
-      return new CreateWormEvent(idWorm, idOwner, posx, posy, dir, angle, model, view);
+      return new CreateWormEvent(idWorm, idOwner, posx, posy, dir, angle);
     }
     case START_TURN:{
       int currPlayer = proxy.receiveInt();
       int idWorm = proxy.receiveInt();
       printf("comienzo turno\n");
       //SDL_ShowWindow(view.getScreen().getWindow());
-      return new StartTurnEvent(currPlayer, idWorm, model, view);
+      return new StartTurnEvent(currPlayer, idWorm);
     }
      case W_MOVE: {
       int idWorm = proxy.receiveInt();
@@ -83,7 +83,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
       int posy = proxy.receivePosY();
       int angle = proxy.receiveAngle();
       //printf("crear misil\n");
-      return new CreateMissileEvent(idMissile, idWeapon, dir, posx, posy, angle, view);
+      return new CreateMissileEvent(idMissile, idWeapon, dir, posx, posy, angle);
     }
     case M_POS: {
       int idMissile = proxy.receiveInt();
@@ -116,7 +116,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case A_PLAYER_OFF: {
       int idPlayer = proxy.receiveInt();
-      return new PlayerOffEvent(idPlayer, model, view);
+      return new PlayerOffEvent(idPlayer);
     }
     case A_PLAYER_LOSE:{
       int idPlayer = proxy.receiveInt();
@@ -124,7 +124,7 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     }
     case A_PLAYER_WIN:{
       int idPlayer = proxy.receiveInt();
-      return new GameWinnerEvent(idPlayer, model, view);
+      return new GameWinnerEvent(idPlayer);
     }
     case WEAPON_DONE:{
       int idWeapon = proxy.receiveInt();

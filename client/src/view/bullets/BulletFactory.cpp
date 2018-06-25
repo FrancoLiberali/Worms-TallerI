@@ -1,5 +1,5 @@
 #include "BulletFactory.h"
-#include "../GameException.h"
+#include "../../exception/GameException.h"
 #include "BazookaView.h"
 #include "MortarView.h"
 #include "GreenGrenadeView.h"
@@ -27,9 +27,11 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 return new MortarView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case G_GRENADE:
+                SoundManager::Instance().playSound(GRANADE);
                 return new GreenGrenadeView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case R_GRENADE:
+                SoundManager::Instance().playSound(GRANADE);
                 return new RedGrenadeView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case BANANA:
@@ -44,7 +46,6 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
                 return new DynamiteView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case AIRATTACK:
-                printf("Pos %i - %i\n", posx, posy);
                 return new AirMissileView(id, dir, posx, posy, angle, screen, camera);
                 break;
             case FRAGMENT:
@@ -54,5 +55,5 @@ BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, 
     }catch(GameException& e){
         std::cout<<e.what()<<std::endl;
     }
-    return nullptr;
+    return nullptr; //nunca debería llegar
 }

@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include "ProxyClient.h"
-#include "common/Thread.h"
 #include "Room.h"
 
 #include <map>

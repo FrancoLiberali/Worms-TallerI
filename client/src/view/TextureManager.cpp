@@ -36,9 +36,10 @@ bool TextureManager::load(std::string fileName,std::string id, SDL_Renderer* pRe
 		this->texture_map[id]=newTexture;
 		return true;
 	} 
-	std::stringstream msg;
-	msg<<"TextureManager: Imagen NO encontrada: "<<fileName;
-	throw GameException(msg.str());
+	std::string  msg = "TextureManager: Imagen NO encontrada: ";
+	msg += fileName;
+	//msg<<<<fileName;
+	throw GameException(msg.c_str());
 }
 
 void TextureManager::draw(std::string id, int x, int y, double angle, SDL_Renderer* pRenderer
@@ -102,9 +103,9 @@ SDL_Texture* TextureManager::getTexture(std::string imageId)
 	if (this->texture_map.find(imageId) != this->texture_map.end())
 		return this->texture_map[imageId];
 	
-	std::stringstream msg;
-	msg<<"TextureManager: Texture de ImagenID NO encontrada: "<<imageId;
-	throw GameException(msg.str());
+	std::string msg = "TextureManager: Texture de ImagenID NO encontrada: ";
+	msg +=imageId;
+	throw GameException(msg.c_str());
 	
 }
 

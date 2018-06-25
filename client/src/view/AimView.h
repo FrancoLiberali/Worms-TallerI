@@ -6,6 +6,8 @@
 
 #include <math.h>
 
+
+
 class AimView {
 private:
     SdlScreen* screen; 

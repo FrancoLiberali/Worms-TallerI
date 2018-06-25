@@ -5,6 +5,7 @@
 #define INITIAL_X 0
 #define INITIAL_Y 0
 #define LEVEL_WATER 300
+#define SPEED 40
 
 Escenario::Escenario(SdlScreen& screen, Camera& camera)
 	:screen(screen), camera(camera), marea(0){}
@@ -40,15 +41,15 @@ void Escenario::setBackground(std::string name){
 
 std::string Escenario::getWater(){
 	marea++;
-	if (marea < 60)
+	if (marea < SPEED)
 		return "marea1";
-	else if (marea < 120)
+	else if (marea < 2*SPEED)
 		return "marea2";
-	else if (marea < 180)
+	else if (marea < 3*SPEED)
 		return "marea3";
-	else if (marea < 240)
+	else if (marea < 4*SPEED)
 		return "marea2";
-	if (marea >= 240)
+	if (marea >= 4*SPEED)
 		marea = 0;
 	return "marea1";
 }

@@ -10,9 +10,9 @@ SpriteConfigurator::~SpriteConfigurator(){
 void SpriteConfigurator::add(std::string imageId, int width, int height, int rows, int countSleepFrame, int initFrame){
 	
 	if (sprite_map.find(imageId) != sprite_map.end()){
-		std::stringstream msg;
-		msg<<"SpriteConfigurator: El sprite id: "<<imageId<< "ya existe";
-		throw GameException(msg.str());
+		std::string msg = "SpriteConfigurator: El sprite id: ";
+		msg += imageId; msg += " ya existe";
+		throw GameException(msg.c_str());
 	} 
 	
 	Sprite aSprite(imageId, width, height, rows, countSleepFrame, initFrame);
@@ -24,7 +24,7 @@ Sprite SpriteConfigurator::get(std::string imageId) {
 	if (sprite_map.find(imageId) != sprite_map.end())
 		return sprite_map[imageId];
 
-	std::stringstream msg;
-	msg<<"SpriteConfigurator: no se encontro encontro el sprite id: "<<imageId;
-	throw GameException(msg.str());
+	std::string msg = "SpriteConfigurator: no se encontro encontro el sprite id: ";
+	msg += imageId;
+	throw GameException(msg.c_str());
 }

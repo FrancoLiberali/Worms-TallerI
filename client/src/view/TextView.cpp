@@ -39,8 +39,8 @@ void TextView::setAlpha( Uint8 alpha ){
 	SDL_SetTextureAlphaMod( mTexture, alpha );
 }
 
-void TextView::draw(SDL_Renderer * gRenderer, int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip flip ){
-	TextManager::Instance().write(this->font,x, y,this->text,this->textColor);
+void TextView::draw(SDL_Renderer * gRenderer, int x, int y, int factor){
+	TextManager::Instance().write(this->font,x, y,this->text,this->textColor,factor);
 }
 
 int TextView::getWidth(){

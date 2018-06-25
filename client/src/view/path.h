@@ -1,0 +1,101 @@
+#ifndef _PATH_H
+#define _PATH_H
+
+//worm
+#define WWALK_SPRITE "/resource/images/wwalk.png"
+#define WDIE_SPRITE "/resource/images/wdie.png"
+#define WJUMP_SPRITE "/resource/images/wflyup.png"
+#define GRAVE_SPRITE "/resource/images/grave2.png"
+#define STATIC_SPRITE "/resource/images/wstatic.png"
+#define WBAZZOKA_SPRITE "/resource/images/wbaz.png"
+#define WMORTAR_SPRITE "/resource/images/wbaz.png"
+#define WDYNIMITE_SPRITE "/resource/images/wdynbak.png"
+#define WGGRENADE_SPRITE "/resource/images/wthrgrn.png"
+#define WRGRENADE_SPRITE "/resource/images/wthrcls.png"
+#define WHOLY_SPRITE "/resource/images/wthrhgr.png"
+#define WRADIO_SPRITE "/resource/images/wairtlk.png"
+#define WBAT_SPRITE "/resource/images/wbsbaim.png"
+#define WTELEPORT_SPRITE "/resource/images/wtelbak.png"
+#define WBANANA_SPRITE "/resource/images/wthrban.png"
+
+//bullet
+#define BULLET_BAZZOKA "/resource/images/misiles/bazzoka.png"
+#define BULLET_MORTAR "/resource/images/misiles/mortar.png"
+#define BULLET_AIRMISL "/resource/images/misiles/airmisl.png"
+#define BULLET_DYNAMITE "/resource/images/misiles/dynamite.png"
+#define BULLET_HOLY "/resource/images/misiles/hgrenade.png"
+#define BULLET_GGRENADE "/resource/images/misiles/ggrenade.png"
+#define BULLET_RGRENADE "/resource/images/misiles/rgrenade.png"
+#define BULLET_BANANA "/resource/images/misiles/banana.png"
+#define FRAGMENT "/resource/images/misiles/fragment.png"
+
+//images
+#define VIGA "/resource/images/vigah.png"
+#define MSG_BOX "/resource/images/messageBox.png"
+#define WATCH "/resource/images/reloj.png"
+#define SKY3 "/resource/images/fondos/sky3.png"
+#define TEXTURA1 "/resource/images/fondos/tex1.jpg"
+#define TEXTURA2 "/resource/images/fondos/tex2.jpg"
+#define TEXTURA3 "/resource/images/fondos/tex3.jpg"
+#define TEXTURA4 "/resource/images/fondos/tex4.png"
+#define TEXTURA5 "/resource/images/fondos/tex5.png"
+#define TEXTURA6 "/resource/images/fondos/tex6.png"
+
+#define MAREA1 "/resource/images/marea1.png"
+#define MAREA2 "/resource/images/marea2.png"
+#define MAREA3 "/resource/images/marea3.png"
+#define MAREA4 "/resource/images/marea4.png"
+
+//explotions
+#define CIRCLE "/resource/images/circle25.png"
+#define EXPLOTION_SPRITE "/resource/images/explotion.png"
+
+//menu weapons
+#define MENU "/resource/images/menuWeapon/MenuWeapon.png"
+#define AIM "/resource/images/aim.png"
+#define OK "/resource/images/menuWeapon/ok.png"
+#define BAZOOKA1 "/resource/images/menuWeapon/bazooka.1.png"
+#define BAZOOKA2 "/resource/images/menuWeapon/bazooka.2.png"
+#define MORTAR1 "/resource/images/menuWeapon/mortar.1.png"
+#define MORTAR2 "/resource/images/menuWeapon/mortar.2.png"
+#define GGRENADE1 "/resource/images/menuWeapon/grenade.1.png"
+#define GGRENADE2 "/resource/images/menuWeapon/grenade.2.png"
+#define RGRENADE1 "/resource/images/menuWeapon/cluster.1.png"
+#define RGRENADE2 "/resource/images/menuWeapon/cluster.2.png"
+#define BANANA1 "/resource/images/menuWeapon/banana.1.png"
+#define BANANA2 "/resource/images/menuWeapon/banana.2.png"
+#define HOLY1 "/resource/images/menuWeapon/hgrenade.1.png"
+#define HOLY2 "/resource/images/menuWeapon/hgrenade.2.png"
+#define DYNAMITE1 "/resource/images/menuWeapon/dynamite.1.png"
+#define DYNAMITE2 "/resource/images/menuWeapon/dynamite.2.png"
+#define BASEBALL1 "/resource/images/menuWeapon/baseball.1.png"
+#define BASEBALL2 "/resource/images/menuWeapon/baseball.2.png"
+#define AIRSTRIKE1 "/resource/images/menuWeapon/airstrke.1.png"
+#define AIRSTRIKE2 "/resource/images/menuWeapon/airstrke.2.png"
+#define TELEPORT1 "/resource/images/menuWeapon/teleport.1.png"
+#define TELEPORT2 "/resource/images/menuWeapon/teleport.2.png"
+
+//SOUNDS
+#define BACKGROUND_SOUND "/resource/sounds/background.wav"
+#define EXPLOTION_SOUND "/resource/sounds/explotion2.wav"
+#define FUSE_SOUND "/resource/sounds/FUSE.wav"
+#define HOLY_SOUND "/resource/sounds/holy.wav"
+#define BANANA_IMPACT_SOUND "/resource/sounds/BananaImpact.wav"
+#define JUMP_SOUND "/resource/sounds/jump.wav"
+#define SHOOT_SOUND "/resource/sounds/handgunfire.wav"
+#define COMMUNICATOR_SOUND "/resource/sounds/communicator.wav"
+#define TELEPORT_SOUND "/resource/sounds/teleport.wav"
+#define BAT_IMPACT_SOUND "/resource/sounds/bat_impact.wav"
+#define BAT_JINGLE_SOUND "/resource/sounds/bat_jingle.wav"
+#define BYEBYE_SOUND "/resource/sounds/byebye.wav"
+#define AIRSTRIKE_SOUND "/resource/sounds/airstrike.wav" 
+#define CURSOR_SELECT_SOUND "/resource/sounds/CursorSelect.wav"
+#define FIRE_SOUND "/resource/sounds/FIRE.WAV"
+#define HELLO_SOUND "/resource/sounds/HELLO.WAV"
+#define GRANADE_SOUND "/resource/sounds/GRENADE.WAV"
+
+//FONTS
+#define ARIAL_FONT "/resource/font/arialbd.ttf"
+#define RELOJ_FONT "/resource/font/reloj.ttf"
+
+#endif

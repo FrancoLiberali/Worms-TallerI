@@ -2,15 +2,21 @@
 #define _WORM_VIEW_ 
 
 #include "SdlScreen.h"
-#include "WormState.h"
+#include "WormStateAndWeapon.h"
 #include "Sprite.h"
 #include "SpriteConfigurator.h"
 #include "TextureManager.h"
+#include "TextManager.h"
 #include "TextView.h"
 #include "AimView.h"
 #include "Camera.h"
 #include "PowerView.h"
 #include <map>
+
+/**
+* @class WormView
+* Clase de la vista de un gusano.
+*/
 
 class WormView {
 private:
@@ -26,6 +32,7 @@ private:
 	int currentLife;
 	int widhtLife100;
 	int widhtLifeCurrent;
+	TextView life;
 
 	WeaponId weaponId;
 	AimView aim;
@@ -36,8 +43,10 @@ private:
 	bool focus;
 
 	bool alive;
-	TextView labelUsuario;
+	//TextView labelUsuario;
+	SDL_Texture* usuarioTexture;
 	int idOwner;
+	std::string playerName;
 
 	void draw(int idPlayerTurn);
 	int getXCenter();

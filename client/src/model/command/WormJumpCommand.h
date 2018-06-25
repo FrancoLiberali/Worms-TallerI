@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class WormJumpCommand
+* Comando de salto de un gusano.
+*/
+
 class WormJumpCommand : public ClientCommand{
 private:
     int idJugador;

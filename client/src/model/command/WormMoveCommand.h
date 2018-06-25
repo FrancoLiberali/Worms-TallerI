@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class WormMoveCommand
+* Comando de cambio en la posición de un gusano.
+*/
+
 class WormMoveCommand : public ClientCommand{
 private:
     int  idJugador;

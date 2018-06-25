@@ -8,7 +8,7 @@ class ClientCommand;
 
 /**
 * @class GameControllerProxy
-* Encola los comandos para enviar al server
+* Encola los comandos para enviar al server, usa una cola bloqueante.
 * Los comandos fueron detectados por el Controller
 */
 class GameControllerProxy{
@@ -25,6 +25,7 @@ public:
     void shoot(const int idJugador);
     void countDown(const int idJugador, const int time);
     void teledirigido(const int idJugador, const int x, const int y);
+    void leaveRoom(const int idJugador);
 };
 
 #endif

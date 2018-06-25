@@ -8,7 +8,7 @@ ClientCommandSender::ClientCommandSender(ProxyClient& proxy, Queue<ClientCommand
 ClientCommandSender::~ClientCommandSender(){
 	while(!queue.empty()){
 		delete (queue.pop());
-	}
+	}	
 }
 
 void ClientCommandSender::run(){
@@ -25,6 +25,8 @@ void ClientCommandSender::run(){
 }
 
 void ClientCommandSender::stop(){
+	if (closed)
+		return;
 	closed = true;
 	proxy.close();
 }

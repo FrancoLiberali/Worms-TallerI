@@ -2,7 +2,7 @@
 #define _WEAPON_H
 
 #include <list>
-#include "WormState.h"
+#include "WormStateAndWeapon.h"
 #include "SdlScreen.h"
 #include "Camera.h"
 #include "Shape.h"

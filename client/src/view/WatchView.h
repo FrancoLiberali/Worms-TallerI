@@ -6,12 +6,15 @@
 #include "SdlScreen.h"
 #define INIT_TIME 60
 
+/*
+* @class WatchView
+* Muestra el paso del tiempo del juego por turno;
+*/
 class WatchView{
 private:
     TextView title;
-    //TextView time;
+    TextView timeView;
     SdlScreen&  screen;
-    SDL_Texture* timeTexture;
     int seconds;
 public:
     WatchView(SdlScreen& screen);

@@ -1,33 +1,33 @@
 #include "FontManager.h"
-#include "SdlException.h"
+#include "../exception/SdlException.h"
 #include "../../config.h"
 
-void FontManager::init(SDL_Renderer * renderer)
-{
+void FontManager::init(SDL_Renderer * renderer){
 	this->renderer = renderer;
 	if (TTF_Init() == -1)
 		throw SdlException("No se puedo abrir TTF", TTF_GetError());
 }
 
-void FontManager::openFont(std::string id, std::string path, int size)
-{
+void FontManager::openFont(std::string id, std::string path, int size){
 	TTF_Font * font = TTF_OpenFont(path.c_str(), size);
 	if (!font)
 		throw SdlException("No hay fuente SDL_ttf Error", TTF_GetError());
-	map[id] = font;
+	fonts[id] = font;
 }
 
 TTF_Font* FontManager::getFont(std::string& fontId){
-	if (map.find(fontId) == map.end())
+	if (fonts.find(fontId) == fonts.end())
 		return NULL;
-	return map[fontId];;
+	return fonts[fontId];;
 }
 
 void FontManager::closeFonts(){
-
-	std::map<std::string, TTF_Font*>::iterator iter;
-	for (iter = map.begin(); iter!=map.end(); ++iter){
-		TTF_CloseFont(iter->second);
+	for (auto& it : fonts){
+		TTF_CloseFont(it.second);
 	}
-	map.clear();
+	fonts.clear();
+}
+
+SDL_Renderer* FontManager::getRenderer() {
+	return this->renderer;
 }

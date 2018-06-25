@@ -3,6 +3,10 @@
 
 #include "Event.h"
 
+/*@ class: Event
+* Evento que responde al cambio en la posición de un misil.
+* El misisl fue anteriormente creado.
+*/
 class MissileMoveEvent : public Event {
 private:
 	int idMissile;

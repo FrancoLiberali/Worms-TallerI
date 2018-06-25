@@ -6,7 +6,7 @@ Sprite::Sprite():imageId(""), width(0), height(0), rows(0), currentRow(0), repea
  
 Sprite::Sprite(std::string imageId, int width, int height, int rows, bool repeat,int initFrame)
 					:imageId(imageId), width(width), height(height), rows(rows)
-					 ,currentRow(initFrame), repeat(repeat), countFrame(20), initFrame(initFrame){
+					 ,currentRow(initFrame), repeat(repeat), countFrame(10), initFrame(initFrame){
 }
 
 Sprite::Sprite(const Sprite & sprite)
@@ -54,3 +54,13 @@ bool Sprite::isLastFrame(){
 bool Sprite::isInit(){
 	return this->currentRow == initFrame;
 }
+
+std::string Sprite::getImageId() {return this->imageId;}
+
+int Sprite::getWidth() {return this->width;}
+
+int Sprite::getHeight() {return this->height;}
+
+int Sprite::getRows() {return this->rows;}
+
+int Sprite::getCurrentRow() {return this->currentRow;}

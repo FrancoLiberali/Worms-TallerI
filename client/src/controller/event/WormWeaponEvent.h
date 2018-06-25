@@ -3,8 +3,11 @@
 
 #include "Event.h"
 
-#include "../../view/WormState.h"
+#include "../../view/WormStateAndWeapon.h"
 
+/*@class: WormWeaponEvent
+* Evento del cambio de arma de un gusano. La id del arma debe ser válida.
+*/
 class WormWeaponEvent : public Event {
 private:
 	int wormId;

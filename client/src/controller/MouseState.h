@@ -4,6 +4,9 @@
 #include <SDL2/SDL_events.h>
 #include "EventHandler.h"
 
+/*@class: MouseState
+* Verifica el estado del mouse, si hay que mover la camara o no.
+*/
 class MouseState {
 private:
     int x;

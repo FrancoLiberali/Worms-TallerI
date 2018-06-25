@@ -2,6 +2,12 @@
 #define _SPRITE_H_
 
 #include <string>
+
+/**
+* @class Sprite
+* Clase que wrappea el manejo de sprites para su animación.
+*/
+
 class Sprite {
 private:
 	std::string imageId;
@@ -21,18 +27,12 @@ public:
 	Sprite(const Sprite & sprite);	
 	~Sprite();					
 	void clean();
-	void update(int modifier = 0);
-	void setImageId(std::string imageId) {this->imageId = imageId;}
-	void setWidth(int width) {this->width = width;}
-	void setHeight(int height) {this->height = height;}
-	void setRows(int rows) {this->rows = rows;}
-	void setCurrentRow(int currentRow) {this->currentRow = currentRow;}
-	
-	std::string getImageId() {return this->imageId;}
-	int getWidth() {return this->width;}
-	int getHeight() {return this->height;}
-	int getRows() {return this->rows;}
-	int getCurrentRow() {return this->currentRow;}
+	void update(int modifier = 0);	
+	std::string getImageId();
+	int getWidth();
+	int getHeight();
+	int getRows();
+	int getCurrentRow();
 	bool isLastFrame();
 	bool isInit();
 };

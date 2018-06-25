@@ -30,7 +30,6 @@ class Queue {
     if (q.empty()) {
       cv.notify_all();
     }
-
     q.push(val);
   }
 

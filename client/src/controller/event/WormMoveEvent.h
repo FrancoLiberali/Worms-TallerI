@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@class: WormMoveEvent
+* Evento de cambio de posición un gusano.
+*/
 class WormMoveEvent : public Event {
 private:
 	int wormID;

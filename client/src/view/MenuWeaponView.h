@@ -4,7 +4,7 @@
 #include "TextureManager.h"
 
 #include "SdlScreen.h"
-#include "WormState.h"
+#include "WormStateAndWeapon.h"
 #include "Weapon.h"
 #include <map>
 #include <list>

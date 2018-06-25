@@ -4,14 +4,12 @@
 #include "GameControllerProxy.h"
 #include "../controller/ClientEventReceiver.h"
 #include "../controller/ClientCommandSender.h"
+#include <map>
 
 class ClientCommandSender;
 class ClientEventReceiver;
 class GameControllerProxy;
 
-#include <map>
-/*Modelo del cliente para mantener la informacion del juego
-y como intermedirario al server*/
 /**
 * @class Model
 * Modelo del cliente para mantener información del estado del juego
@@ -50,6 +48,8 @@ public:
 	void setComunnication(ClientCommandSender* sender, ClientEventReceiver* receiver);
 	void closeComunnication();
 	void teledirigido(int x, int y);
+	void leaveRoom();
+	void keepPlaying();
 };
 
 #endif

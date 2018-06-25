@@ -2,15 +2,15 @@
 
 #include <iostream>
 
-GameWinnerEvent::GameWinnerEvent(int idPlayer,Model& model, mainView& view)
-    :idPlayer(idPlayer), model(model), view(view){};
+GameWinnerEvent::GameWinnerEvent(int idPlayer)
+    :idPlayer(idPlayer){};
 
 void GameWinnerEvent::process(){
-    if (model.isPlayer(this->idPlayer)){
-        view.showWinner();
+   /* if (model.isPlayer(this->idPlayer)){
+        //view.showWinner();
     }
     else{
-        view.showLosser();
+        //view.showLosser();
     }
-    model.closeComunnication();
+    //model.closeComunnication();*/
 }

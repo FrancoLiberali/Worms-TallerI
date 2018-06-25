@@ -5,7 +5,7 @@
 #include <sstream>
 #include <map>
 #include "Sprite.h"
-#include "GameException.h"
+#include "../exception/GameException.h"
 
 class SpriteConfigurator{
 private:

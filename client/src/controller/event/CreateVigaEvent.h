@@ -3,14 +3,16 @@
 
 #include "Event.h"
 
+/*@class: CreateVigaEvent
+* Evento que responde a la creación de una viga del server
+*/
 class CreateVigaEvent : public Event {
 private:
 	int posx;
     int posy;
     int angle;
-    mainView& view;
 public:
-	CreateVigaEvent(int x, int y, int angle, mainView& view);
+	CreateVigaEvent(int x, int y, int angle);
 	void process();
 };
 

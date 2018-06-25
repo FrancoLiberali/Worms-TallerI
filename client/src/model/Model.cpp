@@ -43,6 +43,9 @@ void Model::teledirigido(int x, int y){
     gcp->teledirigido(idJugador, x, y);
 }
 
+void Model::leaveRoom(){
+    gcp->leaveRoom(idJugador);
+}
 
 int Model::getIdWormSelected(){
     return this->idWormSelected;
@@ -86,6 +89,9 @@ void Model::setComunnication(ClientCommandSender* sender, ClientEventReceiver* r
     this->receiver = receiver;
 }
 void Model::closeComunnication(){
-    sender->stop();
-    receiver->stop();
+}
+
+
+void Model::keepPlaying(){
+    receiver->keepPlaying();
 }

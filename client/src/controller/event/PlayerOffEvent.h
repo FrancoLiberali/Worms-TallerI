@@ -3,13 +3,14 @@
 
 #include "Event.h"
 
+/*@ class: Event
+* Evento creado a partir de que un jugador se desconecto.
+*/
 class PlayerOffEvent : public Event {
 private:
 	int playerId;
-    Model& model;
-    mainView& view;
 public:
-	PlayerOffEvent(int idPlayer, Model& model, mainView& view);
+	PlayerOffEvent(int idPlayer);
 	void process();
 };
 

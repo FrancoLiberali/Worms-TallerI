@@ -5,8 +5,9 @@
 #include <SDL2/SDL_image.h>
 #include <map>
 #include <string>
-#include "SdlException.h"
-#include "GameException.h"
+
+#include "../exception/SdlException.h"
+#include "../exception/GameException.h"
 #include "Camera.h"
 
 /**

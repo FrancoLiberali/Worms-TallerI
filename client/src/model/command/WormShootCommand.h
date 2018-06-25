@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class WormShootCommand
+* Comando de disparo de un arma por parte del gusano.
+*/
+
 class WormShootCommand : public ClientCommand{
 private:
     int idJugador;

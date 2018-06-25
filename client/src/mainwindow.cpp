@@ -65,18 +65,20 @@ void MainWindow::on_connectButtonBox_rejected()
      ui->stackedWidget->setCurrentIndex(NAME);
 }
 
-// void MainWindow::closeEvent (QCloseEvent *event)
-// {
-//     QMessageBox::StandardButton resBtn = QMessageBox::question( this, "WORMS",
-//                                                                 tr("Desea salir?\n"),
-//                                                                 QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes,
-//                                                                 QMessageBox::Yes);
-//     if (resBtn != QMessageBox::Yes) {
-//         event->ignore();
-//     } else {
-//         exit(EXIT_FAILURE);
-//     }
-// }
+void MainWindow::on_ctrlButton_clicked()
+{
+  // Setear imagen.
+  ui->homeImgLabel->setPixmap(QPixmap(_INSTALL_PATH_ "/resource/images/teclado.png"));
+  ui->homeImgLabel->show();
+  ui->stackedWidget->setCurrentIndex(CONTROLS);
+}
+
+void MainWindow::on_backCButton_clicked()
+{
+  ui->homeImgLabel->setPixmap(QPixmap(_INSTALL_PATH_ "/resource/images/a.png"));
+  ui->homeImgLabel->show();
+  ui->stackedWidget->setCurrentIndex(HOME);
+}
 
 MainWindow::~MainWindow()
 {

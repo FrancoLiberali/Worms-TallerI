@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@class: CameraMoveEvent
+* Evento para que la camara se mueva
+*/
 class CameraMoveEvent : public Event {
 private:
     int x;

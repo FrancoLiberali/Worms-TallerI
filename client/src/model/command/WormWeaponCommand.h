@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class WormWeaponCommand
+* Comando de selección de una arma.
+*/
+
 class WormWeaponCommand : public ClientCommand{
 private:
     int idJugador;

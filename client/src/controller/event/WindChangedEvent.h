@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@ class: Event
+* Evento de cambio de aire en el juego.
+*/
 class WindChangedEvent : public Event {
 private:
 	int windSpeed;

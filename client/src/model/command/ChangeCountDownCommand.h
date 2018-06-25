@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class ChangeCountDownCommand
+* Comando de cambio en la cuenta regresiva de un explosivo.
+*/
+
 class ChangeCountDownCommand : public ClientCommand{
 private:
     int idJugador;

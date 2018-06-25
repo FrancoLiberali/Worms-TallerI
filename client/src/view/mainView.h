@@ -21,7 +21,10 @@
 
 class EventHandler;
 
-/*Contiene todo referante al dibujado de los objetos*/
+/*
+* @class mainView
+* clase principal de la vista del cliente, contiene referencia a todas las vistas.
+*/
 class mainView {
 private:
 	Escenario stage;
@@ -31,7 +34,6 @@ private:
 	EventHandler& eventHandler;
 	MenuWeaponView* menuWeapon;
 
-	//TextView turnView;
 	PanelInfo panelInfo;
 	WatchView watch;
 
@@ -50,6 +52,7 @@ public:
 	bool isOpen();
 	void update();
 	void close();
+	void openWindow();
 	void setIdPlayer(int idPlayer);
 	WormView* getWormView(int id);
 	BulletView* getBulletView(int id);
@@ -64,7 +67,7 @@ public:
     void addMissile(int id, WeaponId weaponId, int dir, int posx, int posy, int angle);
 	std::string changeTurn(std::string namePlayer, int idWorm);
 	void showWinner();
-	void showLosser();
+	void showLosser(std::string name);
 	Camera& getCamera();
 	void WormShoot(int idWorm);
 	void createStage(int widht, int height);

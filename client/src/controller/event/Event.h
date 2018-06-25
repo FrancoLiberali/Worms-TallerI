@@ -7,6 +7,10 @@ class mainView;
 
 class Model;
 
+/*@ class: Event
+* Clase abstracta que representa a todos los eventos que pueden alterar al cliente.
+* cualquier nuevo evento deberá heredar de esta clase para ser agregada.
+*/
 class Event {
 protected:
 	mainView* view;
@@ -14,6 +18,8 @@ protected:
 public:
 	void setView(mainView* view);
 	void setModel(Model* model);
+
+	//método virtual que realiza los efectos del evento.
 	virtual void process() = 0;
 	virtual ~Event(){};
 };

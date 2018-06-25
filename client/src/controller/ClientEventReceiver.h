@@ -3,7 +3,7 @@
 
 #include "../common/Queue.h"
 #include "../common/Thread.h"
-#include "../common/socket_error.h"
+#include "../exception/socket_error.h"
 #include "../ProxyClient.h"
 #include "../model/Model.h"
 #include "../PreGameManager.h"
@@ -13,13 +13,12 @@ class Model;
 class ProxyClient;
 class PreGameManager;
 
-//Clase que recibe todos los eventos del server usa una cola bloqueante
 
 /**
 * @class ClientEventReceiver
-* Recive todos los eventos del server
-* los encola en una cola bloqueante de eventos que después
-* son desencolados y encolados a la cola princiopal de eventos del EventHandler
+* Recive todos los eventos del server los encola en una cola bloqueante
+* que después son desencolados y encolados a la cola princiopal de eventos del 
+* EventHandler. Corre en un hilo propio.
 */
 class ClientEventReceiver : public Thread{
 private:
@@ -38,6 +37,8 @@ public:
 	virtual void run() override;
 	void stop();
 	bool isClosed() const;
+	void keepPlaying();
+	void clean();
 };
 
 #endif

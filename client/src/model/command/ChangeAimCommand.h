@@ -3,6 +3,10 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class ChangeAimCommand
+* Comando de cambio en la mira del arma.
+*/
 class ChangeAimCommand : public ClientCommand{
 private:
     int idJugador;

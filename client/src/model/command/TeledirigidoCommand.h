@@ -3,6 +3,10 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class TeledirigidoCommand
+* Comando de cambio de objetivo en el teledirigido.
+*/
 class TeledirigidoCommand : public ClientCommand{
 private:
     int idPlayer;

@@ -8,7 +8,8 @@
 enum widget : int {
     HOME,
     NAME,
-    CONNECT
+    CONNECT,
+    CONTROLS
 };
 
 namespace Ui {
@@ -29,6 +30,9 @@ private slots:
     void on_nameButtonBox_rejected();
     void on_connectButtonBox_accepted();
     void on_connectButtonBox_rejected();
+    void on_ctrlButton_clicked();
+    void on_backCButton_clicked();
+
     
 private:
     Ui::MainWindow *ui;

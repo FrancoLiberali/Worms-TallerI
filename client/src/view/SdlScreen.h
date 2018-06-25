@@ -6,7 +6,12 @@
 #include <SDL2/SDL_image.h>
 #include <SDL2/SDL_ttf.h>
 
-#include "SdlException.h"
+#include "../exception/SdlException.h"
+/**
+* @class SdlScreen
+* Wrapper para el manejo de la ventana principal, contiene la ventana 
+* y el renderer únicos para el programa.
+*/
 
 class SdlScreen {
 private:
@@ -31,6 +36,7 @@ public:
 	SDL_Renderer* getRenderer();
 	int getXCenter();
 	int getYCenter();
+	void restart();
 };
 
 #endif 

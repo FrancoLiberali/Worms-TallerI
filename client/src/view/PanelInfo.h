@@ -3,6 +3,12 @@
 
 #include "TextView.h"
 
+/*
+* @Class PanelInfo
+* Panel de información de la vista
+* Muestra los turnos y el viento.
+*/
+
 class PanelInfo {
 private:
     TextView textTurn;

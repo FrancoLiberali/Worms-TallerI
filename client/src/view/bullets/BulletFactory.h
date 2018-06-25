@@ -1,8 +1,14 @@
 #ifndef _BULLET_FACTORY_H
 #define _BULLET_FACTORY_H
 
-#include "../WormState.h"
+#include "../WormStateAndWeapon.h"
 #include "BulletView.h"
+
+/**
+* @class BulletFactory
+* Usa el patrón factory para crear la vista de un missil.
+* El id del arma debe ser válido.
+*/
 
 class BulletFactory{
 public:
