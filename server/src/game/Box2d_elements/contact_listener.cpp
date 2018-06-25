@@ -6,90 +6,83 @@
 #include "game/weapons/regresive_projectile.h"
 
 #define MAX_GUSANO_ANGLE 0.78 //45 grados
+#define BEGIN 1
+#define FINISH 0
 
 void ContactListener::BeginContact(b2Contact* contact){
+	UserData* dataA = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+	UserData* dataB = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 	//check if body A was delimiter
-	UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-	if (data && data->indicator == DELIMITER_INDICATOR){
-		//check if body B was gusano
-		UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-		if (other_data && other_data->indicator == GUSANO_INDICATOR){
-			Gusano* gusano = static_cast<Gusano*>(other_data->pointer);
-			gusano->destroy();
-		//check if body B was not regresive projectile
-		} else if (other_data && (other_data->indicator == FRAGMENT_TYPE || other_data->indicator == SIMPLE_TYPE)){
-			Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
-			projectile->destroy();
-		}
-		return;
-	}
-	
+	this->checkDelimiter(dataA, dataB);
 	//check if body B was delimiter
-	data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-	if (data && data->indicator == DELIMITER_INDICATOR){
-		//check if body A was gusano
-		UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-		if (other_data && other_data->indicator == GUSANO_INDICATOR){
-			Gusano* gusano = static_cast<Gusano*>(other_data->pointer);
-			gusano->destroy();
-		//check if body A was not regresive projectile
-		} else if (other_data && (other_data->indicator == FRAGMENT_TYPE || other_data->indicator == SIMPLE_TYPE)){
-			Projectile* projectile = static_cast<Projectile*>(other_data->pointer);
-			projectile->destroy();
-		}
-		return;
-	}
-		
-	//check if fixture A was the foot sensor
+	this->checkDelimiter(dataB, dataA);
+	
 	b2Fixture* fixture = contact->GetFixtureA();
 	void* fixture_user_data = fixture->GetUserData();
-	if (fixture_user_data && *((int*)fixture_user_data) == FOOT_SENSOR_DATA){
-		float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
-		if (other_angle >= -MAX_GUSANO_ANGLE && other_angle <= MAX_GUSANO_ANGLE){
-			UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-			Gusano* gusano = static_cast<Gusano*>(data->pointer);
-			gusano->newContact(other_angle);
-		}
-	}
+	float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
+	//check if fixture A was the foot sensor
+	this->checkFootSensor(fixture, fixture_user_data, other_angle, BEGIN);
 	//check if fixture A was the head sensor
-	if (fixture_user_data && *((int*)fixture_user_data) == HEAD_SENSOR_DATA){
-		UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-		Gusano* gusano = static_cast<Gusano*>(data->pointer);
-		gusano->headContact();
-	}
-	//check if fixture B was the foot sensor
+	this->checkHeadSensor(fixture, fixture_user_data, BEGIN);
+	
 	fixture = contact->GetFixtureB();
 	fixture_user_data = fixture->GetUserData();
-    if (fixture_user_data && *((int*)fixture_user_data) == FOOT_SENSOR_DATA){
-		float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
+	other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
+	//check if fixture B was the foot sensor
+	this->checkFootSensor(fixture, fixture_user_data, other_angle, BEGIN);
+	//check if fixture B was the head sensor
+	this->checkHeadSensor(fixture, fixture_user_data, BEGIN);
+		
+	//check if body A was a projectile
+	this->checkProjectile(dataA, dataB);
+	//check if body B was a projectile
+	this->checkProjectile(dataB, dataA);
+}
+
+void ContactListener::checkDelimiter(UserData* dataA, UserData* dataB){
+	if (dataA && dataA->indicator == DELIMITER_INDICATOR){
+		//check if body B was gusano
+		if (dataB && dataB->indicator == GUSANO_INDICATOR){
+			Gusano* gusano = static_cast<Gusano*>(dataB->pointer);
+			gusano->destroy();
+		//check if body B was not regresive projectile
+		} else if (dataB && (dataB->indicator == FRAGMENT_TYPE || dataB->indicator == SIMPLE_TYPE)){
+			Projectile* projectile = static_cast<Projectile*>(dataB->pointer);
+			projectile->destroy();
+		}
+	}
+}
+
+void ContactListener::checkFootSensor(b2Fixture* fixture, void* fixture_data, float other_angle, int type){
+	if (fixture_data && *((int*)fixture_data) == FOOT_SENSOR_DATA){
 		if (other_angle >= -MAX_GUSANO_ANGLE && other_angle <= MAX_GUSANO_ANGLE){
 			UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
 			Gusano* gusano = static_cast<Gusano*>(data->pointer);
-			gusano->newContact(other_angle);
+			if (type == BEGIN){
+				gusano->newContact(other_angle);
+			} else {
+				gusano->finishContact(other_angle);
+			}
 		}
 	}
-	//check if fixture B was the head sensor
-	if (fixture_user_data && *((int*)fixture_user_data) == HEAD_SENSOR_DATA){
+}
+
+void ContactListener::checkHeadSensor(b2Fixture* fixture, void* fixture_data, int type){
+	if (fixture_data && *((int*)fixture_data) == HEAD_SENSOR_DATA){
 		UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
 		Gusano* gusano = static_cast<Gusano*>(data->pointer);
-		gusano->headContact();
-	}
-		
-	//check if body A was a projectile
-	data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-	if (data && (data->indicator == FRAGMENT_TYPE || data->indicator == SIMPLE_TYPE)){
-		UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-		if ((other_data && other_data->indicator != DELIMITER_INDICATOR) || (!other_data)){//viga no tiene data
-			Projectile* projectile = static_cast<Projectile*>(data->pointer);
-			projectile->exploit();
+		if (type == BEGIN){
+			gusano->headContact();
+		} else {
+			gusano->headFinishContact();
 		}
 	}
-	//check if body B was a projectile
-	data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-	if (data && (data->indicator == FRAGMENT_TYPE || data->indicator == SIMPLE_TYPE)){
-		UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-		if ((other_data && other_data->indicator != DELIMITER_INDICATOR) || (!other_data)){//viga no tiene data
-			Projectile* projectile = static_cast<Projectile*>(data->pointer);
+}
+
+void ContactListener::checkProjectile(UserData* dataA, UserData* dataB){
+	if (dataA && (dataA->indicator == FRAGMENT_TYPE || dataA->indicator == SIMPLE_TYPE)){
+		if ((dataB && dataB->indicator != DELIMITER_INDICATOR) || (!dataB)){//viga no tiene data
+			Projectile* projectile = static_cast<Projectile*>(dataA->pointer);
 			projectile->exploit();
 		}
 	}
@@ -97,69 +90,42 @@ void ContactListener::BeginContact(b2Contact* contact){
 		
 void ContactListener::EndContact(b2Contact* contact){
 	if (contact->GetFixtureA()->GetBody()->GetWorld()->IsLocked()){
-		//check if fixture A was the foot sensor
 		b2Fixture* fixture = contact->GetFixtureA();
 		void* fixture_user_data = fixture->GetUserData();
-		if (fixture_user_data && *((int*)fixture_user_data) == FOOT_SENSOR_DATA){
-			float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
-			if (other_angle >= -MAX_GUSANO_ANGLE && other_angle <= MAX_GUSANO_ANGLE){
-				UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-				Gusano* gusano = static_cast<Gusano*>(data->pointer);
-				gusano->finishContact(other_angle);
-			}
-		}
+		float other_angle = contact->GetFixtureB()->GetBody()->GetAngle();
+		//check if fixture A was the foot sensor
+		this->checkFootSensor(fixture, fixture_user_data, other_angle, FINISH);
 		//check if fixture A was the head sensor
-		if (fixture_user_data && *((int*)fixture_user_data) == HEAD_SENSOR_DATA){
-			UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-			Gusano* gusano = static_cast<Gusano*>(data->pointer);
-			gusano->headFinishContact();
-		}
-		//check if fixture B was the foot sensor
+		this->checkHeadSensor(fixture, fixture_user_data, FINISH);
+	
 		fixture = contact->GetFixtureB();
 		fixture_user_data = fixture->GetUserData();
-		if (fixture_user_data && *((int*)fixture_user_data) == FOOT_SENSOR_DATA){
-			float other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
-			if (other_angle >= -MAX_GUSANO_ANGLE && other_angle <= MAX_GUSANO_ANGLE){
-				UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-				Gusano* gusano = static_cast<Gusano*>(data->pointer);
-				gusano->finishContact(other_angle);
-			}
-		}
+		other_angle = contact->GetFixtureA()->GetBody()->GetAngle();
+		//check if fixture B was the foot sensor
+		this->checkFootSensor(fixture, fixture_user_data, other_angle, FINISH);
 		//check if fixture B was the head sensor
-		if (fixture_user_data && *((int*)fixture_user_data) == HEAD_SENSOR_DATA){
-			UserData* data = static_cast<UserData*>(fixture->GetBody()->GetUserData());
-			Gusano* gusano = static_cast<Gusano*>(data->pointer);
-			gusano->headFinishContact();
-		}
+		this->checkHeadSensor(fixture, fixture_user_data, FINISH);
 	}
 }
 		
 void ContactListener::PostSolve(b2Contact* contact, const b2ContactImpulse* impulse){
+	UserData* dataA = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
+	UserData* dataB = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
 	//check if body A was gusano
-	UserData* data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-	if (data && data->indicator == GUSANO_INDICATOR){
-		Gusano* gusanoA = static_cast<Gusano*>(data->pointer);
+	this->checkGusano(dataA, dataB);
+	//check if body B was gusano
+	this->checkGusano(dataB, dataA);
+}
+
+void ContactListener::checkGusano(UserData* dataA, UserData* dataB){
+	if (dataA && dataA->indicator == GUSANO_INDICATOR){
+		Gusano* gusanoA = static_cast<Gusano*>(dataA->pointer);
 		if (gusanoA->isInactive()){
 			//check if body B was gusano or projectile
-			UserData* other_data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-			if (other_data && (other_data->indicator == GUSANO_INDICATOR 
-				|| other_data->indicator == FRAGMENT_TYPE || other_data->indicator == SIMPLE_TYPE
-				|| other_data->indicator == REGRESIVE_TYPE)){
+			if (dataB && (dataB->indicator == GUSANO_INDICATOR 
+				|| dataB->indicator == FRAGMENT_TYPE || dataB->indicator == SIMPLE_TYPE
+				|| dataB->indicator == REGRESIVE_TYPE)){
 				gusanoA->cancelMovement();
-			}
-		}
-	}
-	//check if body B was gusano
-	data = static_cast<UserData*>(contact->GetFixtureB()->GetBody()->GetUserData());
-	if (data && data->indicator == GUSANO_INDICATOR){
-		Gusano* gusanoB = static_cast<Gusano*>(data->pointer);
-		if (gusanoB->isInactive()){
-			//check if body B was gusano or projectile
-			UserData* other_data = static_cast<UserData*>(contact->GetFixtureA()->GetBody()->GetUserData());
-			if (other_data && (other_data->indicator == GUSANO_INDICATOR 
-				|| other_data->indicator == FRAGMENT_TYPE || other_data->indicator == SIMPLE_TYPE
-				|| other_data->indicator == REGRESIVE_TYPE)){
-				gusanoB->cancelMovement();
 			}
 		}
 	}

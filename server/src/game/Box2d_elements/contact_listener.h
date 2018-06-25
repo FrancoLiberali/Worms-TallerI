@@ -8,6 +8,37 @@
 #define __CONTACT_LISTENER_H__
 
 class ContactListener : public b2ContactListener{
+	private:
+		// Cheque si el dataA corresponde a un delimiter
+		// y si el dataB corresponde a un proyectil o a un gusano
+		// es destruido.
+		void checkDelimiter(UserData* dataA, UserData* dataB);
+		
+		// Chequea si el fixture_data corresponde a un foot sensor.
+		// De ese asi, accede al gusano duenio de ese foot sensor
+		// y si el angulo del otro objeto other_angle
+		// se encuentra entre dos valores establecidos
+		// si el type es BEGIN le avisa que comenzo un contacto de pie
+		// de lo contario, avisa que termino un contacto de pie.
+		void checkFootSensor(b2Fixture* fixture, void* fixture_data, float other_angle, int type);
+		
+		// Chequea si el fixture_data corresponde a un head sensor.
+		// De ese asi, accede al gusano duenio de ese head sensor
+		// y si el angulo del otro objeto other_angle
+		// se encuentra entre dos valores establecidos
+		// si el type es BEGIN le avisa que comenzo un contacto de cabeza
+		// de lo contario, avisa que termino un contacto de cabeza.
+		void checkHeadSensor(b2Fixture* fixture, void* fixture_data, int type);
+		
+		// Chequea si el dataA es un proyetil
+		// y si el dataB no es un delimitador, lo hace explotar.
+		void checkProjectile(UserData* dataA, UserData* dataB);
+		
+		// Chequea si el dataA es un gusano inactivo,
+		// y si el dataB es un gusano o un proyectil
+		// cancela todas las fuerzas que este sufriendo
+		// el gusano inactivo.
+		void checkGusano(UserData* dataA, UserData* dataB);
 	public:
 		//Clase que funciona de callback cuando sucede algun
 		// evento en el que el contacto entre dos objetos 
