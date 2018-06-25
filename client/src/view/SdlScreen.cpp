@@ -56,7 +56,6 @@ SDL_Window* SdlScreen::getWindow(){
 	return m_pWindow;
 }
 
-
 int SdlScreen::getWidth(){
     return width;
 }

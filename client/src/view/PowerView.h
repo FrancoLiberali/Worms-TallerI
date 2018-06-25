@@ -5,6 +5,11 @@
 #include "SdlScreen.h"
 #include "TextView.h"
 
+/*
+* @Class PowerView
+* Vista de la barra de poder al usar un arma que 
+* pueda variar su potencia.
+*/
 class PowerView{
 private:
 	TextView label;

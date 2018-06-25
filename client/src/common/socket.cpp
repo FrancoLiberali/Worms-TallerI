@@ -5,7 +5,7 @@
 #include <netdb.h>
 #include <unistd.h>
 #include <cstring>
-#include "socket_error.h"
+#include "../exception/socket_error.h"
 #include "socket.h"
 
 #define NO_CREATED -1

@@ -12,8 +12,8 @@ class ClientCommand;
 
 /**
 * @class ClientCommmandSender
-* Envia (ejecuta) todos los comandos al server, desencola de la cola de comandos
-* previamente los comandos fueron encolados por GameControllerProxy
+* Envia (ejecuta) todos los comandos al server, desencola de la cola de comandos.
+* Previamente los comandos fueron encolados por GameControllerProxy. Corre en un hilo propio
 */
 class ClientCommandSender : public Thread {
 private:
@@ -27,7 +27,6 @@ public:
 	virtual void run() override;
 	void stop();
 	bool isClosed() const;	
-	void clean();
 };
 
 #endif

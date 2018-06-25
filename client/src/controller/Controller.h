@@ -20,7 +20,11 @@ public:
     Controller(Model& model, mainView& view);
     //Maneja todos los eventos del cliente
     void handle(SDL_Event& e);
+    
+    //valida el estado del mouse. Para saber si hay que mover la camara
     void checkMouseState(SDL_Event& e, EventHandler& eventHandler);
+
+    //
     bool isPlaying();
 };
 

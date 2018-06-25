@@ -8,7 +8,7 @@ class ClientCommand;
 
 /**
 * @class GameControllerProxy
-* Encola los comandos para enviar al server
+* Encola los comandos para enviar al server, usa una cola bloqueante.
 * Los comandos fueron detectados por el Controller
 */
 class GameControllerProxy{

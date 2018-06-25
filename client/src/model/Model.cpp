@@ -89,8 +89,6 @@ void Model::setComunnication(ClientCommandSender* sender, ClientEventReceiver* r
     this->receiver = receiver;
 }
 void Model::closeComunnication(){
-    sender->clean();
-    receiver->clean();
 }
 
 

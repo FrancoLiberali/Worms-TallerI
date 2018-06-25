@@ -6,6 +6,12 @@
 #include "../Camera.h"
 #include "../../sound/SoundManager.h"
 
+/**
+* @class BulletView
+* clase abstracta que representa a la vista del misil de un arma.
+* Toda nueva vista de un misil debe heredar de esta clase.
+*/
+
 class BulletView {
 protected:
     int id;

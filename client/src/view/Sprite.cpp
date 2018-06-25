@@ -54,3 +54,13 @@ bool Sprite::isLastFrame(){
 bool Sprite::isInit(){
 	return this->currentRow == initFrame;
 }
+
+std::string Sprite::getImageId() {return this->imageId;}
+
+int Sprite::getWidth() {return this->width;}
+
+int Sprite::getHeight() {return this->height;}
+
+int Sprite::getRows() {return this->rows;}
+
+int Sprite::getCurrentRow() {return this->currentRow;}

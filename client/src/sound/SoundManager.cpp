@@ -1,5 +1,5 @@
 #include "SoundManager.h"
-#include "../view/GameException.h"
+#include "../exception/GameException.h"
 #include <string>
 
 void SoundManager::init(){
@@ -10,15 +10,21 @@ void SoundManager::init(){
 
 void SoundManager::loadSound(SoundId id, std::string path){
     Mix_Chunk* sound = Mix_LoadWAV(path.c_str());
-    if (!sound)
-        throw GameException("No se encontro el archivo " + path);
+    if (!sound){
+        std::string msg = "No se encontro el archivo ";
+        msg += path;
+        throw GameException(msg.c_str());
+    }
     this->sounds.emplace(id, sound);
 }
 
 void SoundManager::loadMusic(MusicId id, std::string path){
     Mix_Music* music = Mix_LoadMUS(path.c_str());
-    if (!music)
-        throw GameException("No se encontro el archivo " + path);
+    if (!music){
+        std::string msg = "No se encontro el archivo ";
+        msg += path;
+        throw GameException(msg.c_str());
+    }
     this->musics.emplace(id, music);
 }
 

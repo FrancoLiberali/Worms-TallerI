@@ -30,8 +30,8 @@ public:
 
 	void init(SDL_Renderer * renderer);
 	void loadFont(Tfont font);
-	void wLetter(std::string idFont,int x, int y, char lett,SDL_Color color);
-	void write(Tfont fuente,int x, int y, std::string w,SDL_Color color);
+	void wLetter(std::string idFont,int x, int y, char lett,SDL_Color color, int factor = 1);
+	void write(Tfont fuente,int x, int y, std::string w,SDL_Color color, int factor = 1);
 	void write(SDL_Texture* texture, std::string idfont, int x, int y, 
 		std::string text, SDL_Color color);
 };

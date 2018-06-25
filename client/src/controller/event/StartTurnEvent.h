@@ -3,14 +3,15 @@
 
 #include "Event.h"
 
+/*@ class: Event
+* Evento de comienzo de turno.
+*/
 class StartTurnEvent : public Event {
 private:
 	int playerId;
     int idWorm;
-    Model& model;
-    mainView& view;
 public:
-	StartTurnEvent(int idPlayer, int idWorm, Model& model, mainView& view);
+	StartTurnEvent(int idPlayer, int idWorm);
 	void process();
 };
 

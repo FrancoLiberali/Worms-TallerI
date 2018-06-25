@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@ class: WormChangeAimEvent
+* Evento de cambio de mira en el arma del gusano.
+*/
 class WormChangeAimEvent : public Event {
 private:
 	int wormId;

@@ -48,7 +48,6 @@ public:
     void sendJoinRoom(int idRoom);
     void sendTeledirigido(int idPlayer, int x, int y);
     void sendLeaveRoom();
-
 };
 
 #endif

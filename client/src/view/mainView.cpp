@@ -60,14 +60,10 @@ void mainView::update(){
 		return;
 	screen.fill();
 	stage.draw();
-	//turnView.draw(screen.getRenderer(), 30 , 30);
-	panelInfo.draw(screen.getRenderer());
-	watch.draw();
 	while (!eventHandler.empty()){
 		Event*  event = eventHandler.get();
 		screen.fill();
 		stage.draw();
-		//turnView.draw(screen.getRenderer(), 10 , 10);
 		panelInfo.draw(screen.getRenderer());
 		watch.draw();
 		menuWeapon->draw(screen);
@@ -79,6 +75,8 @@ void mainView::update(){
 	}
 	updateWorms();
 	updateBullets();
+	panelInfo.draw(screen.getRenderer());
+	watch.draw();
 	menuWeapon->draw(screen);
 	screen.render();
 }
@@ -149,24 +147,10 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 }
 
 void mainView::showWinner(){
-	/*endGame = true;
-	menuWeapon->actionMenu();
-	screen.fill();
-	screen.clear();
-	TextureManager::Instance().draw("win", 0 , 0, 0, screen.getRenderer());
-	camera.focusCenterWindow();
-	screen.render();*/
 }
 
 void mainView::showLosser(std::string name){
 	printf("Alguien perdio\n");
-	/*endGame = true;
-	menuWeapon->actionMenu();
-	screen.clear();
-	screen.fill();
-	TextureManager::Instance().draw("lose", 0, 0, 0, screen.getRenderer());
-	camera.focusCenterWindow();
-	screen.render();*/
 }
 
 Camera& mainView::getCamera(){

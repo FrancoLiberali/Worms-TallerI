@@ -179,8 +179,8 @@ void Boot::loadSounds(){
 
 void Boot::loadFonts(){
 	try{
-		FontManager::Instance().openFont("arialbd", _INSTALL_PATH_ "/resource/font/arialbd.ttf", 14);
-		FontManager::Instance().openFont("reloj", _INSTALL_PATH_ "/resource/font/reloj.ttf", 25);
+		FontManager::Instance().openFont("arialbd", _INSTALL_PATH_ "/resource/font/arialbd.ttf", 12);
+		FontManager::Instance().openFont("reloj", _INSTALL_PATH_ "/resource/font/reloj.ttf", 11);
 	} catch (SdlException& e){
 		std::cout << e.what() << std::endl;	
 	}

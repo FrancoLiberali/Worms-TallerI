@@ -96,7 +96,8 @@ void GameClient::run(){
 			extra = -to_sleep;
 		}
 	}
-	preGame.showResult();
+	if (controller.isPlaying())
+		preGame.showResult();
 	printf("Se cierra todo\n");
 	commandsQueue.push(nullptr);//se cierra al  encolar nullpttr
 	eventReceiver.stop();

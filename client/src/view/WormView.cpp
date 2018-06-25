@@ -75,7 +75,9 @@ void WormView::setPos(int x, int y){
 
 void WormView::setPlayerName(std::string player){
 	SDL_Color black = {255,255,255};
-	labelUsuario.setText(player, black);
+	//labelUsuario.setText(player, black);
+	playerName = player;
+	//TextManager::Instance().write(usuarioTexture, "reloj", this->x, this->y, player, getColor());
 }
 
 
@@ -174,8 +176,11 @@ void WormView::draw(int idPlayer){
 									currentSprite->getCurrentRow(),
 									0, screen->getRenderer(),false,flip);
 	 
-	if (this->selected)
-		labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
+	if (this->selected){
+		//labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
+		TextManager::Instance().write(usuarioTexture, "reloj", this->getXCenter()-camera.getX(), 
+		 this->getYCenter()-camera.getY()- 10, playerName, getColor(idOwner));
+	}
 
 	aim.draw();
 	power.draw();
@@ -186,6 +191,7 @@ void WormView::draw(int idPlayer){
 	rect.h = 5;
 	SDL_Color color = getColor(idOwner);
 	TextureManager::Instance().drawFillRect(screen->getRenderer(),rect, color);
+
 }
 
 void WormView::selectWeapon(WeaponId idWapon){
@@ -238,6 +244,7 @@ int WormView::getYCenter()
 void WormView::changeLife(int newLife){
 	widhtLifeCurrent = newLife * widhtLife100 /100;
 	currentLife = newLife;
+	life.setText(std::to_string(newLife),getColor(idOwner));
 }
 
 void WormView::changeAimAngle(int delta){

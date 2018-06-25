@@ -5,22 +5,31 @@
 #include <iostream>
 #include <map>
 #include <string>
+
+/*
+* @class FontManager
+* Usa el patrón singletón, manejador de fuentes, carga las fuentes.
+*/
 class FontManager
 {
 private:
-	std::map<std::string, TTF_Font *> map;
-	SDL_Renderer * renderer;
+	std::map<std::string, TTF_Font*> fonts;
+	SDL_Renderer* renderer;
 public:
 
-	static FontManager & Instance(){
+	static FontManager& Instance(){
 			static FontManager instance;
 			return instance;
 	}
 
-	void init(SDL_Renderer * renderer);
+	void init(SDL_Renderer* renderer);
+
 	void openFont(std::string id, std::string path, int size);
+
 	TTF_Font* getFont(std::string& fontId);
-	SDL_Renderer * getRenderer() {return this->renderer;}
+
+	SDL_Renderer* getRenderer();
+	
 	void closeFonts();
 };
 

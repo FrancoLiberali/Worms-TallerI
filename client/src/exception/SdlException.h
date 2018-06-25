@@ -3,6 +3,10 @@
 #include <string>
 #include <exception>
 
+/*
+* @Class SdlException
+* Excepción lanzada ante cualquier error producido en el manejo de la libreria SDL.
+*/
 class SdlException : public std::exception {
 public:
     SdlException(const char* description, const char* sdlError);

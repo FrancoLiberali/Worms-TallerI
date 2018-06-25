@@ -21,7 +21,10 @@
 
 class EventHandler;
 
-/*Contiene todo referante al dibujado de los objetos*/
+/*
+* @class mainView
+* clase principal de la vista del cliente, contiene referencia a todas las vistas.
+*/
 class mainView {
 private:
 	Escenario stage;
@@ -31,7 +34,6 @@ private:
 	EventHandler& eventHandler;
 	MenuWeaponView* menuWeapon;
 
-	//TextView turnView;
 	PanelInfo panelInfo;
 	WatchView watch;
 

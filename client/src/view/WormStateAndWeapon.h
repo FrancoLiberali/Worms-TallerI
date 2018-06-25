@@ -1,5 +1,5 @@
-#ifndef _WORM_STATE_H
-#define _WORM_STATE_H
+#ifndef _WORM_STATE_AND_WEAPON_H
+#define _WORM_STATE_AND_WEAPON_H
 
 enum WormState {
 	STATIC,

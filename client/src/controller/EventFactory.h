@@ -7,6 +7,10 @@
 #include "../model/Model.h"
 #include <string>
 
+/*@class: EventFactory
+* Usa el patrón factory para generar los eventos, cada evento se corresponde con un mensaje
+* del servidor. Los eventos son encolados en el EventHandler.
+*/
 class EventFactory{
 public:
 	static Event* createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view);

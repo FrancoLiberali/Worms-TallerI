@@ -46,7 +46,7 @@ bool ClientEventReceiver::isPreGameEvent(int t){
 			|| t == A_PLAYER_LOSE || t == A_PLAYER_WIN;
 }
 
-//Manejo de eventos que son previos al juego principal
+//Manejo de eventos que son previos o después de juego principal
 //nos son encolados en la cola de eventos
 void ClientEventReceiver::process(int t){
 	std::cout << "Se recibio " << t << std::endl;
@@ -114,8 +114,10 @@ void ClientEventReceiver::process(int t){
 }
 
 void ClientEventReceiver::stop(){
-	printf("Se detuvo el reciver\n");
+	if (closed)
+		return;
 	closed = true;
+	printf("Se detuvo el reciver\n");
 	proxy.close();
 }
 

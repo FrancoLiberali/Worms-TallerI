@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@class: CreateStageEvent
+* Evento que responde a la creación del escenario del server
+*/
 class CreateStageEvent : public Event {
 private:
 	int widht;

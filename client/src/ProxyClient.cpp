@@ -1,6 +1,6 @@
 #include "ProxyClient.h"
 #include <arpa/inet.h>
-#include "common/socket_error.h"
+#include "exception/socket_error.h"
 #include <iostream>
 #include <cstring>
 

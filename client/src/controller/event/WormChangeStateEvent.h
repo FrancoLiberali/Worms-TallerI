@@ -2,8 +2,11 @@
 #define _WORM_CHANGE_STATE_EVENT
 
 #include "Event.h"
-#include "../../view/WormState.h"
+#include "../../view/WormStateAndWeapon.h"
 
+/*@class: WormChangeStateEvent
+* Evento de cambio de estado de un gusano. El estado es un estado válido.
+*/
 class WormChangeStateEvent : public Event {
 private:
 	int wormID;

@@ -50,5 +50,4 @@ void GameControllerProxy::leaveRoom(const int idJugador){
   queue.push(new LeaveRoomCommand(idJugador));
 }
 
-
 GameControllerProxy::~GameControllerProxy(){}

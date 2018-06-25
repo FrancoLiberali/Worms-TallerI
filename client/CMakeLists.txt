@@ -37,6 +37,10 @@ add_executable(worms-client
 	src/mapwindow.cpp
 	src/mainwindow.cpp
 	src/resultwindow.cpp
+	src/ProxyClient.cpp
+	src/GameClient.cpp
+	src/PreGameManager.cpp
+	src/Room.cpp
 
 	src/controller/ClientCommandSender.cpp
 	src/controller/ClientEventReceiver.cpp
@@ -69,11 +73,6 @@ add_executable(worms-client
 
 	src/common/Thread.cpp
 	src/common/socket.cpp
-	src/common/socket_error.cpp
-	src/ProxyClient.cpp
-	src/GameClient.cpp
-	src/PreGameManager.cpp
-	src/Room.cpp
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp
@@ -88,11 +87,9 @@ add_executable(worms-client
 	src/model/command/LeaveRoomCommand.cpp
 
 	src/view/mainView.cpp
-	src/view/SdlException.cpp
 	src/view/Escenario.cpp
 	src/view/WormView.cpp
 	src/view/Boot.cpp
-	src/view/SdlException.cpp
 	src/view/SdlScreen.cpp
 	src/view/Sprite.cpp
 	src/view/SpriteConfigurator.cpp
@@ -120,6 +117,10 @@ add_executable(worms-client
 	src/view/PowerView.cpp
 	src/view/PanelInfo.cpp
 	src/view/WatchView.cpp
+	
+	src/exception/GameException.cpp
+	src/exception/SdlException.cpp
+	src/exception/socket_error.cpp
 
 	src/sound/SoundManager.cpp
 	${UIS_HEADERS}

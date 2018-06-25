@@ -3,6 +3,11 @@
 
 #include "ClientCommand.h"
 
+/**
+* @class ChargePowerCommand
+* Comando de carga de arma.
+*/
+
 class ChargePowerCommand : public ClientCommand{
 private:
     int idJugador;

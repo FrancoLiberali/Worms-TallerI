@@ -45,7 +45,7 @@ void TextManager::loadFont(Tfont fuente){
 	this->font_map[idFont] = font;
 }
 
-void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color color){
+void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color color, int factor){
 	SDL_Rect destino, origen; 
 	int fila, columna;
 	int letrasPorFila, letrasPorColumna;
@@ -63,10 +63,10 @@ void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color c
 	origen.w = font.anchoLetra;
 	origen.h = font.altoLetra;
 
-    destino.x = x;
+    destino.x = x*factor;
     destino.y = y;
-    destino.w = origen.w;
-    destino.h = origen.h;
+    destino.w = origen.w*factor;
+    destino.h = origen.h*factor;
 
 	try {
 		SDL_RenderCopy(this->renderer,
@@ -79,7 +79,7 @@ void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color c
 	
 }
 
-void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color){
+void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color, int factor){
 	int i;
 	std::string idFont;
 	if (fuente == Arial16){
@@ -94,7 +94,7 @@ void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color
 						x + (i*(this->font.anchoLetra - 7)) ,
 						y,
 						w[i],
-						color);
+						color, factor);
 	}
 }
 

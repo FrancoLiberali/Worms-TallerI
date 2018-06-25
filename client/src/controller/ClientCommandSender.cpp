@@ -25,14 +25,12 @@ void ClientCommandSender::run(){
 }
 
 void ClientCommandSender::stop(){
+	if (closed)
+		return;
 	closed = true;
 	proxy.close();
 }
 
 bool ClientCommandSender::isClosed() const{
 	return closed;
-}
-
-void ClientCommandSender::clean(){
-	
 }

@@ -3,6 +3,9 @@
 
 #include "Event.h"
 
+/*@class: CreateWormEvent
+* Evento que responde a la creación de un worm del server
+*/
 class CreateWormEvent : public Event {
 private:
     int idWorm;
@@ -11,11 +14,8 @@ private:
     int posy;
     int dir;
     int angle;
-    Model& model;
-    mainView& view;
 public:
-	CreateWormEvent(int idWorm, int idOwner, int x, int y, int dir ,
-                     int angle, Model&model, mainView& view);
+	CreateWormEvent(int idWorm, int idOwner, int x, int y, int dir , int angle);
 	void process();
 };
 

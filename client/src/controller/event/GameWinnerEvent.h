@@ -6,10 +6,8 @@
 class GameWinnerEvent : public Event {
 private:
 	int idPlayer;
-    mainView& view;
-    Model& model;
 public:
-	GameWinnerEvent(int idPlayer, Model& model, mainView& view);
+	GameWinnerEvent(int idPlayer);
 	void process();
 };
 

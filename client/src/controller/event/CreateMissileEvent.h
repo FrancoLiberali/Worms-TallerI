@@ -2,8 +2,11 @@
 #define _CREATE_MISSILE_EVENT_H
 
 #include "Event.h"
-#include "../../view/WormState.h"
+#include "../../view/WormStateAndWeapon.h"
 
+/*@class: CreateMissileEvent
+* Evento que responde a la creación de un misil del server
+*/
 class CreateMissileEvent : public Event {
 private:
     int id;
@@ -12,9 +15,8 @@ private:
 	int posx;
     int posy;
     int angle;
-    mainView& view;
 public:
-	CreateMissileEvent(int id, int idWeapon, int dir, int x, int y, int angle, mainView& view);
+	CreateMissileEvent(int id, int idWeapon, int dir, int x, int y, int angle);
 	void process();
 };
 
