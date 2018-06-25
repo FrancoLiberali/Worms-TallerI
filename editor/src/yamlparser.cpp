@@ -1,5 +1,6 @@
 #include "yamlparser.h"
 #include <QString>
+#include "../config.h"
 
 YAMLParser::YAMLParser() {}
 
