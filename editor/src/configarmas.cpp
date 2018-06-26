@@ -1,6 +1,8 @@
 #include "configarmas.h"
 #include "ui_configarmas.h"
 #include "yamlparser.h"
+#include "../config.h"
+
 
 ConfigArmas::ConfigArmas(Registro &registro, QWidget *parent) :
     ui(new Ui::ConfigArmas), registro(registro), QDialog(parent)
@@ -9,7 +11,7 @@ ConfigArmas::ConfigArmas(Registro &registro, QWidget *parent) :
     ui->setupUi(this);
 
     YAMLParser parser;
-    parser.cargarConfig(registro);
+    parser.cargarArchivo(_INSTALL_PATH_ "/recursos/default_armo.yaml", registro);
 
     foreach(std::string arma, registro.get_armas()) {
         ui->comboBox->addItem(QString::fromStdString(arma));

@@ -30,6 +30,10 @@ bool Gusano::esta_eliminado()
     return eliminado;
 }
 
+void Gusano::set_pos(QPointF pos) {
+    setPos(pos);
+}
+
 YAML::Emitter& operator << (YAML::Emitter& out, const Gusano &obj)
 {
     QPair<float, float> centro = obj.conversor.a_metros(obj, 0);

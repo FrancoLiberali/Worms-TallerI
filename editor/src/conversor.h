@@ -21,13 +21,15 @@ public:
     // Convierte un angulo de radianes a sexagesimal.
     // Recibe el angulo en radianes.
     // Devuelve el angulo en sexagesimal.
-    //float a_sexagesimal(float angulo) const;
+    int a_sexagesimal(float angulo) const;
     // Convierte a pixeles la posicion del centro de un objeto.
     // Recibe la posicion en metros y el angulo a cual fue rotado.
     // Devuelve un par, donde se encuentra la posicion x e y de la esquina
     // superior izquierda.
-    //QPointF a_pixeles(QPair<float,float> pos) const;
+    QPointF a_pixeles(const QGraphicsPixmapItem &obj, float x_centro, float y_centro,  \
+        float angulo) const;
 
+    float metros_a_pixel(float metro) const;
     // Convierte un pixel a metros segun la escala;
     float pixel_a_metros(float pixel) const; 
 };

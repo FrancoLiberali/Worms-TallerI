@@ -41,7 +41,7 @@ public:
     // Setea la vida de los gusanos.
     void set_vida_gusanos(int vida);
     // Setea el nombre del fondo de pantalla.
-    void set_fondo(QString& nombre);
+    void set_fondo(const QString& nombre);
     // Obtiene un arma.
     Arma* get_arma(const std::string& nombre) const;
     // Obtiene una lista con los nombres de las aramas.
@@ -52,6 +52,9 @@ public:
     std::vector<std::string> get_armas_validas() const;
     // Setea el tamanio de mapa (en pixeles).
     void set_tam_mapa(float ancho, float alto);
+    void clear();
+    // Obtiene todos los objetos del mapa.
+    void get_items(std::vector<QGraphicsPixmapItem*>& v) const;
     // Escribe obj sobre out en formato YAML.
     friend YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj);
     // Destruye Registro.

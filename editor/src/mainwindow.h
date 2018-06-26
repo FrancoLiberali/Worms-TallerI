@@ -7,6 +7,11 @@
 #include "configarmas.h"
 #include "configgusanos.h"
 
+enum pages : int {
+    MENU,
+    EDITOR
+};
+
 namespace Ui {
 class MainWindow;
 }
@@ -44,9 +49,9 @@ private slots:
     void on_actionsave_as_triggered();
 
     void on_pushButton_5_clicked();
-
+    void on_actionOpen_triggered();
     void on_actionSalir_triggered();
-
+    void borrarTodo();
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;

@@ -18,6 +18,19 @@ QPair<float,float> Conversor::a_metros(const QGraphicsPixmapItem &obj, float ang
     return QPair<float,float>(x_centro, y_centro);
 }
 
+
+QPointF Conversor::a_pixeles(const QGraphicsPixmapItem &obj, float x_centro, float y_centro,  \
+    float angulo) const
+{
+    float x, y;
+    float alto = obj.pixmap().height();
+    float ancho = obj.pixmap().width();
+    float radio = ancho/2;
+    x = metros_a_pixel(x_centro) - alto/2 * qSin(angulo) - radio * qCos(angulo);
+    y = metros_a_pixel(y_centro) - alto/2 * qCos(angulo) + radio * qSin(angulo);
+    return QPointF(x, y);
+}
+
 double Conversor::a_radianes(float angulo) const
 {
     return qDegreesToRadians(angulo);
@@ -26,4 +39,14 @@ double Conversor::a_radianes(float angulo) const
 float Conversor::pixel_a_metros(float pixel) const 
 {
     return pixel / ESCALA;
+}
+
+float Conversor::metros_a_pixel(float metro) const
+{
+    return  metro * ESCALA;
+}
+
+int Conversor::a_sexagesimal(float angulo) const
+{
+    return (angulo * 180) / (atan(1) * 4);
 }

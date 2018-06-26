@@ -20,6 +20,8 @@ public:
     // Operador << YAML.
     // Escribe gusano sobre out en formato YAML.
     friend YAML::Emitter& operator << (YAML::Emitter& out, const Gusano& obj);
+    // Setea la posicion de un gusano.
+    void set_pos(QPointF pos);
     // Destruye gusano.
     ~Gusano();
 private:

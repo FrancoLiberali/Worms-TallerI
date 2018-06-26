@@ -18,7 +18,10 @@ void Registro::agregar_viga(Viga* viga)
 
 void Registro::agregar_arma(std::string& id, Arma* arma)
 {
-    this->armas[id] = arma;
+  if (this->armas.count(id) == 1) {
+    delete this->armas.at(id);
+  }
+  this->armas[id] = arma;
 }
 
 void Registro::agregar_gusano(Gusano* gusano)
@@ -85,9 +88,24 @@ void Registro::set_vida_gusanos(int vida)
     this->vida_gusanos = vida;
 }
 
-void Registro::set_fondo(QString& nombre)
+void Registro::set_fondo(const QString& nombre)
 {
     this->nombre_fondo = nombre;
+}
+
+void Registro::get_items(std::vector<QGraphicsPixmapItem*>& v) const
+{
+  foreach (Gusano* item, this->gusanos) {
+    v.push_back(item);
+  }
+  foreach (Viga* item, this->vigas) {
+    v.push_back(item);
+  }
+}
+
+void Registro::clear() {
+    this->gusanos.clear();
+    this->vigas.clear();
 }
 
 YAML::Emitter& operator << (YAML::Emitter& out, const Registro& obj)

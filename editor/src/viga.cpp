@@ -12,8 +12,13 @@ bool Viga::esta_eliminado()
     return this->eliminado;
 }
 
+void Viga::set_pos(QPointF pos) {
+	setPos(pos);
+}
+
 YAML::Emitter& operator<<(YAML::Emitter& out, const Viga& obj)
 {
     obj.escribir(out);
     return out;
 }
+

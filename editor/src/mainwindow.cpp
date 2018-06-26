@@ -115,6 +115,36 @@ void MainWindow::on_actionArmas_triggered()
     armas->exec();
 }
 
+
+void MainWindow::on_actionSalir_triggered()
+{   
+    if(guardado) {
+        this->close();
+        return;
+    }
+
+    QMessageBox msgBox(this);
+    msgBox.setText("El mapa fue modificado.");
+    msgBox.setInformativeText("Desea guardal los cambios?");
+    msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
+    msgBox.setDefaultButton(QMessageBox::Save);
+    int ret = msgBox.exec();
+    
+    switch (ret) {
+        case QMessageBox::Save:
+            on_actionsave_as_triggered();
+            break;
+        case QMessageBox::Discard:
+            this->close();
+            break;
+        case QMessageBox::Cancel:
+            msgBox.close();
+            break;
+         default:
+            break;
+    }
+}
+
 void MainWindow::on_pushButton_6_clicked()
 {
     foreach(QGraphicsItem* item, scene->selectedItems()) {
@@ -161,40 +191,70 @@ void MainWindow::on_actionsave_as_triggered()
 
     this->guardado = true;
 
-    QMessageBox msgBox;
+    QMessageBox msgBox(this);
     msgBox.setText("El mapa fue guardado correctamente.");
     msgBox.exec();
 }
 
 
-void MainWindow::on_actionSalir_triggered()
-{   
-    if(guardado) {
-		this->close();
-		return;
-	}
 
-    QMessageBox msgBox;
-    msgBox.setText("El mapa fue modificado.");
-    msgBox.setInformativeText("Desea guardal los cambios?");
+void MainWindow::on_actionOpen_triggered()
+{   
+    QMessageBox msgBox(this);
+    msgBox.setText("Al abrir otro mapa perderas tus cambios.");
+    msgBox.setInformativeText("Desea guardar el mapa actual?");
     msgBox.setStandardButtons(QMessageBox::Save | QMessageBox::Discard | QMessageBox::Cancel);
     msgBox.setDefaultButton(QMessageBox::Save);
-    int ret = msgBox.exec();
+     
+    if (!guardado) {
+        int ret = msgBox.exec();
+        
+        switch (ret) {
+            case QMessageBox::Save:
+                on_actionsave_as_triggered();
+                break;
+            case QMessageBox::Discard:
+                msgBox.close();
+                break;
+            case QMessageBox::Cancel:
+                msgBox.close();
+                return;
+            }
+    }
+
+    // Archivo a abrir.
+    QString fileName = QFileDialog::getOpenFileName(this,
+            tr("Abrir Mapa"), 
+            _INSTALL_PATH_ "/maps",
+            tr("Address Book (*.yaml);;All Files (*)"));
+
+    if (fileName.isEmpty()) return;
+
+    // Eliminamos todos los objetos del mapa.
+    borrarTodo();
     
-    switch (ret) {
-        case QMessageBox::Save:
-            on_actionsave_as_triggered();
-            break;
-        case QMessageBox::Discard:
-            this->close();
-            break;
-        case QMessageBox::Cancel:
-            msgBox.close();
-            break;
-         default:
-            break;
+    // Leemos el archivo.
+    YAMLParser parser;
+    parser.cargarArchivo(fileName.toStdString().c_str(), this->registro);
+
+    // Agregamos los nuevos items del mapa.
+    std::vector<QGraphicsPixmapItem*> v;
+    registro.get_items(v);
+    foreach (auto item, v) {
+        scene->addItem(item);
     }
 }
+
+
+void MainWindow::borrarTodo() 
+{
+    foreach(QGraphicsItem* item, scene->items()) {
+        scene->removeItem(item);
+        delete item;
+    }
+    registro.clear();
+}
+
 
 MainWindow::~MainWindow()
 {

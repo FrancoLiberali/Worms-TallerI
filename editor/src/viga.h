@@ -9,6 +9,8 @@ class Viga : public QGraphicsPixmapItem
 public:
     // Crea una viga.
     Viga(int angulo);
+    // Sete la posicion de una viga.
+    void set_pos(QPointF pos);
     // Setea eliminado.
     void set_eliminado();
     // Decide si la viga fue eliminada, en caso de serlo
