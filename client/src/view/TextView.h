@@ -6,9 +6,9 @@
 #include <SDL2/SDL_image.h>
 #include <iostream>
 #include <string.h>
-#include "TextureManager.h"
-#include "FontManager.h"
-#include "TextManager.h"
+#include "../manager/TextureManager.h"
+#include "../manager/FontManager.h"
+#include "../manager/TextManager.h"
 
 
 class TextView{

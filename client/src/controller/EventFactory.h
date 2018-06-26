@@ -13,6 +13,6 @@
 */
 class EventFactory{
 public:
-	static Event* createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view);
+	static Event* createEvent(const EventType& type, ProxyClient& proxy);
 };
 #endif

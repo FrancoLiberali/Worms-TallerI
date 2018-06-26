@@ -1,6 +1,4 @@
 #include "DynamiteView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 DynamiteView::DynamiteView(int id, int dir, int posx, int posy, int angle, 

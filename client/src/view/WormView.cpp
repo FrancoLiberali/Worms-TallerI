@@ -1,5 +1,8 @@
 #include "WormView.h"
-#include "../sound/SoundManager.h"
+#include "../manager/SpriteConfigurator.h"
+#include "../manager/TextureManager.h"
+#include "../manager/TextManager.h"
+#include "../manager/SoundManager.h"
 
 #include <iostream>
 
@@ -74,14 +77,11 @@ void WormView::setPos(int x, int y){
 }
 
 void WormView::setPlayerName(std::string player){
-	SDL_Color black = {255,255,255};
-	//labelUsuario.setText(player, black);
 	playerName = player;
-	//TextManager::Instance().write(usuarioTexture, "reloj", this->x, this->y, player, getColor());
 }
 
 
-void WormView::update(int idPlayer){
+void WormView::update(){
 	if (currentSprite == NULL) {
 		currentSprite = &this->sprites["static"];
 		aim.disable();
@@ -163,11 +163,11 @@ void WormView::update(int idPlayer){
 		alive = false;
 		currentSprite->update();
 	}
-	draw(idPlayer);
+	draw();
 }
 
 
-void WormView::draw(int idPlayer){
+void WormView::draw(){
 	TextureManager::Instance().drawFrame(currentSprite->getImageId(),
 									getXCenter()-camera.getX(),
 									getYCenter()-camera.getY(),
@@ -177,7 +177,6 @@ void WormView::draw(int idPlayer){
 									0, screen->getRenderer(),false,flip);
 	 
 	if (this->selected){
-		//labelUsuario.draw(screen->getRenderer(),this->getXCenter()-camera.getX(),  this->getYCenter()-camera.getY()- 15);
 		TextManager::Instance().write(usuarioTexture, "reloj", this->getX()-camera.getX()-10, 
 		 this->getY()-camera.getY()-50, playerName, getColor(idOwner));
 	}

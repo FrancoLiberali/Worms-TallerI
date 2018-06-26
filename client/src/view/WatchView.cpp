@@ -1,6 +1,6 @@
 #include "WatchView.h"
-#include "TextureManager.h"
-#include "TextManager.h"
+#include "../manager/TextureManager.h"
+#include "../manager/TextManager.h"
 
 WatchView::WatchView(SdlScreen& screen):seconds(INIT_TIME), screen(screen){
     title.setText("TIEMPO");

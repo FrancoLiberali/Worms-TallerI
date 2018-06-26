@@ -3,12 +3,11 @@
 #include "WormWeaponEvent.h"
 
 
-WormWeaponEvent::WormWeaponEvent(int wormId, int idWeapon)
-	:wormId(wormId){
+WormWeaponEvent::WormWeaponEvent(int idWeapon){
     weaponId = static_cast<WeaponId>(idWeapon);
 }
 	
 void WormWeaponEvent::process(){
-	WormView* wormView = view->getWormView(wormId);
+	WormView* wormView = view->getWormView(model->getIdWormSelected());
 	wormView->selectWeapon(weaponId);
 }

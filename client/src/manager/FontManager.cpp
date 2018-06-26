@@ -1,6 +1,5 @@
 #include "FontManager.h"
 #include "../exception/SdlException.h"
-#include "../../config.h"
 
 void FontManager::init(SDL_Renderer * renderer){
 	this->renderer = renderer;

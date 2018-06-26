@@ -4,9 +4,6 @@
 #include "SdlScreen.h"
 #include "WormStateAndWeapon.h"
 #include "Sprite.h"
-#include "SpriteConfigurator.h"
-#include "TextureManager.h"
-#include "TextManager.h"
 #include "TextView.h"
 #include "AimView.h"
 #include "Camera.h"
@@ -43,29 +40,29 @@ private:
 	bool focus;
 
 	bool alive;
-	//TextView labelUsuario;
 	SDL_Texture* usuarioTexture;
 	int idOwner;
 	std::string playerName;
-
-	void draw(int idPlayerTurn);
+	//metodo privado de dibujado
+	void draw();
 	int getXCenter();
 	int getYCenter();
 public:
 	WormView(int idWorm, int idOwner, Camera& camera);
-	void setPlayerName(std::string player);
-	~WormView();
-	void selectWeapon(WeaponId idWapon);
 	void load(int x, int y, SdlScreen* window);
-	void setPos(int x, int y);
+	~WormView();
+	//metodo principal de toda vista
+	void update();
+
 	int getX();
 	int getY();
-	void update(int idPlayer);
-	void changeState(WormState newState);
-	void setDirection(int dir);
-	void setAngle(int angle);
+	bool isCurrWeapon(WeaponId id);
+
+	//metodos que modifican la vista del worm
+	void setPlayerName(std::string player);
 	void changeLife(int newLife);
 	void changeAimAngle(int delta);
+	void selectWeapon(WeaponId idWapon);
 	void onFocus();
 	void offFocus();
 	void select();
@@ -73,7 +70,10 @@ public:
 	void upatePower();
 	void useWeapon();
 	void useTelederigido();
-	bool isCurrWeapon(WeaponId id);
+	void changeState(WormState newState);
+	void setDirection(int dir);
+	void setAngle(int angle);
+	void setPos(int x, int y);
 };
 
 #endif

@@ -1,5 +1,4 @@
 #include "BulletView.h"
-#include "../TextureManager.h"
 
 BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen& screen, Camera& camera)
     :id(id), posx(posx), posy(posy), angle(angle), detonated(false), screen(screen), camera(camera){
@@ -7,7 +6,6 @@ BulletView::BulletView(int id, int dir, int posx, int posy, int angle, SdlScreen
     this->flip = (dir == 1)? SDL_FLIP_HORIZONTAL : SDL_FLIP_NONE;
     currentSprite =&this->spriteBullet; 
 }
-
 
 void BulletView::disableCamera(){
     this->isOnCamera = false;

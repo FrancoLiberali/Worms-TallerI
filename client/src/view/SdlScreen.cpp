@@ -5,11 +5,9 @@ SdlScreen::SdlScreen() {
 }
 
 SdlScreen::~SdlScreen(){
-    //SDL_DestroyTexture(this->mTexture);	
 	SDL_DestroyWindow(m_pWindow);
 	SDL_DestroyRenderer(renderer);
     IMG_Quit();
-	//TTF_Quit();
 	SDL_Quit();
 }
 
@@ -40,12 +38,8 @@ void SdlScreen::render(){
 }
 
 void SdlScreen::fill() {
- 	SDL_SetRenderDrawColor( renderer, 0x33,0x33,0x33,0xFF);
+ 	SDL_SetRenderDrawColor(renderer, 0x33,0x33,0x33,0xFF);
     clear();
-}
-void SdlScreen::setState(std::string string_state){
-    std::string newTitle = title + " - Estado: " + string_state;
-	SDL_SetWindowTitle(m_pWindow, newTitle.c_str());
 }
 
 SDL_Renderer* SdlScreen::getRenderer(){
@@ -69,12 +63,4 @@ int SdlScreen::getXCenter(){
 }
 int SdlScreen::getYCenter(){
 	return height/2;
-}
-
-void SdlScreen::restart(){
-	SDL_DestroyWindow(m_pWindow);
-	SDL_DestroyRenderer(renderer);
-    IMG_Quit();
-	//TTF_Quit();
-	SDL_Quit();
 }

@@ -13,7 +13,7 @@ class ProxyClient;
 /**
 * @class PreGameManager
 * Manejador de las ventanas antes de que inicie el juego principal
-* Hall principal y salas de espera
+* Hall principal y salas
 */
 
 class PreGameManager {

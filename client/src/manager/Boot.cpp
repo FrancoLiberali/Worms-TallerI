@@ -4,7 +4,7 @@
 #include "TextManager.h"
 #include "FontManager.h"
 #include "SpriteConfigurator.h"
-#include "../sound/SoundManager.h"
+#include "SoundManager.h"
 #include "../../config.h"
 #include "path.h"
 #include <iostream>

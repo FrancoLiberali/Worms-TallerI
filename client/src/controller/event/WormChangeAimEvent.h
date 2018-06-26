@@ -8,10 +8,9 @@
 */
 class WormChangeAimEvent : public Event {
 private:
-	int wormId;
     int delta;
 public:
-	WormChangeAimEvent(int wormId, int delta);
+	WormChangeAimEvent(int delta);
 	void process();
 };
 

@@ -15,8 +15,13 @@ void ClientCommandSender::run(){
 	while (!closed){
 		ClientCommand* cmd = queue.pop();
 		if (cmd != nullptr){
-			cmd->send(proxy);
-			delete cmd;
+			try {
+				cmd->send(proxy);
+				delete cmd;
+			} catch (SocketError& e){
+				std::cout << e.what() << std::endl;
+				this->stop();
+			}
 		}
 		else{
 			this->stop();

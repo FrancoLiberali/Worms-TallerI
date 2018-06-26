@@ -6,7 +6,7 @@
 #include "controller/Controller.h"
 #include "model/GameControllerProxy.h"
 #include "model/Model.h"
-#include "view/Boot.h"
+#include "manager/Boot.h"
 #include "view/mainView.h"
 #include "common/Queue.h"
 #include "PreGameManager.h"

@@ -22,7 +22,6 @@ public:
     int getX();
     int getY();
     void updateCenter(int x, int y);
-    void focusCenterWindow();
     void move(int x, int y);
     bool inLimits(int x, int y);
 };

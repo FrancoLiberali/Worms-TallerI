@@ -1,5 +1,5 @@
 #include "WormChangeStateEvent.h"
-#include "../../sound/SoundManager.h"
+#include "../../manager/SoundManager.h"
 #include <iostream>
 
 WormChangeStateEvent::WormChangeStateEvent(int id, int state)

@@ -2,7 +2,7 @@
 #define _BOOT_H
 
 #include <map>
-#include "SdlScreen.h"
+#include "../view/SdlScreen.h"
 /**
 * @class Boot
 * Inicializador de todos los recursas a usar
@@ -11,12 +11,16 @@
 class Boot {
 private:
     SdlScreen screen;
+    //carga los sprites e imagenes
     void loadSprites();
-    void loadImages();
+    //carga los iconos de las armas
     void loadMenuWeapon();
+    //carga todos los sonidos y musicas
     void loadSounds();
+    //carga todas las fuentes
     void loadFonts();
 public:
+    //Inicializador, carga todos los recursos
     void init();
     SdlScreen& getScreen();    
 };

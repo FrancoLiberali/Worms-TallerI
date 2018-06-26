@@ -1,7 +1,6 @@
 #include "mainView.h"
 
-#include "TextureManager.h"
-#include "../sound/SoundManager.h"
+#include "../manager/SoundManager.h"
 #include <iostream>
 
 mainView::mainView(EventHandler& eventHandler,  SdlScreen& screen, Camera& camera)
@@ -15,7 +14,7 @@ void mainView::init(){
 	menuWeapon = new MenuWeaponView(camera);
 	menuWeapon->buildWeapon();
 
-	list<WeaponId> allowW;
+	std::list<WeaponId> allowW;
 	//Armas permitidas
 	allowW.push_back(BAZOOKA);
 	allowW.push_back(R_GRENADE);
@@ -69,12 +68,10 @@ void mainView::update(){
 		menuWeapon->draw(screen);
 		event->process();
 		delete event;
-		updateWorms();
-		updateBullets();
+		updateItems();
 		screen.render();
 	}
-	updateWorms();
-	updateBullets();
+	updateItems();
 	panelInfo.draw(screen.getRenderer());
 	watch.draw();
 	menuWeapon->draw(screen);
@@ -89,16 +86,9 @@ BulletView* mainView::getBulletView(int id){
 	return bullets[id];
 }
 
-void mainView::setIdPlayer(int idPlayer){
-	this->idPlayer = idPlayer;
-}
-
-void mainView::updateWorms(){
+void mainView::updateItems(){
 	for (auto& it: this->worms)
-		it.second->update(idPlayer);
-}
-
-void mainView::updateBullets(){
+		it.second->update();
 	for (auto& it: this->bullets)
 		it.second->update();
 }
@@ -144,9 +134,6 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	}
 	worms[idWorm]->select();
 	worms[idWorm]->onFocus();
-}
-
-void mainView::showWinner(){
 }
 
 void mainView::showLosser(std::string name){

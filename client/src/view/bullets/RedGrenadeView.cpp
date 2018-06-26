@@ -1,6 +1,4 @@
 #include "RedGrenadeView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 RedGrenadeView::RedGrenadeView(int id, int dir, int posx, int posy, int angle, 

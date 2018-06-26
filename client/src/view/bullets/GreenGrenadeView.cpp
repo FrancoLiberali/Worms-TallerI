@@ -1,6 +1,4 @@
 #include "GreenGrenadeView.h"
-#include "../../sound/SoundManager.h"
-#include "../SpriteConfigurator.h"
 
 
 GreenGrenadeView::GreenGrenadeView(int id, int dir, int posx, int posy, int angle, 

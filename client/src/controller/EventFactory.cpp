@@ -23,7 +23,7 @@
 #include "event/WindChangedEvent.h"
 
 
-Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Model& model, mainView& view){
+Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy){
   switch (type) {
     case BACKGROUND_STAGE:{
       std::string name = proxy.receiveName();
@@ -101,12 +101,12 @@ Event* EventFactory::createEvent(const EventType& type, ProxyClient& proxy, Mode
     case W_CUR_WEAPON: {
       int idWeapon = proxy.receiveInt();
       //printf("cambiar de arma\n");
-      return new WormWeaponEvent(model.getIdWormSelected(), idWeapon);
+      return new WormWeaponEvent(idWeapon);
     }
     case W_CUR_AIM: {
       int curAimAngle = proxy.receiveInt(); //+1 -1
       //printf("cambio la mira\n");
-      return new WormChangeAimEvent(model.getIdWormSelected(), curAimAngle);
+      return new WormChangeAimEvent(curAimAngle);
     }
     case W_CHANGE_LIFE: {
       int idWorm = proxy.receiveInt();

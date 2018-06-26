@@ -1,8 +1,8 @@
 #include "ProxyClient.h"
 #include <arpa/inet.h>
-#include "exception/socket_error.h"
 #include <iostream>
 #include <cstring>
+#include "protocol.h"
 
 #define BYTE 1
 #define MAX_NAME_LEN 20
@@ -91,9 +91,6 @@ std::string ProxyClient::receiveName(){
 }
 
 void ProxyClient::sendName(std::string& name){
-    //std::cout<<"Send name "<< name<<std::endl;
-    //sendChar(0);
-    //sendInt(id);
     sendInt(name.length());
     socket.send_(name.data(), name.length());
 }

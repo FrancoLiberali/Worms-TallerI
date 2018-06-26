@@ -1,7 +1,7 @@
 #ifndef _POWER_VIEW_H_
 #define _POWER_VIEW_H_
 
-#include "TextureManager.h"
+#include "../manager/TextureManager.h"
 #include "SdlScreen.h"
 #include "TextView.h"
 

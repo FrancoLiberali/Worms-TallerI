@@ -12,7 +12,7 @@
 #include "FragmentView.h"
 
 #include <iostream>
-#include "../../sound/SoundManager.h"
+#include "../../manager/SoundManager.h"
 
 BulletView* BulletFactory::createBulletView(WeaponId idWeapon, int id, int dir, int posx, int posy,
      int angle, SdlScreen& screen, Camera& camera){
