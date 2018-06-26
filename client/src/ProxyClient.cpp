@@ -2,7 +2,6 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include <cstring>
-//#include "protocol.h"
 
 #define BYTE 1
 #define MAX_NAME_LEN 20

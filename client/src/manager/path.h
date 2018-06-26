@@ -93,6 +93,7 @@
 #define FIRE_SOUND "/resource/sounds/FIRE.WAV"
 #define HELLO_SOUND "/resource/sounds/HELLO.WAV"
 #define GRANADE_SOUND "/resource/sounds/GRENADE.WAV"
+#define WIND_SOUND "/resource/sounds/wind.wav"
 
 //FONTS
 #define ARIAL_FONT "/resource/font/arialbd.ttf"

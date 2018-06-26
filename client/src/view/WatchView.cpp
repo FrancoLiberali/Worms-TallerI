@@ -4,9 +4,8 @@
 
 WatchView::WatchView(SdlScreen& screen):seconds(INIT_TIME), screen(screen){
     title.setText("TIEMPO");
-  
-
 }
+
 WatchView::~WatchView(){
 }
 

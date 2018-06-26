@@ -1,6 +1,5 @@
 #include "AimView.h"
-#include <iostream>
-
+#include "../common/Util.h"
 #define RADIUS 50.0
 #define PI 3.14159265
 #define INIT 16
@@ -43,7 +42,7 @@ void AimView::draw(){
 
     SDL_Texture* aim  = TextureManager::Instance().getTexture("aim");
     int w, h;
-    SDL_QueryTexture(aim,NULL,NULL, &w, &h);
+    Util::getDimentionTexture(aim, &w, &h);
 
     int posx = centerX + (int)(cos(currAngle*PI/180.0)*RADIUS) - w/2;
     int posy = centerY + (int)(sin(currAngle*PI/180.0)*RADIUS) - h/2;

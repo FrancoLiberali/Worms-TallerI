@@ -17,3 +17,7 @@ SDL_Color Util::getColor(int id)
 		case 9: color = {0,255,204}; return color;
 	}
 }
+
+void Util::getDimentionTexture(SDL_Texture* texture, int* w, int* h){
+	SDL_QueryTexture(texture, NULL, NULL, w, h);
+}

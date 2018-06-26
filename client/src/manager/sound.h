@@ -18,6 +18,7 @@ enum SoundId {
     FIRE,
     HELLO,
     GRANADE,
+    WIND,
 };
 
 enum MusicId {

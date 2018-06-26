@@ -1,4 +1,5 @@
 #include "TextureManager.h"
+#include "../common/Util.h"
 
 #include <sstream>
 #include <iostream>
@@ -6,14 +7,10 @@
 TextureManager::TextureManager():screenHeight(0),screenWidth(0){}
 
 TextureManager::~TextureManager(){
-	//std::cout << "destructor del texture manager" << std::endl;
-
 	std::map<std::string, SDL_Texture*>::iterator iter;
 	for (iter = texture_map.begin(); iter!=texture_map.end(); ++iter)
 		SDL_DestroyTexture(iter->second);
 	texture_map.clear();
-	
-	//std::cout << "Se destuyeron las texturas" << std::endl;
 }
 
 void TextureManager::init(int w, int h){
@@ -48,8 +45,7 @@ void TextureManager::draw(std::string id, int x, int y, double angle, SDL_Render
 	try {
 		SDL_Texture * aTexture = getTexture(id);
 
-		SDL_QueryTexture(aTexture, NULL, NULL,
-		&srcRect.w, &srcRect.h);
+		Util::getDimentionTexture(aTexture, &srcRect.w, &srcRect.h);
 
 		srcRect.x = 0;
 		srcRect.y = 0;
@@ -99,7 +95,7 @@ void TextureManager::drawFrame(std::string id, int x, int y, double angle, int w
 
 void TextureManager::drawTexture(SDL_Texture* texture, int x, int y, SDL_Renderer* renderer ){
 	int w, h;
-	SDL_QueryTexture(texture, NULL, NULL, &w, &h);
+	Util::getDimentionTexture(texture, &w, &h);
 	SDL_Rect destRect;
 	destRect.h = h;
 	destRect.w = w;

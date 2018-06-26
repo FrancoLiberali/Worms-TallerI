@@ -5,8 +5,8 @@
 class ProxyClient;
 
 /**
-* @class ClientCommand
-* Clase abstracta que representa a los comandos que reconoce el server.
+* @interface ClientCommand
+* Interfaz que representa a los comandos que reconoce el server.
 */
 class ClientCommand {
 public:

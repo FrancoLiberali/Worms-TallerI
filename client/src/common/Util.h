@@ -7,6 +7,7 @@
 class Util{
 public:
     static SDL_Color getColor(int ud);
+    static void getDimentionTexture(SDL_Texture* texture, int* w, int* h);
 };
 
 #endif

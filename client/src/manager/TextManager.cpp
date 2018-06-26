@@ -1,8 +1,7 @@
 #include "TextManager.h"
 #include "../exception/GameException.h"
 
-#include <iostream>
-
+#include "../common/Util.h"
 void TextManager::init(SDL_Renderer * renderer){
 	this->renderer = renderer;
 }
@@ -114,7 +113,7 @@ void TextManager::write(SDL_Texture* texture, std::string& idfont, int x, int y,
 	
 	SDL_FreeSurface(surf);
 	int w, h;
-	SDL_QueryTexture(texture, NULL, NULL, &w, &h);
+	Util::getDimentionTexture(texture, &w, &h);
 	SDL_Rect destRect;
 	destRect.h = h;
 	destRect.w = w;
