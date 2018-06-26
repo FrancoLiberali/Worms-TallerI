@@ -59,7 +59,7 @@ public:
 	bool isCurrWeapon(WeaponId id);
 
 	//metodos que modifican la vista del worm
-	void setPlayerName(std::string player);
+	void setPlayerName(std::string& player);
 	void changeLife(int newLife);
 	void changeAimAngle(int delta);
 	void selectWeapon(WeaponId idWapon);

@@ -26,7 +26,7 @@ public:
     ~PreGameManager();
     bool showHall();
     bool showResult();
-    void addMap(std::string nameMap);
+    void addMap(std::string& nameMap);
     void addRoom(Room* room);
     void setResult(std::string result);
 };

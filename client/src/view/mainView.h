@@ -62,13 +62,13 @@ public:
 	Weapon* retrieveWeaponClicked(SDL_Point clickPoint);
 
 	//agregar elementos a la vista
-	void addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle);
+	void addWorm(int id, int idOwner, std::string& player, int x, int y, int dir, int angle);
 	void addViga(int x, int y, int angle);
     void addMissile(int id, WeaponId weaponId, int dir, int posx, int posy, int angle);
 
 	//mensajes que cambia la vista
-	std::string changeTurn(std::string namePlayer, int idWorm);
-	void showLosser(std::string name);
+	std::string changeTurn(std::string& namePlayer, int idWorm);
+	void showLosser(int idPlayer, std::string& name);
 	void WormShoot(int idWorm);
 	void createStage(int widht, int height);
 	void setBackground(std::string name);

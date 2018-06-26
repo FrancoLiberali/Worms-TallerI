@@ -3,6 +3,7 @@
 #include "../manager/TextureManager.h"
 #include "../manager/TextManager.h"
 #include "../manager/SoundManager.h"
+#include "../common/Util.h"
 
 #include <iostream>
 
@@ -20,22 +21,6 @@ WormView::WormView(int idWorm, int idOwner, Camera& camera)
 	this->focus = false;
 }
 
-
-/*optinizar esto*/
-SDL_Color getColor(int id){
-	switch (id){
-		case 0:{ SDL_Color color = {255,204,0}; return color;
-		}
-		case 1:{ SDL_Color color = {255,0,0}; return color;
-		}
-		case 2:{SDL_Color color = {0,0,255}; return color;
-		}
-		case 3:{ SDL_Color color = {0,255,0}; return color;
-		}
-		case 4:{SDL_Color color = {153,102,0}; return color;
-		}
-	}
-}
 
 void WormView::load(int x, int y, SdlScreen* screen){
 	this->setPos(x, y);
@@ -76,8 +61,13 @@ void WormView::setPos(int x, int y){
 		camera.updateCenter(this->getXCenter(), this->getYCenter());
 }
 
-void WormView::setPlayerName(std::string player){
+void WormView::setPlayerName(std::string& player){
 	playerName = player;
+	try{
+	usuarioTexture = TextManager::Instance().createText("reloj", playerName, Util::getColor(idOwner));
+	} catch (GameException& e){
+		std::cout << e.what() << std::endl;
+	}
 }
 
 
@@ -177,8 +167,8 @@ void WormView::draw(){
 									0, screen->getRenderer(),false,flip);
 	 
 	if (this->selected){
-		TextManager::Instance().write(usuarioTexture, "reloj", this->getX()-camera.getX()-10, 
-		 this->getY()-camera.getY()-50, playerName, getColor(idOwner));
+		TextureManager::Instance().drawTexture(usuarioTexture,this->getX()-camera.getX()-10, 
+			this->getY()-camera.getY()-50, screen->getRenderer());
 	}
 
 	aim.draw();
@@ -188,7 +178,7 @@ void WormView::draw(){
 	rect.y = this->getY()-camera.getY() - 20;
 	rect.w = this->widhtLifeCurrent;
 	rect.h = 5;
-	SDL_Color color = getColor(idOwner);
+	SDL_Color color = Util::getColor(idOwner);
 	life.draw(screen->getRenderer(),this->getX()-camera.getX()-10,  this->getY()-camera.getY()-35);
 	TextureManager::Instance().drawFillRect(screen->getRenderer(),rect, color);
 
@@ -203,6 +193,7 @@ void WormView::selectWeapon(WeaponId idWapon){
 
 
 WormView::~WormView(){
+	SDL_DestroyTexture(usuarioTexture);
 }
 
 void WormView::changeState(WormState newState){
@@ -244,7 +235,7 @@ int WormView::getYCenter()
 void WormView::changeLife(int newLife){
 	widhtLifeCurrent = newLife * widhtLife100 /100;
 	currentLife = newLife;
-	life.setText(std::to_string(newLife),getColor(idOwner));
+	life.setText(std::to_string(newLife),Util::getColor(idOwner));
 }
 
 void WormView::changeAimAngle(int delta){

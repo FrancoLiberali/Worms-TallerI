@@ -2,12 +2,27 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include <cstring>
-#include "protocol.h"
+//#include "protocol.h"
 
 #define BYTE 1
 #define MAX_NAME_LEN 20
-
 #define ESCALA (140/6)
+
+enum MSG_PROTOCOL{
+    MAP_AND_PLAYERS = 1,
+    MOVE_WORM,
+    DIRECT_JUMP,
+    BACK_JUMP,
+    WEAPON_SELECT,
+    CHANGE_AIM,
+    COUNTDOWN,
+    CHARGE_POWER,
+    WORM_SHOOT,
+    LEAVE_ROOM = 11,
+    JOIN_ROOM,
+    CREATE_ROOM,
+    TELEDIRIGIDO,
+};
 
 ProxyClient::ProxyClient(Socket socket): socket(std::move(socket)), open(true){
 }
@@ -28,7 +43,6 @@ void ProxyClient::close(){
     if (!open)
         return;
     this->socket.shutdown_();
-    printf("Cerro el proxy\n");
     open = false;
 }
 
@@ -49,13 +63,11 @@ int ProxyClient::receiveInt(){
 
 int ProxyClient::receivePosY(){
     int pos_mm = receiveInt();
-    //printf("Posy: %i\n", pos_mm);
     return (-pos_mm*ESCALA/1000);
 }
 
 int ProxyClient::receivePosX(){
     int pos_mm = receiveInt();
-    //printf("Posx: %i\n", pos_mm);
     return (pos_mm*ESCALA/1000);
 }
 
@@ -85,7 +97,6 @@ std::string ProxyClient::receiveName(){
     char buffer[MAX_NAME_LEN];
     memset(buffer, 0, MAX_NAME_LEN);
     int size = receiveInt();
-    //std::cout << "SIZE NAME " << size <<std::endl;
     socket.receive_(buffer, size);
     return std::string((char*)buffer);
 }
@@ -96,92 +107,80 @@ void ProxyClient::sendName(std::string& name){
 }
 
 void ProxyClient::sendMapAndPlayers(int idMap, int num){
-    //std::cout<<"Envio mapa "<<idMap << " jugadores "<<num<<std::endl;
-    sendChar(1);
+    sendChar(MAP_AND_PLAYERS);
     sendInt(idMap);
     sendInt(num);
 }
 
 void ProxyClient::sendMoveWorm(int idPlayer, int dir){
-    //std::cout<<"move "<<idPlayer << " " <<dir<<std::endl;
-    sendChar(2);
+    sendChar(MOVE_WORM);
     sendInt(idPlayer);
     sendInt(dir);
 }
 
 void ProxyClient::sendJump(int idPlayer){
-    //std::cout<<"jump "<<std::endl;
-
-    sendChar(3);
+    sendChar(DIRECT_JUMP);
     sendInt(idPlayer);
 }
 void ProxyClient::sendBackJump(int idPlayer){
-    //std::cout<<"back jump "<<std::endl;
-
-    sendChar(4);
+    sendChar(BACK_JUMP);
     sendInt(idPlayer);
 }
 
 void ProxyClient::sendWeaponSelect(int idPlayer, int idWeapon){
-    //std::cout<<"wepon "<< idPlayer <<" "<< idWeapon <<std::endl;
-    sendChar(5);
+    sendChar(WEAPON_SELECT);
     sendInt(idPlayer);
     sendInt(idWeapon);
 }
 
 void ProxyClient::sendChangeAim(int idPlayer, int delta){
-    //std::cout<<"change aim "<< idPlayer <<" "<< delta <<std::endl;
-    sendChar(6);
+    sendChar(CHANGE_AIM);
     sendInt(idPlayer);
     sendInt(delta);
 }
 
-void ProxyClient::sendChargePower(int idPlayer){
-    //std::cout<<"Power Charge 8 "<< idPlayer <<std::endl;
-    sendChar(8);
-    sendInt(idPlayer);
-}
-
-void ProxyClient::sendWormShoot(int idPlayer){
-    //std::cout<<"Shoot 9 "<< idPlayer <<std::endl;
-    sendChar(9);
-    sendInt(idPlayer);
-}
-
 void ProxyClient::sendCountDown(int idPlayer, int time){
-    //std::cout<<"cuenta regresiva "<< idPlayer << " "<< time << std::endl;
-    sendChar(7);
+    sendChar(COUNTDOWN);
     sendInt(idPlayer);
     sendInt(time);
 }
 
+void ProxyClient::sendChargePower(int idPlayer){
+    sendChar(CHARGE_POWER);
+    sendInt(idPlayer);
+}
+
+void ProxyClient::sendWormShoot(int idPlayer){
+    sendChar(WORM_SHOOT);
+    sendInt(idPlayer);
+}
+
+void ProxyClient::sendLeaveRoom(){
+    sendChar(LEAVE_ROOM);
+    sendInt(model->getIdPlayer());
+    model->keepPlaying();
+}
+
+void ProxyClient::sendJoinRoom(int idRoom){
+    sendChar(JOIN_ROOM);
+    sendInt(model->getIdPlayer());
+    sendInt(idRoom);
+}
+
 void ProxyClient::sendCreateRoom(std::string& nameRoom,int  numPlayer,std::string nameMap){
-    sendChar(13);
+    sendChar(CREATE_ROOM);
     sendInt(model->getIdPlayer());
     sendInt(numPlayer);
     sendName(nameMap);
     sendName(nameRoom);
-    //std::cout<<" "<< model->getIdPlayer() << " "<< numPlayer << nameMap << nameRoom <<std::endl;
 }
 
-void ProxyClient::sendJoinRoom(int idRoom){
-    sendChar(12);
-    sendInt(model->getIdPlayer());
-    sendInt(idRoom);
-    std::cout<<"JOIN room "<<idRoom <<std::endl;
-}
+
 
 void ProxyClient::sendTeledirigido(int idPlayer, int x, int y){
-    sendChar(14);
+    sendChar(TELEDIRIGIDO);
     sendInt(idPlayer);
     sendInt((x/ESCALA)*1000);
     sendInt((y/ESCALA)*1000);
-    std::cout<<"enviar teledirigo "<<(x/ESCALA)*1000<<"-"<<(y/ESCALA)*1000<<std::endl;
 }
 
-void ProxyClient::sendLeaveRoom(){
-    sendChar(11);
-    sendInt(model->getIdPlayer());
-    printf("Enviar salida de room y volvio al lobby\n");
-    model->keepPlaying();
-}

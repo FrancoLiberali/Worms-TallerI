@@ -27,12 +27,13 @@ void GameClient::run(){
 	ClientCommandSender commmandSender(proxy, commandsQueue);
 	commmandSender.start();
 
+	//manejador de eventos
 	EventHandler ehandler;
-
 
 	//cargamos todas las texturas y el screen principal
 	Boot boot;
 	boot.init();
+
 	Camera camera(boot.getScreen().getWidth(), boot.getScreen().getHeight());
 
 	mainView clientView(ehandler, boot.getScreen(), camera);
@@ -46,8 +47,8 @@ void GameClient::run(){
 	proxy.addModel(&model);
 	ehandler.setModel(&model);
 
-
 	PreGameManager preGame(proxy);
+
 	//cola de eventos a recibir
 	Queue<Event*> eventQueue; 
 	ClientEventReceiver eventReceiver(proxy, eventQueue, model, clientView, preGame);
@@ -58,8 +59,6 @@ void GameClient::run(){
 	Controller controller(model, clientView);
 	
 	if (!preGame.showHall()){
-		printf("Se cerro el hall\n");
-		printf("Se cierra todo\n");
 		commandsQueue.push(nullptr);//se cierrar encolar nullpttr
 		eventReceiver.stop();
 		commmandSender.join();
@@ -98,7 +97,6 @@ void GameClient::run(){
 	}
 	if (controller.isPlaying())
 		preGame.showResult();
-	printf("Se cierra todo\n");
 	commandsQueue.push(nullptr);//se cierra al  encolar nullpttr
 	eventReceiver.stop();
 	commmandSender.join();

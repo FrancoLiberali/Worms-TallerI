@@ -54,8 +54,6 @@ void mapWindow::addMap(std::string& map){
 }
 
 void mapWindow::addRoom(Room* room){
-    std::cout << "add sala " <<std::endl;
-
     this->rooms.emplace(room->getId(), room);
     ui->cmb_salas->addItem(room->getName().c_str());
 }

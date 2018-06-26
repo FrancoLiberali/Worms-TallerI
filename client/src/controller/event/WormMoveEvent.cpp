@@ -11,5 +11,4 @@ void WormMoveEvent::process(){
 	wormView->setPos(x, y);
 	wormView->setDirection(dir);
 	wormView->setAngle(angle);
-	//printf("PROCESAR_EVENTO worm move done: \n");
 }

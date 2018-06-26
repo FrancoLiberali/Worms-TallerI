@@ -51,7 +51,6 @@ void Controller::handle(SDL_Event& e) {
         case SDL_KEYUP:{//dejar de cargar y disparar
             SDL_KeyboardEvent& keyEvent = (SDL_KeyboardEvent&) e;
             if (keyEvent.keysym.sym == SDLK_SPACE){
-                    printf("dejar de cargar y disparar\n");
                     model.WormShoot();
                     view.WormShoot(model.getIdWormSelected());
             }
@@ -68,7 +67,6 @@ void Controller::handle(SDL_Event& e) {
                 //envio el mensaje de teledirigido
                 int x = e.motion.x + view.getCamera().getX();
                 int y = e.motion.y + view.getCamera().getY();
-                printf("Original pos : %i - %i\n", x, y);
                 model.teledirigido(x, y);
             }
             break;

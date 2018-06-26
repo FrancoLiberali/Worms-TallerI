@@ -14,7 +14,7 @@ bool PreGameManager::showHall(){
    return (hall->exec() == QDialog::Accepted);
 }
 
-void PreGameManager::addMap(std::string nameMap){
+void PreGameManager::addMap(std::string& nameMap){
     hall->addMap(nameMap);
 }
 

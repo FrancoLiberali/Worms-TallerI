@@ -50,7 +50,6 @@ void mainView::close(){
 }
 
 void mainView::openWindow(){
-	printf("se abrio la ventana\n");
 	open = true;
 }
 
@@ -105,7 +104,7 @@ Weapon* mainView::retrieveWeaponClicked(SDL_Point clickPoint){
 	return this->menuWeapon->retrieveWeaponClicked(clickPoint);
 }
 
-void mainView::addWorm(int id, int idOwner, std::string player, int x, int y, int dir, int angle){
+void mainView::addWorm(int id, int idOwner, std::string& player, int x, int y, int dir, int angle){
 	WormView* worm = new WormView(id, idOwner, camera);
 	worm->setPlayerName(player);
 	worm->setDirection(dir);
@@ -125,7 +124,7 @@ void mainView::addMissile(int id, WeaponId idWeapon, int dir, int posx, int posy
 }
 
 
-std::string mainView::changeTurn(std::string namePlayer, int idWorm){
+std::string mainView::changeTurn(std::string& namePlayer, int idWorm){
 	panelInfo.setTextTun("Turno: " + namePlayer);
 	watch.start();
 	for(auto& it: this->worms){
@@ -136,8 +135,8 @@ std::string mainView::changeTurn(std::string namePlayer, int idWorm){
 	worms[idWorm]->onFocus();
 }
 
-void mainView::showLosser(std::string name){
-	printf("Alguien perdio\n");
+void mainView::showLosser(int idPlayer, std::string& name){
+	printf("Alguien perdio %s \n", name.c_str());
 }
 
 Camera& mainView::getCamera(){
@@ -168,6 +167,5 @@ void mainView::second(){
 
 
 void mainView::windChanged(int speed){
-	//turnView.setText("VIENTO : " + std::to_string(speed) + " km/h", red);
 	panelInfo.setTextWind("Viento: " + std::to_string(speed) + " km/h");
 }

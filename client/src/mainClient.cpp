@@ -22,7 +22,6 @@ int main(int argc, char *argv[]){
     try {
         proxy.sendName(name);
     } catch (SocketError& e){
-        std::cout <<"No hubo conexión" << std::endl;
         return 0;
     }
     

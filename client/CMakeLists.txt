@@ -74,6 +74,7 @@ add_executable(worms-client
 
 	src/common/Thread.cpp
 	src/common/socket.cpp
+	src/common/Util.cpp
 
 	src/model/Model.cpp
 	src/model/GameControllerProxy.cpp

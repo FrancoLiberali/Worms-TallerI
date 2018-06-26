@@ -19,11 +19,9 @@ ClientEventReceiver::~ClientEventReceiver() {
  while (!q.empty()) {
     	delete q.pop();
   	}
-  //std::cout << "ClientEventReceiver destruido" << std::endl;
 }
 
 void ClientEventReceiver::run(){
-	std::cout << "ClientEventReceiver coriendodo" << std::endl;
 	try{
 		while (!closed){
 			char t = proxy.receiveChar();
@@ -49,7 +47,6 @@ bool ClientEventReceiver::isPreGameEvent(int t){
 //Manejo de eventos que son previos o después de juego principal
 //nos son encolados en la cola de eventos
 void ClientEventReceiver::process(int t){
-	std::cout << "Se recibio " << t << std::endl;
 	switch (t){
 		case ID_PLAYER:{
 			int id = proxy.receiveInt();
@@ -57,7 +54,6 @@ void ClientEventReceiver::process(int t){
 			break;
 		}
 		case NEW_ROOM:{
-			std::cout << "Sala recibida" <<std::endl;
 			int idRoom = proxy.receiveInt();
 			std::string nameRoom = proxy.receiveName();
 			int currPlayers = proxy.receiveInt();
@@ -84,7 +80,6 @@ void ClientEventReceiver::process(int t){
 			int size = proxy.receiveInt();
 			for (int i = 0; i < size; i++){
 				std::string name_map = proxy.receiveName();
-				std::cout << name_map <<std::endl;
 				preGame.addMap(name_map);
 			}
 			break;
@@ -92,12 +87,11 @@ void ClientEventReceiver::process(int t){
 		case A_PLAYER_LOSE:{
 			int idPlayer = proxy.receiveInt();
 			std::string name = model.getPlayerById(idPlayer);
-			printf("My id %i, %i\n", model.getIdPlayer(), idPlayer);
 			if (model.isPlayer(idPlayer)){
 				preGame.setResult("Loser");
 				view.close();
 			}else{
-				view.showLosser(name);
+				view.showLosser(idPlayer, name);
 			}
 			break;
 		}
@@ -117,7 +111,6 @@ void ClientEventReceiver::stop(){
 	if (closed)
 		return;
 	closed = true;
-	printf("Se detuvo el reciver\n");
 	proxy.close();
 }
 

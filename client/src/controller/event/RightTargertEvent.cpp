@@ -8,5 +8,4 @@ RightTargertEvent::RightTargertEvent(int idWeapon){
 void RightTargertEvent::process(){
     WormView* worm = view->getWormView(model->getIdWormSelected());
     worm->useTelederigido();
-    printf("OBJETIVO CORRECTO\n");
 }

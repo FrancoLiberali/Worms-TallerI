@@ -1,4 +1,5 @@
 #include "TextManager.h"
+#include "../exception/GameException.h"
 
 #include <iostream>
 
@@ -45,7 +46,7 @@ void TextManager::loadFont(Tfont fuente){
 	this->font_map[idFont] = font;
 }
 
-void TextManager::wLetter(std::string idFont,int x, int y, char lett,SDL_Color color, int factor){
+void TextManager::wLetter(std::string& idFont,int x, int y, char lett,SDL_Color color, int factor){
 	SDL_Rect destino, origen; 
 	int fila, columna;
 	int letrasPorFila, letrasPorColumna;
@@ -98,17 +99,17 @@ void TextManager::write(Tfont fuente,int x, int y, std::string w,SDL_Color color
 	}
 }
 
-void TextManager::write(SDL_Texture* texture, std::string idfont, int x, int y, std::string text, SDL_Color color){
+void TextManager::write(SDL_Texture* texture, std::string& idfont, int x, int y, std::string& text, SDL_Color color){
 	
 	TTF_Font* font = FontManager::Instance().getFont(idfont); 
 	SDL_Surface* surf = TTF_RenderText_Blended(font, text.c_str(), color);
 	if (surf == nullptr){
 		TTF_CloseFont(font);
-		std::cout<< "TTF_RenderText"<<std::endl;
+		throw GameException("Error al crear la surface a partir de la fuente");
 	}
 	texture = SDL_CreateTextureFromSurface(renderer, surf);
 	if (texture == nullptr){
-		std::cout<< "CreateTexture"<<std::endl;
+		throw GameException("Error al crear la textura de la fuente");
 	}
 	
 	SDL_FreeSurface(surf);
@@ -120,4 +121,20 @@ void TextManager::write(SDL_Texture* texture, std::string idfont, int x, int y, 
 	destRect.x = x;
 	destRect.y = y;
 	SDL_RenderCopy(renderer, texture, NULL, &destRect);
+}
+
+SDL_Texture* TextManager::createText(std::string idfont, std::string& text, SDL_Color color ){
+	TTF_Font* font = FontManager::Instance().getFont(idfont); 
+	SDL_Surface* surf = TTF_RenderText_Blended(font, text.c_str(), color);
+	if (surf == nullptr){
+		TTF_CloseFont(font);
+		throw GameException("Error al crear la surface a partir de la fuente");
+	}
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(renderer, surf);
+	if (texture == nullptr){
+		throw GameException("Error al crear la textura de la fuente");
+	}
+	
+	SDL_FreeSurface(surf);
+	return texture;
 }

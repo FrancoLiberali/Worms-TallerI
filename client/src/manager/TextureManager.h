@@ -51,6 +51,9 @@ public:
     //dibuja una rectangulo solido 
 	void drawFillRect(SDL_Renderer*	pRenderer, SDL_Rect & rect, SDL_Color color);
 
+    //dibuja una textura
+    void drawTexture(SDL_Texture* texture, int x, int y, SDL_Renderer* renderer);
+
     void setScreenSize(int w, int h);
 
     SDL_Texture * getTexture(std::string imageId);

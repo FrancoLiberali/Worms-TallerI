@@ -7,7 +7,5 @@ WeaponDoneEvent::WeaponDoneEvent(int idWeapon){
 }
 
 void WeaponDoneEvent::process(){
-    //hacer algo con la vista
-    printf("se acabo el arma %i\n", idWeapon);
     view->weaponDone(idWeapon);
 }
