@@ -376,7 +376,6 @@ void Turn::processWindChange(int turn_actual_len){
 			this->wind += ((rand() % BETWEEN_0_AND_9) / BETWEEN_0_AND_0d18) - BETWEEN_m0d09_AND_0d09;
 		}
 		this->proxy.sendWindChange(this->wind);
-		std::cout << "wind: " << this->wind << "\n";
 	}
 }
 

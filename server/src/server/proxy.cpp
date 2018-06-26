@@ -119,13 +119,10 @@ void Proxy::receiveEvent(){
 					break;
 				}
 			case 14://se recibe que se quiere modificar el apuntado del teledirigido
-					std::cout << "llego 14 \n";
 					this->receiveEventInfo(event, TELE_TAM);
 					break;	
 			}
 	}catch (SocketError& e){
-		std::cout << "se desconecto\n";
-		std::cout << this->id << "\n";
 		this->pushDisconnectionMessage();
 		throw e;
 	}
